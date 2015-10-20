@@ -1,0 +1,427 @@
+/* General */
+
+* {
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+
+/* Article Link Styling */
+
+.article a:link, 
+.article a:visited, 
+.article a:active {
+	color: #56B4AA;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.article a:hover {
+	color: #000000;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+
+/* Nav Link Styling */
+
+a:link, 
+a:visited, 
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #56B4AA;
+	text-decoration: none;
+}
+
+
+/* List Styling */
+
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 20px;
+}
+
+
+/* Header Styling */
+
+h1 {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+
+h2 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 18px;
+
+}
+
+h4 {
+	font-size: 16px;
+}
+
+
+/* Icons */
+
+.fa {
+	float: right;
+	padding-top: 12px;
+	padding-right: 20px;
+	color: white;
+}
+
+/* Images */
+
+.thumbnail {
+	height: 40%;
+	width: 40%;
+}
+
+
+/* Developer Labels*/
+
+.label1cat {
+	color: #95BE22;
+	font-weight: 400;
+	font-size: 30px;
+}
+.label1 {
+	color: #95BE22;
+	font-weight: 400;
+	font-size: 20px;
+	float: right;
+	padding-top: 25px;
+	padding-right: 10px;
+}
+
+
+/* Administrator Labels */
+
+.label2cat {
+	color: #3A97B5;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.label2 {
+	color: #3A97B5;
+	font-weight: 400;
+	font-size: 20px;
+	float: right;
+	padding-top: 25px;
+	padding-right: 45px;
+}
+
+
+/* User Labels */
+
+.label3cat {
+	color: #5C57B3; 
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.label3 {
+	color: #5C57B3; 
+	font-weight: 400;
+	font-size: 20px;
+	float: right;
+	padding-top: 25px;
+	padding-right: 60px;
+}
+
+/* Release Notes Header */
+.label7 {
+	color: #CF2435; 
+	font-weight: 400;
+	font-size: 30px;
+}
+
+/* Contribute Header */
+.label8 {
+	color: #F6B220; 
+	font-weight: 400;
+	font-size: 30px;
+}
+
+/* Call To Action Green */
+.label4 {
+	color: #56B4AA; 
+	font-weight: 400;
+	font-size: 25px;
+}
+
+
+/* Sidebar Section Header Black */
+.label5 {
+	font-weight: 700;
+	font-size: 16px;
+}
+
+/* Sidebar Section Sub Header */
+.label10 {
+	padding-left: 10px;
+}
+
+/* Sidebar Article Title Small */
+.label9 {
+	font-weight: 400;
+	font-size: 12px;
+	padding-left: 20px;
+}
+
+
+/* Breadcrumb Label */
+
+.label6 {
+	color: #000000;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+
+/* Top Navigation */
+
+
+.navbar-fixed-top {
+	height: 74px;
+}
+
+.navbar-brand {
+	height: 74px;
+	left: 25px;
+}
+
+.navbar-nav, .navbar-right {
+	height: 74px;
+	padding: 10px;
+}
+
+
+/* Side Navigation */
+
+#nav {
+	position: fixed;
+	height: 100%;
+	top: 74px;
+	left: 0;
+	width: 206px;
+	background-color: white;
+	overflow: scroll;
+}
+
+.persona {
+	padding-left: 20px;
+	padding-top: 20px;
+	float; left;
+}
+
+.scroll {
+	margin-top: 50px;
+	margin-left: 20px;
+	height: 140%;
+}
+
+.navitems {
+	overflow-y: scroll;
+	top: 0;
+	bottom: 0;
+}
+
+.navitems2 {
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+.button {
+	color: white;
+	position: fixed;
+	margin-top: 35px;
+	margin-left: 20px;
+	width: 165px;
+}
+
+.btn {
+	color: white !important;
+}
+
+.btn a:hover {
+	color: #fff !important;
+}
+
+.latest {
+	margin-top: 145px;
+	margin-left: 20px;
+	z-index: 5;
+}
+
+
+/* Breadcrumb */
+
+.breadcontent{
+	position: absolute;
+	left: 206px;
+	width: calc(100% - 206px);
+	height: 550px;
+	margin: 0 auto;
+}
+
+.breadcontainer{
+	width: 100%;
+	display: inline-block;
+}
+
+.breadcrumb {
+	margin-top: 30px;
+	float: right;
+	display: inline-block;
+}
+
+
+/* Body and Content */
+
+body {
+  padding-top: 55px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  height: 100%;
+}
+
+#wrapper {
+	padding: 0 0 225px;
+	position: relative;
+	top: 25px;
+}
+
+.content {
+	position: relative;
+	top: 135px;
+	margin-left: 206px;
+	height: auto;
+}
+
+.container {
+	position: relative;
+	padding-left: 20px;
+	margin-left: auto;
+}
+
+.container-content {
+	position: relative;
+	top: 115px;
+	margin-left: 216px;
+	height: auto;
+	border: solid 1px;
+	border-color: #C0C0C0;
+	border-radius: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+
+/* Cats */
+
+.image {
+	position: relative;
+	float: left;
+	text-align: center;
+	padding-left: 20px;
+	padding-bottom: 20px;
+
+}
+
+/* Articles */
+
+a.anchor {
+	display: block;
+	position: relative;
+    top: -150px;
+ }
+
+ .actions {
+ 	width: 100%;
+	display: inline-block;
+	padding-bottom: 10px;
+ }
+
+ .iconbar {
+ 	position: relative;
+ 	float: right;
+ }
+
+ .iconbar .fa {
+ 	color: #000;
+ }
+
+table, th, td {
+	border: 1px solid #CCCCCC;
+	border-collapse: collapse;
+	text-align: left;
+	padding: 10px;
+	font-size: 14px;
+}
+
+th {
+	background-color: rgba(204,204,204,0.5);
+}
+
+/* Tweet Button */
+.twitter-share-button {
+	float: right;
+	margin-top: 7px;
+}
+
+
+
+/* Footer */
+
+#footer {
+	position: absolute;
+	margin: 0 auto;
+	bottom: 0px;
+	width: 100%;
+	height: 30px; 
+	text-align: center;
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+
+
+/* Not Used */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
