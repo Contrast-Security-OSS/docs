@@ -8,7 +8,7 @@ description: "How our Agent behaves in the presence of others"
 Often times, the Contrast Agent can be run along side other JavaAgents without issue. That being said, there are some known instances
 of unfriendly neighbors and some configuration or runtime conflicts.
 
-### Friendlyriendly Agents
+### Friendly Agents
 | Agent                |                                                                                                                                                                                                                                                                    |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App Dynamics |
