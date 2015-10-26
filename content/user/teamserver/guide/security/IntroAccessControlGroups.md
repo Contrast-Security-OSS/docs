@@ -4,7 +4,7 @@ description: "Overview of access control groups"
 -->
 
 ## About Access Control Groups
-Administrators have the ability to define new policies for providing/restricting access and priviledges to users within TeamServer. The policies are defined via an Access Control Group which controls access and capability at the System, Organization and Application level within TeamServer. There are two types of Access Control Groups: System and Organization. System groups allow for delegated system administration. Organization groups allow for cross-organization access and application access/restriction.
+Administrators have the ability to define new policies for providing/restricting access and privileges to users within TeamServer. The policies are defined via an Access Control Group which controls access and capability at the System, Organization and Application level within TeamServer. There are two types of Access Control Groups: System and Organization. System groups allow for delegated system administration. Organization groups allow for cross-organization access and application access/restriction.
 
 ## Delegated System Administration Groups (EOP Only)
 Enterprise On-Premise (EOP) customers have the ability to delegate user accounts to perform system administration functions across organizations. This assumes multiple organizations have been created within Contrast TeamServer as part of a multi-tenant deployment. This feature allows users to perform administrative functions across mutliple organizations such as managing users, groups, applications, API keys and security policies.

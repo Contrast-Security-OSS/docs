@@ -4,7 +4,7 @@ description: "Understanding User Permissions"
 -->
 
 ## Permissions
-Access Control Groups introduced the ability to define capabilities and restrictions to a set of users at either the System or Organization level. Permissions are defined within each access control group and leverage predefined roles as the input for allowing or restricting capability within the system.
+Access Control Groups provide the ability to define capabilities and restrictions to a set of users at either the System or Organization level. Permissions are defined within each access control group and leverage predefined roles as the input for allowing or restricting capability within the system.
 
 ## Organization Permissions
 Permissions per user can be reviewed via (System Administration > Users > User Permissions) by users with Sysem Administration and/or SuperAdmin priviledge. If a user has access to more than one organization, each organization can be viewed individually by toggling their organization. In addition, applications can be filtered from the list. Inline with each application is the user's role per application assuming an exception was defined in the Organization group.
