@@ -3,7 +3,7 @@ title: "How to Add a Level 2 Rule"
 description: "How to add a level 2 rule to the Java Agent and Teamserver"
 -->
 
-#### When should I use a Level 2 Rule?
+## When should I use a Level 2 Rule?
 
 Most of the rules that come with Contrast are Level 2 rules. There are rules that are driven from the agent's policy file. 
 Contrast can be overridden to use a custom policy file, allowing for an organization to fully control all the sensor 
@@ -25,7 +25,7 @@ The negatives of using a Level 2 rule, as opposed to a Level 1 rule:
 
 ******
 
-#### Types of Level 2 Rules
+## Types of Level 2 Rules
 There are two types of Level 2 Rules: Regular Expression and Data Flow. 
 
 Regular Expression rules use pattern matching to evaluate the input to a given trigger and report any time the pattern is violated, regardless of the source of the input.
@@ -34,12 +34,12 @@ Conversly, Data Flow rules, as their name implies, are used to track untrusted d
 
 ******
 
-#### Adding a Level 2 Rule
+## Adding a Level 2 Rule
 Adding a new Level 2 Rule consists of two main parts: creating a new custom Policy file for the Agent to follow and creating a corresponding Groovy script to teach TeamServer processing and rendering. Our tutorials start with the creation of the Policy file and end with a template of the Groovy file.
 
 ******
 
-#### Adding a Level 2 Regular Expression Rule
+### Adding a Level 2 Regular Expression Rule
 This portion of the tutorial will walk through adding a new Regual Expression Rule that detects when an illegal value is passed into the Request object, thereby disabling its security. 
 
 #### Step 1: Create a New Policy File
@@ -118,7 +118,7 @@ Once the configuration is specified, restart your Application Server and test to
 
 ******
 
-#### Adding a Level 2 Data Flow Rule
+### Adding a Level 2 Data Flow Rule
 This portion of the tutorial will walk through adding a new Data Flow Rule that detects when unmasked credit cards are leaked to log files, and allow 
 us to create an API that marks credit card data as "masked", in order to prevent false positives. Data Flow starts at a ```source``` and moves through ```propagator``` methods and ```tag``` methods before ultimately reaching a rule ```event```. 
 
@@ -225,6 +225,3 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 Note that you can also use HTTP URLs instead of file paths with the -Dcontrast.policy property.
 
 Once the configuration is specified, restart your Application Server and test to verify your rule is funcitoning as expected.
-
-
-
