@@ -26,3 +26,6 @@ description: "Overview of the core operations for an application from the action
 ### Fully Delete an Application 
 * Only way to fully delete is to first reset, archive and then fully delete
 
+## Grouping Applications
+* Quick summary of what groups are
+* link to Merging and Resetting Applications
