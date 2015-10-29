@@ -4,7 +4,7 @@ description: "Overview of alerts within TeamServer"
 -->
 
 ## Creating Alerts
-Alerts are managed within [organization settings](). Users with the [role]() of organization administrator, editor and rules administrator may create and manage alerts. 
+Alerts are managed within [organization settings](). Users with the [role]() of organization administrator, editor or rules administrator may create and manage alerts. 
 
 The main purpose of an alert is to provide notification to one or more users when a specific condition has been observed within TeamServer. Alerts execute and notify user via email on event, daily and weekly. 
 
@@ -29,7 +29,7 @@ TeamServer supports (6) conditions for alerts based on: Category, Impact, Likeli
 | Alert Types | Description       | Condition      |
 |-----------------|-------------------|--------------|
 | Category        | Categories are high-level groupings of rule types such as Authentication, Injection, Cryptography, etc. There are 11 categories within TeamServer Rule types.| Is or Is Not |
-| Impact          | Impact is measured in high, medium and low ratings based on how a rule type affects a given business or organization. Every rule type has a default impact configuration setting. | Is, Is Lower Than, Is Higher Than |
+| Impact          | Impact is measured in high, medium and low ratings based on how a rule type affects a given business or organization. Every rule type has a default impact configuration setting which can be customized. | Is, Is Lower Than, Is Higher Than |
 | Likelihood      | Likelihood is measured in high, medium and low ratings based on how frequent a rule type may occur. Every rule type has a default likelihood configuration setting which can be customized. | Is, Is Lower Than, Is Higher Than |
 | URL             | A specific URL from an application. | Is, Contains, Starts With |
 | Class           | A specific Java or .Net class. | Is, Contains, Starts With |
