@@ -222,7 +222,8 @@ h4 {
 	left: 0;
 	width: 206px;
 	background-color: white;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 
 /* IE Fix */
 	-ms-overflow-style: none;
