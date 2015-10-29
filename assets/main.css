@@ -238,6 +238,7 @@ h4 {
 	margin-top: 50px;
 	margin-left: 20px;
 	height: 125%;
+	background-color: white;
 }
 
 .navitems {
@@ -248,13 +249,11 @@ h4 {
 }
 
 .navitems2 {
-	margin-top: 100px;
-	margin-left: 20px;
+	margin-top: 50px;
 }
 
 .button {
 	color: white;
-	position: fixed;
 	margin-top: 35px;
 	margin-left: 20px;
 	width: 165px;
@@ -269,7 +268,7 @@ h4 {
 }
 
 .latest {
-	margin-top: 145px;
+	margin-top: 37px;
 	margin-left: 20px;
 	z-index: 5;
 }
