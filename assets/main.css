@@ -222,11 +222,10 @@ h4 {
 	left: 0;
 	width: 206px;
 	background-color: white;
-	overflow: scroll;
+	overflow: hidden;
 
-/* Windows Browser Fixes */
+/* IE Fix */
 	-ms-overflow-style: none;
-	overflow: -moz-scrollbars-vertical;
 }
 
 .persona {
