@@ -261,6 +261,14 @@ h4 {
 	width: 165px;
 }
 
+.background {
+	background-color: white;
+	position: fixed;
+	top: 74px;
+	left: 0;
+	width: 216px;
+}
+
 .btn {
 	color: white !important;
 }
