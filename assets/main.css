@@ -222,8 +222,8 @@ h4 {
 	left: 0;
 	width: 206px;
 	background-color: white;
-	/*overflow: auto;
-	-ms-overflow-style: none;*/
+	overflow: scroll;
+	-ms-overflow-style: none;
 }
 
 .persona {
