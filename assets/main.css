@@ -220,9 +220,12 @@ h4 {
 	height: 100%;
 	top: 74px;
 	left: 0;
-	width: 206px;
+	width: 216px;
 	background-color: white;
 	overflow: auto;
+
+/* IE Fix */
+	-ms-overflow-style: none;
 }
 
 .persona {
@@ -234,13 +237,14 @@ h4 {
 .scroll {
 	margin-top: 50px;
 	margin-left: 20px;
-	height: 140%;
+	height: 125%;
 }
 
 .navitems {
-	overflow-y: scroll;
+	overflow-y: auto;
 	top: 0;
 	bottom: 0;
+	height: 125%;
 }
 
 .navitems2 {
