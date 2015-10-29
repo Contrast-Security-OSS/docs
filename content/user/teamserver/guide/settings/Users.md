@@ -41,6 +41,9 @@ Users can be invited to join TeamServer via an email activation. This option onl
 
 ### Creating Users as an Organization Administrator
 
+<a href="assets/images/Create_User.png" rel="lightbox" title="Create a User"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
+
+
 * Login to TeamServer.
 * Select Organization Settings via the Settings Menu.
 * Select Users from the side navigation menu.
