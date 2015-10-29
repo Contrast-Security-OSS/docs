@@ -15,6 +15,8 @@ Steps to toggle between organizations:
 * If the user has multiple organizations available vian an Access Control Group, he/she will see a list of organizations to select.
 * Select the organization of choice.
 
+<a href="assets/images/Settings_MultiOrg.png" rel="lightbox" title="Top Navigation Bar for Multi-Organizations"><img class="thumbnail" src="assets/images/Settings_MultiOrg.png"/></a>
+
 
 ## Note About Organization Settings
 Each organization contains settings specific to that organization. If a user is an organization administrator for multiple organizations, that user will need to toggle between organizations in order to configure settings for a specific organization. 

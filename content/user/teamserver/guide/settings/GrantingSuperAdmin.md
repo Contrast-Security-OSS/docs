@@ -10,6 +10,8 @@ Enterprise On-Premise (EOP) customers have the ability to grant one or more name
 ### Granting and Revoking SuperAdmin Permissions
 Permission is granted via the action bar on the User page. Simply search for the user by their email, name or organization. From this page, select the user name to grant or revoke SuperAdmin permissions. Users that are granted SuperAdmin will display a small key icon to the right of their email address.
 
+<a href="assets/images/ActionBar_AdminUser.png" rel="lightbox" title="Admin Action Bar"><img class="thumbnail" src="assets/images/ActionBar_AdminUser.png"/></a>
+
 ### Why Grant SuperAdmin Permissions
 The number one reason for granting a named user account as SuperAdmin is for auditing purposes. Using a shared account across users is not a best practice and can create issues down the road. We suggest that named user accounts be granted SuperAdmin. Going forward all SuperAdmin activities should come from the named accounts.
 
