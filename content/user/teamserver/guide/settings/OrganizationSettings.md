@@ -4,22 +4,21 @@ description: "Overview of administrating and managing an organization."
 -->
 
 ## About Organization Settings
-* Brief overview of what can be managed based on user role
+Organization administrators have access to a menu of configuration settings specific for operating and managing users, servers and applications within an organization. Organizations settings can be found by selecting "Organization Settings" from the [settings menu](user_tsguideui.html#overview).
 
+<a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
+ 
 ## Alerts
-* Quick overview 
-* Link to Alerts Page
+[Alerts]() provide a mechanism for users of TeamServer to construct rules and/or conditions to notify via email about the discovery of a vulnerability under a particular threshold or condition.
 
 ## Security
-* Quick overview
-* Link to Security page
+Organization administrators can manage [password policies](admin_tsconfigset.html#pw), [IP restrictions](admin_tsconfigset.html#ip) and session timeouts. In addition, the audit log is searchable based on keyword and date.
 
 ## API
-* reference Open API tool
-* operations
+Organization administrators navigate to the API settings page to email API keys, rotate keys and launch the [API Documentation Tool](dev_api3.html#openapi).
 
 ## BugTrackers
-* Link to BugTracker docs
+TeamServer offers basic integrations with various [issue and defect management systems](admin_tsconfig.html#defect): Bugzilla, JIRA and Serena.
 
 ## App Mappings
 * Link to Merge/Unmerge
