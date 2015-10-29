@@ -222,7 +222,7 @@ h4 {
 	left: 0;
 	width: 206px;
 	background-color: white;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .persona {
