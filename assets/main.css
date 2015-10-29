@@ -220,7 +220,7 @@ h4 {
 	height: 100%;
 	top: 74px;
 	left: 0;
-	width: 206px;
+	width: 216px;
 	background-color: white;
 	overflow: auto;
 
@@ -237,14 +237,14 @@ h4 {
 .scroll {
 	margin-top: 50px;
 	margin-left: 20px;
-	height: 150%;
+	height: 100%;
 }
 
 .navitems {
 	overflow-y: auto;
 	top: 0;
 	bottom: 0;
-	width: 206px;
+	height: 100%;
 }
 
 .navitems2 {
