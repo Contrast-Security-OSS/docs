@@ -16,7 +16,7 @@ To create an alert:
 * Select "Organization Settings" from the settings menu.
 * Select "Alerts" from the Organization Settings menu.
 * Select "Create an Alert"
-* Provide the following inputs
+* Provide the following input
 ** Name
 ** Interval: Daily, Weekly and On Event
 ** Recipient(s): Email Address
