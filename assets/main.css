@@ -222,8 +222,7 @@ h4 {
 	left: 0;
 	width: 206px;
 	background-color: white;
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow: auto;
 
 /* IE Fix */
 	-ms-overflow-style: none;
@@ -242,9 +241,10 @@ h4 {
 }
 
 .navitems {
-	overflow-y: scroll;
+	overflow-y: auto;
 	top: 0;
 	bottom: 0;
+	width: 206px;
 }
 
 .navitems2 {
