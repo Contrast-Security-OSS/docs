@@ -26,8 +26,7 @@ Organization roles have always existed in TeamServer. Every user is provided a d
 When a user is included in an organization group, there is an option to provide the user with a default organization role, as well as define individual application roles for more granular control of what a user can or cannot do with an application. There are five application roles:
 
 | Role                 | Description                                                                                                                                                                                                                                                          |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------|
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Administrator | A user with this role has no restrictions with the application. |
 | Edit          | The user can remediate findings, edit attributes about the application, create/delete applications and servers. |
 | Rules Admin   | This user has edit privilege to rules. Essentially, this user role inherits all of the same functionality as a user with the editor role. |
