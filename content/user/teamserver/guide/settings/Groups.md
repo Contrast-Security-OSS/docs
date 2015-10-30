@@ -23,8 +23,8 @@ System groups are created from the system administration groups page by users gi
 * Login to TeamServer.
 * Navigate to the Admin pages via the settings menu.
 * Select Groups from the top navigation menu.
-* Select "Create a Group"
-* Provide the required inputs
+* Select "Create a Group".
+* Provide the required inputs.
 ** Group Name
 ** Type: Choose System
 ** Organization: You may choose all organizations or a single organization.
@@ -41,15 +41,15 @@ EOP customers may setup organization groups that enable access and control acros
 * Login to TeamServer.
 * Navigate to the Admin pages via the settings menu.
 * Select Groups from the top navigation menu.
-* Select "Create a Group"
-* Provide the required inputs
+* Select "Create a Group".
+* Provide the required inputs.
 ** Group Name
 ** Type: Choose Organizational
 ** Organization: You may only choose one organization at a time.
 ** Organization Role: Administrator, Edit, View, Rules Admin or No Access
 ** Application Role: Administrator, Edit, View, Rules Admin or No Access
 ** Exception: Optional setting to configure an application role on a per application basis within the organization. 
-** Group Members: Add one or more group members
+** Group Members: Add one or more group members.
 
 *Please Note*: A single group can have multiple organizations configured within the group. Each organization must be configured independently within the group by selecting a new organization.
 
@@ -61,14 +61,13 @@ EOP and SaaS customers are able to configure organization groups from within an 
 * Login to TeamServer
 * Navigate to Organization Settings from the settings menu.
 * Select Groups from the detailed settings menu on the left side of the Settings page.
-* Select "Create a Group"
-* Provide the required inputs
+* Select "Create a Group".
+* Provide the required inputs.
 ** Group Name
-** Group Members: Add one or more group members within the organization
+** Group Members: Add one or more group members within the organization.
 ** Organization Role: Administrator, Edit, View, Rules Admin or No Access
 ** Application Role: Administrator, Edit, View, Rules Admin or No Access
 ** Exception: Optional setting to configure an application role on a per application basis within the organization.
 
 ## Deleting Groups
 Groups can be deleted from either the system administrator's group page or the organization administrator's group page. Select the checkbox next to the group name. Select the "Delete" button to remove the group. If a user was associated with the group that was deleted, their organization role will return to their default role.
-
