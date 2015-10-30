@@ -30,7 +30,6 @@ When a user is included in an organization group, there is an option to provide 
 | Administrator | A user with this role has no restrictions with the application. |
 | Edit          | The user can remediate findings, edit attributes about the application, create/delete applications and servers. |
 | Rules Admin   | This user has edit privilege to rules. Essentially, this user role inherits all of the same functionality as a user with the editor role. |
-| View          | Some organizations want their users to have read-only access to the findings present
-ed in TeamServer. This role was designed to accommodate read-only access to the application limiting the user to viewing application findings. |
+| View          | Some organizations want their users to have read-only access to the findings presented in TeamServer. This role was designed to accommodate read-only access to the application limiting the user to viewing application findings. |
 | No Access     | The user has no access to the application. |
 
