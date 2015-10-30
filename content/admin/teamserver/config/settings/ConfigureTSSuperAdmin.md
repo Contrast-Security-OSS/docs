@@ -4,7 +4,7 @@ description: "Configuring TeamServer Settings"
 -->
 
 ## Role of the SuperAdmin
-The SuperAdmin is an [EOP role]() that has the ability to modify and manage TeamServer System Settings. Individual users can be [granted SuperAdmin]() on a case by case basis. Only the SuperAdmin has access to these settings below. Many of these settings are accessible and can be changed via the [Organization Settings]() by an organization administrator. Only the SuperAdmin can set these values as the default system values. 
+The SuperAdmin is an [EOP role]() that has the ability to modify and manage TeamServer System Settings. Individual users can be [granted SuperAdmin]() on a case by case basis. Only the SuperAdmin has access to these settings below. Many of these settings are accessible and can be changed via the [Organization Settings]() by an organization administrator. 
 
 ## Configuring Settings from the User Interface
 If a user is a SuperAdmin, he/she will have access to the system settings menu. To view this menu:
@@ -16,7 +16,7 @@ If a user is a SuperAdmin, he/she will have access to the system settings menu. 
 * Select System Settings
 
 ### General Settings
-The general setting page defines the TeamServer URL for both browsing and RESTful requests. In addition, if an administrator would like to integrate with Hub for updates of libraries and CVS, the option to "Try Hub" can be selected. Any change to this value will require a system restart.
+The general settings page defines the TeamServer URL for both browsing and RESTful requests. In addition, if an administrator would like to integrate with [Contrast Hub](https://hub.contrastsecurity.com) for updates of libraries and CVS, the option to "Try Hub" can be selected. Any change to this value will require a system restart.
 
 ### Authentication 
 TeamServer supports three [authentications providers](admin_tsconfig.html#user):
@@ -54,7 +54,7 @@ TeamServer can send email notifications to users when significant events occur (
 | Enable STARTTLS | Checked on Unchecked                                         |
 
 ### Database
-*Change this setting with caution.* It is very unlikely that a SuperAdmin will ever have to change the values of this table. In the event of system restore operation, the values of this configuration such as URL (contains host information), as well as username and password may change from time to time. Any change to this value will require a system restart.
+**Change this setting with caution.** It is very unlikely that a SuperAdmin will ever have to change the values of this table. In the event of system restore operation, the values of this configuration such as URL (contains host information), as well as username and password may require a change. Any change to this value will require a system restart.
 
 ### Log Level
 The SuperAdmin can change the default log level for the various TeamServer log files. Any change to this setting will take place after a system restart.
@@ -65,7 +65,7 @@ The SuperAdmin can change the default log level for the various TeamServer log f
 
 
 ### TeamServer License
-The TeamServer license and subsequent application licensing is managed from this location. The licensecan be updated directly in the [UI](admin_tsfaq.html#license) from this page.
+The TeamServer license and subsequent application licensing is managed from this location. The license can be updated directly in the [UI](admin_tsfaq.html#license) from this page.
 
 ### System Messages
 SuperAdmins have the ability to send a system message to all users upon immediate login. A simple message and expiration date are required inputs for the message. All users will receive this message every time they login to TeamServer until the message expires or is deleted.
