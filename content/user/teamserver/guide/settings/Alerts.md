@@ -17,11 +17,11 @@ To create an alert:
 * Select "Alerts" from the Organization Settings menu.
 * Select "Create an Alert"
 * Provide the following input
-** Name
-** Interval: Daily, Weekly and On Event
-** Recipient(s): Email Address
-** Application Name (Option to Select All)
-** Types(s): Multiple conditions may be chosen
+	* Name
+	* Interval: Daily, Weekly and On Event
+	* Recipient(s): Email Address
+	* Application Name (Option to Select All)
+	* Types(s): Multiple conditions may be chosen
 
 ### Alert Types
 TeamServer supports (6) conditions for alerts based on: Category, Impact, Likelihood, URL, Class and Method.
