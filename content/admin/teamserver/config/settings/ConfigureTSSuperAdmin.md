@@ -16,7 +16,7 @@ If a user is a SuperAdmin, he/she will have access to the system settings menu. 
 * Select System Settings
 
 ### General Settings
-The general settings page defines the TeamServer URL for both browsing and RESTful requests. In addition, if an administrator would like to integrate with [Contrast Hub](https://hub.contrastsecurity.com) for updates of libraries and CVS, the option to "Try Hub" can be selected. Any change to this value will require a system restart.
+The general settings page defines the TeamServer URL for both browsing and RESTful requests. In addition, if an administrator would like to integrate with [Contrast Hub](https://hub.contrastsecurity.com) for updates of libraries and CVE's, the option to "Try Hub" can be selected. Any change to this value will require a system restart.
 
 ### Authentication 
 TeamServer supports three [authentications providers](admin_tsconfig.html#user):
