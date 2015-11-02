@@ -204,10 +204,12 @@ h4 {
 
 .navbar-brand {
 	height: 74px;
+	left: 25px;
 }
 
 .navbar-nav, .navbar-right {
 	height: 74px;
+	padding: 10px;
 }
 
 
