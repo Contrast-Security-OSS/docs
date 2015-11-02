@@ -21,22 +21,28 @@ Organization administrators navigate to the API settings page to email API keys,
 TeamServer offers basic integrations with various [issue and defect management systems](admin_tsconfig.html#defect): Bugzilla, JIRA and Serena.
 
 ## App Mappings
-* Link to Merge/Unmerge
+TeamServer offers a capability consolidate multiple applications into a single, [merged application](). The relationships of merged applications is visualized from the Application Mappings page. The parent and child applications are listed. In addition, the mappings can be removed, which decouples a merged application from another application.
 
 ## Groups
-* Link to ACGs
+[Organization groups]() can be viewed, created, edited and deleted from this settings page. Organization administrators use groups to define a user's organization and application role. 
 
 ## Users
-* Statement about Org Users
-* Link to creating users
+Users can be [created](user_tsguideset.html#users) and assigned a default organization from this settings page. Users can also be edited and deleted from this page by organization administrators.
 
 ## Report Settings
-* Setting defaults
+The report settings page offers a single interface for organization administrators to define the template for hardcopy reports. This essentially involves defining the default values for reports such as:
+
+* Report Type
+* Vulnerability Status
+* Custom Footer
 
 ## Score Settings
-* About
-* Link to article on Setting score
+The score settings for libraries can be customized from the organization settings page. This setting allows organization administrators the ability to configure vulnerability-only scoring or use the default scoring algorithm which includes the date and versioning of a library.
+
+<a href="assets/images/Org_Score_Settings.png" rel="lightbox" title="Library Score Settings"><img class="thumbnail" src="assets/images/Org_Score_Settings.png"/></a>
 
 ## Servers
-* About server default settings (controls agent)
-* Link to servers page
+The default configuration of a server (agent) can be configured from this settings page. The defaults include changing the server environment, log level, enabling/disabling assessment, capturing stacktraces, as well as turning on sampling to improve agent performance. Once the settings have been configured, the agent distributed by TeamServer will inherit these settings.
+
+<a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img clas
+s="thumbnail" src="assets/images/Server_Settings.png"/></a>
