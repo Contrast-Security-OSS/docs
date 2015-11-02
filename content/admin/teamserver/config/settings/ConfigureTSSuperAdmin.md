@@ -62,7 +62,9 @@ The SuperAdmin can change the default log level for the various TeamServer log f
 <a href="assets/images/Configure_Log.png" rel="lightbox" title="Configure Logging"><img class="thumbnail" src="assets/images/Configure_Log.png"/></a>
 
 ### Score Settings
+The score settings for libraries can be customized from either the System or Organization settings pages. This setting allows EOP administrators to configure vulnerability-only scoring, as well as determine if an individual organization can override the setting.
 
+<a href="assets/images/Library_Score_Settings.png" rel="lightbox" title="Library Score Settings"><img class="thumbnail" src="assets/images/Library_Score_Settings.png"/></a>
 
 ### TeamServer License
 The TeamServer license and subsequent application licensing is managed from this location. The license can be updated directly in the [UI](admin_tsfaq.html#license) from this page.
