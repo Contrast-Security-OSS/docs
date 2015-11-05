@@ -33,4 +33,4 @@ Applications cannot be fully deleted unless the application is archived. The app
 
 
 ## Grouping Applications
-Grouping is very different from [merging applications](). Grouping is a simple way to tag or label one or more applications for search purposes. There are no other advantages in TeamServer for grouping other than using the Group attribute to improve search functionality.
+Grouping is very different from [merging applications](user_tsguideapp.html#merge). Grouping is a simple way to tag or label one or more applications for search purposes. There are no other advantages in TeamServer for grouping other than using the Group attribute to improve search functionality.
