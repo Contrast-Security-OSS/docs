@@ -44,5 +44,4 @@ The score settings for libraries can be customized from the Organization Setting
 ## Servers
 The default configuration of a server (agent) can be configured from this Settings page. The defaults include changing the server environment, log level, enabling/disabling assessment, capturing stacktraces, as well as turning on sampling to improve agent performance. Once the settings have been configured, the agent distributed by TeamServer will inherit these settings.
 
-<a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img clas
-s="thumbnail" src="assets/images/Server_Settings.png"/></a>
+<a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
