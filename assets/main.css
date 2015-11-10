@@ -196,24 +196,25 @@ h4 {
 
 
 /* Top Navigation */
+	
+.navbar-fixed-top {
+	height: 74px;
+}
+	
+.navbar-brand {
+	height: 74px;
+	left: 25px;
+}
 
+.navbar-nav, .navbar-right {
+	height: 74px;
+	padding: 10px;
+}
 
 @media (max-width: 840px) {
-	
-	.navbar-fixed-top {
+		.navbar-fixed-top {
 		height: 74px;
 	}
-	
-	.navbar-brand {
-		height: 74px;
-	left: 25px;
-	}
-
-	.navbar-nav, .navbar-right {
-		height: 74px;
-		padding: 10px;
-	}
-
 }
 
 
