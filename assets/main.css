@@ -96,12 +96,12 @@ h4 {
 /* Developer Labels*/
 
 .label1cat {
-	color: #95BE22;
+	color: #94b758;
 	font-weight: 400;
 	font-size: 30px;
 }
 .label1 {
-	color: #95BE22;
+	color: #94b758;
 	font-weight: 400;
 	font-size: 20px;
 	float: right;
@@ -113,13 +113,13 @@ h4 {
 /* Administrator Labels */
 
 .label2cat {
-	color: #3A97B5;
+	color: #3f97b3;
 	font-weight: 400;
 	font-size: 30px;
 }
 
 .label2 {
-	color: #3A97B5;
+	color: #3f97b3;
 	font-weight: 400;
 	font-size: 20px;
 	float: right;
@@ -131,13 +131,13 @@ h4 {
 /* User Labels */
 
 .label3cat {
-	color: #5C57B3; 
+	color: #6b7ca5; 
 	font-weight: 400;
 	font-size: 30px;
 }
 
 .label3 {
-	color: #5C57B3; 
+	color: #6b7ca5; 
 	font-weight: 400;
 	font-size: 20px;
 	float: right;
@@ -147,14 +147,14 @@ h4 {
 
 /* Release Notes Header */
 .label7 {
-	color: #CF2435; 
+	color: #C01920; 
 	font-weight: 400;
 	font-size: 30px;
 }
 
 /* Contribute Header */
 .label8 {
-	color: #F6B220; 
+	color: #F5bd35; 
 	font-weight: 400;
 	font-size: 30px;
 }
