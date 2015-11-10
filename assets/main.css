@@ -211,13 +211,6 @@ h4 {
 	padding: 10px;
 }
 
-@media (max-width: 840px) {
-		.navbar-fixed-top {
-		height: 74px;
-	}
-}
-
-
 
 
 /* Side Navigation */
