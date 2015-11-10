@@ -263,6 +263,14 @@ h4 {
 	color: white !important;
 }
 
+.btn-danger {
+	color: #c01920;
+}
+
+.btn-warning {
+	color: #f5bd35;
+}
+
 .btn a:hover {
 	color: #fff !important;
 }
