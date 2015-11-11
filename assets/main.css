@@ -215,14 +215,20 @@ h4 {
 /* Top Navigation Test */
 
 .navbar {
-	min-height: 74px;
-	height: auto;
+	height: 74px;
 }
 
 .navbar-brand, .navbar-right {
 	vertical-align: middle;
 }
 
+
+@media (max-width: 840px) {
+	.navbar {
+        min-height: 74px;
+        height: auto;
+    }
+}
 
 /* Side Navigation */
 
