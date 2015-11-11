@@ -215,16 +215,12 @@ h4 {
 /* Top Nav Test */
 
 .navbar {
-	min-height: 74px;
-	height: auto;
+	height: 74px;
 }
-
-.navbar-toggle {
-	margin-top: 10px;
-}	
 
 .navbar-right {
 	float: left;
+	padding: -10px;
 }
 
 /* Side Navigation */
