@@ -238,6 +238,17 @@ h4 {
     .navbar-collapse.collapse {
         display: none!important;
     }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 /* Side Navigation */
