@@ -228,6 +228,9 @@ h4 {
         min-height: 74px;
         height: auto;
     }
+    .navbar-header {
+        float: none;
+    }
     .navbar-toggle {
         display: block;
     }
