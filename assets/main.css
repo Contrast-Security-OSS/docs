@@ -217,11 +217,12 @@ h4 {
 .navbar {
 	min-height: 74px;
 	height: auto;
-	}
-	
-.navbar-right {
-	padding-bottom: 15px;
 }
+
+.navbar-brand, .navbar-right {
+	vertical-align: middle;
+}
+
 
 @media (max-width: 840px) {
 
