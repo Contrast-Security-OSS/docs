@@ -195,7 +195,7 @@ h4 {
 }
 
 
-/* Top Navigation Original
+/* Top Navigation Original 
 	
 .navbar-fixed-top {
 	height: 74px;
@@ -212,30 +212,13 @@ h4 {
 }
 */
 
-/* Top Navigation Test */
+/* Top Nav Test */
 
-#navbar {
-	min-height: 74px;
-
-}
-
-.navbar-header {
-	vertical-align: middle;
-}
-
-.navbar-nav {
-	max-height: 74px;
-}
-
-.navbar-right .fa {
-	max-height: 74px;
-	vertical-align: middle;
-}
-
-.navbar-collapse {
+.navbar-fixed-top {
 	min-height: 74px;
 	height: auto;
 }
+	
 
 /* Side Navigation */
 
