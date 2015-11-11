@@ -215,7 +215,7 @@ h4 {
 /* Top Navigation Test */
 
 #navbar {
-	height: 74px;
+	min-height: 74px;
 
 }
 
@@ -227,7 +227,7 @@ h4 {
 	max-height: 74px;
 }
 
-.navbar-right {
+.navbar-right .fa {
 	max-height: 74px;
 	vertical-align: middle;
 }
