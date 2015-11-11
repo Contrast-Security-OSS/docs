@@ -214,7 +214,17 @@ h4 {
 
 /* Top Nav Test */
 
+.navbar-fixed-top {
+	min-height: 74px;
+}
 
+.navbar-nav {
+	height: auto;
+}
+
+.collapse .navbar-right {
+	float: left;
+}
 
 /* Side Navigation */
 
