@@ -214,12 +214,12 @@ h4 {
 
 /* Top Navigation Test */
 
-.navbar-fixed-top {
+.navbar {
 	min-height: 74px;
 }
 
-.navbar-brand, .navbar-right {
-	vertical-align: middle;
+.navbar-right {
+	padding-bottom: 15px;
 }
 
 
