@@ -215,6 +215,7 @@ h4 {
 /* Top Navigation Test */
 
 .navbar {
+	min-height: 74px;
 	height: auto;
 }
 
