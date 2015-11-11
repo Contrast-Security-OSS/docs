@@ -214,62 +214,28 @@ h4 {
 
 /* Top Navigation Test */
 
-.navbar {
+#navbar {
+	height: 74px;
+
+}
+
+.navbar-header {
+	vertical-align: middle;
+}
+
+.navbar-nav {
+	max-height: 74px;
+}
+
+.navbar-right {
+	max-height: 74px;
+	vertical-align: middle;
+}
+
+.navbar-collapse {
 	min-height: 74px;
+	height: auto;
 }
-
-@media (min-width: 840px)
-.navbar-nav.navbar-right:last-child {
-    margin-right: -15px;
-}
-.navbar-right {
-    padding-bottom: 30px;
-}
-@media (min-width: 840px)
-.navbar-right {
-    float: right!important;
-}
-@media (min-width: 840px)
-.navbar-nav {
-    float: left;
-    margin: 0;
-}
-.navbar-nav {
-    margin: 7.5px -15px;
-}
-.nav {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
-ul {
-    margin: 0;
-    padding: 20px;
-}
-ul, ol {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-* {
-    font-family: Lato, sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-user agent stylesheetul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-}
-
 
 /* Side Navigation */
 
