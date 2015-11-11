@@ -224,12 +224,6 @@ h4 {
 }
 
 
-@media (max-width: 840px) {
-	.navbar {
-        min-height: 74px;
-    }
-}
-
 /* Side Navigation */
 
 #nav {
