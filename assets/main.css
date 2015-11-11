@@ -214,13 +214,13 @@ h4 {
 
 /* Top Nav Test */
 
-.navbar-fixed-top, .navbar-header{
+.navbar {
 	min-height: 74px;
 	height: auto;
 }
 
 .navbar-toggle {
-	vertical-align: middle;
+	margin-top: 10px;
 }	
 
 .navbar-right {
