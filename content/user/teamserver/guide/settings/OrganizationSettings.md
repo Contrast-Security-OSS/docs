@@ -18,7 +18,7 @@ Organization administrators can manage [password policies](admin_tsconfigset.htm
 Organization administrators navigate to the API settings page in order to email API keys, rotate keys and launch the [API Documentation Tool](dev_api3.html#openapi).
 
 ## BugTrackers
-TeamServer offers basic integrations with various [issue and defect management systems](admin_tsconfig.html#defect): Bugzilla, JIRA and Serena.
+TeamServer offers basic integrations with various [issue and defect management systems](user_tsguideset.html#defect): Bugzilla, JIRA and Serena.
 
 ## App Mappings
 TeamServer offers a capability to consolidate multiple applications into a single, [merged application](). The relationships of merged applications are visualized from the Application Mappings page, where the parent and child applications are listed. In addition, the mappings can be removed, which decouples a merged application from another application.
