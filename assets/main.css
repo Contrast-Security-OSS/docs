@@ -230,8 +230,8 @@ h4 {
 	float: left;
 }
 
-.navbar-right > li > a {
-	padding-bottom: 15px;
+.navbar-right > li > .fa {
+	padding-bottom: 20px;
 }
 
 @media (min-width: 840px) {
