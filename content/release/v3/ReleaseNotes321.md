@@ -1,7 +1,14 @@
 <!--
-title: "Contrast 3.2.1 - October 26, 2015"
+title: "Contrast 3.2.1 - Patch Release November 11, 2015"
 description: "Contrast 3.2.1 - October 26, 2015"
 -->
+
+## Critical Java Vulnerability Issue Addressed
+There is a widespread and significant “deserialization” vulnerability in Java environments. Any application that accepts serialized Java objects – whether in custom code, libraries, frameworks, or the application server – is likely vulnerable. Learn more about the vulnerability on the Contrast Security [Blog](http://www.contrastsecurity.com/security-influencers/java-serialization-vulnerability-threatens-millions-of-applications).
+
+* Contrast Security can help you address this vulnerability in your Java applications as a new rule type.
+* Contrast Enterprise TeamServer – based on Java – has been patched in our Software-as-a-Service offering, and an Enterprise-on-Premise fix is available now for Contrast Enterprise version 3.2.1. 
+
 
 ## Java Agent
 * CONTRAST-5844: NPE on Java Agent for Verb Tampering
