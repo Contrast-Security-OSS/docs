@@ -34,12 +34,11 @@ Contrast Enterprise-On-Premise (EOP) customers may occasionally need a new licen
 
 3. Stop the Contrast TeamServer service (on Windows use the service control panel, on Linux execute ```sudo service contrast-server stop``` or other appropriate command for the distribution/configuration)
 
-4. Back up your existing ***contrast.lic*** file in the Contrast data directory (***CONTRAST_HOME/data***)
+*Note*: Don't move the current ***contrast.lic*** file. As the Team Server needs both the old and new license file to upgrade the license. 
 
-*Note*: Make sure you make a copy of ***contrast.lic*** during the backup. Don't move it. As the Team Server needs both the old and new license file to upgrade the license.
+4. Place the new license file in the same data directory. On Linux, confirm the new license file has the same owner, group and permissions as other files in that directory (execute ```ls -l``` to list the directory contents with permissions and owners). A backup of the current license called ***contrast.lic.bak*** will be created in the same directory when the new one is consumed during startup.
 
-5. Place the new license file in the same data directory. On Linux, confirm the new license file has the same owner, group and permissions as other files in that directory (execute ```ls -l``` to list the directory contents with permissions and owners). 
 Execute ```sudo chown contrast_service:contrast_service contrast.new.lic``` to change the owner and group. Execute ```sudo chmod 644 contrast.new.lic``` to change the permissions.
 
-6. Start the Contrast TeamServer application as normal and the new license will automatically take effect (on Windows use the service control panel, on Linux execute ```sudo service contrast-server start``` or other appropriate command for the distribution/configuration).
+5. Start the Contrast TeamServer application as normal and the new license will automatically take effect (on Windows use the service control panel, on Linux execute ```sudo service contrast-server start``` or other appropriate command for the distribution/configuration).
 
