@@ -10,7 +10,7 @@ TeamServer is a multi-tenant architecture in which a single of software can supp
 An organization is a group of related users and applications that are associated together for a business purpose. 
 
 ### Viewing Organizations in TeamServer
-Users with a system administration role have the ability to view a list of one or more organizations in TeamServer. The ability to view all organizations depends on whether the user has administrative access based on their [system access control group](). 
+Users with a system administration role have the ability to view a list of one or more organizations in TeamServer. The ability to view all organizations depends on whether the user has administrative access based on their [system access control group](user_tsguideset.html#orgs). 
 
 To view existing organizations in TeamServer:
 

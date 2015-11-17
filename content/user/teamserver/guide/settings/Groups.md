@@ -34,7 +34,7 @@ System groups are created from the system administration groups page by users gi
 *Please Note*: A single group may contain multiple organizations by selecting "Add Role". Different roles can be applied to the same group as long as different roles are not assigned to the same organization within a group.
 
 ## Creating Organization Groups (System Admin)
-EOP customers may setup organization groups that enable access and control across one or more organizations. Once a multi-organization group is configured, users can [navigate across organizations]() from the settings menu. 
+EOP customers may setup organization groups that enable access and control across one or more organizations. Once a multi-organization group is configured, users can [navigate across organizations](user_tsguideset.html#toggle) from the settings menu. 
 
 <a href="assets/images/Multi_Org_Role_.png" rel="lightbox" title="Multi-Organization Group"><img class="thumbnail" src="assets/images/Multi_Org_Role_.png"/></a>
 

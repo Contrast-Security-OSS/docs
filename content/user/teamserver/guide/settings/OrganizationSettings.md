@@ -9,7 +9,7 @@ Organization administrators have access to a menu of configuration settings spec
 <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
  
 ## Alerts
-[Alerts]() provide a mechanism for users of TeamServer to construct rules and/or conditions to notify them via email about the discovery of a vulnerability under a particular threshold or condition.
+[Alerts](user_tsguideset.html#alert) provide a mechanism for users of TeamServer to construct rules and/or conditions to notify them via email about the discovery of a vulnerability under a particular threshold or condition.
 
 ## Security
 Organization administrators can manage [password policies](admin_tsconfigset.html#pw), [IP restrictions](admin_tsconfigset.html#ip) and session timeouts. In addition, the audit log is searchable by keyword and date.
@@ -21,10 +21,10 @@ Organization administrators navigate to the API settings page in order to email 
 TeamServer offers basic integrations with various [issue and defect management systems](user_tsguideset.html#defect): Bugzilla, JIRA and Serena.
 
 ## App Mappings
-TeamServer offers a capability to consolidate multiple applications into a single, [merged application](). The relationships of merged applications are visualized from the Application Mappings page, where the parent and child applications are listed. In addition, the mappings can be removed, which decouples a merged application from another application.
+TeamServer offers a capability to consolidate multiple applications into a single, [merged application](user_tsguideapp.html#merge). The relationships of merged applications are visualized from the Application Mappings page, where the parent and child applications are listed. In addition, the mappings can be removed, which decouples a merged application from another application.
 
 ## Groups
-[Organization groups]() can be viewed, created, edited and deleted from this Settings page. Organization administrators use groups to define a user's organization and application role. 
+[Organization groups](user_tsguideset.html#group) can be viewed, created, edited and deleted from this Settings page. Organization administrators use groups to define a user's organization and application role. 
 
 ## Users
 Users can be [created](user_tsguideset.html#users) and assigned a default organization from this Settings page. Users can also be edited and deleted from this page by organization administrators.

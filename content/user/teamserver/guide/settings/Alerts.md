@@ -4,7 +4,7 @@ description: "Overview of alerts within TeamServer"
 -->
 
 ## Creating Alerts
-Alerts are managed within [organization settings](). Users with the [role]() of organization administrator, editor or rules administrator may create and manage alerts. 
+Alerts are managed within [organization settings](user_tsguideset.html#orgset). Users with the [role](user_tsguideset.html#roles) of organization administrator, editor or rules administrator may create and manage alerts. 
 
 The main purpose of an alert is to provide notification to one or more users when a specific condition has been observed within TeamServer. Alerts execute and notify user via email on event, daily and weekly. 
 
