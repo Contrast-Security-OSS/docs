@@ -27,7 +27,7 @@ TeamServer offers a capability to consolidate multiple applications into a singl
 [Organization groups](user_tsguideset.html#group) can be viewed, created, edited and deleted from this Settings page. Organization administrators use groups to define a user's organization and application role. 
 
 ## Users
-Users can be [created](user_tsguideset.html#users) and assigned a default organization from this Settings page. Users can also be edited and deleted from this page by organization administrators.
+Users can be [created](user_tsguideset.html#user) and assigned a default organization from this Settings page. Users can also be edited and deleted from this page by organization administrators.
 
 ## Report Settings
 The Report Settings page offers a single interface for organization administrators to define the template for hardcopy reports. This essentially involves defining the default values for reports such as:
