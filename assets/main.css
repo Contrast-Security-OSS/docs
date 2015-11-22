@@ -226,6 +226,7 @@ h4 {
 	top: 50%;
 	transform: translateY(-50%);
 	margin-left: 5px;
+	width: 150px;
 }
 
 @media (max-width: 768px) {
@@ -248,13 +249,6 @@ h4 {
 		transform: translateY(-50%);
 	}
 	.navbar>.container-fluid .navbar-brand {
-		display: block;
-		height: auto;
-		padding: 0;
-		float: none;
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
 		margin-left: 20px;
 	}
 }
