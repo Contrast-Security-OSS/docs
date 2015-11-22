@@ -1,4 +1,14 @@
+// External Links 
 
+var links = document.links;
+
+for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+   if (links[i].hostname != window.location.hostname) {
+       links[i].target = '_blank';
+   } 
+}
+
+// Twitter Button 
 
 getShareButtons();
 loadTwitterJs();
@@ -31,3 +41,5 @@ function loadTwitterJs()
 {
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 }
+
+// Top Menu Active State 
