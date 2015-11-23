@@ -1,5 +1,5 @@
 <!--
-title: "Contrast 3.2.2 November 2015"
+title: "Contrast 3.2.2 - November 2015"
 description: "Contrast 3.2.2 November 2015"
 -->
 
@@ -12,7 +12,7 @@ description: "Contrast 3.2.2 November 2015"
 * CONTRAST-6418: Remove implicit multi-policy support from *rules.xml*
 * CONTRAST-6431: Minor performance improvements
 * CONTRAST-6461: Allow for command line override of proxy settings in the Java Agent
-* CONTRAST-6468: Updated codesourcekey generator is throwing ```ArrayIndexOutOfBounds``` exceptions for non-libraries
+* CONTRAST-6468: Updated codesourcekey generator is throwing *ArrayIndexOutOfBounds* exceptions for non-libraries
 * CONTRAST-6502: Unable to scan *rt.jar*
 * CONTRAST-6506: JavaScript Analysis
 * CONTRAST-6507: HSTS
