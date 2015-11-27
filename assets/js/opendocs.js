@@ -43,3 +43,24 @@ function loadTwitterJs()
 }
 
 // Top Menu Active State 
+(function() {
+    var path = window.location.pathname,
+        // match any keyword that is in between a forward slash and period or underscore
+        // /foobar(.|_)
+        location_key = path.match(/\/[a-zA-Z]+(\.|_)/);
+
+    if (location_key === null) return;
+
+    // get first item from the returned match array
+    location_key = location_key[0];
+
+    // replace the "\", ".", and/or _
+    location_key = location_key.replace(/[\/\._]+/g, '');
+
+    // target our section-tab class with the location name
+    $('.section-tab-' + location_key).addClass('active');
+    
+})()
+
+
+
