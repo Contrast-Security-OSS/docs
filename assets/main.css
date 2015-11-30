@@ -198,7 +198,7 @@ h4 {
 }
 
 
-/* Top Navigation Original */
+/* Top Navigation */
 	
 .navbar-fixed-top,
 .navbar-header {
@@ -225,6 +225,7 @@ h4 {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 	margin-left: 5px;
 	width: 150px;
 }
@@ -247,6 +248,7 @@ h4 {
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
 	}
 	.navbar>.container-fluid .navbar-brand {
 		margin-left: 20px;
