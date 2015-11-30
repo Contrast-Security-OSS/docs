@@ -79,10 +79,13 @@ h4 {
 /* Icons */
 
 .fa {
-	float: right;
-	padding-top: 12px;
-	padding-right: 20px;
 	color: white;
+}
+
+.iconbar .fa-bug,
+.iconbar .fa-pencil {
+	float: right;
+	margin: 12px 15px 0 0;
 }
 
 /* Images */
@@ -196,22 +199,65 @@ h4 {
 
 
 /* Top Navigation */
-
+	
+.navbar-fixed-top,
+.navbar-header {
+	height: 72px;
+}
 
 .navbar-fixed-top {
-	height: 74px;
+	overflow: hidden;
 }
 
-.navbar-brand {
-	height: 74px;
-	left: 25px;
+.navbar-header {
+	position: relative;
 }
 
-.navbar-nav, .navbar-right {
-	height: 74px;
+.navbar-nav > li > a.icon-link {
+	padding: 10px; 
+}
+
+.navbar>.container-fluid .navbar-brand {
+	display: block;
+	height: auto;
+	padding: 0;
+	float: none;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	margin-left: 5px;
+	width: 150px;
+}
+
+@media (max-width: 768px) {
+	.navbar-fixed-top {
+		height: auto;
+	}
+	.navbar-header {
+		height: 71px;
+	}
+	.icon-link {
+		position: relative;
+		top: -20px;
+		left: 5px;
+	}
+	.navbar-toggle {
+		margin-top: 0;
+		margin-bottom: 0;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+	}
+	.navbar>.container-fluid .navbar-brand {
+		margin-left: 20px;
+	}
+}
+
+.navbar-nav {
 	padding: 10px;
 }
-
 
 /* Side Navigation */
 
@@ -242,7 +288,7 @@ h4 {
 }
 
 .navitems {
-	overflow-y: auto;
+	/*overflow-y: auto;*/
 	top: 0;
 	bottom: 0;
 	height: 125%;
