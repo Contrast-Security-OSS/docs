@@ -60,14 +60,14 @@ function loadTwitterJs()
     // target our section-tab class with the location name
     $('.section-tab-' + location_key).addClass('active');
     
-})()
+})();
 
-// Side Nav Menu Dynamic Expand
+// Side Nav Menu Auto Expand
 (function() {
     var path = window.location.pathname,
-        // match any keyword that is in between an underscore and a period
-        // /foobar(.|_)
-        location_key = path.match(/\_[a-z0-9]+(\.)/);
+        // match any keyword that has letters and numbers, and that are between an underscore and a period
+        // _v1.
+        location_key = path.match(/_[a-zA-Z0-9]+\./);
 
     if (location_key === null) return;
 
@@ -77,9 +77,12 @@ function loadTwitterJs()
     // replace the "\", ".", and/or _
     location_key = location_key.replace(/[\/\._]+/g, '');
 
-    // target our section-tab class with the location name
-    $('.panel-title-' + location_key).addClass('active');
+    // first collapse all expanded panels
+    $('a[aria-expanded="true"]').attr('aria-expanded', "false");
 
-}) ()
+    // get desired panel and expand it
+    $('#panel-' + location_key).attr('aria-expanded', "true");
+
+})();
 
 
