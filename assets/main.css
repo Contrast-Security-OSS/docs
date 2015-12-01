@@ -148,14 +148,20 @@ h4 {
 	padding-right: 60px;
 }
 
-/* Release Notes Header */
+/* Release Notes Headers */
 .label7 {
 	color: #C01920; 
 	font-weight: 400;
 	font-size: 30px;
 }
 
-/* Contribute Header */
+.label7b {
+	color: #C01920; 
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* Contribute Headers */
 .label8 {
 	color: #F5bd35; 
 	font-weight: 400;
@@ -281,7 +287,7 @@ h4 {
 }
 
 .scroll {
-	margin-top: 50px;
+	margin-top: 45px;
 	margin-left: 20px;
 	height: 125%;
 	background-color: white;
@@ -294,8 +300,27 @@ h4 {
 	height: 125%;
 }
 
-.navitems2 {
-	margin-top: 50px;
+/*
+.panel-default>.panel-heading {
+    background-image: -webkit-linear-gradient(top,#c15256 0,#c01920 100%);
+    background-image: -o-linear-gradient(top,#c15256 0,#c01920 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#c15256),to(#c01920));
+    background-image: linear-gradient(to bottom,#c15256 0,#c01920 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
+    background-repeat: repeat-x;
+}
+*/
+
+.panel-default>.panel-heading {
+	background-color: #fff;
+}
+
+.panel {
+	border: none;
+}
+
+.panel-group {
+	margin-right: 20px;
 }
 
 .button {
