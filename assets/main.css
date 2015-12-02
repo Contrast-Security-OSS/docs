@@ -312,12 +312,12 @@ h4 {
 	background-color: #ffffff;
 }
 
-.panel-group {
-	margin-right: 20px;
-}
-
 .panel-title {
 	margin-left: -10px;
+}
+
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: none;
 }
 
 .button {
