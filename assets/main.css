@@ -155,12 +155,6 @@ h4 {
 	font-size: 30px;
 }
 
-.label7b {
-	color: #C01920; 
-	font-weight: 400;
-	font-size: 20px;
-}
-
 /* Contribute Headers */
 .label8 {
 	color: #F5bd35; 
@@ -184,14 +178,15 @@ h4 {
 
 /* Sidebar Section Sub Header */
 .label10 {
-	padding-left: 10px;
+	font-weight: 300;
+	font-size: 12px;
+	margin-left: -5px;
 }
 
 /* Sidebar Article Title Small */
 .label9 {
 	font-weight: 400;
 	font-size: 12px;
-	padding-left: 20px;
 }
 
 
@@ -300,27 +295,29 @@ h4 {
 	height: 125%;
 }
 
-/*
-.panel-default>.panel-heading {
-    background-image: -webkit-linear-gradient(top,#c15256 0,#c01920 100%);
-    background-image: -o-linear-gradient(top,#c15256 0,#c01920 100%);
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#c15256),to(#c01920));
-    background-image: linear-gradient(to bottom,#c15256 0,#c01920 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
-    background-repeat: repeat-x;
-}
-*/
 
 .panel-default>.panel-heading {
-	background-color: #fff;
+    background-image: -webkit-linear-gradient(top,#fff 0,#fff 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#fff 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff));
+    background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff', GradientType=0);
+    background-repeat: repeat-x;
+    height: 20px;
 }
 
 .panel {
 	border: none;
+	box-shadow: none;
+	background-color: #ffffff;
 }
 
 .panel-group {
 	margin-right: 20px;
+}
+
+.panel-title {
+	margin-left: -10px;
 }
 
 .button {
