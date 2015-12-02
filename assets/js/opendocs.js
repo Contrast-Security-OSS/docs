@@ -79,9 +79,15 @@ function loadTwitterJs()
 
     // first collapse all expanded panels
     $('a[aria-expanded="true"]').attr('aria-expanded', "false");
+    $('div[class="panel-collapse collapse in"]').removeClass('in');
 
     // get desired panel and expand it
-    $('#panel-' + location_key).attr('aria-expanded', "true");
+    var panel = $('#panel-' + location_key),
+        panel_wrapper=panel.parents('div.panel'),
+        collapse=panel_wrapper.find('div.panel-collapse');
+        
+        panel.attr('aria-expanded', "true");
+        collapse.addClass('in');
 
 })();
 
