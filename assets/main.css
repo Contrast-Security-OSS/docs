@@ -226,6 +226,7 @@ h4 {
 	top: 50%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	margin-left: 5px;
 	width: 150px;
 }
@@ -249,6 +250,7 @@ h4 {
 		top: 50%;
 		transform: translateY(-50%);
 		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
 	}
 	.navbar>.container-fluid .navbar-brand {
 		margin-left: 20px;
@@ -268,10 +270,13 @@ h4 {
 	left: 0;
 	width: 216px;
 	background-color: white;
-	overflow: auto;
+	overflow: auto; 
 
-/* IE Fix */
+
+/* Windows Scrollbar Fixes */
 	-ms-overflow-style: none;
+	-moz-overflow: hidden;
+	-webkit-overflow-style: none;
 }
 
 .persona {
