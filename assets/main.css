@@ -82,11 +82,18 @@ h4 {
 	color: white;
 }
 
+
 .iconbar .fa-bug,
 .iconbar .fa-pencil {
 	float: right;
 	margin: 12px 15px 0 0;
 }
+
+.fa-caret-right,
+.fa-caret-down {
+	color: black;
+}
+
 
 /* Images */
 
