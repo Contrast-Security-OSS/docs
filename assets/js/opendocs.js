@@ -1,3 +1,4 @@
+
 // External Links 
 
 var links = document.links;
@@ -7,6 +8,7 @@ for (var i = 0, linksLength = links.length; i < linksLength; i++) {
        links[i].target = '_blank';
    } 
 }
+
 
 // Twitter Button 
 
@@ -42,7 +44,9 @@ function loadTwitterJs()
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 }
 
+
 // Top Menu Active State 
+
 (function() {
     var path = window.location.pathname,
         // match any keyword that is in between a forward slash and period or underscore
@@ -60,6 +64,61 @@ function loadTwitterJs()
     // target our section-tab class with the location name
     $('.section-tab-' + location_key).addClass('active');
     
-})()
+})();
+
+
+// Side Nav Menu Auto Expand
+
+(function() {
+    var path = window.location.pathname,
+        // match any keyword that has letters and numbers, and that are between an underscore and a period
+        // _v1.
+        location_key = path.match(/_[a-zA-Z0-9]+\./);
+
+    if (location_key === null) return;
+
+    // get first item from the returned match array
+    location_key = location_key[0];
+
+    // replace the "\", ".", and/or _
+    location_key = location_key.replace(/[\/\._]+/g, '');
+
+    // first collapse all expanded panels
+    $('a[aria-expanded="true"]').attr('aria-expanded', "false");
+    $('div[class="panel-collapse collapse in"]').removeClass('in');
+
+    // get desired panel and expand it
+    var panel = $('#panel-' + location_key),
+        panel_wrapper=panel.parents('div.panel'),
+        collapse=panel_wrapper.find('div.panel-collapse');
+        
+        panel.attr('aria-expanded', "true");
+        collapse.addClass('in');
+
+})();
+
+
+// Side Nav Java Install Collapse
+
+(function() {
+    var path = window.location.pathname,
+        // match "../user.html"
+        
+        location_key = path.match(/\/user\./);
+
+    if (location_key === null) return;
+
+    // get first item from the returned match array
+    location_key = location_key[0];
+
+    // replace the "\", ".", and/or _
+    location_key = location_key.replace(/[\/\._]+/g, '');
+
+    // collapse all expanded panels
+    $('a[aria-expanded="true"]').attr('aria-expanded', "false");
+    $('div[class="panel-collapse collapse in"]').removeClass('in');
+
+})();
+
 
 
