@@ -111,7 +111,7 @@ h4 {
 	font-size: 20px;
 	float: right;
 	padding-top: 25px;
-	padding-right: 10px;
+	padding-right: 11px;
 }
 
 
@@ -229,6 +229,7 @@ h4 {
 	top: 50%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	margin-left: 5px;
 	width: 150px;
 }
@@ -240,7 +241,14 @@ h4 {
 	.navbar-header {
 		height: 71px;
 	}
+
+	.navbar-right > li,
+	.navbar-right > li > a {
+		display: inline-block;
+	}
+
 	.icon-link {
+		margin-right: 15px;
 		position: relative;
 		top: -20px;
 		left: 5px;
@@ -252,6 +260,7 @@ h4 {
 		top: 50%;
 		transform: translateY(-50%);
 		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
 	}
 	.navbar>.container-fluid .navbar-brand {
 		margin-left: 20px;
@@ -273,7 +282,7 @@ h4 {
 	background-color: white;
 	overflow: auto;
 
-/* IE Fix */
+/* IE Hide Scrollbar Fix */
 	-ms-overflow-style: none;
 }
 
