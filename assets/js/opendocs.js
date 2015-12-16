@@ -60,14 +60,14 @@ function loadTwitterJs()
     // target our section-tab class with the location name
     $('.section-tab-' + location_key).addClass('active');
     
-})()
+})();
 
 // GitHub Direct Path to Article
 
 /**
  * Any <article> wrapper that has a div.iconbar with a github edit link will
  * be updated if the <article> element also contains a div with github path attribute
- * <div data-gitedit="content/user/agent/java/config/JavaAgentSystemProperties.md"></div>
+ * <div data-git-edit="content/user/agent/java/config/JavaAgentSystemProperties.md"></div>
  */
 (function() {
     // get all article elements
@@ -75,7 +75,7 @@ function loadTwitterJs()
         // get all links with git-edit classes within the article elements
         git_links = articles.find('a.git-edit'),
         path = {},
-        git_edit_root = 'https://github.com/Contrast-Security-OSS/docs/tree/master';
+        git_edit_root = 'https://github.com/Contrast-Security-OSS/docs/blob/master';
 
     // iterate over each git link found
     for (var i = 0; i < git_links.length; i++) {
@@ -91,5 +91,6 @@ function loadTwitterJs()
         }
     }
 })(); 
+
 
 
