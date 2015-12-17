@@ -1,0 +1,14 @@
+# IDE stuff
+.idea/**
+.settings/**
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# vim swap file
+*.swp
