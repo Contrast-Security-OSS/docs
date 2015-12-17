@@ -1,4 +1,3 @@
-
 // External Links 
 
 var links = document.links;
@@ -119,6 +118,38 @@ function loadTwitterJs()
     $('div[class="panel-collapse collapse in"]').removeClass('in');
 
 })();
+
+
+// GitHub Direct Path to Article
+
+/**
+ * Any <article> wrapper that has a div.iconbar with a github edit link will
+ * be updated if the <article> element also contains a div with github path attribute
+ * <div data-git-edit="content/user/agent/java/config/JavaAgentSystemProperties.md"></div>
+ */
+ 
+(function() {
+    // get all article elements
+    var articles = $('div.article'),
+        // get all links with git-edit classes within the article elements
+        git_links = articles.find('a.git-edit'),
+        path = {},
+        git_edit_root = 'https://github.com/Contrast-Security-OSS/docs/blob/master';
+
+    // iterate over each git link found
+    for (var i = 0; i < git_links.length; i++) {
+        // find the <div data-gitedit=""> in the article element
+        path = git_links.eq(i).parents('div.article').find('div[data-git-edit]');
+        if (path.length === 1) {
+            // get the git edit path from the data attribute
+            path = path.data('git-edit');
+            // trim any leading or trailing forward slashes in the path
+            path = path.replace(/(^\/|\/$)/g, '');
+            // update the git edit link
+            git_links.eq(i).attr('href', git_edit_root + '/' + path);
+        }
+    }
+})(); 
 
 
 
