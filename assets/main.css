@@ -267,6 +267,12 @@ h4 {
 	}
 }
 
+/*
+.navbar-form {
+	float: right;
+}
+*/
+
 .navbar-nav {
 	padding: 10px;
 }
