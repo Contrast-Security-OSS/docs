@@ -2,11 +2,6 @@
 title: "Contrast 3.2.3 - December 2015"
 description: "Contrast 3.2.3 December 2015"
 -->
-
-## Special Announcement
-Contrast is pleased to announce the first release of NodeJS support for IAST. Contrast has spent the past several months developing and integrating agent support for primarily MEAN stack NodeJS applications (see: http://mean.io/). The first generation agent will continue to expand rule coverage and platform component support. 
-
-
 ## Java Agent
 * CONTRAST-4612: Refactor library class usage out of APPUPDATE and into APPACTIVITY
 * CONTRAST-6655: Library support for WebSphere Liberty
