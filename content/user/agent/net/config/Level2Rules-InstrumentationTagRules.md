@@ -1,7 +1,9 @@
+<!--
+title: "Level 2 Rules - Tag Rules"
+description: "Information on .NET Instrumentation Tag Rules"
+-->
 
-##Tag Rules
-
-###Tag Rule Syntax
+## Tag Rule Syntax
  
 
 ```xml
@@ -22,31 +24,37 @@
 </tags>
 ```
 
-Tag methods are organized in tag-lists under a single tag (specified in tag-list's tags attribute).  On the method node, specify the data source and target.
+Tag methods are organized in tag-lists under a single tag (specified in tag-list's ```tags``` attribute).  On the method node, specify the data source and target.
 
-Method
+## Method
+
+ ```
  method target="TARGET" [source="SOURCE"] signature="SIGNATURE" [scope="TAG_SCOPE"]
-* SIGNATURE: *required*
+ ```
+
+* **SIGNATURE:** *required*
 
    Signature of the method to instrument
    
-* TARGET: *required*
+* **TARGET:** *required*
    
    R: return object  
-   P[Number]: parameter reference (0-based).  Ex: P0 for first parameter, P1 for second parameter, etc.
+   P[Number]: parameter reference (0-based) 
+   *Ex: P0 for first parameter, P1 for second parameter, etc.*
         
-* SOURCE: *optional, default is P0*
+* **SOURCE:** *optional, default is "P0"*
 
-   P[Number]: parameter reference (0-based).  Ex: P0 for first parameter, P1 for second parameter, etc.
+   P[Number]: parameter reference (0-based)  
+   *Ex: P0 for first parameter, P1 for second parameter, etc.*
 
-* TAG_SCOPE: *optional, default is lifetime*
+* **TAG_SCOPE:** *optional, default is "lifetime"*
         
-  lifetime - the target object will be tagged for its lifetime  
-  method - the target will only be tagged during the tagger method, and will revert to original state after the method exits.
+  lifetime - The target object will be tagged for its lifetime  
+  method - The target will only be tagged during the tagger method, and will revert to its original state after the method exits
 
 
-####Method-scope Tag Rules
-Tag scope by default is life.  Method-scope is an advanced feature that you may want to set for methods that can trigger a rule method in their internal code.  For example, some .NET methods will escape data and write in the same method.  
+### Method-Scope Tag Rules
+Tag scope by default is *lifetime*.  Method-scope is an advanced feature you may want to set for methods that can trigger a rule method in their internal code.  For example, some .NET methods will escape data and write in the same method.  
 ```csharp
 
 // "normal" tagger: method source=P0, target=R, see full signature above

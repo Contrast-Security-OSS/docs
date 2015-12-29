@@ -1,4 +1,9 @@
-# .NET Level 2 Rules - Policy file editing
+<!--
+title: ".NET Level 2 Rules"
+description: "Information on .NET Level 2 Rules"
+-->
+
+## Table Of Contents
 
 * [Introduction](#policy-file)
 * [File-based Rules](#file-based-rules)
@@ -11,17 +16,19 @@
   - [Propagators](#propagators)
   - [Triggers](#triggers)
 
-The behavior of the Contrast .NET Agent is largely driven by rules located in the policy.xml file in the agent's installation directory. The .NET Agent's behavior can be customized by adding your own rules to customerPolicy.xml.  Users can also override rules in policy.xml by adding a rule with the same method signature to customerPolicy.xml.  
+## Policy File Editing
 
-The customerPolicy.xml file is located in *C:\ProgramData\Contrast.NET\customerPolicy.xml*
+The behavior of the Contrast .NET Agent is largely driven by rules located in the *policy.xml* file in the agent's installation directory. The .NET Agent's behavior can be customized by adding your own rules to *customerPolicy.xml*.  Users can also override rules in *policy.xml* by adding a rule with the same method signature to *customerPolicy.xml*.  
 
-Please note that the agent's default policy.xml should not be directly modified because users' changes will be lost when a new version of Contrast.NET is installed.  The customerPolicy.xml file will not be overwritten during software updates.
+The *customerPolicy.xml* file is located in *C:\ProgramData\Contrast.NET\customerPolicy.xml*
 
-##  File-Based Rules
+Please note that the agent's default *policy.xml* should not be directly modified because users' changes will be lost when a new version of Contrast.NET is installed.  The *customerPolicy.xml* file will not be overwritten during software updates.
+
+## File-Based Rules
 
 Contrast.NET will detect vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. Users can disable rules they no longer wish to be detected by the .NET Agent. 
 
-The file based rules are configured by changing the *file-based-rules* xml element.  See below for explanations of these rules.
+The file-based rules are configured by changing the *file-based-rules* xml element.  See below for explanations of these rules.
 
 ```xml
   <file-based-rules>
@@ -67,15 +74,15 @@ The file based rules are configured by changing the *file-based-rules* xml eleme
 ```
 
 
-### Client-side Technology Detection 
+### Client-Side Technology Detection 
 
-Contrast.NET will scan the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash, and Silverlight.  Set *client-side-technology-detection* to enabled=**"false"** to remove these checks.
+Contrast.NET will scan the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash, and Silverlight.  Set *client-side-technology-detection* to ```enabled="false"``` in order to remove these checks.
 
-### Aspx file security checks
+### ASPX File Security Checks
 
 Setting | Explanation
 :------ |:-----------
-debug-compilation | Ensure page debug is not set to true
+debug-compilation | Ensure page debug is not set to "true"
 event-validation | Ensure postback event validation is not disabled for the page
 request-validation | Ensure request validation is not disabled for the page
 request-validation-controls | Ensure request validation is not disabled for individual controls
@@ -83,22 +90,22 @@ viewstate-encryption | Ensure viewstate encryption is not disabled for the page
 viewstate-encryption-mac | Ensure viewstate mac is not disabled for the page
 trace | Ensure tracing is turned off for the page
 
-### Config file security checks 
+### Config File Security Checks 
 
-Contrast.NET will scan your application web.config or app.config files for various security issues.  Set web-config-checks enabled to false to disable all checks.  You can also disable specific rules by changing one or more of the options below.
+Contrast.NET will scan your application's *web.config* or *app.config* files for various security issues.  Set *web-config-checks* ```enabled``` to "false" to disable all checks.  You can also disable specific rules by changing one or more of the options below.
 
 Setting | Description
 :------ |:-----------
-authorization-deny | If ASP.NET file-based authorization is used, ensure rules are not missing a deny-all rule and do not allow all before a deny rule is present.
+authorization-deny | If ASP.NET file-based authorization is used, ensure rules are not missing a deny-all rule and do not allow all before a deny rule is present
 custom-errors | Check that a custom error page is defined
 debug-compilation | Ensure that the application is not running in debug mode
 event-validation | Ensure that ASP.NET postbacks are validated
 forms-auth-protected | Ensure forms authentication cookies are validated and encrypted
-forms-auth-redirect | Ensure authenticated users cannot be redirect to other applications
+forms-auth-redirect | Ensure authenticated users cannot be redirected to other applications
 forms-auth-ssl | Ensure that forms authentication cookies use SSL
 httponly-cookies | Ensure cookies are HttpOnly
 http-runtime-version-header | Ensure ASP.NET does not send its version number to the client
-http-runtime-header-checking | Ensures that end of line characters in HTTP response are encoded prevent header injection attacks
+http-runtime-header-checking | Ensures that end-of-line characters in HTTP response are encoded to prevent header injection attacks
 http-runtime-max-request-length | Ensure HTTP Request size is not too large (greater than 4096 bytes)
 http-runtime-cache-control | Ensure that Cache-Control:private header is sent on HTTP response
 membership-password-settings |  Ensure that ASP.NET membership provider's password policy is secure
@@ -113,11 +120,11 @@ trace | Ensure ASP.NET tracing is disabled
 viewstate-validation | Ensure ASP.NET Viewstate validation is enabled
 viewstate-encryption | Ensure ASP.NET Viewstate is encrypted
 wcf-replay-detection | Ensure WCF replays are detected
-wcf-metadata | Ensure WCF service  metadata cannot be sent to the client
+wcf-metadata | Ensure WCF service metadata cannot be sent to the client
 wcf-exception-detail | Ensure WCF faults do not send detailed exception stack traces to the client
 
 
-#Response-based Rules 
+## Response-Based Rules 
 
 Contrast.NET will scan the response stream of your application for various security issues.  You can disable some or all of these checks.  Disabling all response-based checks will result in a small performance improvement for analyzed web applications.
 
@@ -143,27 +150,27 @@ Contrast.NET will scan the response stream of your application for various secur
 
 Setting | Description
 :------ |:-----------
-clickjacking-controls | Ensure that frame-breaking sripts or headers are present
+clickjacking-controls | Ensure that frame-breaking scripts or headers are present
 cache-controls | Ensure page caching is disabled with header or meta tags
 form-autocomplete | Ensure form controls have autocomplete disabled
 form-parameter-pollution | Ensure form tags prevent parameter pollution by including an action attribute
 http-insecure-auth-protocol | Ensure that insecure auth protocols (Basic or Digest) are not used
 httponly-cookies | Ensure cookies are HttpOnly
-session-rewriting | Ensure session cannot be rewritten because of cookieless sessions
+session-rewriting | Ensure session cannot be rewritten because of cookie-less sessions
 
 
-#Instrumentation Rules
+## Instrumentation Rules
 
-Contrast.NET will instrument your application code and follow user provided data to detect potential security issues.  
+Contrast.NET will instrument your application code and follow user-provided data in order to detect potential security issues.  
 
 Contrast.NET will mark all user-provided data (such as FORMS posts, web service calls or HTTP headers) as tainted.  A potential security issue exists if tainted data is not safely escaped before it gets to an output sink (such as HTML pages, databases or system commands).  
 
-* Sources - set methods whose return data should be tagged.
-* Tag-lists - set methods that will add tags to data as it flow through them.  For example you can tag data as escaped so it does not trigger a security finding.
-* Propagators - instrument methods with more advanced syntax to control how data should be propagated through them.  Unlike tag-lists, new tags aren't attached to this data.
-* Rules - set output methods that check incoming data.  Tags present on the data will determine if a security finding is generated.
+* **Sources** - Set methods whose return data should be tagged.
+* **Tag-lists** - Set methods that will add tags to data as it flows through them.  For example, you can tag data as "escaped" so it does not trigger a security finding.
+* **Propagators** - Instrument methods with more advanced syntax to control how data should be propagated through them.  Unlike tag-lists, new tags aren't attached to this data.
+* **Rules** - Set output methods that check incoming data.  Tags present on the data will determine if a security finding is generated.
 
-##Sources Rules
+## Sources Rules
 
 ### Source Rule Syntax
 ```xml
@@ -174,14 +181,17 @@ Contrast.NET will mark all user-provided data (such as FORMS posts, web service 
     <method name="HTTP Request Form" signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_Form()" tags="cross-site" />
   </sources>  
 ```
-All data that is the return of a method specified here will be tagged as "tainted".  All tainted data will trigger a warning if it makes it to a *rule* method, unless it has other tags added to it by a *tag-list* method which invalidate a rule.
 
-Besides the "tainted" tag, you can list more tags in the tags attribute to automatically attach to the data.
+---
+
+All data that is the return of a method specified here will be tagged as "tainted".  All tainted data will trigger a warning if it makes it to a *rule* method, unless it has other tags added to it by a *tag-list* method, which invalidate a rule.
+
+Besides the "tainted" tag, you can list additional tags in the ```tags``` attribute to automatically attach them to the data.
 
 
-##Tag Rules
+## Tag Rules
 
-###Tag Rule Syntax
+### Tag Rule Syntax
  
 
 ```xml
@@ -202,31 +212,37 @@ Besides the "tainted" tag, you can list more tags in the tags attribute to autom
 </tags>
 ```
 
-Tag methods are organized in tag-lists under a single tag (specified in tag-list's tags attribute).  On the method node, specify the data source and target.
+Tag methods are organized in tag-lists under a single tag (specified in tag-list's ```tags``` attribute).  On the method node, specify the data source and target.
 
-Method
+## Method
+
+ ```
  method target="TARGET" [source="SOURCE"] signature="SIGNATURE" [scope="TAG_SCOPE"]
-* SIGNATURE: *required*
+ ```
+
+* **SIGNATURE:** *required*
 
    Signature of the method to instrument
    
-* TARGET: *required*
+* **TARGET:** *required*
    
    R: return object  
-   P[Number]: parameter reference (0-based).  Ex: P0 for first parameter, P1 for second parameter, etc.
+   P[Number]: parameter reference (0-based) 
+   *Ex: P0 for first parameter, P1 for second parameter, etc.*
         
-* SOURCE: *optional, default is P0*
+* **SOURCE:** *optional, default is "P0"*
 
-   P[Number]: parameter reference (0-based).  Ex: P0 for first parameter, P1 for second parameter, etc.
+   P[Number]: parameter reference (0-based)  
+   *Ex: P0 for first parameter, P1 for second parameter, etc.*
 
-* TAG_SCOPE: *optional, default is lifetime*
+* **TAG_SCOPE:** *optional, default is "lifetime"*
         
-  lifetime - the target object will be tagged for its lifetime  
-  method - the target will only be tagged during the tagger method, and will revert to original state after the method exits.
+  lifetime - The target object will be tagged for its lifetime  
+  method - The target will only be tagged during the tagger method, and will revert to its original state after the method exits
 
 
-####Method-scope Tag Rules
-Tag scope by default is life.  Method-scope is an advanced feature that you may want to set for methods that can trigger a rule method in their internal code.  For example, some .NET methods will escape data and write in the same method.  
+### Method-Scope Tag Rules
+Tag scope by default is *lifetime*.  Method-scope is an advanced feature you may want to set for methods that can trigger a rule method in their internal code.  For example, some .NET methods will escape data and write in the same method.  
 ```csharp
 
 // "normal" tagger: method source=P0, target=R, see full signature above
@@ -258,17 +274,17 @@ void HtmlEncode(string input, System.IO.Textwriter htmlOutput) {
 
 ----
 
-##Propagator Rules
+## Propagator Rules
 
-Propagators are an advanced feature integral to correct agent operation and overriding any of the default propagators is highly discouraged.  You may need to add new propagators although this scenario is not fully supported.  There is currently no way to add new propagators to the ELT (CLR2) profiler since they are not currently controlled by the policy file.  Only the new instrumentation (CLR4) profiler will load propagators from your policy file.  However the syntax is not as user friendly as propagation is complex and propagator rule syntax is subject to change in future versions.
+Propagators are an advanced feature integral to correcting agent operation, and overriding any of the default propagators is highly discouraged.  You may need to add new propagators, although this scenario is not fully supported.  There is currently no way to add new propagators to the ELT (CLR2) profiler since they are not currently controlled by the policy file.  Only the new instrumentation (CLR4) profiler will load propagators from your policy file.  However, the syntax is not very user-friendly, as propagation is complex and propagator rule syntax is subject to change in future versions.
 
 ----
 
-#Trigger Rules
+## Trigger Rules
 
 Trigger rules specify methods whose incoming data should be checked for security issues.  Any tainted data that does not have a proper escape tag allowed by the rule will raise a finding that will be sent to TeamServer.
 
-###Trigger Rule Syntax
+### Trigger Rule Syntax
 
 ```xml
 <rules>
@@ -295,45 +311,44 @@ Trigger rules specify methods whose incoming data should be checked for security
 </rules>
 ```
 
-Rule(s)
+### Rule(s)
+
  * Pattern
    * Event(s)
      * Method
-     * Param(s)
      * This Object
      * Return Object
+     * Param(s)
  * Stack Blacklist
    * Entry(ies)
        
-Rule:
-  Rule id="ID"
+**Rule: Rule id="ID"**
   * ID: *required*
   
-Pattern:
-  Pattern
+#### Pattern
   
-Event:
+**Event:**
   Each event element must have a Method sub element and at least one of the following sub elements: This Object, Params, or Return Object
   
   * event [className=CLASS_NAME] [enterOnly=ENTER_ONLY] [performPreMatchSubstring=PERFORM_PRE_MATCH_SUBSTRING] 
     * CLASS_NAME: *optional*
       
-    * ENTER_ONLY: *optional, default is false*
+    * ENTER_ONLY: *optional, default is "false"*
     
       true: Evaluate trigger before the method code, return value is unavailable
       false: Evaluate trigger after method code
         
-    * PERFORM_PRE_MATCH_SUBSTRING: *optional, default is false*
+    * PERFORM_PRE_MATCH_SUBSTRING: *optional, default is "false"*
          
       If true, the trigger will be evaluated on a subset of first parameter where the second parameter is starting index and third parameter is subset length.  Method source must be param with index=1.  
 
       
-Method:
+**Method:**
   * method signature="SIGNATURE"
-    * SIGNATURE: signature of the method to instrument
+    * SIGNATURE: Signature of the method to instrument
     
 
-This Object: *optional*
+**This Object:** *optional*
   * object [required-tags=REQUIRED_TAGS] [disallowed-tags=DISALLOWED_TAGS] [tracked=TRACKED] [startsWithTaint=STARTS_WITH_TAINT] [good-value-regex=GOOD_VALUE_REGEX]
       * REQUIRED_TAGS: *optional*
       
@@ -355,17 +370,18 @@ This Object: *optional*
       
         If the source matches the following regex, the finding will not be triggered
 
-Return Object: *optional*
+**Return Object:** *optional*
   * return [required-tags=REQUIRED_TAGS] [disallowed-tags=DISALLOWED_TAGS] [tracked=TRACKED] [startsWithTaint=STARTS_WITH_TAINT] [good-value-regex=GOOD_VALUE_REGEX]
     * REQUIRED_TAGS, DISALLOWED_TAGS, TRACKED, STARTS_WITH_TAINT, GOOD_VALUE_REGEX: same as in "This Object", see above
     
-Params:
+**Params:**
   * params [connector=CONNECTOR]
     * param index="INDEX" [required-tags=REQUIRED_TAGS] [disallowed-tags=DISALLOWED_TAGS] [tracked=TRACKED] [startsWithTaint=STARTS_WITH_TAINT] [good-value-regex=GOOD_VALUE_REGEX]
     
       * CONNECTOR: *optional*, default is "or"
       
         and - trigger finding only if all parameters are satisfied
+
         or - trigger finding if any parameter is satisfied
     
       * INDEX: *required*
@@ -374,14 +390,17 @@ Params:
         
       * REQUIRED_TAGS, DISALLOWED_TAGS, TRACKED, STARTS_WITH_TAINT, GOOD_VALUE_REGEX: same as in This object, see above
       
-Stack Blacklist:
+
+---
+
+#### Stack Blacklist:
   
-  If the trigger method contains one of these methods in its stack trace, the finding will not be satisfied
+  If the trigger method contains one of these methods in its stack trace, the finding will not be satisfied.
   
   * stack-blacklist
     * entry SIGNATURE
     
       * SIGNATURE: *required*
       
-        Signature of the of method to instrument for stack blacklist
+        Signature of the of method to instrument for stack blacklist.
       

@@ -1,9 +1,11 @@
-
-#Trigger Rules
+<!--
+title: "Level 2 Rules - Trigger Rules"
+description: "Information on .NET Instrumentation Trigger Rules"
+-->
 
 Trigger rules specify methods whose incoming data should be checked for security issues.  Any tainted data that does not have a proper escape tag allowed by the rule will raise a finding that will be sent to TeamServer.
 
-###Trigger Rule Syntax
+## Trigger Rule Syntax
 
 ```xml
 <rules>
@@ -30,45 +32,44 @@ Trigger rules specify methods whose incoming data should be checked for security
 </rules>
 ```
 
-Rule(s)
+### Rule(s)
+
  * Pattern
    * Event(s)
      * Method
-     * Param(s)
      * This Object
      * Return Object
+     * Param(s)
  * Stack Blacklist
    * Entry(ies)
        
-Rule:
-  Rule id="ID"
+**Rule: Rule id="ID"**
   * ID: *required*
   
-Pattern:
-  Pattern
+#### Pattern
   
-Event:
+**Event:**
   Each event element must have a Method sub element and at least one of the following sub elements: This Object, Params, or Return Object
   
   * event [className=CLASS_NAME] [enterOnly=ENTER_ONLY] [performPreMatchSubstring=PERFORM_PRE_MATCH_SUBSTRING] 
     * CLASS_NAME: *optional*
       
-    * ENTER_ONLY: *optional, default is false*
+    * ENTER_ONLY: *optional, default is "false"*
     
       true: Evaluate trigger before the method code, return value is unavailable
       false: Evaluate trigger after method code
         
-    * PERFORM_PRE_MATCH_SUBSTRING: *optional, default is false*
+    * PERFORM_PRE_MATCH_SUBSTRING: *optional, default is "false"*
          
       If true, the trigger will be evaluated on a subset of first parameter where the second parameter is starting index and third parameter is subset length.  Method source must be param with index=1.  
 
       
-Method:
+**Method:**
   * method signature="SIGNATURE"
-    * SIGNATURE: signature of the method to instrument
+    * SIGNATURE: Signature of the method to instrument
     
 
-This Object: *optional*
+**This Object:** *optional*
   * object [required-tags=REQUIRED_TAGS] [disallowed-tags=DISALLOWED_TAGS] [tracked=TRACKED] [startsWithTaint=STARTS_WITH_TAINT] [good-value-regex=GOOD_VALUE_REGEX]
       * REQUIRED_TAGS: *optional*
       
@@ -90,17 +91,18 @@ This Object: *optional*
       
         If the source matches the following regex, the finding will not be triggered
 
-Return Object: *optional*
+**Return Object:** *optional*
   * return [required-tags=REQUIRED_TAGS] [disallowed-tags=DISALLOWED_TAGS] [tracked=TRACKED] [startsWithTaint=STARTS_WITH_TAINT] [good-value-regex=GOOD_VALUE_REGEX]
     * REQUIRED_TAGS, DISALLOWED_TAGS, TRACKED, STARTS_WITH_TAINT, GOOD_VALUE_REGEX: same as in "This Object", see above
     
-Params:
+**Params:**
   * params [connector=CONNECTOR]
     * param index="INDEX" [required-tags=REQUIRED_TAGS] [disallowed-tags=DISALLOWED_TAGS] [tracked=TRACKED] [startsWithTaint=STARTS_WITH_TAINT] [good-value-regex=GOOD_VALUE_REGEX]
     
       * CONNECTOR: *optional*, default is "or"
       
         and - trigger finding only if all parameters are satisfied
+
         or - trigger finding if any parameter is satisfied
     
       * INDEX: *required*
@@ -109,14 +111,17 @@ Params:
         
       * REQUIRED_TAGS, DISALLOWED_TAGS, TRACKED, STARTS_WITH_TAINT, GOOD_VALUE_REGEX: same as in This object, see above
       
-Stack Blacklist:
+
+---
+
+#### Stack Blacklist:
   
-  If the trigger method contains one of these methods in its stack trace, the finding will not be satisfied
+  If the trigger method contains one of these methods in its stack trace, the finding will not be satisfied.
   
   * stack-blacklist
     * entry SIGNATURE
     
       * SIGNATURE: *required*
       
-        Signature of the of method to instrument for stack blacklist
+        Signature of the of method to instrument for stack blacklist.
       

@@ -1,5 +1,9 @@
+<!--
+title: "Level 2 Rules - Response-Based Rules"
+description: "Information on .NET Response-Based Rules"
+-->
 
-#Response-based Rules 
+#Response-Based Rules 
 
 Contrast.NET will scan the response stream of your application for various security issues.  You can disable some or all of these checks.  Disabling all response-based checks will result in a small performance improvement for analyzed web applications.
 
@@ -25,10 +29,10 @@ Contrast.NET will scan the response stream of your application for various secur
 
 Setting | Description
 :------ |:-----------
-clickjacking-controls | Ensure that frame-breaking sripts or headers are present
+clickjacking-controls | Ensure that frame-breaking scripts or headers are present
 cache-controls | Ensure page caching is disabled with header or meta tags
 form-autocomplete | Ensure form controls have autocomplete disabled
 form-parameter-pollution | Ensure form tags prevent parameter pollution by including an action attribute
 http-insecure-auth-protocol | Ensure that insecure auth protocols (Basic or Digest) are not used
 httponly-cookies | Ensure cookies are HttpOnly
-session-rewriting | Ensure session cannot be rewritten because of cookieless sessions
+session-rewriting | Ensure session cannot be rewritten because of cookie-less sessions
