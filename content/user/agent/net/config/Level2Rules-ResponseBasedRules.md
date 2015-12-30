@@ -3,8 +3,6 @@ title: "Level 2 Rules - Response-Based Rules"
 description: "Information on .NET Response-Based Rules"
 -->
 
-#Response-Based Rules 
-
 Contrast.NET will scan the response stream of your application for various security issues.  You can disable some or all of these checks.  Disabling all response-based checks will result in a small performance improvement for analyzed web applications.
 
 ```xml
