@@ -1,7 +1,10 @@
-<!--
+---
 title: "Level 2 Rules - Tag Rules"
 description: "Information on .NET Instrumentation Tag Rules"
--->
+posted: 2015-12-30 00:06:00
+page: user_netrules
+anchor: tag
+---
 
 ## Tag Rule Syntax
  

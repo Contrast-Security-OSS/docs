@@ -1,7 +1,10 @@
-<!--
+---
 title: "Level 2 Rules - File-Based Rules"
 description: "Information on .NET File-Based Rules"
--->
+posted: 2015-12-30 00:03:00
+page: user_netrules
+anchor: file
+---
 
 Contrast.NET will detect vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. Users can disable rules they no longer wish to be detected by the .NET Agent. 
 

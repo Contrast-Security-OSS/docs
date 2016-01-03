@@ -1,7 +1,10 @@
-<!--
+---
 title: "Level 2 Rules - Introduction"
 description: "Introduction to .NET Level 2 Rules"
--->
+posted: 2015-12-30 00:02:00
+page: user_netrules
+anchor: intro
+---
 
 ## Policy File Editing
 

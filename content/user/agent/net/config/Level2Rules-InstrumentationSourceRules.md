@@ -1,7 +1,10 @@
-<!--
+---
 title: "Level 2 Rules - Instrumentation Source Rules"
 description: "Information on .NET Instrumentation Source Rules"
--->
+posted: 2015-12-30 00:05:00
+page: user_netrules
+anchor: source
+---
 
 Contrast.NET will instrument your application code and follow user-provided data in order to detect potential security issues.  
 
