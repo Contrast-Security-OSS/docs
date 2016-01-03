@@ -1,7 +1,10 @@
-<!--
+---
 title: "Node.js Agent Installation"
 description: "Installing the Node.js Agent"
--->
+posted: 2015-12-18 00:01:00
+page: user_nodeinstall
+anchor: install
+---
 
 ## Installation
 After downloading from your account, install the agent from your application's root directory as follows:

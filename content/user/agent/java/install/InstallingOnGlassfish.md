@@ -1,7 +1,7 @@
-<!--
+---
 title: "Installing on GlassFish"
 description: "Agent installation using the GlassFish container"
--->
+---
 
 ## Configuring GlassFish
 If you launch GlassFish yourself, you'll have to add Contrast's JVM parameter to the ***domain.xml*** file in your domain directory, i.e. ***${GLASSFISH_DIR}\domains\domain1***.

@@ -1,7 +1,7 @@
-<!--
+---
 title: "Installing via the ColdFusion Administrator"
 description: "ColdFusion installation process via the ColdFusion Adminstrator"
--->
+---
 
 ## Getting Started
 The easiest way to install Contrast is in the ColdFusion Administrator. These instructions work in any environment supporting ColdFusion, including IIS.

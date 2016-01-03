@@ -1,7 +1,10 @@
-<!--
+---
 title: "Contrast 3.2.3 - December 2015"
-description: "Contrast 3.2.3 December 2015"
--->
+description: "Contrast 3.2.3 Release Notes"
+posted: 2015-12-21
+page: release_v3
+anchor: 323
+---
 ## Java Agent
 * CONTRAST-4612: Refactor library class usage out of APPUPDATE and into APPACTIVITY
 * CONTRAST-6655: Library support for WebSphere Liberty

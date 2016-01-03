@@ -1,7 +1,7 @@
-<!--
+---
 title: "Installing Contrast on DropWizard"
 description: "DropWizard installation of the Contrast Java Agent"
--->
+---
 
 ## Getting Started
 Here's an example of how to run the Java Agent with your standalone/fatjar Dropwizard application:

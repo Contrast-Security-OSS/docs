@@ -1,7 +1,10 @@
-<!--
+---
 title: Webhook API Documentation"
 description: "Overview of the Contrast Webhook API"
--->
+posted: 2015-12-30
+page: dev_api3
+anchor: webhook
+---
 
 ## What Are Webhooks?
 Webhooks generate HTTP callbacks when events that meet your custom notification settings happen in TeamServer. They are HTTP(S) requests from TeamServer that are pushed to a URL specified by you in your custom notification settings. The receiving URL is your custom application, consuming event information in JSON format and executing integrations of your choice. Example integration targets include PagerDuty and other internal enterprise applications which provide application security findings in a timely manner to the appropriate audience. Contrast currently supports incident-based webhooks for RASP events.
