@@ -39,28 +39,28 @@ More detailed levels of logging will degrade performance but may generate useful
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
 
+<br>
+1. **Response Analysis is Disabled**
 
-**Response Analysis is Disabled**
-This improves agent performance **~10-15%**. This setting disables the following rules: 
-* autocomplete 
-* cache controls 
-* clickjacking  
-* HTTP and secure cookie flags 
-* HTTP authentication 
-* parameter pollution 
-* session rewriting 
+   This improves agent performance **~10-15%**. This setting disables the following rules:  
+  * autocomplete 
+  * cache controls 
+  * clickjacking  
+  * HTTP and secure cookie flags 
+  * HTTP authentication 
+  * parameter pollution 
+  * session rewriting 
 
-**Contrast.NET Collects Response Headers and Full Response Body** 
+2. **Contrast.NET Collects Response Headers and Full Response Body** 
 
- All rules are enabled. This is the **default** value.  
+   All rules are enabled. This is the **default** value.  
 
-**Contrast.NET Collects Only Response Headers**
-The response body is not captured. This setting disables the following rules: 
-* autocomplete 
-* clickjacking 
-* parameter pollution 
+3. **Contrast.NET Collects Only Response Headers**
 
-This setting offers a small performance improvement. 
+   The response body is not captured. This setting offers a small performance improvement. This setting disables the following rules: 
+  * autocomplete 
+  * clickjacking 
+  * parameter pollution 
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
