@@ -39,7 +39,7 @@ More detailed levels of logging will degrade performance but may generate useful
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
 
-
+<br>
 1. **Response Analysis is Disabled**
 
    This improves agent performance **~10-15%**. This setting disables the following rules:  
