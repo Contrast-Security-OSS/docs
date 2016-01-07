@@ -40,27 +40,27 @@ More detailed levels of logging will degrade performance but may generate useful
 | *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
 
 
-**Response Analysis is Disabled**
-This improves agent performance **~10-15%**. This setting disables the following rules: 
-* autocomplete 
-* cache controls 
-* clickjacking  
-* HTTP and secure cookie flags 
-* HTTP authentication 
-* parameter pollution 
-* session rewriting 
+1. **Response Analysis is Disabled**
 
-**Contrast.NET Collects Response Headers and Full Response Body** 
+   This improves agent performance **~10-15%**. This setting disables the following rules:  
+  * autocomplete 
+  * cache controls 
+  * clickjacking  
+  * HTTP and secure cookie flags 
+  * HTTP authentication 
+  * parameter pollution 
+  * session rewriting 
 
- All rules are enabled. This is the **default** value.  
+2. **Contrast.NET Collects Response Headers and Full Response Body** 
 
-**Contrast.NET Collects Only Response Headers**
-The response body is not captured. This setting disables the following rules: 
-* autocomplete 
-* clickjacking 
-* parameter pollution 
+   All rules are enabled. This is the **default** value.  
 
-This setting offers a small performance improvement. 
+3. **Contrast.NET Collects Only Response Headers**
+
+   The response body is not captured. This setting offers a small performance improvement. This setting disables the following rules: 
+  * autocomplete 
+  * clickjacking 
+  * parameter pollution 
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
