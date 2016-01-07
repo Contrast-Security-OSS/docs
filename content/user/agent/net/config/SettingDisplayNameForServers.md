@@ -3,7 +3,7 @@ title: "Setting The Display Name For Servers Running Contrast.NET"
 description: "Guide to setting the server display name"
 -->
 
-Starting with **Version 3.1.4**, the .NET agent allows users to customize the display name used for the server running the Contrast.NET agent. The server name can be customized by adding a value to the ***ContrastService.exe.config*** file in the agent's installation directory (***C:\Program Files\Contrast.NET*** by default). For example, the following configuration will set the server's display name to **MyServerName**:
+Starting with **Version 3.1.4**, the .NET agent allows users to customize the display name used for the server running the Contrast.NET agent. The server name can be customized by adding a value to the ***DotnetAgentService.exe.config*** file in the agent's installation directory (***C:\Program Files\Contrast.NET*** by default). For example, the following configuration will set the server's display name to **MyServerName**:
 
 ```
 ...
