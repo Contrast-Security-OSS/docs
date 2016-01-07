@@ -51,28 +51,28 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 
 ## Performance
  
- | Parameter               | Description                                                                                                                                                                                                                                                                      |
+| Parameter               | Description                                                                                                                                                                                                                                                                      |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
- | contrast.clear | Don't use any previous *security analysis cache*. This artificially extends startup time, but may help with conflicts when multiple app servers are running on the same host. The analysis cache was removed in **Version 2.7.3**. 
- | contrast.blacklist | If you set this value to a readable file, Contrast will read it for a list of class names (one per line, in the format *org.example.Foo*) that will not be analyzed for security sensors. This can help improve startup time if enough classes can be put into the blacklist.
- | contrast.sampling | Enable and configure *sampling mode*. By default, just placing this flag will result in a baseline (how many times a request should be analyzed before it is considered sampled) and frequency (how often after the baseline has been established should new samples be taken) of 5 and a sampling window (how long the baseline is valid, in second) of 180 seconds. This means that after the same request has been seen 5 times in 180 seconds, it will only be analyzed every subsequent fifth time. You can custimize this further by setting the value to "#,#,#". In this case, the baseline will be set to the first number, the frequency the second, and the window the third. Note that if you choose to custimize any value, you must provide all three inputs.
- | contrast.savestacks | Configure Contrast's collecting of stacktraces. The default value is *all*, but can be overriden to *some* or *none*. Reducing the amount of stacktraces collected can offer a performance improvement, but makes understanding individual events in a vulnerability trace harder to identify in the code. |
+| contrast.clear | Don't use any previous *security analysis cache*. This artificially extends startup time, but may help with conflicts when multiple app servers are running on the same host. The analysis cache was removed in **Version 2.7.3**. 
+| contrast.blacklist | If you set this value to a readable file, Contrast will read it for a list of class names (one per line, in the format *org.example.Foo*) that will not be analyzed for security sensors. This can help improve startup time if enough classes can be put into the blacklist.
+| contrast.sampling | Enable and configure *sampling mode*. By default, just placing this flag will result in a *baseline* (how many times a request should be analyzed before it is considered sampled) and *frequency* (how often after the baseline has been established should new samples be taken) of **5** and a *sampling window* (how long the baseline is valid, in seconds) of **180 seconds**. This means that after the same request has been seen five times in 180 seconds, it will only be analyzed every subsequent fifth time. You can customize this further by setting the value to "#,#,#". In this case, the baseline will be set to the first number, the frequency second, and the window third. Note that if you choose to customize any value, you must provide all three inputs.
+| contrast.savestacks | Configure Contrast's collecting of stacktraces. The default value is *all*, but can be overriden to *some* or *none*. Reducing the amount of stacktraces collected can offer a performance improvement, but makes understanding individual events in a vulnerability trace harder to identify in the code. |
 
 
 ## Policy
 
- | Parameter               | Description                                                                                                                                                                                                                                                                      |
+| Parameter               | Description                                                                                                                                                                                                                                                                      |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
- | contrast.policy | If you set this value to a file or URL, Contrast will use it instead of the pre-packaged security policy. For more information about rule customization, please contact your account manager. |
+| contrast.policy | If you set this value to a file or URL, Contrast will use it instead of the pre-packaged security policy. For more information about rule customization, please contact your account manager. |
 
 
 ## Updates
 
 >**Note:** These options only apply to the Java 1.6 agent
 
- | Parameter               | Description                                                                                                                                                                                                                                                                      |
+| Parameter               | Description|
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
- | contrast.forceupdate |  If you set this value to *true*, Contrast will download the latest available agent from whatever TeamServer the current agent was downloaded from. This feature is useful if you've changed the configuration of the agent and want to ensure that all current agents pick up this change. By default, the agent will smart update on application server restart, downloading a new agent from TeamServer if the TeamServer has been upgraded since the last time the application server was started. |
+| contrast.forceupdate |  If you set this value to *true*, Contrast will download the latest available agent from whatever TeamServer the current agent was downloaded from. This feature is useful if you've changed the configuration of the agent and want to ensure that all current agents pick up this change. By default, the agent will smart update on application server restart, downloading a new agent from TeamServer if the TeamServer has been upgraded since the last time the application server was started. |
 
 
 ## See Also
