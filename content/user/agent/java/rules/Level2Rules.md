@@ -1,5 +1,5 @@
 <!--
-title: "How to Add a Level 2 Rule"
+title: "Level 2 Rules"
 description: "How to add a level 2 rule to the Java Agent and Teamserver"
 -->
 
@@ -42,6 +42,8 @@ Adding a new Level 2 Rule consists of two main parts: creating a new custom Poli
 ### Adding a Level 2 Regular Expression Rule
 This portion of the tutorial will walk through adding a new Regual Expression Rule that detects when an illegal value is passed into the Request object, thereby disabling its security. 
 
+<br>
+
 #### Step 1: Create a New Policy File
 This will provide a skeleton for the definition of the new pieces of code which you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file ```custom_rules.xml```, although any name can be used (The filename becomes important in Step #7).
 
@@ -54,6 +56,8 @@ This will provide a skeleton for the definition of the new pieces of code which 
     <rules/>
 </policy>
 ```
+
+<br>
 
 #### Step 2: Add a New ```<rule>``` to the Policy
 Regular Expression rules work by validating the pattern of a parameter or paramters passed into a given method. By suppliying a pattern to the rule, you're telling Contrast to report any time the pattern is matched and should not have been (```bad-value-regex```) or is not matched and should have been. (```good-value-regex```) 
@@ -82,10 +86,14 @@ For this example, we will create a rule that detects when security is disabled o
 </rules>
 ```
 
+<br>
+
 #### Step 3: Create a New Groovy Script for the Rule
 Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) provided. Be sure to set the getId() method to return the id from the rule above, or the Agent and TeamServer will not be able to corridinate properly and no vulnerabilities will be recorded. 
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
+
+<br>
 
 #### Step 4: Teach TeamServer About the New Rule
 There are two steps to teaching the TeamServer about your new rule. 
@@ -107,7 +115,11 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 </beans>
 ```
 
+<br>
+
 #### Step 5: Restart the TeamServer
+
+<br>
 
 #### Step 6: Configure and Restart the Application Server
  In order for the agent to use this custom policy, add the ```-Dcontrast.policy.overrides``` flag to the run configuration where the ```-javaagent``` flag is set. You will need to set the overrides value to the path to the new policy file.
@@ -130,6 +142,8 @@ Finally, for a vulnerability to be reported, the tracked data has to violate a r
 
 The format of each will be explained in greater detail below. 
 
+<br>
+
 #### Step 1: Create a New Policy File
 This will provide a skeleton for the definition of the new pieces of code which you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file ```custom_rules.xml```, although any name can be used (The filename becomes important in Step #7).
 
@@ -142,6 +156,8 @@ This will provide a skeleton for the definition of the new pieces of code which 
     <rules/>
 </policy>
 ```
+
+<br>
 
 #### Step 2: Add a New ```<source>``` to the Policy
 This will provide a starting point signaling Contrast to monitor an object after this point. In this example, we will create a source tag ```ccn``` on the target ```P1``` of the method ```com.acme.ticketbook.Person.setCreditCard(java.lang.String)```. 
@@ -159,6 +175,8 @@ In this example, if multiple sources could return data with credit card numbers 
 </sources> 
 ```
 
+<br>
+
 #### Step 3: Add a New ```<tag-list>``` to the Policy
 Tags are an integral part of the policy language. In this rule, they provide a means of marking credit cards as safe for logging. One can use tags to determine if an object is used in an unsafe manner and needs to be reported, or if sufficient controls were exercised to mitigate the risk implied by the source tag. In this example, we will create a new tag ```ccn-masked``` to indicate that a credit card number has been sufficiently obscured by the methods in the list. In this case ```com.acme.ticketbook.Person.mask(java.lang.String)```. Again, it is worth noting that the method must be enabled for tagging to occur and both the id and name fields of the tag-list must be unique.
 
@@ -171,8 +189,10 @@ Tags are an integral part of the policy language. In this rule, they provide a m
 </tag-lists> 
 ```
 
+<br>
+
 #### Step 4: Add a New ```<rule>``` to the Policy
-Now that we have data flow figured out, we need to provide a list of events that can trigger the decision making process as to whether or not a trace needs to be reported. The following is an example of an event that would trigger the credit-card-exposed rule. In the example, we will create a trigger event for ```org.apache.log4j.Category.debug(java.lang.Object)``` that will fire if the first parameter in the method has the tag ```cnn``` from the source in Step #2 and does not have the tag ```ccn-masked``` from the tag added in Step #3. It is again worth noting that the id of the rule must be unique and that enabled must be set to ```true``` in order for the rule to be active. Additionally, the id MUST match the string in the getId() method of the corresponding Groovy script on TeamServer (discussed later). 
+Now that we have data flow figured out, we need to provide a list of events that can trigger the decision making process as to whether or not a trace needs to be reported. The following is an example of an event that would trigger the credit-card-exposed rule. In the example, we will create a trigger event for ```org.apache.log4j.Category.debug(java.lang.Object)``` that will fire if the first parameter in the method has the tag ```ccn``` from the source in Step #2 and does not have the tag ```ccn-masked``` from the tag added in Step #3. It is again worth noting that the id of the rule must be unique and that enabled must be set to ```true``` in order for the rule to be active. Additionally, the id MUST match the string in the getId() method of the corresponding Groovy script on TeamServer (discussed later). 
 
 ```xml
 <rules>
@@ -190,10 +210,14 @@ Now that we have data flow figured out, we need to provide a list of events that
 </rules>
 ```
 
+<br>
+
 #### Step 5: Create a New Groovy Script for the Rule
 Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template.groovy) provided. Be sure to set the getId() method to return the id from the rule above, or the Agent and TeamServer will not be able to corridinate properly and no vulnerabilities will be recorded. 
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
+
+<br>
 
 #### Step 6: Teach TeamServer About the New Rule
 There are two steps to teaching the TeamServer about your new rule. 
@@ -215,8 +239,11 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 </beans>
 ```
 
+<br>
+
 #### Step 7: Restart the TeamServer
 
+<br>
 
 #### Step 8: Configure and Restart the Application Server
  In order for the agent to use this custom policy, add the following flag to the run configuration where the ```-javaagent``` flag is set. 
