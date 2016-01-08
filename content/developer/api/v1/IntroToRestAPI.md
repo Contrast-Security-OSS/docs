@@ -3,15 +3,15 @@ title: "Introduction To The Contrast REST API"
 description: "Overview of the REST API"
 -->
 
-There are two sets of **Contrast APIs**. The Contrast plugin uses its own set of APIs to send vulnerabilities and other application information to the Contrast site for you to view in our web interface. That set of APIs is subject to change at any time, uses *different keys*, and in general is more about writing data to your Contrast account. We call this set of APIs the **Engine APIs**.
+There are two sets of **Contrast APIs**: **Engine APIs** and ""User APIs**. The Contrast plugin uses what we call the **Engine APIs** to send vulnerabilities and other application information from the applications being monitored to the Contrast site for you to view in the Team Server web application. That set of APIs is subject to change at any time, uses *different keys*, and in general is more about writing data to your Contrast account.
 
-This documentation is all about the set of APIs meant to read data by our end users - we call these the **User APIs**. You can use this set of APIs to get all the same vulnerability and application information available through the website, but delivered through a REST service instead. 
+This documentation is all about the **User APIs**, which is the set of APIs that allow customers to read data from the Team Server. These REST services make available all the same vulnerability and application information that is available on the Team Server. 
 
 >**Note:** Unlike other REST services, we use the **PUT** method for all of our services for security purposes
 
 ## API Security
 
-Services, like the rest of your Contrast experience, is only available over SSL. On top of that, there are two things needed by every API request: an **Authorization Token** and an **API Key**.
+Services, like the rest of your Contrast experience, are only available over SSL. On top of that, there are two things needed by every API request: an **Authorization Token** and an **API Key**.
 
 ### Authorization Token
 
