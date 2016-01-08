@@ -197,11 +197,8 @@ Tags are an integral part of the Contrast policy language. In this rule, they pr
 <br>
 
 #### Step 4: Add a New ```<rule>``` to the Policy
-<<<<<<< HEAD:content/user/agent/java/rules/Level2Rules.md
 Now that we have data flow figured out, we need to provide a list of events that can trigger the decision making process as to whether or not a trace needs to be reported. The following is an example of an event that would trigger the credit-card-exposed rule. In the example, we will create a trigger event for ```org.apache.log4j.Category.debug(java.lang.Object)``` that will fire if the first parameter in the method has the tag ```ccn``` from the source in Step #2 and does not have the tag ```ccn-masked``` from the tag added in Step #3. It is again worth noting that the id of the rule must be unique and that enabled must be set to ```true``` in order for the rule to be active. Additionally, the id MUST match the string in the getId() method of the corresponding Groovy script on TeamServer (discussed later). 
 =======
-Now that we have data flow figured out, we need to provide a list of events that can trigger the decision making process as to whether or not a trace needs to be reported. The following is an example of an event that would trigger the credit-card-exposed rule. In this example, we create a trigger event for ```org.apache.log4j.Category.debug(java.lang.Object)``` that will fire if a parameter passed to this method has the tag ```cnn``` from the source in Step #2 and does not have the tag ```ccn-masked``` from the tag added in Step #3. It is again worth noting that the id of the rule must be unique and that enabled must be set to ```true```. Additionally, the id MUST match the string in the getId() method of the corresponding Groovy script on the TeamServer (discussed later). 
->>>>>>> master:content/user/agent/java/faq/Level2Rules.md
 
 ```xml
 <rules>
