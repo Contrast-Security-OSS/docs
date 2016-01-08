@@ -3,13 +3,13 @@ title: "Getting Started with Vert.x"
 description: "Configuring Vert.x"
 -->
 
-## Getting Start with Vert.x 
+## Getting Started With Vert.x 
 Support of the Vert.x framework within the Java Agent is based on the Contrast Netty implementation, specifically the ability to follow key data events through Vert.x's messaging system.
 
 ### Configuring Vert.x Web Applications with the Java Agent 
 
-#### Recommended Approach:
-The simplest approach for configuring the Contrast Java Agent with a Vert.x Web Application is to  package the web application as a standalone or *fat* jar. This can be achieved by including the following plugin in the ***POM.xml*** file:
+#### Recommendeded Approach:
+The simplest approach for configuring the Contrast Java Agent with a Vert.x Web Application is to package the web application as a standalone or *fat* jar. This can be achieved by including the following plugin in the ***POM.xml*** file:
 
 ```xml
 <plugin>
