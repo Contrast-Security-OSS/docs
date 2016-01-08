@@ -14,11 +14,11 @@ instrumentation using Contrast. Using this capability, you can:
 * Control data propagation (not recommended).
 * Add new sources of untrusted data.
 
-The positives of using a Level 2 rule:
+The advantages of using a Level 2 rule:
 * Complete control of Contrast.
 * Ability to fix bugs or enhance flaw-finding capabilities without a regularly scheduled software update.
 
-The negatives of using a Level 2 rule, as opposed to a Level 1 rule:
+The challenges with using a Level 2 rule, as opposed to a Level 1 rule:
 * Requires expertise in the Contrast policy XML language.
 * Mistakes made using Level 2 rules can hurt performance and hide true positives.
 * Requires a centralized management of a policy file outside of TeamServer.
