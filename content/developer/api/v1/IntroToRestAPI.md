@@ -3,9 +3,9 @@ title: "Introduction To The Contrast REST API"
 description: "Overview of the REST API"
 -->
 
-There are two sets of **Contrast APIs**: **Engine APIs** and ""User APIs**. The Contrast plugin uses what we call the **Engine APIs** to send vulnerabilities and other application information from the applications being monitored to the Contrast site for you to view in the Team Server web application. That set of APIs is subject to change at any time, uses *different keys*, and in general is more about writing data to your Contrast account.
+There are two sets of **Contrast APIs**: **Engine APIs** and **User APIs**. The Contrast plugin uses what we call the **Engine APIs** to send vulnerabilities and other application information from the applications being monitored to the Contrast site for you to view in the TeamServer web application. That set of APIs is subject to change at any time, uses *different keys*, and in general is more about writing data to your Contrast account.
 
-This documentation is all about the **User APIs**, which is the set of APIs that allow customers to read data from the Team Server. These REST services make available all the same vulnerability and application information that is available on the Team Server. 
+This documentation is all about the **User APIs**, which is the set of APIs that allow customers to read data from the TeamServer. These REST services make available all the same vulnerability and application information that is available on the TeamServer. 
 
 >**Note:** Unlike other REST services, we use the **PUT** method for all of our services for security purposes
 
