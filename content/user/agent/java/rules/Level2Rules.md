@@ -1,7 +1,7 @@
 <!--
 <<<<<<< HEAD:content/user/agent/java/rules/Level2Rules.md
 title: "Level 2 Rules"
-description: "How to add a level 2 rule to the Java Agent and Teamserver"
+description: "How to add a Level 2 rule to the Java Agent and TeamServer"
 =======
 title: "How to Add a Level 2 Rule"
 description: "How to add a Level 2 rule to the Java Agent and TeamServer"
@@ -94,7 +94,7 @@ For this example, we will create a rule that detects when security is disabled o
 <br>
 
 #### Step 3: Create a New Groovy Script for the Rule
-Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) provided. Be sure to make the getId() method return the id value "https-disabled" as specified in the rule above. Otherwise the Agent and TeamServer will not be able to corridinate properly and no vulnerabilities will be recorded. 
+Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) provided. Be sure to make the getId() method return the id value "https-disabled" as specified in the rule above. Otherwise the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
 
@@ -127,9 +127,9 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 6: Configure and Restart the Application Server
- In order for the agent to use this custom policy, add the ```-Dcontrast.policy.overrides``` flag to the run configuration where the ```-javaagent``` flag is set. You will need to set the overrides value to the path to the new policy file (e.g., custom_rules.xml).
+ In order for the agent to use this custom policy, add the ```-Dcontrast.policy.overrides``` flag to the run configuration where the ```-javaagent``` flag is set. You will need to set the overrides value to the path to the new policy file (e.g., *custom_rules.xml*).
 
-Note that you can also use HTTP URLs instead of file paths with the -Dcontrast.policy property.
+Note that you can also use HTTP URLs instead of file paths with the ```-Dcontrast.policy``` property.
 
 Once the configuration is specified, restart your Application Server and test to verify your rule is functioning as expected.
 
@@ -167,7 +167,7 @@ This provides a skeleton for the creation of the new code patterns you want Cont
 #### Step 2: Add a New ```<source>``` to the Policy
 This tells Contrast to tag and monitor objects coming out of this method. In this example, we create a source tag ```ccn``` on the target ```P1``` (Parameter #1) of the method ```com.acme.ticketbook.Person.setCreditCard(java.lang.String)```. 
 
-This means that the 1st parameter of this method will be tagged and tracked after this method is called for the duration of the data flow analysis. 
+This means that the first parameter of this method will be tagged and tracked after this method is called for the duration of the data flow analysis. 
 
 Note that the method must be enabled for source creation to occur and the id field must be unique. The specified tag for a source should indicate the concern. In this case, we are concerned that the parameter returned from this method might contain a credit card. 
 
@@ -254,7 +254,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 8: Configure and Restart the Application Server
- In order for the agent to use this custom policy, add the ```-Dcontrast.policy.overrides``` flag to the run configuration where the ```-javaagent``` flag is set. You will need to set the overrides value to the path to the new policy file (e.g., custom_rules.xml).
+ In order for the agent to use this custom policy, add the ```-Dcontrast.policy.overrides``` flag to the run configuration where the ```-javaagent``` flag is set. You will need to set the overrides value to the path to the new policy file (e.g., *custom_rules.xml*).
 
 Note that you can also use HTTP URLs instead of file paths with the -Dcontrast.policy property.
 
