@@ -289,7 +289,7 @@ h4 {
 .persona {
 	padding-left: 20px;
 	padding-top: 20px;
-	float; left;
+	float: left;
 }
 
 .scroll {
@@ -312,7 +312,7 @@ h4 {
     background-image: -o-linear-gradient(top,#fff 0,#fff 100%);
     background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff));
     background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff, GradientType=0);
     background-repeat: repeat-x;
     height: 20px;
 }
