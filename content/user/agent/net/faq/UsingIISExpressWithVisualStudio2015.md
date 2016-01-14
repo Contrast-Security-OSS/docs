@@ -4,7 +4,7 @@ description: "Troubleshooting instructions for debugging IIS Express sites creat
 -->
 ## I'm using Visual Studio 2015 and don't see my development site under IIS Express
 
-Contrast.NET normally reads the global IIS Express configuration file to get the list of available IIS Express sites.  This file is located in ```%Documents%\Documents\IIS Express\config.application.config```.  All versions of Visual Studio prior to 2015, put appilcations into this file.  However Visual Studio 2015 creates a separate configuration file and stores it in a hidden subfolder of your project. [More Information](http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/6079923-store-project-related-information-in-vs-folder-to)  
+Contrast.NET normally reads the global IIS Express configuration file to get the list of available IIS Express sites.  This file is located in ```%Documents%\Documents\IIS Express\config.application.config```.  All versions of Visual Studio prior to 2015 had put appilcations into this file.  However Visual Studio 2015 creates a separate configuration file and stores it in a hidden subfolder of your project. [More Information](http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/6079923-store-project-related-information-in-vs-folder-to)  
 
 You can fix this in two ways. 
 
