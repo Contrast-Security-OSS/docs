@@ -13,18 +13,18 @@ The **IIS Express** tab will show all the applications that have previously been
 
 <a href="assets/images/KB3-e01_1.jpg" rel="lightbox" title="IIS Express Tab"><img class="thumbnail" src="assets/images/KB3-e01_1.jpg"/></a>
 
-### Starting An Application With Contrast
+## Starting An Application With Contrast
 
 To start an application, click the **Start** link in its row. This will start a new IIS Express process with the Contrast agent attached and open a browser to the local URL. The Contrast icon for the row will darken and the PID will be updated. The default **IIS Express Tray** will also appear, showing the application is running.
 
 <a href="assets/images/KB3-e01_2.jpg" rel="lightbox" title="Updated IIS Express Tab"><img class="thumbnail" src="assets/images/KB3-e01_2.jpg"/></a>
 
 
-### Stopping An Application
+## Stopping An Application
 
 To stop an application, click the **Stop** link in its row. This will close the IIS Express instance for that application. If this was the only application running under IIS Express, the default **IIS Express Tray** will also close.
 
->**Note:** Exiting the **Contrast.NET Tray** will close running instances of IIS Express
+>**Note:** Exiting the **Contrast.NET Tray** will close running instances of IIS Express.
 
 
 ## Troubleshooting
@@ -39,6 +39,6 @@ If there are no applications listed in the application list:
 * Confirm the IIS Express configuration file exists and is valid: ```%Documents%\IISExpress\config\applicationhost.config```
 * For each application, confirm the physical path is valid and accessible
 
-If using Visual Studio 2015 and don't see your application the list:
+If using Visual Studio 2015 and you don't see your application in the list:
 
 * See Visual Studio 2015 IIS Express instructions [here](user_netfaq.html#iis_express_vs2015)
