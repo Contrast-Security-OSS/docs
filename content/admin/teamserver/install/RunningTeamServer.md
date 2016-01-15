@@ -4,19 +4,28 @@ description: "Instructions for starting/stopping TeamServer"
 -->
 
 ## The TeamServer Service
- 
+
 ### Running on Windows
 In windows, TeamServer is installed as a system service. You can start/stop the service through the Windows Service Manager application.
 
 ### Running on Linux
+
+#### Root Installation
 The TeamServer daemon is registered as an ```init.d``` daemon. Starting and stopping the server should be done via invoking:
 
 ````
 /etc/init.d/contrast-server <start|stop|restart|status>
 ````
-or 
+or
 ````
 service contrast-server <start|stop|restart|status>
+````
+
+#### Non-Root Installation
+To start the Contrast Server independently of the parent shell, execute:
+
+````
+nohup /path/to/installation/contrast/bin/contrast-server start >/dev/null 2>1
 ````
 
 ## Updating Java Options
@@ -40,7 +49,7 @@ Contrast has several logs, and depending on what information you are looking for
 ## Contrast Tools
 Contrast comes with various utilities that can be run from the command-line to assist with performing maintenance, managing encrypted properties files, and performing backups of the database.
 
-##  The Encrypted Properties Editor
+###  The Encrypted Properties Editor
 Occasionally, you may find it necessary to access the values of the encrypted properties files outside of the application configuration UI, or perhaps to automate the updating of some property (automated bind password rotation for example). Using the encrypted properties editor is a powerful way to perform these types of operations.
 
 The encrypted properties editor binary is located at ***$CONTRAST_HOME/bin/edit-properties***. In it's most basic form, an interactive property editor, invoking it is as simple as providing the path to your ESAPI configuration and the file you would like to work on.
@@ -55,7 +64,7 @@ You can also retrieve the unencrypted value of a property (say for a shell scrip
 ````
 $CONTRAST_HOME/bin/edit-properties \
    -e $CONTRAST_HOME/data/esapi \
-   -f $CONTRAST_HOME/data/conf/database.properties \ 
+   -f $CONTRAST_HOME/data/conf/database.properties \
    -p jdbc.username \
    -o
 ````
@@ -65,7 +74,7 @@ And you can even update the value of a property in the file by passing a differe
 ````
 $CONTRAST_HOME/bin/edit-properties \
    -e $CONTRAST_HOME/data/esapi \
-   -f $CONTRAST_HOME/data/conf/database.properties \ 
+   -f $CONTRAST_HOME/data/conf/database.properties \
    -p jdbc.username \
    -v joe.blow \
    -c "Updating JDBC Password"
@@ -82,30 +91,17 @@ usage: property-editor
  -v,--value <val>         The value of the property
 ````
 
-## Run a Manual Backup of the Database
+### Database Backups
 Although Contrast's Installer allows you to create a scheduled daily backup of your database, from time to time you may find yourself needing to perform a manual backup of the database. Luckily, accomplishing this task is extremely simple!
 
 **NOTE: DATABASE BACKUP WILL ONLY WORK WHEN THE SERVER IS RUNNING**
 
-### Linux
+#### Linux
 ````
 $CONTRAST_HOME/bin/backup_db.sh
 ````
 
-### Windows
+#### Windows
 ````
 $CONTRAST_HOME\bin\backup_db.cmd
 ````
-
-## The Database Anonymizer
-Under certain circumstances Contrast Support personnel may request a copy of your database to troubleshoot issues, or you may find yourself wanting to present information from your database in an anonymized format. In these cases, you may find the database anonymizer an invaluable tool. 
-
-Using the tool is simple, simply pass the required information into the ***$CONTRAST_HOME/bin/db-anonymizer***.
-
-**NOTE: DO NOT RUN THIS TOOL AGAINST YOUR PRODUCTION DATABASE, IT MODIFIES THE DATA CONTAINED IN THAT DATABASE. YOU CAN CREATE A BACKUP OF YOUR DATABASE AND RESTORE INTO A NEW TEMPORARY DATABASE IN YOUR OWN MYSQL 5.6 SERVER TO ANONYMIZE.**
-
-````
-$ bin/db-anonymizer -db contrast_anon -e data/esapi -p secretpassword -port 3306 -url localhost -u contrast
-````
-
-

@@ -2,20 +2,20 @@
 title: "Installing TeamServer"
 description: "Installation instructions for running the TeamServer installer."
 -->
- 
+
 ## Gathering Information
 Prior to installing Contrast TeamServer you should download and fill out the information worksheets attached at the bottom of this article in the Attachments section. Getting prepared with this information will greatly reduce configuration errors.
 
 **NOTE:** If installing on Linux, make sure you have installed the required MySQL shared libraries per the 'Preparing for the Installation' instructions above.
- 
+
 ## Running the Installation
-It is necessary to run the installation as a privileged user. This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
+It is possible to to run the installation as a regular user but we recommended installation to your system as a privileged user.  This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
 
-Once you have launched the installer, you will be presented with several questions. You can use the information in the worksheets to answer these questions as you step through the installation.
+Once you have launched the installer, you will be presented with several questions. You can use the information in the worksheets to answer these questions as you step through the installation.  More advanced configuration options are available within that application after startup when managing your account.  
 
->On the General Settings page, in the installation wizard, pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. We make our best attempt to determine the hostname and pre-populate this value, but if the provided hostname is not resolvable by clients on the network, they won't be able to communicate back to the server.
+>Pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. We make our best attempt to determine the hostname and pre-populate this value, but if the provided hostname is not resolvable by clients on the network, they won't be able to communicate back to the server.
 
-After the installation is complete, the installation wizard will start the TeamServer for you and perform it's initial configuration (this includes performing any required update tasks if you are upgrading your version of Contrast). Once the TeamServer is up and running, you can click the link in the final screen to browse to your new TeamServer!
+After the installation is complete, the TeamServer will perform it's initial configuration (this includes performing any required update tasks if you are upgrading your version of Contrast).
 
 ## Passing Arguments to the Installer
 You can customize the behavior of the TeamServer installer by providing arguments when you run the installation script. This allows you to perform actions such as force console mode or perform an unattended installation.
