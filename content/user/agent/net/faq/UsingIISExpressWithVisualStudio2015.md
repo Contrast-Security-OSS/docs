@@ -24,4 +24,4 @@ You can fix this in two ways:
 
 ## See Also
 
-[IIS Express Configuration Instructions](user_netconfig.html#iisexpress-new-config)
+[IIS Express Configuration Instructions](user_netconfig.html#iis)
