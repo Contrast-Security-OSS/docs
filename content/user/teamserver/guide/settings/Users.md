@@ -68,7 +68,7 @@ Users accounts can be locked based on failed login attempts or for not logging i
 * Click on "Unlock"
 
 ### Granting and Revoking SuperAdmin (System Administration)
-[See granting and revoking SuperAdmin].()
+See the following article: [Granting and Revoking SuperAdmin Permissions](admin_tsconfig.html#super)
 
 ### Impersonating Users 
 Users granted the SuperAdmin permission have the ability impersonate a user account. Impersonation allows a SuperAdmin user to become the account of another named user and view their organization content.
