@@ -295,7 +295,7 @@ h4 {
 .scroll {
 	margin-top: 45px;
 	margin-left: 20px;
-	height: 125%;
+	height: 140%;
 	background-color: white;
 }
 
@@ -303,7 +303,7 @@ h4 {
 	/*overflow-y: auto;*/
 	top: 0;
 	bottom: 0;
-	height: 125%;
+	height: 140%;
 }
 
 
