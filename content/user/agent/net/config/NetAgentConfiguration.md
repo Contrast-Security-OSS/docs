@@ -37,9 +37,32 @@ More detailed levels of logging will degrade performance but may generate useful
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
+| *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent |
+
+
+1. **legacyCasModel Support**
+
+   The agent uses profiling Enter-Leave events for data flow analysis and performs minimal instrumentation.  This mode supports web applications with the ```<trust legacyCasModel="true">``` configuration.  This mode has a small number of scenarios where a reflected-xss false negative can occur depending upon the encoding method used.
+
+2. **Enter-Leave Data Flow** 
+
+   This is the **default** value.  The agent uses profiling Enter-Leave events for data flow analysis and instruments several encoding methods to return new objects.  This mode is more accurate than **1**. 
+
+3. **Instrumentation**
+
+   The agent uses instrumentation for data flow analysis against web applications running on CLR4 (.NET 4+) and Enter-Leave events against CLR2 (.NET2-3.5) applications.  For CLR4 applications, Vulnerability stack traces will include line numbers if .PDB files are present in the application's bin directory.  Instrumentation mode is more stable and has comparable performance. 
+
+4. **Instrumentation with Logging**
+
+   This mode has the same behavior as ```3``` but also enables Enter-Leave events for .NET 4.0 applications for additional logging. This additional logging can be specified in the policy file's ```<logging>``` section. Note that this mode is much slower than ```3``` and is intended only for debugging. 
 
 <br>
+
+| Parameter                                                 | Description                                                                             |
+|-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
+
+
 1. **Response Analysis is Disabled**
 
    This improves agent performance **~10-15%**. This setting disables the following rules:  
