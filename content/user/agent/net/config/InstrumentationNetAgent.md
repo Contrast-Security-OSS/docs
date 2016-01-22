@@ -20,7 +20,7 @@ The new instrumentation engine offers a number of benefits, including:
 
 > **Note:** The new data flow engine is **not** supported on Windows Server 2003/IIS6.
 
-In a future release, the new data flow engine will eventually replace the old data flow engine.  In the meantime, we encourage you to try out the new data flow engine and give us feedback!
+In a future release, the new data flow engine will eventually replace the old data flow engine.  In the meantime, we encourage you to try out the new data flow engine and [give us feedback!](mailto:support@contrastsecurity.com)
 
 ## Getting Source Code Information Using the New Data Flow Engine
 
