@@ -17,19 +17,19 @@ The Contrast Service's configuration file (***DotnetAgentService.exe.config***) 
 ## Diagnostics
 More detailed levels of logging will degrade performance but may generate useful information for debugging Contrast. The default value is *warn*. 
 
-| LogLevel | Controls the *logging* level. |
+| LogLevel | Controls the *logging* level |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | error    | Only log error conditions such as un-handled exceptions.                                                                                                                        |
 | warn     | Error messages plus unexpected conditions that do not impact the agent.                                                                                                         |
-| info     | Error and warn messages plus general information about the agent's sensors (startup, shutdown, start/end of requests, etc.)                                                     |
-| debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request)                                                             |
+| info     | Error and warn messages plus general information about the agent's sensors (startup, shutdown, start/end of requests, etc.).                                                     |
+| debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request).                                                             |
 | trace    | All of the above and every trace event is logged (e.g. *String.Concat*). This logging level greatly degrades performance.                                                       |
 
 ## Performance
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| *SamplingBaseline*, *SamplingFrequency*, *SamplingWindow* | Enable and configure *sampling mode*                                                    |
+| *SamplingBaseline*, *SamplingFrequency*, *SamplingWindow* | Enable and configure *sampling mode*.                                                    |
 | *StackTraceDepth*                                         | Limits the number of stack trace frames captured by the agent. Default value is **20**. |
 
 
@@ -39,6 +39,7 @@ More detailed levels of logging will degrade performance but may generate useful
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent |
 
+<br/>
 
 1. **legacyCasModel Support**
 
@@ -46,7 +47,7 @@ More detailed levels of logging will degrade performance but may generate useful
 
 2. **Enter-Leave Data Flow** 
 
-   This is the **default** value.  The agent uses profiling Enter-Leave events for data flow analysis and instruments several encoding methods to return new objects.  This mode is more accurate than **1**. 
+   This is the **default** value.  The agent uses profiling Enter-Leave events for data flow analysis and instruments several encoding methods to return new objects.  This mode is more accurate than **1** above. 
 
 3. **Instrumentation**
 
@@ -62,6 +63,7 @@ More detailed levels of logging will degrade performance but may generate useful
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
 
+<br/>
 
 1. **Response Analysis is Disabled**
 
