@@ -14,22 +14,22 @@ Follow these instructions to enable the new instrumentation data flow engine aga
 
 The new instrumentation engine offers a number of benefits, including: 
 
-* Source code file and line number information when PDB files are present.
+* Source code file and line number information when .PDB files are present.
 * Improved stability and comparable performance compared to the old method of tracking data flow.
 * Ability to support custom rules in the future.
 
-Note that the new data flow engine is not supported on Windows Server 2003/IIS6.
+> **Note:** The new data flow engine is **not** supported on Windows Server 2003/IIS6.
 
 In a future release, the new data flow engine will eventually replace the old data flow engine.  In the meantime, we encourage you to try out the new data flow engine and give us feedback!
 
 ## Getting Source Code Information Using the New Data Flow Engine
 
-In the .NET Framework, an application's compiled code is generally contained in .DLL files while debug information is contained in .PDB files.  These .PDB files contain symbol information that Contrast can use to tie stack trace frames to specific lines of code.  By default, the Debug build of web applications include .PDB files while the Release build does not.  However, most deployments of web applications use the Release build (and rightly so as deploying the Debug build can introduce some unnecessary risks.)  It is possible to include .PDB files in the Release build of a web application by changing a project setting.  Note that the inclusion of .PDB files in web application's deployment is safe and does not include the risks associated with publishing a Debug build.  
+In the .NET Framework, an application's compiled code is generally contained in .DLL files while debug information is contained in .PDB files.  These .PDB files contain symbol information that Contrast can use to tie stack trace frames to specific lines of code.  By default, the Debug build of web applications include .PDB files while the Release build does not.  However, most deployments of web applications use the Release build (and rightly so, as deploying the Debug build can introduce some unnecessary risks.)  It is possible to include .PDB files in the Release build of a web application by changing a project setting.  Note that the inclusion of .PDB files in a web application's deployment is safe and does not include the risks associated with publishing a Debug build.  
 
 The following steps will configure the build/package process for the Release configuration to include .PDB files in Visual Studio 2013:
 
 * Open the web application's solution in Visual Studio
-* Right click on the web application's project and select **Properties**
+* Right click on the application's project and select **Properties**
 * Select the **Package/Publish Web** tab
 * Select the **Release** configuration from the **Configuration** dropdown
 * Uncheck the *Exclude generated debug symbols* checkbox if it is checked
