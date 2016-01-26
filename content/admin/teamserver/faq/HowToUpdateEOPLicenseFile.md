@@ -35,11 +35,11 @@ If the license is expired, then the second method (file system) below must be us
 
 3. Stop the Contrast TeamServer service (on Windows use the service control panel, on Linux execute ```sudo service contrast-server stop``` or other appropriate command for the distribution/configuration)
 
-*Note*: Don't move the current ***contrast.lic*** file. As the Team Server needs both the old and new license file to upgrade the license. 
+    > **Note**: Don't move the current ***contrast.lic*** file. As the Team Server needs both the old and new license file to upgrade the license. 
 
 4. Place the new license file in the same data directory. On Linux, confirm the new license file has the same owner, group and permissions as other files in that directory (execute ```ls -l``` to list the directory contents with permissions and owners). A backup of the current license called ***contrast.lic.bak*** will be created in the same directory when the new one is consumed during startup.
 
-Execute ```sudo chown contrast_service:contrast_service contrast.new.lic``` to change the owner and group. Execute ```sudo chmod 644 contrast.new.lic``` to change the permissions.
+    > **Note:** Execute ```sudo chown contrast_service:contrast_service contrast.new.lic``` to change the owner and group. Execute ```sudo chmod 644 contrast.new.lic``` to change the permissions.
 
 5. Start the Contrast TeamServer application as normal and the new license will automatically take effect (on Windows use the service control panel, on Linux execute ```sudo service contrast-server start``` or other appropriate command for the distribution/configuration).
 
