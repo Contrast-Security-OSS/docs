@@ -1,37 +1,34 @@
 # About Horizontal Scalability
-At this time, opting to scale your TeamServer horizontally should be considered only after you have worked with the Contrast Support Team to identify yourself as a candidate and are willing to invest time in a more involved setup.  That being said, if you are familiar with Tomcat, MySQL, Ubuntu, and the process of operating and administering your own applications, the process is straightforward to setup and maintain.
+At this time, opting to scale your TeamServer horizontally should be considered only after you have worked with the Contrast Support Team to identify yourself as a candidate.  This HOWTO will guide you in the setup and configuration of additional software but please be aware you will be responsible for the monitoring and durability of additional software.  That being said, if you are familiar with installing and administering Tomcat and MySQL the process is straightforward to setup and maintain.
 
-One of the first changes you will notice about this program is that the artifact delivered is a Java WAR file that you drop into your own Tomcat instance.  You will not download this artifact from hub.contrastseurity.com currently but we are planning enhancements to Hub product for hosting this type of artifact.
+One of the first changes you will notice about this program is that the artifact delivered is a Java WAR file that you drop into your own Tomcat instance.  You cannot download this artifact from hub.contrastseurity.com currently but we are planning enhancements to Hub product for hosting this type of artifact.
 
-If you are interested in scaling TeamServer horizontally, please contrast Contrast Support.  
+We are interested in your progress!  If you are planning to explore scaling TeamServer horizontally, please contrast Contrast Support.  
 
 Also, check back often for updates and submit a Pull Request if you have suggestions or find any instructions incorrect.  
 
 # Methodology
-Scaling TeamServer beyond the Contrast Installer project involves bringing your own MySQL and Tomcat software that can be scaled independently.  
-
-Bringing your own Tomcat will you to setup multiple application servers for certain workloads.  Bringing your own MySQL server will allow for setup of a slave server for backups and greater durability.
+Scaling TeamServer beyond the Contrast Installer project involves bringing your own MySQL and Tomcat software.  As our product evolves, so could this list of software.  
 
 Decisions about scalability should be discussed and planned with Contrast Support.  We can help assess whether you need to focus on scaling you application server, database server, both, or something else.
 
-Many of the code samples your see below are written in Ansible and meant to be used as a starting point for your own installation.
+Many of the code samples your see below are written in Ansible and meant to be used as a starting point for your own installation.  
 
 ## Option 1: Use External MySQL
 
-Today it is possible to connect the TeamServer setup with the enterprise on premise installer to an external database with a few small changes.  Here is an overview of the steps that you will need to complete:
-1. Install MySQL on external host
+With a few small changes it is possible to utilize and external MySQL database with the Enterprise On Premise.  Here is an overview of the steps that you will need to complete:
+
+1. Install MySQL 5.6 on external host
 2. Create maintenance window for TeamServer and backup MySQL data
 3. Restore data to external (new) MySQL Database
 4. Update TeamServer configuration to utilize new external database
 5. Restart TeamServer
-6. Done.
 
-
-### Version
-We recommend running TeamServer with MySQL 5.6.27 but we know that TeamServer will work with other versions of MySQL 5.6.
 
 ### Installation and Setup of MySQL Server
-There are many guides available to setup and install the current version of MySQL.  Below is a snippet of Ansible that you could use to install MySQL 5.6 on Ubuntu 14.04.  
+We recommend running TeamServer with MySQL 5.6.27 but we know that TeamServer will work with other versions of MySQL 5.6.
+
+Below is a snippet of Ansible that you could use to install MySQL 5.6 on Ubuntu 14.04.  
 
 ```
 - hosts: mysql
@@ -75,7 +72,7 @@ Notes:
 * We change the bind address to "*" above but that is only for illustration.  If possible, we recommend binding your MySQL server to the ip of your application server.
 * As with the bind address, we recommend creating a user and grants that offer access to only the contrast schema.
 
-### Backup Current Database and Restore to External Database
+### Backup and Restore
 
 ##### Backup
 To backup your database, you can use the following embedded tool.  For more information, see the [reference](admin_tsinstall.html#run) in the documentation.
@@ -144,7 +141,7 @@ Enter the name of the property to edit [q to Quit]:
 
 ### Restart TeamServer
 ```
-$ sudo service contrast-server start
+$ sudo service contrast-server restart
 ```
 
 At this point it will be helpful to tail the server logs.
@@ -169,7 +166,9 @@ If TeamServer starts successfully, you will see this message in the server.log
 To setup your own MySQL Server, see the section above.  It is assumed that if you are bringing your own application server that you will also provide your own database server.  The only software provided by Contrast is this scenario is the Java WAR that will include TeamServer and agents.  
 
 ### Option 2a: One Application Server
-Before you begin, it is important that you work with Contrast Support and have access to the TeamServer war file before beginning this process.  If the dns name of your installation is going to change, you will need to update `teamserver.url` in the `general.properties` file to reflect the new hostname.  This will also impact agents that have already been deployed.
+Before you begin, it is important that you work with Contrast Support and have access to the TeamServer WAR file before beginning this process.  
+
+If the dns name of your installation is going to change, you will need to update `teamserver.url` in the `general.properties` file to reflect the new hostname.  This will also impact agents that have already been deployed.
 
 Here is an outline of the steps it will take to migrate TeamServer to your own Tomcat instance:
 
@@ -274,7 +273,7 @@ As a test, let's run a command.
 $ ls /opt/contrast-data/conf  
 ```
 
-There should be files named `general.properties`, `database.properties`, and a few others.  
+There should be files named `general.properties`, `database.properties`, and several others.  
 
 To be sure we don't have any issues, let's adjust the permissions on the contrast-data directory
 ```
@@ -299,7 +298,7 @@ Now, it's time to set your JAVA_OPTS.  Here are the options you should set:
 -Dcontrast.data.dir=/opt/contrast-data
 -Dcontrast.home=/opt/contrast-data
 -XX:+HeapDumpOnOutOfMemoryError
--Xloggc:{{ contrast_data_dir }}/gc.out
+-Xloggc:/opt/contrast-data/gc.out
 ```
 
 Notice above that you need to set the `contrast.home` and `contrast.data.dir` to the location where you unzipped the archive above.  
@@ -307,11 +306,10 @@ Notice above that you need to set the `contrast.home` and `contrast.data.dir` to
 Every distribution is different for JAVA_OPTS. Please refer to your distributions documentation for best practices.
 
 
-
 #### Deploy the WAR
 Symlink, Copy, or Move the WAR into the Tomcat webapps directory.  For the default Ubuntu installation, that path is used below.
 
-Warning: yours may be different.  
+*Warning: yours may be different.*
 
 ```
 $ sudo ln -s /opt/contrast-teamserver-3.2.4.war /var/lib/tomcat7/webapps/Contrast.war
@@ -339,6 +337,6 @@ What to know if you need multiple application servers:
 # External Resources
 Please let us know if you are interested in specific topics below.  We will expand our documentation based on customer demand
 
-* (Load Balancing with nginx)[http://blogs.mulesoft.com/dev/tomcat-tcat-server/load-balancing-apache-tomcat-with-nginx/]
-* (Using nginx as a Load Balancer and for SSL Handoff)[http://spin.atomicobject.com/2013/07/08/nginx-load-balancing-reverse-proxy-updated/]
-* (memcache session manager)[https://github.com/magro/memcached-session-manager]
+* [Load Balancing with nginx](http://blogs.mulesoft.com/dev/tomcat-tcat-server/load-balancing-apache-tomcat-with-nginx/)
+* [Using nginx as a Load Balancer and for SSL Handoff](http://spin.atomicobject.com/2013/07/08/nginx-load-balancing-reverse-proxy-updated/)
+* [memcache session manager](https://github.com/magro/memcached-session-manager)
