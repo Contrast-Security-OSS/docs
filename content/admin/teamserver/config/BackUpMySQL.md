@@ -16,7 +16,7 @@ database.bk.time                                  : 4:0:0
 database.bk.enabled                               : true
 database.bk.dir                                   : /mnt/backups/mysql/contrast
 ```
-
+<br/>
 ## Manually Taking Database Backups
 Sometimes EOP administrators want to take fresh backups of their MySQL system. Often this happens prior to an upgrade to capture any data created or changed since the last scheduled backup. In order to take backups, the user executing the script must have permission to run the script. This is typically the owner of the installation for a Contrast, Root or a Windows Administrator account. In addition, TeamServer must be up and running - specifically, MySQL needs to be available. Finally, the database backup location ```database.bk.dir``` must be configured.
 
@@ -31,7 +31,7 @@ $CONTRAST_HOME/bin/backup_db.sh
 ````
 $CONTRAST_HOME\bin\backup_db.cmd
 ````
-
+<br/>
 ## Restoring Database Backups
 In the event of needing to restore a database backup, we have provided the necessary steps to reliably perform this operation below. Database restoration should be performed by a MySQL Database Administrator.
 
