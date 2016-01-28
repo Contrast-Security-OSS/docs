@@ -37,7 +37,7 @@ The following files are encrypted by default for security purposes.
 The following is an example of editing an encrypted file in TeamServer. In this example we are loading our ad.properties file to edit the configuration of our TeamServer connecting to ActiveDirectory.
 
 ```bash
-vagrant@dev1eop1:~/contrast/bin$ ./edit-properties -o jdbc.port -e ../data/esapi/ -f ../data/conf/ad.properties
+contrast@TeamServer:~/contrast/bin$ ./edit-properties -o jdbc.port -e ../data/esapi/ -f ../data/conf/ad.properties
 
 ad.userDn                                         : cn=Directory Manager
 ad.identity.attribute.name                        : mail
