@@ -25,6 +25,13 @@ More detailed levels of logging will degrade performance but may generate useful
 | debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request).                                                             |
 | trace    | All of the above and every trace event is logged (e.g. *String.Concat*). This logging level greatly degrades performance.                                                       |
 
+<br />
+
+| Parameter                                                 | Description
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ShouldLogMethodSignatures    | Controls logging of method signatures during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable method signature logging (note that this setting has a noticeable impact on startup time.)  |
+| ShouldLogModifiedIL    | Controls logging of the IL of instrumented methods during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable instrumented method IL logging (note that this setting has a noticeable impact on startup time.)  |
+
 ## Performance
 
 | Parameter                                                 | Description                                                                             |
