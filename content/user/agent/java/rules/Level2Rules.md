@@ -1,11 +1,6 @@
 <!--
-<<<<<<< HEAD:content/user/agent/java/rules/Level2Rules.md
-title: "Level 2 Rules"
-description: "How to add a Level 2 rule to the Java Agent and TeamServer"
-=======
 title: "How to Add a Level 2 Rule"
 description: "How to add a Level 2 rule to the Java Agent and TeamServer"
->>>>>>> master:content/user/agent/java/faq/Level2Rules.md
 -->
 
 ## When should I use a Level 2 Rule?
