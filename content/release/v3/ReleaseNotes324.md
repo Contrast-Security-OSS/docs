@@ -12,33 +12,33 @@ Contrast is pleased to announce the first release of NodeJS support for IAST. Co
 * CONTRAST-5356: Minor propagation issues - user confusion
 * CONTRAST-6203: Centralization of Java Agent Options with Improved Documentation
 * CONTRAST-6628: Support for the Play 2 Framework
-* CONTRAST-6756: Performance improvement to System.identityHashCode()
+* CONTRAST-6756: Performance improvement to *System.identityHashCode()*
 * CONTRAST-6764: Trim Application name prior to sending to TeamServer
 * CONTRAST-6789: Support Apache Karaf
 * CONTRAST-6804: XXEController causing LinkageError
 * CONTRAST-6943: Initialize Logging only once
 * CONTRAST-6944: Create propagators for org.w3c.dom.*
-* CONTRAST-6945: Create propagators for com.fasterxml.jackson.databind.JsonNode
+* CONTRAST-6945: Create propagators for *com.fasterxml.jackson.databind.JsonNode*
 * CONTRAST-6964: InstrumentationContext needs JavaDocs
 * CONTRAST-6968: Update Agent propagator notation
 * CONTRAST-6969: Java security policy detector rule
 * CONTRAST-6970: Add reusable properties section to policies
-* CONTRAST-6972: Fix incorrect trackobject in base.xml
+* CONTRAST-6972: Fix incorrect trackobject in *base.xml*
 * CONTRAST-6975: Make app activity polling time configurable
 * CONTRAST-6988: No libraries in packed WARS in Tomcat 8
-* CONTRAST-7022: Add a -Dcontrast.mode=all feature switch
+* CONTRAST-7022: Add a *-Dcontrast.mode=all* feature switch
 * CONTRAST-7057: Detailed server version not showing up in SpringBoot application
 * CONTRAST-7067: Early log initialization in JBoss environments causes stacktrace
 * CONTRAST-7101: Race condition in inventorying may result in an application not being reported
-* CONTRAST-7118: The contrast.policy flag should act like the contrast.policy.overrides flag
+* CONTRAST-7118: The *contrast.policy* flag should act like the *contrast.policy.overrides* flag
 
 ## .Net Agent
 
 * CONTRAST-4521: Instrumentation data flow engine now collects header information under classic pipeline mode
 * CONTRAST-6002: Config Switch: Logging Modified IL
 * CONTRAST-6268: Improve logging of .NET runtime info
-* CONTRAST-6372: .NET Agent ProfilerBehavior configuration, under ProfilerBehavior=3 use Instrumentation engine against .NET 4 apps
-* CONTRAST-6671: .NET Agent should not profile roslyn\VBCSCompiler.exe
+* CONTRAST-6372: .NET Agent ProfilerBehavior configuration, under *ProfilerBehavior=3* use Instrumentation engine against .NET 4 apps
+* CONTRAST-6671: .NET Agent should not profile *roslyn\VBCSCompiler.exe*
 * CONTRAST-6863: .NET Agent service should fail to start when another profiler is present 
 * CONTRAST-6879: Contrast.NET Installer Should Uninstall Without Unnecessary Prompts
 * CONTRAST-6919: Add Performance Tracking To Contrast.NET Instrumentation
@@ -69,7 +69,7 @@ A future version of the .NET Agent will increase the .NET Framework version requ
 * CONTRAST-6920: New alerts are not being sent to AD emails.
 * CONTRAST-6932: Organization Setting: Change Server Mode to Sampling Throws Exception
 * CONTRAST-6940: Add AppName, AppID, AppCode to Trace Export
-* CONTRAST-7064: Titles are not unique in the trace_data for Rule-App-TitleHash
+* CONTRAST-7064: Titles are not unique in the *trace_data* for *Rule-App-TitleHash*
 * CONTRAST-7083: Enforce EAC application visibility constraints before sending Vulnerability alert email
 
 	
@@ -88,7 +88,7 @@ A future version of the .NET Agent will increase the .NET Framework version requ
 
 ## Database Migrations
 
-* V3_2_4_000: Drops the column role_id from the table USERS_ORGANIZATIONS.
+* V3_2_4_000: Drops the column *role_id* from the table *USERS_ORGANIZATIONS*.
 * V3_2_4_001: Addresses cascade delete issues with the Crawler micro-service.
 * V3_2_4_002: New table specific for customers running the Defend module for Realtime Application Security Protection.
 * V3_2_4_003: Addresses a schema deficiency with the tables associated with tagging.
