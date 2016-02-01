@@ -21,9 +21,16 @@ More detailed levels of logging will degrade performance but may generate useful
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | error    | Only log error conditions such as un-handled exceptions.                                                                                                                        |
 | warn     | Error messages plus unexpected conditions that do not impact the agent.                                                                                                         |
-| info     | Error and warn messages plus general information about the agent's sensors (startup, shutdown, start/end of requests, etc.).                                                     |
+| info     | Error and warn messages plus general information about the agent's sensors (startup, shutdown, start/end of requests, etc.)                                                     |
 | debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request).                                                             |
 | trace    | All of the above and every trace event is logged (e.g. *String.Concat*). This logging level greatly degrades performance.                                                       |
+
+<br />
+
+| Parameter                                                 | Description
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ShouldLogMethodSignatures    | Controls logging of method signatures during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable method signature logging (note that this setting has a noticeable impact on startup time.)  |
+| ShouldLogModifiedIL    | Controls logging of the IL of instrumented methods during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable instrumented method IL logging (note that this setting has a noticeable impact on startup time.)  |
 
 ## Performance
 
@@ -55,7 +62,7 @@ More detailed levels of logging will degrade performance but may generate useful
 
 4. **Instrumentation with Logging**
 
-   This mode has the same behavior as ```3``` but also enables Enter-Leave events for .NET 4.0 applications for additional logging. This additional logging can be specified in the policy file's ```<logging>``` section. Note that this mode is much slower than ```3``` and is intended only for debugging. 
+   This mode has the same behavior as **3** but also enables Enter-Leave events for .NET 4.0 applications for additional logging. This additional logging can be specified in the policy file's ```<logging>``` section. Note that this mode is much slower than **3** and is intended only for debugging. 
 
 <br>
 
