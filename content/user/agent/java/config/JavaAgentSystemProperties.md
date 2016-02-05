@@ -2,14 +2,13 @@
 title: "Java Agent System Properties"
 description: "How to tweak system properties to alter Contrast's behavior"
 -->
-
-## General Properties
-The following [System Properties](http://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html) can be used to alter Contrast's behavior.  All options are prefixed with **-D** and no space, e.g. **-Dcontrast.property=value**.
-
 You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
 
 You can combine the above command with tools like *grep* to search for commands, for example:
-**java -jar path/to/contrast.jar properties | grep -B1 -A5 "proxy"** would yield a list of proxy-related properties.
+**java -jar path/to/contrast.jar properties | grep -A5 "proxy"** would yield a list of proxy-related properties.
+
+## General Properties
+The following [System Properties](http://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html) can be used to alter Contrast's behavior.  All options are prefixed with **-D** and no space, e.g. **-Dcontrast.property=value**.
 
 | Parameter               | Description                                                                                                                                                                                                                                                                      |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
