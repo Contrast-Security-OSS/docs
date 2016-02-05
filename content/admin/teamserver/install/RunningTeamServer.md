@@ -90,18 +90,3 @@ usage: property-editor
  -p,--property <name>     The name of the property to set
  -v,--value <val>         The value of the property
 ````
-
-### Database Backups
-Although Contrast's Installer allows you to create a scheduled daily backup of your database, from time to time you may find yourself needing to perform a manual backup of the database. Luckily, accomplishing this task is extremely simple!
-
-**NOTE: DATABASE BACKUP WILL ONLY WORK WHEN THE SERVER IS RUNNING**
-
-#### Linux
-````
-$CONTRAST_HOME/bin/backup_db.sh
-````
-
-#### Windows
-````
-$CONTRAST_HOME\bin\backup_db.cmd
-````

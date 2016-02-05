@@ -17,19 +17,26 @@ The Contrast Service's configuration file (***DotnetAgentService.exe.config***) 
 ## Diagnostics
 More detailed levels of logging will degrade performance but may generate useful information for debugging Contrast. The default value is *warn*. 
 
-| LogLevel | Controls the *logging* level. |
+| LogLevel | Controls the *logging* level |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | error    | Only log error conditions such as un-handled exceptions.                                                                                                                        |
 | warn     | Error messages plus unexpected conditions that do not impact the agent.                                                                                                         |
 | info     | Error and warn messages plus general information about the agent's sensors (startup, shutdown, start/end of requests, etc.)                                                     |
-| debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request)                                                             |
+| debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request).                                                             |
 | trace    | All of the above and every trace event is logged (e.g. *String.Concat*). This logging level greatly degrades performance.                                                       |
+
+<br />
+
+| Parameter                                                 | Description
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ShouldLogMethodSignatures    | Controls logging of method signatures during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable method signature logging (note that this setting has a noticeable impact on startup time.)  |
+| ShouldLogModifiedIL    | Controls logging of the IL of instrumented methods during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable instrumented method IL logging (note that this setting has a noticeable impact on startup time.)  |
 
 ## Performance
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| *SamplingBaseline*, *SamplingFrequency*, *SamplingWindow* | Enable and configure *sampling mode*                                                    |
+| *SamplingBaseline*, *SamplingFrequency*, *SamplingWindow* | Enable and configure *sampling mode*.                                                    |
 | *StackTraceDepth*                                         | Limits the number of stack trace frames captured by the agent. Default value is **20**. |
 
 
@@ -37,9 +44,34 @@ More detailed levels of logging will degrade performance but may generate useful
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
+| *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent |
+
+<br/>
+
+1. **legacyCasModel Support**
+
+   The agent uses profiling Enter-Leave events for data flow analysis and performs minimal instrumentation.  This mode supports web applications with the ```<trust legacyCasModel="true">``` configuration.  This mode has a small number of scenarios where a reflected-xss false negative can occur depending upon the encoding method used.
+
+2. **Enter-Leave Data Flow** 
+
+   This is the **default** value.  The agent uses profiling Enter-Leave events for data flow analysis and instruments several encoding methods to return new objects.  This mode is more accurate than **1** above. 
+
+3. **Instrumentation**
+
+   The agent uses instrumentation for data flow analysis against web applications running on CLR4 (.NET 4+) and Enter-Leave events against CLR2 (.NET2-3.5) applications.  For CLR4 applications, Vulnerability stack traces will include line numbers if .PDB files are present in the application's bin directory.  Instrumentation mode is more stable and has comparable performance. 
+
+4. **Instrumentation with Logging**
+
+   This mode has the same behavior as **3** but also enables Enter-Leave events for .NET 4.0 applications for additional logging. This additional logging can be specified in the policy file's ```<logging>``` section. Note that this mode is much slower than **3** and is intended only for debugging. 
 
 <br>
+
+| Parameter                                                 | Description                                                                             |
+|-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
+
+<br/>
+
 1. **Response Analysis is Disabled**
 
    This improves agent performance **~10-15%**. This setting disables the following rules:  
