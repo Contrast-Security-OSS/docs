@@ -15,9 +15,9 @@ Depending on how the Windows profile is set up (folder view settings), the direc
 
 You can change what information is logged by changing the logging level in the [.NET Agent Configuration](user_netconfig.html#config).
 
-There are two types of log files in the ***LOGS*** directory: ***ContrastSvc_*** and ***ContrastProfiler_*** logs. ***ContrastSvc_*** logs include details about ***ContrastService.exe***'s work, including any details of errors communicating with the Contrast TeamServer. ***ContrastProfiler_*** logs include details about data flow and control flow analysis peformed by the agent's sensors.
+There are two types of log files in the ***LOGS*** directory: ***DotnetAgentSvc_*** and ***Profiler_*** logs. ***DotnetAgentSvc_*** logs include details about ***DotnetAgentService.exe***'s work, including any details of errors communicating with the Contrast TeamServer. ***Profiler_*** logs include details about data flow and control flow analysis peformed by the agent's sensors.
 
-For example, here is the start of a ***ContrastSvc_*** log:
+For example, here is the start of a ***DotnetAgentSvc_*** log:
 
 <a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="ContrastSvc_ Log"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
 
