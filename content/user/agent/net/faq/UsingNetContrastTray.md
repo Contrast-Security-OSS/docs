@@ -70,7 +70,7 @@ Start the agent. After the agent has started, browse to and use web applications
 
 #### Action Required
 
-Follow the prompt provided by the notification bubble. In this particular example, the agent cannot connect to TeamServer. The user may need to review network and firewall settings to ensure the agent can connect to TeamServer. The user may also need to review and correct the TeamServer proxy settings in Contrast Service's configuration file: ***C:\Contrast.NET\ContrastService.exe.config***
+Follow the prompt provided by the notification bubble. In this particular example, the agent cannot connect to TeamServer. The user may need to review network and firewall settings to ensure the agent can connect to TeamServer. The user may also need to review and correct the TeamServer proxy settings in Contrast Service's configuration file: ***C:\Program Files\Contrast.NET\DotnetAgentService.exe.config***
 
 <a href="assets/images/KB3-e09_6.jpg" rel="lightbox" title="Start Error"><img class="thumbnail" src="assets/images/KB3-e09_6.jpg"/></a>
 
