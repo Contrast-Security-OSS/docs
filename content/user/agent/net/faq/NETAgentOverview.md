@@ -14,7 +14,7 @@ To start analyzing an application, install the .NET agent, and then simply point
 
 The .NET agent consists of several key components:
 
-* **Contrast Service** (***ContrastService.exe***) is a background Windows service that is responsible for adding **sensors** to IIS and web applications, receiving information from these sensors, and sending this information to the Contrast TeamServer. The Contrast Service also performs some passive analysis of applications when starting, such as analyzing an application's configuration for potential vulnerabilities. The Contrast Service starts automatically when Windows starts.
+* **Contrast Service** (***DotnetAgentService.exe***) is a background Windows service that is responsible for adding **sensors** to IIS and web applications, receiving information from these sensors, and sending this information to the Contrast TeamServer. The Contrast Service also performs some passive analysis of applications when starting, such as analyzing an application's configuration for potential vulnerabilities. The Contrast Service starts automatically when Windows starts.
 
 * Various **Sensors** are added to IIS and web applications on the server by the Contrast Service. These sensors gather vulnerability, library, technology and other information and send it to the Contrast Service. Note that the agent's sensors can only collect information when the Contrast Service is running **and** an ASP .NET application is actively being used.
 
