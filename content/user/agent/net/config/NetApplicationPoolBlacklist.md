@@ -25,11 +25,11 @@ To enable Contrast.NET for only specific applications, populate ```ProcessWhitel
 
 For more information, see [.NET Agent Configuration](user_netconfig.html#config).
 
->**Note:** Blacklisting an application takes precidence over whitelisting.  Application pools satisfying both lists will not be analyzed.
+>**Note:** Blacklisting an application takes precedence over whitelisting.  Application pools satisfying both lists will not be analyzed.
 
 As of 3.2.3, application pool blacklists and whitelists also accept ```*``` as a variable-length wildcard.  Example: "AppPool*" will match "AppPool1", "AppPool_arb", etc.
 
->**Note:** The application pool blacklist functionality is only available for applications hosted on IIS versions 7 and higher
+>**Note:** The application pool blacklist functionality is only available for applications hosted on IIS versions 7 and higher.
 
 Web applications hosted on IIS run on application pools. By default, the username for an application pool is the same as the application pool's name (i.e. using the **ApplicationPoolIdentity** setting).
 
