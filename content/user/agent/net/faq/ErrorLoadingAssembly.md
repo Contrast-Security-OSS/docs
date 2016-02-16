@@ -23,13 +23,7 @@ Contrast.NET does not support analysis of applications using the ```legacyCasMod
 
 ## See Also
 
-[Getting .NET Agent Logs](user_netfaq.html#logs)
-
-[Using The .NET Contrast Tray](user_netfaq.html#tray)
-
-[Accessing The API](dev_api2.html#access)
-
-[Library Analysis](user_tsguidelib.html#analysis)
+[Getting .NET Agent Logs](user_netinstall.html#logs)
 
 [.NET Agent Configuration](user_netconfig.html#config)
 

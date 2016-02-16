@@ -103,8 +103,8 @@ More detailed levels of logging will degrade performance but may generate useful
 
 ## See Also
 
-[Getting .NET Agent Logs](user_netfaq.html#logs)
+[Getting .NET Agent Logs](user_netinstall.html#logs)
 
 [Sampling](user_tsfaq.html#sample)
 
-[.NET Application Pool Blacklist](user_netconfig.html#pool)
+[.NET Application Pool Filtering](user_netconfig.html#pool)

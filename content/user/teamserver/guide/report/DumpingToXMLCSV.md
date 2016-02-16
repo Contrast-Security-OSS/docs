@@ -7,4 +7,4 @@ As is discussed thoroughly in the **Admin Guide**, vulnerability data can be dum
 
 ## See Also
 
-[Issue &amp; Defect Management Systems](admin_tsconfig.html#defect)
+[Issue &amp; Defect Management Systems](user_tsguideset.html#defect)

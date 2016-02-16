@@ -25,7 +25,7 @@ IBM 1.5 (2008+), 1.6 | Jetty 6, 7, 8, 9 | Spring/Spring Boot
 
 ## .NET
 
-Refer to the [.NET Agent Supported Technologies](user_netfaq.html#supp) page.
+Refer to the [.NET Agent Supported Technologies](user_netinstall.html#supp) page.
 
 Contrast works on a lot of other stuff, but we just haven't gotten around to building testing infrastructure around it. If you're really interested in us supporting another technology, and have a compelling reason to do so, [let us know!](mailto:bugs@contrastsecurity.com)
 

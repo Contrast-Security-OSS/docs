@@ -21,7 +21,7 @@ To view a list of users within a single organization:
 * Search for users by email, name or status.
 
 ## Creating Users
-Users can be created by the System Administrator, as well as by the Organization Administrator. All users created in TeamServer will be required to have a default organization and a default role within that organization. Users can be added directly to TeamServer, one user at a time. Users can also be added via an integration with [Active Directory](admin_tsconfigint.html#ad2) or [LDAP](admin_tsconfigint.html#ldap).
+Users can be created by the System Administrator, as well as by the Organization Administrator. All users created in TeamServer will be required to have a default organization and a default role within that organization. Users can be added directly to TeamServer, one user at a time. Users can also be added via an integration with [Active Directory](admin_tsconfig.html#ad2) or [LDAP](admin_tsconfig.html#ldap).
 
 ### Creating Users as a System Administrator
 

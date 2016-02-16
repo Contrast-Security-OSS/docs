@@ -4,7 +4,7 @@ description: "Configuring TeamServer Settings"
 -->
 
 ## Role of the SuperAdmin
-The SuperAdmin is an [EOP role]() that has the ability to modify and manage TeamServer System Settings. Individual users can be [granted SuperAdmin]() on a case by case basis. Only the SuperAdmin has access to these settings below. Many of these settings are accessible and can be changed via the [Organization Settings]() by an organization administrator. 
+The SuperAdmin is an [EOP role](user_tsguideset.html#roles) that has the ability to modify and manage TeamServer System Settings. Individual users can be [granted SuperAdmin](user_tsconfig.html#super) on a case by case basis. Only the SuperAdmin has access to these settings below. Many of these settings are accessible and can be changed via the [Organization Settings](user_tsguide.html#orgset) by an organization administrator. 
 
 ## Configuring Settings from the User Interface
 If a user is a SuperAdmin, he/she will have access to the system settings menu. To view this menu:
@@ -22,13 +22,13 @@ The general settings page defines the TeamServer URL for both browsing and RESTf
 TeamServer supports three [authentications providers](admin_tsconfig.html#user):
 
 * Embedded: Stored within the TeamServer database
-* [LDAP](admin_tsconfigint.html#ldap)
-* [Active Directory](admin_tsconfigint.html#ad2)
+* [LDAP](admin_tsconfig.html#ldap)
+* [Active Directory](admin_tsconfig.html#ad2)
 
 Any change to this setting will require a system restart.
 
 ### Security
-SuperAdmin users can manage [password policies](admin_tsconfigset.html#pw), API key management and session timeouts. Any change to this setting will require a system restart. 
+SuperAdmin users can manage [password policies](admin_tsconfig.html#pw), API key management and session timeouts. Any change to this setting will require a system restart. 
 
 ### Mail
 TeamServer can send email notifications to users when significant events occur (e.g. resetting passwords and alerts). To configure a SMTP server:

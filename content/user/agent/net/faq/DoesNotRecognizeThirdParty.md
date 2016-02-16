@@ -15,11 +15,7 @@ description: "Troubleshooting guide for .NET agent issues"
 
 ## See Also
 
-[Getting .NET Agent Logs](user_netfaq.html#logs)
-
-[Using The .NET Contrast Tray](user_netfaq.html#tray)
-
-[Accessing The API](dev_api2.html#access)
+[Getting .NET Agent Logs](user_netinstall.html#logs)
 
 [Library Analysis](user_tsguidelib.html#analysis)
 
