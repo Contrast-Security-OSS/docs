@@ -29,7 +29,7 @@ Administrators can edit users and their privileges via the Organization Settings
 * The **admin** group. This group has all the rights of the **rules_admin** group, but can also manage users, security settings, password policies, and more. 
 
 ## Password fields
-If you don't want to update the user's password, simply leave these fields blank. Otherwise, you can update a user's password to any value, as long as it complies with the organizational [Password Policy](admin_tsconfigset.html#pw).
+If you don't want to update the user's password, simply leave these fields blank. Otherwise, you can update a user's password to any value, as long as it complies with the organizational [Password Policy](admin_tsconfig.html#pw).
 
 ## Enabled field
 You can quickly lock out a user by unchecking their **Enabled** field.
