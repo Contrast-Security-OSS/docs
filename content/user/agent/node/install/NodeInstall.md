@@ -6,7 +6,7 @@ description: "Installing the Node.js Agent"
 ## Installation
 After downloading from your account, install the agent from your application's root directory as follows:
 ``` sh
-npm install -g node_contrast-#.#.#.tar.gz
+npm install node_contrast-#.#.#.tar.gz
 ```
 This will add the agent to your ```node_modules``` folder without creating an entry in the dependencies list of your ```package.json```.
 
