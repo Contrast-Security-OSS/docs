@@ -26,7 +26,7 @@ To install the Contrast .NET Agent, follow these steps:
 4. To start analyzing an application, simply point your browser to the web application and use the web application as you normally would: click on links, submit forms using normal data, etc.  The .NET Contrast Agent’s sensors will gather information about the application’s security, architecture, and libraries. The results of the Agent’s analysis can be viewed on Contrast Team Server.
 
 ## Silent/Headless Installation 
-The Contrast .NET Agent installer supports the following command line options below. These options are "silent" and will not present the installer's user interface.
+The Contrast .NET Agent installer supports the command line options below. These options are "silent" and will not present the installer's user interface.
 
 * Install: ```ContrastSetup.exe -s -norestart```
 
@@ -49,4 +49,4 @@ You may wish to customize the behavior of the .NET Agent to better suit your nee
 
 * [Customize Application Names](user_netconfig.html#apps)
 
-Lastly, if you encounter any difficulties using the .NET Agent you can check out our [Troubleshooting](user_netfaq.html#trouble) resources.
+Lastly, if you encounter any difficulties using the .NET Agent you can check out our **Troubleshooting** resources.
