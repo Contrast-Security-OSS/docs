@@ -31,10 +31,10 @@ The **Windows Event Log** can also be a useful source of information for debuggi
 
 If the Contrast.NET Agent was successfully loaded by IIS, you'll see a message similar to the following:
 
-<a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="Success Message"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
+<a href="assets/images/KB3-e04_2.jpg" rel="lightbox" title="Success Message"><img class="thumbnail" src="assets/images/KB3-e04_2.jpg"/></a>
 
 If there was an error, then you will probably see something similar to this:
 
-<a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="Error Message"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
+<a href="assets/images/KB3-e04_3.jpg" rel="lightbox" title="Error Message"><img class="thumbnail" src="assets/images/KB3-e04_3.jpg"/></a>
 
 Starting with **Version 3.1.8**, the .NET agent will produce a minidump file (***.dmp***) when it encounters an error that would crash the worker process. These minidump files can be sent to Contrast as part of a [bug report](https://support.contrastsecurity.com/tickets/new). Dump files will help the Contrast team resolve the bug much more quickly than without the information in the dump file. Dump files are located in the same directory as other log files.
