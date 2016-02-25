@@ -20,7 +20,7 @@ The minimum required contrast.json setup should look like this:
         "id":"<contrast_id>",
         "key":"<contrast_apiKey>"
     },
-    "uri":"http://app.contrastsecurity.com"
+    "uri":"https://app.contrastsecurity.com"
 }
 ```
 

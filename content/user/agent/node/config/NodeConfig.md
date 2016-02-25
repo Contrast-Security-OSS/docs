@@ -11,7 +11,7 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
         "id":"<contrast_id>",
         "key":"<contrast_apiKey>"
     },
-    "uri":"http://app.contrastsecurity.com",
+    "uri":"https://app.contrastsecurity.com",
 	"mute": true,
 	"policy": "foo.json"
 }
@@ -43,7 +43,7 @@ Additionally, by default, the agent logs to ```&lt;app_root&gt;/node-contrast.lo
  Parameter               | Description
 -------------------------|-------------
 --logFile &lt;path&gt;   | Specify where Contrast should put your log file if different from location in ```contrast.json```
---showrewrite            | Show file names as they are handled by rewrite (with ```DEBUG=```)
+--showrewrite            | Log contents of modules that have been rewritten
 --dataflowLogging        | Enable verbose propagation logging
 --debug                  | Enable debug level logging
 
