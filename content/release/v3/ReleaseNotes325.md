@@ -11,8 +11,8 @@ If administrators enable this feature, users who log in will need their password
 * CONTRAST-7277: Glassfish protection of path traversal vulnerability
 * CONTRAST-7264: Kryo and XStream to IAST and RASP untrusted-deserialization rules
 * CONTRAST-4646: Enhanced Support for AdobeCQ
-* CONTRAST-6968: Update agent propogator notation
-* CONTRAST-5508: Enhanced checking of web.xml by Springboot applications
+* CONTRAST-6968: Update agent propagator notation
+* CONTRAST-5508: Enhanced checking of *web.xml* by Springboot applications
 * CONTRAST-7309: Additional agent property to disable dynamic sources
 * CONTRAST-7297: WebLogic 9.2 version string is in unexpected format
 * CONTRAST-7379: Prototype MVEL in place of JEXL
@@ -34,9 +34,9 @@ If administrators enable this feature, users who log in will need their password
 * CONTRAST-7315: Contrast.NET Svc Should Use WIX_ACCOUNT_LOCALSYSTEM
 * CONTRAST-7154: Improve .NET Instrumentation Performance by combining named pipe messages sent to service
 * CONTRAST-7385: .NET Instrumentation-based analysis should not create sources when the method returns string.Empty
-* CONTRAST-5101: .NET Agent should warn user if an application has legacyCasModel=true in its web.config
+* CONTRAST-5101: .NET Agent should warn user if an application has *legacyCasModel=true* in its *web.config*
 * CONTRAST-7361: Add rule id to finding hashes from .NET agent
-* CONTRAST-7465: Clean up DotnetAgentService.exe.config
+* CONTRAST-7465: Clean up *DotnetAgentService.exe.config*
 * CONTRAST-6556: Add Guid-parsing validators
 * CONTRAST-6001: Improve performance of initial .NET Instrumentation by using map of code transforms
 * CONTRAST-7113: Move .NET Injection Helpers Into Contrast.NET Directory
@@ -46,7 +46,7 @@ If administrators enable this feature, users who log in will need their password
 * CONTRAST-7387: Service start up should check that plugins directory exists before trying to clean up that directory
 * CONTRAST-7354: Force Contrast.NET Installer To Wait For ServiceStop
 * CONTRAST-7368: .NET Agent Service should not lock web app's files (e.g. .js files) during file analysis
-* CONTRAST-4039: .NET agent fails to get metadata for DNN's DLLs in bin/Providers directory
+* CONTRAST-4039: .NET agent fails to get metadata for DNN's DLLs in *bin/Providers* directory
 * CONTRAST-4287: .NET Profiler fails to identify base class when base class is in another assembly
 * CONTRAST-7114: Restrict Write Access To ProgramData Directory to Users
 * CONTRAST-3548: Contrast.NET Uninstaller Should Attempt CloseApplication Before Terminate On Tray
@@ -83,7 +83,7 @@ If administrators enable this feature, users who log in will need their password
 * CONTRAST-7249: Error on organization users page when a user is in two predefined EAC groups
 * CONTRAST-7304: Race Condition when loading vulnerabilities
 * CONTRAST-7358: Count For Library Tags is Incorrect
-* CONTRAST-7124: Broken subtitle calculation on rules that use languageFromAppId()
+* CONTRAST-7124: Broken subtitle calculation on rules that use *languageFromAppId()*
 * CONTRAST-6639: Address Customer Issues with Browser Caches When Taking Updates of TeamServer
 * CONTRAST-7449: LDAP Lookups Failing
 * CONTRAST-7373: Admin/User Page Grant Superadmin not working as expected
