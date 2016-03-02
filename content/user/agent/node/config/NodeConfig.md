@@ -8,8 +8,8 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 {
     "apiKey":"api_key",
     "user": {
-        "id":"<contrast_id>",
-        "serviceKey":"<contrast_apiKey>"
+        "id":"<account_id>",
+        "serviceKey":"<account_serviceKey>"
     },
     "uri":"https://app.contrastsecurity.com",
 	"mute": true,
