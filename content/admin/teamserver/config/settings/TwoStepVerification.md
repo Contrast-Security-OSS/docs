@@ -9,9 +9,11 @@ Contrast takes security seriously, including when it comes to your Contrast acco
 
 You can access two-step verification codes via your Contrast-associated email address, or by using the Google Authenticator mobile application, available on the following devices:
 
-* [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
-* [iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8)
-* [Blackberry](https://appworld.blackberry.com/webstore/content/29401059/?lang=en&countrycode=US)
+[Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
+<br/>
+[iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8)
+<br/>
+[Blackberry](https://appworld.blackberry.com/webstore/content/29401059/?lang=en&countrycode=US)
 
 
 ## Getting Started
@@ -19,11 +21,13 @@ You can access two-step verification codes via your Contrast-associated email ad
 Two-step verification (TSV) is controlled at three hierarchical levels: System, Organization and User.  The System administrator can Enable or Disable the feature, as well as choose whether or not individual organizations may override this setting.  
 
 **System Settings > Security > Two-Step Verification**
+<br/>
 <a href="assets/images/TSVSystemEnabledOverrideOff.png" rel="lightbox" title="System Settings"><img class="thumbnail" src="assets/images/TSVSystemEnabledOverrideOff.png"/></a>
 
 If override is not enabled, then the system setting will carry down through the remaining levels. A lock icon will indicate that changes may not be made. 
 
 **Org Settings > Security > Two-Step Verification**
+<br/>
 <a href="assets/images/TSVOrgLocked.png" rel="lightbox" title="Locked Organization Settings"><img class="thumbnail" src="assets/images/TSVOrgLocked.png"/></a>
 
 If override IS enabled, then the Organization administrator may choose to toggle the feature ON or OFF.  If ON, they can also choose whether or not to require two-step verification for users.
@@ -54,16 +58,16 @@ If TSV is enabled and **not** required, the user will still be onboarded upon lo
 
 Setting up two-step verification is simple.  First, choose how you would like to receive codes.  If you select Email, your Contrast-associated email will automatically be used.  You will then be sent a verification code to enter on the following screen.  
 
-If you select Google Authenticator, you will be given a setup code and instructions to use within the application.  You can scan the QR code provided, or enter a code manually. You can also use the provided dropdown to select your device type.  This is simply a quick way to identify where you've set up TSV.  You will then use the app to obtain a verification code to validate your device.
+If you select Google Authenticator, you will be given a setup code and further instructions.  You can scan the QR code provided, or enter a code manually. You can also use the provided dropdown to select your device type.  This is simply a quick way to identify where you've set up TSV.  You will then use the app to obtain a verification code and validate your device.
 
-Before completing setup, the user is given a set of backup codes, which will provide a means for logging in should they encounter an error or get locked out.  It is very important that these codes be saved and kept in a secure place!
+Before completing setup, you will be given a set of backup codes, which will provide a means for logging in should you ever encounter an error or get locked out.  It is very important that these codes be saved and kept in a secure place!
 
 <a href="assets/images/TSVBackupCodes.png" rel="lightbox" title="Backup Codes"><img class="thumbnail" src="assets/images/TSVBackupCodes.png"/></a>
 
 
 ## Reconfiguring Notification Methods
 
-Should a user wish to change how they receive verification codes, they can reconfigure this in **My Account > Two-Step Verification**.
+Should you change your mind about how you wish to receive verification codes, you may reconfigure this in **My Account > Two-Step Verification**.
 
 <a href="assets/images/TSVUserSettings.png" rel="lightbox" title="User Settings"><img class="thumbnail" src="assets/images/TSVUserSettings.png"/></a>
 
@@ -72,13 +76,13 @@ Should a user wish to change how they receive verification codes, they can recon
 
 ## Backup Methods & Troubleshooting
 
-If for some reason after implementing TSV a user encounters an error and cannot successfully receive a verification code via their chosen method, they have the option to receive a temporary code via email by clicking the **Can't Sign In?** link from the second step of the login process. Temporary codes will be valid for five minutes. Alternatively, a backup code may be used.  If email is already the chosen notification method, the user's administrator should be contacted to investigate potential issues with email settings.
+If for some reason after implementing TSV you encounter an error and cannot successfully receive a verification code via your chosen method, you have the option to receive a temporary code via email by clicking the **Can't Sign In?** link from the second step of the login process. Temporary codes will be valid for five minutes. Alternatively, a backup code may be used.  If email is already the chosen notification method, you should contact your administrator to investigate potential issues with email settings.
 
 <a href="assets/images/TSVCantSignIn.png" rel="lightbox" title="Initiate A Temporary Verification Code"><img class="thumbnail" src="assets/images/TSVCantSignIn.png"/></a>
 
-**Reset Device**
+## Reset Device
 
-If having issues with Google Authenticator, one way in which a user can troubleshoot is to try resetting their device by clicking the **Reset Device** link in User Settings.  This will clear all data for the current device and require resetting Google Authenticator, whether with the same device or a new one.
+If having issues with Google Authenticator, one way in which you can troubleshoot is to try manually resetting your device by clicking the **Reset Device** link in User Settings.  This will clear all data for the current device and require resetting Google Authenticator, whether with the same device or a new one.
 
 <a href="assets/images/TSVResetDevice.png" rel="lightbox" title="Resetting Your Device in User Settings"><img class="thumbnail" src="assets/images/TSVResetDevice.png"/></a>
 
