@@ -8,8 +8,8 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 {
     "apiKey":"api_key",
     "user": {
-        "id":"<contrast_id>",
-        "key":"<contrast_apiKey>"
+        "id":"<account_id>",
+        "serviceKey":"<account_serviceKey>"
     },
     "uri":"https://app.contrastsecurity.com",
 	"mute": true,
@@ -20,15 +20,16 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 ## General Configuration Options
  Parameter               | Description
 -------------------------|-------------
--h, --help               | Print available configuration options
--n, --appname &lt;name&gt;     | Name for the app if not present in ```package.json```
---rejectunauthorized     | The server will reject any connection which isn't authorized with the list of supplied CAs
--u, --uri &lt;uri&gt;          | URI to connect to TeamServer if different from ```contrast.json```
---apikey &lt;key&gt;           | Organization's API key if different from ```contrast.json```
---http-timeout &lt;time&gt;    | HTTP timeout value in milliseconds (default= 10000)
--c, --configFile &lt;path&gt;  | Set config file location (defaults to ```./contrast.json```)
---mute                   | The Contrast agent will not print anything to standard out
---policy &lt;path&gt;          | Custom policy file
+-h, --help                    | Print available configuration options
+-n, --appname &lt;name&gt;    | Name for the app if not present in ```package.json```
+--rejectunauthorized          | The server will reject any connection which isn't authorized with the list of supplied CAs
+-u, --uri &lt;uri&gt;         | URI to connect to TeamServer if different from ```contrast.json```
+--apikey &lt;key&gt;          | Organization's API key if different from ```contrast.json```
+--http-timeout &lt;time&gt;   | HTTP timeout value in milliseconds (default= 10000)
+-c, --configFile &lt;path&gt; | Set config file location (defaults to ```./contrast.json```)
+--mute                        | The Contrast agent will not print anything to standard out
+--policy &lt;path&gt;         | Custom policy file
+--pkgJson                     | Set the location to look for the app's ```package.json```. This is useful if the ```package.json``` is not located in the app root or a parent of the app root.
 
 ## Logging
 To prevent crowding *stdout*, INFO level statements are not logged to the console unless the environment variable ```DEBUG``` is set to include the Contrast namespace, as follows:
