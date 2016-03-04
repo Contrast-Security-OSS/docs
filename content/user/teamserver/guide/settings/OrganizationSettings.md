@@ -12,7 +12,7 @@ Organization administrators have access to a menu of configuration settings spec
 [Alerts](user_tsguideset.html#alert) provide a mechanism for users of TeamServer to construct rules and/or conditions to notify them via email about the discovery of a vulnerability under a particular threshold or condition.
 
 ## Security
-Organization administrators can manage [password policies](admin_tsconfigset.html#pw), [IP restrictions](admin_tsconfigset.html#ip) and session timeouts. In addition, the audit log is searchable by keyword and date.
+Organization administrators can manage [password policies](admin_tsconfig.html#pw), [IP restrictions](admin_tsconfig.html#ip) and session timeouts. In addition, the audit log is searchable by keyword and date.
 
 ## API
 Organization administrators navigate to the API settings page in order to email API keys, rotate keys and launch the [API Documentation Tool](dev_api3.html#openapi).

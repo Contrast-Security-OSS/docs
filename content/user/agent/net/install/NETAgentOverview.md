@@ -14,7 +14,7 @@ To start analyzing an application, install the .NET agent, and then simply point
 
 The .NET agent consists of several key components:
 
-* **Contrast Service** (***ContrastService.exe***) is a background Windows service that is responsible for adding **sensors** to IIS and web applications, receiving information from these sensors, and sending this information to the Contrast TeamServer. The Contrast Service also performs some passive analysis of applications when starting, such as analyzing an application's configuration for potential vulnerabilities. The Contrast Service starts automatically when Windows starts.
+* **Contrast Service** (***DotnetAgentService.exe***) is a background Windows service that is responsible for adding **sensors** to IIS and web applications, receiving information from these sensors, and sending this information to the Contrast TeamServer. The Contrast Service also performs some passive analysis of applications when starting, such as analyzing an application's configuration for potential vulnerabilities. The Contrast Service starts automatically when Windows starts.
 
 * Various **Sensors** are added to IIS and web applications on the server by the Contrast Service. These sensors gather vulnerability, library, technology and other information and send it to the Contrast Service. Note that the agent's sensors can only collect information when the Contrast Service is running **and** an ASP .NET application is actively being used.
 
@@ -23,12 +23,12 @@ The .NET agent consists of several key components:
 
 ## See Also:
 
-[.NET Agent Supported Technologies](user_netfaq.html#supp)
+[.NET Agent Supported Technologies](user_netinstall.html#supp)
 
-[Starting And Stopping The .NET Agent](user_netfaq.html#start)
+[Starting And Stopping The .NET Agent](user_netinstall.html#startstop)
 
-[Using The .NET Contrast Tray](user_netfaq.html#tray)
+[Using The .NET Contrast Tray](user_netinstall.html#tray)
 
 [.NET Agent Configuration](user_netconfig.html#config)
 
-[Getting .NET Agent Logs](user_netfaq.html#logs)
+[Getting .NET Agent Logs](user_netinstall.html#logs)

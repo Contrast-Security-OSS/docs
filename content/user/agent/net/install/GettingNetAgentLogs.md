@@ -15,9 +15,9 @@ Depending on how the Windows profile is set up (folder view settings), the direc
 
 You can change what information is logged by changing the logging level in the [.NET Agent Configuration](user_netconfig.html#config).
 
-There are two types of log files in the ***LOGS*** directory: ***ContrastSvc_*** and ***ContrastProfiler_*** logs. ***ContrastSvc_*** logs include details about ***ContrastService.exe***'s work, including any details of errors communicating with the Contrast TeamServer. ***ContrastProfiler_*** logs include details about data flow and control flow analysis peformed by the agent's sensors.
+There are two types of log files in the ***LOGS*** directory: ***DotnetAgentSvc_*** and ***Profiler_*** logs. ***DotnetAgentSvc_*** logs include details about ***DotnetAgentService.exe***'s work, including any details of errors communicating with the Contrast TeamServer. ***Profiler_*** logs include details about data flow and control flow analysis peformed by the agent's sensors.
 
-For example, here is the start of a ***ContrastSvc_*** log:
+For example, here is the start of a ***DotnetAgentSvc_*** log:
 
 <a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="ContrastSvc_ Log"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
 
@@ -31,10 +31,10 @@ The **Windows Event Log** can also be a useful source of information for debuggi
 
 If the Contrast.NET Agent was successfully loaded by IIS, you'll see a message similar to the following:
 
-<a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="Success Message"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
+<a href="assets/images/KB3-e04_2.jpg" rel="lightbox" title="Success Message"><img class="thumbnail" src="assets/images/KB3-e04_2.jpg"/></a>
 
 If there was an error, then you will probably see something similar to this:
 
-<a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="Error Message"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
+<a href="assets/images/KB3-e04_3.jpg" rel="lightbox" title="Error Message"><img class="thumbnail" src="assets/images/KB3-e04_3.jpg"/></a>
 
 Starting with **Version 3.1.8**, the .NET agent will produce a minidump file (***.dmp***) when it encounters an error that would crash the worker process. These minidump files can be sent to Contrast as part of a [bug report](https://support.contrastsecurity.com/tickets/new). Dump files will help the Contrast team resolve the bug much more quickly than without the information in the dump file. Dump files are located in the same directory as other log files.
