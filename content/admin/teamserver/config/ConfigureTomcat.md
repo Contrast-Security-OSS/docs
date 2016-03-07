@@ -1,6 +1,7 @@
 <!--
 title: "Configuring Embedded Tomcat Instance"
 description: "Guidelines for configuring the embedded Tomcat instance of TeamServer"
+tags: "Tomcat Java performance tuning hotspot"
 -->
 
 ## Getting Started

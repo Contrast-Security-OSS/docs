@@ -1,6 +1,7 @@
 <!--
 title: "EOP TeamServer credentials: Managing access accounts and passwords."
 description: "EOP TeamServer credentials: Managing access accounts and passwords."
+tags: "EOP TeamServer Hub SuperAdmin credentials"
 -->
 
 ## How do credentials work in TeamServer?

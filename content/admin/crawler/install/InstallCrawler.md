@@ -1,6 +1,7 @@
 <!--
 title: "Installing the Crawler Micro-Service"
 description: "Guidelines for installing and configuring the Crawler Micro-Service"
+tags: "crawler installation Microservice sizing fontconfig PhantomJS"
 -->
 
 ## Getting Started

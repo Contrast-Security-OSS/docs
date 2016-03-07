@@ -1,6 +1,7 @@
 <!--
 title: "System, Organization and Application Roles"
 description: "Overview of system, organization and application roles within TeamServer"
+tags: "TeamServer roles observer superadmin system"
 -->
 
 ## System Roles

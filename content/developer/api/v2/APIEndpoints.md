@@ -1,6 +1,7 @@
 <!--
 title: "API Endpoints"
 description: "Explanation of API endpoints"
+tags: "API public TeamServer"
 -->
 
 The API is available to both **SaaS** and **Enterprise On-Premise** users. The endpoint for SaaS users is the same for everyone, while for On-Premise users it will depend on where the TeamServer application is installed on the client's network.

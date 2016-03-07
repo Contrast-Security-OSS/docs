@@ -1,6 +1,7 @@
 <!--
 title: "Installing ColdFusion on JRun"
 description: "ColdFusion installation process on JRun"
+tags: "java agent installation coldfusion JRUN"
 -->
 
 ## Getting Started

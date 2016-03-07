@@ -1,6 +1,7 @@
 <!--
 title: "Working with Contrast's Java Agent Cache"
 description: "You may have noticed that Contrast was slow to start up the first time it ran, then fast after that. That's because Contrast caches all of its bytecode analysis."
+tags: "java agent performance cache"
 -->
 
 ## How does the cache work?

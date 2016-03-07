@@ -1,6 +1,7 @@
 <!--
 title: "Configuring TeamServer Settings"
 description: "Configuring TeamServer Settings"
+tags: "SuperAdmin EOP configuration settings"
 -->
 
 ## Role of the SuperAdmin

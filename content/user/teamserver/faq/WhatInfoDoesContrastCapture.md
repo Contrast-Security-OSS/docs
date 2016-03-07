@@ -1,6 +1,7 @@
 <!--
 title: "What Information Does Contrast Capture?"
 description: "Explanation of what information Contrast captures"
+tags: "TeamServer troubleshooting"
 -->
 
 ## Does Contrast capture sensitive information?

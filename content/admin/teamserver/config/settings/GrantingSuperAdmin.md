@@ -1,6 +1,7 @@
 <!--
 title: "Granting SuperAdmin to Other Administrators"
 description: "EOP guide for granting named SuperAdmin Accounts"
+tags: "SuperAdmin EOP grant permissions"
 -->
 
 

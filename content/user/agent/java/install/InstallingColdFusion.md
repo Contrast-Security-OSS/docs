@@ -1,6 +1,7 @@
 <!--
 title: "Installing on ColdFusion"
 description: "ColdFusion installation process"
+tags: "java agent installation coldfusion"
 -->
 
 ## Getting Started

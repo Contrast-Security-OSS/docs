@@ -1,6 +1,7 @@
 <!--
 title: "The .NET Agent Cannot Connect To TeamServer"
 description: "Troubleshooting guide for .NET agent issues"
+tags: "troubleshooting TeamServer agent installation .Net"
 -->
 
 ## Symptoms

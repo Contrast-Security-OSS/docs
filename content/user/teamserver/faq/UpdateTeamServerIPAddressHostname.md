@@ -1,6 +1,7 @@
 <!--
 title: "How To Update The TeamServer IP Address And Hostname"
 description: "Instructions for updating the TeamServer IP address and hostname"
+tags: "TeamServer EOP IP troubleshooting"
 -->
 
 Updating the TeamServer's IP address is fairly straightforward. Whether you moved the installation or had to change the hostname or IP address, letting TeamServer know can be done in a few simple steps:

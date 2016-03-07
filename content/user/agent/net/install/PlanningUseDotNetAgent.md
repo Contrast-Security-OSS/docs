@@ -1,6 +1,7 @@
 <!--
 title: "Getting Started with the .Net Agent"
 description: "Planning for the Contrast .NET Agent."
+tags: "configuration planning agent .Net"
 -->
 
 There are a few things to take into consideration when you are planning to use Contrast to analyze your ASP.NET web applications. The following information should help you prepare your environment for the Contrast .NET agent.

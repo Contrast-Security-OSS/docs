@@ -1,6 +1,7 @@
 <!--
 title: "Installing on Tomcat"
 description: "Tomcat installation process using Windows or startup script"
+tags: "java agent installation Tomcat"
 -->
 
 ## Running Contrast from "startup.bat" (or ".sh")

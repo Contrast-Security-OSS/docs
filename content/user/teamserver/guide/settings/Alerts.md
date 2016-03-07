@@ -1,6 +1,7 @@
 <!--
 title: "Everything You Wanted to Know About Alerts"
 description: "Overview of alerts within TeamServer" 
+tags: "TeamServer alerts"
 -->
 
 ## Creating Alerts

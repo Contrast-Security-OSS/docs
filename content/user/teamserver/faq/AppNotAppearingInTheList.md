@@ -1,6 +1,7 @@
 <!--
 title: "An Application Is Not Appearing In The List"
 description: "Explanation as to why an app may not appear in the list"
+tags: "TeamServer application troubleshooting"
 -->
 
 There are a few reasons why this could happen:

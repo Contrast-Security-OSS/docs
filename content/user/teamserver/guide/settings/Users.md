@@ -1,6 +1,7 @@
 <!--
 title: "Creating, Managing and Deleting Users in TeamServer"
 description: "Creating, Managing and Deleting Users in TeamServer"
+tags: "TeamServer user"
 -->
 
 ## Viewing Users in TeamServer

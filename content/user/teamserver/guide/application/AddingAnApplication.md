@@ -1,6 +1,7 @@
 <!--
 title: "Adding An Application"
 description: "Instructions on how to add an application"
+tags: "TeamServer application adding"
 -->
 
 ## Add Applications From Any Page

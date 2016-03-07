@@ -1,6 +1,7 @@
 <!--
 title: "Get Your Monitored Applications"
 description: "Information on how to get monitored applications"
+tags: "API v1 application"
 -->
 
 ## The "/s/api/app/list" Service

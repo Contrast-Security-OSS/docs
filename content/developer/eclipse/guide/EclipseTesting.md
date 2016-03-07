@@ -1,6 +1,7 @@
 <!--
 title: "Testing on a Server Outside Eclipse"
 description: "Testing on a Server Outside Eclipse"
+tags: "eclipse testing"
 -->
 
 ## Getting Started

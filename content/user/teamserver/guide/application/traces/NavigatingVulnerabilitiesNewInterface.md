@@ -1,6 +1,7 @@
 <!--
 title: "Navigating Vulnerabilities"
 description: "Explanation of accessing vulnerabilities in the user interface"
+tags: "TeamServer application vulnerabilities"
 -->
 
 The **Vulnerabilities** page allows you to search, sort and sift through all of an application's vulnerabilities. You can select which set of filters to use on the left. As you can see, there are many different default filters to choose from, which roughly map to various use cases our customers have for navigating vulnerabilities.

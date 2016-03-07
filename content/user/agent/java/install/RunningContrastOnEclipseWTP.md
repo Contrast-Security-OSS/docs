@@ -1,6 +1,7 @@
 <!--
 title: "Running Contrast on an Eclipse WTP Application"
 description: "Overview of the process for installation of Contrast on an application using Eclipse WTP"
+tags: "java agent installation Eclipse"
 -->
 
 This document will outline the process for installing Contrast on an application using the Eclipse IDE, running any application server from the Web Tools Platform (WTP) plugin.

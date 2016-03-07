@@ -1,6 +1,7 @@
 <!--
 title: "Configure the Password Policy of TeamServer"
 description: "Guidelines for configuring the password policy for TeamServer"
+tags: "security password policy administration"
 -->
 
 ## Getting Started

@@ -1,6 +1,7 @@
 <!--
 title: "Installing on Jetty"
 description: "Agent installation using the Jetty container"
+tags: "java agent installation Jetty"
 -->
 
 ## Running Contrast from the command line or script:

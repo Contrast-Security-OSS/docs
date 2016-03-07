@@ -1,6 +1,7 @@
 <!--
 title: "Managing Users in TeamServer"
 description: "Managing Users in TeamServer"
+tags: "configuration TeamServer Users roles permissions API"
 -->
 
 ## User Roles

@@ -1,6 +1,7 @@
 <!--
 title: "How To Crawl A Web Application"
 description: "Instructions on crawling a web application"
+tags: "TeamServer application crawler crawling"
 -->
 
 ## Basic Instructions

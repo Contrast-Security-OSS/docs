@@ -1,6 +1,7 @@
 <!--
 title: "How to Add a Level 2 Rule"
 description: "How to add a Level 2 rule to the Java Agent and TeamServer"
+tags: "java agent rules level"
 -->
 
 ## When Should I Use A Level 2 Rule?

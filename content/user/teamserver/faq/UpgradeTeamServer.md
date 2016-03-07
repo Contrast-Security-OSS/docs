@@ -1,6 +1,7 @@
 <!--
 title: "How to Upgrade Contrast Team Server"
 description: "Guidelines for upgrading the EOP TeamServer"
+tags: "TeamServer installation troubleshooting"
 -->
 
 ## Getting Started

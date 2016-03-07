@@ -1,6 +1,7 @@
 <!--
 title: "IIS Express Configuration"
 description: "Instructions for configuring IIS Express to scan different configuration files or add custom commands."
+tags: "microsoft IIS express agent installation .Net"
 -->
 
 Click the **Configure Sites...** link on the IIS Express page to bring up the IIS Express Configuration page.

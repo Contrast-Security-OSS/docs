@@ -1,6 +1,7 @@
 <!--
 title: "Getting Contrast Java Agent Logs"
 description: "How to get Java agent logs"
+tags: "java agent logs"
 -->
 
 You can ask Contrast to log verbose information by passing a custom system property, ```-Dcontrast.log=/path/to/log.txt -Dcontrast.level=DEBUG -Dcontrast.log.daily=true``` to the server process.

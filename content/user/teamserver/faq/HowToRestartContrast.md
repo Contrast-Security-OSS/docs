@@ -1,6 +1,7 @@
 <!--
 title: "How To Restart Contrast"
 description: "Instructions on restarting Contrast"
+tags: "TeamServer restart troubleshooting"
 -->
 
 ## Linux

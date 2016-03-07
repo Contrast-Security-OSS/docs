@@ -1,6 +1,7 @@
 <!--
 title: "Running the Contrast Agent with other Agents"
 description: "How our Agent behaves in the presence of others"
+tags: "java agent APM AppDynamics YourKit Dynatrace NewRelic"
 -->
 
 ## About Running APM Agents with Contrast Agents

@@ -1,6 +1,7 @@
 <!--
 title: "Configuring TeamServer for HTTPS"
 description: "Guidelines for configure HTTPS for TeamServer"
+tags: "configuration SSL EOP administration proxy"
 -->
 
 ## Background

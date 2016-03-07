@@ -1,6 +1,7 @@
 <!--
 title: "Running TeamServer"
 description: "Instructions for starting/stopping TeamServer"
+tags: "TeamServer EOP service windows initd service"
 -->
 
 ## The TeamServer Service
