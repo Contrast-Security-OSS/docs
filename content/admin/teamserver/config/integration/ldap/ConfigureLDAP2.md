@@ -1,6 +1,7 @@
 <!--
 title: "Configuring LDAP Authentication"
 description: "An LDAP Directory is a collection of Users and Group. LDAP (Lightweight Directory Access Protocol) is an Internet protocol that web applications can use to look up those Users and Groups from the LDAP Server."
+tags: "LDAP directory authentication configuration member"
 -->
 
 ## Overview

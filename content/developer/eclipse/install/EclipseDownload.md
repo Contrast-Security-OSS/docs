@@ -1,6 +1,7 @@
 <!--
 title: "Downloading Contrast for Eclipse"
 description: "Instructions for Downloading and Installing Contrast for Eclipse"
+tags: "Eclipse Download Installation"
 -->
 
 ## Drag and Drop (Option 1)

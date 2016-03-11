@@ -1,6 +1,7 @@
 <!--
 title: "Why Do I See The "NoClassDefFoundError"?"
 description: "Explanation of the "NoClassDefFoundError""
+tags: "java agent NoClassDefFoundError"
 -->
 
 ## Issue

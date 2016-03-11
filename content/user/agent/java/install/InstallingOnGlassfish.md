@@ -1,6 +1,7 @@
 <!--
 title: "Installing on GlassFish"
 description: "Agent installation using the GlassFish container"
+tags: "java agent installation glassfish"
 -->
 
 ## Configuring GlassFish

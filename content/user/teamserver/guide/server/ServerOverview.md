@@ -1,6 +1,7 @@
 <!--
 title: "Overview of Servers"
 description: "Overview of servers/agents within TeamServer"
+tags: "TeamServer server"
 -->
 
 ## What Are Servers

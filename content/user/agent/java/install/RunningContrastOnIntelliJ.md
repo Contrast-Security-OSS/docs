@@ -1,6 +1,7 @@
 <!--
 title: "Running Contrast on an IntelliJ Application"
 description: "Overview of the process for installation of Contrast on an application using IntelliJ"
+tags: "java agent installation IntelliJ IDE"
 -->
 
 This document will outline the process for installing Contrast on an application using IntelliJ IDE's supported application servers.

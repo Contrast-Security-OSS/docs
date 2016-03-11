@@ -1,6 +1,7 @@
 <!--
 title: ".NET Agent Supported Technologies"
 description: "List of technologies supported by the .NET agent"
+tags: "configuration supported technologies agent .Net"
 -->
 
 The Contrast.NET Agent supports analysis of web applications built on the following technologies:

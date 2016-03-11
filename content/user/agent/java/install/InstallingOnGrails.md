@@ -1,6 +1,7 @@
 <!--
 title: "Installing on Grails"
 description: "Agent installation using Grails"
+tags: "java agent installation grails"
 -->
 
 ## Running Contrast from the command line or script:

@@ -1,6 +1,7 @@
 <!--
 title: ".NET Level 2 Rules"
 description: "Information on .NET Level 2 Rules"
+tags: "customization rules level agent .Net"
 -->
 
 ## Table Of Contents

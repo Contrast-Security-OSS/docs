@@ -1,6 +1,7 @@
 <!--
 title: "Understanding User Permissions"
 description: "Understanding User Permissions"
+tags: "TeamServer permissions"
 -->
 
 ## Viewing User Permissions

@@ -1,6 +1,7 @@
 <!--
 title: "Glossary"
 description: "Glossary of terms"
+tags: "TeamServer terms troubleshooting"
 -->
 
 Definitions of commonly-used terms associated with Contrast technology are as follows:

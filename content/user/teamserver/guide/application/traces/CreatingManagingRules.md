@@ -1,6 +1,7 @@
 <!--
 title: "Creating And Managing Rules"
 description: "Explanation of new features for creating and managing rules"
+tags: "TeamServer application rules"
 -->
 
 ## What's New?

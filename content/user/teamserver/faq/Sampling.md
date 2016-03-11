@@ -1,6 +1,7 @@
 <!--
 title: "Sampling"
 description: "Explanation and tips regarding sampling"
+tags: "TeamServer sampling agent troubleshooting"
 -->
 
 ## What Is Sampling?

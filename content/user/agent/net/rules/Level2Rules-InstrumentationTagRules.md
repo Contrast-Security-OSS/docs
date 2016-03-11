@@ -1,6 +1,7 @@
 <!--
 title: "Level 2 Rules - Tag Rules"
 description: "Information on .NET Instrumentation Tag Rules"
+tags: "customization rules level agent .Net instrumentation tag"
 -->
 
 ## Tag Rule Syntax

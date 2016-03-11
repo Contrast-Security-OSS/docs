@@ -1,6 +1,7 @@
 <!--
 title: "Toggling Accross Organizations"
 description: "Moving from one organization to another from the settings menu"
+tags: "TeamServer toggling"
 -->
 
 ## Toggling Between Organizations

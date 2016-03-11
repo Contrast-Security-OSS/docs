@@ -1,6 +1,7 @@
 <!--
 title: "Running Contrast on GlassFish with IntelliJ"
 description: "Agent configuration using the GlassFish IntelliJ IDE"
+tags: "java agent installation glassfish IntelliJ IDE"
 -->
 
 ## Prerequisites

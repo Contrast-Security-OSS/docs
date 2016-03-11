@@ -1,6 +1,7 @@
 <!--
 title: "Running Contrast on Tomcat with Maven Apache Tomcat Plugin"
 description: "Overview of the process for installation of Contrast on an application using the Apache Maven Tomcat plugin"
+tags: "java agent installation maven plugin"
 -->
 
 This document will outline the process for installing Contrast on an application using the Apache Maven Tomcat plugin.

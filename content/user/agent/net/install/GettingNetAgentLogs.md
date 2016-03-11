@@ -1,6 +1,7 @@
 <!--
 title: "Getting .NET Agent Logs"
 description: "Instructions on using .NET agent logs"
+tags: "configuration logging agent .Net"
 -->
 
 The Contrast.NET Agent logs information to the ***Contrast.NET\LOGS*** directory within the Windows ***ProgramData*** directory:

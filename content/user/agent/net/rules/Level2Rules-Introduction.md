@@ -1,6 +1,7 @@
 <!--
 title: "Level 2 Rules - Introduction"
 description: "Introduction to .NET Level 2 Rules"
+tags: "customization rules level agent .Net"
 -->
 
 ## Policy File Editing

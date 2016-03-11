@@ -1,6 +1,7 @@
 <!--
 title: "Java Agent System Properties"
 description: "How to tweak system properties to alter Contrast's behavior"
+tags: "java agent system properties"
 -->
 You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
 

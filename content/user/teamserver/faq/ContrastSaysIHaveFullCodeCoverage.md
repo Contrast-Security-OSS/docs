@@ -1,6 +1,7 @@
 <!--
 title: "Contrast Says I Have 100% Code Coverage - I Don't Think That's Right"
 description: "Explanation as to why Contrast may show 100% code coverage"
+tags: "TeamServer code coverage troubleshooting"
 -->
 
 Did you recently **Reset** your application? If so, that's what it looks like!

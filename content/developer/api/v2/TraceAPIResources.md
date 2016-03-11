@@ -1,6 +1,7 @@
 <!--
 title: "Trace API Resources"
 description: "Resource Guide to Traces"
+tags: "v2 API trace"
 -->
 
 

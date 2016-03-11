@@ -1,6 +1,7 @@
 <!--
 title: "Issue And Defect Management Systems"
 description: "Information on the issue and defect management system"
+tags: "TeamServer issue defect management"
 -->
 
 TeamServer can connect to an **Issue and Defect Management System** in order to streamline the remediation process. Individual traces or groups of traces can be sent directly to a configured bug tracker for development groups to implement a fix to a discovered vulnerability.

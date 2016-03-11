@@ -1,6 +1,7 @@
 <!--
 title: ".NET Agent Configuration"
 description: "Guide to configuring .NET agent settings"
+tags: "microsoft agent configuration settings .Net"
 -->
 
 The Contrast Service's configuration file (***DotnetAgentService.exe.config***) contains several settings that can be modified to change the .NET agent's behavior.

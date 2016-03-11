@@ -1,6 +1,7 @@
 <!--
 title: "How Does The .NET Agent Affect App Performance?"
 description: "Tips on improving application performance with the .NET agent"
+tags: "configuration performance impact agent .Net"
 -->
 
 As you might expect, Contrast's analysis *does* make your app run a little slower. The good news is that it's generally not enough for anyone to complain about, and the results are definitely worth it.

@@ -1,6 +1,7 @@
 <!--
 title: "Is there a way to turn off the collection of usage metrics?"
 description: "Is there a way to turn off the collection of usage metrics?"
+tags: "eclipse metrics"
 -->
 
 ## Getting Started

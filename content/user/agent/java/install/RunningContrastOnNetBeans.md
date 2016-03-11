@@ -1,6 +1,7 @@
 <!--
 title: "Running Contrast on a NetBeans Application"
 description: "Overview of the process for installation of Contrast on an application using the NetBeans IDE with JBoss"
+tags: "java agent installation NetBeans IDE JBose"
 -->
 
 This document will outline the process for installing Contrast on an application using the NetBeans IDE with JBoss.

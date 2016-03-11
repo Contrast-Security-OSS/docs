@@ -2,6 +2,7 @@
 title: "Open Docs Markdown Style Guide and Contribution Guidelines"
 description: "Guidelines for formatting Contrast support documentation"
 category: "Style Guide", "Open Documentation Project"
+tags: "contribute OpenDocs Github"
 }-->
 
 ***Want to contribute to OpenDocs?***  Great! We want to make it easy and keep things consistent so below you'll find some general guidelines to help YOU help US. Thanks in advance!

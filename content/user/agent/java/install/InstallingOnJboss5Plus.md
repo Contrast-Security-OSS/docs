@@ -1,6 +1,7 @@
 <!--
 title: "Installing Contrast on JBoss 5 and Higher Versions"
 description: "JBoss5 and higher agent installation process using Windows or startup script"
+tags: "java agent installation JBoss RedHat"
 -->
 
 ## Running JBoss from run.bat or standalone.bat (or .sh)

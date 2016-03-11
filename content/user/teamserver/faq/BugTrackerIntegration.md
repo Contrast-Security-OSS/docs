@@ -1,6 +1,7 @@
 <!--
 title: "BugTracker Integration: How To Handle Required Fields When Creating JIRA Tickets From A Vulnerability"
 description: "Explanation of BugTracker integration"
+tags: "TeamServer BugTracker troubleshooting"
 -->
 
 ## Issue
