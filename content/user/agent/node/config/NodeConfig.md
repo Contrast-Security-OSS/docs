@@ -29,7 +29,7 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 -c, --configFile &lt;path&gt; | Set config file location (defaults to ```./contrast.json```)
 --mute                        | The Contrast agent will not print anything to standard out
 --policy &lt;path&gt;         | Custom policy file
---appRoot                     | Set the location of the application's root directory. This should be the location of the package.json, if different from the location of the app's entry point
+--appRoot                     | Set the location of the application's root directory. This should be the location of the ```package.json```, if different from the location of the app's entry point
 
 ## Logging
 To prevent crowding *stdout*, INFO level statements are not logged to the console unless the environment variable ```DEBUG``` is set to include the Contrast namespace, as follows:
