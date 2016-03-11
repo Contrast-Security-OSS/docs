@@ -1,6 +1,7 @@
 <!--
 title: "Installing TeamServer"
 description: "Installation instructions for running the TeamServer installer."
+tags: "EOP installation installer TeamServer Install4J Logging"
 -->
 
 ## Gathering Information

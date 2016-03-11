@@ -1,6 +1,7 @@
 <!--
 title: "Installing Contrast on DropWizard"
 description: "DropWizard installation of the Contrast Java Agent"
+tags: "java agent installation dropwizard"
 -->
 
 ## Getting Started

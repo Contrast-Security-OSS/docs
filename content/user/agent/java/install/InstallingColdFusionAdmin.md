@@ -1,6 +1,7 @@
 <!--
 title: "Installing via the ColdFusion Administrator"
 description: "ColdFusion installation process via the ColdFusion Adminstrator"
+tags: "java agent installation coldfusion admin"
 -->
 
 ## Getting Started

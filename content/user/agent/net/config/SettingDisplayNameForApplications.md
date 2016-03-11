@@ -1,6 +1,7 @@
 <!--
 title: "Setting The Display Name For Applications Analyzed By Contrast.NET"
 description: "Guide to setting the applications display name"
+tags: "microsoft IIS application name agent installation .Net"
 -->
 
 Starting with **Version 3.1.3**, the .NET agent allows users to customize the display name used for a web application by adding a setting to the ```appSettings``` section of the application's ***web.config*** file. For example, the following configuration will set the application's display name to **MyWebAppName**:

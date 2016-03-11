@@ -1,6 +1,7 @@
 <!--
 title: "Why Open Source Libraries In An Application May Show Up As Unknown"
 description: "Explanation of open source libraries showing up as unknown"
+tags: "TeamServer Websphere libraries troubleshooting"
 -->
 
 ## Issue

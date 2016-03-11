@@ -1,6 +1,7 @@
 <!--
 title: "What usage metrics does Contrast for Eclipse report?"
 description: "What usage metrics does Contrast for Eclipse report?"
+tags: "eclipse metrics collection"
 -->
 
 ## What Usage Metrics Does Contrast for Eclipse Report?

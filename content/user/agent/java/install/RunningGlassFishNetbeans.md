@@ -1,6 +1,7 @@
 <!--
 title: "Running Contrast on GlassFish with NetBeans"
 description: "Agent configuration using the GlassFish NetBeans IDE"
+tags: "java agent installation GlassFish NetBeans IDE"
 -->
 
 ## Prerequisites

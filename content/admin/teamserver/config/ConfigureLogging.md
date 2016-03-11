@@ -1,6 +1,7 @@
 <!--
 title: "Configuring Logging with TeamServer"
 description: "Guidelines for configuring logging within TeamServer using the log4j2.xml property file"
+tags: "EOP logging log4j"
 -->
 
 ## Getting Started

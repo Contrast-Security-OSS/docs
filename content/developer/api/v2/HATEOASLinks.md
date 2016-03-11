@@ -1,6 +1,7 @@
 <!--
 title: "HATEOAS Links"
 description: "Information about HATEOAS links"
+tags: "API v2 HATEOS"
 -->
 
 Each API call response includes an array of **HATEOAS (Hypermedia as the Engine of Application State)** links. The beauty of HATEOAS is that it allows you to interact and construct an API flow solely through the hyperlinks we provide you. You no longer need to hardcode logic into your client in order to use our API. We provide HATEOAS links for each call and for transactions within a call, if available.

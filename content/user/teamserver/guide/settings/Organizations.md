@@ -1,6 +1,7 @@
 <!--
 title: "Organizations within TeamServer"
 description: "Creating, Managing and Deleting Organizations"
+tags: "TeamServer organizations"
 -->
 
 ## Overview

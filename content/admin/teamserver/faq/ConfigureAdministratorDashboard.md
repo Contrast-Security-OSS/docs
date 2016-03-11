@@ -1,6 +1,7 @@
 <!--
 title: "The Administrator's Dashboard"
 description: "The Administrator's Dashboard can be a little intimidating at first, especially for new Administrators. Understanding the components on this dashboard can aid administrators in understanding scaling and performance issues as well as helping to troubleshoot user problems and get the most out of your Enterprise Deployment."
+tags: "EOP SuperAdmin System Messages Monitoring"
 -->
 
 ## System Messages

@@ -1,6 +1,7 @@
 <!--
 title: "Open API Documentation"
 description: "Overview of the Contrast REST API"
+tags: "open API documentation REST"
 -->
 
 ## Open API Documentation

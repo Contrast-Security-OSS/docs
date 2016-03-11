@@ -1,6 +1,7 @@
 <!--
 title: "Managing Organizations"
 description: "Guidelines for managing TeamServer organizations."
+tags: "Organizations SuperAdmin EOP"
 -->
 
 ## Adding an Organization

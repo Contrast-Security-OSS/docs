@@ -1,6 +1,7 @@
 <!--
 title: "Configuring User Directories"
 description: "A User Directory is a place where user information, specifically how a user is authenticated to the application is stored. This includes the user's login name and credentials are stored in this directory."
+tags: "AD LDAP directories EOP SuperAdmin"
 -->
 
 ## About User Directories

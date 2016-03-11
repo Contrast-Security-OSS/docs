@@ -1,6 +1,7 @@
 <!--
 title: "Where can my developers find and install Contrast for Eclipse?"
 description: "Where can my developers find and install Contrast for Eclipse?"
+tags: "Eclipse install"
 -->
 
 ## Where can my developers find and install Contrast for Eclipse?

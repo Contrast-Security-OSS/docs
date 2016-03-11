@@ -1,6 +1,7 @@
 <!--
 title: "When I Try To Start TeamServer I Receive An Error That BASE_DIRECTORY Must Be Set"
 description: "Explanation of BASE_DIRECTORY error"
+tags: "TeamServer BaseDirectory troubleshooting"
 -->
 
 ## Issue

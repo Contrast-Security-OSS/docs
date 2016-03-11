@@ -1,6 +1,7 @@
 <!--
 title: "Java Agent Bytecode Changes"
 description: "Instructions on getting bytecode changes"
+tags: "java agent bytecode"
 -->
 
 

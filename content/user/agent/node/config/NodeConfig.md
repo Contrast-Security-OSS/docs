@@ -1,6 +1,7 @@
 <!--
 title: "Node.js Agent Configuration"
 description: "Configuring the Node.js Agent"
+tags: "NodeJS agent configuration"
 -->
 
 Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g: ```node-contrast server.js --mute --policy foo.json```). With the exception of ```--configFile```, they can all be added to your ```contrast.json``` file as well:

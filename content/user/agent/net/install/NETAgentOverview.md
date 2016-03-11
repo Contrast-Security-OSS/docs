@@ -1,6 +1,7 @@
 <!--
 title: ".NET Agent Overview"
 description: "Overview of the .NET agent"
+tags: "configuration overview agent .Net"
 -->
 
 ## Usage

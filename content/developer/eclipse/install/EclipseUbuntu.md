@@ -1,6 +1,7 @@
 <!--
 title: "Why doesn't Contrast for Eclipse render on my Ubuntu machine?"
 description: "Why doesn't Contrast for Eclipse render on my Ubuntu machine?"
+tags: "Eclipse"
 -->
 
 ## Getting Started

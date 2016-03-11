@@ -1,6 +1,7 @@
 <!--
 title: "IP Restriction"
 description: "Guidelines for configure IP Restriction from within TeamServer"
+tags: "EOP IP restriction security"
 -->
 
 ## Getting Started

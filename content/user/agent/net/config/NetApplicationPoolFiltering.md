@@ -1,6 +1,7 @@
 <!--
 title: ".NET Application Pool Filtering"
 description: "Information on blacklisting/whitelisting application pools"
+tags: "microsoft IIS pooling whitelist blacklist configuration agent installation .Net"
 -->
 
 Some customers will find it necessary to disable Contrast.NET for specific applications on an instance of IIS. **Contrast 3.1.7** introduced a ```ProcessBlacklist``` that can be configured to remove the agent from specific application pools. If an application pool is blacklisted, the Contrast.NET agent will not attach to any applications using that application pool and there should be no performance impact for those applications.

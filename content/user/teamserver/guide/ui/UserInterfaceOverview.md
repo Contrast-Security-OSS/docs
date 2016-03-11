@@ -1,6 +1,7 @@
 <!--
 title: "Using the TeamServer User Interface"
 description: "General overview of the TeamServer UI"
+tags: "TeamServer UI navigation"
 -->
 
 ## Using the TeamServer User Interface

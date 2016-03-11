@@ -1,6 +1,7 @@
 <!--
 title: "Library Analysis"
 description: "Overview of how libraries are analyzed"
+tags: "TeamServer application library analysis"
 -->
 
 The security of the libraries that your application uses will have a direct impact on how secure your application can be. As such, Contrast will analyze these libraries (**JAR** files) in your application in order to assess their potential security risks.

@@ -1,6 +1,7 @@
 <!--
 title: "Creating, Managing and Deleting Access Control Groups"
 description: "Creating, Managing and Deleting Access Control Groups"
+tags: "TeamServer groups acls"
 -->
 
 Access Control Groups provide a convenient way to manage a collection of users. Users can belong to many groups. Groups are used throughout TeamServer; for example, they can be used to:

@@ -1,6 +1,7 @@
 <!--
-title: "Running Contrast with the Cohehaus Maven Cargo Plugin"
+title: "Running Contrast with the Codehaus Maven Cargo Plugin"
 description: "This document will outline the process for installing Contrast on an application using the Cargo plugin by Codehaus."
+tags: "java agent installation maven codehaus"
 -->
 
 ## Prerequisites

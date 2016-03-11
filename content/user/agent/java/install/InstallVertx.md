@@ -1,6 +1,7 @@
 <!--
 title: "Getting Started with Vert.x"
 description: "Configuring Vert.x"
+tags: "java agent installation Vert.x"
 -->
 
 ## Getting Started With Vert.x 

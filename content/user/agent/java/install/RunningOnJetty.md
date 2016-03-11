@@ -1,6 +1,7 @@
 <!--
 title: "Running on Jetty"
 description: "Agent on-boarding for Jetty container"
+tags: "java agent running Jetty"
 -->
 
 ## Prerequisites

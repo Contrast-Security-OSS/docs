@@ -1,6 +1,7 @@
 <!--
 title: "Configuring User Accounts"
 description: "Startup guide for adding and editing users."
+tags: "accounts users EOP"
 -->
 
 ## Getting Started

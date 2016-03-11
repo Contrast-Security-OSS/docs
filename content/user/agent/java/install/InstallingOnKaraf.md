@@ -1,6 +1,7 @@
 <!--
 title: "Installing On Karaf"
 description: "Agent installation using the Karaf app container"
+tags: "java agent installation Karaf apache"
 -->
 
 ## Installing On Karaf

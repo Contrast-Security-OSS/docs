@@ -1,6 +1,7 @@
 <!--
 title: "Configurable Java Agent Properties"
 description: "Instructions on configuring Java agent properties"
+tags: "java agent configuration rules properties"
 -->
 
 Parameters for certain rules are now configurable by the end user. The following are methods of applying custom parameters to these rules.

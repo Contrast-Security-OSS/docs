@@ -1,6 +1,7 @@
 <!--
 title: "Get Basic Application Data"
 description: "Information on how to get basic data on a monitored application"
+tags: "API v1 sample"
 -->
 
 ## The "/s/api/app/stats/{appld}" Service

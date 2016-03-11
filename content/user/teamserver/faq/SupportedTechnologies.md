@@ -1,6 +1,7 @@
 <!--
 title: "Supported Technologies"
 description: "List of supported technologies"
+tags: "TeamServer containers JDKs frameworks support troubleshooting"
 -->
 
 ## Java

@@ -1,6 +1,7 @@
 <!--
 title: "Node.js Agent Installation"
 description: "Installing the Node.js Agent"
+tags: "NodeJS agent installation"
 -->
 
 ## Installation

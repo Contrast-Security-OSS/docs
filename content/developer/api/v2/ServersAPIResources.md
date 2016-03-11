@@ -1,6 +1,7 @@
 <!--
 title: "Servers API Resources"
 description: "Resource Guide to Servers"
+tags: "API servers v2"
 -->
 
 

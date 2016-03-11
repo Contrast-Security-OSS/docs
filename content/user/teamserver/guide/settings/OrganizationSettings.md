@@ -1,6 +1,7 @@
 <!--
 title: "Organization Settings"
 description: "Overview of administrating and managing an organization."
+tags: "TeamServer organization settings"
 -->
 
 ## About Organization Settings

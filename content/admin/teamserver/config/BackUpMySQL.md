@@ -1,6 +1,7 @@
 <!--
 title: "Taking Backups of TeamServer's MySQL Database"
 description: "Instructions for using TeamServer's MySQL database backup tool."
+tags: "EOP MySQL administration backup database ESAPI"
 -->
 
 ## Getting Started
