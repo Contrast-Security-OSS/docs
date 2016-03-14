@@ -39,10 +39,8 @@ More detailed levels of logging will degrade performance but may generate useful
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *SamplingBaseline*, *SamplingFrequency*, *SamplingWindow* | Enable and configure *sampling mode*.                                                    |
 | *StackTraceDepth*                                         | Limits the number of stack trace frames captured by the agent. Default value is **20**. |
-| *StackTraceConfig*                                      | Limits stack traces captured by the agent.  Default is **Full**.    |
-|               | - **Full** (default): Capture all stack traces with file and line number information.  Note: deployments must include .PDB files for line number information.           |
-|           | - **Limited**: Better Performance.  Capture all stack traces but without file and line number information.  Best used for builds without debugging symbols (.PDB files).   |
-|           | - **Minimal**: Best performance.  Does not capture intermediate propagator stack traces, no file and line information.  Best used for Release builds and production environments. |
+| *StackTraceConfig*                                      | Limits stack traces captured by the agent. Default is **Full**.<br/> - **Full** (default): Capture all stack traces with file and line number information.  Note: deployments must include .PDB files for line number information.<br/> - **Limited**: Better Performance.  Capture all stack traces but without file and line number information.  Best used for builds without debugging symbols (.PDB files).<br/> - **Minimal**: Best performance.  Does not capture intermediate propagator stack traces, no file and line information.  Best used for Release builds and production environments. 
+|
 
         
 
@@ -71,34 +69,6 @@ More detailed levels of logging will degrade performance but may generate useful
    This mode has the same behavior as **3** but also enables Enter-Leave events for .NET 4.0 applications for additional logging. This additional logging can be specified in the policy file's ```<logging>``` section. Note that this mode is much slower than **3** and is intended only for debugging. 
 
 <br>
-
-| Parameter                                                 | Description                                                                             |
-|-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| *ResponseMode*                                         | Controls the .NET agent's collection and analysis of response headers and bodies. |
-
-<br/>
-
-1. **Response Analysis is Disabled**
-
-   This improves agent performance **~10-15%**. This setting disables the following rules:  
-  * autocomplete 
-  * cache controls 
-  * clickjacking  
-  * HTTP and secure cookie flags 
-  * HTTP authentication 
-  * parameter pollution 
-  * session rewriting 
-
-2. **Contrast.NET Collects Response Headers and Full Response Body** 
-
-   All rules are enabled. This is the **default** value.  
-
-3. **Contrast.NET Collects Only Response Headers**
-
-   The response body is not captured. This setting offers a small performance improvement. This setting disables the following rules: 
-  * autocomplete 
-  * clickjacking 
-  * parameter pollution 
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
