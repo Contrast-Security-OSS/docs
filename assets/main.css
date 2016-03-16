@@ -517,7 +517,9 @@ th {
 	      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .tt-menu {
-	min-width: 160px;
+	width: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
 	margin-top: 2px;
 	padding: 5px 0;
 	background-color: #ffffff;
@@ -528,24 +530,75 @@ th {
 	      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 	background-clip: padding-box;
     z-index: 1000 !important;
+    left: initial !important;
+    right: 0;
 }
 .tt-suggestion {
 	display: block;
 	padding: 3px 20px;
 }
 .tt-suggestion:hover {
-	color: #fff;
-	background-color: #428bca;
 }
 .tt-suggestion.tt-is-under-cursor a {
-	color: #fff;
 }
 .tt-suggestion p {
 	margin: 0;
 }
 
+.result-group-image{
+    background-repeat: no-repeat;
+    background-size: 12%;
+    background-position-x: 8px;
+    background-position-y: 4px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.result-group{
+    min-height: 42px;
+    position: relative;
+    padding: 0;
+}
+.result-group-developer{
+    background-image: url('../../assets/images/Developer_small.png');
+}
+.result-group-user{
+    background-image: url('../../assets/images/User_small.png');
+}
+.result-group-admin{
+    background-image: url('../../assets/images/Admin_small.png');
+}
+.result-group hr{
+    margin: 10px 0 0 12px;
+}
+.result-group:last-child hr{
+    display: none;
+}
 
-
+.result-article:hover{
+    background-color: #E2F1F6;
+}
+.result-article{
+    display: block;
+    padding: 4px 0 0 48px;
+}
+.result-title{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.result-breadcrumbs{
+    display: block;
+    font-size: 10px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 
 
