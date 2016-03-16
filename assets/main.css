@@ -537,10 +537,6 @@ th {
 	display: block;
 	padding: 3px 20px;
 }
-.tt-suggestion:hover {
-}
-.tt-suggestion.tt-is-under-cursor a {
-}
 .tt-suggestion p {
 	margin: 0;
 }
@@ -548,13 +544,11 @@ th {
 .result-group-image{
     background-repeat: no-repeat;
     background-size: 12%;
-    background-position-x: 8px;
-    background-position-y: 4px;
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
+    top: 4px;
+    left: 8px;
     pointer-events: none;
 }
 .result-group{
@@ -571,8 +565,24 @@ th {
 .result-group-admin{
     background-image: url('../../assets/images/Admin_small.png');
 }
+.result-group-contribute{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    top: 8px;
+    left: 14px;
+    background-color: #EB951A;
+}
+.result-group-release{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    top: 8px;
+    left: 14px;
+    background-color: #C2302C;
+}
 .result-group hr{
-    margin: 10px 0 0 12px;
+    margin: 6px 0 0 12px;
 }
 .result-group:last-child hr{
     display: none;
@@ -583,7 +593,7 @@ th {
 }
 .result-article{
     display: block;
-    padding: 4px 0 0 48px;
+    padding: 4px 0 4px 48px;
 }
 .result-title{
     display: block;
