@@ -1,5 +1,5 @@
 <!--
-Title: "How to Handle Tomcat's Java Security Policy"
+title: "How to Handle Tomcat's Java Security Policy"
 description: "How to Handle Tomcat's Java Security Policy"
 tags: "java agent tomcat security policy"
 -->
