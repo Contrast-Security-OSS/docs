@@ -485,15 +485,7 @@ th {
 }
 
 
-/* Not Used */
-
-
-
-
-
-
-
-
+/* Search */
 
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
@@ -543,12 +535,12 @@ th {
 
 .result-group-image{
     background-repeat: no-repeat;
-    background-size: 12%;
+    background-size: 10%;
     position: absolute;
     height: 100%;
     width: 100%;
     top: 4px;
-    left: 8px;
+    left: 12px;
     pointer-events: none;
 }
 .result-group{
@@ -582,7 +574,7 @@ th {
     background-color: #C2302C;
 }
 .result-group hr{
-    margin: 6px 0 0 12px;
+    margin: 15px 0 0 12px;
 }
 .result-group:last-child hr{
     display: none;
@@ -593,7 +585,7 @@ th {
 }
 .result-article{
     display: block;
-    padding: 4px 0 4px 48px;
+    padding: 4px 0 4px 55px;
 }
 .result-title{
     display: block;
@@ -610,7 +602,14 @@ th {
     text-overflow: ellipsis;
 }
 
+.result-breadcrumbs .tt-highlight {
+	font-size: inherit;
+}
 
+hr {
+	border-top:1px solid #eee;
+	padding-top: 5px;
+}
 
 
 

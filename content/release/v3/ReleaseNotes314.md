@@ -1,5 +1,5 @@
 <!--
-title: "Contrast 3.1.4 Release Notes - Feb 24, 2015"
+title: "Contrast 3.1.4 Release Notes - February 24, 2015"
 description: "Contrast 3.1.4 Release Notes - Feb 24, 2015"
 -->
 
