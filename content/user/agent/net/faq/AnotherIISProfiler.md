@@ -16,8 +16,8 @@ The conflicting profiler can often be identified by searching for the GUID in th
 ## How To Solve
 
 * Disable or uninstall the other software that has a profiler registered with or attached to IIS, restart IIS, and then start the Contrast .NET Agent.
-* NOTE: Some software does NOT remove the registry settings (```COR_ENABLE_PROFILING``` and ```COR_PROFILER```) used to attach a profiler to IIS when disabled or uninstalled. 
-  * Use regedit to edit the values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment``` key. Set ```COR_ENABLE_PROFILING``` value to 0 and delete the ```COR_PROFILER``` value.
+* NOTE: Some software does **NOT** remove the registry settings (```COR_ENABLE_PROFILING``` and ```COR_PROFILER```) used to attach a profiler to IIS when disabled or uninstalled. 
+  * Use regedit to edit the values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment``` key. Set ```COR_ENABLE_PROFILING``` value to **0** and delete the ```COR_PROFILER``` value.
   * You may also need to repeat this process for the following keys:
     * ```HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment```
     * ```HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Environment```
