@@ -18,7 +18,7 @@ To crawl a web application:
 * Enter the site - this is where the crawl begins (must be a URL)
 * For non-basic authentication and form field entry, refer to the **Form Fields** section
 * For basic authentication, check the **Basic Authentication** button and fill in the username and password
-* For **Custom Headers**, see the Custom Header tab to add new key-value pairs to be passed in the request to the server
+* For custom headers, see the **Custom Header** tab to add new key-value pairs to be passed in the request to the server
 * Click **Save**
 * The configuration should appear in the **Crawl Configurations** widget
 * To launch a crawl, click the **Selector** button to the right of the configuration and click **Execute**
@@ -44,7 +44,7 @@ If your application contains input fields that need to be populated with specifi
 
 Allows you to add custom key-value pairs that crawler will send in the request to the configured server
 
-* Navigate to the Custom Header tab
+* Navigate to the **Custom Header** tab
 * Each row is a new key-value pair
 * Enter an appropriate key and value
 
@@ -75,7 +75,7 @@ Additional configurations available:
 
 * **Allow Any SSL**
     - This will allow crawler to ignore any SSL certificates the server uses
-    - Set's 'ignore-ssl-errors' to 'true' in the PhantomJs setup
+    - Sets ```ignore-ssl-errors``` to ```true``` in the PhantomJs setup
 
 * **Event Wait Time**
     - The amount of time to wait for an event to trigger a response
