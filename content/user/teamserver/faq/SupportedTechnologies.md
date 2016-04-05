@@ -17,7 +17,7 @@ IBM 1.5 (2008+), 1.6 | Jetty 6, 7, 8, 9 | Spring/Spring Boot
                  | WebLogic 9, 10, 11g, 12c | Struts
                  | JRun 4 | Struts2
                  | Netty 3.x, 4.x | Wicket
-                 |                | JSF
+                 | Play 2.3.8+, 2.4.x  | JSF
                  |                 | ColdFusion
                  |                 | J2SE
                  |                 | DropWizard
