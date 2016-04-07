@@ -38,9 +38,7 @@ More detailed levels of logging will degrade performance but may generate useful
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *SamplingBaseline*, *SamplingFrequency*, *SamplingWindow* | Enable and configure *sampling mode*.                                                    |
-| *StackTraceDepth*                                         | Limits the number of stack trace frames captured by the agent. Default value is **20**. |
-| *StackTraceConfig*                                      | Limits stack traces captured by the agent. Default is **Full**.<br/> - **Full** (default): Capture all stack traces with file and line number information.  **Note:** deployments must include .PDB files for line number information.<br/> - **Limited**: Better Performance.  Capture all stack traces but without file and line number information.  Best used for builds without debugging symbols (.PDB files).<br/> - **Minimal**: Best performance.  Does not capture intermediate propagator stack traces, no file and line information.  Best used for Release builds and production environments. 
-|
+| *StackTraceConfig*                                      | Limits stack traces captured by the agent. Default is **Full**.<br/> - **Full** (default): Capture all stack traces with file and line number information.  **Note:** deployments must include .PDB files for line number information.<br/> - **Limited**: Better Performance.  Capture all stack traces but without file and line number information.  Best used for builds without debugging symbols (.PDB files).<br/> - **Minimal**: Best performance.  Does not capture intermediate propagator stack traces, no file and line information.  Best used for Release builds and production environments. |
 
         
 
