@@ -1,6 +1,7 @@
 <!--
 title: "Two-Step Verification"
 description: "Overview and instructions for using the TSV feature"
+tags: "Two Step Verification TSV Multi Factor Authorization Security Backup Codes Google Authenticator"
 -->
 
 ## Overview
@@ -60,9 +61,10 @@ Setting up two-step verification is simple.  First, choose how you would like to
 
 If you select Google Authenticator, you will be given a QR code with further instructions.  You may scan the QR code provided, or enter a code manually. You may also use the provided dropdown to select the device type.  This is a quick way to identify where you've set up TSV.  You will then use the Google Authenticator app to obtain a verification code and validate your device.
 
-Before completing TSV setup, you will be given a set of backup codes, which will provide a means for logging in should you ever encounter an error or get locked out.  It is very important that these codes be saved and kept in a secure place!
+Before completing TSV setup, you will be given the opportunity to download a set of backup codes in the form of a .txt file, which will provide a means for logging in should you ever encounter an error or get locked out.  It is very important that these codes be downloaded and saved in a secure place!
 
-<a href="assets/images/TSVBackupCodes.png" rel="lightbox" title="Backup Codes"><img class="thumbnail" src="assets/images/TSVBackupCodes.png"/></a>
+<a href="assets/images/TSVBackupCodes1.png" rel="lightbox" title="Backup Codes"><img class="thumbnail" src="assets/images/TSVBackupCodes1.png"/></a>
+<a href="assets/images/TSVBackupCodes2.png" rel="lightbox" title="Backup Codes - Downloaded"><img class="thumbnail" src="assets/images/TSVBackupCodes2.png"/></a>
 
 
 ## Reconfiguring Notification Methods
