@@ -1,13 +1,10 @@
-import java.util.LinkedList
-import java.util.List
-import java.util.Map
+import org.springframework.stereotype.Component;
 
-import org.springframework.stereotype.Component
-
-import com.aspectsecurity.contrast.teamserver.rules.DataFlowSecurityRule
-import com.aspectsecurity.contrast.teamserver.rules.SecurityRuleConstants
-import com.aspectsecurity.contrast.teamserver.model.application.Application
-import com.contrastsecurity.babelfish.BFTrace;
+import com.contrastsecurity.interfaces.application.IApplication
+import com.contrastsecurity.interfaces.babelfish.ISnippet
+import com.contrastsecurity.interfaces.rule.TriggerSecurityRule
+import com.contrastsecurity.interfaces.rule.SecurityRuleConstants
+import com.contrastsecurity.interfaces.trace.ITrace
 
 @Component
 class SecureRule extends TriggerSecurityRule {
@@ -116,14 +113,14 @@ class SecureRule extends TriggerSecurityRule {
     /** 
      * The risk of the vulnerability, in HTML, to be rendered in an export of the vulnerability.
      */
-    public String buildRisk(Trace trace){
+    public String buildRisk(ITrace trace){
         '<p>Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify things they should not be able to.</p>'
     }
     
     /**
      * The risk of the vulnerability, in mustache, to be rendered on the Summary page.
      */
-    public Snippet buildRisk(BFTrace trace){
+    public ISnippet buildRiskSnippet(ITrace trace){
         '{{#paragraph}}Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify things they should not be able to.{{/paragraph}}';
     }
     
@@ -137,7 +134,7 @@ class SecureRule extends TriggerSecurityRule {
     /**
      * The recommendation on how to fix the vulnerability, in HTML, to be rendered in an export of the vulnerability.
      */
-    public String buildRecommendation(Trace trace, String language) {
+    public String buildRecommendation(ITrace trace, String language) {
         '<p>In order to prevent this, the security of the Request object should not be compromised. <br/>' +
         'Specifically, the <code>com.acme.ticketbook.Request.setSecure(boolean)</code> method should never be set to false and<br/>' + 
         'the <code>com.acme.ticketbook.Request.disableSecurity(boolean)</code> method should never be set to true. </p>';
@@ -146,7 +143,7 @@ class SecureRule extends TriggerSecurityRule {
     /**
      * The recommendation on how to fix the vulnerability, in mustache, to be rendered on the How to Fix page.
      */
-    public Snippet buildRecommendation(BFTrace trace){
+    public ISnippet buildRecommendationSnippet(ITrace trace){
         '{{#paragraph}}In order to prevent this, the security of the Request object should not be compromised. {{{nl}}}' +
         'Specifically, the {{#code}}com.acme.ticketbook.Request.setSecure(boolean){{/code}} method should never be set to false and {{{nl}}}' + 
         'the {{#code}}com.acme.ticketbook.Request.disableSecurity(boolean){{/code}} method should never be set to true. {{/paragraph}}';
@@ -155,13 +152,9 @@ class SecureRule extends TriggerSecurityRule {
     /**
      * The recommendation on how to fix the vulnerability, in plain text, to be rendered in a PDF report.
      */
-    public String getReportRecommendation(Application app) {
+    public String getReportRecommendation(IApplication app) {
         'In order to prevent this, the security of the Request object should not be compromised.' +
         'Specifically, the com.acme.ticketbook.Request.setSecure(boolean) method should never be set to false and' + 
         'the com.acme.ticketbook.Request.disableSecurity(boolean) method should never be set to true.';
     }
-
-    
-
-
 }
