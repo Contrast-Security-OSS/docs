@@ -4,24 +4,16 @@ description: "Instrumentation .NET Agent Data Flow Engine"
 tags: "microsoft Instrumentation agent installation .Net"
 -->
 
-Beginning with version 3.2.4, the Contrast .NET Agent includes an entirely new method of tracking data flow through analyzed .NET 4+ (CLR4) web applications.  By default, the .NET Agent will continue to use the old data flow engine against both CLR2 and CLR4 applications.  Users who wish to try out the new data flow engine can do so by changing the ```ProfilerBehavior``` configuration setting to ```3``` in the ***DotnetAgentService.exe.config*** file.  When ```ProfilerBehavior``` is set to ```3``` the .NET agent will use the instrumentation data flow engine against web applications running on CLR4 and will use the old data flow engine against CLR2 applications. 
-
-Follow these instructions to enable the new instrumentation data flow engine against CLR4 applications:
-
-* Stop the Contrast .NET Agent
-* Using a text editor, open the ***DotnetAgentService.exe.config*** file which is located in the Contrast .NET Agent installation directory (***C:\Program Files\Contrast.NET***)
-* Locate the ```<add key="ProfilerBehavior" value="2" />``` setting.  Change the value to ```3``` and save the file.
-* Start the Contrast .NET Agent
+Beginning with version 3.2.4, the Contrast .NET Agent includes an entirely new method of tracking data flow through analyzed .NET 4+ (CLR4) web applications.  By default, the .NET Agent uses the instrumentation data flow engine against web applications running on CLR4 and will use the old Enter-Leave-based data flow engine against CLR2 applications. Users who wish to revert to the old data flow engine for all applications can do so by changing the ```ProfilerBehavior``` configuration setting to ```2``` in the ***DotnetAgentService.exe.config*** file. (The default values for ```ProfilerBehavior``` is ```3```, see [.NET Agent Configuration](user_netconfig.html#config))
 
 The new instrumentation engine offers a number of benefits, including: 
 
 * Source code file and line number information when .PDB files are present.
 * Improved stability and comparable performance compared to the old method of tracking data flow.
-* Ability to support custom rules in the future.
+* Ability to use custom rules
 
 > **Note:** The new data flow engine is **not** supported on Windows Server 2003/IIS6.
 
-In a future release, the new data flow engine will eventually replace the old data flow engine.  In the meantime, we encourage you to try out the new data flow engine and [give us feedback!](mailto:support@contrastsecurity.com)
 
 ## Getting Source Code Information Using the New Data Flow Engine
 
