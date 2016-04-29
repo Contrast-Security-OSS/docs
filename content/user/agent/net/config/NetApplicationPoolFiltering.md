@@ -32,7 +32,7 @@ As of 3.2.3, application pool blacklists and whitelists also accept ```*``` as a
 
 >**Note:** The application pool blacklist functionality is only available for applications hosted on IIS versions 7 and higher.
 
-Web applications hosted on IIS run on application pools. By default, the username for an application pool is the same as the application pool's name (i.e. using the **ApplicationPoolIdentity** setting).
+Web applications hosted on IIS run on application pools. Starting with version 3.2.7, whitelisting and blacklisting are based on applicaton pool *name*.  In versions prior to 3.2.7, application pool filtering was based on *process username* which by default (i.e. using the **ApplicationPoolIdentity** setting) is the same as the application pool's name.
 
 **The application pool running an application can be discovered using the following:**
 
@@ -67,6 +67,5 @@ Web applications hosted on IIS run on application pools. By default, the usernam
 2. Browse to an application
 3. In Windows, navigate to ***C:\ProgramData\Contrast.NET\LOGS***
 4. Open the most recent **Profiler** log (***Profiler_[AppPool]_XXXXXXXX_XX_XX_XX_XXX_XXXXX.log***)
-5. The application pool name will be on the line that starts with **Application pool username:** (see below)
+5. The application pool name will be on the line that starts with **ApplicationPool Name:** 
 
-<a href="assets/images/KB3-e05_3.jpg" rel="lightbox" title="Application Pool Username"><img class="thumbnail" src="assets/images/KB3-e05_3.jpg"/></a>
