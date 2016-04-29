@@ -4,7 +4,7 @@ description: "Guide to configuring .NET agent settings"
 tags: "microsoft agent configuration settings .Net"
 -->
 
-The Contrast Service's configuration file (***DotnetAgentService.exe.config***) contains several settings that can be modified to change the .NET agent's behavior.
+The Contrast Service's configuration file (***DotnetAgentService.exe.config***) contains several settings that can be modified to change the .NET agent's behavior.  Starting with version 3.2.7, the .NET Agent will automatically start using new configuration values when this file is edited.  Prior to 3.2.7, the .NET Agent's service must be restarted in order for configuration changes to take effect. 
 
 
 ## General
@@ -12,7 +12,8 @@ The Contrast Service's configuration file (***DotnetAgentService.exe.config***) 
 | Parameter                                             | Description                                                                                                                             |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | TeamServerUrl                                         | This value will override the TeamServer URL that's packaged with the agent. This can be useful for networks that proxy the information. |
-| *ProxyAuth*, *ProxyUser*, *ProxyPass*, *ProxyAddress* | Controls the proxy (if any) to be used by the agent to connect to TeamServer.                                                           |
+| *ProxyAuth*, *ProxyUser*, *ProxyPass*, *ProxyAddress* | Controls the proxy (if any) to be used by the agent to connect to TeamServer. |
+| RestartIISOnConfigChange                              | Will restart IIS in the background if any of the following configuration settings are changed: *ProcessBlacklist*, *ProcessWhitelist*, *ProfilerBehavior*, *ResponseUrlWhiteListRegex*. The default value is *true*. If set to *false* then IIS must be restarted by the user in order for changes to the noted configuration settings to take effect. | 
 
 
 ## Diagnostics
