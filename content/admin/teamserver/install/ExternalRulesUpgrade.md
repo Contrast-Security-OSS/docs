@@ -17,9 +17,9 @@ These changes will need to be in place between the 3.2.6 and 3.2.7+ versions of 
 To make rule writing easier and more efficient for both you and for us. First, it is our hope that by switching to an interface rather than a concrete object, we will be able to insulate external rules from future internal changes. This will allow us to advance our rule rendering and output, providing the latest update to your custom rules seamlessly, without requiring future code changes. Second, the change eliminates the need for Babelfish-specific versions of the data objects. This reduces code duplication and rule dependencies, making rules easier to write and debug. Third, by making these dependencies an external project separate from TeamServer, we can expose the artifact - allowing for compilation testing and swifter rule development iterations. 
 
 ## How?
-It can be a little daunting upgrading your rules to be ready for the 3.2.7+ release of TeamServer. To make the process easier for you, we have included a [Maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip) that will make developing these new rules simpler; however, it *does* require that you have Maven 3.x.x installed. If you do not want to use Maven, you can skip Step 1 and **INSERT_FINAL_NUMBER**, but you will not have validation before attempting to restart TeamServer.
+It can be a little daunting upgrading your rules to be ready for the 3.2.7+ release of TeamServer. To make the process easier for you, we have included a <a href="/assets/attachments/level_2_rules/contrast_rule_writer.zip">Maven Project</a> that will make developing these new rules simpler; however, it *does* require that you have Maven 3.x.x installed. If you do not want to use Maven, you can skip Step 1 and **INSERT_FINAL_NUMBER**, but you will not have validation before attempting to restart TeamServer.
 
-1. Download the aforementioned [Maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip)
+1. Download the aforementioned <a href="/assets/attachments/level_2_rules/contrast_rule_writer.zip">Maven Project</a>  
 2. Unzip the project and import it into your IDE of choice
 3. Place a copy of your rules in the */src/main/groovy* folder of the project
 4. If you declare it, remove the field ```RuleResourceLoader loader``` and the ```org.springframework.beans.factory.annotation.Autowired``` dependency
@@ -43,7 +43,7 @@ It can be a little daunting upgrading your rules to be ready for the 3.2.7+ rele
     - **TriggerSecurityRule** ```com.contrastsecurity.interfaces.rule.TriggerSecurityRule```
     - **Trace & BFTrace** ```com.contrastsecurity.interfaces.trace.ITrace```
     - **UniqueMethod & BFMethod** ```com.contrastsecurity.interfaces.trace.IUniqueMethod```.
-A full list of the new imports, as well as their former declarations, can be found in the [Where?](ExternalRulesUpgrage.html#where) section of this instruction set. 
+A full list of the new imports, as well as their former declarations, can be found in the [Where?](ExternalRulesUpgrade.html#where) section of this instruction set. 
 12. Anywhere that you instantiate a ```Snippet```, instead call ```ruleHelper.getNewSnippet()```.
 13. Anywhere that you instantiate a ```Story```, instead call ```ruleHelper.getNewStory()```.
 14. Anywhere that you instantiate a ```DataFlowChapter```, instead call ```chapterHelper.getNewDataFlowChapter()```.
@@ -61,75 +61,75 @@ Locations of the new imports, mapped to the location of the old imports which th
 
  3.2.6 Import | 3.2.7 Import
  ------------ | ------------
- ```com.aspectsecurity.contrast.teamserver.model.application.Application``` | ```com.contrastsecurity.interfaces.application.IApplication```
- ```com.aspectsecurity.contrast.teamserver.model.organization.server.Server``` |```com.contrastsecurity.interfaces.application.IServer```
- ```com.contrastsecurity.interfaces.application.ITechnology``` | ```com.aspectsecurity.contrast.teamserver.model.application.codeinfo.Technology```
+ com.aspectsecurity.contrast.teamserver.model.application.Application | com.contrastsecurity.interfaces.application.IApplication
+ com.aspectsecurity.contrast.teamserver.model.organization.server.Server |com.contrastsecurity.interfaces.application.IServer
+ com.contrastsecurity.interfaces.application.ITechnology | com.aspectsecurity.contrast.teamserver.model.application.codeinfo.Technology
 
 ### Babelfish
 
  3.2.6 Import | 3.2.7 Import
  ------------ | ------------
- ```com.contrastsecurity.babelfish.BabelfishException``` | ```com.contrastsecurity.interfaces.babelfish.BabelfishException``` 
- ```com.contrastsecurity.babelfish.Babelfish``` | ```com.contrastsecurity.interfaces.babelfish.IBabelfish```
- ```com.contrastsecurity.babelfish.card.Card``` | ```com.contrastsecurity.interfaces.babelfish.ICard```
- ```com.contrastsecurity.babelfish.story.Chapter``` | ```com.contrastsecurity.interfaces.babelfish.IChapter```
- ```com.contrastsecurity.babelfish.story.ChapterHelper``` | ```com.contrastsecurity.interfaces.babelfish.IChapterHelper```
- ```com.contrastsecurity.babelfish.story.PropertiesChapter``` | ```com.contrastsecurity.interfaces.babelfish.IPropertiesChapter```
- ```com.contrastsecurity.babelfish.source.Snippet``` | ```com.contrastsecurity.interfaces.babelfish.ISnippet```
- ```com.contrastsecurity.babelfish.story.Story``` | ```com.contrastsecurity.interfaces.babelfish.IStory```
+ com.contrastsecurity.babelfish.BabelfishException | com.contrastsecurity.interfaces.babelfish.BabelfishException 
+ com.contrastsecurity.babelfish.Babelfish | com.contrastsecurity.interfaces.babelfish.IBabelfish
+ com.contrastsecurity.babelfish.card.Card | com.contrastsecurity.interfaces.babelfish.ICard
+ com.contrastsecurity.babelfish.story.Chapter | com.contrastsecurity.interfaces.babelfish.IChapter
+ com.contrastsecurity.babelfish.story.ChapterHelper | com.contrastsecurity.interfaces.babelfish.IChapterHelper
+ com.contrastsecurity.babelfish.story.PropertiesChapter | com.contrastsecurity.interfaces.babelfish.IPropertiesChapter
+ com.contrastsecurity.babelfish.source.Snippet | com.contrastsecurity.interfaces.babelfish.ISnippet
+ com.contrastsecurity.babelfish.story.Story | com.contrastsecurity.interfaces.babelfish.IStory
 
 ### Request
 
 3.2.6 Import | 3.2.7 Import
  ------------ | ------------
- ```com.aspectsecurity.contrast.teamserver.model.trace.HttpHeader``` | ```com.contrastsecurity.interfaces.request.IHttpHeader```
- ```com.aspectsecurity.contrast.teamserver.model.trace.HttpParameter``` | ```com.contrastsecurity.interfaces.request.IHttpParameter```
- ```com.aspectsecurity.contrast.teamserver.model.trace.HttpRequest``` | ```com.contrastsecurity.interfaces.request.IHttpRequest```
- ```com.aspectsecurity.contrast.teamserver.webapp.apps.traces.check.RequestCondition``` | ```com.contrastsecurity.interfaces.request.IRequestCondition```
+ com.aspectsecurity.contrast.teamserver.model.trace.HttpHeader | com.contrastsecurity.interfaces.request.IHttpHeader
+ com.aspectsecurity.contrast.teamserver.model.trace.HttpParameter | com.contrastsecurity.interfaces.request.IHttpParameter
+ com.aspectsecurity.contrast.teamserver.model.trace.HttpRequest | com.contrastsecurity.interfaces.request.IHttpRequest
+ com.aspectsecurity.contrast.teamserver.webapp.apps.traces.check.RequestCondition | com.contrastsecurity.interfaces.request.IRequestCondition
 
 ### Rule
  
 3.2.6 Import | 3.2.7 Import
  ------------ | ------------
- ```com.aspectsecurity.contrast.teamserver.rules.ConfigSecurityRule``` | ```com.contrastsecurity.interfaces.rule.ConfigSecurityRule```
- ```com.aspectsecurity.contrast.teamserver.rules.CryptoSecurityRule``` | ```com.contrastsecurity.interfaces.rule.CryptoSecurityRule```
- ```com.aspectsecurity.contrast.teamserver.rules.DataFlowSecurityRule``` | ```com.contrastsecurity.interfaces.rule.DataFlowSecurityRule```
- ```com.aspectsecurity.contrast.teamserver.rules.DotNetASPXConfigSecurityRule``` | ```com.contrastsecurity.interfaces.rule.DotNetASPXConfigSecurityRule```
- ```com.aspectsecurity.contrast.teamserver.rules.DotNetConfigSecurityRule``` | ```com.contrastsecurity.interfaces.rule.DotNetConfigSecurityRule```
- *New* | ```com.contrastsecurity.interfaces.rule.HeaderDataFlowSecurityRule```
- ```com.aspectsecurity.contrast.teamserver.service.util.RuleHelper``` | ```com.contrastsecurity.interfaces.rule.IRuleHelper```
- ```com.aspectsecurity.contrast.teamserver.rules.ISecurityRule``` | ```com.contrastsecurity.interfaces.rule.ISecurityRule```
- ```com.aspectsecurity.contrast.teamserver.rules.TraceView``` | ```com.contrastsecurity.interfaces.rule.ITraceView```
- ```com.aspectsecurity.contrast.teamserver.rules.PropertySecurityRule``` | ```com.contrastsecurity.interfaces.rule.PropertySecurityRule```
- ```com.aspectsecurity.contrast.teamserver.rules.RegexSecurityRule``` | ```com.contrastsecurity.interfaces.rule.RegexSecurityRule```
- ```com.aspectsecurity.contrast.teamserver.model.rulelevel.RuleSeverity``` | ```com.contrastsecurity.interfaces.rule.RuleSeverity```
- ```com.aspectsecurity.contrast.teamserver.rules.SecurityRule``` | ```com.contrastsecurity.interfaces.rule.SecurityRule```
- ```com.aspectsecurity.contrast.teamserver.rules.SecurityRuleConstants``` | ```com.contrastsecurity.interfaces.rule.SecurityRuleConstants```
- ```com.aspectsecurity.contrast.teamserver.model.ServiceLevel``` | ```com.contrastsecurity.interfaces.rule.ServiceLevel```
- ```com.aspectsecurity.contrast.teamserver.rules.TriggerSecurityRule``` | ```com.contrastsecurity.interfaces.rule.TriggerSecurityRule```
+ com.aspectsecurity.contrast.teamserver.rules.ConfigSecurityRule | com.contrastsecurity.interfaces.rule.ConfigSecurityRule
+ com.aspectsecurity.contrast.teamserver.rules.CryptoSecurityRule | com.contrastsecurity.interfaces.rule.CryptoSecurityRule
+ com.aspectsecurity.contrast.teamserver.rules.DataFlowSecurityRule | com.contrastsecurity.interfaces.rule.DataFlowSecurityRule
+ com.aspectsecurity.contrast.teamserver.rules.DotNetASPXConfigSecurityRule | com.contrastsecurity.interfaces.rule.DotNetASPXConfigSecurityRule
+ com.aspectsecurity.contrast.teamserver.rules.DotNetConfigSecurityRule | com.contrastsecurity.interfaces.rule.DotNetConfigSecurityRule
+ *New* | com.contrastsecurity.interfaces.rule.HeaderDataFlowSecurityRule
+ com.aspectsecurity.contrast.teamserver.service.util.RuleHelper | com.contrastsecurity.interfaces.rule.IRuleHelper
+ com.aspectsecurity.contrast.teamserver.rules.ISecurityRule | com.contrastsecurity.interfaces.rule.ISecurityRule
+ com.aspectsecurity.contrast.teamserver.rules.TraceView | com.contrastsecurity.interfaces.rule.ITraceView
+ com.aspectsecurity.contrast.teamserver.rules.PropertySecurityRule | com.contrastsecurity.interfaces.rule.PropertySecurityRule
+ com.aspectsecurity.contrast.teamserver.rules.RegexSecurityRule | com.contrastsecurity.interfaces.rule.RegexSecurityRule
+ com.aspectsecurity.contrast.teamserver.model.rulelevel.RuleSeverity | com.contrastsecurity.interfaces.rule.RuleSeverity
+ com.aspectsecurity.contrast.teamserver.rules.SecurityRule | com.contrastsecurity.interfaces.rule.SecurityRule
+ com.aspectsecurity.contrast.teamserver.rules.SecurityRuleConstants | com.contrastsecurity.interfaces.rule.SecurityRuleConstants
+ com.aspectsecurity.contrast.teamserver.model.ServiceLevel | com.contrastsecurity.interfaces.rule.ServiceLevel
+ com.aspectsecurity.contrast.teamserver.rules.TriggerSecurityRule | com.contrastsecurity.interfaces.rule.TriggerSecurityRule
 
 ### Trace
  
 3.2.6 Import | 3.2.7 Import
  ------------ | ------------
- ```com.aspectsecurity.contrast.teamserver.model.trace.AbstractEvent``` |  ```com.contrastsecurity.interfaces.trace.IAbstractEvent```
- ```com.aspectsecurity.contrast.teamserver.model.trace.Instance``` |  ```com.contrastsecurity.interfaces.trace.IInstance```
- ```com.aspectsecurity.contrast.teamserver.model.trace.Parameter``` |  ```com.contrastsecurity.interfaces.trace.IParameter```
- ```com.aspectsecurity.contrast.teamserver.model.trace.ReturnValue``` |  ```com.contrastsecurity.interfaces.trace.IReturnValue```
- ```com.aspectsecurity.contrast.teamserver.model.trace.StackFrame``` |  ```com.contrastsecurity.interfaces.trace.IStackFrame```
- ```com.aspectsecurity.contrast.teamserver.model.trace.Trace``` | ```com.contrastsecurity.interfaces.trace.ITrace```
- *New* | ```com.contrastsecurity.interfaces.trace.ITraceHelper```
- ```com.aspectsecurity.contrast.teamserver.model.trace.TraceProperty``` | ```com.contrastsecurity.interfaces.trace.ITraceProperty```
- ```com.aspectsecurity.contrast.teamserver.model.trace.UniqueMethod``` | ```com.contrastsecurity.interfaces.trace.IUniqueMethod```
- *New* | ```com.contrastsecurity.interfaces.trace.TraceException```
- ```com.aspectsecurity.contrast.teamserver.model.util.TracePropertyJSON``` | ```com.contrastsecurity.interfaces.trace.TracePropertyJSON```
+ com.aspectsecurity.contrast.teamserver.model.trace.AbstractEvent |  com.contrastsecurity.interfaces.trace.IAbstractEvent
+ com.aspectsecurity.contrast.teamserver.model.trace.Instance |  com.contrastsecurity.interfaces.trace.IInstance
+ com.aspectsecurity.contrast.teamserver.model.trace.Parameter |  com.contrastsecurity.interfaces.trace.IParameter
+ com.aspectsecurity.contrast.teamserver.model.trace.ReturnValue |  com.contrastsecurity.interfaces.trace.IReturnValue
+ com.aspectsecurity.contrast.teamserver.model.trace.StackFrame |  com.contrastsecurity.interfaces.trace.IStackFrame
+ com.aspectsecurity.contrast.teamserver.model.trace.Trace | com.contrastsecurity.interfaces.trace.ITrace
+ *New* | com.contrastsecurity.interfaces.trace.ITraceHelper
+ com.aspectsecurity.contrast.teamserver.model.trace.TraceProperty | com.contrastsecurity.interfaces.trace.ITraceProperty
+ com.aspectsecurity.contrast.teamserver.model.trace.UniqueMethod | com.contrastsecurity.interfaces.trace.IUniqueMethod
+ *New* | com.contrastsecurity.interfaces.trace.TraceException
+ com.aspectsecurity.contrast.teamserver.model.util.TracePropertyJSON | com.contrastsecurity.interfaces.trace.TracePropertyJSON
 
 ### Utilities
  
 3.2.6 Import | 3.2.7 Import
  ------------ | ------------
-```com.aspectsecurity.contrast.teamserver.model.util.CodeUtil```  | ```com.contrastsecurity.interfaces.util.CodeUtil```
-```com.aspectsecurity.contrast.teamserver.util.HtmlUtil``` | ```com.contrastsecurity.interfaces.util.HtmlUtil```
-```com.aspectsecurity.contrast.teamserver.model.util.HttpUtil``` | ```com.contrastsecurity.interfaces.util.HttpUtil```
- ```com.aspectsecurity.contrast.teamserver.model.LanguageConstants``` | ```com.contrastsecurity.interfaces.util.LanguageConstants```
-```com.aspectsecurity.contrast.teamserver.model.util.StringUtil``` | ```com.contrastsecurity.interfaces.util.StringUtil```
+com.aspectsecurity.contrast.teamserver.model.util.CodeUtil  | com.contrastsecurity.interfaces.util.CodeUtil
+com.aspectsecurity.contrast.teamserver.util.HtmlUtil | com.contrastsecurity.interfaces.util.HtmlUtil
+com.aspectsecurity.contrast.teamserver.model.util.HttpUtil | com.contrastsecurity.interfaces.util.HttpUtil
+ com.aspectsecurity.contrast.teamserver.model.LanguageConstants | com.contrastsecurity.interfaces.util.LanguageConstants
+com.aspectsecurity.contrast.teamserver.model.util.StringUtil | com.contrastsecurity.interfaces.util.StringUtil
