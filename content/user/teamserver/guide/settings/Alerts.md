@@ -5,7 +5,7 @@ tags: "TeamServer alerts notifications custom"
 -->
 
 ## About Notifications
-Prior to release 3.2.6 (April 2016), TeamServer had a rule engine which would trigger emails when a particular condition was achieved. This feature was called Alerts. In subsequent releases, alerts went away an in lieu of alerts are two types of notifications: organizational and custom. Notifications are a new form of rule based communications for particular events and/or activities that occur within TeamServer or associated connected Agents. 
+Prior to release 3.2.6 (April 2016), TeamServer had a rule engine which would trigger emails when a particular condition was achieved, called Alerts. The rule engine still exists, but now rules created by administrators are called custom notifications. TeamServer not only provides custom notification, but several out of the box notifications which we believe to be essential for any customer implementing an IAST and/or RASP solution. Notifications are a new form of rule based communication for particular events and/or activities that occur within TeamServer or associated connected Agents. 
 
 Notifications are designed to provide feedback immediately, as well as daily through mutliple channels. There are two primary channels available for notifications: E-mail and In-Application. E-mail notifications require TeamServer to be configured to communicate with an appropriate [SMTP system](admin_tsconfig.html#system). In-application notifications are made available directly in the product and are visible by selecting the Notification bell in the top-menu navigation.
 
