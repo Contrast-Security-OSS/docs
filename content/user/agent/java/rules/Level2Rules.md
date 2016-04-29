@@ -90,7 +90,7 @@ For this example, we will create a rule that detects when security is disabled o
 <br>
 
 #### Step 3: Create A New Groovy Script For The Rule
-Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) provided. Be sure to make the ```getId()``` method return the id value ``https-disabled``` as specified in the rule above. Otherwise the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
+Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) provided. Be sure to make the ```getId()``` method return the id value specified in your rule. For our example, this value must be ```https-disabled```. If these ID's do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
 

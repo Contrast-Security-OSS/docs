@@ -1,13 +1,11 @@
-import java.util.LinkedList
-import java.util.List
-import java.util.Map
+import org.springframework.stereotype.Component;
 
-import org.springframework.stereotype.Component
+import com.contrastsecurity.interfaces.application.IApplication
+import com.contrastsecurity.interfaces.babelfish.ISnippet
+import com.contrastsecurity.interfaces.rule.DataFlowSecurityRule
+import com.contrastsecurity.interfaces.rule.SecurityRuleConstants
+import com.contrastsecurity.interfaces.trace.ITrace
 
-import com.aspectsecurity.contrast.teamserver.rules.DataFlowSecurityRule
-import com.aspectsecurity.contrast.teamserver.rules.SecurityRuleConstants
-import com.aspectsecurity.contrast.teamserver.model.application.Application
-import com.contrastsecurity.babelfish.BFTrace;
 
 @Component
 class CNNRule extends DataFlowSecurityRule {
@@ -116,14 +114,14 @@ class CNNRule extends DataFlowSecurityRule {
     /** 
      * The risk of the vulnerability, in HTML, to be rendered in an export of the vulnerability.
      */
-    public String buildRisk(Trace trace){
+    public String buildRisk(ITrace trace){
         '<p>The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data.</p>'
     }
     
     /**
      * The risk of the vulnerability, in mustache, to be rendered on the Summary page.
      */
-    public Snippet buildRisk(BFTrace trace){
+    public ISnippet buildRiskSnippet(ITrace trace){
         '{{#paragraph}}The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data. {{/paragraph}}';
     }
     
@@ -137,7 +135,7 @@ class CNNRule extends DataFlowSecurityRule {
     /**
      * The recommendation on how to fix the vulnerability, in HTML, to be rendered in an export of the vulnerability.
      */
-    public String buildRecommendation(Trace trace, String language) {
+    public String buildRecommendation(ITrace trace, String language) {
         '<p>In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. <br/>' +
         'Specifically, the <code>com.acme.ticketbook.Person.mask(java.lang.String)</code> method needs to be invoked. For instance, <br/>' + 
         '<pre class="brush: java">// LogCCN.java <br/>' +
@@ -152,7 +150,7 @@ class CNNRule extends DataFlowSecurityRule {
     /**
      * The recommendation on how to fix the vulnerability, in mustache, to be rendered on the How to Fix page.
      */
-    public Snippet buildRecommendation(BFTrace trace){
+    public ISnippet buildRecommendationSnippet(ITrace trace){
         '{{#paragraph}}In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. {{{nl}}}' +
         'Specifically, the {{#code}}com.acme.ticketbook.Person.mask(java.lang.String){{/code}} method needs to be invoked. For instance,' + 
         '{{#javaBlock}}// LogCCN.java {{{nl}}}' +
@@ -167,12 +165,8 @@ class CNNRule extends DataFlowSecurityRule {
     /**
      * The recommendation on how to fix the vulnerability, in plain text, to be rendered in a PDF report.
      */
-    public String getReportRecommendation(Application app) {
+    public String getReportRecommendation(IApplication app) {
         'In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. Specifically, you need to call '+
         'com.acme.ticketbook.Person.mask(java.lang.String) and log the result of that call rather than directly logging com.acme.ticketbook.Person.getCreditCard().'
     }
-
-    
-
-
 }
