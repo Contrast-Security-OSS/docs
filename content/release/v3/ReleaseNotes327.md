@@ -5,7 +5,7 @@ tags: "3.2.7 April"
 -->
 
 ## Special Note About External Rules
-Customers who write or have implemented custom rules in TeamServer should read this [article](https://docs.contrastsecurity.com/admin_tsinstall.html#external) prior to upgrading to 3.2.7.
+Customers who write or have implemented custom rules in TeamServer should read this [article](admin_tsinstall.html#external) prior to upgrading to 3.2.7.
 
 ## Java Agent
 * CONTRAST-8243: Ability to Canary SQL Statements (RASP)
@@ -43,18 +43,18 @@ Customers who write or have implemented custom rules in TeamServer should read t
 * CONTRAST-4794: .NET Agent should enable/disable analysis (Deploy/Remove Sensors) without restarting service
 * CONTRAST-7536: .NET service xml reading should disable DTD
 * CONTRAST-7634: .NET Agent should display an error when there's a Contrast error in a specific application pool
-* CONTRAST-7670: Improve .net xxe rule for XmlReader.Create with settings
+* CONTRAST-7670: Improve .net xxe rule for *XmlReader.Create* with settings
 * CONTRAST-7797: Contrast.NET Should Only Flag Plaintext Connection String With Credentials
 * CONTRAST-7858: .NET Agent now uses ~10% less memory for instrumentation-based analysis
 * CONTRAST-8000: Improve performance of StackFrameResolver locking
 * CONTRAST-8046: Leave WAS Registry Environment Changes In Place While Service Is Running
 * CONTRAST-8112: Tray Should Be Consistent With Sensor Light Coloring
 * CONTRAST-8238: .NET agent should use new version endpoint to fix autoupdate on SaaS
-* CONTRAST-7879: System.String System.String.Replace(System.Char,System.Char) should not propagate when the string is already tainted and nothing is replaced
-* CONTRAST-7880: unvalidated-redirect FP under instr - string does not start with taint
+* CONTRAST-7879: *System.String System.String.Replace*(*System.Char,System.Char*) should not propagate when the string is already tainted and nothing is replaced
+* CONTRAST-7880: *unvalidated-redirect* FP under *instr -* string does not start with taint
 * CONTRAST-7907: .NET Agent should treat text from WebForms controls as tainted
 * CONTRAST-7966: ContrastSvc Not Checking For Update After First Day
-* CONTRAST-7986: web.config analysis not using same appPool filtering as profiler
+* CONTRAST-7986: *web.config* analysis not using same appPool filtering as profiler
 * CONTRAST-7990: Use IIS Application Pool Name rather than IIS Application Pool Identity for Contrast .NET White/BlackList
 * CONTRAST-7997: URL Count/AppActivity Not Being Reported After Some .NET Agent Upgrades to 3.2.6
 * CONTRAST-8002: Unhandled Exception During HttpModulePlugin in CLR2/IPM
@@ -68,12 +68,12 @@ Customers who write or have implemented custom rules in TeamServer should read t
 * CONTRAST-7593: node rule: csp-header-missing
 * CONTRAST-7595: node rule: xcontenttype-header-missing
 * CONTRAST-7931: node: add propagators for the base64-url module
-* CONTRAST-8037: Node: Add proxy flag to agent.
+* CONTRAST-8037: Node: Add proxy flag to agent
 * CONTRAST-8001: Node Agent Not Passing Command Line Args
 * CONTRAST-8015: Node agent does not resolve config correctly
 * CONTRAST-8045: Append method not respecting whether tags were on right or left side of append
-* CONTRAST-8122: Buffer.write does not accept a String Object
-* CONTRAST-8170: Buffer.protoype.byteLength causing crash in 4.0.0
+* CONTRAST-8122: *Buffer.write* does not accept a String Object
+* CONTRAST-8170: *Buffer.protoype.byteLength* causing crash in 4.0.0
 * CONTRAST-8180: Provider rules sending incorrect uri format in http request info
 * CONTRAST-8213: Windows Compatibility
 
@@ -155,7 +155,7 @@ Customers who write or have implemented custom rules in TeamServer should read t
 * V3_2_7_008: Refactor log enhancer
 * V3_2_7_009: Fill Log Enhancer Environment
 * V3_2_7_010: Remove unused columns log
-* V3_2_7_011: Add datetime format fields to organizations
+* V3_2_7_011: Add date/time format fields to organizations
 * V3_2_7_012: Refactor ip blacklist
 * V3_2_7_013: Fill Ip Blacklist Environment
 * V3_2_7_014: Remove ip blacklist fields
