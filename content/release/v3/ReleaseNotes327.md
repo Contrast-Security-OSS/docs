@@ -137,11 +137,11 @@ Customers who write or have implemented custom rules in TeamServer should read t
 * CONTRAST-8194: Libraries - Hide archived apps in 'App' Using column
 
 ## OpenDocs
-*  Installing on Play: https://docs.contrastsecurity.com/user_javainstall.html#play
-* Two Step Verification: https://docs.contrastsecurity.com/admin_tsconfig.html#tsv
-* Upgrading Agents with TeamServer EOP: https://docs.contrastsecurity.com/admin_tsconfig.html#agents
-* Everything You Wanted to Know About Notifications: https://docs.contrastsecurity.com/user_tsguideset.html#alert
-* Migrating External Rules from 3.2.6 to 3.2.7: https://docs.contrastsecurity.com/admin_tsinstall.html#external
+*  [Installing on Play](user_javainstall.html#play)
+* [Two Step Verification](admin_tsconfig.html#tsv)
+* [Upgrading Agents with TeamServer EOP](admin_tsconfig.html#agents)
+* [Everything You Wanted to Know About Notifications](user_tsguideset.html#alert)
+* [Migrating External Rules from 3.2.6 to 3.2.7+](admin_tsinstall.html#external)
 
 ## Database Migrations
 * V3_2_7_000: Remove Invalid XXE Samples
