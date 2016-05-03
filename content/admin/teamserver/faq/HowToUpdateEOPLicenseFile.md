@@ -34,7 +34,7 @@ If the license is expired, then the second method (file system) below must be us
 
 2. Rename the new license file ***contrast.new.lic***
 
-3. Stop the Contrast TeamServer service (on Windows use the service control panel, on Linux execute ```sudo service contrast-server stop``` or other appropriate command for the distribution/configuration)
+3. Stop the Contrast TeamServer service (on Windows use the service control panel, on Linux execute ```sudo service contrast-server stop``` or other appropriate command for the distribution/configuration).  On Linux, verify that all TeamServer processes have stopped by executing ```ps aux | grep contrast``` and confirm there are no processes listed.  If myslqld is still running it may take a few minutes to terminate on its own after stopping the service.  Contact Support if it doesn't - do not kill the processes. 
 
     > **Note**: Don't move the current ***contrast.lic*** file. As the Team Server needs both the old and new license file to upgrade the license. 
 
