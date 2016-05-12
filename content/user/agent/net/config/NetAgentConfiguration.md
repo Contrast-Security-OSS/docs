@@ -57,11 +57,11 @@ More detailed levels of logging will degrade performance but may generate useful
 
 2. **Enter-Leave Data Flow** 
 
-   This is the **default** value.  The agent uses profiling Enter-Leave events for data flow analysis and instruments several encoding methods to return new objects.  This mode is more accurate than **1** above. 
+   The agent uses profiling Enter-Leave events for data flow analysis and instruments several encoding methods to return new objects.  This mode is more accurate than **1** above. 
 
 3. **Instrumentation**
 
-   The agent uses instrumentation for data flow analysis against web applications running on CLR4 (.NET 4+) and Enter-Leave events against CLR2 (.NET2-3.5) applications.  For CLR4 applications, Vulnerability stack traces will include line numbers if .PDB files are present in the application's bin directory.  Instrumentation mode is more stable and has comparable performance. 
+   This is the **default** value. The agent uses instrumentation for data flow analysis against web applications running on CLR4 (.NET 4+) and Enter-Leave events against CLR2 (.NET2-3.5) applications.  For CLR4 applications, Vulnerability stack traces will include line numbers if .PDB files are present in the application's bin directory.  Instrumentation mode is more stable and has comparable performance. 
 
 4. **Instrumentation with Logging**
 
