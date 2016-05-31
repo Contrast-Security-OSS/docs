@@ -1,25 +1,25 @@
 <!--
 title: "Contrast 3.2.8 - May 2016"
 description: "Contrast 3.2.8 May 2016"
-tags: "3.2.8 May"
+tags: "3.2.8 May Release Notes"
 -->
 
 ## Java Agent
 * CONTRAST-7570: On Java 6 and higher, all Level 1 Rule changes auto-apply without redeploy
 * CONTRAST-7944: Update propagation for more clear Insert operations
-* CONTRAST-8096: Add System property (contrast.rules.jar) to load custom rules JAR
-* CONTRAST-8108: Add support for java.nio.file.Paths in Path Traversal vulnerability detection
+* CONTRAST-8096: Add System property (*contrast.rules.jar*) to load custom rules JAR
+* CONTRAST-8108: Add support for *java.nio.file.Paths* in Path Traversal vulnerability detection
 * CONTRAST-8154: Scan parameter values as XML or JSON to account for either format being sent as request parameters
 * CONTRAST-8182: Update propagation for more clear rendering in TeamServer
 * CONTRAST-8212: Support for Java Agent on Pivotal Cloud Foundry PAAS
 * CONTRAST-8276: Library/CVE Updates through May 2016
 * CONTRAST-8311: Improvements for RASP SQL Injection detection
 * CONTRAST-8318: RASP matching at exploit point needs to match intelligently against attack input
-* CONTRAST-8326: Address File.exists(), which was causing a false positive because it calls File's constructor
+* CONTRAST-8326: Address *File.exists()*, which was causing a false positive because it calls File's constructor
 * CONTRAST-8329: Support older versions of Freemarker to avoid XSS false negative
 * CONTRAST-8358: RASP filtering for duplicate events from QueryString and parsed Input Parameters
 * CONTRAST-8437: Reduce overhead when Assess and Defend are both enabled 
-* CONTRAST-8441: Dead zone the MQInternalCommuncations#receive() method
+* CONTRAST-8441: Dead zone the *MQInternalCommuncations#receive()* method
 * CONTRAST-8467: Tune CS-EXP-2 RASP rule to reduce XSS false positives
 * CONTRAST-8589: Expand RASP XXE coverage for Java 5 API's
 
@@ -28,11 +28,11 @@ tags: "3.2.8 May"
 * CONTRAST-4104: Customize Install Directory and Logging Directory
 * CONTRAST-8460: .NET Agent Sensors should create log file even when blocked by whitelist/blacklist to help w/ troubleshooting
 * CONTRAST-8086: Inventory/Library Only Mode
-* CONTRAST-8338: .NET Agent treating NotModified response code from TS as error, may stop comm. with TS after failed 'heartbeats'
+* CONTRAST-8338: .NET Agent treating *NotModified* response code from TS as error, may stop comm. with TS after failed 'heartbeats'
 * CONTRAST-6819: .NET Agent needs to use better methods to detect multiple XSS on the same page
 * CONTRAST-8265: IIS Express Sensor Status Should Not Appear If IIS Express Is Not Installed
-* CONTRAST-7813: .NET File Analysis should handle type load failure when inspecting web.config
-* CONTRAST-8361: .NET Agent causes 400 error for WCF service with Transfer-Encoding=chunked
+* CONTRAST-7813: .NET File Analysis should handle type load failure when inspecting *web.config*
+* CONTRAST-8361: .NET Agent causes 400 error for WCF service with *Transfer-Encoding=chunked*
 * CONTRAST-8403: .NET Agent HttpModule is still using process username rather than application pool name for whitelist/blacklist
 * CONTRAST-8474: InjectionHelpers Are Not Versioned With Build Number
 * CONTRAST-8469: IIS Express Tab Is Not Enabled When Tray Is Started After Service
@@ -50,15 +50,15 @@ tags: "3.2.8 May"
 * CONTRAST-7585: Rule: Hardcoded-key
 * CONTRAST-8278: Library/CVE Updates through May 2016
 * CONTRAST-7205: Support the EJS View Template Engine
-* CONTRAST-8400: String.prototype.substr propagator crashing with args[0] > 0
+* CONTRAST-8400: *String.prototype.substr* propagator crashing with args[0] > 0
 * CONTRAST-8448: Node agent sending empty sha hash values
 * CONTRAST-8537: Propagation with 'undefined' args causes a crash in APPEND
 * CONTRAST-8569: Teamserver support for hardcoded key/password
 
 ## TeamServer
-*Special Note About Logs*: Please note that TeamServer logs are now located in $CONTRAST_HOME/data/logs
+> **Special Note About Logs**: Please note that TeamServer logs are now located in *$CONTRAST_HOME/data/logs*
 
-* CONTRAST-8065; Remove Organization Short Name
+* CONTRAST-8065: Remove Organization Short Name
 * CONTRAST-8062: Add licensing information to Organization Settings Page
 * CONTRAST-8181: Performance Analysis of Library Pages
 * CONTRAST-8217: Vulnerability XML export should include the agent version that reported the vulnerability
@@ -66,8 +66,8 @@ tags: "3.2.8 May"
 * CONTRAST-7628: Restrict API Users from Receiving Notifications
 * CONTRAST-8300: Add environments filter to Servers Page
 * CONTRAST-7784: Prune WATCHER_TASKS Table
-* CONTRAST-8484: EOP Log4J2.xml Improvements
-* CONTRAST-8388: Allow Contrast TeamServer to Generate a Catalina.out log
+* CONTRAST-8484: EOP *Log4J2.xml* Improvements
+* CONTRAST-8388: Allow Contrast TeamServer to Generate a *Catalina.out* log
 * CONTRAST-7356: Robust "Archive Confirmation" Needed for Merged Apps
 * CONTRAST-8462: New Error Pages
 * CONTRAST-8270: Trace Breakdown API - Total Count is Incorrect

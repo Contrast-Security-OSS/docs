@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.2.5 - February 2016"
 description: "Contrast 3.2.5 February 2016"
+tags: "3.2.5 February Release Notes"
 -->
 
 ## Feature Highlight
