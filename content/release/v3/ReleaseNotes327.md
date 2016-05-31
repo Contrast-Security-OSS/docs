@@ -1,7 +1,7 @@
 <!--
 title: "Contrast 3.2.7 - April 2016"
 description: "Contrast 3.2.7 April 2016"
-tags: "3.2.7 April"
+tags: "3.2.7 April Release Notes"
 -->
 
 ## Special Note About External Rules
