@@ -30,7 +30,7 @@ Tag methods are organized in tag-lists under a single tag (specified in tag-list
 ## Method
 
  ```
- method target="TARGET" [source="SOURCE"] signature="SIGNATURE" [scope="TAG_SCOPE"]
+ method target="TARGET" [source="SOURCE"] signature="SIGNATURE" [scope="TAG_SCOPE"] [enabled="ENABLED"]
  ```
 
 * **SIGNATURE:** *required*
@@ -47,6 +47,10 @@ Tag methods are organized in tag-lists under a single tag (specified in tag-list
 
    P[Number]: parameter reference (0-based)  
    *Ex: P0 for first parameter, P1 for second parameter, etc.*
+
+* **ENABLED:** *optional*, default is "true"
+  
+  Add the enabled attribute and set it to "false" to disable the rule
 
 * **TAG_SCOPE:** *optional, default is "lifetime"*
         
