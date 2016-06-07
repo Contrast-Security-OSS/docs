@@ -44,13 +44,16 @@ Trigger rules specify methods whose incoming data should be checked for security
  * Stack Blacklist
    * Entry(ies)
        
-**Rule: Rule id="ID"**
+**Rule: Rule id="ID"** [enabled=ENABLED]
   * ID: *required*
+   
+  * ENABLED: *optional*, default is "true"
+    Add the enabled attribute and set it to "false" to disable all rules with this id.
   
 #### Pattern
   
 **Event:**
-  Each event element must have a Method sub element and at least one of the following sub elements: This Object, Params, or Return Object
+  Each event element must have a Method sub element and at least one of the following sub elements: This Object, Params, or Return Object.
   
   * event [className=CLASS_NAME] [enterOnly=ENTER_ONLY] [performPreMatchSubstring=PERFORM_PRE_MATCH_SUBSTRING] 
     * CLASS_NAME: *optional*
@@ -66,8 +69,11 @@ Trigger rules specify methods whose incoming data should be checked for security
 
       
 **Method:**
-  * method signature="SIGNATURE"
+  * method signature="SIGNATURE" [enabled=ENABLED]
     * SIGNATURE: Signature of the method to instrument
+    
+    * ENABLED: *optional*, default is "true"
+      Add the enabled attribute and set it to "false" to disable the rule for this signature
     
 
 **This Object:** *optional*

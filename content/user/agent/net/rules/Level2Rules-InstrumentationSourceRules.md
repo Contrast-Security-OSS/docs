@@ -26,6 +26,21 @@ Contrast.NET will mark all user-provided data (such as FORMS posts, web service 
 
 ---
 
-All data that is the return of a method specified here will be tagged as "tainted".  All tainted data will trigger a warning if it makes it to a *rule* method, unless it has other tags added to it by a *tag-list* method, which invalidate a rule.
+##Method
 
-Besides the "tainted" tag, you can list additional tags in the ```tags``` attribute to automatically attach them to the data.
+ ```
+ method name="Name" signature="SIGNATURE" tags="TAGS" [enabled="ENABLED"]
+ ```
+
+* **SIGNATURE:** *required*
+
+   Signature of the method to instrument.
+   
+* **TAGS:** *required*
+  
+  All data that is the return of a method specified here will be tagged as "tainted".  All tainted data will trigger a warning if it makes it to a *rule* method, unless it has other tags added to it by a *tag-list* method, which invalidate a rule.
+  Besides the "tainted" tag, you can list additional tags in the ```tags``` attribute to automatically attach them to the data.
+
+* **ENABLED:** *optional*, default is "true"
+  
+  Add the enabled attribute and set it to "false" to disable the rule.
