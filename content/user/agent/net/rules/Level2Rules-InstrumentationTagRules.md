@@ -35,7 +35,7 @@ Tag methods are organized in tag-lists under a single tag (specified in tag-list
 
 * **SIGNATURE:** *required*
 
-   Signature of the method to instrument
+   Signature of the method to instrument.
    
 * **TARGET:** *required*
    
@@ -50,7 +50,7 @@ Tag methods are organized in tag-lists under a single tag (specified in tag-list
 
 * **ENABLED:** *optional*, default is "true"
   
-  Add the enabled attribute and set it to "false" to disable the rule
+  Add the enabled attribute and set it to "false" to disable the rule.
 
 * **TAG_SCOPE:** *optional, default is "lifetime"*
         

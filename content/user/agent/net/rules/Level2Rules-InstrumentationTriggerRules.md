@@ -53,7 +53,7 @@ Trigger rules specify methods whose incoming data should be checked for security
 #### Pattern
   
 **Event:**
-  Each event element must have a Method sub element and at least one of the following sub elements: This Object, Params, or Return Object
+  Each event element must have a Method sub element and at least one of the following sub elements: This Object, Params, or Return Object.
   
   * event [className=CLASS_NAME] [enterOnly=ENTER_ONLY] [performPreMatchSubstring=PERFORM_PRE_MATCH_SUBSTRING] 
     * CLASS_NAME: *optional*

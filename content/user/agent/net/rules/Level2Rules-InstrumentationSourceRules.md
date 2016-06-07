@@ -34,7 +34,7 @@ Contrast.NET will mark all user-provided data (such as FORMS posts, web service 
 
 * **SIGNATURE:** *required*
 
-   Signature of the method to instrument
+   Signature of the method to instrument.
    
 * **TAGS:** *required*
   
@@ -43,4 +43,4 @@ Contrast.NET will mark all user-provided data (such as FORMS posts, web service 
 
 * **ENABLED:** *optional*, default is "true"
   
-  Add the enabled attribute and set it to "false" to disable the rule
+  Add the enabled attribute and set it to "false" to disable the rule.
