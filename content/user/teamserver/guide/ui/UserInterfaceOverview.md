@@ -58,7 +58,7 @@ When a user is an administrator, he/she can use this drop-down to change TeamSer
 <a href="assets/images/Settings_Admin.png" rel="lightbox" title="Settings Navigation Bar for an System Administrator"><img class="thumbnail" src="assets/images/Settings_Admin.png"/></a>
 
 ## Page Action Bar
-Many of the pages within TeamServer offer an action bar embedded at the top of the page below the top navigation. These pages often contain rows data presented table format. The action bar allows certain operations to be performed in bulk or individually by selecting one or more rows and selecting one of the actions.
+Many of the pages within TeamServer offer an action bar embedded at the top of the page below the top navigation. These pages often contain rows of data presented in table format. The action bar allows certain operations to be performed either individually or in bulk by selecting one or more rows and applying one of the actions.
 
 <a href="assets/images/ActionBar_OrgApps.png" rel="lightbox" title="Example Action Bar"><img class="thumbnail" src="assets/images/ActionBar_OrgApps.png"/></a>
 
