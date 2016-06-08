@@ -30,7 +30,7 @@ A preference store is simply the map Eclipse uses to store a plugin's preference
 ````
 contrastPrefs.setValue("report_usage", false);
 ````
-The above code says "modify the following preference for this workspace." The scope parameter can be modified to any IScopeContext for more personal control over what scope the preference change will impact. For more information, see [Eclipse FAQ: What is a preference scope?](https://wiki.eclipse.org/FAQ_What_is_a_preference_scope%3F%22)
+The above code says "modify the following preference for this workspace." The scope parameter can be modified to any IScopeContext for more personal control over what scope the preference change will impact. For more information, see [Eclipse FAQ: What is a preference scope?](https://wiki.eclipse.org/FAQ_What_is_a_preference_scope%3F)
 
 It is recommended that this code be run on Eclipse startup, before the Contrast plugin is initialized, by calling it from the plugin's Activator class.
 
