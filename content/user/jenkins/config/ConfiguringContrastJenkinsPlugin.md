@@ -8,31 +8,19 @@ Now that you have installed the Contrast Jenkins plugin we need to configure it 
 
 To do so, go the `Configure Settings` Page under `Manage Jenkins`. Here you will a new Contrast TeamServer profiles section.
 
-### Username
+## TeamServer Configuration Settings
 
-This is the username/email for your user in TeamServer.
+| Parameter              | Description                                             |
+|------------------------|---------------------------------------------------------|
+| TeamServer Server Name | Name of server you set with -Dcontrast.server. <BR> Use app.contrastsecurity.com/Contrast/api if you are a SaaS customer. |
+| TeamServer Username    | This is the username/email for your user in TeamServer. |
+| TeamServer Service Key | Service Key found in Organization Settings              |
+| TeamServer Api Key     | Api Key found in Organization Settings                  |
+| TeamServer Api Url     | API Url to your TeamServer instance                     |
 
-### Api Key
+## Threshold Condition Settings
 
-This is the Api Key for your user in TeamServer. Found under Organization Settings.
-
-### Service Key
-
-This is the Service Key for your user in TeamServer. Found under Organization Settings.
-
-### TeamServer URL
-
-TeamServer URL that the plugin will attempt to communicate with. 
-Use app.contrastsecurity.com/Contrast/api if you are a SaaS customer.
-
-### Organization Uuid
-
-Uuid of the organization the user you are configuring is in. You can find this under Organization Settings.
-
-### Application Name *
-
-Name of the application you are wanting to verify the threshold conditions against.
-
-***Note**: This name must be unique. We only check for the first application returned.
-
-Several fields are left hidden to protect your credentials!
+| Parameter                    | Description                                                             |
+|------------------------------|-------------------------------------------------------------------------|
+| TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings |
+| TeamServer Application Name  | Name of application you are configuring to test thresholds with. <BR> **Note**: This name must be unique. We only check for the first application returned.      |
