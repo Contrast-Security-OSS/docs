@@ -11,7 +11,7 @@ TeamServer can be configured to automatically create a MySQL backup of the datab
 The TeamServer database settings can be found in *$CONTRAST_HOME/data/conf/database.properties*. This file is encrypted by default and requires use of the [encrypted property editor](admin_tsconfig.html#encrypt) to identify database settings. The example below shows that database backups are enabled, scheduled and have a specific location. These properties can be edited if any specific settings need to change.
 
 ```bash
-contrast@TeamServer:~/contrast/bin$ ./edit-properties -o jdbc.port -e ../data/esapi/ -f ../data/conf/database.properties
+contrast@TeamServer:~/contrast/bin$ ./edit-properties -e ../data/esapi/ -f ../data/conf/database.properties
 
 database.bk.time                                  : 4:0:0
 database.bk.enabled                               : true
