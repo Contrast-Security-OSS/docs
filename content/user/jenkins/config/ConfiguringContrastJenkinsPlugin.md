@@ -10,6 +10,8 @@ To do so, go the `Configure Settings` Page under `Manage Jenkins`. Here you will
 
 ## TeamServer Configuration Settings
 
+These settings are for connecting to TeamServer. The plugin leverages these to authentication to TeamServer and make API calls.
+
 | Parameter              | Description                                             |
 |------------------------|---------------------------------------------------------|
 | TeamServer Server Name | Name of server you set with -Dcontrast.server. <BR> Use app.contrastsecurity.com/Contrast/api if you are a SaaS customer. |
@@ -19,6 +21,8 @@ To do so, go the `Configure Settings` Page under `Manage Jenkins`. Here you will
 | TeamServer Api Url     | API Url to your TeamServer instance                     |
 
 ## Threshold Condition Settings
+
+These settings are for filtering trace results in order to verify conditions configured in the post build action.
 
 | Parameter                    | Description                                                             |
 |------------------------------|-------------------------------------------------------------------------|
