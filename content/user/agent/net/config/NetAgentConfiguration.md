@@ -34,6 +34,7 @@ More detailed levels of logging will degrade performance but may generate useful
 | ShouldLogMethodSignatures    | Controls logging of method signatures during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable method signature logging (note that this setting has a noticeable impact on startup time.)  |
 | ShouldLogModifiedIL    | Controls logging of the IL of instrumented methods during CLR JIT compilation. The **default** value is ```false```. Set to ```true``` to enable instrumented method IL logging (note that this setting has a noticeable impact on startup time.)  |
 
+
 ## Performance
 
 | Parameter                                                 | Description                                                                             |
@@ -48,7 +49,7 @@ More detailed levels of logging will degrade performance but may generate useful
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent |
-
+| *EnableInstrumentationOptimizations*                       | *(Contrast Agent v.3.2.9 and above)*.  Optionally disable code optimizations under instrumentation-based flow analysis.  This only applies when ProfilerBehavior=3 (instrumentation mode).  The default is ```true```; set to ```false``` to disable.
 <br/>
 
 1. **legacyCasModel Support**
