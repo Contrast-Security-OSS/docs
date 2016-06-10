@@ -21,6 +21,10 @@ These settings are for connecting to TeamServer. The plugin leverages these to a
 | TeamServer Api Url          | API Url to your TeamServer instance.                    |
 | TeamServer Application Name | Name of application you set with -Dcontrast.appname. <BR> This is used to filter for your application in Jenkins. |
 
+### Testing the TeamServer connection
+
+When adding a TeamServer profile, a validation button is present to test your connection. Use this to make sure all your fields are accurate!
+It will prompt you if it success or give an error message if it fails.
 
 ## Threshold Condition Settings
 
@@ -31,7 +35,7 @@ These settings are for filtering trace results in order to verify conditions con
 | TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings. |
 | TeamServer Application Name  | Name of application you are configuring to test thresholds with. <BR> **Note**: This name must be unique. We only check for the first application returned.      |
 
-How threshold conditions work:
+### How threshold conditions work:
 
 * Add a count. The count is exclusive so if you set a count for 5, it will fail on 6 or more vulnerabilities. This field is required.
 * Add a severity. The severity is one of Note, Low, Medium, High, or Critical. The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field.
