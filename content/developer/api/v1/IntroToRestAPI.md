@@ -18,7 +18,7 @@ Services, like the rest of your Contrast experience, are only available over SSL
 
 This value holds the *Base64-encoded* username and your user service key (**not** your password), separated by a colon.
 
-To get your service key, click on your **Account Settings** dropdown and select **API Key**. This page will allow you to email yourself the key.
+To get your service key, click on your **Organization Settings** or **System Settings** dropdown and select **API Key**. This page will allow you to email yourself the key.
 
 ```AuthorizationToken = BASE64(<username>:<service_key>)```
 

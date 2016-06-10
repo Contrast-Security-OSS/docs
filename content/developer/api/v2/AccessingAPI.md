@@ -16,7 +16,7 @@ Once you have retrieved your API Key, you will set this, along with your authori
 Header | Value
 ------ | -----
 **API Key** | The API Key retrieved above (Plaintext)
-**Authorization** | *Base64-encoded* credentials (username: *service-key*)
+**Authorization** | *Base64-encoded* credentials (username:*service-key*)
 **Accept** | ```application/xml```, ```application/json```
 
 ## Sample Request
