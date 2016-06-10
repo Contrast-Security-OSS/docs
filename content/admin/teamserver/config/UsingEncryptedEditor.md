@@ -41,7 +41,7 @@ The following is an example of editing an encrypted file in TeamServer. In this 
 
 ```
 bash
-contrast@TeamServer:~/contrast/bin$ ./edit-properties -o jdbc.port -e ../data/esapi/ -f ../data/conf/ad.properties
+contrast@TeamServer:~/contrast/bin$ ./edit-properties -e ../data/esapi/ -f ../data/conf/ad.properties
 
 ad.userDn                                         : cn=Directory Manager
 ad.identity.attribute.name                        : mail
