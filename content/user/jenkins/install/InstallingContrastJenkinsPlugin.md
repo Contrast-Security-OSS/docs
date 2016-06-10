@@ -6,8 +6,10 @@ tags: "jenkins agent maven teamserver"
 
 This section will go over the install of the Contrast Jenkins plugin on your Jenkins instance.
 
-First, go the `Manage Jenkins` Page then to `Manage Plugins`. Click on the `Available` section and filter for `contrast`.
+First, go the `Manage Jenkins` Page then to `Manage Plugins`. 
 
-Here you will see the `Contrast Jenkins Plugin`. Click the corresponding checkmark and either `Install without Restart` or `Download now and install after restart`.
+Click on the `Available` section and filter for `contrast`.
 
-Now you have successfully installed the Contrast Jenkins plugin!
+Here you will see the `Contrast Jenkins Plugin`. Click the corresponding check mark and click either the `Install without Restart` or `Download now and install after restart` button at the bottom.
+
+Now you have successfully installed the Contrast Jenkins plugin! Time to start verifying your build with our plugin!
