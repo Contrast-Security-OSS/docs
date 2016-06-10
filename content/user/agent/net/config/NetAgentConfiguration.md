@@ -49,7 +49,7 @@ More detailed levels of logging will degrade performance but may generate useful
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent |
-| *EnableInstrumentationOptimizations*                       | *(Contrast Agent v.3.2.9 and above)*.  Optionally disable code optimizations under instrumentation based flow analysis.  This only applies when ProfilerBehavior=3 (instrumentation mode).  The default is ```true```, set to ```false``` to disable.
+| *EnableInstrumentationOptimizations*                       | *(Contrast Agent v.3.2.9 and above)*.  Optionally disable code optimizations under instrumentation-based flow analysis.  This only applies when ProfilerBehavior=3 (instrumentation mode).  The default is ```true```; set to ```false``` to disable.
 <br/>
 
 1. **legacyCasModel Support**
