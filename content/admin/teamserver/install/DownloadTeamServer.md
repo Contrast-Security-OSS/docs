@@ -15,7 +15,7 @@ In most cases accounts will be approved and provisioned within 8 business hours.
 <a href="assets/images/KB2-k03.png" rel="lightbox" title="Spam Notice"><img class="thumbnail" src="assets/images/KB2-k03.png"/></a>  
 
 ## Download the TeamServer Installer
-Once you have activated your Contrast Hub account you will have the option to download the TeamServer installer for your operating system. If you are on Windows, ensure you download the correct architecture for your Operating System (32 vs. 64 bit).
+Once you have activated your Contrast Hub account you will have the option to download the TeamServer installer for your operating system. 
 
 ## Download the TeamServer License File (Optional)
 Your Contrast license file is configured with a **superadmin** account and a regular user account.  You'll need the license during the Contrast TeamServer installation process.

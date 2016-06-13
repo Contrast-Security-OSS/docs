@@ -5,4 +5,4 @@ tags: "Eclipse install"
 -->
 
 ## Where can my developers find and install Contrast for Eclipse?
-Eclipse users can install Contrast for Eclipse directly through the Eclipse Marketplace by first searching for “Contrast.”  An installation link and instructions are available [here](http://www.contrastsecurity.com/eclipse).   
+Eclipse users can install Contrast for Eclipse directly through the [Eclipse Marketplace](https://marketplace.eclipse.org/content/contrast-eclipse) by first searching for “Contrast.” 
