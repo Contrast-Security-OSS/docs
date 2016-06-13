@@ -19,7 +19,6 @@ These settings are for connecting to TeamServer. The plugin leverages these to a
 | TeamServer Service Key      | Service Key found in Organization Settings.             |
 | TeamServer Api Key          | Api Key found in Organization Settings.                 |
 | TeamServer Api Url          | API Url to your TeamServer instance.                    |
-| TeamServer Application Name | Name of application you set with -Dcontrast.appname. <BR> This is used to filter for your application in Jenkins. |
 
 ### Testing the TeamServer connection
 
@@ -33,7 +32,7 @@ These settings are for filtering trace results in order to verify conditions con
 | Parameter                    | Description                                                              |
 |------------------------------|--------------------------------------------------------------------------|
 | TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings. |
-| TeamServer Application Name  | Name of application you are configuring to test thresholds with. <BR> **Note**: This name must be unique. We only check for the first application returned.      |
+| TeamServer Application Name  | Name of application you set with -Dcontrast.appname. <BR> This is used to filter for your application in Jenkins. |
 
 ### How threshold conditions work:
 
