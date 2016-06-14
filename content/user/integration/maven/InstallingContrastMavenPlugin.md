@@ -6,10 +6,16 @@ tags: "jenkins agent maven teamserver"
 
 This section will go over the install of the Contrast Maven plugin with your Java application.
 
-Include the below dependency in your pom.xml. 
+Include the below plugin in your pom.xml under build -> plugins. 
 
 ```xml
-<test></test>
+<plugin>
+     <groupId>com.aspectsecurity.contrast</groupId>
+     <artifactId>contrast-maven-plugin</artifactId>
+
+      ...
+      
+</plugin>
 ```
 
 Now you have successfully installed the Contrast Maven plugin! Time to start verifying your build with our plugin!
