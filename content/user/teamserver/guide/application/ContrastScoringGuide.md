@@ -1,10 +1,10 @@
 <!--
 title: "Contrast Scoring Guide"
 description: "Guide to Contrast scoring"
-tags: "TeamServer application scoring guide"
+tags: "TeamServer application scoring guide grade"
 -->
 
-Contrast provides letter grades to let you know how the application is performing in general. The grade represents an aggregate score comprising how much of the application has been exercised, as well as the amount and seriousness of the vulnerabilities that have been unearthed during the interactive analysis process (security).
+Contrast provides letter grades to let you know how the application is performing in general. The grade represents an aggregate score comprising how much of the application has been exercised, as well as the amount and seriousness of the vulnerabilities that have been detected during the analysis process.
 
 Below is a sample score from when we run Contrast on the [WebGoat](https://code.google.com/p/webgoat/) application, a purposefully vulnerable application maintained by [OWASP](https://www.owasp.org/index.php/Main_Page).
 
@@ -48,7 +48,7 @@ On the other hand, usage of an old, broken hashing algorithm like **SHA-1** is c
 >**Custom Code Score** = 100 - *(No. Criticals * 20)* - *(No. Highs * 10)* - *(No. Mediums * 5)* - *(No. Lows * 1)*
 
 
-## Suggestion for Improvement
+## Suggestions for Score Improvement
 
 * Enable Protection Rules and CVE Shields to remove protected vulnerabilities from the score calculation
 * Remediate critical and high vulnerabilities in your custom code
