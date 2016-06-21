@@ -14,6 +14,8 @@ The Contrast Service's configuration file (***DotnetAgentService.exe.config***) 
 | TeamServerUrl                                         | This value will override the TeamServer URL that's packaged with the agent. This can be useful for networks that proxy the information. |
 | *ProxyAuth*, *ProxyUser*, *ProxyPass*, *ProxyAddress* | Controls the proxy (if any) to be used by the agent to connect to TeamServer. |
 | RestartIISOnConfigChange                              | Will restart IIS in the background if any of the following configuration settings are changed: *ProcessBlacklist*, *ProcessWhitelist*, *ProfilerBehavior*, *ResponseUrlWhiteListRegex*. The default value is *true*. If set to *false* then IIS must be restarted by the user in order for changes to the noted configuration settings to take effect. | 
+| AutoUpdateEnabled                              | Controls whether or not the agent will automatically update to a newer version if a newer version is available on TeamServer. The default value is *true*. If set to *false* then the agent will not automatically update.  | 
+
 
 
 ## Diagnostics
