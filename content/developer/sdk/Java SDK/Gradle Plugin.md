@@ -8,7 +8,7 @@ tags: "Gradle SDK Integration Java"
 
 The Contrast Gradle Plugin is used to integrate the Contrast jar with your build. It is capable of authenticating to TeamServer, downloading the latest java agent, and verifying your build.
 
-[Gradle](https://gradle.org/) is build tool that utilizes `build.gradle` files to configure your applications. It is used to build, package, and test Java applications.
+[Gradle](https://gradle.org/) is a build tool that utilizes `build.gradle` files to configure your applications. It is used to build, package, and test various types of applications.
 
 ## Access To The Plugin
 
@@ -37,8 +37,8 @@ These settings are for connecting to TeamServer and filtering your vulnerabiliti
 
 **Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability is found at or above the severity level set in the configuration.
 
-### Guide For Sample Web Application
-The easiest way to setup a project is to clone our sample Gradle based web application.  This application has been migrated from Maven to Gradle, and relies on MongoDB, so we will install that and setup it's database path.
+### Guide To Onboard Sample Web Application
+The easiest way to setup a project is to clone our sample Gradle based web application.  This application has been migrated from Maven to Gradle, and relies on MongoDB, so we will install that and setup the database path.
 ```
 git clone https://github.com/Contrast-Security-OSS/Contrast-Sample-Gradle-Application
 brew install mongodb
@@ -46,7 +46,7 @@ sudo mkdir -p /data/db
 brew services start mongodb
 ```
 
-* Now we have an application that is ready to run.  Open up the Contrast-Sample-Gradle-Application/build.gradle file.  Scroll to the very bottom and you should find the following contrastConfiguration. All of these values can be found in TeamServer already *except* for appName and serverName.
+* Now we have an application that is ready to run.  Open up the Contrast-Sample-Gradle-Application/build.gradle file.  Scroll to the very bottom and you will find the following contrastConfiguration extension. All of these values can be found in TeamServer already *except* for appName and serverName.
 
 ```
 contrastConfiguration {
@@ -111,7 +111,7 @@ contrastConfiguration {
     username = "test_user"
     apiKey = "testApiKey"
     serviceKey = "testServiceKey"
-    apiUrl = "http://www.app.contrastsecurity.com/Contrast/api"
+    apiUrl = "https://www.app.contrastsecurity.com/Contrast/api"
     orgUuid = "QWER-ASDF-ZXCV-ERTY"
     appName = "Test Application"
     serverName = "jenkins.slave1"
