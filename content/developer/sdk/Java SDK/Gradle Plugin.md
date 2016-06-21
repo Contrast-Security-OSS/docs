@@ -6,7 +6,7 @@ tags: "Gradle SDK Integration Java"
 
 ## About The Contrast Gradle Plugin
 
-The Contrast Gradle Plugin is used to integrate the Contrast jar with your build. It is capable of authenticating to TeamServer, downloading the latest java agent, and verifying your build.
+The Contrast Gradle Plugin is used to integrate the *Contrast.jar* with your build. It is capable of authenticating to TeamServer, downloading the latest java agent, and verifying your build.
 
 [Gradle](https://gradle.org/) is a build tool that utilizes `build.gradle` files to configure your applications. It is used to build, package, and test various types of applications.
 
@@ -14,7 +14,7 @@ The Contrast Gradle Plugin is used to integrate the Contrast jar with your build
 
 The plugin code can be viewed in our Github [repository](https://github.com/Contrast-Security-OSS/contrast-gradle-plugin). Here you can review the two tasks added by the plugin, `contrastInstall` and `contrastVerify`, and how they work.
 
-The plugin can be found on [Gradle's plugin webpage](https://plugins.gradle.org/plugin/com.contrastsecurity.contrastplugin).
+The latest version of the plugin can be found on [Gradle's plugin webpage](https://plugins.gradle.org/plugin/com.contrastsecurity.contrastplugin).
 
 ## How To Use The Plugin
 
