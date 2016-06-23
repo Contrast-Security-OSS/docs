@@ -6,7 +6,7 @@ tags: "Gradle SDK Integration Java"
 
 ## About The Contrast Gradle Plugin
 
-The Contrast Gradle Plugin is used to integrate the *Contrast.jar* with your build. It is capable of authenticating to TeamServer, downloading the latest java agent, and verifying your build.
+The Contrast Gradle Plugin is used to integrate the *Contrast.jar* with your build. It is capable of authenticating to TeamServer, downloading the latest Java agent, and verifying your build.
 
 [Gradle](https://gradle.org/) is a build tool that utilizes `build.gradle` files to configure your applications. It is used to build, package, and test various types of applications.
 
@@ -25,20 +25,21 @@ These settings are for connecting to TeamServer and filtering your vulnerabiliti
 
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
-| TeamServer Username          | This is the username/email for your user in TeamServer. |
-| TeamServer Service Key       | Service Key found in Organization Settings.             |
-| TeamServer Api Key           | Api Key found in Organization Settings.                 |
-| TeamServer Api Url           | API Url to your TeamServer instance.                    |
-| TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings. |
-| Application Name             | Name of application you set with -Dcontrast.appname. <BR> This is used to filter for your application. |
-| Minimum Severity Level       | Minimum Severity level to filter for. One of Note, Low, Medium, High, Critical. This property is inclusive. |
-| Server Name                  | Name of server you set with -Dcontrast.server. <BR> Use app.contrastsecurity.com/Contrast/api if you are a SaaS customer. |
-| Jar Path                     | Path of a local jar file if you don't want to download the agent again.                  |
+| TeamServer Username          | This is the username/email for your user in TeamServer |
+| TeamServer Service Key       | Service Key found in Organization Settings             |
+| TeamServer API Key           | API Key found in Organization Settings                 |
+| TeamServer API Url           | API Url to your TeamServer instance                    |
+| TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings |
+| Application Name             | Name of application you set with ```-Dcontrast.appname``` <BR> This is used to filter for your application |
+| Minimum Severity Level       | Minimum Severity level to filter for (Note, Low, Medium, High, Critical). This property is inclusive. |
+| Server Name                  | Name of server you set with ```-Dcontrast.server``` <BR> Use *app.contrastsecurity.com/Contrast/api* if you are a SaaS customer |
+| Jar Path                     | Path of a local jar file if you don't want to download the agent again                  |
 
-**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability is found at or above the severity level set in the configuration.
+<br/>
+>**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability is found at or above the severity level set in the configuration.
 
-### Guide To Onboard Sample Web Application
-The easiest way to setup a project is to clone our sample Gradle based web application.  This application has been migrated from Maven to Gradle, and relies on MongoDB, so we will install that and setup the database path.
+### Guide To Onboarding A Sample Web Application
+The easiest way to set up a project is to clone our sample Gradle-based web application.  This application has been migrated from Maven to Gradle, and relies on MongoDB, so we will install that and set up the database path.
 ```
 git clone https://github.com/Contrast-Security-OSS/Contrast-Sample-Gradle-Application
 brew install mongodb
@@ -46,7 +47,7 @@ sudo mkdir -p /data/db
 brew services start mongodb
 ```
 
-* Now we have an application that is ready to run.  Open up the Contrast-Sample-Gradle-Application/build.gradle file.  Scroll to the very bottom and you will find the following contrastConfiguration extension. All of these values can be found in TeamServer already *except* for appName and serverName.
+* Now we have an application that is ready to run.  Open up the *Contrast-Sample-Gradle-Application/build.gradle* file.  Scroll to the very bottom and you will find the following contrastConfiguration extension. All of these values can be found in TeamServer already *except* for appName and serverName.
 
 ```
 contrastConfiguration {
@@ -60,23 +61,23 @@ contrastConfiguration {
 }
 
 ```
-* Once username, apiKey, serviceKey, apiUrl, and orgUuid have been configured we can install the contrast jar file by calling the `contrastInstall` task. This will install **contrast.jar** within the projects build directory.
+* Once username, apiKey, serviceKey, apiUrl, and orgUuid have been configured we can install the Contrast jar file by calling the `contrastInstall` task. This will install **contrast.jar** within the project's build directory.
 
 ```
 cd path/to/Contrast-Sample-Gradle-Application
 gradle build -x test contrastInstall
 ```
 
-* The next step is to run the application with the java agent. 
+* The next step is to run the application with the Java agent. 
 ```
 cd path/to/Contrast-Sample-Gradle-Application/build
 java -javaagent:contrast.jar -Dcontrast.appname=mytestapp -Dcontrast.server=mytestserver -jar libs/Contrast-Sample-Gradle-Application-0.0.1-SNAPSHOT.jar
 ```
 
-* After executing the above code the server will start.  At this point we want to check that the application is running at localhost:8080 and that the application shows up in TeamServer.
+* After executing the above code, the server will start.  At this point we want to check that the application is running at localhost:8080 and that the application shows up in TeamServer.
 
-* In your TeamServer verify that the application with the appname specified in the command above shows up.
-* In the Contrast-Sample-Gradle-Application projects build.gradle we will now edit the contrastConfiguration to specify the appName and serverName that we specified as options with the Java agent in the previous step.
+* In TeamServer, verify that the application with the appname specified in the command above shows up.
+* In the Contrast-Sample-Gradle-Application project's *build.gradle* we will now edit the contrastConfiguration to specify the appName and serverName that we specified as options with the Java agent in the previous step.
 ```
 contrastConfiguration {
     username = "alreadySetup"
@@ -88,11 +89,13 @@ contrastConfiguration {
     serverName = "mytestserver"
 }
 ```
-*  We can now run the verification task at any time to check for vulnerabilties.
+*  We can now run the verification task at any time to check for vulnerabilities.
 ```
 gradle build contrastVerify -x test
 ```
+
 ### Example Configuration
+
 Below is an example configuration for the Contrast Gradle Plugin:
 ``` groovy
 buildscript {
