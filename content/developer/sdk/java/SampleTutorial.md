@@ -58,52 +58,52 @@ ContrastSDK contrastSDK = new ContrastSDK(username, apiKey, serviceKey);
  
  If you would like to retrieve a collection of your applications the following code snippet makes use of the ContrastSDK to do so.
 ```Java
-  String orgUuid = "12345678-1234-1234-1234-123456789ABC";
- 	try {
-		Applications applications = contrastSDK.getApplications(orgUuid);
-			for (Application application : applications.getApplications()) {
-				System.out.println("App name: "  + application.getName());
-				System.out.println("App id: " + application.getId());
-			}
-		}catch (IOException e) {
-			System.out.println("Unable to retrieve the applications.");
-		} catch (UnauthorizedException e) {
-			System.out.println("Unable to connect to TeamServer.");
+String orgUuid = "12345678-1234-1234-1234-123456789ABC";
+try {
+	Applications applications = contrastSDK.getApplications(orgUuid);
+		for (Application application : applications.getApplications()) {
+			System.out.println("App name: "  + application.getName());
+			System.out.println("App id: " + application.getId());
 		}
-    }
+	}catch (IOException e) {
+		System.out.println("Unable to retrieve the applications.");
+	} catch (UnauthorizedException e) {
+		System.out.println("Unable to connect to TeamServer.");
+	}
+}
 ```
 
 A similar pattern can be used to retrieve the servers associated with your organization. When calling the getServers method of the ContrastSDK class you need to pass along a ServerFilterForm object. In the example below the object has not been given any specific filters so it will retrieve all servers associated with your organization.
 
 ```Java
- String orgUuid = "12345678-1234-1234-1234-123456789ABC";
-	try {
-		Server servers = contrastSDK.getServers(orgUuid, new ServerFilterForm());
-		for(Server server : servers.getServers()){
-			System.out.println("Server status: " + server.getStatus());
-			System.out.println("Server name: " + server.getName());
-		}
-	} catch (IOException e) {
-		System.out.println("Unable to retrieve the servers");
-	} catch (UnauthorizedException e) {
-		System.out.println("Unable to connect to TeamServer");
+String orgUuid = "12345678-1234-1234-1234-123456789ABC";
+try {
+	Server servers = contrastSDK.getServers(orgUuid, new ServerFilterForm());
+	for(Server server : servers.getServers()){
+		System.out.println("Server status: " + server.getStatus());
+		System.out.println("Server name: " + server.getName());
 	}
+} catch (IOException e) {
+	System.out.println("Unable to retrieve the servers");
+} catch (UnauthorizedException e) {
+	System.out.println("Unable to connect to TeamServer");
+}
 ```
 
 The ContrastSDK can also retrieve a list of your organizations and a variety of their properties, including the UUID.
 
 ```Java
-     try {
-       Organizations orgs =  contrastSDK.getProfileOrganizations();
-	  for(Organization org : orgs.getOrganizations()){
-			System.out.println("Org name: " + org.getName());
-			System.out.println("Org UUID :" + org.getOrgUuid());
-	  }
-	} catch (IOException e) {
-		System.out.println("Unable to retrieve the organizations.");
-	} catch (UnauthorizedException e) {
-		System.out.println("Unable to connect to TeamServer");
-	}
+try {
+  	Organizations orgs =  contrastSDK.getProfileOrganizations();
+  	for(Organization org : orgs.getOrganizations()){
+		System.out.println("Org name: " + org.getName());
+		System.out.println("Org UUID :" + org.getOrgUuid());
+  	}
+} catch (IOException e) {
+	System.out.println("Unable to retrieve the organizations.");
+} catch (UnauthorizedException e) {
+	System.out.println("Unable to connect to TeamServer");
+}
 ```
 
 Often times you will only be a member of one organization. Inorder to easily get a reference to that object as opposed to iterating over the collection of organizations you can use the following snippet:
@@ -115,27 +115,27 @@ Organization myOrg = contrastSDK.getProfileDefaultOrganizations().getOrganizatio
 One of the most valuable features of the SDK is the ability to gather a list of vulnerabitlies from a given application. The below code will gather all traces that have been found for an application that are of a Medium, High, or Critical severity. 
 
 ```Java
-	String appId = "12345678912312313123";
-	String serverId = "1234";
-	String orgUuid = "12345678-1234-1234-1234-123456789ABC";
-        FilterForm form = new FilterForm();
-	form.setSeverities(Arrays.asList("Medium", "High", "Critical"));
-	Traces traces = null;
+String appId = "12345678912312313123";
+String serverId = "1234";
+String orgUuid = "12345678-1234-1234-1234-123456789ABC";
+FilterForm form = new FilterForm();
+form.setSeverities(Arrays.asList("Medium", "High", "Critical"));
+Traces traces = null;
 
-	try {
-		traces = contrastSDK.getTracesWithFilter(orgUuid, appId, "servers", serverId, form);
-	} catch (IOException e) {
-		System.out.println("Unable to retrieve the traces.");
-	} catch (UnauthorizedException e) {
-		System.out.println("Unable to connect to TeamServer.");
-	}
+try {
+	traces = contrastSDK.getTracesWithFilter(orgUuid, appId, "servers", serverId, form);
+} catch (IOException e) {
+	System.out.println("Unable to retrieve the traces.");
+} catch (UnauthorizedException e) {
+	System.out.println("Unable to connect to TeamServer.");
+}
 
-	if (traces != null && traces.getCount() > 0) {
-		for (Trace trace : traces.getTraces()) {
-			System.out.println("Rule: " + trace.getRule());
-			System.out.println("Severity: " + trace.getSeverity());
-		}
+if (traces != null && traces.getCount() > 0) {
+	for (Trace trace : traces.getTraces()) {
+		System.out.println("Rule: " + trace.getRule());
+		System.out.println("Severity: " + trace.getSeverity());
 	}
+}
 ```
 
 ### Writing Tests
