@@ -94,9 +94,9 @@ contrastConfiguration {
 gradle build contrastVerify -x test
 ```
 
-### Example Configuration
+### Example
 
-Below is an example configuration for the Contrast Gradle Plugin:
+Below is a sample configuration for the Contrast Gradle Plugin:
 ``` groovy
 buildscript {
   repositories {
