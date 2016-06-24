@@ -15,17 +15,3 @@ There are two primary source code transformations that the Contrast Node Agent e
 * **Function hooks** take over the execution of a given function to collect data about its arguments and its return value, and send this data to the parts of the agent responsible for analysis. In this way, the agent effectively makes certain functions ***self-reporting***. For instance, this allows us to wire ```child_process.exec``` to check whether or not its arguments carry untrusted data.
 * **AST transformation** is a process by which the agent creates an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) of a body of code, manipulates the tree in some way, and then creates new source code based off of this syntax tree. The agent does this to handle scenarios where simply hooking a function will not work. For example, rewrites allow us to add [operator overloading](https://en.wikipedia.org/wiki/Operator_overloading) to JavaScript so that we can properly track the flow of untrusted data.
 
-## Supported technologies
-We support Node.js **v0.10.34** through **v4.0.0** and their core libraries.
-
-Current supported third-party modules include:
-* [express](http://expressjs.com)
-* [mongodb](https://docs.mongodb.org/ecosystem/drivers/node-js/)
-* [mysql](https://www.npmjs.com/package/mysql) 
-
-Coming soon:
-* [hapi](https://www.npmjs.com/package/hapi)
-* [koa](https://www.npmjs.com/package/koa)
-* [postgres](https://www.npmjs.com/package/pg)
-
-And more...
