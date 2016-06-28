@@ -1,8 +1,10 @@
 <!--
 title: "The Administrator's Dashboard"
-description: "The Administrator's Dashboard can be a little intimidating at first, especially for new Administrators. Understanding the components on this dashboard can aid administrators in understanding scaling and performance issues as well as helping to troubleshoot user problems and get the most out of your Enterprise Deployment."
+description: "Explanation of Administrator tools"
 tags: "EOP SuperAdmin System Messages Monitoring"
 -->
+
+The tools described below are designed to aid administrators in understanding scaling and performance issues, as well as to help troubleshoot user problems and get the most out of Enterprise Deployment.
 
 ## System Messages
 As Contrast becomes an integral part of your development lifecycle, it may become necessary to let users know when things like scheduled downtime will occur, or to let them know that an update has been applied and therefore agents should be updated to the latest version. System Messages provide this functionality to Administrators. 
@@ -12,11 +14,15 @@ To create a new System Message, navigate to **System Settings** from the User me
 
 The **Create a Message** button will generate a dialog allowing you to configure a system message to be broadcast to all users (either after login, or immediately if they are already logged in). This message will display until it is either deleted or reaches its expiration.
 
+<a href="assets/images/KB4-c03_1.png" rel="lightbox" title="Create System Message"><img class="thumbnail" src="assets/images/KB4-c03_1.png"/></a>
+
 When a system message has been set, a user must acknowledge it before they can continue.
 
 
 ### Deactivating System Messages
 Occasionally, you may expect something to take hours and instead it takes only a few minutes. In those cases you may wish to deactivate an active system message. To do so, simply check the box next to the message to select it and click the Delete button.
+
+<a href="assets/images/KB4-c03_2.png" rel="lightbox" title="Manage System Messages"><img class="thumbnail" src="assets/images/KB4-c03_2.png"/></a>
 
 ## Charts And Metrics
 Administrators have access to a **Stats** tab with various charts and tables that display valuable information about what is going on with the TeamServer application. At the top of the page, you can choose the refresh rate of these charts and tables.
