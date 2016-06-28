@@ -4,10 +4,10 @@ description: "Explanation of Administrator tools"
 tags: "EOP SuperAdmin System Messages Monitoring"
 -->
 
-The tools described below are designed to aid administrators in understanding scaling and performance issues, as well as to help troubleshoot user problems and get the most out of Enterprise Deployment.
+In addition to overall visibility into TeamServer, there are some specific tools designed to aid administrators in understanding scaling and performance issues, as well as to help troubleshoot user problems and get the most out of Enterprise Deployment.
 
 ## System Messages
-As Contrast becomes an integral part of your development lifecycle, it may become necessary to let users know when things like scheduled downtime will occur, or to let them know that an update has been applied and therefore agents should be updated to the latest version. System Messages provide this functionality to Administrators. 
+As Contrast becomes an integral part of your development lifecycle, it may become necessary to let users know when things like scheduled downtime will occur, or to let them know that an update has been applied and therefore agents should be updated to the latest version. System Messages provide this functionality to administrators. 
 
 ### Creating A New System Message
 To create a new System Message, navigate to **System Settings** from the User menu at the top right and then select the **System Messages** tab on the bottom left.
@@ -25,7 +25,7 @@ Occasionally, you may expect something to take hours and instead it takes only a
 <a href="assets/images/KB4-c03_2.png" rel="lightbox" title="Manage System Messages"><img class="thumbnail" src="assets/images/KB4-c03_2.png"/></a>
 
 ## Charts And Metrics
-Administrators have access to a **Stats** tab with various charts and tables that display valuable information about what is going on with the TeamServer application. At the top of the page, you can choose the refresh rate of these charts and tables.
+Administrators have access to a **Stats** tab in the top navigation menu, which includes various charts and tables displaying valuable information about what is going on with the TeamServer application. At the top of the page, you can choose the refresh rate of these charts and tables.
 
 <a href="assets/images/KB4-c03_4.png" rel="lightbox" title="Update Frequency Dropdown"><img class="thumbnail" src="assets/images/KB4-c03_4.png"/></a>
 
