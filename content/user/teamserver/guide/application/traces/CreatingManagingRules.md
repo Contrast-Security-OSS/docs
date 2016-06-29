@@ -7,7 +7,7 @@ tags: "TeamServer application security controls"
 
 ## What Are Security Controls?
 
-Security controls are rules that manage/re-route low severity vulnerability events in order to allow for focus on higher priority events...
+Security controls are countermeasures used to avoid or minimize security risks in your application. These controls provide specific and actionable ways to reduce the risk of an attack.
 
 Only users assigned an organizational role of *Rules_Admin* or higher can interact with security controls.
 
