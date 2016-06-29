@@ -22,11 +22,11 @@ Security controls can be accessed by navigating from the User menu to **Policy M
 
 To create a new rule, simply click the **Add Security Control** button.  
 
-<a href="assets/images/SecurityControlGrid.png" rel="lightbox" title="Filter Bar"><img class="thumbnail" src="assets/images/SecurityControlGrid.png"/></a>
+<a href="assets/images/SecurityControlGrid.png" rel="lightbox" title="Security Controls"><img class="thumbnail" src="assets/images/SecurityControlGrid.png"/></a>
 
 After choosing a Name, Type, and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control.  This field is multi-select, so you may choose **All** or select one or more individual vulnerabilities.
 
-<a href="assets/images/SecurityControlEdit.png" rel="lightbox" title="Filter Bar"><img class="thumbnail" src="assets/images/SecurityControlEdit.png"/></a>
+<a href="assets/images/SecurityControlEdit.png" rel="lightbox" title="Security Control Details"><img class="thumbnail" src="assets/images/SecurityControlEdit.png"/></a>
 
 <!--Talk about naming? (Name pre-populated with class and method) In what case would there be No Name? If added from a suggestion?-->
 
@@ -36,13 +36,13 @@ After choosing a Name, Type, and Language, specify the API and choose the vulner
 
 Security controls may also be created from within the **Details** tab of a specific vulnerability.  Expanding the details of a low severity (green) event will also reveal a button to add the security control right in context.
 
-<a href="assets/images/SecurityControlVulnEventDetail.png" rel="lightbox" title="Filter Bar"><img class="thumbnail" src="assets/images/SecurityControlVulnEventDetail.png"/></a>
+<a href="assets/images/SecurityControlVulnEventDetail.png" rel="lightbox" title="Creating A Security Control From Vulnerability Event Details"><img class="thumbnail" src="assets/images/SecurityControlVulnEventDetail.png"/></a>
 
 Additionally, if marking a vulnerability as **Not A Problem** with the reason "Goes through an internal security control", you will be given the option to define that security control at this time. 
 
-<a href="assets/images/SecurityControlOptionDialog.png" rel="lightbox" title="Filter Bar"><img class="thumbnail" src="assets/images/SecurityControlOptionDialog.png"/></a>
+<a href="assets/images/SecurityControlOptionDialog.png" rel="lightbox" title="Option To Create A Security Control Within The Context Of Status Marking"><img class="thumbnail" src="assets/images/SecurityControlOptionDialog.png"/></a>
 
->**NOTE:** In both vulnerability contexts, the **Add Security Control** dialog will allow you to immediately create another control from your current location, rather than having to navigate back to **Policy Management**.
+>**NOTE:** In both vulnerability contexts, the **Add Security Control** dialog will give you the option to immediately create another control from your current location, rather than having to navigate back to **Policy Management**.
 
 <BR>
 
@@ -68,33 +68,22 @@ When creating security controls, there are two types to consider:
 
 <!--How to see them? How are they populated? -->
 
-A new "Suggestions" section would populate the same table on the Security Controls tab (as shown) - utilizing the same exact columns.
-"Suggestions" will be governed by EAC, meaning a user cannot see suggestions from apps they don't have view role or higher.
-When a Suggestion is accepted and turned into a rule, anyone with Org-Rules_Admin role can view/edit it.
-A user will be able to add (plus icon), remove (trashcan), or hide all suggestions (clicking section header/arrow)
-With discovery of these, application designation is needed to know where this API was discovered to help the user find it/assess it. A new tooltip is needed on the API itself to expose those. The application link we show here should take the user to the App > Vulns tab.
+You may find a **Suggestions** section listed below existing security controls within the same table. <SAY HERE WHAT SUGGESTIONS ARE AND HOW THEY ARE GENERATED> Suggestions are governed by EAC, meaning a user cannot see suggestions from apps if they don't have a *View* role or higher.
 
-If the user removes a suggestion, we will remove the row and show our standard success message with an addition of an "Undo" option. Once they've removed a suggestion, we should no longer populate the Suggestions area or ever be re-suggested. For now, there is no way to see those historical suggestions or get them back.
-If the user goes to add a suggestion, there should be an animation that both replaces the plus icon as well as showing the row move from the Suggestions area to a legit security control. (see demo for sample) Success message would also follow in this case.
+<a href="assets/images/SecurityControlSuggestions.png" rel="lightbox" title="Suggested Security Controls"><img class="thumbnail" src="assets/images/SecurityControlSuggestions.png"/></a>
 
-A user is able to change the security control type (Sanitizer, Validator) during the suggestion to actual rule step. For example, if a security control was suggested as a Sanitizer, the user could change the type of Validator and then click the plus button to add it as a Validator. The existing entry in the possible_sanitizers table will be marked as added in the table and the new security control will be written to the Validator table.
+The Name, API and Type fields of a suggestion may all be edited directly in-line, allowing the user to change the security control before adding as an actual rule. Hovering over the API will expose the applications it was discovered in and link directly to the **Application Overview > Vulnerabilities**. Clicking the **Add** (plus) icon on the right side of the row accepts the suggestion as a legitimate rule and moves it up in the table with the other security controls. Anyone with a *Rules_Admin* role can then view or edit it.
+
+Clicking the **Delete** (trashcan) icon will remove the suggestion but provide the option to Undo.  Once removed, suggestions will no longer be populated. <ALL SUGGESTIONS OR JUST THAT TYPE/API?> As of now, there is no way to view historical suggestions or get them back.
+
+<a href="assets/images/SecurityControlUndoRemove.png" rel="lightbox" title="Undo Option When Removing A Suggested Security Control"><img class="thumbnail" src="assets/images/SecurityControlUndoRemove.png"/></a>
 
 <BR>
 
 ## Notifications
 
-We will only notify auto discovered security controls the very first time it was discovered, regardless of application. (Uniqueness is just API - not API + App)
-We will notify user of these discoveries OnEvent. Arshan didn't believe this would happen frequently.
-Icon for system generated notification is our logo (used in our banner) but color: #dcdcdc.
-Messaging is "Contrast has discovered <link to Sec Controls tab with the related suggestions highlighted>Security Controls</link>
-from <link to app>TeamServer</link> you may want to review." If there is a case where multiple applications found the security controls for review, we will just aggregate to "4 applications" and no link.
-EAC applies, meaning if a control is discovered for an app a user doesn't have view role or higher for, they will not get the notification.
+Auto-discovered security controls will generate notifications OnEvent in Contrast the very first time they are discovered, regardless of application. 
+If a control is discovered for an app that a user doesn't have *View* role or higher for, they will not receive the notification.
 
-
-
-
-
-
-<a href="assets/images/KB3-b02_1.gif" rel="lightbox" title="Filter Bar"><img class="thumbnail" src="assets/images/KB3-b02_1.gif"/></a>
 
 
