@@ -23,7 +23,7 @@ Once clicked, choose which information is included when exporting the finding(s)
 
 >**Note:** Bug trackers must be configured before vulnerabilities can be sent or else a notification will occur.
 
-<a href="assets/images/KB3-f04_2.png" rel="lightbox" title="No Bugtracker Notification"><img class="thumbnail" src="assets/images/NoBugTracker.png"/></a>
+<a href="assets/images/NoBugTracker.png" rel="lightbox" title="No Bugtracker Notification"><img class="thumbnail" src="assets/images/NoBugTracker.png"/></a>
 
 ## Integrating With Unsupported Systems
 
