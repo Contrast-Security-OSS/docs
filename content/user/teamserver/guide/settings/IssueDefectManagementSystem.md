@@ -15,10 +15,15 @@ TeamServer can connect to an **Issue and Defect Management System** in order to 
 3. Serena Business Manager
 
 ### Exporting Findings To Issue And Defect Management Systems
+Sending vulnerabilities to the bug tracker can be done through the paper plane icon located in the **Vulnerabilities** page, or **Application Overview** under vulnerabilities. 
 
-You can choose which information is included when exporting the finding(s).
+Once clicked, choose which information is included when exporting the finding(s).
 
 <a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
+
+>**Note:** Bug trackers must be configured before vulnerabilities can be sent or else a notification will occur.
+
+<a href="assets/images/KB3-f04_2.png" rel="lightbox" title="No Bugtracker Notification"><img class="thumbnail" src="assets/images/NoBugTracker.png"/></a>
 
 ## Integrating With Unsupported Systems
 
@@ -38,6 +43,7 @@ Individual or groups of findings can be exported to **XML** format and imported 
 
 <a href="assets/images/KB3-f04_2.png" rel="lightbox" title="Export Format"><img class="thumbnail" src="assets/images/KB3-f04_2.png"/></a>
 
+
 ## Configuring Atlassian JIRA
 
 ### Prerequisites
@@ -51,7 +57,7 @@ Individual or groups of findings can be exported to **XML** format and imported 
 
 1. Log in to TeamServer with an **Organization Administrator** account
 2. Click the **User Dropdown** in the top-right corner (your username)
-3. Select **Settings** from the dropdown menu
+3. Select **Organizational Settings** from the dropdown menu
 4. Select **Bug Trackers** in the left navigation
 5. Click the **+ Add JIRA** button
 
@@ -84,7 +90,7 @@ Once the Bug Tracker is configured, you will want to verify the configuration by
 
 1. Log in to TeamServer with an **Organization Administrator** account
 2. Click the **User Dropdown** in the top-right corner (your username)
-3. Select **Settings** from the dropdown menu
+3. Select **Organizational Settings** from the dropdown menu
 4. Select **Bug Trackers** in the left navigation
 5. Click the **+ Add Bugzilla** button
 
@@ -119,7 +125,7 @@ Once you have configured the Bugzilla integration properties, you can verify com
 
 1. Log in to the TeamServer with an **Organization Administrator** account
 2. Click the **User Dropdown** in the top-right corner (your username)
-3. Select **Settings** from the dropdown menu
+3. Select **Organizational Settings** from the dropdown menu
 4. Select **Bug Trackers** in the left navigation
 5. Click the **+ Add SBM** button
 
