@@ -4,7 +4,7 @@ description: "List of supported technologies"
 tags: "Node agent frameworks support troubleshooting nodejs javascript modules"
 -->
 
-Node Versions                         | 3rd-party Module Support                                       | Web Framework Support<sup>[1](#footnote1)</sup> | Coming Soon
+Node Versions                         | 3rd-Party Module Support                                       | Web Framework Support<sup>[1](#footnote1)</sup> | Coming Soon
 :-----                                | :-----                                                         | :----                                           | :-------
 **v0.10.34** through **v4 LTS**       | [express-session](https://github.com/expressjs/session)        | [express](http://expressjs.com)                 | [sails](http://sailsjs.org/)
                                       | [mongodb](https://docs.mongodb.org/ecosystem/drivers/node-js/) |                                                 | [hapi](https://www.npmjs.com/package/hapi)
