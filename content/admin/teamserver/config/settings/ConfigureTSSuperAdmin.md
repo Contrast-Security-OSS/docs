@@ -1,10 +1,10 @@
 <!--
 title: "Configuring TeamServer Settings"
 description: "Configuring TeamServer Settings"
-tags: "SuperAdmin EOP configuration settings"
+tags: "SuperAdmin EOP configuration system settings"
 -->
 
-## Role of the SuperAdmin
+## Role Of The SuperAdmin
 The SuperAdmin is an [EOP role](user_tsguideset.html#roles) that has the ability to modify and manage TeamServer System Settings. Individual users can be [granted SuperAdmin](user_tsconfig.html#super) on a case by case basis. Only the SuperAdmin has access to these settings below. Many of these settings are accessible and can be changed via the [Organization Settings](user_tsguide.html#orgset) by an organization administrator. 
 
 ## Configuring Settings from the User Interface
@@ -74,3 +74,5 @@ The TeamServer license and subsequent application licensing is managed from this
 SuperAdmins have the ability to send a system message to all users upon immediate login. A simple message and expiration date are required inputs for the message. All users will receive this message every time they login to TeamServer until the message expires or is deleted.
 
 <a href="assets/images/System_Message.png" rel="lightbox" title="System Messages "><img class="thumbnail" src="assets/images/System_Message.png"/></a>
+
+For more on configuring system messages, see [The Administrator's Dashboard](admin_tsfaq.html#admin)
