@@ -8,13 +8,13 @@ tags: "3.2.9 June Release Notes"
 * CONTRAST-4008: Improve taint tracking in deep propagation
 * CONTRAST-7996: Add support for custom WebLogic 12 class loader
 * CONTRAST-8096: Add system property to load custom rules JAR
-* CONTRAST-8152: Save key used in map based source events
+* CONTRAST-8152: Save key used in map-based source events
 * CONTRAST-8355: Honor 412 status code to stop agent reporting
-* CONTRAST-8362: Improve support for javax.xml.parsers.DocumentBuilder propagation
+* CONTRAST-8362: Improve support for *javax.xml.parsers.DocumentBuilder* propagation
 * CONTRAST-8515: Improve support for Jackson 
-* CONTRAST-8575: Improve support for bootstrapping IBM J9 classes outside of rt.jar
-* CONTRAST-8604: Improve BufferedTransferEncodingRule blocking
-* CONTRAST-8649: Expand scope of "contrast.noteamserver.enable" flag to all communication
+* CONTRAST-8575: Improve support for bootstrapping IBM J9 classes outside of *rt.jar*
+* CONTRAST-8604: Improve *BufferedTransferEncodingRule* blocking
+* CONTRAST-8649: Expand scope of *contrast.noteamserver.enable* flag to all communication
 * CONTRAST-8673: Improve RASP mode path traversal detection
 * CONTRAST-8685: Improve FeatureSet parsing to ensure valid sampling values
 * CONTRAST-8688: Improve RASP mode detection by filtering out empty values
@@ -32,11 +32,11 @@ tags: "3.2.9 June Release Notes"
 * CONTRAST-8086: Support for Inventory Mode
 * CONTRAST-8187: .NET Agent should collect MVC action name for request-validation-disabled findings
 * CONTRAST-8456: .NET Agent profiler logs not being deleted (keeping more than the limit)
-* CONTRAST-8581: Contrast .NET can breaks applications running under specific Windows users with limited permissions
+* CONTRAST-8581: Contrast .NET can break applications running under specific Windows users with limited permissions
 * CONTRAST-8582: .NET Agent can break Cassette asset bundling
 * CONTRAST-8646: Error rendering StoredXSS in TeamServer received from .NET agent
 * CONTRAST-8648: Contrast Causing Outage in CRM 2015
-* CONTRAST-8650: XSS False Positive sourced by HttpClient Parsing .NET Web Api Response
+* CONTRAST-8650: XSS False Positive sourced by HttpClient Parsing .NET Web API Response
 * CONTRAST-8698: .NET Agent causing SQL Connectivity issues / EF problems
 * CONTRAST-8699: Stored-XSS False Positives in ELT
 * CONTRAST-8730: Contrast .NET breaks redirect from "/" to default document under Classic Pipeline Mode
@@ -53,10 +53,10 @@ tags: "3.2.9 June Release Notes"
 * CONTRAST-8720: Node Agent causing IPC issues in cluster module
 * CONTRAST-8742: Node: fs methods crash with tainted 'path'
 * CONTRAST-8965: CLI displays incorrect usage instruction
-* CONTRAST-8966: Node agent complaining that ./bin/package.json doesn't exist
+* CONTRAST-8966: Node agent complaining that *./bin/package.json* doesn't exist
 * CONTRAST-8968: Child process from cluster crashing with 'cannot read tainted of undefined'
 * CONTRAST-8977: NodeJS: shebang causing rewrite/parse error
-* CONTRAST-8978: NodeJS: net.Socket.write core overload to prevent TypeErrors
+* CONTRAST-8978: NodeJS: *net.Socket.write* core overload to prevent TypeErrors
 
 
 ## TeamServer
@@ -88,7 +88,7 @@ tags: "3.2.9 June Release Notes"
 * CONTRAST-8703: "Defense" Needs to Read "Protection" on the Apps Main Page with RASP
 * CONTRAST-8704: Menu Highlight Inconsistency on Vuln Details Pg
 * CONTRAST-8705: Tooltip Constrained to Column Width on Library Details Pg
-* CONTRAST-8753: Externalize the properties in ContrastEhcacheStatic.xml
+* CONTRAST-8753: Externalize the properties in *ContrastEhcacheStatic.xml*
 * CONTRAST-8835: 403 error loading trace details when org has no enterprise licenses
 * CONTRAST-8981: Revisions to Child Apps Display
 
