@@ -47,7 +47,7 @@ On the **Servers** page, a user must choose which server(s) they wish to apply a
 
 In the case where all available protection licenses have been consumed, the option to apply a license will be disabled. A license must be removed from a different server in order to go back into the pool for designation elsewhere.
 
-If applying licenses to multiple servers at a time and there aren't enough available licenses remaining, the option to apply a licenses will be disabled until the user revises their selection.
+If applying licenses to multiple servers at a time and there aren't enough available licenses remaining, the option to apply a license will be disabled until the user revises their selection.
 
 Tooltips will instruct the user as to the reason the option is disabled in either case.
 
