@@ -18,19 +18,19 @@ The plugin code can be viewed in our Github [repository](https://github.com/Cont
 
 ## How To Use The Plugin
 
-Go to the `Configure Settings` Page under `Manage Jenkins`. Here you will find a new Contrast TeamServer profiles section.
+Go to the `Configure System` page under `Manage Jenkins`. Here you will find a new Contrast TeamServer profiles section.
 
 ## TeamServer Configuration Settings
 
-These settings are for connecting to TeamServer. The plugin leverages these to authenticate TeamServer and make API calls.
+These settings are for the plugin to connect to TeamServer and query for results. The plugin leverages these to authenticate to TeamServer and make API calls in the post-build actions.
 
 | Parameter                   | Description                                             |
 |-----------------------------|---------------------------------------------------------|
-| TeamServer Server Name      | Name of server you set with ```-Dcontrast.server``` <BR> Use *app.contrastsecurity.com/Contrast/api* if you are a SaaS customer |
-| TeamServer Username         | This is the username/email for your user in TeamServer |
+| TeamServer Server Name      | Name of agent to use in the query for vulnerability results in the project post-build action (note: not the address of the TeamServer). This is specified in the agent arguments with ```-Dcontrast.server```, and by default uses the hostname of the server the agent is running on.  Agents are listed in the `Servers` tab when logged in to TeamServer. |
+| TeamServer Username         | This is the username/email for your account in TeamServer |
 | TeamServer Service Key      | Service Key found in Organization Settings             |
 | TeamServer API Key          | API Key found in Organization Settings                 |
-| TeamServer API Url          | API Url to your TeamServer instance                    |
+| TeamServer API Url          | API URL to your TeamServer instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you are a SaaS customer, otherwise use the URL of your TeamServer, e.g. *http://contrastserver:8080/Contrast/api* |
 
 ### Testing The TeamServer Connection
 
@@ -43,8 +43,8 @@ These settings are for filtering trace results in order to verify conditions con
 
 | Parameter                    | Description                                                              |
 |------------------------------|--------------------------------------------------------------------------|
-| TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings |
-| TeamServer Application Name  | Name of application you set with ```-Dcontrast.appname``` <BR> This is used to filter for your application in Jenkins |
+| TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings, or can be copied from the URL when viewing the home page in TeamServer. |
+| TeamServer Application Name  | Name of the application as listed on the `Applications` tab in TeamServer. <BR> This is used to filter results in the query for post-build actions. |
 
 ### How Threshold Conditions Work In Post-Build Action
 
