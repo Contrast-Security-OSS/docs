@@ -46,51 +46,97 @@ This portion of the tutorial will walk through adding a new Regular Expression R
 <br>
 
 #### Step 1: Create A New Policy File
-This will provide a skeleton for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
-
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<policy>
-    <sources/>
-    <propagators/>
-    <tag-lists/>
-    <rules/>
-</policy>
-```
-
+This will provide a [skelton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
 <br>
 
 #### Step 2: Add A New ```<rule>``` To The Policy
 Regular Expression rules work by pattern matching one or more parameter values passed into a specified method. By supplying a pattern to the rule, you're telling Contrast to report any time the pattern *is* matched and should *not* have been (```bad-value-regex```) or is *not* matched and *should* have been (```good-value-regex```). 
 
-For this example, we will create a rule that detects when security is disabled on a custom request object. In the first event, the call to ```setSecure``` should only ever be made with the value ```true```. In the second event, the call to ```disableSecurity``` should **never** be made with the value ```true```.
- 
-```xml
-<rules>
-    <rule level="low" id="https-disabled" enabled="true"> 
-        <pattern>
-            <event>
-                <method inherit="true" signature="com.acme.ticketbook.Request.setSecure(boolean)"/>
-                <params>
-                    <param disallowed-tags="" good-value-regex="true" index="1" required-tags="" tracked="false"/>
-                </params>
-            </event>
-            <event>
-                <method inherit="true" signature="com.acme.ticketbook.Request.disableSecurity(boolean)"/>
-                <params>
-                    <param disallowed-tags="" bad-value-regex="true" index="1" required-tags="" tracked="false"/>
-                </params>
-            </event>
-        </pattern>
-    </rule>
-    <rule.../>
-</rules>
-```
+A skeleton for a Regular Expression rule is provided [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_rule.xml).
 
+For this example, we will create a rule that detects when security is disabled on a custom request object. In the first event, the call to ```setSecure``` should **only** ever be made with the value ```true```. In the second event, the call to ```disableSecurity``` should **never** be made with the value ```true```.
+ 
+![Regex Rule XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_regex_xml.png "Regex Rule XML")
+
+The following attributes, highlighted in red above, should be customized for your rules. 
+- ```level```: The severity of the rule - low, medium, or high
+- ```id```: The unique identifier by which the rule will be referenced (note that this must be unique across all policies)
+- ```signature```: The fully qualified method signature on which the Agent will match in order to determine rule violation
+- ```good-value-regex```: The regular expression of acceptable (safe) values for this rule 
+- ```bad-value-regex```: The regular expression of unacceptable (dangerous) values for this rule
+- ```index```: The ordinal (1 based) of the parameter to which the regular expression applies.
+
+The following attributes, present above, should be in your rules. 
+- ```enabled```: Indicates if the rule is active. It should always be true.
+- ```inherit```: Indicates if the children of the class specified in the ```signature``` field also satisfy the rule. By default, this should be true.
+- ```disallowed-tags```: For regular expression based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
+- ```required-tags```: For regular expression based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
+- ```tracked```: For regular expression based rules, this field should always be set to false. It is covered more in depth in the Dataflow rule section below. 
 <br>
 
 #### Step 3: Create A New Groovy Script For The Rule
-Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) provided. Be sure to make the ```getId()``` method return the id value specified in your rule. For our example, this value must be ```https-disabled```. If these ID's do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
+Create a Groovy script based on one of the template files provided here: 
+- [template](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) 
+- [template with comments](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template_comments.groovy).
+
+Be sure to make the ```getId()``` method return the id value specified in your rule. For our example, this value must be ```https-disabled```. If these ID's do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
+
+Once you have the Groovy script written, you can import the [maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip) here to compile it before attempting to start TeamServer.
+
+```xml
+import org.springframework.stereotype.Component;
+
+import com.contrastsecurity.interfaces.application.IApplication
+import com.contrastsecurity.interfaces.babelfish.ISnippet
+import com.contrastsecurity.interfaces.rule.TriggerSecurityRule
+import com.contrastsecurity.interfaces.rule.SecurityRuleConstants
+import com.contrastsecurity.interfaces.trace.ITrace
+
+@Component
+class SecureRule extends TriggerSecurityRule {
+    String getId() { "https-disabled" }
+    String getName() { "Https is explicitly disabled" }
+    String getDescription() { "Verifies that HTTPS mode has not been disabled for the current request." }
+    String getCategory() { SecurityRuleConstants.CATEGORY_SECURECOMMUNICATIONS }
+    String getConfidence() { SecurityRuleConstants.LEVEL_HIGH }
+    String getLikelihood() { SecurityRuleConstants.LEVEL_LOW }
+    String getImpact() { SecurityRuleConstants.LEVEL_MEDIUM }
+    String getCwe() { "http://cwe.mitre.org/data/definitions/614.html" }
+    String getOwasp() { "http://www.owasp.org/index.php/SecureFlag" }
+    String[] getReportReferences() { [] }
+    String getEvidenceIntro(){ "...and disabled HTTPS of the Request here:" }
+    int getParameterIndex(){ 1 }
+    public String buildRisk(ITrace trace){
+        '<p>Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify things they should not be able to.</p>'
+    }
+    public ISnippet buildRiskSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet();
+        snippet.buildSnippet('{{#paragraph}}Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify' +
+                                'things they should not be able to.{{/paragraph}}')
+        snippet
+    }
+    public String getReportIntroduction(String lang) {
+        'Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify things they should not be able to.'
+    }
+    public String buildRecommendation(ITrace trace, String language) {
+        '<p>In order to prevent this, the security of the Request object should not be compromised. <br/>' +
+        'Specifically, the <code>com.acme.ticketbook.Request.setSecure(boolean)</code> method should never be set to false and<br/>' + 
+        'the <code>com.acme.ticketbook.Request.disableSecurity(boolean)</code> method should never be set to true. </p>'
+    }
+    public ISnippet buildRecommendationSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet()
+        snippet.buildSnippet('{{#paragraph}}In order to prevent this, the security of the Request object should not be compromised. {{{nl}}}' +
+            'Specifically, the {{#code}}com.acme.ticketbook.Request.setSecure(boolean){{/code}} method should never be set to false and {{{nl}}}' + 
+            'the {{#code}}com.acme.ticketbook.Request.disableSecurity(boolean){{/code}} method should never be set to true. {{/paragraph}}')
+        snippet
+    }
+    public String getReportRecommendation(IApplication app) {
+        'In order to prevent this, the security of the Request object should not be compromised.' +
+        'Specifically, the com.acme.ticketbook.Request.setSecure(boolean) method should never be set to false and' + 
+        'the com.acme.ticketbook.Request.disableSecurity(boolean) method should never be set to true.'
+    }
+}
+```
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
 
@@ -119,6 +165,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 5: Restart The TeamServer
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](https://docs.contrastsecurity.com/user_tsfaq.html#restart).
 
 <br>
 
@@ -146,19 +193,9 @@ The format of each is explained in greater detail below.
 <br>
 
 #### Step 1: Create A New Policy File
-This provides a skeleton for the creation of the new code patterns you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any name can be used (The filename becomes important in Step #8 below). 
+This will provide a [skelton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #8 below).
 
-> **Note:** A single policy file can have many rules in it, or one at a time. It's up to you how you want to organize your custom rules. So, if you already have a policy file for a custom Regular Expression rule, you can add new Data Flow rules to that policy file, rather than creating a new one.
-
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<policy>
-    <sources/>
-    <propagators/>
-    <tag-lists/>
-    <rules/>
-</policy>
-```
+> **Note:** A single policy file can have many rules in it, or one at a time. It's up to you how you want to organize your custom rules. So, if you already have a policy file for a custom Regular Expression rule or an existing DataFlow rule, you can add new Data Flow rules to that policy file, rather than creating a new one.
 
 <br>
 
@@ -169,28 +206,36 @@ This means that the first parameter of this method will be tagged and tracked af
 
 Note that the method must be enabled for source creation to occur and the 'id' field must be unique. The specified tag for a source should indicate the concern. In this case, we are concerned that the parameter returned from this method might contain a credit card. 
 
-In this example, if multiple sources could return data with credit card numbers in them, we could create multiple sources, each with unique 'id' and 'name' fields, that all designate the same tags, in this case ```ccn```.
+In this example, if multiple sources could return data with credit card numbers in them, we could create multiple sources, each with unique 'id' and 'name' attributes, that all designate the same tags, in this case ```ccn```.
 
-```xml
-<sources>
-    <method enabled="true" id="ccn1" name="CreditCardNumber1" signature="com.acme.ticketbook.Person.setCreditCard(java.lang.String)" tags="ccn" target="P1"/>
-    <method... />
-</sources> 
-```
+![DataFlow Rule - Source - XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_dataflow_source_xml.png "DataFlow Rule - Source - XML")
+
+The following attributes, highlighted in red above, should be customized for your rules. 
+- ```id```: The unique identifier by which the source will be referenced (note that this must be unique across all policies)
+- ```name```: A human readable name for this source
+- ```signature```: The fully qualified method signature on which the Agent will match in order to determine source event
+- ```tags```: A comma separated list of values that the Agent will apply to the target of the source. Essentailly, a marker associated with the object that tells what the method does.  
+- ```target```: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied.
+
+The following attributes, present above, should be in your rules. 
+- ```enabled```: Indicates if the source is active. It should always be true.
 
 <br>
 
 #### Step 3: Add A New ```<tag-list>``` To The Policy
 Tags are an integral part of the Contrast policy language. In this rule, they provide a means of marking credit cards as safe for logging. One can use tags to determine if an object is used in an unsafe manner and needs to be reported, or if sufficient controls were exercised to mitigate the risk implied by the source tag. In this example, we create a new tag ```ccn-masked``` to indicate that a credit card number has been sufficiently obscured by the methods in the list. In this case, the return value (target="R") of  ```com.acme.ticketbook.Person.mask(java.lang.String)```. Again, it is worth noting that the method must be enabled for tagging to occur and both the 'id' and 'name' fields of the tag-list must be unique.
 
-```xml
-<tag-lists>
-    <tag-list id="maskCCN" name="Masked CCN" tags="ccn-masked">
-        <method enabled="true" signature="com.acme.ticketbook.Person.mask(java.lang.String)" target="R"/>
-    </tag-list>
-    <tag-list.../>
-</tag-lists> 
-```
+![DataFlow Rule - TagList - XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_dataflow_tag_xml.png "DataFlow Rule - TagList - XML")
+
+The following fields, highlighted in red above, should be customized for your rules. 
+- ```id```: The unique identifier by which the tag list will be referenced (note that this must be unique across all policies)
+- ```name```: A human readable name for this tag list
+- ```tags```: A comma separated list of values that the Agent will apply to the target of the tag list. Essentailly, a marker associated with the object that tells what the method does.  
+- ```signature```: The fully qualified method signature on which the Agent will match in order to determine tag application.
+- ```target```: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied.
+
+The following fields, present above, should be in your rules. 
+- ```enabled```: Indicates if the tag list is active. It should always be true.
 
 <br>
 
@@ -198,27 +243,97 @@ Tags are an integral part of the Contrast policy language. In this rule, they pr
 
 Now that we have data flow figured out, we need to provide a list of events that can trigger the decision making process as to whether or not a trace needs to be reported. The following is an example of an event that would trigger the credit-card-exposed rule. In the example, we will create a trigger event for ```org.apache.log4j.Category.debug(java.lang.Object)``` that will fire if the first parameter in the method has the tag ```ccn``` from the source in Step #2 and does **not** have the tag ```ccn-masked``` from the tag added in Step #3. It is again worth noting that the 'id' of the rule must be unique and that 'enabled' must be set to ```true``` in order for the rule to be active. Additionally, the id MUST match the string in the ```getId()``` method of the corresponding Groovy script on TeamServer (discussed later). 
 
+![DataFlow Rule - Rule - XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_dataflow_rule_xml.png "DataFlow Rule - Rule - XML")
 
-```xml
-<rules>
-    <rule level="low" id="credit-card-exposed" enabled="true"> 
-        <pattern>
-            <event>
-                <method inherit="true" signature="org.apache.log4j.Category.debug(java.lang.Object)"/>
-                <params>
-                    <param disallowed-tags="ccn-masked" index="1" required-tags="ccn"/>
-                </params>
-            </event>
-        </pattern>
-    </rule>
-    <rule.../>
-</rules>
-```
+The following fields, highlighted in red above, should be customized for your rules. 
+- ```level```: The severity of the rule - low, medium, or high
+- ```id```: The unique identifier by which the rule will be referenced (note that this must be unique across all policies)
+- ```signature```: The fully qualified method signature on which the Agent will match in order to determine rule violation
+- ```disallowed-tags```: A comma separated list of tags whose presense indicates the rule is not violated. If the target parameter specified by the index has any of these tags, a vulnerability will not be reported. 
+- ```index```: The ordinal (1 based) of the parameter to which the tag check applies.
+- ```required-tags```: A comma separated list of tags whose presense indicates the rule is violated. If the target parameter specified by the index does not have any of these tags, a vulnerability will not be reported. 
+
+The following fields, present above, should be in your rules. 
+- ```enabled```: Indicates if the rule is active. It should always be true.
+- ```inherit```: Indicates if the children of the class specified in the ```signature``` field also satisfy the rule. By default, this should be true.
+- ```tracked```: Tracked is ommitted in this section of the rule because the check is implicit at this point. Tracked indicates that the Agent has taken action on an object and therefore is aware of its status. Having either a required or disallowed tag makes an object tracked.
 
 <br>
 
 #### Step 5: Create A New Groovy Script For The Rule
-Create a Groovy script based on the [template file](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template.groovy) provided. Be sure to set the ```getId()``` method to return the 'id' from the rule above, or the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
+Create a Groovy script based on one of the template files provided here: 
+- [template](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template.groovy) 
+- [template with comments](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template_comments.groovy).
+
+Be sure to make the ```getId()``` method return the id value specified in your rule. For our example, this value must be ```credit-card-exposed```. If these ID's do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
+
+Once you have the Groovy script written, you can import the [maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip) here to compile it before attempting to start TeamServer.
+
+```xml
+import org.springframework.stereotype.Component;
+
+import com.contrastsecurity.interfaces.application.IApplication
+import com.contrastsecurity.interfaces.babelfish.ISnippet
+import com.contrastsecurity.interfaces.rule.DataFlowSecurityRule
+import com.contrastsecurity.interfaces.rule.SecurityRuleConstants
+import com.contrastsecurity.interfaces.trace.ITrace
+
+
+@Component
+class CNNRule extends DataFlowSecurityRule {
+    String getId() { "credit-card-exposed" }
+    String getName() { "Credit card number exposed" }
+    String getDescription() { "Verifies that no credit card numbers are exposed in the logs." }
+    String getCategory() { SecurityRuleConstants.CATEGORY_CONFIGURATION }
+    String getConfidence() { SecurityRuleConstants.LEVEL_HIGH }
+    String getLikelihood() { SecurityRuleConstants.LEVEL_LOW }
+    String getImpact() { SecurityRuleConstants.LEVEL_MEDIUM }
+    String getCwe() { "https://cwe.mitre.org/data/definitions/532.html" }
+    String getOwasp() { "https://www.owasp.org/index.php/Handling_E-Commerce_Payments#Displaying_portions_of_the_credit_card" }
+    String[] getReportReferences() { [] }
+    String getEvidenceIntro(){ "...and ended up in this log statement:" }
+    int getParameterIndex(){ 1 }
+    public String buildRisk(ITrace trace){
+        '<p>The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data.</p>'
+    }
+    public ISnippet buildRiskSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet()
+        snippet.buildSnippet('{{#paragraph}}The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data. {{/paragraph}}')
+        snippet
+    }
+    public String getReportIntroduction(String lang) {
+        'The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data.'
+    }
+    public String buildRecommendation(ITrace trace, String language) {
+        '<p>In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. <br/>' +
+        'Specifically, the <code>com.acme.ticketbook.Person.mask(java.lang.String)</code> method needs to be invoked. For instance, <br/>' + 
+        '<pre class="brush: java">// LogCCN.java <br/>' +
+        'String MY_CREDIT_CARD = "1234-1234-1234-1234"; <br/>' +
+        'Person.setCreditCard(MY_CREDIT_CARD);<br/>' +
+        'String maskedCardNumber = Person.mask(MY_CREDIT_CARD);<br/>' +
+        'Log.debug("Hid the credit ard number" + maskedCardNumber);<br/>' +
+        '</pre><br/>' +
+        'would prevent the rule from firing as, by our policy definition, this code path is not vulnerable.</p>';
+    }
+    public ISnippet buildRecommendationSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet();
+        snippet.buildSnippet('{{#paragraph}}In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. {{{nl}}}' +
+        'Specifically, the {{#code}}com.acme.ticketbook.Person.mask(java.lang.String){{/code}} method needs to be invoked. For instance,' + 
+        '{{#javaBlock}}// LogCCN.java {{{nl}}}' +
+        'String MY_CREDIT_CARD = "1234-1234-1234-1234"; {{{nl}}}' +
+        'Person.setCreditCard(MY_CREDIT_CARD);{{{nl}}}' +
+        'String maskedCardNumber = Person.mask(MY_CREDIT_CARD);{{{nl}}}' +
+        'Log.debug("Hid the credit ard number" + maskedCardNumber);{{{nl}}}' +
+        '{{/javaBlock}}{{{nl}}}' +
+        'would prevent the rule from firing as, by our policy definition, this code path is not vulnerable.{{/paragraph}}')
+        snippet
+    }
+    public String getReportRecommendation(IApplication app) {
+        'In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. Specifically, you need to call '+
+        'com.acme.ticketbook.Person.mask(java.lang.String) and log the result of that call rather than directly logging com.acme.ticketbook.Person.getCreditCard().'
+    }
+}
+```
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
 
@@ -247,6 +362,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 7: Restart The TeamServer
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](https://docs.contrastsecurity.com/user_tsfaq.html#restart).
 
 <br>
 
