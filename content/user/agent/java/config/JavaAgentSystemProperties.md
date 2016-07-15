@@ -45,6 +45,7 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.useconfig | use the contrast.config file packaged in another contrast.jar<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.user.packages | A comma-separated list of packages that Contrast should deeply scan for SMAP information, vulnerabilities, and other app-related analysis<br>**DEFAULT VALUE:** none</br> |
 | contrast.websphere.shared.libs | Location of shared library directory on WebSphere<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| csrf.allowed.filewrite.suffixes | A comma-separated list of allowed file suffixes which CSRF won't consider as evidence of state change<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | csrf.allowed.urls | Set the path to a file containing line-separated URLs patterns which don't require CSRF tokens<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | csrf.protected.urls | Set the path to a file containing line-separated URLs patterns which require CSRF tokens<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | felix.bundles.path | Set to override default location of Felix bundles directory<br>**DEFAULT VALUE:** ./sling/felix</br> |
@@ -117,6 +118,8 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 ### Defend Mode Configuration
 |Property|Description|
 |-|-|
+| contrast.cmdinjection.keywords | File path to overriding Command Injection keywords file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.cmdinjection.patterns | Location of Command Injection patterns file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.defend.blocked.samples | Max number of detailed reports generated for blocked attacks detected during a reporting period<br>**DEFAULT VALUE:** 25</br> |
 | contrast.defend.exploited.samples | Max number of detailed reports generated for exploited attacks during a reporting period<br>**DEFAULT VALUE:** 100</br> |
 | contrast.defend.ineffective.samples | Max number of detailed reports generated for ineffective attacks detected during a<br>**DEFAULT VALUE:** 50</br> |
