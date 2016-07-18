@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policy>
+    <rules>
+        <rule level="" id="" enabled="true"> 
+            <pattern>
+                <event>
+                    <method inherit="true" signature=""/>
+                    <params>
+                        <param disallowed-tags="" [good|bad]-value-regex="" index="" required-tags="" tracked="false"/>
+                    </params>
+                </event>
+            </pattern>
+        </rule>
+    </rules>
+</policy>
+
+
+
+
+
+
+
+
+
