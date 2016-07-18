@@ -1,14 +1,12 @@
 <!--
 title: "How to Add a Level 2 Rule"
 description: "How to add a Level 2 rule to the Java Agent and TeamServer"
-tags: "java agent rules level"
+tags: "java agent rules level 2"
 -->
 
 ## When Should I Use A Level 2 Rule?
 
-Most of the rules that come with Contrast are Level 2 rules. There are rules that are driven from the agent's policy file. 
-Contrast can be overridden to use a custom policy file, allowing for an organization to fully control all the sensor 
-instrumentation used by Contrast. Using this capability, you can:
+Most of the rules that come with Contrast are Level 2 rules. These are rules that are driven from the agent's policy file. Contrast can be overridden to use a custom policy file, allowing an organization to fully control all sensor instrumentation used by Contrast. With this capability, you can:
 * Add new rules
 * Alter the requirements for existing rules
 * Disable or delete rules
@@ -19,7 +17,7 @@ The advantages of using a Level 2 rule include:
 * Complete control of Contrast
 * Ability to fix bugs or enhance flaw-finding capabilities without a regularly scheduled software update
 
-The challenges with using a Level 2 rule, as opposed to a Level 1 rule include:
+The challenges with using a Level 2 rule, as opposed to a Level 1 rule, include:
 * Requires expertise in the Contrast policy XML language
 * Mistakes made using Level 2 rules can hurt performance and hide true positives
 * Requires a centralized management of a policy file outside of TeamServer
@@ -46,17 +44,17 @@ This portion of the tutorial will walk through adding a new Regular Expression R
 <br>
 
 #### Step 1: Create A New Policy File
-This will provide a [skelton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
+We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
 <br>
 
 #### Step 2: Add A New ```<rule>``` To The Policy
 Regular Expression rules work by pattern matching one or more parameter values passed into a specified method. By supplying a pattern to the rule, you're telling Contrast to report any time the pattern *is* matched and should *not* have been (```bad-value-regex```) or is *not* matched and *should* have been (```good-value-regex```). 
 
-A skeleton for a Regular Expression rule is provided [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_rule.xml).
+A Regular Expression rule template is provided [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/rule_regex.xml).
 
 For this example, we will create a rule that detects when security is disabled on a custom request object. In the first event, the call to ```setSecure``` should **only** ever be made with the value ```true```. In the second event, the call to ```disableSecurity``` should **never** be made with the value ```true```.
  
-![Regex Rule XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_regex_xml.png "Regex Rule XML")
+<a href="assets/images/lvl_2_rule_regex_xml.png" rel="lightbox" title="Regex Rule XML"><img class="thumbnail" src="assets/images/lvl_2_rule_regex_xml.png"/></a>
 
 The following attributes, highlighted in red above, should be customized for your rules. 
 - ```level```: The severity of the rule - low, medium, or high
@@ -64,24 +62,24 @@ The following attributes, highlighted in red above, should be customized for you
 - ```signature```: The fully qualified method signature on which the Agent will match in order to determine rule violation
 - ```good-value-regex```: The regular expression of acceptable (safe) values for this rule 
 - ```bad-value-regex```: The regular expression of unacceptable (dangerous) values for this rule
-- ```index```: The ordinal (1 based) of the parameter to which the regular expression applies.
+- ```index```: The ordinal (1 based) of the parameter to which the regular expression applies
 
 The following attributes, present above, should be in your rules. 
 - ```enabled```: Indicates if the rule is active. It should always be true.
 - ```inherit```: Indicates if the children of the class specified in the ```signature``` field also satisfy the rule. By default, this should be true.
-- ```disallowed-tags```: For regular expression based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
-- ```required-tags```: For regular expression based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
-- ```tracked```: For regular expression based rules, this field should always be set to false. It is covered more in depth in the Dataflow rule section below. 
+- ```disallowed-tags```: For regular expression-based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
+- ```required-tags```: For regular expression-based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
+- ```tracked```: For regular expression-based rules, this field should always be set to false. The **Adding A Level 2 Data Flow Rule** section later in this article covers this in more detail. 
 <br>
 
 #### Step 3: Create A New Groovy Script For The Rule
 Create a Groovy script based on one of the template files provided here: 
-- [template](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) 
-- [template with comments](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template_comments.groovy).
+- [Basic template](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy) 
+- [Template with comments](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template_comments.groovy)
 
 Be sure to make the ```getId()``` method return the id value specified in your rule. For our example, this value must be ```https-disabled```. If these ID's do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
 
-Once you have the Groovy script written, you can import the [maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip) here to compile it before attempting to start TeamServer.
+Once you have the Groovy script written, you can import the [Maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip) here to compile it before attempting to start TeamServer.
 
 ```xml
 import org.springframework.stereotype.Component;
@@ -165,7 +163,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 5: Restart The TeamServer
-An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](https://docs.contrastsecurity.com/user_tsfaq.html#restart).
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](user_tsfaq.html#restart).
 
 <br>
 
@@ -193,9 +191,9 @@ The format of each is explained in greater detail below.
 <br>
 
 #### Step 1: Create A New Policy File
-This will provide a [skelton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved to a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #8 below).
+We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The file name becomes important in Step #8 below).
 
-> **Note:** A single policy file can have many rules in it, or one at a time. It's up to you how you want to organize your custom rules. So, if you already have a policy file for a custom Regular Expression rule or an existing DataFlow rule, you can add new Data Flow rules to that policy file, rather than creating a new one.
+> **Note:** A single policy file can either have many rules in it, or just one at a time. It's up to you how you want to organize your custom rules. So if you already have a policy file for a custom Regular Expression rule or an existing DataFlow rule, you can add new Data Flow rules to that policy file, rather than creating a new one.
 
 <br>
 
@@ -208,14 +206,14 @@ Note that the method must be enabled for source creation to occur and the 'id' f
 
 In this example, if multiple sources could return data with credit card numbers in them, we could create multiple sources, each with unique 'id' and 'name' attributes, that all designate the same tags, in this case ```ccn```.
 
-![DataFlow Rule - Source - XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_dataflow_source_xml.png "DataFlow Rule - Source - XML")
+<a href="assets/images/lvl_2_rule_dataflow_source_xml.png" rel="lightbox" title="DataFlow Rule - Source - XML"><img class="thumbnail" src="assets/images/lvl_2_rule_dataflow_source_xml.png"/></a>
 
 The following attributes, highlighted in red above, should be customized for your rules. 
 - ```id```: The unique identifier by which the source will be referenced (note that this must be unique across all policies)
-- ```name```: A human readable name for this source
+- ```name```: A human-readable name for this source
 - ```signature```: The fully qualified method signature on which the Agent will match in order to determine source event
-- ```tags```: A comma separated list of values that the Agent will apply to the target of the source. Essentailly, a marker associated with the object that tells what the method does.  
-- ```target```: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied.
+- ```tags```: A comma-separated list of values that the Agent will apply to the target of the source. Essentially, a marker associated with the object that tells what the method does.  
+- ```target```: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied
 
 The following attributes, present above, should be in your rules. 
 - ```enabled```: Indicates if the source is active. It should always be true.
@@ -225,49 +223,51 @@ The following attributes, present above, should be in your rules.
 #### Step 3: Add A New ```<tag-list>``` To The Policy
 Tags are an integral part of the Contrast policy language. In this rule, they provide a means of marking credit cards as safe for logging. One can use tags to determine if an object is used in an unsafe manner and needs to be reported, or if sufficient controls were exercised to mitigate the risk implied by the source tag. In this example, we create a new tag ```ccn-masked``` to indicate that a credit card number has been sufficiently obscured by the methods in the list. In this case, the return value (target="R") of  ```com.acme.ticketbook.Person.mask(java.lang.String)```. Again, it is worth noting that the method must be enabled for tagging to occur and both the 'id' and 'name' fields of the tag-list must be unique.
 
-![DataFlow Rule - TagList - XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_dataflow_tag_xml.png "DataFlow Rule - TagList - XML")
+<a href="assets/images/lvl_2_rule_dataflow_tag_xml.png" rel="lightbox" title="DataFlow Rule - TagList - XML"><img class="thumbnail" src="assets/images/lvl_2_rule_dataflow_tag_xml.png"/></a>
+
 
 The following fields, highlighted in red above, should be customized for your rules. 
 - ```id```: The unique identifier by which the tag list will be referenced (note that this must be unique across all policies)
-- ```name```: A human readable name for this tag list
-- ```tags```: A comma separated list of values that the Agent will apply to the target of the tag list. Essentailly, a marker associated with the object that tells what the method does.  
-- ```signature```: The fully qualified method signature on which the Agent will match in order to determine tag application.
-- ```target```: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied.
+- ```name```: A human-readable name for this tag list
+- ```tags```: A comma-separated list of values that the Agent will apply to the target of the tag list. Essentially, a marker associated with the object that tells what the method does.  
+- ```signature```: The fully qualified method signature on which the Agent will match in order to determine tag application
+- ```target```: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied
 
 The following fields, present above, should be in your rules. 
 - ```enabled```: Indicates if the tag list is active. It should always be true.
 
 <br>
 
-#### Step 4: Add a New ```<rule>``` to the Policy
+#### Step 4: Add A New ```<rule>``` To The Policy
 
 Now that we have data flow figured out, we need to provide a list of events that can trigger the decision making process as to whether or not a trace needs to be reported. The following is an example of an event that would trigger the credit-card-exposed rule. In the example, we will create a trigger event for ```org.apache.log4j.Category.debug(java.lang.Object)``` that will fire if the first parameter in the method has the tag ```ccn``` from the source in Step #2 and does **not** have the tag ```ccn-masked``` from the tag added in Step #3. It is again worth noting that the 'id' of the rule must be unique and that 'enabled' must be set to ```true``` in order for the rule to be active. Additionally, the id MUST match the string in the ```getId()``` method of the corresponding Groovy script on TeamServer (discussed later). 
 
-![DataFlow Rule - Rule - XML ](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/lvl_2_rule_dataflow_rule_xml.png "DataFlow Rule - Rule - XML")
+
+<a href="assets/images/lvl_2_rule_dataflow_rule_xml.png" rel="lightbox" title="DataFlow Rule - Rule - XML"><img class="thumbnail" src="assets/images/lvl_2_rule_dataflow_rule_xml.png"/></a>
 
 The following fields, highlighted in red above, should be customized for your rules. 
 - ```level```: The severity of the rule - low, medium, or high
 - ```id```: The unique identifier by which the rule will be referenced (note that this must be unique across all policies)
 - ```signature```: The fully qualified method signature on which the Agent will match in order to determine rule violation
-- ```disallowed-tags```: A comma separated list of tags whose presense indicates the rule is not violated. If the target parameter specified by the index has any of these tags, a vulnerability will not be reported. 
-- ```index```: The ordinal (1 based) of the parameter to which the tag check applies.
-- ```required-tags```: A comma separated list of tags whose presense indicates the rule is violated. If the target parameter specified by the index does not have any of these tags, a vulnerability will not be reported. 
+- ```disallowed-tags```: A comma-separated list of tags whose presence indicates the rule is not violated. If the target parameter specified by the index has any of these tags, a vulnerability will not be reported. 
+- ```index```: The ordinal (1 based) of the parameter to which the tag check applies
+- ```required-tags```: A comma-separated list of tags whose presence indicates the rule is violated. If the target parameter specified by the index does not have any of these tags, a vulnerability will not be reported. 
 
 The following fields, present above, should be in your rules. 
 - ```enabled```: Indicates if the rule is active. It should always be true.
 - ```inherit```: Indicates if the children of the class specified in the ```signature``` field also satisfy the rule. By default, this should be true.
-- ```tracked```: Tracked is ommitted in this section of the rule because the check is implicit at this point. Tracked indicates that the Agent has taken action on an object and therefore is aware of its status. Having either a required or disallowed tag makes an object tracked.
+- ```tracked```: The 'tracked' field is omitted in this section of the rule because the check is implicit at this point. 'Tracked' indicates that the Agent has taken action on an object and therefore is aware of its status. Having either a required or disallowed tag makes an object 'tracked'.
 
 <br>
 
 #### Step 5: Create A New Groovy Script For The Rule
 Create a Groovy script based on one of the template files provided here: 
-- [template](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template.groovy) 
-- [template with comments](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template_comments.groovy).
+- [Basic template](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template.groovy) 
+- [Template with comments](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template_comments.groovy)
 
 Be sure to make the ```getId()``` method return the id value specified in your rule. For our example, this value must be ```credit-card-exposed```. If these ID's do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. 
 
-Once you have the Groovy script written, you can import the [maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip) here to compile it before attempting to start TeamServer.
+Once you have the Groovy script written, you can import the [Maven project](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip) here to compile it before attempting to start TeamServer.
 
 ```xml
 import org.springframework.stereotype.Component;
@@ -362,7 +362,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 7: Restart The TeamServer
-An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](https://docs.contrastsecurity.com/user_tsfaq.html#restart).
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](user_tsfaq.html#restart).
 
 <br>
 
