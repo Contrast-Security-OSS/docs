@@ -44,13 +44,13 @@ This portion of the tutorial will walk through adding a new Regular Expression R
 <br>
 
 #### Step 1: Create A New Policy File
-We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
+We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml.zip) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
 <br>
 
 #### Step 2: Add A New ```<rule>``` To The Policy
 Regular Expression rules work by pattern matching one or more parameter values passed into a specified method. By supplying a pattern to the rule, you're telling Contrast to report any time the pattern *is* matched and should *not* have been (```bad-value-regex```) or is *not* matched and *should* have been (```good-value-regex```). 
 
-A Regular Expression rule template is provided [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/rule_regex.xml).
+A Regular Expression rule template is provided [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/rule_regex.xml.zip).
 
 For this example, we will create a rule that detects when security is disabled on a custom request object. In the first event, the call to ```setSecure``` should **only** ever be made with the value ```true```. In the second event, the call to ```disableSecurity``` should **never** be made with the value ```true```.
  
