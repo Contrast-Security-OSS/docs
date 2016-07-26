@@ -10,7 +10,7 @@ Confirm the following:
 
 * You have administrative access to the web server and the server is supported by Contrast
 * There is a deployed application to be analyzed and the web application technology is supported by Contrast
-* The server has at least .NET Framework 4.0 installed
+* The server has at least .NET Framework 4.5.2 installed
 * Contrast will be the only profiler present
 * IIS can be restarted
 * The web server has network connectivity with TeamServer
