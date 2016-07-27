@@ -24,10 +24,9 @@ For this tutorial we will be using Google Chrome. If you do not already have it 
 3. From the panel that opens at either the bottom or side of your screen, select the **Network** tab.
 4. Look for a round **Record** button in the upper left corner of the Network tab, and make sure it is red. If it is grey, click it once to start recording.
 5. Check the box next to **Preserve log**.
-6. Click the **Clear** button to clear out any existing logs from the Network tab.
-7. Now try to reproduce the issue that you were experiencing before, while the network requests are being recorded.
-8. Once you have reproduced the issue, right click anywhere on the grid of network requests, select **Save as HAR with Content**, and save the file to your computer.
-9. Upload your HAR file to your ticket or attach it to your email so that we may analyze it.
+6. Now try to reproduce the issue that you were experiencing before, while the network requests are being recorded.
+7. Once you have reproduced the issue, right click anywhere on the grid of network requests, select **Save as HAR with Content**, and save the file to your computer.
+8. Upload your HAR file to your ticket or attach it to your email so that we may analyze it.
 
 
 Below is an animated GIF of the process.
