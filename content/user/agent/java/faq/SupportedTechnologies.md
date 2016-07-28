@@ -25,7 +25,7 @@ IBM 1.5 (2008+), 1.6, 1.7 | Jetty 6, 7, 8, 9 | Spring/Spring Boot
                  |                 | Freemarker, Velocity
                  |                 | Hibernate
                  |                 | JDBC, JDBI, MongoDB                 
-                 |                 | Oracle, PostgreSQL, DB2, MySQL JDBC drivers
+                 |                 | Oracle, SQL Server, PostgreSQL, DB2, MySQL JDBC drivers
                  |                 | GSON, Kryo, minidev 
                  |                 | Xerces, JAXB, nu.xom
                  |                 | XStream, Jackson (JSON/XML)
