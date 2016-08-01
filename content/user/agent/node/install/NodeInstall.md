@@ -19,7 +19,7 @@ The minimum required contrast.json setup should look like this:
     "apiKey":"api_key",
     "user": {
         "id":"<contrast_id>",
-        "key":"<contrast_apiKey>"
+        "serviceKey":"<contrast_serviceKey>"
     },
     "uri":"https://app.contrastsecurity.com"
 }
@@ -27,12 +27,12 @@ The minimum required contrast.json setup should look like this:
 
 ---
 
- Property               | Description 
-------------------------|------------
-apiKey     | Organization's API key     
-id         | Contrast user account ID (In most cases, this is your login ID)
-key        | Contrast user account service key
-uri        | Address of the TeamServer installation you would like your agent to report to
+ Property                | Description
+------------------------ | ------------
+apiKey                   | Organization's API key
+id                       | Contrast user account ID (In most cases, this is your login ID)
+serviceKey               | Contrast user account service key
+uri                      | Address of the TeamServer installation you would like your agent to report to
 
 ---
 
