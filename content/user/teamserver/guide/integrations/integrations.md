@@ -54,10 +54,10 @@ TeamServer now supports a generic webook integration! Generic webhooks allow you
 
 ## Example:
 
-```json
+```javascript
 {
 	'title':   'Contrast Security Notification',
-	'message': 'Test User commented on a Insecure JSP Placement vulnerability in WebGoat.​ \"Fixed in CVE-2015\"'
+	'message': 'Test User commented on a Insecure JSP Placement vulnerability in WebGoat. \"Fixed in CVE-2015\"'
 }
 ```
 
