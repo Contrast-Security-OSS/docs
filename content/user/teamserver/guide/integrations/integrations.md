@@ -21,7 +21,7 @@ To add in TeamServer:
 1. Go to the new 'Integrations' tab in Organization Settings.
 2. Click 'Connect' in the Slack row.
 3. Name the integration and paste the URL.
-4. Select the appropriate application to filter on.
+4. Select the appropriate application(s) to filter on.
 5. Click save.
 
 You are now connected!
@@ -42,8 +42,8 @@ To add in TeamServer:
 
 1. Go to the new 'Integrations' tab in Organization Settings.
 2. Click 'Connect' in the HipChat row.
-3. Name the integration, paste the token into the token input, select the appropriate room from the dropdown.
-4. Select the appropriate application to filter on.
+3. Name the integration, paste the token into the token input, and select the appropriate room from the dropdown.
+4. Select the appropriate application(s) to filter on.
 5. Click save.
 
 You are now connected!
@@ -57,7 +57,7 @@ TeamServer now supports a generic webook integration! Generic webhooks allow you
 ```json
 {
 	'title':   'Contrast Security Notification',
-	'message': 'Test User commented on a Insecure JSP Placement vulnerability in WebGoat.​ "Fixed in CVE-2015"'
+	'message': 'Test User commented on a Insecure JSP Placement vulnerability in WebGoat.​ \"Fixed in CVE-2015\"'
 }
 ```
 
@@ -67,7 +67,7 @@ TeamServer now supports a generic webook integration! Generic webhooks allow you
 2. Go to the new 'Integrations' tab in Organization Settings.
 3. Click 'Connect' in the Generic Webhook row.
 4. Name the webhook and paste the URL into the input.
-5. Select the appropriate application to filter on.
+5. Select the appropriate application(s) to filter on.
 6. Click save.
 
 You are now connected!
