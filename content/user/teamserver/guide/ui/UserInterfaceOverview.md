@@ -4,7 +4,6 @@ description: "General overview of the Contrast UI"
 tags: "UI navigation"
 -->
 
-## Getting Around
 The Contrast interface is used for configuring Contrast agent deployments and triaging application weaknesses as we continuously monitor them. The UI provides a single view within which to analyze application vulnerabilities, discover vulnerable and out-of-date third-party libraries, and detect attacks. We also provide visibility into various environments in order to see how an application’s hidden risks are being handled through the development cycle. 
 
 To get the best experience out of Contrast, we suggest you familiarize yourself with the UI components that will most often be used. 
@@ -64,7 +63,7 @@ For example, you could apply filters to a list of Vulnerabilities that would all
 
 <a href="assets/images/TraceFilter.png" rel="lightbox" title="Advanced Filtering Example"><img class="thumbnail" src="assets/images/TraceFilter.png"/></a>
 
-## Delving Into the Details 
+## Drilling Into The Details 
 From any main page, you can drill into an asset or finding from the table row by clicking on the “Name”. Contrast highlights metrics on the asset or finding for a quick snapshot of core data. Navigate the sub-pages to get more details on related pieces, view activity more closely, access review policy, or capture comments and collaborate with team members. 
 
 <a href="assets/images/Details.png" rel="lightbox" title="Details View"><img class="thumbnail" src="assets/images/Details.png"/></a>
