@@ -1,68 +1,70 @@
 <!--
-title: "Using the TeamServer User Interface"
-description: "General overview of the TeamServer UI"
-tags: "TeamServer UI navigation"
+title: "Getting Around"
+description: "General overview of the Contrast UI"
+tags: "UI navigation"
 -->
 
-## Using the TeamServer User Interface
-TeamServer is the primary interface for configuring your Contrast agent deployments and monitoring critical applications for vulnerabilities and threats. The UI provides a single view for analyzing application vulnerabilities, discover vulnerable and out-of-date third-party libraries, as well detect application threats and attacks in production.
+## Getting Around
+The Contrast interface is used for configuring Contrast agent deployments and triaging application weaknesses as we continuously monitor them. The UI provides a single view within which to analyze application vulnerabilities, discover vulnerable and out-of-date third-party libraries, and detect attacks. We also provide visibility into various environments in order to see how an application’s hidden risks are being handled through the development cycle. 
 
-As you start using the TeamServer UI to configure agents and analyze your applications, it's important to familiarize yourself with the components of the UI that will most oftent be used. The sections below describe the core elements of the UI.
+To get the best experience out of Contrast, we suggest you familiarize yourself with the UI components that will most often be used. 
 
-## Top Navigation Bar
-The top navigation bar follows users on every page as they traverse through the application. The links on this page element are visible from every page. There are two versions of the Top Navigation Bar depending on your current system role and access levels. Most users will interface with the organization version of the bar. Users with system administration capabilities will have the luxury of toggling to the system version of the bar.
+We work hard to engage and guide our users. Don’t hesitate to give us some suggestions! 
+<a href="mailto:andria.mattsen@contrastsecurity.com; terra.caussin@contrastsecurity.com"> Provide Feedback</a>
 
-### Organization View: Top Navigation Bar
-The top navigation bar provides universal access to the following components within TeamServer:
+## Navigation
+The top navigation bar is persistent as you move through Contrast - providing easy access to core areas at any time. There are two versions of the top navigation bar, depending on your system role and access levels. Most users will interface with the Organization view. Users with System Administration capabilities will have the added capability of toggling between the Organization *and* System Administration views.
 
-<a href="assets/images/TopNav_Org.png" rel="lightbox" title="Top Navigation Bar for an Organization"><img class="thumbnail" src="assets/images/TopNav_Org.png"/></a>
+### Organization View
 
-| TeamServer Component   | Description                                                                                                                                                                                  |
+<a href="assets/images/TopNav_Org.png" rel="lightbox" title="Navigation for an Organization"><img class="thumbnail" src="assets/images/TopNav_Org.png"/></a>
+
+| Component 		     | Description                                                                                                                                                                                  |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Organization Dashboard | When a user selects the link for Contrast Security, he/she will navigate to a portfolio dashboard providing detailed insight to all applications, activity and portfolio scoring.            |
-| Applications Portfolio | A user selects this link for a searchable list of applications. Various functions such as application licensing, merging, grouping, archiving and restoring can be performed from this page. |
-| Server Portfolio       | A user selects this link for a searchable list of servers. From this page, servers can be edited, tagged or deleted.                                                                         |
-| Libraries Overview     | From the libraries overview page, the user can see a ubiquitous view of all libraries associated with the entire portfolio of applications within the organization.                          |
-| Reports Dashboard      | The reports dashboard provides a single interface to view organization-level charts for applications, traces and servers.                                                                    |
-| Rules Configuration    | The rules page provides access to both vulnerability detection rules and security controls.                                                                                                  |
-| Trace Searching        | A user may search using the trace ID to pull up the details of an application trace.                                                                                                         |
-| Adding an Application  | This button provides universal access to on-board an application for monitoring purposes.                                                                                                    |
+| Organization Dashboard | Provides detailed insight into an organization’s portfolio. Displays the big picture of all assets being managed, the health of applications, and overall status of findings. Return to this page at any time via the Contrast Security logo.            |
+| Applications 			 | Searchable list of an organization’s applications. Perform various functions including application licensing, merging, tagging, archiving, and restoring. Click on an individual application for more detailed information. |
+| Server 		         | Searchable list of an organization’s servers. Perform various functions including server environment designation, enabling Assessment and/or Protection modes, settings, tagging, and deleting. Click on an individual server for more detailed information.                                                                         |
+| Libraries 		     | Searchable list of libraries being used by all applications in an organization. Perform limited functions including tagging and taking a look at manifests. Also provides statistics for known vulnerabilities present in current and out-of-date libraries.                          |
+| Vulnerabilities        | Searchable list of vulnerabilities discovered by all applications in an organization. Perform various functions including marking status, merging, sharing, tagging, exporting, and deleting. Drill down into any vulnerability for more information and remediation guidance.                                                                    |
+| Attacks 			     | Searchable list of attacks that are occurring/have occurred on all applications in an organization. View attacks at the highest level or delve into individual attack events. Perform various functions including blacklisting IPs, generating reports, and creating exclusions or virtual patches.                                                                                                  |
+| Vulnerabiity ID Search | Search Contrast using the vulnerability ID to quickly jump to the details of an application vulnerability.                                                                                                         |
+| Add Application 	     | Provides universal access to onboard an application and begin monitoring at any time.                                                                                                    |
+| Notifications 	     | Provides real-time feedback when key events occur via a notification channel within the application. Get notified about new vulnerabilities, active attacks, or offline servers and be able to react immediately.                                                                                                    |
+| User Menu 	   	     | Provides access to subsidiary pages of Contrast such as personal account information, organization settings, policy management (if permissions allow), reports, release notes, and help. If part of multiple organizations, toggle between them here as well.                                                                                                    |
 
-### System Administration View: Top Navigation Bar
-When a user switches from the organization view to the system administration view, the top menu changes. This top menu for system administrators and SuperAdmins can only be viewed within an Enterprise On-Premise (EOP) installation. The following links are universally accessible from the Admin pages:
+### System Administration View
+If you have System Administration capabilities, you will be able to switch from the Organization view to the System Administration view via the user menu. When doing so, the top navigation bar changes. This is only available on an Enterprise On-Premise (EOP) installation.
 
-<a href="assets/images/TopNav_Admin.png" rel="lightbox" title="Top Navigation Bar for an System Administrators"><img class="thumbnail" src="assets/images/TopNav_Admin.png"/></a>
+<a href="assets/images/TopNav_Admin.png" rel="lightbox" title="Navigation for a System Administrator"><img class="thumbnail" src="assets/images/TopNav_Admin.png"/></a>
 
-| Administration Page     | Description                                                                                                |
+| Component     | Description                                                                                                |
 |-------------------------|------------------------------------------------------------------------------------------------------------|
-| Administrator Dashboard | Summary view of vulnerabilities, applications and licensing for all organizations.                         |
-| Organizations           | An administrator selects this page to create, delete and search organizations.                             |
-| Users                   | An administrator selects this page to create, delete and search users.                                     |
-| Applications            | An administrator selects this page to view all applications (including archived) across all organizations. |
-| Traces                  | A universal page for searching all traces by language and rule type.                                       |
-| Groups                  | An administrator can create, delete and manage System and/or Organization Access Control Groups.           |
-| Stats                   | Summary page of TeamServer performance metrics for the JVM, connected agents and authenticated users.      |
+| Administrator Dashboard | Provides detailed insight across all organizations. A summary of assets and users being managed as well as a view into vulnerabilities and licensing. Return to this page at any time via the Contrast Security logo.                         |
+| Organizations           | Searchable list of all organizations. An administrator can manage organizations and perform various functions including locking, granting or revoking licenses, viewing a license summary, and enabling Protection features for any organization.                             |
+| Applications            | Searchable list of all applications (including those that have been archived) across all organizations. An administrator can modify licenses and edit application names. |
+| Servers                 | Searchable list of all servers across all organizations. An administrator can view and edit server names.                                       |
+| Vulnerabilities         | Searchable list of all discovered vulnerabilities along with their current status. Delve into any vulnerability for read-only information.           |
+| Users                   | Management of users. An administrator can search, add, edit, and delete users.      |
+| Groups                  | Management of system or organization access control groups. An administrator can search, add, edit, and delete groups here.      |
+| Stats                   | Summary of Contrast performance metrics for the JVM, connected agents, and authenticated users.      |
+| Administrator Menu      | Provides access to subsidiary administration pages of Contrast such as system settings, policy management, and help.      |
 
 
-## Settings Menu
-The settings menu follows users ubiquitously throughout TeamServer. From this menu, users can access their personal account information, organization settings, system settings (EOP only), help and toggle between organizations.
+## Table Actions
+Many pages within Contrast contain rows of data presented in table format. These tables have a built-in search mechanism to easily locate data of interest. Searches are performed on multiple columns and quickly display matched rows as you type. Coupled with the search field in many cases, Contrast provides Quick Views for immediate access to the most frequently used filters.
 
-### Organizational Settings Menu
-When a user is a non-administrator, he/she can use this drop-down menu to change organization settings, toggle between organizations if an organization access control group has been created, as well as change their personal account information such as their password.
+Each table offers column sorting to alter the order of data in exactly the way you want. Additionally, tables offer actions that may be applied either to individual rows, or in bulk by selecting many rows. The goal? Getting you to your data fast.
 
-<a href="assets/images/Settings_Org.png" rel="lightbox" title="Settings Navigation Bar for an Organization"><img class="thumbnail" src="assets/images/Settings_Org.png"/></a>
+<a href="assets/images/ActionBar_OrgApps.png" rel="lightbox" title="Table Actions"><img class="thumbnail" src="assets/images/ActionBar_OrgApps.png"/></a>
 
-### System Administration Settings Menu
-When a user is an administrator, he/she can use this drop-down to change TeamServer system settings. The menu is the exact same as the Organization Settings Menu, however if a user has admin credentials, he/she will see a link called "Admin" which will toggle the user to the system administration pages.
+## Advanced Filtering 
+Advanced filtering is available on each main listing of assets and findings - Applications, Servers, Libraries, Vulnerabilities, and Attacks. Simply click the **Advanced** link alongside the search field. Here you’ll find panels of various data sets that allow you to narrow results and hone in on the pieces that interest you.
 
-<a href="assets/images/Settings_Admin.png" rel="lightbox" title="Settings Navigation Bar for an System Administrator"><img class="thumbnail" src="assets/images/Settings_Admin.png"/></a>
+For example, you could apply filters to a list of Vulnerabilities that would allow you to view only Cross-Site Scripting vulnerabilities that have a Critical severity and have yet to be remediated. 
 
-## Page Action Bar
-Many of the pages within TeamServer offer an action bar embedded at the top of the page below the top navigation. These pages often contain rows of data presented in table format. The action bar allows certain operations to be performed either individually or in bulk by selecting one or more rows and applying one of the actions.
+<a href="assets/images/TraceFilter.png" rel="lightbox" title="Advanced Filtering Example"><img class="thumbnail" src="assets/images/TraceFilter.png"/></a>
 
-<a href="assets/images/ActionBar_OrgApps.png" rel="lightbox" title="Example Action Bar"><img class="thumbnail" src="assets/images/ActionBar_OrgApps.png"/></a>
+## Delving Into the Details 
+From any main page, you can drill into an asset or finding from the table row by clicking on the “Name”. Contrast highlights metrics on the asset or finding for a quick snapshot of core data. Navigate the sub-pages to get more details on related pieces, view activity more closely, access review policy, or capture comments and collaborate with team members. 
 
-## Trace Filter 
-When a user is within an application and reviewing vulnerabilities, he/she may use the trace filter to limit the result set of traces meeting the search criteria. 
-
-<a href="assets/images/TraceFilter.png" rel="lightbox" title="Trace Filter Search"><img class="thumbnail" src="assets/images/TraceFilter.png"/></a>
+<a href="assets/images/Details.png" rel="lightbox" title="Details View"><img class="thumbnail" src="assets/images/Details.png"/></a>
