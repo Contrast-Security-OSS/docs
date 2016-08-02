@@ -9,11 +9,11 @@ After downloading from your account, install the agent from your application's r
 ``` sh
 npm install node_contrast-#.#.#.tar.gz
 ```
-This will add the agent to your ```node_modules``` folder without creating an entry in the dependencies list of your ```package.json```.
+This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json*.
 
 ## Setup
-Unlike the other agents, the Node agent requires you to have set up a configuration file before running it for the first time. By default, the agent looks for this configuration file in your application's root directory and expects the file to be called ```contrast.json```.
-The minimum required contrast.json setup should look like this:
+Unlike the other agents, the Node agent requires you to have set up a configuration file before running it for the first time. By default, the agent looks for this configuration file in your application's root directory and expects the file to be called *contrast.json*.
+The minimum required *contrast.json* setup should look like this:
 ``` javascript
 {
     "apiKey":"api_key",
@@ -41,9 +41,9 @@ The API key and service key can be retrieved within the dropdown menu on your us
 For a full list of configuration options that can be placed in this file, see [Node Agent Configuration](user_nodeconfig.html#config).
 
 ## Running the agent
-After installation, the agent can be run with ```node-contrast <app-main>.js```.
+After installation, the agent can be run with *node-contrast <app-main>.js*.
 
-If you prefer to run your app with **npm**, you can add a run script to your application's ```package.json```.
+If you prefer to run your app with **npm**, you can add a run script to your application's *package.json*.
 
 ``` javascript
 "scripts": {

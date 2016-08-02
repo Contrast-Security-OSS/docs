@@ -4,7 +4,7 @@ description: "Configuring the Node.js Agent"
 tags: "NodeJS agent configuration"
 -->
 
-Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g: ```node-contrast server.js --mute --policy foo.json```). With the exception of ```--configFile```, they can all be added to your ```contrast.json``` file as well:
+Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g: ```node-contrast server.js --mute --policy foo.json```). With the exception of ```--configFile```, they can all be added to your *contrast.json* file as well:
 ``` javascript
 {
     "apiKey":"api_key",
@@ -22,16 +22,16 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
  Parameter                    | Description
 ------------------------------| -------------
 -h, --help                    | Print available configuration options
--c, --configFile &lt;path&gt; | Set config file location (defaults to ```./contrast.json```)
+-c, --configFile &lt;path&gt; | Set config file location (defaults to *./contrast.json*)
 --appname &lt;name&gt;        | Name to register the application to TeamServer with
 --servername &lt;name&gt;     | Name to register the server to TeamServer with
 --rejectunauthorized          | The server will allow any connection to TeamServer which isn't authorized with the list of supplied CAs
---uri &lt;uri&gt;             | URI to connect to TeamServer if different from ```contrast.json```
---apikey &lt;key&gt;          | Organization's API key if different from ```contrast.json```
+--uri &lt;uri&gt;             | URI to connect to TeamServer if different from *contrast.json*
+--apikey &lt;key&gt;          | Organization's API key if different from *contrast.json*
 --http-timeout &lt;time&gt;   | HTTP timeout value in milliseconds (default= 10000)
 --mute                        | The Contrast agent will not print anything to standard out
 --policy &lt;path&gt;         | Custom policy file
---appRoot                     | Set the location of the application's root directory. This should be the location of the ```package.json```, if different from the location of the app's entry point
+--appRoot                     | Set the location of the application's root directory. This should be the location of the *package.json*, if different from the location of the app's entry point
 --localonly                   | Disable reporting to TeamServer
 --appArgs &lt;args&gt;        | Specify args to pass into the application
 --httpProxy &lt;url&gt;       | HTTP proxy url for the agent
@@ -44,11 +44,11 @@ DEBUG=contrast:*
 ```
 Additionally, the namespace can be manipulated to show and hide certain paths. If, for instance, you only wish to see statements within the namespaces ```contrast:hooks``` and ```contrast:http```, you can set the environment variable as ```DEBUG=contrast:hooks,contrast:http```. If you wish to hide certain namespaces, prepend a ```-```, as in ```DEBUG=contrast:*,-contrast:hooks```
 
-Additionally, by default, the agent logs to ```<app_root>/node-contrast.log```. For performance reasons, verbose logging options are disabled. The following configuration options allow you to modify how the agent handles file logging:
+Additionally, by default, the agent logs to *<app_root>/node-contrast.log*. For performance reasons, verbose logging options are disabled. The following configuration options allow you to modify how the agent handles file logging:
 
  Parameter               | Description
 -------------------------|-------------
---logFile &lt;path&gt;   | Specify where Contrast should put your log file if different from location in ```contrast.json```
+--logFile &lt;path&gt;   | Specify where Contrast should put your log file if different from location in *contrast.json*
 --showrewrite            | Log contents of modules that have been rewritten
 --dataflowLogging        | Enable verbose propagation logging
 --debug                  | Enable debug level logging
