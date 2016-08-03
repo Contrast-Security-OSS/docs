@@ -3,19 +3,20 @@ title: "Common Java Keytool Commands"
 description: "Common Keytool commands and workflows"
 tags: "configuration SSL EOP administration tools keytool openssl"
 -->
-# Who Should Read this Document
-This is an overview of useful commands and introductory principles for a person assuming system administration of Contrast TeamServer EOP where SSL is part of your deployment.  Examples presented below are not presented as a step-by-step document but intended to be helpful to describe workflows where SSL could be used and describe the commands possible for implementation and debugging.
 
-At Contrast, we normally see three workflows where SSL is added:
+## Who Should Read This Document
+This is an overview of useful commands and introductory principles for a person assuming system administration of Contrast TeamServer EOP, where SSL is part of your deployment.  The examples presented below are not intended to provide step-by-step instruction, but rather to assist in describing workflows where SSL could be used, as well as the commands possible for implementation and debugging.
+
+At Contrast, we typically see three workflows where SSL is added:
 * Setting up TeamServer UI HTTPS
 * Integrating with LDAP or Active Directory where you see `ldaps://`
-* Securing communication between agents and TeamServer.
+* Securing communication between agents and TeamServer
 
-# Keytool
+## Keytool
 
-## Create a Keystore and keypair
+### Create A Keystore And Keypair
 
-The command below will create a new keystore (if one does not exist), new keypair, and alias called teamserver.
+The command below will create a new keystore (if one does not exist), new keypair, and an alias called "teamserver".
 
 ```
 keytool -genkeypair \
@@ -23,9 +24,11 @@ keytool -genkeypair \
         -keyalg RSA \
         -keystore contrast.jks
 ```
+
 When running this command, you will be prompted for information to identify yourself and your organization.  This command requires a password that you will need to remember for future integrations.
 
-Example output:
+Sample Output:
+
 ```
 Enter keystore password:
 Re-enter new password:
@@ -51,23 +54,27 @@ $ ls
 contrast.jks
 ```
 
-## Create a CSR for existing Keystore
+### Create A CSR For Existing Keystore
 
-A certificate signing request (CSR) is what your Certificate Authority needs from you to create a SSL Certificate.
+A certificate signing request (CSR) is what your Certificate Authority needs from you in order to create a SSL Certificate.
+
 ```
 keytool -certreq \
         -alias teamserver \
         -file teamserver.csr \
         -keystore contrast.jks
 ```
+
 Taking a look at the directory after this command would show:
+
 ```
 $ ls
 contrast.jks	teamserver.csr
 ```
-The teamserver.csr can now be shared with your Certificate Authority and in response they should send you a signed SSL certificate for use in your environment.  
 
-##  Import a Signed, Root, or Intermediate CA Certificate into existing keystore
+The *teamserver.csr* can now be shared with your Certificate Authority. In response, they should send you a signed SSL certificate for use in your environment.  
+
+##  Import A Signed, Root, Or Intermediate CA Certificate Into Existing Keystore
 
 When importing root and intermediate certificates, you will need to be aware of a small change to the `-alias` and `-file` options.
 
@@ -77,7 +84,7 @@ To view the contents of this keystore:
 ```
 $ keytool -keystore cacerts -list
 Enter keystore password:
-```  
+```
 
 If you are using an internal CA, then you will need to obtain root and intermediate certificates to verify the chain of trust through the keystores on both sides of the connection.  
 
@@ -90,7 +97,9 @@ keytool -import \
         -file my-root-cert.crt
         -keystore contrast.jks
 ```
-## Intermediate
+
+### Intermediate
+
 ```
 keytool -import \
         -trustcacerts
@@ -98,10 +107,12 @@ keytool -import \
         -file my-intermediate-cert.crt
         -keystore contrast.jks
 ```
-## Signed
-Notice here that the alias used is the same in all examples above, specifically the Certificate Signing Request example.  The my-ca-signed-cert.crt is what you should receive in response to a CSR.  
+
+### Signed
+Notice here that the alias used is the same in all examples above, specifically the Certificate Signing Request example.  The *my-ca-signed-cert.crt* is what you should receive in response to a CSR.  
 
 It is very important that this Signed Certificate is imported to the alias that matches the private key used to create the CSR.
+
 ```
 keytool -import \
         -trustcacerts
@@ -109,7 +120,6 @@ keytool -import \
         -file my-ca-signed-cert.crt
         -keystore contrast.jks
 ```
-
 
 
 ## Listing Keystore Contents
@@ -143,7 +153,7 @@ keytool -list \
           -keystore contrast.jks
 ```
 
-## Export Certificate from your Keystore
+## Export Certificate From Your Keystore
 
 ```
 keytool -export
@@ -152,7 +162,7 @@ keytool -export
         -keystore contrast.jks
 ```
 
-## Delete an alias from your keystore
+## Delete An Alias From Your Keystore
 
 ```
 keytool -delete \
@@ -160,7 +170,7 @@ keytool -delete \
         -keystore contrast.jks
 ```
 
-## Rename an alias in your keystore
+## Rename An Alias In Your Keystore
 
 ```
 keytool -changealias \
@@ -169,7 +179,7 @@ keytool -changealias \
         -keystore contrast.jks
 ```
 
-## Change your keystore password
+## Change Your Keystore Password
 
 ```
 keytool -storepasswd \
