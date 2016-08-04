@@ -18,14 +18,14 @@ tags: "3.3.0 July Release Notes"
 * CONTRAST-9333: Support Dropwizard 0.9.2
 
 ## .Net Agent
-* CONTRAST-8841: Add 'Skip-Analysis' Methods to policy.xml
-* CONTRAST-9285: Unnecessary propagation events created during NameValueCollection.Add(collection) hurt performance
-* CONTRAST-9003: .NET agent not finding request-validation-disabled for MVC controller actions
-* CONTRAST-8955: Index out of range exception during persistent-xss rule's handling of certain SELECT statements
-* CONTRAST-9187: System.ArrayTypeMismatchException in HttpRequestMessage.ToString during trace creation 
-* CONTRAST-8715: FP Using System.Xml.XmlTextWriter.WriteString()
-* CONTRAST-8652: Add ClientConfigPaths.GetHash to hash blacklist for .NET
-* CONTRAST-8107: Investigate additional JSON.NET Encoders
+* CONTRAST-8841: Add 'Skip-Analysis' Methods to *policy.xml*
+* CONTRAST-9285: Unnecessary propagation events created during *NameValueCollection.Add(collection)* hurt performance
+* CONTRAST-9003: .NET agent not finding *request-validation-disabled* for MVC controller actions
+* CONTRAST-8955: Index out of range exception during persistent-xss rule's handling of certain *SELECT* statements
+* CONTRAST-9187: *System.ArrayTypeMismatchException* in *HttpRequestMessage.ToString* during trace creation 
+* CONTRAST-8715: FP Using *System.Xml.XmlTextWriter.WriteString()*
+* CONTRAST-8652: Add *ClientConfigPaths.GetHash* to hash blacklist for .NET
+* CONTRAST-8107: Investigate additional *JSON.NET* Encoders
 
 ## NodeJS Agent
 * CONTRAST-9021: Fixes for missing eval context
@@ -47,7 +47,7 @@ tags: "3.3.0 July Release Notes"
 * CONTRAST-9044: Update Offline Presence Indicator Color (Color Blindness)
 * CONTRAST-8207: Org Portal > Servers - Sorting is lost after editing a Server
 * CONTRAST-9096: Export Trace is no longer available in Vulnerability details page
-* CONTRAST-8795: Receiving Notifications when Unsubscribed.
+* CONTRAST-8795: Receiving Notifications when Unsubscribed
 * CONTRAST-9273: TeamServer Goes Into Endless Loop When License Expired
 * CONTRAST-9418: Activemq log files are filling up with failed transactions
 
