@@ -19,22 +19,23 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 ```
 
 ## General Configuration Options
- Parameter                    | Description
-------------------------------| -------------
--h, --help                    | Print available configuration options
--c, --configFile &lt;path&gt; | Set config file location (defaults to *./contrast.json*)
---appname &lt;name&gt;        | Name to register the application to TeamServer with
---servername &lt;name&gt;     | Name to register the server to TeamServer with
---rejectunauthorized          | The server will allow any connection to TeamServer which isn't authorized with the list of supplied CAs
---uri &lt;uri&gt;             | URI to connect to TeamServer if different from *contrast.json*
---apikey &lt;key&gt;          | Organization's API key if different from *contrast.json*
---http-timeout &lt;time&gt;   | HTTP timeout value in milliseconds (default= 10000)
---mute                        | The Contrast agent will not print anything to standard out
---policy &lt;path&gt;         | Custom policy file
---appRoot                     | Set the location of the application's root directory. This should be the location of the *package.json*, if different from the location of the app's entry point
---localonly                   | Disable reporting to TeamServer
---appArgs &lt;args&gt;        | Specify args to pass into the application
---httpProxy &lt;url&gt;       | HTTP proxy url for the agent
+ Parameter                       | Description
+------------------------------   | -------------
+-h, --help                       | Print available configuration options
+-c, --configFile &lt;path&gt;    | Set config file location (defaults to *./contrast.json*)
+--appname &lt;name&gt;           | Name to register the application to TeamServer with
+--servername &lt;name&gt;        | Name to register the server to TeamServer with
+--rejectunauthorized             | The server will allow any connection to TeamServer which isn't authorized with the list of supplied CAs
+--uri &lt;uri&gt;                | URI to connect to TeamServer if different from *contrast.json*
+--apikey &lt;key&gt;             | Organization's API key if different from *contrast.json*
+--http-timeout &lt;time&gt;      | HTTP timeout value in milliseconds (default= 10000)
+--mute                           | The Contrast agent will not print anything to standard out
+--policy &lt;path&gt;            | Custom policy file
+--ruleRequestLimit &lt;limit&gt; | Set the maximum number of times a rule can trigger per request (default 5)
+--appRoot                        | Set the location of the application's root directory. This should be the location of the *package.json*, if different from the location of the app's entry point
+--localonly                      | Disable reporting to TeamServer
+--appArgs &lt;args&gt;           | Specify args to pass into the application
+--httpProxy &lt;url&gt;          | HTTP proxy url for the agent
 
 ## Logging
 To prevent crowding *stdout*, INFO level statements are not logged to the console unless the environment variable ```DEBUG``` is set to include the Contrast namespace, as follows:
