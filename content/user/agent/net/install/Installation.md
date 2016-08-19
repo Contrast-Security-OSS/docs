@@ -3,22 +3,33 @@ title: ".Net Agent Installation"
 description: "Installing the Contrast .NET Agent."
 tags: "configuration installation agent .Net"
 -->
+## System Requirements
+### Minimum
+* .NET Framework 4.5.2 present
+* 2 CPU
+* 4 GB memory 
+
+### Recommended 
+* .NET Framework 4.5.2 present
+* 4+ CPU
+* 8+ GB memory 
+ 
 
 ## Before Beginning Installation
 
 Confirm the following:
-
 * You have administrative access to the web server and the server is supported by Contrast
-* There is a deployed application to be analyzed and the web application technology is supported by Contrast
-* The server has at least .NET Framework 4.5.2 installed
+* There is a deployed application to be analyzed and the web application [technology](user_netinstall.html#supp) technology is supported by Contrast
+* The server meets the minimum system requirements (see above)
 * Contrast will be the only profiler present
 * IIS can be restarted
 * The web server has network connectivity with TeamServer
 
 You are now ready to install the Contrast .NET Agent.
 
-## Installation 
 
+
+## Installation 
 To install the Contrast .NET Agent, follow these steps:
 
 1. Log in to the Contrast TeamServer and select **Add an Application**. 
