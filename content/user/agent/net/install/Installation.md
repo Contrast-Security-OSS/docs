@@ -4,6 +4,7 @@ description: "Installing the Contrast .NET Agent."
 tags: "configuration installation agent .Net"
 -->
 ## System Requirements
+
 ### Minimum
 * .NET Framework 4.5.2 present
 * 2 CPU
