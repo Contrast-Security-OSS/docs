@@ -6,9 +6,6 @@ tags: "configuration logging agent .Net"
 
 The Contrast.NET Agent logs information to the ***Contrast.NET\LOGS*** directory within the Windows ***ProgramData*** directory:
 
-* Windows 2003
-    ***C:\Documents and Settings\All Users\Application Data\Contrast.NET***
-
 * Windows 2008/2012 
     ***C:\ProgramData\Contrast.NET\LOGS*** (There is no space in ***ProgramData***)
 
