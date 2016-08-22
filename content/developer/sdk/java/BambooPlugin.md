@@ -6,11 +6,11 @@ tags: "Bamboo SDK Integration Java"
 
 ## About The Contrast Bamboo Plugin 
 
-Lorem ipsum.
+[Sample intro below - please revise:
 
-The Contrast Maven Plugin is used to integrate the Contrast jar with your build. It is capable of authenticating a user to TeamServer, downloading the latest Java agent, and verifying your build.
+"The Contrast Maven Plugin is used to integrate the Contrast jar with your build. It is capable of authenticating a user to TeamServer, downloading the latest Java agent, and verifying your build.
 
-[Maven](https://maven.apache.org/) is a build tool that utilizes `pom.xml` files to configure your applications. It is used to build, package, and test Java applications.
+[Maven](https://maven.apache.org/) is a build tool that utilizes `pom.xml` files to configure your applications. It is used to build, package, and test Java applications."]
 
 ## Installation
 The Bamboo Plugin is available on the Atlassian Marketplace. 
