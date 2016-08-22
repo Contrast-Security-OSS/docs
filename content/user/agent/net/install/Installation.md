@@ -20,7 +20,7 @@ tags: "configuration installation agent .Net"
 
 Confirm the following:
 * You have administrative access to the web server and the server is supported by Contrast
-* There is a deployed application to be analyzed and the web application [technology](user_netinstall.html#supp) technology is supported by Contrast
+* There is a deployed application to be analyzed and the web application [technology](user_netinstall.html#supp) is supported by Contrast
 * The server meets the minimum system requirements (see above)
 * Contrast will be the only profiler present
 * IIS can be restarted
