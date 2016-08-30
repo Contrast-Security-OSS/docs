@@ -91,7 +91,7 @@ Follow the steps below to enable:
 * Select Organization Settings from the Settings Menu.
 * Select Users from the settings menu navigation.
 * Toggle the button in the Protection column for each user you desire Protect Access.
-** The menu color will change to green when Protect is enabled.
+* The menu color will change to green when Protect is enabled.
 * Note: The Threats tab in top navigation will become visible.
 
 <a href="assets/images/Settings_RASP_Enabled.png" rel="lightbox" title="Enabled Protection"><img class="thumbnail" src="assets/images/Settings_RASP_Enabled.png"/></a>
