@@ -1,7 +1,7 @@
 <!--
 title: "Organizations within TeamServer"
 description: "Creating, Managing and Deleting Organizations"
-tags: "TeamServer organizations"
+tags: "TeamServer organizations license defense protect RASP IAST assess"
 -->
 
 ## Overview
@@ -48,3 +48,9 @@ Deleting an organization is a non-reversable operation. If an organization is de
 
 #### Impersonating Users within an Organization
 Users with SuperAdmin credentials have the ability to impersonate the organization administrator for a given organization when they select the "Manage" button from the action bar. Impersonation gives the SuperAdmin the ability to view the organization settings, applications and traces for a given organization using the identity of another user.
+
+### License Management
+Organizations are granted licenses by the SuperAdmin for On-Premise installations and by the Contrast team for SaaS. The license information is accessible from the Organization Settings menu for an organization administrator. From the Organization overview, the administrator can review the state of licenses, specifically the count of allocated licenses, the number of used licenses and the expiration date of the license. No actual editing of the license can be made from this screen.
+
+<a href="assets/images/OrgSettings_license.png" rel="lightbox" title="License Statistics"><img class="thumbnail" src="assets/images/OrgSettings_license.png"/></a>
+
