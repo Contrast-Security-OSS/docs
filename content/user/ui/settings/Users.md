@@ -1,7 +1,7 @@
 <!--
 title: "Creating, Managing and Deleting Users in TeamServer"
 description: "Creating, Managing and Deleting Users in TeamServer"
-tags: "TeamServer user"
+tags: "TeamServer user settings license RASP defend protection"
 -->
 
 ## Viewing Users in TeamServer
@@ -79,3 +79,19 @@ Access can be restricted from both the System Administration (Users) and Organiz
 
 ### Deleting Users
 Users can be deleted by System Administrators and Organization Administrators. We recommend disabling users by restricting access prior to deleting. The operation of deleting a user is a permanent operation. Therefore, we suggest that user accounts be deleted when absolutely necessary.
+
+## Enabling Application Protection
+Organization administrators may grant application protection access to a given user from the user settings page. The organization must first have protection enabled, which is a step performed by the Super Administrator. SaaS customers will be configured directly by Contrast. EOP customers must configure protection first as the Super Administrator. 
+
+<a href="assets/images/Settings_RASP_Default.png" rel="lightbox" title="Protection Disabled"><img class="thumbnail" src="assets/images/Settings_RASP_Default.png"/></a>
+
+Follow the steps below to enable:
+
+* Login to TeamServer as an Organizations Administrator.
+* Select Organization Settings from the Settings Menu.
+* Select Users from the settings menu navigation.
+* Toggle the button in the Protection column for each user you desire Protect Access.
+* The menu color will change to green when Protect is enabled.
+* Note: The Threats tab in top navigation will become visible.
+
+<a href="assets/images/Settings_RASP_Enabled.png" rel="lightbox" title="Enabled Protection"><img class="thumbnail" src="assets/images/Settings_RASP_Enabled.png"/></a>
