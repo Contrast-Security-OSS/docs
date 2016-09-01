@@ -15,6 +15,8 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.app.features | JSON from disk to use for app<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.appname | Specify the name of a standalone or desktop application.<br>**DEFAULT VALUE:** determined by scanning web.xml</br> |
 | contrast.appupdate | boolean to enable/disable threads that sends updates about applications to Team Server<br>**DEFAULT VALUE:** true</br> |
+| contrast.auto.license.assessment | boolean to allow Contrast to license an application on creation<br>**DEFAULT VALUE:** false</br> |
+| contrast.auto.license.protection | boolean to allow Contrast to license a server on creation<br>**DEFAULT VALUE:** false</br> |
 | contrast.classpath.libs | Determines whether or not Contrast will track usage of libraries listed in the environment's *java.class.path* property.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.cloneinput | boolean to enable/disable cloning of tracked objects<br>**DEFAULT VALUE:** true</br> |
 | contrast.container | manually override the web app container name/id<br>**DEFAULT VALUE:** detected by the Java Agent</br> |
@@ -31,6 +33,7 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.path | Contrast "working directory" override<br>**DEFAULT VALUE:** the "current" folder, according to the container</br> |
 | contrast.poll.features | boolean to enable/disable Features polling thread<br>**DEFAULT VALUE:** true</br> |
 | contrast.properties | location of file containing Java properties style key, value pairs. <br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.redos.characcess.limit | The number of character accesses that can occur when when processing a regular expression before blocking occurs<br>**DEFAULT VALUE:** 3000000</br> |
 | contrast.reporting.period | Polling period for spooling reports, like traces, app updates (in milliseconds)<br>**DEFAULT VALUE:** 3000 (3 seconds, in milliseconds)</br> |
 | contrast.rootapp | This value can override (or provide one if none exist) a display name for the app running at the root context. This may be needed for Contrast to collect analytics on the application.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.scanresponses | boolean to enable/disable scanning of HTTP responses<br>**DEFAULT VALUE:** true</br> |
@@ -59,14 +62,14 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.level | Log output level<br>**DEFAULT VALUE:** info</br> |
 | contrast.log | Enable *diagnostic logging*. This hurts performance, but generates useful information for debugging Contrast. The value set here will be the location to which log output is saved. If no log file exists at this location, one will be created. For instance, */opt/Contrast/contrast.log* will create a log in the */opt/Contrast* directory and rotate it automatically as needed.<br>**DEFAULT VALUE:** ${HOME}/.contrast/logs/contrast.log</br> |
 | contrast.log.backups | Specify the number of "backup" logs that will be created before Contrast will clean up the oldest file. This value has a cap of 100, meaning no more than 100 log files can be stored on the file system at one time. A value of 0 here means that no backups will be created and the log will simply be truncated when it reaches its size cap.<br>**DEFAULT VALUE:** false</br> |
-| contrast.log.daily | Change the Contrast logger from a file sized based rolling scheme to a date based rolling scheme. At midnight serve time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. Setting this flag overrides the subsequent backups and size flags.<br>**DEFAULT VALUE:** false</br> |
+| contrast.log.daily | Change the Contrast logger from a file sized based rolling scheme to a date based rolling scheme. At midnight serve time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.<br>**DEFAULT VALUE:** true</br> |
 | contrast.log.size | Specify the file size cap, in MB, of each log file. This value has a cap of 10, meaning no more than 10MB will be logged to a single file.<br>**DEFAULT VALUE:** 10</br> |
 
 ### Defend Mode
 |Property|Description|
 |-|-|
 | contrast.security.log.backups | Specify the number of "backup" logs that will be created before Contrast will clean up the oldest file. This value has a cap of 100, meaning no more than 100 log files can be stored on the file system at one time. A value of 0 here means that no backups will be created and the log will simply be truncated when it reaches its size cap.<br>**DEFAULT VALUE:** false</br> |
-| contrast.security.log.daily | Change the Contrast security logger from a file sized based rolling scheme to a date based rolling scheme. At midnight server time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. Setting this flag overrides the subsequent backups and size flags.<br>**DEFAULT VALUE:** false</br> |
+| contrast.security.log.daily | Change the Contrast security logger from a file sized based rolling scheme to a date based rolling scheme. At midnight server time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.<br>**DEFAULT VALUE:** true</br> |
 | contrast.security.log.file | The file to which logging of security events will occur. By default, this file is located at <working_directory>/security.log.<br>**DEFAULT VALUE:** ${HOME}/.contrast/logs/security-events.log</br> |
 | contrast.security.log.level | Set the log level for security logging. Values include: trace, debug, info, warn, error, fatal, off. Setting this to off will disable security logging.<br>**DEFAULT VALUE:** info</br> |
 | contrast.security.log.size | Specify the file size cap, in MB, of each log file. This value has a cap of 10, meaning no more than 10MB will be logged to a single file. By default, this value is '10'.<br>**DEFAULT VALUE:** 10</br> |
