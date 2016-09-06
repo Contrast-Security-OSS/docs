@@ -1,6 +1,6 @@
 <!--
 title: "Contrast 3.3.1 - August 2016"
-description: "Contrast 3.3.1 August  2016"
+description: "Contrast 3.3.1 August 2016"
 tags: "3.3.1 August Release Notes"
 -->
 
@@ -12,7 +12,7 @@ tags: "3.3.1 August Release Notes"
 * CONTRAST-9435: New Rule - Server-Side Request Forgery
 * CONTRAST-9460: New Rule - Regular Expression Denial of Service
 * CONTRAST-9507: Improve Hard-Coded Password and Key Field Detection
-* CONTRAST-9513: Improve Freemarker vulnerability detection and filterting
+* CONTRAST-9513: Improve Freemarker vulnerability detection and filtering
 * CONTRAST-9611: Set daily log rotation to default
 * CONTRAST-9734: Update Command Injection Rule (RASP) vector detection
 * CONTRAST-9787: Add Java installer capability for WebSphere
@@ -25,26 +25,26 @@ tags: "3.3.1 August Release Notes"
 * CONTRAST-9625: Add do not propagate heuristic for interned strings
 * CONTRAST-8851: Refactor named pipe messages
 * CONTRAST-9695: ContrastProfiler Should Use Type Token Instead of ClassID in Library Message
-* CONTRAST-9629: .NET Agent version request needs to handle NotModified response code
+* CONTRAST-9629: .NET Agent version request needs to handle *NotModified* response code
 * CONTRAST-9073: .NET Agent Should Disable Response Rules If Toggled On TS
 * CONTRAST-9633: .NET Agent needs to handle 404 response for version request when TS can't find .NET agent
 * CONTRAST-9801: Invalid Policy Causes Unhandled Exception In Module Policy Parsing
 
 
 ## NodeJS Agent
-* CONTRAST-9557: Add --serverName config option
+* CONTRAST-9557: Add *--serverName* config option
 * CONTRAST-9669: Limit number of times a rule can trigger for a single request
-* CONTRAST-9556: rejectUnauthorized should be changed to allowUnauthorized
+* CONTRAST-9556: *rejectUnauthorized* should be changed to *allowUnauthorized*
 * CONTRAST-9603: unvalidated redirect not triggering with 2 args to response.redirect
 * CONTRAST-9667: investigate stack blacklisting
 * CONTRAST-9677: sources getter should not run in propagator scope
-* CONTRAST-9485: --nodataflow and --nopropagation no longer work with newer rewrite changes
+* CONTRAST-9485: *--nodataflow* and *--nopropagation* no longer work with newer rewrite changes
 * CONTRAST-9289: Out of memory issues
 * CONTRAST-9690: rewrite not skipping modules loaded in agent code
-* CONTRAST-9826: add patches for path.win32 and path.posix
+* CONTRAST-9826: add patches for *path.win32* and *path.posix*
 * CONTRAST-9590: TypeCheck missing For Non-String Sources
 * CONTRAST-9523: Rewrite errors
-* CONTRAST-9692: Rewrite breaking modules using es6 features with module.wrap
+* CONTRAST-9692: Rewrite breaking modules using es6 features with *module.wrap*
 * CONTRAST-9676: Appdynamics .orig causing typeerror in node agent
 * CONTRAST-9691: blacklist feature not properly handling cases where a frame has no filename
 * CONTRAST-9837: util.inherits: Cannot read property 'prototype' of undefined
@@ -61,14 +61,14 @@ tags: "3.3.1 August Release Notes"
 * CONTRAST-9811: Add Padding Oracle Rule in TeamServer
 * CONTRAST-9354: Support for WebHooks integration with Slack, Hipchat and Generic WebHook
 * CONTRAST-9912: View users can send vuln via email within vuln
-* CONTRAST-9673: Possible Racing Condition with ClassLoading on Startup
+* CONTRAST-9673: Possible Racing Condition with *ClassLoading* on Startup
 * CONTRAST-9682: Organization Settings: Group Page Failing to Load Group Grid Control
 * CONTRAST-9831: Email Notification Are Not Getting sent for child applications
 * CONTRAST-9902: Preflight is rejecting trace entries from different apps if the hash and rule are the same
 * CONTRAST-9888: Can't tag element using IE
-* CONTRAST-9601: 'SHA-1' hash algorithm used at JavaEncryptor.java
-* CONTRAST-9632: 	RASP IP blacklist and whitelist features are not polling for automatic updates
-* CONTRAST-9825: Cannot expand Command Injection finding on Threats --> Events page
+* CONTRAST-9601: 'SHA-1' hash algorithm used at *JavaEncryptor.java*
+* CONTRAST-9632: RASP IP blacklist and whitelist features are not polling for automatic updates
+* CONTRAST-9825: Cannot expand Command Injection finding on Threats > Events page
 * CONTRAST-9530: Revisions to LDAP Workflow
 * CONTRAST-9778: Vulnerable Libraries fail to show up in LibraryReports for BirtService
 
