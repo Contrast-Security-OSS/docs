@@ -23,7 +23,7 @@ After choosing **Active Directory** in Step 1 of the Authentication Wizard (**Sy
  * **Password** - This is the password for the Bind user described above.
 
 
-### Connecting To The Server
+### Connecting The Server
 | Option      | Description                                                                                                      | Default                    |
 |-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
 | Protocol    | The protocol that should be used to communicate with the LDAP server. Will be one of LDAP or LDAPS (LDAP w/ SSL). | LDAP                       |
@@ -54,14 +54,14 @@ Like setting up LDAP, after configuring your connection details and bind credent
 
 <BR>
 
-## Contrast Authentication Groups
+## Configure Groups
 An important distinction is that Contrast does not perform Data Access Control using the integrated Active Directory Servers - that is to say that roles and access to data within the application are handled by the application, and user roles are set by the Organization Administrators. That being said, there is an Access Control check when logging in (or creating new users) to ensure that the provided user does in fact belong to the correct group within the Active Directory.
 
 **Contrast User Group** This group allows users to be added to an organization and log in to the standard user interface. This is the group that most users will need to be a member of.
 
 **Contrast SuperAdmin Group** This group allows users to log in to the Super Administrator interface. This interface should only be accessible to Application and System administrators.
 
-It is important to note that a user can not belong to both the Users and Admin groups.
+It is important to note that a user can not belong to both the User and Admin groups.
 
 You can use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
 
@@ -109,7 +109,7 @@ Once all of the configuration options are set, verify that you are able to log i
 
 **NOTE** - If testing a login seems to take an excessive amount of time, this is likely a result of having the wrong setting for the Follow Referrals option on the Advanced Settings screen. Flip the setting and you should be able to verify login functionality quickly.
 
-After all settings are verified and test logins are successful, click the "Save" button to write out the configuration to disk. A prompt about the implications of changing the Authentication Mode will be shown, then TeamServer will be restarted to effect the new configuration changes.
+After all settings are verified and test logins are successful, click **Finish** to complete the configuration. You will need to restart TeamServer in order for the authentication changes to be applied.
 
 <BR>
 
