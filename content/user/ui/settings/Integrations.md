@@ -34,10 +34,10 @@ TeamServer supports integration with HipChat as well! With this new connection y
 
 ### Setup
 
-On the HipChat website, log in as a user with at least **Send Notification** scope. Typically this is an admin user.
+On the HipChat website, log in as a user with at least **Send Notification** and **View Room** scopes. Typically this is an admin user.
 
 * Edit your profile and click **API access**
-* Create a new token and add at least the **Send Notification** scope
+* Create a new token and add at least the **Send Notification** and **View Room** scope
 * Copy the token created
 
 To connect in TeamServer:
