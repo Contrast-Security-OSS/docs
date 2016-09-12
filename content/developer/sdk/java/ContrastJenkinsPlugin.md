@@ -26,11 +26,11 @@ These settings are for the plugin to connect to TeamServer and query for results
 
 | Parameter                   | Description                                             |
 |-----------------------------|---------------------------------------------------------|
-| TeamServer Server Name      | Name of agent to use in the query for vulnerability results in the project post-build action (note: not the address of the TeamServer). This is specified in the agent arguments with ```-Dcontrast.server```, and by default uses the hostname of the server the agent is running on.  Agents are listed in the `Servers` tab when logged in to TeamServer. |
+| TeamServer Server Name      | Name of the agent to use in the query for vulnerability results in the project post-build action. This can be specified in the agent arguments with ```-Dcontrast.server```, and by default is the hostname of the server the agent is running on.  Agent names are listed on the `Servers` page when logged in to TeamServer.  Note: this is not the address of the TeamServer. |
 | TeamServer Username         | This is the username/email for your account in TeamServer |
 | TeamServer Service Key      | Service Key found in Organization Settings             |
 | TeamServer API Key          | API Key found in Organization Settings                 |
-| TeamServer API Url          | API URL to your TeamServer instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you are a SaaS customer, otherwise use the URL of your TeamServer, e.g. *http://contrastserver:8080/Contrast/api* |
+| TeamServer Url          | API URL to your TeamServer instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you are a SaaS customer, otherwise use the URL of your TeamServer, e.g. *http://contrastserver:8080/Contrast/api* |
 
 ### Testing The TeamServer Connection
 
