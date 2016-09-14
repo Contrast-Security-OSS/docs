@@ -27,7 +27,7 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.external.lib.dir | semi-colon delimited list of directories where external libraries are stored; used during library analysis<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.inject.browseragent | manually override name of browser agent<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.j2ee.context.discovery | boolean to enable/disable J2EE context discovery<br>**DEFAULT VALUE:** true</br> |
-| contrast.mode | assess: data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.mode | assess: data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features. Be careful when using this property. Enabling it will force the Agent to use baked in default policies, meaning it will ignore settings provided by TeamServer. <br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.nested.libs.depth | max archive unpacking depth when analyzing libraries<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.noteamserver.enable | boolean to enable/disable Contrast to start up without access to TeamServer<br>**DEFAULT VALUE:** false</br> |
 | contrast.path | Contrast "working directory" override<br>**DEFAULT VALUE:** the "current" folder, according to the container</br> |
