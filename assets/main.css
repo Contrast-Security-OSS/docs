@@ -12,7 +12,7 @@
 .article a:link, 
 .article a:visited, 
 .article a:active {
-	color: #56B4AA;
+	color: #0DA1A9;
 	text-decoration: none;
 	font-weight: 400;
 }
@@ -34,7 +34,7 @@ a:active {
 }
 
 a:hover {
-	color: #56B4AA;
+	color: #0DA1A9;
 	text-decoration: none;
 }
 
@@ -166,7 +166,7 @@ h4 {
 
 /* Call To Action Green */
 .label4 {
-	color: #56B4AA; 
+	color: #0DA1A9; 
 	font-weight: 400;
 	font-size: 25px;
 }
