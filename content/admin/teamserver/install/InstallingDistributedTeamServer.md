@@ -30,7 +30,7 @@ In the example below, Contrast has been installed at path `/usr/local/contrast`.
 * data/.initialized
 * data/contrast.lic
 
-This code will compress necessary artifacts into your user's home directory.
+Compress these files into a zip file or a tar.gz file. Examples for linux commands that will compress necessary artifacts into your user's home directory.
 ```
 $ cd /usr/local/contrast
 $ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/.initialized data/.contrast
