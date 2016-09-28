@@ -102,64 +102,75 @@ h4 {
 	width: 40%;
 }
 
+/* Index Labels */
 
-/* Developer Labels*/
-
-.label1cat {
+.label0 {
 	font-family: 'Roboto', sans-serif;
-	color: #aecd43;
+	color: #292929; 
+	font-weight: 500;
+	font-size: 20px;
+}
+
+
+/* Latest Articles */
+.label4 {
+	font-family: 'Roboto', sans-serif;
+	color: #292929; 
 	font-weight: 500;
 	font-size: 25px;
 }
+
+
+/* Developer */
+
 .label1 {
 	font-family: 'Roboto', sans-serif;
-	color: #aecd43;
+	color: #292929;
 	font-weight: 500;
 	font-size: 20px;
 	float: right;
 	padding-top: 25px;
-	padding-right: 11px;
+	padding-right: 20px;
 }
 
-
-/* Administrator Labels */
-
-.label2cat {
-	font-family: 'Roboto', sans-serif;
-	color: #258CBF;
-	font-weight: 500;
-	font-size: 25px;
+.label1cat {
+	color: #94B758;
 }
+
+/* Administrator */
 
 .label2 {
 	font-family: 'Roboto', sans-serif;
-	color: #258CBF;
+	color: #292929;
 	font-weight: 500;
 	font-size: 20px;
 	float: right;
 	padding-top: 25px;
-	padding-right: 45px;
+	padding-right: 55px;
+}
+
+.label2cat {
+	color: #258CBF;
 }
 
 
-/* User Labels */
-
-.label3cat {
-	font-family: 'Roboto', sans-serif;
-	color: #5E4482; 
-	font-weight: 500;
-	font-size: 25px;
-}
+/* User */
 
 .label3 {
 	font-family: 'Roboto', sans-serif;
-	color: #5E4482; 
+	color: #292929; 
 	font-weight: 500;
 	font-size: 20px;
 	float: right;
 	padding-top: 25px;
-	padding-right: 60px;
+	padding-right: 70px;
 }
+
+
+.label3cat {
+	color: #0DA1A9;
+}
+
 
 /* Release Notes Headers */
 .label7 {
@@ -175,14 +186,6 @@ h4 {
 	color: #F7B600; 
 	font-weight: 500;
 	font-size: 30px;
-}
-
-/* Call To Action Green */
-.label4 {
-	font-family: 'Roboto', sans-serif;
-	color: #0DA1A9; 
-	font-weight: 500;
-	font-size: 25px;
 }
 
 
@@ -418,6 +421,7 @@ body {
 .container {
 	position: relative;
 	padding-left: 20px;
+	padding-top:10px;
 	margin-left: auto;
 }
 
@@ -441,8 +445,8 @@ body {
 	position: relative;
 	float: left;
 	text-align: center;
-	padding-left: 20px;
-	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-bottom: 30px;
 
 }
 
