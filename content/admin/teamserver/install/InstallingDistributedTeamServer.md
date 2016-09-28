@@ -19,8 +19,11 @@ Also, check back often for updates. As always please feel free to submit a Pull 
 ## Before You Get Started
 Before you get started with configuring a distributed TeamServer, make sure to read through the entire document. We've made several assumptions, which we list below. Make sure these assumptions hold true so that you don't run into an issue with your TeamServer. The following assumptions have been made prior to distributing the configuration:
 
-* Previous successful installation of Contrast EOP with a distributed [database configuration](TODO LINK)
+* Previous successful installation of Contrast EOP with a distributed database configuration.
 * Successful backup(s) and exports of the TeamServer database.
+* Collect Contrast TeamServer version numbers for the Application and Database. 
+
+In this example, Contrast has been installed at path `/usr/local/contrast`. To collect Contrast TeamServer application version numbers look in the VERSION file in `/usr/local/contrast/VERSION`. To collect the Contrast TeamSever database version please run the following query: ``select `version` from schema_version ORDER BY `installed_on` DESC LIMIT 1;``. Lets say the app version stands at: `3.3.2` and the database is at `3.3.2.012`. We can say the versions are the same as it is safe to drop `.012` from the db version. Lets assume that you have an existing application server(A) running with a separate database(B) both running `3.3.2` and you're about to install `3.4.2` onto a new application server(C) and connect it to B. You will need to stop A before installing `3.4.2` on C or you will need to update A before installing on C.  
 
 ## Collect Configuration from Current TeamServer
 In the example below, Contrast has been installed at path `/usr/local/contrast`.  You will need to gather the following:
