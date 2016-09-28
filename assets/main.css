@@ -135,6 +135,7 @@ h4 {
 
 .label1cat {
 	color: #94B758;
+
 }
 
 /* Administrator */
@@ -174,18 +175,12 @@ h4 {
 
 /* Release Notes Headers */
 .label7 {
-	font-family: 'Roboto', sans-serif;
 	color: #E63025; 
-	font-weight: 500;
-	font-size: 30px;
 }
 
 /* Contribute Headers */
 .label8 {
-	font-family: 'Roboto', sans-serif;
 	color: #F7B600; 
-	font-weight: 500;
-	font-size: 30px;
 }
 
 
@@ -352,6 +347,47 @@ h4 {
     border-top: none;
 }
 
+
+.btn-red {
+	color: #ffffff !important;
+	margin-top: 35px;
+	margin-left: 20px;
+	width: 165px;
+	display: block; 
+	background-color: #E63025; 
+	border-radius: 4px;
+	text-decoration: none;
+	padding: 8px 12px;
+	text-align: center;
+	font-size: inherit;
+	font-weight: 500;
+}
+
+.btn-yellow {
+	color: #ffffff !important;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 165px;
+	display: block; 
+	background-color: #F7B600; 
+	border-radius: 4px;
+	text-decoration: none;
+	padding: 8px 12px;
+	text-align: center;
+	font-size: inherit;
+	font-weight: 500;
+}
+
+.btn-position2 {
+	margin-top: 35px;
+}
+
+.disabled {
+	opacity: 0.5;
+}
+
+
+/*
 .button {
 	color: white;
 	margin-top: 35px;
@@ -366,6 +402,7 @@ h4 {
 .btn a:hover {
 	color: #fff !important;
 }
+*/
 
 .latest {
 	margin-top: 37px;
@@ -421,7 +458,7 @@ body {
 .container {
 	position: relative;
 	padding-left: 20px;
-	padding-top:10px;
+	padding-top:20px;
 	margin-left: auto;
 }
 
