@@ -46,7 +46,7 @@ Once you have launched the installer, you will be presented with several questio
 
 > **NOTE:** Pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. We make our best attempt to determine the hostname and pre-populate this value, but if the provided hostname is not resolvable by clients on the network, they won't be able to communicate back to the server.
 
-After the installation is complete, the TeamServer will perform its initial configuration and can take up to 10 minutes to fully start up. You can check the status of start up by watching `server.log` and `contrast.log` in `/usr/local/contrast/logs`. Once the server has started successfully you will see something similar to the following in `server.log`:
+After the installation is complete, the TeamServer will perform its initial configuration and can take 2-3 minutes to fully start up. You can check the status of start up by watching `server.log` and `contrast.log`. Once the server has started successfully you will see something similar to the following in `server.log`:
 ```
 260916 20.18.25,837 {} {} {} INFO  (Server.java:303) Contrast TeamServer Ready - Took 119305ms
 ```
