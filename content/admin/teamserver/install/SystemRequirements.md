@@ -7,8 +7,8 @@
 ## Preparing for the Installation
 The Contrast Enterprise on Premise (EOP) TeamServer includes a Tomcat servlet container, a MySQL database instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the TeamServer architecture. Very little preparation is needed by customers to perform an installation of the TeamServer. Customers should prepare the following prior to installing:
 
-* System with adequate compute and memory resources based on guidance from our sizing recommendations.
-* Adherence to the system requirements specified below.
+* System with adequate compute and memory resources based on guidance from our sizing recommendations
+* Adherence to the system requirements specified below
 * Installation of the MySQL run-time libraries (Linux Only)
 
 ## System Requirements
