@@ -56,7 +56,8 @@ After the installation is complete, the TeamServer will perform its initial conf
 ## Convert a default DB Installation into a Distributed Installation
 Edit the encrypted file `$CONTRAST_HOME/data/conf/database.properties` using the [encrypted editor](admin_tsconfig.html#encrypt). Look for `database.type`, create it as a new property if it does not exist. This property can either be `default` or `distributed`. Since we are setting up a distributed installation, set this value to `distributed` and modify the database connection values to point to a distributed database you would like to use. [Restart TeamServer](admin_tsinstall.html#run) for changes to take affect.  
 
-```user@ubuntu:/opt/contrast/bin$ ./edit-properties  -e ../data/esapi/ -f ../data/conf/database.properties
+```
+user@ubuntu:/opt/contrast/bin$ ./edit-properties  -e ../data/esapi/ -f ../data/conf/database.properties
 
 jdbc.type                                         : MYSQL
 database.prod.dir                                 : /opt/contrast/data/db
@@ -95,6 +96,7 @@ database.bk.dir                                   : /opt/contrast/data/backups/d
 jdbc.dialect                                      : com.aspectsecurity.contrast.teamserver.persistence.CustomMySQL5Dialect
 jdbc.driver                                       : com.mysql.jdbc.Driver
 
-Enter the name of the property to edit [q to Quit]:```
+Enter the name of the property to edit [q to Quit]:
+```
 
 Once this is done you may continue to add more application only installations. 
