@@ -5,14 +5,14 @@ tags: "EOP distributed configuration database scalability"
 -->
 
 ## Who Should Read This Document
-This guide is for Enterprise-On-Premises (EOP) administrators, who want to move away from the bundled, self-contained Contrast configuration in favor of a distributed configuration in which the database and application server are deployed on separate servers. Most customers will not have the need to configure a distributed TeamServer. Customers who do fit this profile are likely running with 100 or more connected agents and are seeking greater performance and scalability. These configurations are introduced in Contrast TeamServer 3.3.2
+This guide is for Enterprise-On-Premises (EOP) administrators who want to move away from the bundled, self-contained Contrast configuration in favor of a distributed configuration in which the database and application server are deployed on separate servers. Most customers will not have the need to configure a distributed TeamServer. Customers who do fit this profile are likely running with 100 or more connected agents and are seeking greater performance and scalability. These configurations are introduced in Contrast TeamServer 3.3.2.
 
 ## About Distributing The Contrast Configuration
 EOP customers typically install and update the Contrast TeamServer by downloading the installer/updater artifact from the [Contrast Hub](https://hub.contrastsecurity.com). Instructions can be found [here](admin_tsinstall.html#install).
 
-Some customers have the need to run a more advanced configuration. This document is intended for such customers, who require additional administration and management by an EOP administrator. We have simplified the configuration of TeamServer for EOP administrators to run their own installations of Tomcat, Java and MySQL, as long as they conform to our version requirements.
+Some customers have the need to run a more advanced configuration. This document is intended for such customers, who require additional administration and management by an EOP administrator. We have simplified the configuration of TeamServer for EOP administrators to run their own installations of Java, MySQL, and Tomcat, as long as they conform to our version requirements.
 
-This documentation will guide you through the setup and configuration of additional software, but please be aware that you are responsible for the monitoring and durability of this software.  That being said, if you are familiar with installing and administering Tomcat and MySQL, the process is straightforward to set up and maintain. 
+This documentation will guide you through the setup and configuration of additional software, but please be aware that you are responsible for the monitoring and durability of this software. That being said, if you are familiar with installing and administering MySQL and Tomcat, the process is straightforward to set up and maintain. 
 
 Check back often for updates and as always, please feel free to submit a pull request if you have suggestions or find any instructions incorrect.   
 
@@ -42,7 +42,7 @@ $ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/.initiali
 ```
 
 ## Distributed Fresh installation 
-It is possible to run the installation as a regular user, however we recommend installation to your system as a *privileged* user.  This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
+It is possible to run the installation as a regular user, however we recommend installation to your system as a *privileged* user. This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
 
 Once you have launched the installer, you will be presented with several questions. Please select the "Application Server Only" installation option when prompted. Provide the compressed file you created in the previous section and follow the onscreen steps.
 
