@@ -99,4 +99,7 @@ jdbc.driver                                       : com.mysql.jdbc.Driver
 Enter the name of the property to edit [q to Quit]:
 ```
 
+**NOTE:** If you are converting from a default embedded database configuration to a distributed configuration, `database.bk.enabled` also needs to be set to false.
+It is your responsibility for your own backups when running a distributed database configuration with TeamServer.
+
 Once this is done you may continue to add more application only installations. 
