@@ -14,7 +14,7 @@ Some customers have the need to run a more advanced configuration. This document
 
 This documentation will guide you through the setup and configuration of additional software, but please be aware that you are responsible for the monitoring and durability of this software. That being said, if you are familiar with installing and administering MySQL and Tomcat, the process is straightforward to set up and maintain. 
 
-Check back often for updates and as always, please feel free to submit a pull request if you have suggestions or find any instructions incorrect.   
+Check back often for updates and as always, please feel free to submit a pull request if you have suggestions or find any issues with the instructions.   
 
 ## Before You Get Started
 Before you get started with configuring a distributed TeamServer, make sure to read through the entire document. We've made several assumptions, which we list below. Make sure these conditions hold true so that you don't run into an issue with your TeamServer. The following assumptions have been made prior to distributing the configuration:
@@ -24,7 +24,8 @@ Before you get started with configuring a distributed TeamServer, make sure to r
 * Collect Contrast TeamServer version numbers for the Application and Database 
 
 In this example, Contrast has been installed at path `/usr/local/contrast`. To collect Contrast TeamServer application version numbers, look in the VERSION file in `/usr/local/contrast/VERSION`. To collect the Contrast TeamSever database version please run the following query: ``select `version` from schema_version ORDER BY `installed_on` DESC LIMIT 1;``. Let's say the app version stands at: `3.3.2` and the database is at `3.3.2.012`. We can say the versions are the same as it is safe to drop `.012` from the db version. Let's assume that you have an existing application server (A) running with a separate database (B), both running `3.3.2` and you're about to install `3.4.2` onto a new application server (C) and connect it to B. You will either need to stop A before installing `3.4.2` on C, or you will need to update A before installing on C.  
-> **NOTE:** If you have already installed TeamServer and you want to use a distributed install please follow the the switch section. 
+
+> **NOTE:** If you have already installed TeamServer and want to use a distributed install instead, please see the section on converting from one to the other later in this article. 
 
 
 ## Collect Configuration From Current TeamServer
@@ -41,10 +42,10 @@ $ cd /usr/local/contrast
 $ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/.initialized data/.contrast
 ```
 
-## Distributed Fresh installation 
-It is possible to run the installation as a regular user, however we recommend installation to your system as a *privileged* user. This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
+## Distributed Fresh Installation 
+It is possible to run the installation as a regular user; however, we recommend installation to your system as a *privileged* user. This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
 
-Once you have launched the installer, you will be presented with several questions. Please select the "Application Server Only" installation option when prompted. Provide the compressed file you created in the previous section and follow the onscreen steps.
+Once you have launched the installer, you will be presented with several questions. Please select the **Application Server Only** installation option when prompted. Provide the compressed file you created in the previous section and follow the onscreen steps.
 
 > **NOTE:** Pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. Please set this value to a TeamServer host or load balancer that is reachable by your agent hosts. 
 
@@ -53,7 +54,7 @@ After the installation is complete, the TeamServer will perform its initial conf
 260916 20.18.25,837 {} {} {} INFO  (Server.java:303) Contrast TeamServer Ready - Took 119305ms
 ```
 
-## Convert a default DB Installation into a Distributed Installation
+## Convert A Default DB Installation Into A Distributed Installation
 Edit the encrypted file `$CONTRAST_HOME/data/conf/database.properties` using the [encrypted editor](admin_tsconfig.html#encrypt). Look for `database.type`, create it as a new property if it does not exist. This property can either be `default` or `distributed`. Since we are setting up a distributed installation, set this value to `distributed` and modify the database connection values to point to a distributed database you would like to use. [Restart TeamServer](admin_tsinstall.html#run) for changes to take affect.  
 
 ```
@@ -99,4 +100,4 @@ jdbc.driver                                       : com.mysql.jdbc.Driver
 Enter the name of the property to edit [q to Quit]:
 ```
 
-Once this is done you may continue to add more application only installations. 
+Once this is done, you may continue to add more application-only installations. 
