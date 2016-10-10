@@ -6,15 +6,16 @@ tags: "configuration installation agent .Net"
 ## System Requirements
 
 ### Minimum
-* .NET Framework 4.5.2 present
+* .NET Framework 4.5.1 present
 * 2 CPU
 * 4 GB memory 
 
+(Note that Contrast 3.3.1 required .NET 4.5.2 but this requirement was reduced to 4.5.1 in Contrast 3.3.2)
+
 ### Recommended 
-* .NET Framework 4.5.2 present
+* .NET Framework 4.5.1 present
 * 4+ CPU
-* 8+ GB memory 
- 
+* 8+ GB memory  
 
 ## Before Beginning Installation
 
