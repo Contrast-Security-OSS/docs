@@ -5,10 +5,10 @@ tags: "EOP mysql logging slow query"
 -->
 
 ## Logging Database Queries with the Embedded MySQL
-Enterprise On Premise customers have the option of using the embedded MySQL instance packaged with TeamServer or the option of integrating TeamServer with a distributed MySQL instance. For those customers leveraging the embedded MySQL instance, Contrast provides a configurable property file in $CONTRAST_HOME/data/conf/mysql.properties. This file is very similar the my.cnf file that is leveraged within MySQL.
+Enterprise On Premise customers have the option of using the embedded MySQL instance packaged with TeamServer or the option of integrating TeamServer with a distributed MySQL instance. For those customers leveraging the embedded MySQL instance, Contrast provides a configurable property file in $CONTRAST_HOME/data/conf/mysql.properties. This file is very similar to the my.cnf file that is leveraged natively within MySQL.
 
 ## Example MySQL.Properties File
-Below is a sample passage from the mysql.properties file created with TeamServer as part of an embedded installation and/or upgrade. Notice there are two logging flags available, general logging and slow query logging. 
+Below is a sample passage from the mysql.properties file created with TeamServer as part of an embedded installation/upgrade. Notice there are two logging flags available, general logging and slow query logging. 
 
 General logging is used to log every statement executed by MySQL. Customers turning this on should be very careful as the volume of messaging sent to the mysql.log file can be very overwhelming. We recommend this only be used for debugging purposes and should be disabled the majority of the time. This log can grow to many 100's of gigabytes of storage over a very short window of time.
 
