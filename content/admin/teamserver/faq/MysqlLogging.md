@@ -12,7 +12,7 @@ Below is a sample passage from the mysql.properties file created with TeamServer
 
 General logging is used to log every statement executed by MySQL. Customers turning this on should be very careful as the volume of messaging sent to the mysql.log file can be very overwhelming. We recommend this only be used for debugging purposes and should be disabled the majority of the time. This log can grow to many 100's of gigabytes of storage over a very short window of time.
 
-The slow query log is used to evaluate queries that take a particularly long period of time. MySQL will monitor the sql and measure the time it takes to execute. This log will grow as well when enabled to many megabytes to gigabytes depending on whether a system is very slow. We recommend customers keep this disabled by default and only be used for debugging purposes.
+The slow query log is used to evaluate queries that take a particularly long period of time. MySQL will monitor the sql and measure the time it takes to execute. This log will grow as well when enabled to many megabytes to gigabytes depending on whether a system is very slow. We recommend keeping this on, but pay close attention to how big the log file becomes over time.
 
 ```
 # The destination for general query log and slow query log output
