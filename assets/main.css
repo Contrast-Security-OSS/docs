@@ -1,7 +1,7 @@
 /* General */
 
 * {
-	font-family: Lato, sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
 }
@@ -12,7 +12,7 @@
 .article a:link, 
 .article a:visited, 
 .article a:active {
-	color: #56B4AA;
+	color: #0DA1A9;
 	text-decoration: none;
 	font-weight: 400;
 }
@@ -34,7 +34,7 @@ a:active {
 }
 
 a:hover {
-	color: #56B4AA;
+	color: #0DA1A9;
 	text-decoration: none;
 }
 
@@ -56,22 +56,27 @@ ul {
 /* Header Styling */
 
 h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
 	font-size: 25px;
-	font-weight: 700;
 }
 
 
 h2 {
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
 	font-size: 18px;
-
 }
 
 h4 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
 	font-size: 16px;
 }
 
@@ -97,92 +102,102 @@ h4 {
 	width: 40%;
 }
 
+/* Index Labels */
 
-/* Developer Labels*/
+.label0 {
+	font-family: 'Roboto', sans-serif;
+	color: #292929; 
+	font-weight: 500;
+	font-size: 20px;
+}
+
+
+/* Latest Articles */
+.label4 {
+	font-family: 'Roboto', sans-serif;
+	color: #292929; 
+	font-weight: 500;
+	font-size: 25px;
+}
+
+
+/* Developer */
+
+.label1 {
+	font-family: 'Roboto', sans-serif;
+	color: #292929;
+	font-weight: 500;
+	font-size: 20px;
+	float: right;
+	padding-top: 25px;
+	padding-right: 20px;
+}
 
 .label1cat {
-	color: #94b758;
-	font-weight: 400;
-	font-size: 30px;
-}
-.label1 {
-	color: #94b758;
-	font-weight: 400;
-	font-size: 20px;
-	float: right;
-	padding-top: 25px;
-	padding-right: 11px;
+	color: #94B758;
+
 }
 
-
-/* Administrator Labels */
-
-.label2cat {
-	color: #3f97b3;
-	font-weight: 400;
-	font-size: 30px;
-}
+/* Administrator */
 
 .label2 {
-	color: #3f97b3;
-	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	color: #292929;
+	font-weight: 500;
 	font-size: 20px;
 	float: right;
 	padding-top: 25px;
-	padding-right: 45px;
+	padding-right: 55px;
+}
+
+.label2cat {
+	color: #258CBF;
 }
 
 
-/* User Labels */
-
-.label3cat {
-	color: #7d7ca8; 
-	font-weight: 400;
-	font-size: 30px;
-}
+/* User */
 
 .label3 {
-	color: #7d7ca8; 
-	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	color: #292929; 
+	font-weight: 500;
 	font-size: 20px;
 	float: right;
 	padding-top: 25px;
-	padding-right: 60px;
+	padding-right: 70px;
 }
+
+
+.label3cat {
+	color: #0DA1A9;
+}
+
 
 /* Release Notes Headers */
 .label7 {
-	color: #C01920; 
-	font-weight: 400;
-	font-size: 30px;
+	color: #E63025; 
 }
 
 /* Contribute Headers */
 .label8 {
-	color: #F5bd35; 
-	font-weight: 400;
-	font-size: 30px;
-}
-
-/* Call To Action Green */
-.label4 {
-	color: #56B4AA; 
-	font-weight: 400;
-	font-size: 25px;
+	color: #F7B600; 
 }
 
 
 /* Sidebar Section Header Black */
 .label5 {
-	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
 	font-size: 16px;
 }
 
 /* Sidebar Section Sub Header */
 .label10 {
-	font-weight: 300;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
 	font-size: 12px;
 	margin-left: -5px;
+	text-transform: uppercase;
 }
 
 /* Sidebar Article Title Small */
@@ -195,6 +210,8 @@ h4 {
 /* Breadcrumb Label */
 
 .label6 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 500;
 	color: #000000;
 	font-weight: 400;
 	font-size: 20px;
@@ -330,6 +347,47 @@ h4 {
     border-top: none;
 }
 
+
+.btn-red {
+	color: #ffffff !important;
+	margin-top: 35px;
+	margin-left: 20px;
+	width: 165px;
+	display: block; 
+	background-color: #E63025; 
+	border-radius: 4px;
+	text-decoration: none;
+	padding: 8px 12px;
+	text-align: center;
+	font-size: inherit;
+	font-weight: 500;
+}
+
+.btn-yellow {
+	color: #ffffff !important;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 165px;
+	display: block; 
+	background-color: #F7B600; 
+	border-radius: 4px;
+	text-decoration: none;
+	padding: 8px 12px;
+	text-align: center;
+	font-size: inherit;
+	font-weight: 500;
+}
+
+.btn-position2 {
+	margin-top: 35px;
+}
+
+.disabled {
+	opacity: 0.5;
+}
+
+
+/*
 .button {
 	color: white;
 	margin-top: 35px;
@@ -344,6 +402,7 @@ h4 {
 .btn a:hover {
 	color: #fff !important;
 }
+*/
 
 .latest {
 	margin-top: 37px;
@@ -399,6 +458,7 @@ body {
 .container {
 	position: relative;
 	padding-left: 20px;
+	padding-top:20px;
 	margin-left: auto;
 }
 
@@ -422,8 +482,8 @@ body {
 	position: relative;
 	float: left;
 	text-align: center;
-	padding-left: 20px;
-	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-bottom: 30px;
 
 }
 

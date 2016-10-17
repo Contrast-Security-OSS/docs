@@ -54,12 +54,10 @@ Contrast introduces a new approach to relating traces in TeamServer as of versio
 #### Question: What will change in TeamServer?
 As noted above, TeamServer will present fewer traces from the Vulnerabilities page. Each trace contains a title field which will be used as part of a composite unique key, along with the type of vulnerability and the id of the application to which it belongs. This combination allows for the guarantee each trace will be substantially different as reported within one application while not preventing traces from being reported for other applications. In the example below, traces such as Insecure Hash Algorithms, come from a single source of code, but differ in the stack frame. In prior versions of Contrast, TeamServer would report several traces for the same source of code. Following this release, trace records should decrease as TeamServer will only present one vulnerability. 
 
-!(image)
 
 #### Question: Will there be any data loss as part of this process?
 There will be a reduction of traces as part of this process depending on the number of identical vulnerabilities sharing the same trace title. The key data about the vulnerability will remain, but the meta-data (time, count, URL) will be presented on the Notes page within a vulnerability. Traces with the same title, but different hash values (ie: slightly different stack frames) will be collapsed into a single trace. 
 
-!(image)
 
 #### Question: What will the impact be for an Enterprise customer?
 Customers with previous version of TeamServer will experience a minor delay on the first startup inline with the upgrade to 3.1.6. Our normal database migration scripts run with the first startup of any release of Contrast. The delay in startup will ultimately depend on the number of traces that exist in the system. Below are some internal benchmarks run by our engineering organization for large trace counts. The vast majority of customers will have fewer than 10,000 traces. Please note that the startup after the migration has completed returns to under 1 minute or close to 1 minute. 
@@ -71,8 +69,12 @@ Customers with previous version of TeamServer will experience a minor delay on t
 | 40,000      | 60 minutes                     | Under 1 minute             |
 | 80,000      | 120 minutes                    | Under 1 minute             |
 
+---
+
 #### Question: When should the upgrade run?
 We recommend Enterprise customers run this migration during off hours. Please note that while the migration is occurring, users will not be able to login to TeamServer, nor will TeamServer be able to receive traces.
+
+<BR>
 
 ## .Net Agent
 * Improved thread usage by the agent's background Windows service. ContrastService.exe now uses about 12 fewer threads when idle and should use fewer threads when the system is heavily used (i.e. high CPU usage.)
