@@ -88,12 +88,14 @@ To return the organization back to the default LDAP configuration, simply select
 From the user perspective, single sign-on is simple and will only make a slight difference in the login process.
 
 **Logging In**
-If SSO is configured there will be a checkbox on the Contrast login page. Checking it will disable the password input field, as all that is required is an email address. From here the user's email is verified with the configured IdP and once matched up, directs to the IdP login page. At this point the user will submit their full SSO credentials and once successfully authenticated, will be logged in and directed back to the TeamServer dashboard. 
+If SSO is configured there will be a checkbox on the Contrast login page. Checking it will disable the password input field, as all that is required is an email address. 
 
->**NOTE:** If Two-Step Verification is active for a user, that login process will occur *after* successful SSO authentication. See [Two-Step Verification](admin_tsconfig.html#tsv)for more information.
+<a href="assets/images/SSOLogin.png" rel="lightbox" title="SSO Login"><img class="thumbnail" src="assets/images/SSOLogin.png"/></a>
+
+From here the user's email is verified with the configured IdP and once matched up, directs to the IdP login page. At this point the user will submit their full SSO credentials and once successfully authenticated, will be logged in and directed back to the TeamServer dashboard. If a user tries to sign in using SSO but does not have an account in TeamServer, an error message will appear on the login screen, informing them that their administrator has yet to create their account.
+
+>**NOTE:** If Two-Step Verification is active for a user, that login process will occur *after* successful SSO authentication. See [Two-Step Verification](admin_tsconfig.html#tsv) for more information.
 
 **Logging Out**
 During IdP configuration, a logout landing page may be designated. This is simply a neutral place to direct users after logging out of their application(s). In the case that no page is specified, users will be directed to a default Contrast logout landing page.
-
-If a user tries to sign in using SSO but does not have an account in TeamServer, an error message will appear on the login screen, informing them that their administrator has yet to create their account.
 
