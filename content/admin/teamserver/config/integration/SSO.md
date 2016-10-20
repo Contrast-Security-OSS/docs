@@ -6,7 +6,7 @@ tags: "SSO Single Sign-On configuration authentication"
 
 ## Getting Started
 
-Single Sign On (SSO) is a type of authentication service that allows access to multiple applications using one set of credentials. Contrast can now be configured to use this service.
+Single Sign-On (SSO) is a type of authentication service that allows access to multiple applications using one set of credentials. Contrast can now be configured to use this service.
 
 Authentication happens via an **Identity Provider (IdP)**. You may use either a generic IdP or one of many existing third-party providers, such as Okta, OneLogin or Ping Identity, to name a few. <!--(Which IdP's do we want to mention? Add hyperlinks?)-->
 
@@ -18,6 +18,7 @@ To get started you'll need to set up an identify provider (if you don't use one 
 How to set up, requirements, difference from third-party, etc.
 For generic, we will prompt for specific info in the setup wizard. Generic IDPs (for example, IBM has one) use SAML 2.0 standards but might not use a metadata URL. List the parameters you will need instead. -->
 
+---
 
 ## EOP
 
@@ -38,12 +39,22 @@ All users must have an existing account in TeamServer before switching the authe
 **Using Third-Party IDP:**
 
 * From the **Authentication** tab in System Settings, Select **Change Authentication Method**.
+
+<a href="assets/images/SSOChangeAuth.png" rel="lightbox" title="Changing Authentication Method"><img class="thumbnail" src="assets/images/SSOChangeAuth.png"/></a>
+
 * You may receive a warning dialog regarding the implications of changing authentication - please read it carefully before proceeding.
+
+<a href="assets/images/SSOWarning.png" rel="lightbox" title="Warning Dialog"><img class="thumbnail" src="assets/images/SSOWarning.png"/></a>
+
 * Select **Single Sign-On** in Step 1 of the setup wizard.
 * In Step 2, use the provided information to set up Contrast with your identity provider.  
 * Provide the name of your identity provider as well as their associated metadata URL in order to connect to Contrast.
 * Test the configuration using the Test button. If an error occurs, a debug log will be provided for troubleshooting.
 * Once successfully tested, click **Finish** and then restart TeamServer to apply the changes.
+
+<a href="assets/images/SSOConfig.png" rel="lightbox" title="Single Sign-On Configuration"><img class="thumbnail" src="assets/images/SSOConfig.png"/></a>
+
+<a href="assets/images/SSOConfigRestart.png" rel="lightbox" title="Restart TeamServer to Apply Authentication Changes"><img class="thumbnail" src="assets/images/SSOConfigRestart.png"/></a>
 
 >**NOTE:** Should you need to edit your configuration later, you may do so inline within the Authentication tab; however, you must re-test and restart TeamServer to apply the changes.
 
@@ -51,10 +62,13 @@ All users must have an existing account in TeamServer before switching the authe
 
 <!-- List steps that are different -->
 
+---
 
 ## SaaS 
 
-For SaaS customers, the Contrast System Administrator will configure LDAP authentication; however, Organization Administrators may be granted the ability to override these settings. In this case, the override will only allow the organization to switch to using Single Sign On in place of LDAP.
+For SaaS customers, the Contrast System Administrator will configure LDAP authentication; however, Organization Administrators may be granted the ability to override these settings. In this case, the override will only allow the organization to switch to using Single Sign-On in place of LDAP.
+
+<a href="assets/images/SSOSaaS.png" rel="lightbox" title="Enabling Organization Override on SaaS"><img class="thumbnail" src="assets/images/SSOSaaS.png"/></a>
 
 ### Notes About Switching to SSO
 
@@ -67,6 +81,9 @@ All users must have an existing account in TeamServer before switching the authe
 **Using Third-Party IDP:**
 
 * From the **Single Sign-On** tab in Org Settings, click **Get Started**
+
+<a href="assets/images/SSOOrgSettings.png" rel="lightbox" title="Single Sign-On Onboarding - Org Settings"><img class="thumbnail" src="assets/images/SSOOrgSettings.png"/></a>
+
 * You may receive a warning dialog regarding the implications of changing authentication - please read it carefully before proceeding.
 * Use the provided information to set up Contrast with your identity provider
 * Provide the name of your identity provider as well as their associated metadata URL in order to connect to Contrast
@@ -82,6 +99,7 @@ To return the organization back to the default LDAP configuration, simply select
 
 <!-- List steps that are different -->
 
+---
 
 ## Using SSO
 
