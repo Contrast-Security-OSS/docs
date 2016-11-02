@@ -68,7 +68,7 @@ Returns a collection of **Profile** objects.
     "name" : "NEW PROFILE",
     "id" : {
      "rel" : "self",
-     "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%2520PROFILE",
+     "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%20PROFILE",
      "method" : "GET"
      },
      "link" : [ {
@@ -77,11 +77,11 @@ Returns a collection of **Profile** objects.
          "method" : "GET"
     }, {
         "rel" : "self",
-        "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%2520PROFILE",
+        "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%20PROFILE",
         "method" : "GET"
     }, {
         "rel" : "update",
-        "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%2520PROFILE",
+        "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%20PROFILE",
         "method" : "PUT"
     } ],
     "sampling-baseline" : 5,
@@ -160,7 +160,7 @@ Returns the sent **Profile** object.
     "name" : "REST PROFILE",
     "id" : {
     "rel" : "self",
-    "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/REST%2520PROFILE",
+    "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/REST%20PROFILE",
      "method" : "GET"
      },
      "link" : [ {
@@ -169,11 +169,11 @@ Returns the sent **Profile** object.
          "method" : "GET"
      }, {
          "rel" : "self",
-         "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/REST%2520PROFILE",
+         "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/REST%20PROFILE",
          "method" : "GET"
      }, {
          "rel" : "update",
-         "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/REST%2520PROFILE",
+         "href" : "https://app.contrastsecurity.com/Contrast/api/engine/profiles/REST%20PROFILE",
          "method" : "PUT"
      } ],
      "sampling-baseline" : 5,
@@ -284,7 +284,7 @@ Returns the updated **Profile** object.
     "name" : "UPDATE PROFILE",
     "id" : {
      "rel" : "self",
-     "href" : "http://localhost:19080/Contrast/api/engine/profiles/NEW%2520PROFILE",
+     "href" : "http://localhost:19080/Contrast/api/engine/profiles/NEW%20PROFILE",
      "method" : "GET"
      },
      "link" : [ {
@@ -293,11 +293,11 @@ Returns the updated **Profile** object.
          "method" : "GET"
      }, {
          "rel" : "self",
-         "href" : "http://localhost:19080/Contrast/api/engine/profiles/NEW%2520PROFILE",
+         "href" : "http://localhost:19080/Contrast/api/engine/profiles/NEW%20PROFILE",
          "method" : "GET"
      }, {
          "rel" : "update",
-         "href" : "http://localhost:19080/Contrast/api/engine/profiles/NEW%2520PROFILE",
+         "href" : "http://localhost:19080/Contrast/api/engine/profiles/NEW%20PROFILE",
          "method" : "PUT"
      } ],
      "sampling-baseline" : 5,
