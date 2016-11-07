@@ -9,19 +9,19 @@ tags: "3.3.3 October Release Notes"
 * CONTRAST-10061: Improve MongoDB instrumentation
 * CONTRAST-10099: Improve Padding Oracle attack detection
 * CONTRAST-10266: Improve attack detection in non-standard deserialization 
-* CONTRAST-10309: Improve the Java Settings Documentation for the setting contrast.classpath.libs
+* CONTRAST-10309: Improve the Java Settings Documentation for the setting *contrast.classpath.libs*
 * CONTRAST-10322: Improve deadzoning to speed defend mode analysis and reduce memory impact 
 * CONTRAST-10328: Java Library/CVE Research and Mapping for October Release
 * CONTRAST-10332: Include "X-Contrast-Agent" header in all the requests sent to the TeamServer
 * CONTRAST-10354: Filter out vulnerabilities reported in third-party software
 * CONTRAST-10437: Ensure underlying JSON writer is emptied before next object is serialized 
-* CONTRAST-10474: Tune HardcodedPassword Rule
+* CONTRAST-10474: Tune *HardcodedPassword* Rule
 * CONTRAST-10478: Improve performance of vulnerability lifecycle management and tracing
 * CONTRAST-10713: Ensure no duplicate vulnerabilities in one preflight message
 
 ## .Net Agent
 * CONTRAST-10327: .Net Library/CVE Research and Mapping for October Release
-* CONTRAST-10235: Add config option to .net agent to specify TLS version to use
+* CONTRAST-10235: Add config option to .NET agent to specify TLS version to use
 * CONTRAST-10333: Include "X-Contrast-Agent" header in all the requests sent to the TeamServer
 
 ## NodeJS Agent
@@ -29,7 +29,7 @@ tags: "3.3.3 October Release Notes"
 * CONTRAST-10076: Resolved Argument Parsing Bugs
 * CONTRAST-10326: NodeJS Library/CVE Research and Mapping for October Release
 * CONTRAST-10334: Include "X-Contrast-Agent" header in all the requests sent to the TeamServer
-* CONTRAST-10473: Node agent htmlUtil incorrectly retrieving elements
+* CONTRAST-10473: Node agent *htmlUtil* incorrectly retrieving elements
 * CONTRAST-10489: Resolved duplicates in preflight messages
 * CONTRAST-7507: Remediation advice for header-injection
 
@@ -44,13 +44,13 @@ tags: "3.3.3 October Release Notes"
 * CONTRAST-9756: "Manage Notifications" Is in Wrong Place (Integrations)
 * CONTRAST-9773: Show JIRA error messages
 * CONTRAST-9783: Eliminate Deadlocks Everywhere...Oh Yeah!
-* CONTRAST-9792: Manage servo.log with log4j
+* CONTRAST-9792: Manage *servo.log* with log4j
 * CONTRAST-10016: Malformed App Activity report
 * CONTRAST-10021: TeamServer SMTP notification error filling up logs
 * CONTRAST-10056: EOP makes outbound connection attempts to https://dev-139023.oktapreview.com
 * CONTRAST-10180: Address Data Retention for Attacks and Events
 * CONTRAST-10193: Configure URLValidator to Accept Local URLs
-* CONTRAST-10229: NonUniqueResultException processing path-traversal vulns again
+* CONTRAST-10229: *NonUniqueResultException* processing path-traversal vulns again
 * CONTRAST-10250: Select existing user as admin for new organization
 * CONTRAST-10256: Can't select individual applications when creating virtual patch
 * CONTRAST-10300: Rework For User's Permissions Pg (Your Account > Permissions)
