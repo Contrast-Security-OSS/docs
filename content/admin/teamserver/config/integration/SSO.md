@@ -97,3 +97,5 @@ From here the user's email is verified with the configured IdP and once matched 
 **Logging Out**
 During IdP configuration, a logout landing page may be designated. This is simply a neutral place to direct users after logging out of their application(s). In the case that no page is specified, users will be directed to a default Contrast logout landing page.-->
 
+### Troubleshooting SAML Connectivity
+You may run into problems adding the metadata provider by using the metadata url. If that is the case please try configuring SAML by unchecking "I have access to the metadata URL" and paste the IDP's metadata XML into the text box. 
