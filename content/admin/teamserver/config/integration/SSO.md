@@ -52,7 +52,7 @@ Contrast does not support user provisioning, therefore all users must have an ex
 
 ## SaaS 
 
-For SaaS customers, the Contrast System Administrator will configure LDAP authentication; however, Organization Administrators may be granted the ability to override these settings. In this case, the override will only allow an organization to switch to using Single Sign-On in place of LDAP.
+For SaaS customers, the Contrast System Administrator will configure authentication; however, Organization Administrators may be granted the ability to override these settings. In this case, the override will only allow an organization to switch to using Single Sign-On.
 
 
 ### Notes About Switching to SSO
