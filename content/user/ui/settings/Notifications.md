@@ -9,6 +9,19 @@ Prior to release 3.2.6 (April 2016), TeamServer had a rule engine which would tr
 
 Notifications are designed to provide feedback immediately, as well as daily through multiple channels. There are two primary channels available for notifications: E-mail and In-Application. E-mail notifications require TeamServer to be configured to communicate with an appropriate [SMTP system](admin_tsconfig.html#system). In-Application notifications are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
 
+### Administrative Notifications
+Administrators will receive automated notifications for certain high-level events in Contrast, including those pertaining to licensing and policy management. Such notifications will occur both in-app and via email.
+
+* **Application Licensed** - A new application was licensed in Contrast
+* **Application License Expiring** - The license for an active application is expiring (sent at two months, one month and one week prior to the expiration date)
+* **Licenses Expiring** - Existing license(s) with no associated applications is expiring (sent at two months, one month and one week prior to the expiration date)
+* **Remediation Policy Violation** - A vulnerability is in violation of a set remediation policy
+* **Library Policy Violation** - A library is in violation of a set library policy
+
+<a href="assets/images/AdminNotificationInApp.png" rel="lightbox" title="In-App Admin Notification"><img class="thumbnail" src="assets/images/AdminNotificationInApp.png"/></a>
+
+<a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Admin Email Notification"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
+
 ### Organizational Notifications
 Introduced in 3.2.6 (April 2016), organizational notifications provide organization administrators with an interface for notifying users when key events happen with their Contrast deployment. Organization administrators have the ability to define default values for all users within their organization in terms of what criteria to notify by default, as well as which channels to leverage. Individual users have the ability to modify the default subscriptions. To change an individual user's notification settings, do the following:
 
@@ -36,7 +49,7 @@ Custom notifications are managed within [Organization Settings](user_tsguideset.
 
 The main purpose of a custom notification is to provide notification to one or more users when a specific condition has been observed within TeamServer. Notifications execute and alert users via email on event, daily and weekly. 
 
-<a href="assets/images/Create_Alert.png" rel="lightbox" title="Create Alerts"><img class="thumbnail" src="assets/images/Create_Alert.png"/></a>
+<a href="assets/images/CreateNotification.png" rel="lightbox" title="Creating A Custom Notification"><img class="thumbnail" src="assets/images/CreateNotification.png"/></a>
 
 To create a custom notification:
 
