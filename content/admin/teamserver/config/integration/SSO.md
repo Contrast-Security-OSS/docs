@@ -6,11 +6,11 @@ tags: "SSO Single Sign-On configuration authentication"
 
 ## Getting Started
 
-Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. Contrast can now be configured to use this service.
+Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. Contrast can now be configured to use this service with a SAML 2.0 supported provider. 
+
+[More on the SAML 2.0 specification](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf)
 
 Authentication happens via an **Identity Provider (IdP)**. You may use either your own generic IdP or one of many popular third-party providers, such as [Okta](https://www.okta.com/), [OneLogin](https://www.onelogin.com/) or [Ping Identity](https://www.pingidentity.com/en.html), to name a few. 
-
-<!-- DAN: Something about SAML 2.0 Specification? (including link) -->
 
 To get started you'll need to set up an identity provider (if you don't use one already). You will then provide your metadata, either via an XML file or directly using a **Metadata URL** in order to connect to Contrast.
 
@@ -25,9 +25,8 @@ For Enterprise-On-Premises customers, Single Sign-On is configured at the System
 
 If a System Admin decides to set up SSO, it is important to note the following:
 
-Contrast does not support user provisioning, therefore all users must have an existing account in TeamServer before switching the authentication method. Additionally, if users are identified with a user ID rather than an email address, those accounts won’t automatically transfer over to the SSO configuration and will need to be recreated.
+Contrast does not support user provisioning, therefore users must have an existing account in TeamServer before authenticating with SSO. Additionally, if users are identified with a user ID rather than an email address, those accounts won’t automatically transfer over to the SSO configuration and will need to be recreated. 
 
-<!-- DAN: "Maybe something more like 'an existing account or one created in TeamServer before...' Accounts can be created with SSO auth mode." NEED CLARIFICATION -->
 
 ### Setup 
 
@@ -63,7 +62,7 @@ For SaaS customers, the Contrast System Administrator will configure authenticat
 
 If an Org Admin decides to set up SSO, it is important to note the following:
 
-Contrast does not support user provisioning, therefore all users must have an existing account in TeamServer before switching the authentication method. Additionally, if users are identified with a user ID rather than an email address, those accounts won’t automatically transfer over to the SSO configuration and will need to be recreated.
+Contrast does not support user provisioning, therefore all users must have an existing account in TeamServer before authenticating with SSO. Additionally, if users are identified with a user ID rather than an email address, those accounts won’t automatically transfer over to the SSO configuration and will need to be recreated.
 
 ### Setup 
 
@@ -102,6 +101,5 @@ From here the user's email is verified with the configured IdP and once matched 
 During IdP configuration, a logout landing page may be designated. This is simply a neutral place to direct users after logging out of their application(s). In the case that no page is specified, users will be directed to a default Contrast logout landing page.-->
 
 ### Troubleshooting SAML Connectivity
-You may potentially run into an issue connecting to the metadata provider when using a metadata url. If that is the case, please try configuring SAML by unchecking "I have access to the metadata URL" and paste the IDP's metadata XML into the text box instead. 
+You may potentially run into an issue connecting to your identity provider if using a metadata URL with an HTTPS certificate from an authority we don't directly support (such as a self-signed certificate). If that is the case, please try configuring SAML by unchecking "I have access to the metadata URL" and paste the IDP's metadata XML into the text box instead. 
 
-<!-- DAN: Anything else re: troubleshooting a bad configuration? -->
