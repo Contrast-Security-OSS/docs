@@ -30,7 +30,7 @@ Contrast does not support user provisioning, therefore users must have an existi
 ### Before You Get Started
 Contrast does not provide keys for the SAML authenticaiton. If you enable saml without providing private keys you will only be able to perform IDP Initiated Logins.
 
-If your IDP does not require you to use keys signed by a specific certificate authority you can generate your own self-signed key using the Java Keytool:
+You will need to generate your own self-signed key using the Java Keytool:
 ```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks```
 
 Use the [encrypted editor](admin_tsconfig.html#encrypt) to modify saml.properties and update the values to the keystore you created in the step above. 
