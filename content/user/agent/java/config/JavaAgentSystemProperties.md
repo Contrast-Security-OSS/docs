@@ -1,4 +1,3 @@
-
 ## General Properties
 You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
 
@@ -13,23 +12,24 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.activity | boolean to enable/disable the Contrast activity thread<br>**DEFAULT VALUE:** true</br> |
 | contrast.app.activity.period | Contrast app activity thread polling period in milliseconds<br>**DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
 | contrast.app.features | JSON from disk to use for app<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
-| contrast.appname | Specify the name of a standalone or desktop application.<br>**DEFAULT VALUE:** determined by scanning web.xml</br> |
 | contrast.appupdate | boolean to enable/disable threads that sends updates about applications to Team Server<br>**DEFAULT VALUE:** true</br> |
 | contrast.auto.license.assessment | boolean to allow Contrast to license an application on creation<br>**DEFAULT VALUE:** false</br> |
 | contrast.auto.license.protection | boolean to allow Contrast to license a server on creation<br>**DEFAULT VALUE:** false</br> |
-| contrast.classpath.libs | Determines whether or not Contrast will track usage of libraries listed in the environment's *java.class.path* property.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.classpath.libs | Determines whether or not Contrast will track usage of libraries listed in the environment's *java.class.path* property. This should only be on in J2SE/desktop situations.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.cloneinput | boolean to enable/disable cloning of tracked objects<br>**DEFAULT VALUE:** true</br> |
 | contrast.container | manually override the web app container name/id<br>**DEFAULT VALUE:** detected by the Java Agent</br> |
 | contrast.dbinspection | boolean to enable/disable DB inspection when analyzing application architecture<br>**DEFAULT VALUE:** true</br> |
 | contrast.deepclone | boolean to enable/disable cloning of leaf nodes in object graphs of deserialized objects<br>**DEFAULT VALUE:** false</br> |
 | contrast.dir | This value can override the default Contrast working directory<br>**DEFAULT VALUE:** ${HOME}/.contrast of the user account the application runs under.</br> |
+| contrast.duplicate.delay | The period for which duplicate traces, based on Contrast hashing methods, will be supressed (in milliseconds)<br>**DEFAULT VALUE:** 5000</br> |
 | contrast.enabled | Determines whether or not Contrast will monitor the JVM. You can use this feature to quickly turn Contrast on or off without removing the *-javaagent* flag.<br>**DEFAULT VALUE:** true</br> |
 | contrast.external.lib.dir | semi-colon delimited list of directories where external libraries are stored; used during library analysis<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.inject.browseragent | manually override name of browser agent<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.j2ee.context.discovery | boolean to enable/disable J2EE context discovery<br>**DEFAULT VALUE:** true</br> |
-| contrast.mode | assess: data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.mode | assess: data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features; Note when this property is enabled, the Agent will ignore all customizations from TeamServer.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.nested.libs.depth | max archive unpacking depth when analyzing libraries<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.noteamserver.enable | boolean to enable/disable Contrast to start up without access to TeamServer<br>**DEFAULT VALUE:** false</br> |
+| contrast.override.appname | sets the application name; this name will be reported to TeamServer<br>**DEFAULT VALUE:** determined by scanning web.xml</br> |
 | contrast.path | Contrast "working directory" override<br>**DEFAULT VALUE:** the "current" folder, according to the container</br> |
 | contrast.poll.features | boolean to enable/disable Features polling thread<br>**DEFAULT VALUE:** true</br> |
 | contrast.properties | location of file containing Java properties style key, value pairs. <br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
@@ -40,8 +40,10 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.server | Overrides name of the server displayed in the Contrast TeamServer. Includes any valid path characters, e.g. *myserver-1/myapp* or *john_dev*.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.server.activity.period | Polling period for TeamServer polling thread (in milliseconds)<br>**DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
 | contrast.stacks.maxdepth | max stack depth to include in reported findings<br>**DEFAULT VALUE:** 75</br> |
+| contrast.standalone.appname | Indicates the application is a standalone app with the provided name<br>**DEFAULT VALUE:** none, must be set</br> |
 | contrast.supporter.jackson.interning | Controls whether or not String interning is disabled in Jackson. The default value is true.<br>**DEFAULT VALUE:** true</br> |
 | contrast.supporter.minidevjson | boolean to enable/disable net.minidev.json support<br>**DEFAULT VALUE:** true</br> |
+| contrast.teamserver.channel.pause.period | The amount of time to pause agent to TeamServer communication when a bad response code is received<br>**DEFAULT VALUE:** 900000 (15 minutes in milliseconds)</br> |
 | contrast.teamserver.url | This value will override the TeamServer URL that's packaged with the agent. This can be useful for networks that proxy the information.<br>**DEFAULT VALUE:** stored in the contrast.config file packaged in contrast.jar</br> |
 | contrast.telemetry.dir | Location for Contrast telemetry output<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.timeout | This value can override the default timeout (in seconds) for communicating with TeamServer.<br>**DEFAULT VALUE:** 10</br> |
@@ -61,7 +63,7 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 |-|-|
 | contrast.level | Log output level<br>**DEFAULT VALUE:** info</br> |
 | contrast.log | Enable *diagnostic logging*. This hurts performance, but generates useful information for debugging Contrast. The value set here will be the location to which log output is saved. If no log file exists at this location, one will be created. For instance, */opt/Contrast/contrast.log* will create a log in the */opt/Contrast* directory and rotate it automatically as needed.<br>**DEFAULT VALUE:** ${HOME}/.contrast/logs/contrast.log</br> |
-| contrast.log.backups | Specify the number of "backup" logs that will be created before Contrast will clean up the oldest file. This value has a cap of 100, meaning no more than 100 log files can be stored on the file system at one time. A value of 0 here means that no backups will be created and the log will simply be truncated when it reaches its size cap.<br>**DEFAULT VALUE:** false</br> |
+| contrast.log.backups | Specify the number of "backup" logs that will be created before Contrast will clean up the oldest file. This value has a cap of 100, meaning no more than 100 log files can be stored on the file system at one time. A value of 0 here means that no backups will be created and the log will simply be truncated when it reaches its size cap.<br>**DEFAULT VALUE:** 100</br> |
 | contrast.log.daily | Change the Contrast logger from a file sized based rolling scheme to a date based rolling scheme. At midnight serve time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.<br>**DEFAULT VALUE:** true</br> |
 | contrast.log.size | Specify the file size cap, in MB, of each log file. This value has a cap of 10, meaning no more than 10MB will be logged to a single file.<br>**DEFAULT VALUE:** 10</br> |
 
@@ -78,19 +80,33 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 |Property|Description|
 |-|-|
 | contrast.assess.autodetect.controls | boolean to enable/disable detecting security sensors<br>**DEFAULT VALUE:** true</br> |
+| contrast.assess.secondorder.canary | A value that will be fed by attack testing tools in order to test stored XSS or other second-order injection attacks to be detected coming out of databases<br>**DEFAULT VALUE:** null (disabled)</br> |
 | contrast.savebytecode | Save the *before/after bytecode* of classes where sensors have been added.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.saveresults | controls when Contrast findings are saved locally<br>**DEFAULT VALUE:** never</br> |
+
+### Proxy Settings
+|Property|Description|
+|-|-|
+| contrast.proxy.protocol | Proxy protocol, e.g. http, https<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| proxy.auth | Override authentication type for Proxy<br>**DEFAULT VALUE:** configured system property</br> |
+| proxy.fingerprint | Override Fingerprint for Proxy<br>**DEFAULT VALUE:** configured system property</br> |
+| proxy.host | Override Host for Proxy<br>**DEFAULT VALUE:** configured system property</br> |
+| proxy.pass | Override Password for Proxy<br>**DEFAULT VALUE:** configured system property</br> |
+| proxy.port | Override Port for Proxy<br>**DEFAULT VALUE:** configured system property</br> |
+| proxy.user | Override User for Proxy<br>**DEFAULT VALUE:** configured system property</br> |
 
 ### Performance
 |Property|Description|
 |-|-|
+| contrast.assess.threshold.entries | The maximum number of vulnerabilities per rule type that can be discovered within a period defined by contrast.assess.threshold.period<br>**DEFAULT VALUE:** 100</br> |
+| contrast.assess.threshold.period | The period, in seconds, in which a maximum number of vulnerabilities per rule type can be discovered<br>**DEFAULT VALUE:** 60 (seconds)</br> |
 | contrast.blacklist | path to file that lists blacklisted classes<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.cache.hierarchy | boolean to enable/disable hierarchy cache<br>**DEFAULT VALUE:** true</br> |
 | contrast.hierarchy.rebuild | boolean to trigger rebuilding/resetting the hierarchy cache<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.hierarchy.update | boolean to trigger updating the hierarchy cache<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.http.analysis.parameters | boolean to enable/disable analysis of HTTP parameters<br>**DEFAULT VALUE:** true</br> |
 | contrast.j2ee.classcache | boolean to enable/disable caching of instrumented classes<br>**DEFAULT VALUE:** true</br> |
-| contrast.preflight.open | Typically, the Contrast Agent uses a preflight hashing mechanism to avoid duplicate reporting, reducing load on TeamServer. Occasionally, this process can be overwhelmed, and TeamServer cannot reply quickly enough. In this case, in order to avoid losing any vulnerability data, the Agent will send any reports that are being filtered by preflight. While TeamServer can usually recover and resume preflight, it sometimes falls behind (for instance if the application being monitored is placed under a load test). To ensure that TeamServer has a chance to catch up, you can set this flag to false; however, it is worth noting that doing so may result in lost vulnerability information as all reports will be disregarded.<br>**DEFAULT VALUE:** true</br> |
+| contrast.preflight.open | Typically, the Contrast Agent uses a preflight hashing mechanism to avoid duplicate reporting, reducing load on TeamServer. Occasionally, this process can be overwhelmed, and TeamServer cannot reply quickly enough. In this case, in order to avoid losing any vulnerability data, the Agent will send any reports that are being filtered by preflight. While TeamServer can usually recover and resume preflight, it sometimes falls behind (for instance if the application being monitored is placed under a load test). To ensure that TeamServer has a chance to catch up, you can set this flag to false; however, it is worth noting that doing so may result in lost vulnerability information as all reports will be disregarded.<br>**DEFAULT VALUE:** false</br> |
 | contrast.sampling | Enable and configure *sampling mode*. By default, just placing this flag will result in a *baseline* (how many times a request should be analyzed before it is considered sampled) and *frequency* (how often after the baseline has been established should new samples be taken) of **5** and a *sampling window* (how long the baseline is valid, in seconds) of **180 seconds**. This means that after the same request has been seen five times in 180 seconds, it will only be analyzed every subsequent fifth time. You can customize this further by setting the value to "#,#,#". In this case, the baseline will be set to the first number, the frequency second, and the window third. Note that if you choose to customize any value, you must provide all three inputs.<br>**DEFAULT VALUE:** Not used if flag is not specified. If just the flag is specified (without the values): 5,5,180</br> |
 
 ### Policy
@@ -123,7 +139,9 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 |-|-|
 | contrast.cmdinjection.keywords | File path to overriding Command Injection keywords file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.cmdinjection.patterns | Location of Command Injection patterns file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.defend.api.bodyread | boolean to enable/disable whether API request bodies should be scanned for attacks if no known deserializers are in use<br>**DEFAULT VALUE:** true</br> |
 | contrast.defend.blocked.samples | Max number of detailed reports generated for blocked attacks detected during a reporting period<br>**DEFAULT VALUE:** 25</br> |
+| contrast.defend.csrf.token.name | the name of the CSRF token HTTP parameter<br>**DEFAULT VALUE:** cs_csrf_tkn</br> |
 | contrast.defend.exploited.samples | Max number of detailed reports generated for exploited attacks during a reporting period<br>**DEFAULT VALUE:** 100</br> |
 | contrast.defend.ineffective.samples | Max number of detailed reports generated for ineffective attacks detected during a<br>**DEFAULT VALUE:** 50</br> |
 | contrast.defend.patterns | File path to overriding RASP patterns file (used when Contrast is in DEFEND mode)<br>**DEFAULT VALUE:** uses patterns embedded in the agent</br> |
@@ -152,4 +170,3 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 [Working With Contrast's Java Agent Cache](user_javaconfig.html#cache)
 
 [Sampling](user_tsfaq.html#sample)
-
