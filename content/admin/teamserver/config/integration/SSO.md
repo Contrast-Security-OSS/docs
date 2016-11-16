@@ -27,6 +27,22 @@ If a System Admin decides to set up SSO, it is important to note the following:
 
 Contrast does not support user provisioning, therefore users must have an existing account in TeamServer before authenticating with SSO. Additionally, if users are identified with a user ID rather than an email address, those accounts won’t automatically transfer over to the SSO configuration and will need to be recreated. 
 
+### Before You Get Started
+Contrast does not provide keys for the SAML authenticaiton. If you enable saml without providing private keys you will only be able to perform IDP Initiated Logins.
+
+If your IDP does not require you to use keys signed by a specific certificate authority you can generate your own self-signed key using the Java Keytool:
+```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks```
+
+Use the [encrypted editor](admin_tsconfig.html#encrypt) to modify saml.properties and update the values to the keystore you created in the step above. 
+ 
+ ```
+ authenticator.saml.keystore.path                  : /path/to/samlKeystore.jks
+ authenticator.saml.keystore.default.key           : some-alias
+ authenticator.saml.keystore.passwordMap           : some-alias=changeit
+ authenticator.saml.keystore.password              : changeit
+ ```
+ 
+ Once the changes have been made reboot TeamServer so that the new keystore will be picked up. 
 
 ### Setup 
 
