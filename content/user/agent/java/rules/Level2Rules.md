@@ -355,7 +355,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
     <lang:groovy
             id="credit-card-exposed-rule"
             refresh-check-delay="30000"
-            script-source="classpath:com/aspectsecurity/contrast/teamserver/rulepack/cnn.groovy"/>                
+            script-source="classpath:rulepack/cnn.groovy"/>                
 </beans>
 ```
 
