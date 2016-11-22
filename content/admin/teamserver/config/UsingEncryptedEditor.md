@@ -35,6 +35,7 @@ The following files are encrypted by default for security purposes:
 | ldap.properties      | Contains information for connecting and configuring TeamServer to LDAP groups for authentication purposes            |
 | database.properties  | Contains host and connection information for configuring communication between TeamServer and MySQL                  |
 | cassandra.properties | Contains host and connection information for configuring communication between TeamServer and Cassandra              |
+| saml.properties      | Contains saml keystore information.                                                                                  |
 <br/>
 ### Example Of Editing/Viewing An Encrypted File
 The following is an example of editing an encrypted file in TeamServer. In this example we are loading our *ad.properties* file to edit the configuration of our TeamServer connecting to ActiveDirectory.
