@@ -156,7 +156,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
     <lang:groovy
             id="https-disabled-rule"
             refresh-check-delay="30000"
-            script-source="classpath:com/aspectsecurity/contrast/teamserver/rulepack/secure.groovy"/>                
+            script-source="classpath:rulepack/secure.groovy"/>                
 </beans>
 ```
 
