@@ -5,7 +5,7 @@ tags: "TeamServer organizations license defense protect RASP IAST assess"
 -->
 
 ## Overview
-Contrast is a multi-tenant architecture in which a single software can support many communities of related or potentially unrelated customers. Each customer is defined as a tenant. In Contrast, organizations serve as the tenant or customer. 
+Contrast is a multi-tenant architecture in which a single software product can support many communities of related or potentially unrelated customers. Each customer is defined as a tenant. In Contrast, organizations serve as the tenant or customer. 
 
 ## What Are Organizations?
 An organization is a group of related users and applications that are associated together for a business purpose. 
