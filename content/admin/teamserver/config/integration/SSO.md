@@ -112,6 +112,10 @@ From here the user's email is verified with the configured IdP and once matched 
 
 >**NOTE:** If Two-Step Verification is active for a user, that login process will occur *after* successful SSO authentication. See [Two-Step Verification](admin_tsconfig.html#tsv) for more information.
 
+## See Also
+
+[Troubleshooting SSO](admin_tsfaq.html#sso)
+
 <!--
 **Logging Out**
 During IdP configuration, a logout landing page may be designated. This is simply a neutral place to direct users after logging out of their application(s). In the case that no page is specified, users will be directed to a default Contrast logout landing page.-->
