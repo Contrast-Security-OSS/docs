@@ -12,8 +12,8 @@ tags: "3.3.4 November Release Notes"
 * CONTRAST-10805: Introduce null checks in bootstrap propagation shortcuts
 * CONTRAST-10842: Update "decrypt" in AESUtil with more explicit Cipher instance argument
 * CONTRAST-10927: Add support for JavaEE web sockets
-* CONTRAST-10936: Improve SimpleOrSearcher pattern matching
-* CONTRAST-10966: Add XSS support for JSF's ResponseStateManager
+* CONTRAST-10936: Improve *SimpleOrSearcher* pattern matching
+* CONTRAST-10966: Add XSS support for JSF's *ResponseStateManager*
 * CONTRAST-11066: Set threshold for findings per rule in time period
 * CONTRAST-11078: Improve activity report queuing 
 * CONTRAST-11097: Improve ReDos vulnerability detection by caching pattern evalutations
@@ -23,10 +23,10 @@ tags: "3.3.4 November Release Notes"
 * CONTRAST-11257: Significant performance improvements and memory impact reduction
 
 ## .Net Agent
-* CONTRAST-11194: SQLi False Positives via cookie value in response generation and Request.ServerVariable keys accessed via index 
+* CONTRAST-11194: SQLi False Positives via cookie value in response generation and *Request.ServerVariable* keys accessed via index 
 * CONTRAST-11116: HTTP Parameter Pollution false positive against static resources
 * CONTRAST-10946: .NET HttpModule not setting log level correctly 
-* CONTRAST-10945: .NET Profiler sending app pool Status_Shutdown message to service too early
+* CONTRAST-10945: .NET Profiler sending app pool *Status_Shutdown* message to service too early
 * CONTRAST-10867: HTTPOnly false positive when multiple cookies present
 * CONTRAST-10866: Anti-Clickjacking false positive against static resources
 * CONTRAST-10792: .NET Agent FP on data flow through Try* control/validator methods
@@ -38,7 +38,7 @@ tags: "3.3.4 November Release Notes"
 * CONTRAST-9906: Sails - Sessions
 * CONTRAST-10910: agent event handlers should run asynchronously
 * CONTRAST-9505: Node agents should use daily log rotation by default
-* CONTRAST-11282: servername only works from cli and not contrast.json
+* CONTRAST-11282: servername only works from cli and not *contrast.json*
 * CONTRAST-10891: node agent will still try to report libraries when it can't find a name, author, or version
 
 ## TeamServer
@@ -64,7 +64,7 @@ tags: "3.3.4 November Release Notes"
 * CONTRAST-11196: URLs length is bigger than DB allowed length
 * CONTRAST-10686: ServerStart and ServerActivity not filtering validators and sanitizers by agent language
 * CONTRAST-10845: 403 Page for Application Exclusions
-* CONTRAST-10817: Error processing prevent_hash_collision trigger
+* CONTRAST-10817: Error processing *prevent_hash_collision* trigger
 * CONTRAST-10816: Remediation Policy notifications are not being created
 * CONTRAST-10047: Most Recently Monitored Activity displays latest activity then auto-refreshes and disappears
 * CONTRAST-9788: Deleting orgs from SuperAdmin times out, does not remove org
