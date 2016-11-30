@@ -10,8 +10,7 @@ If the license is expired, then the second method (file system) below must be us
 
 ## Updating Your License File Through The UI
 
-1. Obtain a new license from [Hub](https://hub.contrastsecurity.com/h/), your account manager, or the technical support team.
-2. Log in to TeamServer as a SuperAdmin, for example:
+1. Log in to TeamServer as a SuperAdmin, for example:
 
     > **URL:** ```http://teamserver:8080/Contrast/static/ng/admin_index.html#/superadmin/signin```
     > 
@@ -19,10 +18,10 @@ If the license is expired, then the second method (file system) below must be us
     > 
     > **Password:** Provided when the trial license is originally downloaded from Hub (refer to your account team or Support for the password)
 
-3. Navigate to **System Settings > Licensing**.
-4. Click the **Update This License** button at the bottom of the panel.
-5. Enter your Hub credentials in order to allow TeamServer to download and apply the latest license from Hub. 
-6. Click **Update** to finish the process and then restart TeamServer in order for the new license changes to be applied.
+2. Navigate to **System Settings > Licensing**.
+3. Click the **Update This License** button at the bottom of the panel.
+4. Enter your Hub credentials in order to allow TeamServer to download and apply the latest license from Hub. 
+5. Click **Update** to finish the process and then restart TeamServer in order for the new license changes to be applied.
 
     <a href="assets/images/KB1-b02.png" rel="lightbox" title="License Update"><img class="thumbnail" src="assets/images/KB1-b02.png"/></a>
 
