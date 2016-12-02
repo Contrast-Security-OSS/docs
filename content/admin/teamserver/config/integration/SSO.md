@@ -57,7 +57,7 @@ Use the [Encrypted Editor](admin_tsconfig.html#encrypt) to modify *saml.properti
 * Select **Single Sign-On** in Step 1 of the setup wizard.
 * In Step 2, use the provided information to set up Contrast with your identity provider.  
 * Provide a name for your identity provider as well as the associated metadata in order to connect to Contrast
-* Test the configuration using the Test button. If an error occurs, a debug log will be provided for troubleshooting.
+* Test the configuration using the Test button. If an error occurs, a debug log will be provided for troubleshooting. This test will only validate the metadata and Contrast's ability to connect to the IDP.  
 * Once successfully tested, click **Finish** and then restart TeamServer to apply the changes.
 
 <a href="assets/images/SSOConfig.png" rel="lightbox" title="Single Sign-On Configuration"><img class="thumbnail" src="assets/images/SSOConfig.png"/></a>
@@ -89,12 +89,13 @@ Contrast does not support user provisioning, therefore all users must have an ex
 * You may receive a warning dialog regarding the implications of changing authentication - please read it carefully before proceeding.
 * Use the provided information to set up Contrast with your identity provider
 * Provide a name for your identity provider as well as the associated metadata in order to connect to Contrast
-* Test the configuration using the Test button. If an error occurs, a debug log will be provided for troubleshooting.
-* Once successfully tested, click **Finish** and then restart TeamServer to apply the changes.
+* Test the configuration using the Test button. If an error occurs, a debug log will be provided for troubleshooting. This test will only validate the metadata and Contrast's ability to connect to the IDP.  
+* Once successfully tested, click **Finish**.
+* Open a new browser window, Private Browsing Session or Incognito window and attempt the SSO login with your account. If you are unsuccessful at logging in then go back to the browser where you are still logged in and disable SSO for the Organization and contact support. 
 
->**NOTE:** Should you need to edit your SSO configuration later, you may do so inline within the Single Sign-On tab; however, you must re-test and restart TeamServer to apply the changes.
+>**NOTE:** Should you need to edit your SSO configuration later, you may do so inline within the Single Sign-On tab.
 
-To return the organization back to the default LDAP configuration, simply select **Revert to Contrast-Managed Authentication** and confirm. These settings are controlled by the Contrast SuperAdmin and no configuration is necessary.
+To return the organization back to the default configuration, simply select **Revert to Contrast-Managed Authentication** and confirm. These settings are controlled by the Contrast SuperAdmin and no configuration is necessary.
 
 
 ---
