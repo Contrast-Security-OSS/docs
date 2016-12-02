@@ -5,7 +5,7 @@ tags: "TeamServer browsers firefox safari IE chrome"
 -->
 
 The TeamServer UI is an HTML 5-based browser application based on AngularJS that works ideal with the latest version of any modern browser. Contrast actively tests the UI with the following browsers and versions:
-* IE 9+
+* IE 10+
 * Safari 8+
 * Chrome 40+
 * Firefox 37+
