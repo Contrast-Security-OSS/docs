@@ -1,3 +1,4 @@
+
 ## General Properties
 You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
 
@@ -170,3 +171,4 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 [Working With Contrast's Java Agent Cache](user_javaconfig.html#cache)
 
 [Sampling](user_tsfaq.html#sample)
+
