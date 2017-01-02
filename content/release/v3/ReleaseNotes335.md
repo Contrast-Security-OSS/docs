@@ -4,7 +4,7 @@ description: "Contrast 3.3.5 December  2016"
 tags: "3.3.5 December Release Notes"
 -->
 
-*Please Note*: Contrast now offers protect for .Net applications. See https://www.contrastsecurity.com/security-influencers/contrast-security-makes-.net-applications-self-defending
+*Please Note*: Contrast now offers Protect for .Net applications. See https://www.contrastsecurity.com/security-influencers/contrast-security-makes-.net-applications-self-defending
 
 ## Java Agent
 * CONTRAST-10954:	Add minimum supported JRockit version details to OpenDocs Supported Technologies page
