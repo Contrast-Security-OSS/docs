@@ -31,6 +31,7 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.nested.libs.depth | max archive unpacking depth when analyzing libraries<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.noteamserver.enable | boolean to enable/disable Contrast to start up without access to TeamServer<br>**DEFAULT VALUE:** false</br> |
 | contrast.override.appname | sets the application name; this name will be reported to TeamServer<br>**DEFAULT VALUE:** determined by scanning web.xml</br> |
+| contrast.override.appversion | sets the application version; this version will be reported to TeamServer<br>**DEFAULT VALUE:** determined by scanning web.xml</br> |
 | contrast.path | Contrast "working directory" override<br>**DEFAULT VALUE:** the "current" folder, according to the container</br> |
 | contrast.poll.features | boolean to enable/disable Features polling thread<br>**DEFAULT VALUE:** true</br> |
 | contrast.properties | location of file containing Java properties style key, value pairs. <br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
@@ -103,6 +104,7 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.assess.threshold.period | The period, in seconds, in which a maximum number of vulnerabilities per rule type can be discovered<br>**DEFAULT VALUE:** 60 (seconds)</br> |
 | contrast.blacklist | path to file that lists blacklisted classes<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.cache.hierarchy | boolean to enable/disable hierarchy cache<br>**DEFAULT VALUE:** true</br> |
+| contrast.concurrent.requests | average number of concurrent users logged into the application at any one time<br>**DEFAULT VALUE:** 20</br> |
 | contrast.hierarchy.rebuild | boolean to trigger rebuilding/resetting the hierarchy cache<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.hierarchy.update | boolean to trigger updating the hierarchy cache<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.http.analysis.parameters | boolean to enable/disable analysis of HTTP parameters<br>**DEFAULT VALUE:** true</br> |
