@@ -2,7 +2,7 @@
 ## General Properties
 You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
 
-This markdown file could be generated directy from the command line. To do so, execute the following:
+This markdown file could be generated directly from the command line. To do so, execute the following:
 **java -jar contrast.jar properties --generate-markdown --write-to-file=/path/to/file.md**
 
 You can combine the above command with tools like *grep* to search for commands, for example:
@@ -35,7 +35,7 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.path | Contrast "working directory" override<br>**DEFAULT VALUE:** the "current" folder, according to the container</br> |
 | contrast.poll.features | boolean to enable/disable Features polling thread<br>**DEFAULT VALUE:** true</br> |
 | contrast.properties | location of file containing Java properties style key, value pairs. <br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
-| contrast.redos.characcess.limit | The number of character accesses that can occur when when processing a regular expression before blocking occurs<br>**DEFAULT VALUE:** 3000000</br> |
+| contrast.redos.characcess.limit | The number of character accesses that can occur when processing a regular expression before blocking occurs<br>**DEFAULT VALUE:** 3000000</br> |
 | contrast.reporting.period | Polling period for spooling reports, like traces, app updates (in milliseconds)<br>**DEFAULT VALUE:** 3000 (3 seconds, in milliseconds)</br> |
 | contrast.rootapp | This value can override (or provide one if none exist) a display name for the app running at the root context. This may be needed for Contrast to collect analytics on the application.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.scanresponses | boolean to enable/disable scanning of HTTP responses<br>**DEFAULT VALUE:** true</br> |
