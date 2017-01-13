@@ -1,3 +1,5 @@
+The Java Agent system properties can be applied like most standard JVM options. Either before or after the *-javaagent* flag used to attach Contrast to your JVM, add a **-D${property_name}=${property_value}** option. For instance, the following would enable logging in the Contrast Agent as well as point to the file *contrast_log.txt* in the *tmp* directory:
+**-javaagent:contrast.jar -Dcontrast.log=/tmp/contrast_log.txt**
 
 ## General Properties
 You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
