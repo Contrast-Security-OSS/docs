@@ -50,7 +50,8 @@ More detailed levels of logging will degrade performance but may generate useful
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent |
+| *UseMonitor*                                         | Controls the instrumentation engine used by the .NET agent. Enabling Monitor mode allows the .NET Agent to be used alongside other profiling tools. Protect features require the use of Monitor mode. The default value is *false*. If set to *true* then the .NET Agent Service must be restarted by the user in order for changes to the noted configuration settings to take effect. Note that "Monitor" mode will only analyze applications running on CLR4. |
+| *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent. Note that this setting is ignored by Monitor mode. |
 | *EnableInstrumentationOptimizations*                       | *(Contrast Agent v.3.2.9 and above)*.  Optionally disable code optimizations under instrumentation-based flow analysis.  This only applies when ProfilerBehavior=3 (instrumentation mode).  The default is ```true```; set to ```false``` to disable.
 <br/>
 
