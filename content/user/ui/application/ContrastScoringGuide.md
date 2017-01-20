@@ -45,7 +45,7 @@ For instance, an SQL injection is considered **Critical**, because automated too
 
 On the other hand, usage of an old, broken hashing algorithm like **SHA-1** is considered **Low**. Although it's been known to exhibit serious weaknesses, practical exploitation still requires the resources of a very skilled attacker and likely the backing of a large organization or nation state.
 
->**Custom Code Score** = 100 - *(No. Criticals * 20)* - *(No. Highs * 10)* - *(No. Mediums * 5)* - *(No. Lows * 1)*
+>**Custom Code Score** = 100 - *(No. Criticals &#8727; 20)* - *(No. Highs &#8727; 10)* - *(No. Mediums &#8727; 5)* - *(No. Lows &#8727; 1)*
 
 
 ## Suggestions for Score Improvement
