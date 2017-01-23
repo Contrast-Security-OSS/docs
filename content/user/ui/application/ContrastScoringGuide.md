@@ -11,7 +11,7 @@ Below is a sample score from when we run Contrast on the [WebGoat](https://code.
 <br/>
 <a href="assets/images/KB1-d10_1.png" rel="lightbox" title="Contrast Score"><img class="thumbnail" src="assets/images/KB1-d10_1.png"/></a>
 <br/>
-The overall application score is the average of your application's **Library Score** and its **Custom Code Score**. In this example, the **Library Score** is **85** and the **Custom Code Score** is **68**. Therefore, the overall Contrast score is **77**. Scores are calculated as follows:
+The overall application score is the average of your application's **Library Score** and its **Custom Code Score**. In this example, the **Library Score** is **85** and the **Custom Code Score** is **68**. Therefore, the overall **Contrast Score** is **77**. Scores are calculated as follows:
 
 >**Library Score**<br/>
 > 67 *Base Library Score*<br/>
@@ -45,7 +45,7 @@ For instance, an SQL injection is considered **Critical**, because automated too
 
 On the other hand, usage of an old, broken hashing algorithm like **SHA-1** is considered **Low**. Although it's been known to exhibit serious weaknesses, practical exploitation still requires the resources of a very skilled attacker and likely the backing of a large organization or nation state.
 
->**Custom Code Score** = 100 - *(No. Criticals * 20)* - *(No. Highs * 10)* - *(No. Mediums * 5)* - *(No. Lows * 1)*
+>**Custom Code Score** = 100 - *(No. Criticals &#8727; 20)* - *(No. Highs &#8727; 10)* - *(No. Mediums &#8727; 5)* - *(No. Lows &#8727; 1)*
 
 
 ## Suggestions for Score Improvement
