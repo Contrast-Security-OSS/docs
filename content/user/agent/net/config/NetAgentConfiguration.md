@@ -51,7 +51,7 @@ More detailed levels of logging will degrade performance but may generate useful
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *UseMonitor*                                         | Controls the instrumentation engine used by the .NET agent. Enabling Monitor mode allows the .NET Agent to be used alongside other profiling tools. Protect features require the use of Monitor mode. The default value is *false*. If set to *true* then the .NET Agent Service must be restarted by the user in order for changes to the noted configuration settings to take effect. Note that "Monitor" mode will only analyze applications running on CLR4. |
-| *ProfilerBehavior*                                         | Controls the data flow engine used and amount of instrumentation performed by the .NET agent. Note that this setting is ignored by Monitor mode. |
+| *ProfilerBehavior*                                         | Controls the data flow engine used and the amount of instrumentation performed by the .NET agent. Note that this setting is ignored by Monitor mode. |
 | *EnableInstrumentationOptimizations*                       | *(Contrast Agent v.3.2.9 and above)*.  Optionally disable code optimizations under instrumentation-based flow analysis.  This only applies when ProfilerBehavior=3 (instrumentation mode).  The default is ```true```; set to ```false``` to disable.
 <br/>
 
@@ -67,7 +67,7 @@ More detailed levels of logging will degrade performance but may generate useful
 
    This is the **default** value. The agent uses instrumentation for data flow analysis against web applications running on CLR4 (.NET 4+) and Enter-Leave events against CLR2 (.NET2-3.5) applications.  For CLR4 applications, Vulnerability stack traces will include line numbers if .PDB files are present in the application's bin directory.  Instrumentation mode is more stable and has comparable performance. 
 
-4. **Instrumentation with Logging**
+4. **Instrumentation With Logging**
 
    This mode has the same behavior as **3** but also enables Enter-Leave events for .NET 4.0 applications for additional logging. This additional logging can be specified in the policy file's ```<logging>``` section. Note that this mode is much slower than **3** and is intended only for debugging. 
 

@@ -12,7 +12,7 @@ The new instrumentation engine offers a number of benefits, including:
 * Improved stability and comparable performance compared to the old method of tracking data flow.
 * Ability to use custom rules
 
-## Getting Source Code Information Using the New Data Flow Engine
+## Getting Source Code Information Using The New Data Flow Engine
 
 In the .NET Framework, an application's compiled code is generally contained in .DLL files while debug information is contained in .PDB files.  These .PDB files contain symbol information that Contrast can use to tie stack trace frames to specific lines of code.  By default, the Debug build of web applications include .PDB files while the Release build does not.  However, most deployments of web applications use the Release build (and rightly so, as deploying the Debug build can introduce some unnecessary risks.)  It is possible to include .PDB files in the Release build of a web application by changing a project setting.  Note that the inclusion of .PDB files in a web application's deployment is safe and does not include the risks associated with publishing a Debug build.  
 
@@ -29,5 +29,5 @@ The following steps will configure the build/package process for the Release con
 <a href="assets/images/KB3-e14.jpg" rel="lightbox" title="Instrumentation Configuration"><img class="thumbnail" src="assets/images/KB3-e14.jpg"/></a>
 
 
-## About Monitor Mode and Instrumentation
+## About Monitor Mode And Instrumentation
 As of version 3.3.5, the .NET Agent has an additional instrumentation engine named "Monitoring". See [.NET Agent Configuration](user_netconfig.html#config) for information on enabling this mode. Monitor mode does NOT use the profiling API for instrumentation but continues to support source code information, improved stability, and the use of custom rules. 
