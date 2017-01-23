@@ -19,7 +19,7 @@ Only one profiler can profile a process at one time in a given environment.
 You can register two different profilers in different environments, but each must profile separate processes.
 ```
 
-As of version 3.3.5, the .NET Agent can be used alongside another profiling tool by enabling "Monitor" mode. See [.NET Agent Configuration](user_netconfig.html#config) for more information. 
+As of version 3.3.5, the .NET Agent can be used alongside another profiling tool by enabling Monitor mode. See [.NET Agent Configuration](user_netconfig.html#config) for more information. 
 
 ## Contrast Must Restart IIS 
 
