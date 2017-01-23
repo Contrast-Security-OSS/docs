@@ -66,6 +66,6 @@ Web applications hosted on IIS run on application pools. Starting with version 3
 1. Start the Contrast.NET agent
 2. Browse to an application
 3. In Windows, navigate to ***C:\ProgramData\Contrast.NET\LOGS***
-4. Open the most recent **Profiler** log (***Profiler_[AppPool]_XXXXXXXX_XX_XX_XX_XXX_XXXXX.log***)
+4. Open the most recent **Profiler** or **Monitor** log (*Profiler_[AppPool]_XXXXXXXX_XX_XX_XX_XXX_XXXXX.log*)
 5. The application pool name will be on the line that starts with **ApplicationPool Name:** 
 
