@@ -3,7 +3,7 @@ title: "Supported Technologies"
 description: "List of supported technologies"
 tags: "Node agent frameworks support troubleshooting nodejs javascript modules"
 -->
-We will shift support for Node versions as the Node project shifts its LTS windows. For a schedule, see the [Node.js Long Term Support Release Schedule](https://github.com/nodejs/LTS).
+Contrast supports Node versions 4 and 6 LTS. We will shift support for Node versions as the Node project shifts its LTS windows. For a schedule, see the [Node.js Long Term Support Release Schedule](https://github.com/nodejs/LTS).
 
 3rd-Party Module Support                                       | Web Framework Support<sup>[1](#footnote1)</sup> | Coming Soon
 :-----                                                         | :----                                           | :-------
