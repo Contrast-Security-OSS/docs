@@ -3,13 +3,15 @@ title: "Supported Technologies"
 description: "List of supported technologies"
 tags: "Node agent frameworks support troubleshooting nodejs javascript modules"
 -->
+Contrast supports Node versions 4 and 6 LTS. We will shift support for Node versions as the Node project shifts its LTS windows. For a schedule, see the [Node.js Long Term Support Release Schedule](https://github.com/nodejs/LTS).
 
-Node Versions                         | 3rd-Party Module Support                                       | Web Framework Support<sup>[1](#footnote1)</sup> | Coming Soon
-:-----                                | :-----                                                         | :----                                           | :-------
-**v0.10.34** through **v4 LTS**       | [express-session](https://github.com/expressjs/session)        | [express](http://expressjs.com)                 | [sails](http://sailsjs.org/)
-                                      | [mongodb](https://docs.mongodb.org/ecosystem/drivers/node-js/) |                                                 | [hapi](https://www.npmjs.com/package/hapi)
-                                      | [mysql](https://www.npmjs.com/package/mysql)                   |                                                 | [koa](https://www.npmjs.com/package/koa)
-                                      | [postgres](https://www.npmjs.com/package/pg)                   |                                                 |
+3rd-Party Module Support                                       | Web Framework Support<sup>[1](#footnote1)</sup> | Coming Soon
+:-----                                                         | :----                                           | :-------
+[express-session](https://github.com/expressjs/session)        | [express](http://expressjs.com)                 | [hapi](https://www.npmjs.com/package/hapi)
+[mongodb](https://docs.mongodb.org/ecosystem/drivers/node-js/) | [sails](http://sailsjs.org/)                    | [koa](https://www.npmjs.com/package/koa)
+[mysql](https://www.npmjs.com/package/mysql)                   |                                                 |
+[postgres](https://www.npmjs.com/package/pg)                   |                                                 |
+
 
 ## OS Support
 Testing of the agent is done on **64-bit OSX** and **64-bit Linux**.

@@ -40,10 +40,8 @@ The API key and service key can be retrieved within the dropdown menu on your us
 
 For a full list of configuration options that can be placed in this file, see [Node Agent Configuration](user_nodeconfig.html#config).
 
-## Running the agent
-After installation, the agent can be run with *node-contrast <app-main>.js*.
-
-If you prefer to run your app with **npm**, you can add a run script to your application's *package.json*.
+## Running The Agent
+First, add the following script to your application's *package.json*:
 
 ``` javascript
 "scripts": {
@@ -53,4 +51,4 @@ If you prefer to run your app with **npm**, you can add a run script to your app
 }
 ```
 
-Then, the agent can simply be run with ```npm run contrast```. This npm script can be changed to include other runtime configurations, such as an alternate configuration file location. For more information, see [Node Agent Configuration](user_nodeconfig.html#config).
+Then, the agent can be run with ```npm run contrast```. This npm script can be changed to include other runtime configurations, such as an alternate configuration file location. For more information, see [Node Agent Configuration](user_nodeconfig.html#config).
