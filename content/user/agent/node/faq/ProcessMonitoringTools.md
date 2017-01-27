@@ -1,10 +1,10 @@
 <!--
 title: "Process Monitoring Tools"
-description: "Notes on Contrast compatibility with other agents"
-tags: "node agent pm2 nodemon forever compatibility"
+description: "Notes on running Contrast with Process Monitoring tools"
+tags: "node agent pm2 nodemon forever compatibility monitoring"
 -->
 
-## About Running Contrast with Process Monitoring Tools
+## About Running Contrast With Process Monitoring Tools
 
 Most process monitoring tools start your application themselves so they can keep track of the process as necessary. Contrast starts your application as part of its own process. As such, there are no known compatibility issues between process management tools and Contrast. However, it may take a bit of configuration to get things working as expected.
 
@@ -18,7 +18,7 @@ Compare it to what the ```npm run contrast``` command does, where the applicatio
 
 ```./node_modules/node_contrast app.js>```
 
-The process monitoring tool needs to be configured to that Contrast is an argument to the process monitoring tool's binary, and the process monitoring tool passes your application's entry point to Contrast:
+The process monitoring tool needs to be configured such that Contrast is an argument to the process monitoring tool's binary, and the process monitoring tool passes your application's entry point to Contrast:
 
 ```<process monitoring tool> ./node_modules/node_contrast -- app.js>```
 
@@ -33,9 +33,10 @@ The command used to run Contrast normally, ```npm run contrast```, can be passed
 
 Note that the ```--name``` flag is optional here and only used so that the process doesn't show up as "npm."
 
-**Creating a New Configuration**
+**Creating A New Configuration**
 
 When creating a new configuration, the two important attributes needed for running with Contrast are ```script``` and ```args```. A sample configuration may look like this:
+
 ```javascript
 {
   apps : [

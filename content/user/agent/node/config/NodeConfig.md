@@ -36,7 +36,7 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 --localonly                      | Disable reporting to TeamServer
 --appArgs &lt;args&gt;           | Specify args to pass into the application
 --httpProxy &lt;url&gt;          | HTTP proxy url for the agent
---appVersion &lt;number&gt;      | Version of the application being instrumented, as you would like it reported to teamserver (if different from 'version' field in the application's package.json
+--appVersion &lt;number&gt;      | Version of the application being instrumented, as you would like it reported to TeamServer (if different from 'version' field in the application's *package.json*
 --skipAutoUpdate                 | Skip the automatic agent update process performed on agent startup
 
 ## Logging

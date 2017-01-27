@@ -40,7 +40,7 @@ The API key and service key can be retrieved within the dropdown menu on your us
 
 For a full list of configuration options that can be placed in this file, see [Node Agent Configuration](user_nodeconfig.html#config).
 
-## Running the agent
+## Running The Agent
 First, add the following script to your application's *package.json*:
 
 ``` javascript
