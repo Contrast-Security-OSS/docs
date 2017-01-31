@@ -5,41 +5,31 @@ tags: "TeamServer application merging"
 -->
 
 ## Merging Applications
-Merging two or more applications into a single application is a common operation performed by organization administrators responsible for bringing applications online. The main purpose of merging an application is to present a single application in terms of scoring, discovered vulnerabilities and remediation purposes. Often a single agent will be configured against an application, but that application will present itself as two or more applications. 
+Merging two or more applications into a single application is a common operation performed by organization administrators responsible for bringing applications online. The main purpose of merging is to present a single application view in terms of scoring, discovered vulnerabilities and remediation purposes. Applications can be made up of components, which may show up individually in the application list. Merging allows you to logically organize all of an application's components into one entity within Contrast.
 
-In order to merge an application, the user must be an Organization Administrator. Follow these steps below:
 
-* Login to TeamServer.
-* Navigate to the **Applications** Page.
-* Identify the applications to be merged from the search filter.
-* Checkmark the two or more applications to be merged.
-* Select the **Merge** icon from the [Action Bar](user_tsguideui.html#overview).
-* Determine which of the merged applications should be the **Master Application**.
-* Search for the **Master Application** and identify the merged application icon.
+In order to merge an application, the user must be an Organization Administrator and follow these steps:
 
-<a href="assets/images/Merged_App.png" rel="lightbox" title="Example Merged Application"><img class="thumbnail" src="assets/images/Merged_App.png"/></a>
+* Log in to Contrast
+* Navigate to the **Applications** page
+* Identify and select the applications to be merged via the checkboxes in the left column
+* Select the **Merge** icon from the [Action Bar](user_tsguideui.html#overview)
+* Determine which of the merged applications should represent the **Master Application**
+* Voila!  
 
-**Please Note**: A simple tip for searching applications to be merged is to label these applications using the **Group** attribute. This is particularly important when the list of applications spans the paging limitation at the bottom of the screen. Assign a group name to each application to be merged. Then filter the list by searching for the group name. Use the steps above to merge the applications.
+Now that your applications are merged, you will see the **Master Application** accompanied by an icon. You can always see the application modules represented by clicking this icon or choosing "Show child applications" from the **Advanced** filter options. To quickly get to any merged applications, there is a predefined **Merged** filter available from the search bar.
 
-## Remove Mappings (Unmerge)
-Once two or more applications are merged, there may be a time when they need to become separated from the master application. There are two ways to separate merged applications. The first can be done within the master application from the **Settings** tab. The second can be done from the **Organization Settings** page via **App Mappings**.
+<a href="assets/images/Merged_App.png" rel="lightbox" title="Merge Applications Action"><img class="thumbnail" src="assets/images/Merged_App.png"/></a>
 
-<a href="assets/images/App_Mappings.png" rel="lightbox" title="Remove Mappings"><img class="thumbnail" src="assets/images/App_Mappings.png"/></a>
+<a href="assets/images/Merged_App_Tooltip.png" rel="lightbox" title="Example of a Merged Application"><img class="thumbnail" src="assets/images/Merged_App_Tooltip.png"/></a>
 
-### Application Settings
 
-* Login to TeamServer
-* Navigate to the **Applications** Page.
-* Identify the master application.
-* Select the **Settings** tab.
-* Select **Managed Merged Apps**.
-* Checkmark each application to be separated.
-* Select **Remove Mappings**.
+## Unmerging Applications
+Once applications are merged, there may be a time when they need to be separated from the **Master Application**. There are a couple of ways to unmerge either all, or specific application modules. 
 
-### Organization Settings
+From the **Applications** page, there will be an **Unmerge** action in the row menu of any master application. By default, this will unmerge all application modules represented; however, there will also be an option to specifically define what gets unmerged.
 
-* Login to TeamServer.
-* From the settings menu, select **Organization Settings**.
-* Select **App Mappings**.
-* Checkmark each application to be separated.
-* Select **Remove Mappings**.
+From the **Application Modules** dialog, there will be a corresponding checkbox for each application module. Selecting one, many, or all will present the option to **Unmerge Selected** applications. This dialog can be accessed by clicking the master application icon from either the **Applications** page or the **Master Application Details** page.
+
+
+<a href="assets/images/App_Mappings.png" rel="lightbox" title="Unmerging A Master Application"><img class="thumbnail" src="assets/images/App_Mappings.png"/></a>
