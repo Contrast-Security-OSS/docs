@@ -8,11 +8,11 @@ tags: "configuration installation agent .Net"
 ### Minimum
 * .NET Framework 4.5.1 present
 * 2 CPU
-* 4 GB memory 
+* 4 GB memory
 
 (Note that Contrast 3.3.1 required .NET 4.5.2 but this requirement was reduced to 4.5.1 in Contrast 3.3.2)
 
-### Recommended 
+### Recommended
 * .NET Framework 4.5.1 present
 * 4+ CPU
 * 8+ GB memory  
@@ -31,15 +31,15 @@ You are now ready to install the Contrast .NET Agent.
 
 
 
-## Installation 
+## Installation
 To install the Contrast .NET Agent, follow these steps:
 
-1. Log in to the Contrast TeamServer and select **Add an Application**. 
-2. Select the **.NET Agent** and click **Download Agent**. This will download a zip archive file (e.g. ***ContrastSetup_3.2.5.zip***). Note that you may need to specify proxy authentication information required by your network here before downloading the agent.
+1. Log in to the Contrast TeamServer and select **Add an Application**.
+2. Select the **.NET Agent** and click **Download Agent**. This will download a zip archive file (e.g. ***ContrastSetup_3.3.5.zip***). Note that you may need to specify proxy authentication information required by your network here before downloading the agent.
 3. Extract the archive on the web server and run ***ContrastSetup.exe***. This will install the .NET Agent. 
 4. To start analyzing an application, simply point your browser to the web application and use the web application as you normally would: click on links, submit forms using normal data, etc.  The .NET Contrast Agent’s sensors will gather information about the application’s security, architecture, and libraries. The results of the Agent’s analysis can be viewed on Contrast Team Server.
 
-## Silent/Headless Installation 
+## Silent/Headless Installation
 The Contrast .NET Agent installer supports the command line options below. These options are "silent" and will not present the installer's user interface.
 
 * Install: ```ContrastSetup.exe -s -norestart```
