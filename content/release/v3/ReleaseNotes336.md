@@ -1,6 +1,6 @@
 <!--
-title: "Contrast 3.3.6 - January 2016"
-description: "Contrast 3.3.6 January 2016"
+title: "Contrast 3.3.6 - January 2017"
+description: "Contrast 3.3.6 January 2017"
 tags: "3.3.6 January Release Notes"
 -->
 
