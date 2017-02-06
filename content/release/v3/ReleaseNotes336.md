@@ -30,7 +30,7 @@ tags: "3.3.6 January Release Notes"
 * CONTRAST-11871	.Net Library/CVE Research and Mapping for January Release
 * CONTRAST-11933	IPBlacklist not populating serverActivity
 * CONTRAST-11117	Implement SecurityLogger class for RASP
-* CONTRAST-9091	add version tag to append to vulns
+* CONTRAST-9091	    add version tag to append to vulns
 * CONTRAST-11904	Installer Silent Mode Should Put All Files In the Same Directory
 * CONTRAST-10624	Ensure AppDomain RollForward Doesn't Happen During Another AppDomain Setup
 * CONTRAST-12012	Assess Mode Is Not Passing Technology Signatures To Agent
@@ -47,7 +47,7 @@ tags: "3.3.6 January Release Notes"
 * CONTRAST-11808	Refactor rules export 'apply', which should be renamed to 'handle'
 * CONTRAST-11856	Mongo / Mongoose map-reduce rewrite issue
 * CONTRAST-11795	Node agent shutting off after 1 min due to faulty timer
-* CONTRAST-9559	Evaluate Internal Methods for TypeError Agent Issues.
+* CONTRAST-9559	    Evaluate Internal Methods for TypeError Agent Issues.
 
 
 
@@ -72,7 +72,7 @@ tags: "3.3.6 January Release Notes"
 * CONTRAST-10086	Improve JIRA Integration Errors
 * CONTRAST-10081	Support for non-default HTTPS protocols for JIRA
 * CONTRAST-10077	More urgent warning message with rotate API keys
-* CONTRAST-9944	SuperAdmin > Users Page Updates
+* CONTRAST-9944	    SuperAdmin > Users Page Updates
 * CONTRAST-12086	Error processing library cache from hub
 * CONTRAST-12055	Login Issues
 * CONTRAST-12002	"Invalid email" typo needs to be corrected
@@ -105,9 +105,9 @@ tags: "3.3.6 January Release Notes"
 * CONTRAST-11175	[EOP] Admin > Applications, License column is not being populated 
 * CONTRAST-11111	Wrong Color/Icon for App with only Protection
 * CONTRAST-11091	Expiring License Notification Incorrect When Application Archived
-* CONTRAST-9959	LDAP/AD UI bugs in authentication settings
-* CONTRAST-9847	HipChat alerts are "empty" on iPhone client
-* CONTRAST-9703	Organization filter not working on admin applications page
+* CONTRAST-9959	    LDAP/AD UI bugs in authentication settings
+* CONTRAST-9847	    HipChat alerts are "empty" on iPhone client
+* CONTRAST-9703	    Organization filter not working on admin applications page
 
 
 
