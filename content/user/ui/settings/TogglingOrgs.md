@@ -1,22 +1,22 @@
 <!--
 title: "Toggling Across Organizations"
-description: "Moving from one organization to another from the settings menu"
+description: "Moving from one organization to another from the user menu"
 tags: "TeamServer toggling"
 -->
 
 ## Toggling Between Organizations
-Once a user's account has been configured to gain access to multiple organizations via one or more organization groups, the user is presented with an option to move between organizations via the Settings Menu.
+Once a user's account has been configured to gain access to multiple organizations via one or more organization groups, the user is presented with an option to move between organizations via the User Menu.
 
 *Please Note*: Only EOP customers deploying in a multi-tenant deployment with two or more organizations are capable of manuevering across organizations.
 
 Steps to toggle between organizations:
 
-* Login to TeamServer
-* Select the settings menu
-* If the user has multiple organizations available vian an Access Control Group, he/she will see a list of organizations to select.
-* Select the organization of choice.
+* Log in to TeamServer
+* Navigate to the User menu at the top right of the screen
+* If the user has multiple organizations available via an Access Control Group, he or she will see a list of organizations to select
+* Select the organization of choice
 
-<a href="assets/images/Settings_MultiOrg.png" rel="lightbox" title="Top Navigation Bar for Multi-Organizations"><img class="thumbnail" src="assets/images/Settings_MultiOrg.png"/></a>
+<a href="assets/images/Settings_MultiOrg.png" rel="lightbox" title="User Menu with Multiple Organizations"><img class="thumbnail" src="assets/images/Settings_MultiOrg.png"/></a>
 
 
 ## Note About Organization Settings
