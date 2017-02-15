@@ -200,12 +200,7 @@ To add a service plan go to the Service Plans tab within the Contrast Tile and c
 <a href="assets/images/Pivotal_Service_Plan.png" rel="lightbox" title="Adding a service plan"><img class="thumbnail" src="assets/images/Pivotal_Service_Plan.png"/></a>
 
 You will now be presented with 6 form fields.
-Plan name - the name of the plan to be offered by the broker.
-Teamserver Url - Url to your Teamserver instance
-Username - contrast security username with at a minimum edit permission within the chosen org.
-Organization UUID - Organization UUID that the user belongs to and organization where you want an application to be onboarded
-Api Key - Api key for user
-Service Key - Service key for user
+
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
 | TeamServer                   | Url to your Teamserver instance                        |
