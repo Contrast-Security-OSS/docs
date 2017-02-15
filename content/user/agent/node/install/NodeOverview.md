@@ -8,7 +8,7 @@ The **Contrast Node Agent** analyzes the behavior of Node.js web applications by
 
 ## Usage
 To start analyzing an application, download the Node.js agent and create a configuration file as described in [Node Agent Installation](user_nodeinstall.html#install).
-One way to think of the agent is as a middle-man between your code and the Node runtime. To this end, just as you might normally run your app with ```node <app-main.js>```, the Contrast Node Agent allows you to run your app with ```node-contrast <app-main>.js```.
+One way to think of the agent is as a middle-man between your code and the Node runtime. To this end, just as you might normally run your app with ```node <app-main.js>```, the Contrast Node Agent allows you to run your app with ```./node_modules/node_contrast <app-main>.js```.
 
 ## Node Agent Overview
 There are two primary source code transformations that the Contrast Node Agent employs to monitor the behavior of your application:
