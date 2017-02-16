@@ -22,7 +22,7 @@ When binding Contrast Security using a user-provided service, you must give it a
 | ---- | -----------
 | `teamserver_url` | (Optional) The URL in which your user has access and the URL to which the agent will report (ex: https://app.contrastsecurity.com)
 | `username` | (Required) The account name to use when downloading the agent
-| `org_uuid` | (Required) The org uuid to send app information to; this is the org that your bound application will appear within
+| `org_uuid` | (Required) The organization uuid to send app information to; this is the organization that your bound application will appear within
 | `api_key` | (Required) Your user's API key
 | `service_key` | (Required) Your user's service key
 
@@ -137,16 +137,12 @@ A Service Broker allows Cloud Foundry applications to bind to services and consu
 
 Once deployed, this title will create one organization:
 
- 1. **contrast-security-service-broker-org**  - This org is used for deploying the Contrast Service Broker application. Memory requirement = 512MB
-
-<!-- Are "org" and "organization" interchangeable? -->
+ 1. **contrast-security-service-broker-org**  - This organization is used for deploying the Contrast Service Broker application. Memory requirement = 512MB
 
 # Usage Walkthrough
 
 ## Using Contrast with Java Applications on Pivotal Cloud Foundry
 The Contrast Security integration with Pivotal Cloud Foundry (PCF) allows you to easily deploy Contrast Security-monitored applications on the PCF platform.
-
-<!-- why is PCF initialism spelled out formally, but others not? -->
 
 This article walks you through deploying a Java applicaton with a Contrast agent installed. It demonstrates the steps to get up and running with PCF and the Contrast Java buildpack.
 
@@ -154,8 +150,6 @@ This article walks you through deploying a Java applicaton with a Contrast agent
 
 To push an app that is using the Contrast buildpack to PCF, we will use the Cloud Foundry-provided spring music app as an example.
 The sample application can be cloned, built, and pushed using the following commands:
-
-<!-- do we use oxford commas? -->
 
 ```bash
     git clone https://github.com/cloudfoundry-samples/spring-music.git
@@ -171,9 +165,7 @@ The sample application can be cloned, built, and pushed using the following comm
 The first step of integrating Contrast with your Pivotal Cloud Foundry is to install the Contrast Tile.
 The Contrast Tile can be found on our [Github site.](https://github.com/Contrast-Security-OSS/contrast-pivotal-tile)
 
-There are 2 ways to get the pivotal tile.
-
-<!-- Most style guides spell out numbers under 10, if not higher. Is this use of numerals an in-house rule? -->
+There are two ways to get the pivotal tile.
 
 **Option 1 (download): **
 Within the repository root, there is a file called: contrast-security-service-broker-#.#.#.pivotal. Download this file.
@@ -209,11 +201,11 @@ To add a service plan, go to the Service Plans tab within the Contrast Tile and 
 
 <a href="assets/images/Pivotal_Service_Plan.png" rel="lightbox" title="Adding a service plan"><img class="thumbnail" src="assets/images/Pivotal_Service_Plan.png"/></a>
 
-You will now be presented with 6 form fields.
+You will now be presented with six form fields.
 
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
-| TeamServer                   | Url to your Teamserver instance                        |
+| TeamServer                   | URL to your Teamserver instance                        |
 | TeamServer Service Key       | Service Key found in Organization Settings             |
 | TeamServer API Key           | API Key found in Organization Settings                 |
 | Username                     | Contrast security username                             |
