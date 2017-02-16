@@ -12,7 +12,7 @@ npm install node_contrast-#.#.#.tar.gz
 This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json*.
 
 ## Setup
-Unlike the other agents, the Node agent requires you to have set up a configuration file before running it for the first time. By default, the agent looks for this configuration file in your application's root directory and expects the file to be called *contrast.json*.
+When you download the Node agent, you will also be directed to download a configuration file. By default, the agent looks for this configuration file in your application's root directory and expects the file to be called *contrast.json*.
 The minimum required *contrast.json* setup should look like this:
 ``` javascript
 {
