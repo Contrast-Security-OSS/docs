@@ -41,13 +41,12 @@ For general information on configuring the buildpack, including how to specify c
 
 # Contrast Security Service Broker
 
-The Contrast Security Service Broker allows Cloud Foundry users to easily bind services to their application to make use of the Contrast Java agent.
+The Contrast Security Service Broker allows Cloud Foundry users to easily bind services to their application and make use of the Contrast Java agent.
 
 ## Prerequisites
-Any applications that you want to make use of the Contrast Security Service Broker should use the Contrast Security
-buildpack to allow the agent to be downloaded and run.
+Any applications that you wish to use with the Service Broker should employ the Contrast Security buildpack in order to download and run the agent.
 The buildpack can be found [here](https://github.com/Contrast-Security-OSS/java-buildpack).
-You can have apps use the buildpack with the following command:
+Run the following command to use the buildpack:
 
 <!-- sentences above must be clarified -->
 
