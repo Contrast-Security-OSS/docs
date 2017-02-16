@@ -16,7 +16,7 @@ Tags are printed to standard output by the buildpack detect script.
 
 ## User-Provided Service
 When binding Contrast Security using a user-provided service, you must give it a name or tag with `contrast-security` or `contrastsecurity` in it. The credential payload needs to contain the following entries:
-<!-- "Contrast" and "Contrast Security" seem to be used interchangeably throughout. Ask Steve. -->
+
 
 | Name | Description
 | ---- | -----------
@@ -48,7 +48,6 @@ Any applications that you wish to use with the Service Broker should employ the 
 The buildpack can be found [here](https://github.com/Contrast-Security-OSS/java-buildpack).
 Run the following command to use the buildpack:
 
-<!-- sentences above must be clarified -->
 
 ```bash
 cf push YOUR_APP_NAME_GOES_HERE -b "https://github.com/Contrast-Security-OSS/java-buildpack"
