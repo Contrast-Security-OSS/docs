@@ -34,9 +34,7 @@ cf restage spring-music
 ```
 
 ## Configuration
-For general information on configuring the buildpack, including how to specify configuration values through environment variables, refer to [Configuration and Extension][].
-
-[Contrast Security]: https://www.contrastsecurity.com
+For general information on configuring the buildpack, including how to specify configuration values through environment variables, refer to [Configuration and Extension][https://github.com/Contrast-Security-OSS/java-buildpack/blob/master/README.md#configuration-and-extension].
 
 
 # Contrast Security Service Broker
@@ -210,6 +208,7 @@ You will now be presented with six form fields.
 | Organization UUID            | Organization UUID to onboard app to                    |
 | Plan Name                    | Name of the plan as it will appear in Apps Manager     |
 
+---
 
 Once you have finished defining a plan, click the Save button.
 
@@ -253,3 +252,4 @@ Command line example:
 
 Pivotal Apps Manager example:
 <a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through ui"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
+
