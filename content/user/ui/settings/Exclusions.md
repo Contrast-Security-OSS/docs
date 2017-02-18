@@ -20,9 +20,9 @@ Exclusions can apply to an input, URLs or code. Contrast won’t process any inp
 
 Contrast allows you to specify a particular type of input. Any findings using this input will be suppressed.
 
-* For **Parameter**, **Head** and **Cookie**: You must specify the name of the particular input for which you wish to suppress findings. You can use wildcard **“.*”** to supress all findings from the selected type of input.
+* For ```Parameter```, ```Header``` and ```Cookie```: You must specify the name of the particular input for which you wish to suppress findings. You can use wildcard ```.*``` to suppress all findings from the selected input type.
 
-* **QueryString** and **Body**: These will suppress findings from the entire QueryString and Body, respectively.
+* ```QueryString``` and ```Body```: These will suppress findings from the entire QueryString and Body, respectively.
 
 ### Applied URLs
 
@@ -32,13 +32,13 @@ Creating an exclusion from a URL allows you to specify a list of URLs to be igno
 
 * **These URLs** (allows regex): You can specify a set of URLs to which to apply the exclusion. 
 
-* **Wildcard “.*”** is acceptable substitute for listing all URLs.
+* **Wildcard “ .* ”** is an acceptable substitute for listing all URLs.
 
 ### Code
 
-Code (allows regex) allows you to specify a list of method signatures. Any findings involving these methods will be suppressed. The entire method signature must be present and not include a trailing parameter definition or any other extra characters. For example: 
+Choosing **Code** (allows regex) will allow you to specify a list of method signatures. Any findings involving these methods will be suppressed. The entire method signature must be present and not include a trailing parameter definition or any other extra characters. For example: 
 
-* If you have a method **doLegacySecurity()** inside a class called **com.acme.OldSecurity** that is being reported for using insecure cryptographic algorithms, you can ignore it by entering this line into the exclusion code block:
+* If you have a method ```doLegacySecurity()``` inside a class called ```com.acme.OldSecurity``` that is being reported for using insecure cryptographic algorithms, you can ignore it by entering this line into the exclusion code block:
 
       com.acme.OldSecurity.doLegacySecurity
 
@@ -46,31 +46,34 @@ Code (allows regex) allows you to specify a list of method signatures. Any findi
 
 ## Create a new exclusion
 
-1.	From within the application to which you wish to apply a new exclusion, click on the **Exclusions** tab and select **Add Exclusion**. **(You must have Admin or Rules Admin privileges.)**
+1.	From within the application to which you wish to apply a new exclusion, click on the **Exclusions** tab and select **Add Exclusion**. 
 
-<a href="assets/images/AddExclusions.png" rel="lightbox" title="Add exclusions"><img class="thumbnail" src="assets/images/AddExclusions.png"/></a>
+>**Note:** You must have Admin or Rules Admin privileges in order to create exclusions.
 
-2. Add the **Exclusion Name**. Use something you’ll remember easily.
+<a href="assets/images/AddExclusions.png" rel="lightbox" title="Adding a new exclusion"><img class="thumbnail" src="assets/images/AddExclusions.png"/></a>
+
+2. Enter the **Exclusion Name**. Use something you’ll remember easily.
 3.	Select the **Exclusion Type**. (More fields will become available once you make your choice. Add the information that is necessary for each one.) 
-4.	**Applicable Vulnerability Rules** allows you to specify the scope of rules effected by the exclusion.
+4.	**Applicable Vulnerability Rules** allows you to specify the scope of rules affected by the exclusion.
 
- * **All Rules** applies the exclusion to all vulnerabilities found by both Assess and Protect mode. 
+ * **All Rules** applies the exclusion to all vulnerabilities found in both Assess and Protect mode. 
  * **All Assessment Rules** applies to all vulnerabilities found in Assess mode.
  * **All Protection Rules** applies to all attack events in Protect mode.
 
 This can be narrowed down by selecting individual Assess or Protect rules. We’ll only apply the exclusion to vulnerabilities found by the selected rules in the corresponding mode.
 
->**NOTE:** To help you understand what your exclusion will do, a summarised sentence is displayed at the bottom of the wizard.
+>**NOTE:** To help you understand what your exclusion will do, a summarized sentence is displayed at the bottom of the wizard.
+
 
 ## Create a new exclusion from an existing attack event
 
-When viewing the details of an existing attack event, an **Add Exclusion** button will appear in the top right hand corner of the **Event** tab. Selecting this button preopulates the exclusion fields based on the details of this specific event. Once created, this exclusion is managed in the same way as if it was created manually.
+When viewing the details of an existing attack event, an **Add Exclusion** button will appear in the top right hand corner of the **Event** tab. Selecting this button prepopulates the exclusion fields based on the details of this specific event. Once created, this exclusion is managed in the same way as if it were created manually.
 
 ## Enable or disable existing exclusions
 
-Each exclusion can be enabled or disabled for either Assess or Protect, depending on the rules which are covered by the exclusion. From the **Exclusions** tab within an application, you can see a list of all exclusions existing for this app. These can be toggled on or off for both Assess and Protect. 
+Each exclusion can be enabled or disabled for either Assess or Protect mode, depending on which rules are covered by the exclusion. From the **Exclusions** tab within an application overview, you can see a list of all existing exclusions for that application. These can be toggled on or off for both Assess and Protect. 
 
-<a href="assets/images/EnableExclusions.png" rel="lightbox" title="Enable or disable exclusions"><img class="thumbnail" src="assets/images/EnableExclusions.png"/></a>
+<a href="assets/images/EnableExclusions.png" rel="lightbox" title="Enabling/disabling exclusions within an application"><img class="thumbnail" src="assets/images/EnableExclusions.png"/></a>
 
 Alternatively, you can see a global list of existing exclusions across all applications under **Policy Management > Application Exclusions** via the User Menu. Each exclusion can also be edited and toggled off for each mode on this page. 
 
