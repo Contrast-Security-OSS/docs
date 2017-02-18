@@ -20,9 +20,9 @@ Exclusions can apply to an input, URLs or code. Contrast won’t process any inp
 
 Contrast allows you to specify a particular type of input. Any findings using this input will be suppressed.
 
-* For ```Parameter```, ```Header``` and ```Cookie```: You must specify the name of the particular input for which you wish to suppress findings. You can use wildcard ```.*``` to suppress all findings from the selected input type.
+* For **Parameter**, **Header** and **Cookie**: You must specify the name of the particular input for which you wish to suppress findings. You can use wildcard ```.*``` to suppress all findings from the selected input type.
 
-* ```QueryString``` and ```Body```: These will suppress findings from the entire QueryString and Body, respectively.
+* **QueryString** and **Body**: These will suppress findings from the entire QueryString and Body, respectively.
 
 ### Applied URLs
 
@@ -32,7 +32,7 @@ Creating an exclusion from a URL allows you to specify a list of URLs to be igno
 
 * **These URLs** (allows regex): You can specify a set of URLs to which to apply the exclusion. 
 
-* **Wildcard “ .* ”** is an acceptable substitute for listing all URLs.
+>**NOTE:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
 
 ### Code
 
@@ -46,11 +46,11 @@ Choosing **Code** (allows regex) will allow you to specify a list of method sign
 
 ## Create a new exclusion
 
-1.	From within the application to which you wish to apply a new exclusion, click on the **Exclusions** tab and select **Add Exclusion**. 
+1. From within the application to which you wish to apply a new exclusion, click on the **Exclusions** tab and select **Add Exclusion**. 
 
->**Note:** You must have Admin or Rules Admin privileges in order to create exclusions.
+   >**Note:** You must have Admin or Rules Admin privileges in order to create exclusions.
 
-<a href="assets/images/AddExclusions.png" rel="lightbox" title="Adding a new exclusion"><img class="thumbnail" src="assets/images/AddExclusions.png"/></a>
+   <a href="assets/images/ExclusionsAdd.png" rel="lightbox" title="Adding A New Exclusion"><img class="thumbnail" src="assets/images/ExclusionsAdd.png"/></a>
 
 2. Enter the **Exclusion Name**. Use something you’ll remember easily.
 3.	Select the **Exclusion Type**. (More fields will become available once you make your choice. Add the information that is necessary for each one.) 
@@ -73,7 +73,7 @@ When viewing the details of an existing attack event, an **Add Exclusion** butto
 
 Each exclusion can be enabled or disabled for either Assess or Protect mode, depending on which rules are covered by the exclusion. From the **Exclusions** tab within an application overview, you can see a list of all existing exclusions for that application. These can be toggled on or off for both Assess and Protect. 
 
-<a href="assets/images/EnableExclusions.png" rel="lightbox" title="Enabling/disabling exclusions within an application"><img class="thumbnail" src="assets/images/EnableExclusions.png"/></a>
+<a href="assets/images/ExclusionsEnableDisable.png" rel="lightbox" title="Enabling/Disabling Exclusions "><img class="thumbnail" src="assets/images/ExclusionsEnableDisable.png"/></a>
 
 Alternatively, you can see a global list of existing exclusions across all applications under **Policy Management > Application Exclusions** via the User Menu. Each exclusion can also be edited and toggled off for each mode on this page. 
 
