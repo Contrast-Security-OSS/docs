@@ -3,7 +3,11 @@ title: "Running Contrast on Cloud Foundry"
 description: "Agent configuration using the Contrast service broker, Contrast buildpack, and the Pivotal Tile"
 tags: "java agent installation pivotal cloud foundry tile buildpack"
 -->
-# Contrast Security Buildpack
+Contrast offers a variety of Cloud Foundry integrations for your applications using the Contrast Java buildpack. The buildpack can be used on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker is the next step towards closer integration with Contrast. The service broker allows you to define multiple service plans, and allows you to generate service instances in order to bind to applications.
+
+For Pivotal Cloud Foundry customers, we offer a Pivotal tile. This tile automates the BOSH deployment and configuration of Contrast Security service broker. 
+
+## Contrast Security Buildpack
 The Contrast Security agent buildpack allows an application to be configured to work with a bound Contrast service.
 
 <table>
@@ -14,7 +18,7 @@ The Contrast Security agent buildpack allows an application to be configured to 
 </table>
 Tags are printed to standard output by the buildpack detect script.
 
-## User-Provided Service
+### User-Provided Service
 When binding Contrast using a user-provided service, you must give it a name or tag with `contrast-security` or `contrastsecurity` in it. The credential payload needs to contain the following entries:
 
 
@@ -33,15 +37,15 @@ cf bind-service spring-music contrast-security-service
 cf restage spring-music
 ```
 
-## Configuration
+### Configuration
 For general information on configuring the buildpack, including how to specify configuration values through environment variables, refer to [Configuration and Extension][https://github.com/Contrast-Security-OSS/java-buildpack/blob/master/README.md#configuration-and-extension].
 
 
-# Contrast Service Broker
+## Contrast Service Broker
 
 The Contrast service broker allows Cloud Foundry users to easily bind services to their application and make use of the Contrast Java agent.
 
-## Prerequisites
+### Prerequisites
 Any applications that you wish to use with the service broker should employ the Contrast buildpack in order to download and run the agent.
 The buildpack can be found [here](https://github.com/Contrast-Security-OSS/java-buildpack).
 Run the following command to use the buildpack:
@@ -51,7 +55,7 @@ Run the following command to use the buildpack:
 cf push YOUR_APP_NAME_GOES_HERE -b "https://github.com/Contrast-Security-OSS/java-buildpack"
 ```
 
-## How To Set Up (Generic CF)
+### How To Set Up (Generic CF)
 
 Build service broker app:
 ```bash
@@ -118,16 +122,16 @@ All service brokers start off as private; you need to make it public.
 You should now be able to create a new service instance from the Contrast service broker and bind it to your application.
 
 
-# Contrast Service Broker Tile
+## Contrast Service Broker Tile
 
 
-## Prerequisites:
+### Prerequisites:
 
  1. Pivotal Apps Manager and Ops Manager installation
  2. Active Contrast subscription
  3. Any application that needs to use Contrast must be using the latest [Contrast buildpack](https://github.com/Contrast-Security-OSS/java-buildpack)
 
-## Details
+### Details
 
 A service broker allows Cloud Foundry applications to bind to services and consume the services easily from the App Manager UI or the command line. The Contrast service broker enables you to use one or more Contrast accounts, and is deployed as a Java application on Cloud Foundry. The broker exposes the Contrast service on the Cloud Foundry marketplace, which allows users to directly create a service instance and bind it to their applications either from the Pivotal Apps Manager Console or the command line.
 
@@ -135,9 +139,9 @@ Once deployed, this title will create one organization:
 
  1. **contrast-security-service-broker-org**  - This organization is used for deploying the Contrast service broker application. Memory requirement = 512MB
 
-# Usage Walkthrough
+### Usage Walkthrough
 
-## Using Contrast with Java Applications on Pivotal Cloud Foundry
+### Using Contrast with Java Applications on Pivotal Cloud Foundry
 The Contrast integration with Pivotal Cloud Foundry (PCF) allows you to easily deploy Contrast-monitored applications on the PCF platform.
 
 This article walks you through deploying a Java applicaton with a Contrast agent installed. It demonstrates the steps to get up and running with PCF and the Contrast Java buildpack.
@@ -219,7 +223,7 @@ Once you have defined your plans, return to the Ops Manager dashboard and select
 
 This may take some time to deploy.
 
-# Step 2: Apps Manager Instructions
+## Step 2: Apps Manager Instructions
 Now that we have successfully deployed the service broker we can create services to bind the credentials to an application.
 Navigate to your Pivotal Apps Manager instance.
 
