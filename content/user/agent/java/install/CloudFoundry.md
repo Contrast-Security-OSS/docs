@@ -18,7 +18,7 @@ The Contrast Security agent buildpack allows an application to be configured to 
 </table>
 Tags are printed to standard output by the buildpack detect script.
 
-### User-Provided Service
+### User-provided service
 When binding Contrast using a user-provided service, you must give it a name or tag with `contrast-security` or `contrastsecurity` in it. The credential payload needs to contain the following entries:
 
 
@@ -55,7 +55,7 @@ Run the following command to use the buildpack:
 cf push YOUR_APP_NAME_GOES_HERE -b "https://github.com/Contrast-Security-OSS/java-buildpack"
 ```
 
-### How To Set Up (Generic CF)
+### How to set up (generic cf)
 
 Build service broker app:
 ```bash
@@ -139,9 +139,7 @@ Once deployed, this title will create one organization:
 
  1. **contrast-security-service-broker-org**  - This organization is used for deploying the Contrast service broker application. Memory requirement = 512MB
 
-### Usage Walkthrough
-
-### Using Contrast with Java Applications on Pivotal Cloud Foundry
+## Using Contrast with Java Applications on Pivotal Cloud Foundry
 The Contrast integration with Pivotal Cloud Foundry (PCF) allows you to easily deploy Contrast-monitored applications on the PCF platform.
 
 This article walks you through deploying a Java applicaton with a Contrast agent installed. It demonstrates the steps to get up and running with PCF and the Contrast Java buildpack.
@@ -149,7 +147,7 @@ This article walks you through deploying a Java applicaton with a Contrast agent
 ### Setting up an application with the Contrast build pack
 
 To push an app that is using the Contrast buildpack to PCF, we will use the Cloud Foundry-provided spring music app as an example.
-The sample application can be cloned, built, and pushed using the following commands:
+The sample application can be cloned, built and pushed using the following commands:
 
 ```bash
     git clone https://github.com/cloudfoundry-samples/spring-music.git
@@ -161,7 +159,7 @@ The sample application can be cloned, built, and pushed using the following comm
 
 ## Adding the Contrast Service Broker Tile
 
-### Step 1: Ops Manager Configuration
+### Step 1: Ops manager configuration
 The first step of integrating Contrast with your Pivotal Cloud Foundry is to install the Contrast tile.
 The Contrast tile can be found on our [Github site.](https://github.com/Contrast-Security-OSS/contrast-pivotal-tile)
 
@@ -193,7 +191,7 @@ Within the repository root, there is a file called: contrast-security-service-br
 
 Once you have the file stored locally, navigate to your Pivotal Ops Manager instance.
 
-In the Ops Manager, click on the **Import a Product** button and select the **contrast-security-service-broker-#.#.#.pivotal tile** that was downloaded or created in the previous step.
+In the Ops Manager, click on the **Import a Product** button and select the **contrast-security-service-broker-#.#.#.pivotal** tile that was downloaded or created in the previous step.
 
 The tile requires some configuration before we can deploy it.
 The service broker does **not** offer any service plans by default and requires that at least one service plan be configured before it will allow the tile to be deployed.
@@ -223,16 +221,16 @@ Once you have defined your plans, return to the Ops Manager dashboard and select
 
 This may take some time to deploy.
 
-## Step 2: Apps Manager Instructions
+## Step 2: Apps manager instructions
 Now that we have successfully deployed the service broker we can create services to bind the credentials to an application.
 Navigate to your Pivotal Apps Manager instance.
 
-Go to the marketplace tab.
+Go to the **Marketplace** tab.
 A Contrast service broker option should now be present.
 ![Apps Manager Marketplace](./instructions/marketplace.png "Contrast Security Service Broker in the marketplace")
 <a href="assets/images/Pivotal_Marketplace.png" rel="lightbox" title="Contrast Security service broker in the marketplace"><img class="thumbnail" src="assets/images/Pivotal_Marketplace.png"/></a>
 
-Click the Contrast service broker option to see the available plans. These plans are the same that were entered in the Ops Manager.
+Click the **Contrast service broker** option to see the available plans. These plans are the same that were entered in the Ops Manager.
 Select the plan you want to bind to an application by clicking the **Select this Plan** button.
 ![Select Plan](./instructions/select_plan.png "Selecting a plan to bind")
 <a href="assets/images/Pivotal_Select_Plan.png" rel="lightbox" title="Selecting a plan to bind"><img class="thumbnail" src="assets/images/Pivotal_Select_Plan.png"/></a>
