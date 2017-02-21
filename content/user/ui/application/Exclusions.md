@@ -14,7 +14,7 @@ Exclusions are used to suppress events that you don't want to hear about for one
 
 ## Types of exclusions 
 
-Exclusions can apply to an input, URLs or code. Contrast won’t process any inputs that match the exclusion criteria. Each exclusion only applies to the application for which it was created. Please review the options for the type of exclusion you would like to set up. 
+Exclusions can apply to an input, URLs or code. Contrast won’t process any inputs that match the exclusion criteria, and each exclusion only applies to the application for which it was created. Please review the options for the type of exclusion you would like to set up. 
 
 ### Input 
 
@@ -24,15 +24,21 @@ Contrast allows you to specify a particular type of input. Any findings using th
 
 * **QueryString** and **Body**: These will suppress findings from the entire QueryString and Body, respectively.
 
-### Applied URLs
-
-Creating an exclusion from a URL allows you to specify a list of URLs to be ignored. Any findings from the specified URLs will be suppressed. 
+In conjunction with the input type you may choose to apply URLs:
 
 * **All URLs**: Findings using the specified input type and name will be suppressed regardless of where they’ve come from.
 
-* **These URLs** (allows regex): You can specify a set of URLs to which to apply the exclusion. 
+* **These URLs** (allows regex): Specify a set of URLs to which to apply the exclusion. 
 
 >**NOTE:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
+
+
+### URL
+
+This type of exclusion allows you to focus on a list of specific URLs to be ignored using **These URLs**. In this field you can list the specific URLs to exclude, resulting in any findings from these URLs being suppressed. 
+
+>**NOTE:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
+
 
 ### Code
 
