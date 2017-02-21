@@ -16,6 +16,9 @@ The Contrast Security agent buildpack allows an application to be configured to 
 </td>
   </tr>
 </table>
+
+---
+
 Tags are printed to standard output by the buildpack detect script.
 
 ### User-provided service
@@ -30,6 +33,8 @@ When binding Contrast using a user-provided service, you must give it a name or 
 | `api_key` | (Required) Your user's API key
 | `service_key` | (Required) Your user's service key
 
+---
+
 An example of creating a user-provided service and binding it to an application:
 ```bash
 cf create-user-provided-service contrast-security-service -p "teamserver_url,username,org_uuid,api_key,service_key"
@@ -38,7 +43,7 @@ cf restage spring-music
 ```
 
 ### Configuration
-For general information on configuring the buildpack, including how to specify configuration values through environment variables, refer to [Configuration and Extension][https://github.com/Contrast-Security-OSS/java-buildpack/blob/master/README.md#configuration-and-extension].
+For general information on configuring the buildpack, including how to specify configuration values through environment variables, refer to [Configuration and Extension](https://github.com/Contrast-Security-OSS/java-buildpack/blob/master/README.md#configuration-and-extension).
 
 
 ## Contrast Service Broker
@@ -69,7 +74,7 @@ Deploy service broker app:
     cf push contrast-security-service-broker -p/path/to/servicebroker.jar
 ```
 
-The service broker does not offer any plans by default. Plans are configurable within the Pivotal Ops Manager or via the CONTRAST_SERVICE_PLANS environment variable. Example:
+The service broker does not offer any plans by default. Plans are configurable within the Pivotal Ops Manager or via the ```CONTRAST_SERVICE_PLANS``` environment variable. Example:
 
 ```
 
@@ -106,7 +111,9 @@ The application also requires an environment variable for a username and a passw
 ```
 
 Create a service broker instance. (You must have defined at least one service plan.)
-**You must use the username and password configured above.**
+
+>**NOTE:** You must use the username and password configured above.
+
 ```bash
     cf create-service-broker contrast-security-service-broker USER_NAME PASSWORD
     https://contrast-security-service-broker
@@ -137,7 +144,7 @@ A service broker allows Cloud Foundry applications to bind to services and consu
 
 Once deployed, this title will create one organization:
 
- 1. **contrast-security-service-broker-org**  - This organization is used for deploying the Contrast service broker application. Memory requirement = 512MB
+ * **contrast-security-service-broker-org**  - This organization is used for deploying the Contrast service broker application. Memory requirement = 512MB
 
 ## Using Contrast with Java Applications on Pivotal Cloud Foundry
 The Contrast integration with Pivotal Cloud Foundry (PCF) allows you to easily deploy Contrast-monitored applications on the PCF platform.
@@ -227,12 +234,12 @@ Navigate to your Pivotal Apps Manager instance.
 
 Go to the **Marketplace** tab.
 A Contrast service broker option should now be present.
-![Apps Manager Marketplace](./instructions/marketplace.png "Contrast Security Service Broker in the marketplace")
+
 <a href="assets/images/Pivotal_Marketplace.png" rel="lightbox" title="Contrast Security service broker in the marketplace"><img class="thumbnail" src="assets/images/Pivotal_Marketplace.png"/></a>
 
 Click the **Contrast service broker** option to see the available plans. These plans are the same that were entered in the Ops Manager.
 Select the plan you want to bind to an application by clicking the **Select this Plan** button.
-![Select Plan](./instructions/select_plan.png "Selecting a plan to bind")
+
 <a href="assets/images/Pivotal_Select_Plan.png" rel="lightbox" title="Selecting a plan to bind"><img class="thumbnail" src="assets/images/Pivotal_Select_Plan.png"/></a>
 
 On the next screen, specify an instance name of the plan. (This will not effect the service broker, so you may name it anything you wish.)
@@ -253,5 +260,5 @@ Command line example:
 ```
 
 Pivotal Apps Manager example:
-<a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through ui"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
+<a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through UI"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
 
