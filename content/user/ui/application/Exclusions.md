@@ -24,7 +24,7 @@ Contrast allows you to specify a particular type of input. Any findings using th
 
 * **QueryString** and **Body**: These will suppress findings from the entire QueryString and Body, respectively.
 
-In conjunction with the input type you may choose to apply URLs:
+In conjunction with the input type, you must choose how to apply URLs:
 
 * **All URLs**: Findings using the specified input type and name will be suppressed regardless of where they’ve come from.
 
@@ -35,7 +35,7 @@ In conjunction with the input type you may choose to apply URLs:
 
 ### URL
 
-This type of exclusion allows you to focus on a list of specific URLs to be ignored using **These URLs**. In this field you can list the specific URLs to exclude, resulting in any findings from these URLs being suppressed. 
+This type of exclusion allows you to focus on a list of specific URLs to be ignored using **These URLs**. In this field, you can list the specific URLs to exclude, resulting in any findings from these URLs being suppressed. 
 
 >**NOTE:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
 
