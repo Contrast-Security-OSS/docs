@@ -16,9 +16,9 @@ mvn package
 
 This builds the `contrast-bamboo-plugin-#.#.#-SNAPSHOT.jar` and *a .obr* file. They can be found within the `contrast-bamboo-plugin/target` directory of the cloned project.
 
-Now that you built the plugin, we can upload it to our Bamboo instance. Begin by selecting the **Add Ons** option from the top left settings menu.
+Now that you built the plugin, we can upload it to our Bamboo instance. Begin by selecting the **Add-Ons** option from the top left settings menu.
 
-<a href="assets/images/Bamboo_Add_On_Option.png" rel="lightbox" title="Bamboo upload add on"><img class="thumbnail" src="assets/images/Bamboo_Add_On_Option.png"/></a>
+<a href="assets/images/Bamboo_Add_On_Option.png" rel="lightbox" title="Bamboo upload add-on"><img class="thumbnail" src="assets/images/Bamboo_Add_On_Option.png"/></a>
 
 
 Then select the **Upload add-on** text.
@@ -29,7 +29,7 @@ You should now be prompted to upload a file. Select the `contrast-bamboo-plugin-
 
 After uploading the plugin, you should see it appear under **User Installed Add-Ons**.
 
-<a href="assets/images/Bamboo_Plugin_Uploaded.png" rel="lightbox" title="Bamboo successfully added add on"><img class="thumbnail" src="assets/images/Bamboo_Plugin_Uploaded.png"/></a>
+<a href="assets/images/Bamboo_Plugin_Uploaded.png" rel="lightbox" title="Bamboo successfully added add-on"><img class="thumbnail" src="assets/images/Bamboo_Plugin_Uploaded.png"/></a>
 
 ### Creating a TeamServer profile
 To use the plugin, you should first configure a TeamServer profile. To do this, select the **TeamServer Profiles** button under **Add-Ons** within the **Bamboo Administration** dashboard.
