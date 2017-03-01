@@ -61,7 +61,7 @@ Once you create the plan, add a task to the build process by clicking the **Add 
 
 <a href="assets/images/Bamboo_Add_First_Task.png" rel="lightbox" title="Add Contrast task"><img class="thumbnail" src="assets/images/Bamboo_Add_First_Task.png"/></a>
 
-A popover menu is be presented. Find the **Contrast Vulnerability Threshold** task and select it.
+A popover menu is be presented. Find the **Contrast CI for Assess** task and select it.
 
 <a href="assets/images/Bamboo_Add_Contrast_Task.png" rel="lightbox" title="Vulnerability threshold task"><img class="thumbnail" src="assets/images/Bamboo_Add_Contrast_Task.png"/></a>
 
