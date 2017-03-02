@@ -11,7 +11,7 @@ This feature allows you to send security logs to a remote Syslog server in addit
 
 ## Servers Grid
 
-In the Servers tab in Contrast, select the server(s) in the grid menu to which you'd like to apply Output to Syslog actions. In the dropdown menu, select **Enable Output to Syslog**. Note that Protection mode must be on to select the **Enable** action and you must have enabled Output to Syslog to see the **Edit** or **Disable** actions.
+In the Servers tab in Contrast, select the server(s) in the grid menu to which you'd like to apply Output to Syslog actions. In the dropdown menu, select **Enable Output to Syslog**. You must have enabled Output to Syslog to see the **Edit** or **Disable** actions.
 
 <a href="assets/images/SyslogServersGridMenu.png" rel="lightbox" title="Servers grid menu"><img class="thumbnail" src="assets/images/SyslogServersGridMenu.png"/></a>
 
@@ -35,17 +35,17 @@ The icon for a protected server with Output to Syslog configured uses 'fa-shield
 
 ##Batch Actions
 
-Selecting the shild icon in the batch action menu above the grid reveals the **Protection Licensing and Output** menu, which also offers the Enable, Edit and Disable Output to Syslog actions. These actions are only functional when at least one of the selected servers is eligible, and the action is only applied to the eligible selection(s).
+Selecting the shield icon in the batch action menu above the grid reveals the **Protection Licensing and Output** menu, which also offers the Enable, Edit and Disable Output to Syslog actions. These actions are only functional when at least one of the selected servers is eligible, and the action is only applied to the eligible selection(s).
 
-When **Apply Protection License** is selected to one or more servers, the Upgrade License dialog includes a checkbox to **Enable Output to Syslog**. If checked, the workflow proceeds to the Output Configuration dialog. If a default configuration is set up on the **Organization Settings** > **Servers** page, the values default to that.
+When **Apply Protection License** is selected to one or more servers, the Upgrade License dialog includes a checkbox to **Enable Output to Syslog**. 
+* If checked, the workflow proceeds to the Output Configuration dialog.
+* If a default configuration is set up on the **Organization Settings** > **Servers** page, the values default to that.
 
-If any of the selected servers have previous Syslog configurations when you choose the **Enable Output to Syslog** action from the batch action menu, a dialog appears. You may then decide to whether to keep the existing configurations and set up the remaining servers, or to (re)configure all. If there are no previous configurationss, you are taken straight to the Configuration dialog. If an organization default exists, the values will default to that.
+If any of the selected servers have previous Syslog configurations when you choose the **Enable Output to Syslog** action from the batch action menu, a dialog appears. You may then decide to whether to keep the existing configurations and set up the remaining servers, or to (re)configure all. If there are no previous configurations, you are taken straight to the Configuration dialog. If an organization default exists, the values will default to that.
 
 ## Server Settings
 
-The Server Settings dialog includes a checkbox to configure Output to Syslog. 
-
-Checking the box expands the dialog to show configuration, which works as described in the previous section including the ability to restore or set up organization defaults.
+The Server Settings dialog includes a checkbox to configure Output to Syslog. Checking the box expands the dialog to show configuration, which includes the ability to restore or set up organization defaults.
 
 ## Organization Settings
 
@@ -53,4 +53,4 @@ Organization settings act as the default configuration for all new servers.
 
 ## Setting up Syslog
 
-You may have to enable remote logging so that your Syslog can receive outside messages.
+You may have to enable remote logging so that your Syslog can receive outside messages. <!-- Where? -->
