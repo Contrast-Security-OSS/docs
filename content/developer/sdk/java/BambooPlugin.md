@@ -16,7 +16,7 @@ mvn package
 
 This builds both the *contrast-bamboo-plugin-#.#.#-SNAPSHOT.jar* and the *a .obr* file. They can be found within the *contrast-bamboo-plugin/target* directory of the cloned project.
 
-Once you have built the plugin, we can upload it to our Bamboo instance. Begin by selecting the **Add-Ons** option from the top left settings menu.
+Once you have built the plugin, it can be uploaded to your Bamboo instance. Begin by selecting the **Add-Ons** option from the top left settings menu.
 
 <a href="assets/images/Bamboo_Add_On_Option.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_Add_On_Option.png"/></a>
 
