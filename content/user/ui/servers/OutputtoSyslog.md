@@ -10,7 +10,7 @@ This feature allows Java clients to send security logs to a remote Syslog server
 
 ## Organization Settings
 
-Organization settings act as the default configuration for all new servers. You can set these by going to **Organization Settings** in the user menu and then **Servers** in the sidebar. Select the checkbox **Enable output of Protection events to Syslog** to expand the diaglog, and then set your desired settings.
+Organization settings act as the default configuration for all new servers. You can set these by going to **Organization Settings** in the user menu and then **Servers** in the sidebar. Select the checkbox to **Enable output of Protection events to Syslog**, which expands the diaglog, and then set your desired settings.
 
 You can toggle through the severity badges to define severity levels for each. The defaults are:
 
@@ -52,7 +52,7 @@ If any of the selected servers have previous Syslog configurations when you choo
 
 ## Server Settings
 
-From the dropdown menu, Server Settings dialog includes a checkbox to configure Output to Syslog. Checking the box expands the dialog to show configuration, which includes the ability to restore or set up organization defaults.
+From the dropdown menu, the Server Settings dialog includes a checkbox to configure Output to Syslog. Checking the box expands the dialog to show configuration, which includes the ability to restore or set up organization defaults.
 
 <a href="assets/images/SyslogServerSettings.png" rel="lightbox" title="Server Settings expanded to show Syslog configuration"><img class="thumbnail" src="assets/images/SyslogServerSettings.png"/></a>
 
