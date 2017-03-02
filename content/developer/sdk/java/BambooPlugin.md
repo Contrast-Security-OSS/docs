@@ -4,7 +4,7 @@ description: "Bamboo build plugin using the Contrast Java SDK"
 tags: "Bamboo SDK Integration Java Continuous Integration"
 -->
 
-This plugin adds functionality to Bamboo such that you can configure profiles for connecting to TeamServer and verify builds against vulnerability thresholds.
+This plugin adds functionality to Bamboo so that you can configure profiles for connecting to TeamServer and verify builds against vulnerability thresholds.
 
 ## Installing the Plugin
 The first step is to build the plugin. To begin, clone the plugin from our Github [repository](https://github.com/Contrast-Security-OSS/contrast-bamboo-plugin.git).
@@ -14,9 +14,9 @@ cd contrast-bamboo-plugin
 mvn package
 ```
 
-This builds both the *contrast-bamboo-plugin-#.#.#-SNAPSHOT.jar* and the *a .obr* file. They can be found within the *contrast-bamboo-plugin/target* directory of the cloned project.
+This builds the *contrast-bamboo-plugin-#.#.#-SNAPSHOT.jar* and the *a .obr* file. They can both be found within the *contrast-bamboo-plugin/target* directory of the cloned project.
 
-Once you have built the plugin, it can be uploaded to your Bamboo instance. Begin by selecting the **Add-Ons** option from the top left settings menu.
+Once you have built the plugin, you can upload it to your Bamboo instance. Begin by selecting the **Add-Ons** option from the top left settings menu.
 
 <a href="assets/images/Bamboo_Add_On_Option.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_Add_On_Option.png"/></a>
 
@@ -44,7 +44,7 @@ If you are a SaaS customer you do **not** need to enter a TeamServer URL. Once y
 <a href="assets/images/Bamboo_Add_Profile_Success.png" rel="lightbox" title="Successful configuration"><img class="thumbnail" src="assets/images/Bamboo_Add_Profile_Success.png"/></a>
 
 ## Vulnerability Thresholds
-The plugin can be added as a task to build jobs to check for vulnerability conditions that you configure. This checks TeamServer for the number of vulnerabilities in the applications, as well as types of vulnerabilities.
+The plugin can be added as a task to build jobs to check for vulnerability conditions that you configure. This checks TeamServer for the number of vulnerabilities in the applications as well as types of vulnerabilities.
 
 ### Configuring vulnerability thresholds
 To add a task to a build job, you must either create a new plan or use an existing build plan. For the purpose of these instructions, you'll walk through creating a new build plan.
@@ -86,7 +86,7 @@ The last step is to enable the build plan by selecting the checkbox in the botto
 ### Running the build
 To run your build for the first time, you'll need to select the **Run** button and then in the dropdown select the **Run Plan** option.
 
-Once the build is finished, you can see if it passed or failed. To view the Contrast task details, look at the logs of the job to which the task is attached. In the example below, this is the default job. As is evident in the logs, the task only found two vulnerabilities that met your conditions, therefore the job passes.
+Once the build is finished, you can see if it passed or failed. To view the Contrast task details, look at the logs of the job to which the task is attached. In the following example, this is the default job. As you can see in the logs, the task only found two vulnerabilities that met your conditions, therefore the job passes.
 
 <a href="assets/images/Bamboo_Result_Logs.png" rel="lightbox" title="Bamboo build logs"><img class="thumbnail" src="assets/images/Bamboo_Result_Logs.png"/></a>
 
