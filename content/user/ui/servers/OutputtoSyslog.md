@@ -6,7 +6,7 @@ tags: "Protection Syslog Output"
 
 This feature allows you to send security logs to a remote Syslog server in addition to Contrast's security log. By sending logs to Syslog, you no longer have to check Contrast logs. Please note that this is only available for Java clients. 
 
-**Note: The following instructions are written in the context that Protect mode is on for the servers to which you're applying this featuer. If Protection is off - either in the row menu or for all selections of a batch action - relevant actions are disabled and hovering over them in the menu.**
+> **Note:** The following instructions are written in the context that Protect mode is on for the servers to which you're   > applying this feature. If Protection is off - either in the row menu or for all selections of a batch action - relevant   > actions are disabled and hovering over them in the menu.**
 
 
 ## Servers Grid
@@ -19,11 +19,13 @@ In the Servers tab in Contrast, select the server(s) in the grid menu to which y
 
 If you choose the **Enable Output to Syslog** action from the row menu, you're brought directly to the **Configure Output to Syslog** dialog. 
 
+<a href="assets/images/SyslogConfigureOutput.png" rel="lightbox" title="Configure Output to Syslog"><img class="thumbnail" src="assets/images/SyslogConfigureOutpu.png"/></a>
+
 * If defaults have been set in **Organization Settings** > **Servers**, those values are shown here. 
 * If you change these values, a link to restore the organization defaults appears. 
 * If there is no organization default, the fields are blank. 
 * If there is a previous configuration other than the organization default, those values are saved and shown with the option to restore the organization defaults. 
-* If no organization default exists, there is a checkbox to set the current configuraton as the default. (This option is only available to Organization Admins.)
+* If no organization default exists, there is a checkbox to set the current configuration as the default. (This option is only available to Organization Admins.)
 
 You can toggle through the severity badges to define severity levels for each. The defaults are:
 
@@ -37,7 +39,7 @@ The icon for a protected server with Output to Syslog configured uses 'fa-shield
 
 Selecting the shield icon in the batch action menu above the grid reveals the **Protection Licensing and Output** menu, which also offers the Enable, Edit and Disable Output to Syslog actions. These actions are only functional when at least one of the selected servers is eligible, and the action is only applied to the eligible selection(s).
 
-When **Apply Protection License** is selected to one or more servers, the Upgrade License dialog includes a checkbox to **Enable Output to Syslog**. 
+When **Apply Protection License** is selected for one or more servers, the Upgrade License dialog includes a checkbox to **Enable Output to Syslog**. 
 * If checked, the workflow proceeds to the Output Configuration dialog.
 * If a default configuration is set up on the **Organization Settings** > **Servers** page, the values default to that.
 
