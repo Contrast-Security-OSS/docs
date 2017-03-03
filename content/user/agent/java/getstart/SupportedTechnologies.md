@@ -13,7 +13,7 @@ Oracle JDK 1.5, 1.6, 1.7, 1.8 | Tomcat 4, 5, 6, 7, 8 | Java EE/J2EE, Servlet/JSP
 Open JDK 1.5, 1.6, 1.7 | JBoss 4.2, 5, 5.1, 6.1, 7, 7.1 | J2SE
 IBM 1.5 (2008+), 1.6, 1.7 | Jetty 6, 7, 8, 9 | Spring/Spring Boot
 JRockit 1.5, 1.6 (update 95+ or R28.3.6+) | GlassFish 3, 4 | Struts, Struts 2
-                 | WebSphere 6.1, 7, 8.5 * | Jersey
+                 | WebSphere 6.1, 7, 8, 8.5 * | Jersey
                  | WebLogic 9, 10, 11g, 12c | Wicket
                  | JRun 4 | JSF (MyFaces, RichFaces, Sun)
                  | Netty 3.x, 4.x | ColdFusion 9, 10 (limited)
