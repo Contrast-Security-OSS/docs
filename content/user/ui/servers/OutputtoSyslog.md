@@ -46,15 +46,15 @@ Selecting the shield icon in the batch action menu above the servers table revea
 
 When you select **Apply Protection License** for one or more servers, the Upgrade License dialog includes a checkbox to **Enable Output to Syslog**. 
 * If checked, the workflow proceeds to the Output Configuration dialog.
-* If a default configuration is set via **Organization Settings**, those default values apply.
+* If a default configuration is set via **Organization Settings**, those default values are prepulated into the dialog fields.
 
 When you choose the **Enable Output to Syslog** action from the batch action menu, a dialog appears if any of the selected servers have previous Syslog configurations. You may then decide whether to keep the existing configurations and set up the remaining servers, or to (re)configure all. 
 * If there are no previous configurations, you're taken straight to the Configuration dialog. 
-* If an organization default exists, those default values apply.
+* If an organization default exists, those default values are prepulated into the dialog fields.
 
 ## Server Settings
 
-From the dropdown menu, the Server Settings dialog includes a checkbox to **Enable output of Protection events to Syslog**. Checking the box expands the dialog to show configuration, which includes the ability to restore or set up organization defaults.
+From the dropdown menu, the Server Settings dialog includes a checkbox to **Enable output of Protection events to Syslog**. Checking the box expands the dialog to show the configuration, where you can create server-specific Syslog properties, or restore or set up organization defaults.
 
 <a href="assets/images/SyslogServerSettings.png" rel="lightbox" title="Server Settings expanded to show Syslog configuration"><img class="thumbnail" src="assets/images/SyslogServerSettings.png"/></a>
 
