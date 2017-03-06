@@ -4,9 +4,6 @@ description: "Contrast 3.3.7 February 2017"
 tags: "3.3.7 February Release Notes"
 -->
 
-###############################################################################
-# Contrast 3.3.7 - February 2016
-###############################################################################
 
 ## Java Agent
 * CONTRAST-12179	Default agent configuration when TeamServer in unavailable
@@ -99,8 +96,8 @@ tags: "3.3.7 February Release Notes"
 * CONTRAST-11709	Add Unmerge Capability on Apps Grid/App Modules Dialog
 * CONTRAST-11693	Poll Attack Monitor Stats And Data
 * CONTRAST-11108	List Servers on the Library Details Page
-* CONTRAST-9560	Allow Tagging of Attacks and Events
-* CONTRAST-8861	Libraries Tab Within an App Should Bump Up
+* CONTRAST-9560	    Allow Tagging of Attacks and Events
+* CONTRAST-8861	    Libraries Tab Within an App Should Bump Up
 * CONTRAST-12776	Access denied occurring on main dash after login, no obvious pattern
 * CONTRAST-12701	Some email clients show a very Contrast logo in the notification email
 * CONTRAST-12554	Improve PurgeTraceFalsePositives performance
