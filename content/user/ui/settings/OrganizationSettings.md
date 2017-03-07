@@ -45,7 +45,16 @@ Report settings offer a single interface for organization administrators to defi
 * Custom Footer
 
 ## Score Settings
-Organization administrators can customize score settings for libraries by selecting **Organization Settings** in the User menu and **Score Settings** in the sidebar. This setting provides two options:
+Organization administrators can customize score settings for libraries by selecting **Organization Settings** in the User menu and **Score Settings** in the sidebar. Settings are separated into two sections: **Overall Score** and **Library Score**. 
+
+### Overall Score 
+
+* **Default Scoring** is the average of your application's library score and its custom code score.
+
+* **Custom Code-Only Scoring** ignores library score when calculating the overall application score. You have the option to select languages, as shown. Administrators can also search against all application languages.
+
+### Library Score 
+
 * **Default Scoring** uses an algorithm that includes vulnerabilities as well as the age and versioning of a library. 
 * **Vulnerability-Only Scoring** bases scoring solely on vulnerabilities.
 
