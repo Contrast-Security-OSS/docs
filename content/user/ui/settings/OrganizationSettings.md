@@ -45,11 +45,13 @@ Report settings offer a single interface for organization administrators to defi
 * Custom Footer
 
 ## Score Settings
-Organization administrators can customize score settings for libraries by selecting **Organization Settings** in the User menu and **Score Settings** in the sidebar. This setting provides two options. Selecting **Default Scoring** will use an algorithm that includes not only vulnerabilities but the age and versioning of a library. You may also choose to base scoring solely on vulnerabilities by selecting **Vulnerability-only Scoring**.
+Organization administrators can customize score settings for libraries by selecting **Organization Settings** in the User menu and **Score Settings** in the sidebar. This setting provides two options:
+* **Default Scoring** uses an algorithm that includes vulnerabilities as well as the age and versioning of a library. 
+* **Vulnerability-Only Scoring** bases scoring solely on vulnerabilities.
 
 <a href="assets/images/Library_Score_Settings.png" rel="lightbox" title="Library Score Settings"><img class="thumbnail" src="assets/images/Library_Score_Settings.png"/></a>
 
-It is possible to configure policy settings such that any library in violation will automatically receive a failing score (F). This is controlled within **Policy Management**, but if set up, you will see an alert message here in Score Settings. Clicking the **policy** link will navigate you to **Library Policy**, where these settings may be viewed and revised by administrators.
+You can also configure policy settings in **Policy Management** so that any library in violation automatically receives a failing score (F). Once these settings are chosen, you'll see an alert message in **Score Settings**. Clicking the **policy** link in the alert navigates you to **Library Policy**, where administrators may view and revise these settings.
 
 <!-- Let's link to new policy management section once created -->
 
