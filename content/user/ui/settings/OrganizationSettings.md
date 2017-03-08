@@ -30,9 +30,26 @@ Contrast offers basic [integrations](user_tsguideset.html#integrate) with variou
 Consolidate multiple applications into a single, [merged application](user_tsguideapp.html#merge). The parent and child relationships of merged applications are visualized. These mappings can also be removed, which decouples a merged application from another application.
 
 ## Servers
-The default configuration of a server (agent) can be defined here. The defaults include changing the server environment, log level, enabling/disabling assessment, capturing stacktraces, as well as turning on sampling to improve agent performance. Once the settings have been configured, the agent distributed by Contrast will inherit these settings.
+The default configuration of a server (agent) can be defined in the **Servers** overview. The defaults include changing the server environment, log level, enabling/disabling assessment, capturing stacktraces, as well as turning on sampling to improve agent performance. Once you configure the settings, the agent distributed by Contrast inherits these settings.
 
 <a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
+
+### Automatic Server Clean-up
+Automatic server clean-up enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. 
+
+> Note: Server cleanup only applies to Java and .Net servers.
+
+#### Setting automatic cleanup policies
+
+The **General** section of the **Servers** page includes a checkbox to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown. 
+
+<!-- SCREENSHOT -->
+
+You can create as many policies as needed for either a single policy type or muliple policy types.
+
+<!-- The info related to these disabled servers are maintain (vulnerabilities, attacks) -->
+
+Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature in the **Servers** page.
 
 ## Notifications
 [Notifications](user_tsguideset.html#notifications) provide a mechanism for users of Contrast to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. Based on what's enabled, these notifications can occur in Contrast and/or via email. Organization administrators can set the default notification settings for all users in their organization. 
