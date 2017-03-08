@@ -30,9 +30,14 @@ Contrast offers basic [integrations](user_tsguideset.html#integrate) with variou
 Consolidate multiple applications into a single, [merged application](user_tsguideapp.html#merge). The parent and child relationships of merged applications are visualized. These mappings can also be removed, which decouples a merged application from another application.
 
 ## Servers
-The default configuration of a server (agent) can be defined in the **Servers** overview. The defaults include changing the server environment, log level, enabling/disabling assessment, capturing stacktraces, as well as turning on sampling to improve agent performance. Once you configure the settings, the agent distributed by Contrast inherits these settings.
+Server Settings provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment. 
 
 <a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
+
+### Log Level 
+This allows you to control which events are processed by server logging, and can help you more effectively capture events. 
+
+<!-- It would be nice if we could get someone to help with what each log level means here? -->
 
 ### Automatic Server Clean-up
 Automatic server clean-up enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. 
@@ -49,7 +54,13 @@ You can create as many policies as needed for either a single policy type or mul
 
 <!-- The info related to these disabled servers are maintain (vulnerabilities, attacks) -->
 
-Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature in the **Servers** page.
+### Assessment Options
+Assessment provides detailed information on vulnerabilities discovered by Contrast so that you may track, share and receive remediation guidance.<!-- Determine whether Assessment should be ON or OFF by default. --> Along with using assessment, you have the option to enable sampling or designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capture stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning this off results in less performance on the application(s); however, developers have less clarity on where underlying security issues are occurring.
+
+### Protection Options
+Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time.<!-- Determine whether Protection should be ON or OFF by default. --> Protection gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. You can also output events to syslog for one or multiple servers. 
+
+Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature. 
 
 ## Notifications
 [Notifications](user_tsguideset.html#notifications) provide a mechanism for users of Contrast to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. Based on what's enabled, these notifications can occur in Contrast and/or via email. Organization administrators can set the default notification settings for all users in their organization. 
