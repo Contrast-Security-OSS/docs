@@ -4,18 +4,18 @@ description: "Overview of administrating and managing an organization."
 tags: "TeamServer organization settings"
 -->
 
-Organization administrators have access to a number of configuration settings specific to operating and managing an organization. This includes administering users as well as setting up password policy, integrations, server defaults and more. These settings can be found by selecting **Organization Settings** in the [User menu](user_tsguideui.html#overview).
+Organization administrators have access to a number of configuration settings specific to operating and managing an organization. This includes administering users as well as setting up password policy, integrations, server defaults and more. You can find these settings by selecting **Organization Settings** in the [User menu](user_tsguideui.html#overview).
 
 <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
  
 ## General Information And Licensing
-View basic information about your organization and configure high level preferences such as Date and Time formats. Get a picture of your organization's licensing. A summary will show the number of licenses being used as well as the number of licenses available to allocate to other assets. 
+View basic information about your organization and configure high-level preferences such as Date and Time formats. Get a picture of your organization's licensing. A summary shows the number of licenses being used as well as the number of licenses available to allocate to other assets. 
 
 ## Groups
 [Organization groups](user_tsguideset.html#group) can be viewed, created, edited and deleted. Organization administrators use groups to designate a user's organization and application role. This provides the ability to customize what users can see and do in Contrast.
 
 ## Users
-Manage users for an organization, including the ability to [add](user_tsguideset.html#user), edit or delete. Users can be assigned a default group (or role), be designated for API-Only use, and unlocked if for some reason they've been locked out. 
+Manage users for an organization, including the ability to [add](user_tsguideset.html#user), edit or delete. Users can be assigned a default group (or role), be designated for API-Only use, and unlocked if they've been locked out. 
 
 ## Security
 Organization administrators can manage [password policy](admin_tsconfig.html#pw), [IP restrictions](admin_tsconfig.html#ip), [two-step verification](admin_tsconfig.html#tsv) and session timeouts. In addition, an audit log is available and searchable by keyword and date.
@@ -24,7 +24,7 @@ Organization administrators can manage [password policy](admin_tsconfig.html#pw)
 Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about it in our [API Documentation](dev_api3.html#openapi).
 
 ## Integrations
-Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla, and Serena) and notification channels (Slack, HipChat, and generic Webhooks). Authorize and connect the tools needed to streamline workflows.
+Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools needed to streamline workflows.
 
 ## App Mappings
 Consolidate multiple applications into a single, [merged application](user_tsguideapp.html#merge). The parent and child relationships of merged applications are visualized. These mappings can also be removed, which decouples a merged application from another application.
@@ -35,30 +35,26 @@ Server Settings provide default configurations to be applied to new servers (age
 <a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
 
 ### Log Level 
-This allows you to control which events are processed by server logging, and can help you more effectively capture events. 
+The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. 
 
 <!-- It would be nice if we could get someone to help with what each log level means here? -->
 
 ### Automatic Server Clean-up
-Automatic server clean-up enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. 
+Automatic server clean-up enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. 
 
 > Note: Server cleanup only applies to Java and .Net servers.
 
 #### Setting automatic cleanup policies
 
-The **General** section of the **Servers** page includes a checkbox to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown. 
+The **General** section of the **Servers** page includes a checkbox to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown. You can create as many policies as needed for either a single policy type or muliple policy types.
 
 <!-- SCREENSHOT -->
 
-You can create as many policies as needed for either a single policy type or muliple policy types.
+### Assessment options
+Assessment provides detailed information on vulnerabilities discovered by Contrast so that you may track, share and receive remediation guidance.<!-- Determine whether Assessment should be ON or OFF by default. --> Turning Assessment on allows you to enable sampling and designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capturing stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning this off results in less performance on the application(s); however, developers have less clarity on where underlying security issues are occurring.
 
-<!-- The info related to these disabled servers are maintain (vulnerabilities, attacks) -->
-
-### Assessment Options
-Assessment provides detailed information on vulnerabilities discovered by Contrast so that you may track, share and receive remediation guidance.<!-- Determine whether Assessment should be ON or OFF by default. --> Along with using assessment, you have the option to enable sampling or designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capture stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning this off results in less performance on the application(s); however, developers have less clarity on where underlying security issues are occurring.
-
-### Protection Options
-Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time.<!-- Determine whether Protection should be ON or OFF by default. --> Protection gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. You can also output events to syslog for one or multiple servers. 
+### Protection options
+Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time.<!-- Determine whether Protection should be ON or OFF by default. --> Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. You can also output events to syslog for one or multiple servers. 
 
 Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature. 
 
