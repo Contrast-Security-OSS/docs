@@ -3,6 +3,8 @@ title: "Integrations"
 description: "Adding Integrations to TeamServer"
 tags: "integrations hipchat generic slack webhook teamserver bugtracker bugzilla jira serena"
 -->
+
+
 To authorize and connect tools with Contrast to streamline your workflows, log in to your Contrast account as an **Organization Administrator**. From the user dropdown menu, select **Organization Settings** and then the **Integrations** tab in the left navigation.
 
 ## Slack Integration
@@ -119,7 +121,7 @@ Method | Description
 ---
 
 ## Configuring Atlassian JIRA
-Integrating Contrast and JIRA enables you to automatically generate tickets, discuss issues...
+<!-- Integrating JIRA with Contrast allows you to automatically generate tickets, synchronize comments and push notifications for your applications. -->
 
 ### Prerequisites
 
@@ -130,31 +132,25 @@ Integrating Contrast and JIRA enables you to automatically generate tickets, dis
 
 ### Setting up JIRA integration
 
-In Integrations, click **Connect** in the row for JIRA. In the **Connect with JIRA** dialog, complete the following fields. 
+In Integrations, click **Connect** in the JIRA row. In the Connect with JIRA dialog, complete the following fields. 
 
 Field | Description
 ------ | -----------
-**Name** | A name for the bugtracker entry. It will be displayed when sending findings to bugtrackers.
-**Username** | The username for the account connected to Atlassian JIRA
-**Password** | The password for the username specified
-**Host** | The JIRA URL - must be accessible from the TeamServer instance being configured
+**Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers
+**Username** | The username for the account connected to JIRA
+**Password** | The password for the specified username
+**Host** | The JIRA URL; must be accessible from the Contrast interface instance being configured
+---
 
 Once you complete the fields, click **Test connection**. This process takes between four and nine seconds, depending on the number of projects you're completing. The test verifies that the JIRA instance can be reached by Contrast and that the specified user is able to log in.
 
-The dialog expands once the text is finished. You can then select the applications that you want to be available to this bugtracker as well as customize the values for the Project, Assignee and Default Issue Type fields. You can also customize Default Severity levels and Additional JIRA fields.
+The dialog expands once the text is finished. Note that all of the required fields are listed first and shaded gray, followed by all customizable fields. You can then select the applications that you want to be available to this bugtracker as well as customize the values for the Project, Assignee and Default Issue Type fields. You can also customize Default Severity levels and Additional JIRA fields.
 
 <a href="assets/images/JIRA-integration-set-up.png" rel="lightbox" title="JIRA Integration"><img class="thumbnail" src="assets/images/JIRA-integration-set-up.png"/></a>
 
-Note that if you change the Project or Issue type, required and additional fields are updated. However, the interface keeps the selected values that apply to the new configuration.
+> **Note:** If you change the Project or Issue type, required and additional fields are updated. However, the interface keeps the selected values that apply to the new configuration.
 
-<!-- All the required fields are in gray and listed first, followed by all customizable fields. Each one could have different types, so a new input value is rendered when you select one. In the following example, you can see different types of inputs, like text, dropdown of allowed values, priorities and a date field.
- -->
-
-Once you complete the fields and save the configuration, you can use this configuration when sending vulnerabilities to a bugtracker. You are now going to see the values in the customized fields.
-
-
-
----
+Once you complete the fields and save the configuration, you can use this configuration when sending vulnerabilities to a bugtracker. The JIRA row in the **Integrations** page offers a dropdown menu to **Show Configuration** and a button to **Add Configuration**.
 
 ---
 
