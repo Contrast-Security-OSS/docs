@@ -35,9 +35,17 @@ Server Settings provide default configurations to be applied to new servers (age
 <a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
 
 ### Log Level 
-The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. 
+The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in 'ERROR' mode unless a problem occurs and you're asked to collect more metrics by support. 
 
-<!-- It would be nice if we could get someone to help with what each log level means here? -->
+Our logs follow the general Log4J standard, so we honor their level designations as much as possible. Contrast offers the following log levels:
+
+* **ERROR:** Designates error events that might still allow the application to continue running.
+* **WARN:** Designates potentially harmful situations.
+* **INFO:** Designates informational messages that highlight the progress of the application at coarse-grained level.
+* **DEBUG:** Designates fine-grained informational events that are most useful to debug an application.
+* **TRACE:** Designates finer-grained informational events than the DEBUG.
+
+> **Source:** https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html
 
 ### Automatic Server Clean-up
 Automatic server clean-up enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. 
