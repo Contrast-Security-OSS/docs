@@ -121,7 +121,7 @@ Method | Description
 ---
 
 ## JIRA Integration
-<!-- Integrating JIRA with Contrast allows you to automatically generate tickets, synchronize comments and push notifications for your applications. -->
+Integrating JIRA with Contrast allows you to automatically generate tickets, synchronize comments and push notifications for your applications.
 
 ### Prerequisites
 
@@ -132,7 +132,7 @@ Method | Description
 
 ### Set up
 
-In Integrations, click **Connect** in the JIRA row. In the Connect with JIRA dialog, complete the following fields. 
+In Integrations, click **Connect** in the JIRA row. In the **Connect with JIRA** page, complete the following fields. 
 
 Field | Description
 ------ | -----------
@@ -143,7 +143,7 @@ Field | Description
 ---
 
 Once you complete the fields, click **Test connection**. This process may take a few moments depending on the number of your JIRA projects. The test verifies that the JIRA instance can be reached by Contrast and that the specified user is able to log in.
-s
+
 Once a connection is made, select the applications that you want to be available to this bugtracker as well as customize the values for the Project, Assignee and Default Issue Type fields. You can also customize the Default Severity levels and Additional JIRA fields. Note that we automatically include any required JIRA fields to ensure that you don’t have any trouble.
 
 <a href="assets/images/JIRA-integration-set-up.png" rel="lightbox" title="JIRA Integration"><img class="thumbnail" src="assets/images/JIRA-integration-set-up.png"/></a>
