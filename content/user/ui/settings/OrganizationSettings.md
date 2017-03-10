@@ -32,7 +32,7 @@ Server Settings provide default configurations to be applied to new servers (age
 <a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
 
 ### Log level 
-The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in 'ERROR' mode unless a problem occurs and you're asked to collect more metrics by support. 
+The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in **ERROR** mode unless a problem occurs and you're asked to collect more metrics by support. 
 
 Our logs follow the general Log4J standard, so we honor their level designations as much as possible. Contrast offers the following log levels:
 
