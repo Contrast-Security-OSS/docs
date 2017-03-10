@@ -1,6 +1,6 @@
 <!--
 title: "Integrations"
-description: "Adding Integrations to TeamServer"
+description: "Adding Integrations to Contrast"
 tags: "integrations hipchat generic slack webhook teamserver bugtracker bugzilla jira serena"
 -->
 
@@ -9,7 +9,7 @@ To authorize and connect tools with Contrast to streamline your workflows, log i
 
 ## Slack Integration
 
-TeamServer supports Slack integration! With this new connection you can receive notifications from TeamServer in your configured Slack instance using a format similar to in-app notifications.
+Contrast supports Slack integration! With this new connection you can receive notifications from Contrast in your configured Slack instance using a format similar to in-app notifications.
 
 ### Setup
 
@@ -19,12 +19,12 @@ To add, go to your team's **Build** settings in Slack:
 * Choose the appropriate channel to send messages to
 * Copy the **Webhook URL**
 
-To connect in TeamServer:
+To connect in Contrast:
 
 * Navigate to the **Integrations** tab under **Organization Settings**
 * Click **Connect** within the Slack row
 * Name the integration and paste the URL
-* Select the application(s) you wish to filter on
+* Select the application(s) for which you want to enable notifications
 * Click **Save**
 
 You are connected!
@@ -33,7 +33,7 @@ You are connected!
 
 ## HipChat Integration
 
-TeamServer supports integration with HipChat as well! With this new connection you can receive notifications from TeamServer in your configured HipChat channel using a format similar to in-app notifications.
+Contrast supports integration with HipChat as well! With this new connection you can receive notifications from Contrast in your configured HipChat channel using a format similar to in-app notifications.
 
 ### Setup
 
@@ -43,12 +43,12 @@ On the HipChat website, log in as a user with at least **Send Notification** and
 * Create a new token and add at least the **Send Notification** and **View Room** scope
 * Copy the token created
 
-To connect in TeamServer:
+To connect in Contrast:
 
 * Navigate to the **Integrations** tab under **Organization Settings**
 * Click **Connect** within the HipChat row
 * Name the integration, paste the token into the token input field, and select the appropriate room from the dropdown
-* Select the application(s) you wish to filter on
+* Select the application(s) for which you want to enable notifications
 * Click **Save**
 
 You are connected!
@@ -57,7 +57,7 @@ You are connected!
 
 ## Generic Webhook Integration
 
-TeamServer also supports a generic webook integration. Generic webhooks allow you to receive notification on any URL that receives POST messages. We currently support a basic format with the fields 'title' and 'message'.
+Contrast also supports a generic webook integration. Generic webhooks allow you to receive notifications on any URL that receives POST messages. We currently support a basic format with the fields 'title' and 'message'.
 
 ### Example
 
@@ -70,7 +70,7 @@ TeamServer also supports a generic webook integration. Generic webhooks allow yo
 
 ### Setup
 
-* Retrieve the URL you want TeamServer to send notifications to
+* Retrieve the URL to which you want Contrast to send notifications
 * Navigate to the **Integrations** tab under **Organization Settings**
 * Click **Connect** within the Generic Webhook row
 * Name the webhook and paste the URL into the input field
@@ -83,11 +83,11 @@ You are connected!
 
 ## Bugtrackers
 
-TeamServer can connect to bugtrackers in order to streamline the remediation process. Individual or groups of discovered vulnerabilities can be sent directly to a configured bugtracker so that development groups may implement a fix.
+Contrast can connect to bugtrackers in order to streamline the remediation process. Individual or groups of discovered vulnerabilities can be sent directly to a configured bugtracker so that development groups may implement a fix.
 
 ### Support
 
-TeamServer supports integrations with:
+Contrast supports integrations with:
 
 1. Mozilla Bugzilla
 2. Atlassian JIRA
@@ -113,14 +113,14 @@ If integration with an unsupported system is needed, this can be accomplished in
 
 Method | Description
 ------ | -----------
-**Integrate With The TeamServer REST API** | You can find complete documentation here: [REST API](dev_api1.html#intro)
+**Integrate With The Contrast REST API** | You can find complete documentation here: [REST API](dev_api1.html#intro)
 **Export Findings To CSV** | Findings can be exported to **Comma-Separated Values (CSV)** and imported into a bugtracker of your choice.
 **Export Findings To XML** | Individual or groups of findings can be exported to **XML** format and imported into a bugtracker of your choice.
 
 
 ---
 
-## Configuring Atlassian JIRA
+## JIRA Integration
 <!-- Integrating JIRA with Contrast allows you to automatically generate tickets, synchronize comments and push notifications for your applications. -->
 
 ### Prerequisites
@@ -130,7 +130,7 @@ Method | Description
 * A running JIRA instance accessible via HTTP to the Contrast interface
 * A project to associate the application instrumented by Contrast
 
-### Setting up JIRA integration
+### Set up
 
 In Integrations, click **Connect** in the JIRA row. In the Connect with JIRA dialog, complete the following fields. 
 
@@ -142,15 +142,13 @@ Field | Description
 **Host** | The JIRA URL; must be accessible from the Contrast interface instance being configured
 ---
 
-Once you complete the fields, click **Test connection**. This process takes between four and nine seconds, depending on the number of projects you're completing. The test verifies that the JIRA instance can be reached by Contrast and that the specified user is able to log in.
-
-The dialog expands once the text is finished. Note that all of the required fields are listed first and shaded gray, followed by all customizable fields. You can then select the applications that you want to be available to this bugtracker as well as customize the values for the Project, Assignee and Default Issue Type fields. You can also customize Default Severity levels and Additional JIRA fields.
+Once you complete the fields, click **Test connection**. This process may take a few moments depending on the number of your JIRA projects. The test verifies that the JIRA instance can be reached by Contrast and that the specified user is able to log in.
+s
+Once a connection is made, select the applications that you want to be available to this bugtracker as well as customize the values for the Project, Assignee and Default Issue Type fields. You can also customize the Default Severity levels and Additional JIRA fields. Note that we automatically include any required JIRA fields to ensure that you don’t have any trouble.
 
 <a href="assets/images/JIRA-integration-set-up.png" rel="lightbox" title="JIRA Integration"><img class="thumbnail" src="assets/images/JIRA-integration-set-up.png"/></a>
 
 > **Note:** If you change the Project or Issue type, required and additional fields are updated. However, the interface keeps the selected values that apply to the new configuration.
-
-Once you complete the fields and save the configuration, you can use this configuration when sending vulnerabilities to a bugtracker. The JIRA row in the **Integrations** page offers a dropdown menu to **Show Configuration** and a button to **Add Configuration**.
 
 ---
 
@@ -159,12 +157,12 @@ Once you complete the fields and save the configuration, you can use this config
 ### Prerequisites
 
 * Bugzilla account credentials (username and password)
-* A running Bugzilla application instance accessible via HTTP to the Contrast TeamServer
+* A running Bugzilla application instance accessible via HTTP to Contrast
 * A product, component and version to associate the application instrumented by Contrast
 
 ### Setting Up The Bugzilla Integration
 
-1. Log in to TeamServer as an **Organization Administrator**
+1. Log in to Contrast as an **Organization Administrator**
 2. From the user dropdown menu, select **Organization Settings**
 3. Select the **Integrations** tab in the left navigation
 4. Click **Connect** in the Bugzilla row
@@ -185,7 +183,7 @@ Option | Description
 
 ---
 
-Once you have configured the Bugzilla integration properties, you can verify communication via the **Test** button. This will ensure TeamServer can communicate and authenticate with the Bugzilla instance as well as verify the existence of the specified Product, Component and Version.
+Once you have configured the Bugzilla integration properties, you can verify communication via the **Test** button. This ensures that Contrast can communicate and authenticate with the Bugzilla instance as well as verify the existence of the specified Product, Component and Version.
 
 ---
 
@@ -194,12 +192,12 @@ Once you have configured the Bugzilla integration properties, you can verify com
 ### Prerequisites
 
 * Serena (SBM) account credentials (username and password)
-* A running SBM instance accessible via HTTP to the Contrast TeamServer
+* A running SBM instance accessible via HTTP to Contrast
 * A project to associate the application instrumented by Contrast
 
 ### Setting Up The SBM Integration
 
-1. Log in to the TeamServer with an **Organization Administrator** account
+1. Log in to the Contrast with an **Organization Administrator** account
 2. From the user dropdown menu, select **Organization Settings**
 3. Select the **Integrations** tab in the left navigation
 4. Click **Connect** in the Serena Business Management row
@@ -217,5 +215,5 @@ Option | Description
 
 ---
 
-Once you have configured the Serena integration properties, you can verify communication via the **Test** button. This will ensure that TeamServer can communicate and authenticate with the Serena instance as well as verify the existence of the specified **Project**.
+Once you have configured the Serena integration properties, you can verify communication via the **Test** button. This will ensure that Contrast can communicate and authenticate with the Serena instance as well as verify the existence of the specified **Project**.
 
