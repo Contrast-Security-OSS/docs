@@ -45,9 +45,10 @@ Our logs follow the general Log4J standard, so we honor their level designations
 > **Source:** https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html
 
 ### Automatic server cleanup
-Automatic server cleanup enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. 
+Automatic server cleanup enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. This feature is available for Java and .Net servers only.
 
-> Note: Server cleanup only applies to Java and .Net servers.
+> **Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. We're working on making this configurable in the future.
+
 
 #### Setting automatic cleanup policies
 
@@ -59,9 +60,9 @@ The **General** section of the **Servers** page includes a checkbox to **Enable 
 Assessment provides detailed information on vulnerabilities discovered by Contrast so that you may track, share and receive remediation guidance.<!-- Determine whether Assessment should be ON or OFF by default. --> Turning Assessment on allows you to enable sampling and designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capturing stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning this off results in less performance on the application(s); however, developers have less clarity on where underlying security issues are occurring.
 
 ### Protection options
-Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time.<!-- Determine whether Protection should be ON or OFF by default. --> Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. You can also output events to syslog for one or multiple servers. 
+Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time.<!-- Determine whether Protection should be ON or OFF by default. --> Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. 
 
-Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature. 
+You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature. 
 
 ## Notifications
 [Notifications](user_tsguideset.html#notifications) provide a mechanism for users of Contrast to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. Based on what's enabled, these notifications can occur in Contrast and/or via email. Organization administrators can set the default notification settings for all users in their organization. 
