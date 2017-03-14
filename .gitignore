@@ -1,6 +1,9 @@
 # IDE stuff
 .idea/**
 .settings/**
+.project
+.classpath
+target/**
 
 # OS files
 .DS_Store
