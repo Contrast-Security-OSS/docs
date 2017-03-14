@@ -5,7 +5,7 @@ tags: "integrations hipchat generic slack webhook teamserver bugtracker bugzilla
 -->
 
 
-To authorize and connect tools with Contrast to streamline your workflows, log in to your Contrast account as an **Organization Administrator**. From the user dropdown menu, select **Organization Settings** and then the **Integrations** tab in the left navigation.
+To authorize and connect tools with Contrast to streamline your workflows, log in to your Contrast account as an **Organization Administrator**. From the User dropdown menu, select **Organization Settings** and then the **Integrations** tab in the left navigation.
 
 ## Slack Integration
 
@@ -16,7 +16,7 @@ Contrast supports Slack integration! With this new connection you can receive no
 To add, go to your team's **Build** settings in Slack:
 
 * Add a new **Incoming Webhooks** custom integration
-* Choose the appropriate channel to send messages to
+* Choose the appropriate channel to which to send messages
 * Copy the **Webhook URL**
 
 To connect in Contrast:
@@ -93,7 +93,7 @@ Contrast supports integrations with:
 2. Atlassian JIRA
 3. Serena Business Manager
 
-### Exporting Findings
+### Exporting findings
 
 Sending vulnerabilities to the bugtracker can be done from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. 
 
@@ -105,7 +105,15 @@ In the dialog that follows, choose which information should be included when exp
 
 <a href="assets/images/NoBugTracker.png" rel="lightbox" title="No Bugtrackers Available"><img class="thumbnail" src="assets/images/NoBugTracker.png"/></a>
 
-### Integrating With Unsupported Systems
+When a vulnerability has been sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of an **Application Overview** page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hovering over this icon produces a tooltip that includes the bugtracker name(s) and corresponding ticket number(s). 
+
+<a href="assets/images/Integrations-sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Integrations-sent-to-bugtracker.png"/></a>
+
+To quickly see which vulnerabilities are being tracked, select to **Advanced** option and **Status** in the sidebar. Hovering over the **Being Tracked** and **Untracked** options also produces a tooltip.
+
+<a href="assets/images/Integrations-bugtracker-advanced-filter.png" rel="lightbox" title="Advanced filter"><img class="thumbnail" src="assets/images/Integrations-bugtracker-advanced-filter.png"/></a>
+
+### Integrating with unsupported systems
 
 If integration with an unsupported system is needed, this can be accomplished in several ways:
 
@@ -126,11 +134,11 @@ Integrating JIRA with Contrast allows you to automatically generate tickets, syn
 ### Prerequisites
 
 * JIRA account credentials (username and password)
-* User permission to create issues in the target project
+* Permission to create issues in the target project
 * A running JIRA instance accessible via HTTP to the Contrast interface
 * A project to associate the application instrumented by Contrast
 
-### Set up
+### Setup
 
 In Integrations, click **Connect** in the JIRA row. In the **Connect with JIRA** page, complete the following fields. 
 
@@ -160,7 +168,7 @@ Once a connection is made, select the applications that you want to be available
 * A running Bugzilla application instance accessible via HTTP to Contrast
 * A product, component and version to associate the application instrumented by Contrast
 
-### Setting Up The Bugzilla Integration
+### Setting up the Bugzilla Integration
 
 1. Log in to Contrast as an **Organization Administrator**
 2. From the user dropdown menu, select **Organization Settings**
@@ -195,7 +203,7 @@ Once you have configured the Bugzilla integration properties, you can verify com
 * A running SBM instance accessible via HTTP to Contrast
 * A project to associate the application instrumented by Contrast
 
-### Setting Up The SBM Integration
+### Setting up the SBM Integration
 
 1. Log in to the Contrast with an **Organization Administrator** account
 2. From the user dropdown menu, select **Organization Settings**
