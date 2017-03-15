@@ -61,6 +61,8 @@ $ jre/bin/keytool -import -trustcacerts -alias <ca-name> -storepass <keystore pa
 ````
 Continue to enabling SSL in Contrast Server. 
 
+Note: The SSL Certificate cannot be protected with a passphrase for TeamServer to be able to use it.
+
 ### Enabling and Configuring HTTPS in Contrast Server
 Once you have setup your keystore, you will need to open the ***$CONTRAST_HOME/data/conf/server.properties*** file in your favorite text editor and update the following properties.
 
