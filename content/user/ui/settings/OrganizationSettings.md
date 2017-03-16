@@ -4,7 +4,7 @@ description: "Overview of administrating and managing an organization."
 tags: "TeamServer organization settings"
 -->
 
-Organization administrators have access to a number of configuration settings specific to operating and managing an organization. This includes administering users as well as setting up password policy, integrations, server defaults and more. You can find these settings by selecting **Organization Settings** in the [User menu](user_tsguideui.html#overview).
+Organization administrators have access to a variety of configuration settings specific to operating and managing an organization, such as administering users, setting up password policy, integrations and server defaults. You can find these settings by selecting **Organization Settings** in the [User menu](user_tsguideui.html#overview).
 
 <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
  
@@ -15,26 +15,28 @@ View basic information about your organization and configure high-level preferen
 [Organization groups](user_tsguideset.html#group) can be viewed, created, edited and deleted. Organization administrators use groups to designate a user's organization and application role. This provides the ability to customize what users can see and do in Contrast.
 
 ## Users
-Manage users for an organization, including the ability to [add](user_tsguideset.html#user), edit or delete. Users can be assigned a default group (or role), be designated for API-Only use, and unlocked if they've been locked out. 
+Manage users for an organization, including the ability to [add](user_tsguideset.html#user), edit or delete them. Users can be assigned a default group (or role), designated for API-only use and unlocked if they've been locked out. 
 
 ## Security
-Organization administrators can manage [password policy](admin_tsconfig.html#pw), [IP restrictions](admin_tsconfig.html#ip), [two-step verification](admin_tsconfig.html#tsv) and session timeouts. In addition, an audit log is available and searchable by keyword and date.
+Organization administrators can manage [password policy](admin_tsconfig.html#pw), [IP restrictions](admin_tsconfig.html#ip), [two-step verification](admin_tsconfig.html#tsv) and session timeouts. An audit log is also available and searchable by keyword and date.
 
 ## API
 Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about it in our [API Documentation](dev_api3.html#openapi).
 
 ## Integrations
-Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools needed to streamline workflows.
+Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
 
 ## Servers
 Server Settings provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment. 
 
 <a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
 
+> **Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. Contrast is working on making this configurable in the future.
+
 ### Log level 
 The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in **ERROR** mode unless a problem occurs and you're asked to collect more metrics by support. 
 
-Our logs follow the general Log4J standard, so we honor their level designations as much as possible. Contrast offers the following log levels:
+Contrast's logs follow the general Log4J standard, so we honor their level designations as much as possible. Contrast offers the following log levels:
 
 * **ERROR:** Designates error events that might still allow the application to continue running.
 * **WARN:** Designates potentially harmful situations.
@@ -46,8 +48,6 @@ Our logs follow the general Log4J standard, so we honor their level designations
 
 ### Automatic server cleanup
 Automatic server cleanup enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. This feature is available for Java and .Net servers only.
-
-> **Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. We're working on making this configurable in the future.
 
 #### Setting automatic cleanup policies
 
@@ -64,10 +64,10 @@ Protection provides monitoring of your servers and applications - identifying an
 You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature. 
 
 ## Notifications
-[Notifications](user_tsguideset.html#notifications) provide a mechanism for users of Contrast to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. Based on what's enabled, these notifications can occur in Contrast and/or via email. Organization administrators can set the default notification settings for all users in their organization. 
+[Notifications](user_tsguideset.html#notifications) provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. These notifications can occur in Contrast and/or via email, depending on what options are enabled. Organization administrators can set the default notification settings for all users in their organization. 
 
 ## Report Settings
-Report settings offer a single interface for organization administrators to define the template of hard copy reports. This essentially involves defining the default values for reports such as:
+Report settings offer a single interface for organization administrators to define the template of hard-copy reports. This essentially involves defining the default values for reports such as:
 
 * Report Type
 * Vulnerability Status
