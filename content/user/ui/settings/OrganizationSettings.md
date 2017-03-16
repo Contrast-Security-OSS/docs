@@ -49,18 +49,17 @@ Automatic server cleanup enables a Contrast background task to run every five mi
 
 > **Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. We're working on making this configurable in the future.
 
-
 #### Setting automatic cleanup policies
 
 The **General** section of the **Servers** page includes a checkbox to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown.
 
-<!-- SCREENSHOT -->
+<a href="assets/images/Server_settings_automatic_cleanup.png" rel="lightbox" title="Enabling automatic cleanup"><img class="thumbnail" src="assets/images/Server_settings_automatic_cleanup.png"/></a>
 
-### Assessment options
-Assessment provides detailed information on vulnerabilities discovered by Contrast so that you may track, share and receive remediation guidance.<!-- Determine whether Assessment should be ON or OFF by default. --> Turning Assessment on allows you to enable sampling and designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capturing stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning this off results in less performance on the application(s); however, developers have less clarity on where underlying security issues are occurring.
+#### Assessment options
+Assessment provides detailed information on vulnerabilities discovered by Contrast so that you may track, share and receive remediation guidance. Turning Assessment on allows you to enable sampling and designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capturing stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning this off results in less performance on the application(s); however, developers have less clarity on where underlying security issues are occurring.
 
-### Protection options
-Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time.<!-- Determine whether Protection should be ON or OFF by default. --> Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. 
+#### Protection options
+Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. 
 
 You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature. 
 
