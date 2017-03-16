@@ -7,7 +7,7 @@ tags: "configuration SSL EOP administration proxy"
 ## Background
 By default, Contrast uses HTTP for UI and agent connections. This may not be a big deal in some organizations; in others, you may find that you need to add or replace HTTP with HTTPS for both UI and agent traffic. There are two ways to accomplish this requirement.
 
-* **Reverse proxy method:** Use a standard web server, such as Apache HTTPD or Nginx, in front of the Contrast server configured to reverse proxy requests using Contrast's AJP connector. 
+* **Reverse proxy method:** Use a standard web server, such as Apache HTTPD or NGINX, in front of the Contrast server configured to reverse proxy requests using Contrast's AJP connector. 
 
 * **Contrast HTTPS connector:** Configure Contrast to listen to HTTPS connections on a port that you specify.
 
@@ -25,10 +25,10 @@ You can configure the ```ajp.port``` setting to reflect the port on which you'd 
 After updating the *server.properties* file, restart the Contrast server service so that the changes to take effect. 
 
 ### Configuring the front-end server
-Refer to your server's documentation for instructions on how to configure it to use AJP. Also refer to the following links for Apache and Nginx instructions. 
+Refer to your server's documentation for instructions on how to configure it to use AJP. Also refer to the following links for Apache and NGINX instructions. 
 
 * [Apache mod_proxy_ajp configuration](http://httpd.apache.org/docs/2.2/mod/mod_proxy_ajp.html)
-* [Nginx proxy AJP configuration](http://webapp.org.ua/sysadmin/setting-up-nginx-ssl-reverse-proxy-for-tomcat/)
+* [NGINX proxy AJP configuration](http://webapp.org.ua/sysadmin/setting-up-nginx-ssl-reverse-proxy-for-tomcat/)
 
 ## Contrast HTTPS Connector
 Configuring Contrast to use a HTTPS connector is a straight-forward process. These intructions are written in the context that you have a certificate to use. The certificate can be CA signed or self signed. 
