@@ -69,6 +69,8 @@ You can also output events to syslog for one or multiple servers. Read our artic
 ## Report Settings
 Report settings offer a single interface for organization administrators to define the template of hard-copy reports. This essentially involves defining the default values for reports such as:
 
+Report settings offer a single interface for organization administrators to define the template of hard-copy reports. This involves defining the default values for reports such as:
+
 * Report Type
 * Vulnerability Status
 * Custom Footer
@@ -91,5 +93,6 @@ Organization administrators can customize score settings for libraries by select
 
 You can also configure policy settings in **Policy Management** so that any library in violation automatically receives a failing score (F). Once these settings are chosen, you'll see an alert message in **Score Settings**. Clicking the **policy** link in the alert navigates you to **Library Policy**, where administrators may view and revise these settings.
 
+>>>>>>> master
 <!-- Let's link to new policy management section once created -->
 

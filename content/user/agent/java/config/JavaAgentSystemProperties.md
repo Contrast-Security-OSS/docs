@@ -13,6 +13,7 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.activity | boolean to enable/disable the Contrast activity thread<br>**DEFAULT VALUE:** true</br> |
 | contrast.app.activity.period | Contrast app activity thread polling period in milliseconds<br>**DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
 | contrast.app.features | JSON from disk to use for app<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.app.update.period | Contrast app update thread polling period in milliseconds<br>**DEFAULT VALUE:** 5000 (5 seconds, in milliseconds)</br> |
 | contrast.appupdate | boolean to enable/disable threads that sends updates about applications to Team Server<br>**DEFAULT VALUE:** true</br> |
 | contrast.auto.license.assessment | boolean to allow Contrast to license an application on creation<br>**DEFAULT VALUE:** false</br> |
 | contrast.auto.license.protection | boolean to allow Contrast to license a server on creation<br>**DEFAULT VALUE:** false</br> |
@@ -148,6 +149,7 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.defend.csrf.token.name | the name of the CSRF token HTTP parameter<br>**DEFAULT VALUE:** cs_csrf_tkn</br> |
 | contrast.defend.exploited.samples | Max number of detailed reports generated for exploited attacks during a reporting period<br>**DEFAULT VALUE:** 100</br> |
 | contrast.defend.ineffective.samples | Max number of detailed reports generated for ineffective attacks detected during a<br>**DEFAULT VALUE:** 50</br> |
+| contrast.defend.paddingoracle.threshold | Minimum number of padding errors to be observed during a reporting period in order to be classfied as malicious<br>**DEFAULT VALUE:** 25</br> |
 | contrast.defend.patterns | File path to overriding RASP patterns file (used when Contrast is in DEFEND mode)<br>**DEFAULT VALUE:** uses patterns embedded in the agent</br> |
 | contrast.defend.telemetry.dir | File path to RASP telemetry directory (used when Contrast is in DEFEND mode)<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.sqlinjection.keywords | File path to overriding SQL Injection keywords file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |

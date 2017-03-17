@@ -13,7 +13,7 @@ Many customers run multiple agent-based technologies such as Application Perform
 ### Compatible Java Agents
 | Agent       | Status                   |
 |-------------|--------------------------|
-| AppDynamics | Tested without issue.    |
+| AppDynamics | Some versions tested without issue.    |
 | New Relic   | Run daily with Contrast. |
 | YourKit     | Run daily with Contrast. |
 
