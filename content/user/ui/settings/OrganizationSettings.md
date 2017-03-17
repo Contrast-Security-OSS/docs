@@ -4,7 +4,7 @@ description: "Overview of administrating and managing an organization."
 tags: "TeamServer organization settings"
 -->
 
-Organization administrators have access to a variety of configuration settings specific to operating and managing an organization, such as administering users, setting up password policy, integrations and server defaults. You can find these settings by selecting **Organization Settings** in the [User menu](user_tsguideui.html#overview).
+Organization administrators have access to a variety of configuration settings that are specific to operating and managing an organization, such as administering users and setting up password policy, integrations and server defaults. You can find these settings by selecting **Organization Settings** in the [User menu](user_tsguideui.html#overview).
 
 <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
  
@@ -18,10 +18,10 @@ View basic information about your organization and configure high-level preferen
 Manage users for an organization, including the ability to [add](user_tsguideset.html#user), edit or delete them. Users can be assigned a default group (or role), designated for API-only use and unlocked if they've been locked out. 
 
 ## Security
-Organization administrators can manage [password policy](admin_tsconfig.html#pw), [IP restrictions](admin_tsconfig.html#ip), [two-step verification](admin_tsconfig.html#tsv) and session timeouts. An audit log is also available and searchable by keyword and date.
+Organization administrators manage [password policy](admin_tsconfig.html#pw), [IP restrictions](admin_tsconfig.html#ip), [two-step verification](admin_tsconfig.html#tsv) and session timeouts. An audit log is also available and searchable by keyword and date.
 
 ## API
-Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about it in our [API Documentation](dev_api3.html#openapi).
+Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about them in our [API Documentation](dev_api3.html#openapi).
 
 ## Integrations
 Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
