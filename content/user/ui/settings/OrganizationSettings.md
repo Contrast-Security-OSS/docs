@@ -93,6 +93,5 @@ Organization administrators can customize score settings for libraries by select
 
 You can also configure policy settings in **Policy Management** so that any library in violation automatically receives a failing score (F). Once these settings are chosen, you'll see an alert message in **Score Settings**. Clicking the **policy** link in the alert navigates you to **Library Policy**, where administrators may view and revise these settings.
 
->>>>>>> master
 <!-- Let's link to new policy management section once created -->
 
