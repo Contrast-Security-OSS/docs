@@ -4,7 +4,7 @@ description: "Guide to setting the applications display name and version"
 tags: "microsoft IIS application name agent installation .NET version"
 -->
 
-Users can customize the display name (**version 3.1.3**+) and application version (**version 3.3.6**+) used for a web application by adding a setting to the ```appSettings``` section of the root configuration section of the application's *web.config* file. For example, the following configuration will set the application's display name to **MyWebAppName** and version tag to **1.2.3**:
+Users can customize the display name (**version 3.1.3**+) and application version (**version 3.3.6**+) used for a web application by adding settings to an application's *web.config* file. These settings must be added to the application web.config's root configuration ```appSettings``` section (in other words, the .NET Agent expects to find these settings under the XML path configuration/appSettings.) For example, the following configuration will set the application's display name to **MyWebAppName** and version tag to **1.2.3**:
 
 ```
 <configuration>
@@ -18,7 +18,7 @@ Users can customize the display name (**version 3.1.3**+) and application versio
 
 >**Note:** The **Contrast.AppName** setting should be present on each server where the application is to be analyzed. Otherwise the applications could potentially have different display names (see below) and be considered different applications by TeamServer. 
 
->**Note:** In order for the agent to pick up customized AppName and/or AppVersion settings, the settings must be placed in the root configuration's appSettings section. In versions previous to 3.3.8, the appSettings section must also not be protected/encrypted or located in another configuration file (i.e. not using configSource.)
+>**Note:** In order for the agent to pick up customized AppName and/or AppVersion settings, the settings must be placed in the application web.config's root configuration appSettings section. In versions previous to 3.3.8, the appSettings section must also not be protected/encrypted or located in another configuration file (i.e. not using configSource.)
 
 ## Application Display Name When 'Contrast.AppName' Setting Is Absent
 
