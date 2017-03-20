@@ -24,7 +24,7 @@ LDAP configuration is performed by the System Administrator and requires creatin
 
 ## Configuring The Server
 
-After choosing **LDAP** in Step 1 of the Authentication Wizard, Step 2 provides required fields to **Connect Server** and *Bind to Server**. 
+After choosing **LDAP** in Step 1 of the Authentication Wizard, Step 2 provides required fields to **Connect Server** and **Bind to Server**. 
 
 <a href="assets/images/KB4-c10_1.png" rel="lightbox" title="Configuring The Server"><img class="thumbnail" src="assets/images/KB4-c10_1.png"/></a>
 
@@ -178,4 +178,4 @@ After you create your truststore containing either your server's or CA certifica
 -Djavax.net.ssl.trustStorePassword=<password you set for the trust store, if any>
 ````
 
-You should now restart the Contrast server service, and verify that queries against your Active Directory now use SSL.
+You should now restart the Contrast server service, and verify that queries against LDAP now use SSL.
