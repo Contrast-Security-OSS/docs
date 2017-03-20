@@ -10,7 +10,7 @@ The Contrast.NET Agent supports analysis of web applications built on the follow
 * Windows 7
 * Windows 8
 * Windows 10
-* Windows Server 2008
+* Windows Server 2008 R2
 * Windows Server 2012
 * Windows Server 2016
 * Azure Virtual Machines 
