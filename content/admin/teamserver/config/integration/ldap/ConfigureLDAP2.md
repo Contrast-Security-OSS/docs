@@ -159,3 +159,26 @@ Once you've configured your application to connect to LDAP, set up user and grou
 <BR>
 
 Once you've successfully logged in as both a User and an Administrator, click **Finish** to complete the configuration. You must restart Contrast in order for the authentication changes to be applied.
+
+## Using Self-Signed or Privately Signed Certificates
+
+If you configure your LDAP integration to connect to your server using SSL, you may need to import your server's certificate into a new trust store to be used by the Contrast JRE. 
+
+To begin, acquire the server's certificate from your administrators in PKCS#12 format. If you're using a self-signed certificate, this is the actual LDAP server's certificate. If you have a Private CA, you need the CA certificate for that server.
+
+Once you have the certificate for the server, create a trust store that contains that certificate. Run the following commands from a command shell in the directory where Contrast is installed as Administrator.
+
+````
+$ mkdir data/conf/ssl
+$ jre/bin/keytool -import -file <path to certificate> -alias <hostname> \
+  -keystore data/conf/ssl/truststore.jks
+````
+
+After you create your truststore containing either your server's or CA certificate, add the following lines to the ***bin/contrast-server.vmoptions*** file:
+
+````
+-Djavax.net.ssl.trustStore=<full path to truststore>
+-Djavax.net.ssl.trustStorePassword=<password you set for the trust store, if any>
+````
+
+You should now restart the Contrast server service, and verify that queries against your Active Directory now use SSL.
