@@ -4,8 +4,9 @@ description: "An LDAP Directory is a collection of Users and Group. LDAP (Lightw
 tags: "LDAP directory authentication configuration member"
 -->
 
-## Overview
-A LDAP Directory is a collection of users and groups. LDAP (Lightweight Directory Access Protocol) is an Internet protocol that web applications can use to look up those users and groups from the LDAP server. Contrast provides integration with many different types of LDAP servers including:
+
+Contrast provides integration with many types of LDAP (Lightweight Directory Access Protocol) servers. LDAP is an Internet protocol which web applications can use to look up users or groups listed on an LDAP directory server. Supported LDAP server types include:
+
 * OpenLDAP
 * OpenDS
 * ApacheDS
@@ -32,10 +33,10 @@ After choosing **LDAP** in Step 1 of the Authentication Wizard, Step 2 provides 
 
 | Option      | Description                                                                                                      | Default                    |
 |-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
-| Protocol    | The protocol that should be used to communicate with the LDAP server; choose between LDAP or LDAPS (LDAP with SSL) options| LDAP                     |
+| Protocol    | The protocol that should be used to communicate with the LDAP server; choose between LDAP or LDAP with SSL (LDAPS) options| LDAP                     |
 | Hostname    | The hostname to which to connect when communicating with the LDAP server.                                              | localhost                  |
 | Port        | The port to which to connect when communicating with the LDAP server                                                  | 389 (LDAP), 636 (LDAPS)    |
-| Search Base | The Base DN (distinguished name) to use when communicating with the LDAP server                         | dc=contrastsecurity,dc=com |
+| Search Base | The Base distinguished name (DN) to use when communicating with the LDAP server                         | dc=contrastsecurity,dc=com |
 
 ---
 
@@ -58,14 +59,14 @@ There are four supported types of BIND that can be used by Contrast. Each of the
 | Method | Description | Required Fields | Optional Fields |
 |-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
 | Anonymous | Administrators provide anonymous read-only access to the directory. | None | N/A |
-| Simple    | Standard username and password Authentication; the username and password are verified, as provided by the LDAP server. | Username, Password | N/A |
+| Simple    | Standard username and password authentication; the username and password are verified, as provided by the LDAP server. | Username, Password | N/A |
 | DIGEST-MD5 | A username and password are provided and hashed using MD5 prior to sending to the server to be authenticated. | Username, Password | SASL Realm | 
 | CRAM-MD5 | A Pre-authentication Challege is issued by the LDAP server, which is sent with the MD5 hashed username and password to be authenticated. | Username, Password | SASL Realm | 
 
 ---
 
 ### Implementing a service user
-Contrast recommendeds that you implement a dedicated user for binding to the LDAP Directory. This Service User should be setup as either a read-only or read-write user, depending on how Contrast is set to interact with the LDAP directory.
+Contrast recommendeds that you implement a dedicated user for binding to the LDAP directory. This Service User should be setup as either a read-only or read-write user, depending on how Contrast is configured to interact with the LDAP directory.
 
 ### Testing LDAP connection
 Once you configure the connection to the LDAP server, click the **Test Connection** button located near the bottom of the form. Testing the connection ensures that the application can connect to the LDAP server and perform queries. 
@@ -136,7 +137,7 @@ The following information is needed to instruct Contrast on how to search for us
 
 | Option        | Description                                                                                                                                                          | Default  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Base DN       | The DN where users are located within the LDAP server; note that you should not include the Search DN in this value as it will be automatically appended on. | CN=Users |
+| Base DN       | The DN where users are located within the LDAP server; note that you should not include the Search DN in this value as it will be automatically appended on | CN=Users |
 | Object Class | The LDAP Object Class for user objects in the directory. The default setting should be correct for most LDAP deployments. | inetOrgPerson |
 | First Name Attribute | The LDAP field that contains a user's first name. The default setting should be correct for most LDAP deployments. | givenName |
 | Last Name Attribute | The LDAP field that contains a user's last name. The default setting should be correct for most LDAP deployments. | sn |
