@@ -47,7 +47,7 @@ After choosing **LDAP** in Step 1 of the Authentication Wizard, Step 2 provides 
 | Option      | Description                                                                                                      | Default                    |
 |-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
 | Method | The method to use when connecting to the LDAP server; choose between Anonymous, Simple, DIGEST-MD5 or CRAM-MD5 | Simple|
-| Username | The full DN of the user that should BIND to the directory to perform queries and check authentication | N/A | 
+| Username | The full DN of the user that should bind to the directory to perform queries and check authentication | N/A | 
 | Password | The password for the BIND user specified in the Username field | N/A |
 
 ---
