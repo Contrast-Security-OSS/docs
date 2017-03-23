@@ -42,6 +42,14 @@ The goal of this feature is to allow users access to more than one organization.
 
 A typical use case of this functionality is defining permissions for an overlay application security group that supports multiple business units. Each business unit is set up as a separate organization, each with their own applications. The application security team that supports all these business units will need access to all applications in all organizations. These application security users can be assigned to a cross-organizational access group and they can switch between organizations freely using the organization toggle feature.
 
+### Guest users
+
+In some cases, a user has a Guest designation next to their name in the Users interface in Organization Settings. This designation means that the user received an Organization role from an Organization Group created in the System Administration interface.  
+
+For example, as a System Admin in the System Administration interface, you can create a group that provides a View Organization role and then add UserA to OrgA. In the Users screen in OrgA, UserA appears with “Guest” next to their name.
+
+Guest users can’t be managed by an Organization Admin. They have the Organization role and the Application access provided to them by the system-created Organization group. An Organization Admin can add a Guest user to their organization by clicking on the **GUEST** link. Once this has happened, they can edit the user as well as assign them to any group. Deleting a user that was once a Guest reverts that user to a Guest user, if they still have access to the organization from a system-created group.
+
 ### Creating Cross-Organization Groups
 Groups with cross-organizational access control policies are created within the SuperAdmin interface. Either the SuperAdmin, delegated SuperAdmin, or even users assigned to a system group with system administrative privileges are granted the ability to create, edit or delete organization groups. 
 
