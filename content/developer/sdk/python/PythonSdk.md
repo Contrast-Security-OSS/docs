@@ -1,4 +1,9 @@
-## Contrast Python Sdk
+<!--
+title: "Python SDK"
+description: "Install and use Python SDK"
+tags: "python sdk agent installation develop"
+-->
+
 
 ## Install
 The Contrast Python module is available to install via pip.
