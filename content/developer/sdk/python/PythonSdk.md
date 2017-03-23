@@ -16,6 +16,7 @@ The SDK offers a majority of our public APIs through an instance of the Contrast
 
 > **Note:** The Contrast URL is optional and defaults to https://app.contrastsecurity.com
 ```python
+    from contrast_security.contrast_sdk import ContrastSdk
     contrast_sdk = ContrastSdk('username','api_key','service_key','teamserver_url')
 ```
 
@@ -30,6 +31,7 @@ In some cases, you may want to filter applications, servers, traces or libraries
 These methods are easily identifiable on the ContrastSDK object by looking at any methods that include the phrase `filter`.
 
 ```python
+    from contrast_security.filters.library_filter import LibraryFilter
     library_filter = LibraryFilter()
     library_filter.apps = ['app_id_1','app_id_2']
     library_filter.expand = ['vulns','apps']
