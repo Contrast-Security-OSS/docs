@@ -6,7 +6,7 @@ tags: "python sdk agent installation develop"
 
 
 ## Install
-The Contrast Python module is available to install via pip.
+The Contrast Python module is available to install via *pip*.
 ```commandline
     pip install contrast-security
 ```
@@ -14,7 +14,7 @@ The Contrast Python module is available to install via pip.
 ### Sample usage
 The SDK offers a majority of our public APIs through an instance of the ContrastSDK object.
 
-**Note:** The Contrast URL is optional and defaults to https://app.contrastsecurity.com
+> **Note:** The Contrast URL is optional and defaults to https://app.contrastsecurity.com
 ```python
     contrast_sdk = ContrastSdk('username','api_key','service_key','teamserver_url')
 ```
@@ -27,7 +27,7 @@ An example of getting an application:
 
 In some cases, you may want to filter applications, servers, traces or libraries. Any endpoint that involves filtering can use the appropriate filter object.
 
-These methods are easily identifiable on the ContrastSDK object by looking at any methods that start with the phrase `filter`.
+These methods are easily identifiable on the ContrastSDK object by looking at any methods that include the phrase `filter`.
 
 ```python
     library_filter = LibraryFilter()
@@ -46,7 +46,7 @@ You can easily use the responses as a Python dictionary by using the `.json()` m
 ```
 
 ### Developing
-Use pip to install the projects dependencies:
+Use *pip* to install the projects dependencies:
 
 ```commandline
     pip install -r requirements.txt
@@ -54,7 +54,7 @@ Use pip to install the projects dependencies:
 
 To run the tests, create a file in the `/tests` directory called *test-config.json* with local Contrast information. An example test configuration can be seen in `tests/test-config.json.example`.
 
-> **Note:** The URL validation doesn't accept localhost as a Contrast URL. If you're running Contrast locally, use *http://127.0.0.1:19080* as your teamserver_url.
+> **Note:** The URL validation doesn't accept localhost as a Contrast URL. If you're running Contrast locally, use http://127.0.0.1:19080 as your teamserver_url.
 
 Then run tests with nose:
 
