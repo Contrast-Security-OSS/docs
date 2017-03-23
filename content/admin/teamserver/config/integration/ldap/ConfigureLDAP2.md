@@ -4,8 +4,9 @@ description: "An LDAP Directory is a collection of Users and Group. LDAP (Lightw
 tags: "LDAP directory authentication configuration member"
 -->
 
-## Overview
-An LDAP Directory is a collection of Users and Groups. LDAP (Lightweight Directory Access Protocol) is an Internet protocol that web applications can use to look up those Users and Groups from the LDAP Server. We provide integration with many different types of LDAP Servers including:
+
+Contrast provides integration with many types of LDAP (Lightweight Directory Access Protocol) servers. LDAP is an Internet protocol which web applications can use to look up users or groups listed on an LDAP directory server. Supported LDAP server types include:
+
 * OpenLDAP
 * OpenDS
 * ApacheDS
@@ -16,146 +17,166 @@ An LDAP Directory is a collection of Users and Groups. LDAP (Lightweight Directo
 
 ## Getting Started
 
-When to use this option: Connecting to an LDAP Directory Server is useful if your Users and Groups are managed in a corporate directory and you want to delegate the responsibility of managing user access of the application to your corporate directory administrators.
+Connecting to a LDAP directory server is useful if you manage users and groups in a corporate directory, and you want to delegate the responsibility of managing user access of the application to your corporate directory administrators.
 
-LDAP configuration is performed by the System Administrator and requires creating two groups to be used by Contrast.
+LDAP configuration is performed by the System Administrator and requires creating two groups to be used by Contrast. Go to **System Settings > Authentication** to begin configuration in the Authentication Wizard. 
 
 >**NOTE:** Switching to LDAP from a different authentication method such as a local database may result in issues if the user ID attribute is inconsistent.
 
 ## Configuring The Server
 
-After choosing **LDAP** in Step 1 of the Authentication Wizard (**System Settings > Authentication**), the following information will be needed in order to integrate Contrast:
-
-### Connecting The Server 
-
-| Option      | Description                                                                                                      | Default                    |
-|-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
-| Protocol    | The protocol that should be used to communicate with the LDAP server. Will be one of LDAP or LDAPS (LDAP w/ SSL) | LDAP                       |
-| Hostname    | The hostname to connect to when communicating with the LDAP server.                                              | localhost                  |
-| Port        | The port to connect to when communicating with the LDAP server.                                                  | 389 (LDAP), 636 (LDAPS)    |
-| Search Base | This is the Base DN (Distinguished Name) to use when communicating with the LDAP server.                         | dc=contrastsecurity,dc=com |
-
----
+After choosing **LDAP** in Step 1 of the Authentication Wizard, Step 2 provides required fields to **Connect Server** and **Bind to Server**. 
 
 <a href="assets/images/KB4-c10_1.png" rel="lightbox" title="Configuring The Server"><img class="thumbnail" src="assets/images/KB4-c10_1.png"/></a>
 
-<BR>
-
-### Binding To The Server
+### Connect the server 
 
 | Option      | Description                                                                                                      | Default                    |
 |-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
-| Method | The method to use when connecting to the LDAP Server. This can be one of Anonymous, Simple, DIGEST-MD5 or CRAM-MD5 | Simple|
-| Username | This is the full Distinguished Name (DN) of the user that should BIND to the directory to perform queries and check authentication | N/A | 
-| Password | The is the password for the BIND user specified in the Username field | N/A |
+| Protocol    | The protocol that should be used to communicate with the LDAP server; choose between LDAP or LDAP with SSL (LDAPS) options| LDAP                     |
+| Hostname    | The hostname to which to connect when communicating with the LDAP server.                                              | localhost                  |
+| Port        | The port to which to connect when communicating with the LDAP server                                                  | 389 (LDAP), 636 (LDAPS)    |
+| Search Base | The Base distinguished name (DN) to use when communicating with the LDAP server                         | dc=contrastsecurity,dc=com |
+
+---
+
+<BR>
+
+### BIND to server
+
+| Option      | Description                                                                                                      | Default                    |
+|-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
+| Method | The method to use when connecting to the LDAP server; choose between Anonymous, Simple, DIGEST-MD5 or CRAM-MD5 | Simple|
+| Username | The full DN of the user that should bind to the directory to perform queries and check authentication | N/A | 
+| Password | The password for the BIND user specified in the Username field | N/A |
 
 ---
 
 
-#### Bind Methods
-There are 4 supported types of BIND that can be used by TeamServer. Each of these types has different required fields:
+#### BIND methods
+There are four supported types of BIND that can be used by Contrast. Each of the types has different required fields:
 
 | Method | Description | Required Fields | Optional Fields |
 |-------------|------------------------------------------------------------------------------------------------------------------|----------------------------|
-| Anonymous | Administrators can provide anonymous read-only access to the directory. | None |  |
-| Simple    | Standard Username+Password Authentication. The username and password are verified, as provided by the LDAP Server | Username, Password |  |
-| DIGEST-MD5 | A Username and Password are provided and hashed using MD5 prior to sending to the server to be authenticated. | Username, Password | SASL Realm | 
-| CRAM-MD5 | A Pre-Authentication Challege is issued by the LDAP Server which is then sent back along with the MD5 hashed Username and Password to be authenticated. | Username, Password | SASL Realm | 
+| Anonymous | Administrators provide anonymous read-only access to the directory. | None | N/A |
+| Simple    | Standard username and password authentication; the username and password are verified, as provided by the LDAP server. | Username, Password | N/A |
+| DIGEST-MD5 | A username and password are provided and hashed using MD5 prior to sending to the server to be authenticated. | Username, Password | SASL Realm | 
+| CRAM-MD5 | A Pre-authentication Challege is issued by the LDAP server, which is sent with the MD5 hashed username and password to be authenticated. | Username, Password | SASL Realm | 
 
 ---
 
-### Using a Service User
-It is recommended that a dedicated user be used for binding to the LDAP Directory. This Service User should be setup as either a read-only or read-write user depending on how TeamServer is set to interact with the LDAP Directory.
+### Implementing a service user
+Contrast recommendeds that you implement a dedicated user for binding to the LDAP directory. This Service User should be setup as either a read-only or read-write user, depending on how Contrast is configured to interact with the LDAP directory.
 
-### Testing LDAP Connection
-Once the connection to the LDAP Server has been configured, test the connection to ensure the app will be able to connect to the LDAP Server and perform queries by clicking the "Test Connection" button located near the bottom of the form. 
+### Testing LDAP connection
+Once you configure the connection to the LDAP server, click the **Test Connection** button located near the bottom of the form. Testing the connection ensures that the application can connect to the LDAP server and perform queries. 
 
 <BR>
 
 ## Configure Groups
-An important distinction is that Contrast does not perform Data Access Control using the integrated LDAP Servers, that is to say that roles and access to data within the application are handled by the application and the roles set for users by the Organization Administrators. That being said, there is an Access Control check when logging in (or creating new users) to ensure that the provided user does in fact belong to the correct group within the LDAP Directory.
-
-### Find Which Group A User Belongs To
-
-| Option        | Description                                                                                                                                                          | Default  |
-|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-|Group Type | There are two types of groups in LDAP, depending on the functionality that your server provides and how it's configured this will be one of Static or Dynamic groups. See a breakdown of both below. | Static |
-| Group Subtree | Configures whether subtrees of the Base DN should be included when searching for groups in the directory. This field is only applicable to static groups. | Enabled |
-| Base DN | Like the User Base DN, this is the DN where the application can find groups in your LDAP server and should not contain the Search Base. This field is only applicable to static groups. | ou=Groups |
-| Object Class | This field is not required, as this is somewhat standard across LDAP deployments. If left blank, the application will use the default value of group, groupOfUsers, groupOfUniqueUsers. This field is only applicable to static groups. | N/A |
-| Group Member Attribute | This is the attribute within a group object in the directory that will contain the members of that group. This may differ for your LDAP deployment so ensure that you are using the correct attribute with your LDAP administrator. This field is only applicable to static groups. | uniqueMember |
-
----
+It's important to note that each application handles roles and access to data within the application, and Organization Administrators set the roles for users. Contrast doesn't perform Data Access Control using the integrated LDAP servers. However, the Access Control check when you log in (or create new users) ensures that the provided user belongs to the correct group within the LDAP directory.
 
 <a href="assets/images/KB4-c10_2.png" rel="lightbox" title="Configuring Groups"><img class="thumbnail" src="assets/images/KB4-c10_2.png"/></a>
 
+
+The table below describes the different groups options available. 
+
+
+| Option        | Description                                                                                                                                                          | Default  |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+|Group Type | Groups in LDAP are either Static or Dynamic, depending on the functionality that your server provides and how it's configured. See the note following this table for an explanation of both. | Static |
+| Group Subtree | Configures whether subtrees of the Base DN should be included when searching for groups in the directory. This field is only applicable to Static groups. | Enabled |
+| Base DN | The DN where the application can find groups in your LDAP server (like the User Base DN); it shouldn't contain the Search Base. This field is only applicable to Static groups. | ou=Groups |
+| Object Class | Not a required field, as it is somewhat standard across LDAP deployments. If left blank, the application uses the default value of *group, groupOfUsers, groupOfUniqueUsers*. This field is only applicable to Static groups. | N/A |
+| Group Member Attribute | The attribute within a group object in the directory that contains the members of that group. This may differ for your LDAP deployment, so ensure that you are using the correct attribute with your LDAP administrator. This field is only applicable to Static groups. | uniqueMember |
+
+---
+
 <BR>
 
->**NOTE:** The difference between a Static and Dynamic group is the way group membership is managed. In a static group, the group tracks it's members through an attribute on the object, usually something along the lines of *uniqueMember*. In Dynamic groups the User object is responsible for tracking its own membership and groups are added dynamically to the user object when the user becomes a member of a group.
+>**NOTE:** The difference between Static and Dynamic groups is the way group membership is managed. In a Static group, the group tracks its members through an attribute on the object - like *uniqueMember*. In a Dynamic group, the user object is responsible for tracking its own membership, and groups are added dynamically to the user object when the user becomes a member of a group.
 
-### Authorizing Contrast Users
+### Authorizing Contrast users
 
-Once you have entered the configuration values, you can select the groups that will be used by the application to access the TeamServer UI. 
+Once you enter the configuration values, select the groups that the application will use to access the Contrast UI. A user can't belong to both the User and Admin groups.
 
-**Contrast User Group** This group allows users to be added to an organization and log in to the standard user interface. This is the group that most users will need to be a member of.
+* **Contrast User Group:** This group allows users to be added to an organization and log in to the standard UI. This group is appropriate for most users. 
 
-**Contrast SuperAdmin Group** This group allows users to log in to the Super Administrator interface. This interface should only be accessible to Application and System administrators.
-
-It is important to note that a user can not belong to both the User and Admin groups.
+* **Contrast SuperAdmin Group:** This group allows users to log in to the Super Administrator UI. This UI should only be accessible to Application and System administrators.
 
 You can use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
 
-
 ## Configuring Users
-To fully integrate with an LDAP Directory, TeamServer needs to know not only how to connect to the LDAP Server, but also how to find Users and Groups within the Directory itself.
+To fully integrate with a LDAP directory, Contrast needs information on how to connect to the LDAP server as well as how to find users and groups within the directory.
 
+### User management 
 
-### User Management 
-
-**User Management** - LDAP Managed (standard) or Contrast Managed. If you select Contrast Managed, then Contrast will use the LDAP Server as a credential store and will manage the users within the directory.
+User Management is LDAP Managed (standard) or Contrast Managed. If you select Contrast Managed, Contrast uses the LDAP server as a credential store and manages the users within the directory.
  
-It is possible to have an LDAP server dedicated to TeamServer for authentication, if this is the case and you wish to set it up to do so, Contrast can manage the users in the Directory by setting the User Management selection to "Contrast Manages LDAP". In this mode, users will be added to the LDAP directory when they are added to the application. Most users will leave this set to "LDAP Manages Contrast" which means that Contrast will only read from LDAP and users must be added to the correct group in the directory before they can be added to the application.
+You can choose to dedicate a LDAP server to Contrast for authentication. If you want to set this up, Contrast can manage the users in the directory by setting the User Management selection to **Contrast Manages LDAP**. In this mode, users are added to the LDAP directory when they are added to the application. Most users leave this set to **LDAP Manages Contrast**, which means that Contrast only reads from LDAP, and users must be added to the correct group in the directory before they can be added to the application.
 
 <a href="assets/images/KB4-c10_3.png" rel="lightbox" title="Configurig Users"><img class="thumbnail" src="assets/images/KB4-c10_3.png"/></a>
 
 <BR>
 
 
-### Finding Users
+### Finding users
 
-The following information is needed to instruct Contrast how to search for users in the directory:
+The following information is needed to instruct Contrast on how to search for users in the directory.
 
-* **Base DN** - This is the container (under the global base DN) where Contrast should start searching for users. In most organizations, this will be a single container (e.g. ou=Users) but you should verify with your LDAP administrator that you are searching the right container.
-* **Object Class** - In most deployments, this will be inetOrgPerson
-* **First Name Attribute** - The attribute which contains the user's first name. Defaults to givenName
-* **Last Name Attribute** - The attribute which contains the user's last name. Defaults to sn
-* **Email Attribute** - The attribute which contains the user's email address. Defaults to mail
-* **User Subtree** - Whether searches should be performed recursively in all subtrees of the User Base DN.
-* **User ID Attribute** - This is the attribute that should be used for logging in to Contrast. In most deployments this will be uid
-* **Authentication Strategy** - Bind (Standard) or Compare. If you select Compare, Contrast will compare a pre-hashed value to the value stored in the user password attribute field.
-* **Password Attribute** - If you selected "Compare" for the Authentication Strategy, this is the attribute that will contain the hashed password for the user. Defaults to userPassword.
+* **Base DN:** The container (under the global base DN) where Contrast should start searching for users. In most organizations, this is a single container (e.g., *ou=Users*), but you should verify with your LDAP administrator that you're searching the right container.
+* **Object Class:** In most deployments, this is *inetOrgPerson*.
+* **First Name Attribute:** The attribute that contains the user's first name. Defaults to *givenName*.
+* **Last Name Attribute:** The attribute that contains the user's last name. Defaults to *sn*.
+* **Email Attribute:** The attribute that contains the user's email address. Defaults to *mail*.
+* **User Subtree:** Determines if searches should be performed recursively in all subtrees of the User Base DN.
+* **User ID Attribute:** The attribute that should be used for logging in to Contrast. In most deployments, this is *uid*.
+* **Authentication Strategy:** BIND (Standard) or Compare; if you select **Compare**, Contrast compares a pre-hashed value to the value stored in the user password attribute field.
+* **Password Attribute:** If you selected **Compare** for the Authentication Strategy, this attribute contains the hashed password for the user. Defaults to *userPassword*.
 
 
 | Option        | Description                                                                                                                                                          | Default  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Base DN       | This is the DN where users are located within the LDAP server, note that you should not include the Search DN in this value as it will be automatically appended on. | CN=Users |
-| Object Class | This is the LDAP Object Class for User objects in the directory. The default setting should be correct for most LDAP deployments. | inetOrgPerson |
-| First Name Attribute | This is the LDAP field that contains a user's first name. The default setting should be correct for most LDAP deployments. | givenName |
-| Last Name Attribute | This is the LDAP field that contains a user's last name. The default setting should be correct for most LDAP deployments. | sn |
-| Email Attribute | This is the LDAP field that contains a user's email address. The default setting should be correct for most LDAP deployments. | mail | 
-| User Subtrees | Whether subtrees of the Base DN should be included when searching for users. For most LDAP deployments you will want to leave this set to enabled.                   | Enabled  |
-| User ID Attribute | This is the LDAP field that should be identified as the User ID, this will be the username that users use when logging in to contrast. | uid | 
-| Authentication Strategy | This is how we will attempt to authenticate users when they provide their credentials. Bind means the application will send the user's credentials to the server for authentication; while Compare means the server will hash the user's credentials and compare them to the value of the Password attribute | Bind |
-| Password Attribute | This is the LDAP field that contains a user's password. This is only used for "Compare" authentication strategy and the default should be correct for most LDAP deployments | userPassword |
+| Base DN       | The DN where users are located within the LDAP server; note that you should not include the Search DN in this value as it will be automatically appended on | CN=Users |
+| Object Class | The LDAP Object Class for user objects in the directory. The default setting should be correct for most LDAP deployments. | inetOrgPerson |
+| First Name Attribute | The LDAP field that contains a user's first name. The default setting should be correct for most LDAP deployments. | givenName |
+| Last Name Attribute | The LDAP field that contains a user's last name. The default setting should be correct for most LDAP deployments. | sn |
+| Email Attribute | The LDAP field that contains a user's email address. The default setting should be correct for most LDAP deployments. | mail | 
+| User Subtrees | Determines if subtrees of the Base DN should be included when searching for users. For most LDAP deployments, you want to leave this enabled.                   | Enabled  |
+| User ID Attribute | The LDAP field that should be identified as the User ID. This is the username to enter when logging in to contrast. | uid | 
+| Authentication Strategy | How we attempt to authenticate users when they provide their credentials. BIND means the application sends the user's credentials to the server for authentication; Compare means the server hashes the user's credentials and compares them to the value of the Password attribute | BIND |
+| Password Attribute | The LDAP field that contains a user's password. This is only used for Compare authentication strategy and the default should be correct for most LDAP deployments. | userPassword |
 
 ---
 
-
-## Testing the LDAP Configuration
-Now that you have configured your application to connect to LDAP, set up User and Group mapping information and selected your group, it's time to verify that the Group and User mappings are correctly configured. Click on the **Test Login** button at the bottom of the form. 
+## Testing the LDAP configuration
+Once you've configured your application to connect to LDAP, set up user and group mapping information and selected your group, it's time to verify that the group and user mappings are correctly configured. Click on the **Test Login** button at the bottom of the form. 
 
 <a href="assets/images/KB4-c09_4.png" rel="lightbox" title="Test Login"><img class="thumbnail" src="assets/images/KB4-c09_4.png"/></a>
 
 <BR>
 
-Once you have successfully logged in as both a User and an Administrator, click **Finish** to complete the configuration. You will need to restart TeamServer in order for the authentication changes to be applied.
+Once you've successfully logged in as both a User and an Administrator, click **Finish** to complete the configuration. You must restart Contrast in order for the authentication changes to be applied.
+
+## Using Self-Signed or Privately Signed Certificates
+
+If you configure your LDAP integration to connect to your server using SSL, you may need to import your server's certificate into a new trust store to be used by the Contrast JRE. 
+
+To begin, acquire the server's certificate from your administrators in PKCS#12 format. If you're using a self-signed certificate, this is the actual LDAP server's certificate. If you have a Private CA, you need the CA certificate for that server.
+
+Once you have the certificate for the server, create a trust store that contains that certificate. Run the following commands from a command shell in the directory where Contrast is installed as Administrator.
+
+````
+$ mkdir data/conf/ssl
+$ jre/bin/keytool -import -file <path to certificate> -alias <hostname> \
+  -keystore data/conf/ssl/truststore.jks
+````
+
+After you create your truststore containing either your server's or CA certificate, add the following lines to the ***bin/contrast-server.vmoptions*** file:
+
+````
+-Djavax.net.ssl.trustStore=<full path to truststore>
+-Djavax.net.ssl.trustStorePassword=<password you set for the trust store, if any>
+````
+
+You should now restart the Contrast server service, and verify that queries against LDAP now use SSL.
