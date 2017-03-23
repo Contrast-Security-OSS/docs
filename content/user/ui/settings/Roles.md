@@ -5,7 +5,7 @@ tags: "TeamServer roles observer superadmin system"
 -->
 
 ## System Roles
-Contrast offers system roles for Enterprise on Premise (EOP) customers responsible for administrating and managing the Contrast UI. There are three system roles:
+Contrast offers system roles for Enterprise on Premises (EOP) customers responsible for administrating and managing the Contrast UI. There are three system roles:
 
 | Role                 | Description                                                                                                                                                                                                                                                          |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -18,7 +18,7 @@ Every user is provided a default role for the default organization. Users that a
 
 | Role                 | Description                                                                                                                                                                                                                                                          |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Administrator | The Organization Administrator is responsible for configuration of the organization. This user has the ability to license applications, manage user accounts and perform other advanced configuration functions found in the organization [settings menu](user_tsguideui.html#overview). |
+| Administrator | The Organization Administrator is responsible for configuration of the organization. This user has the ability to license applications, manage user accounts and perform other advanced configuration functions found in [Organization Settings](user_tsguideui.html#overview). |
 | Editor        | The Organization Editor can interact with the full lifecycle of traces and vulnerabilities as well as bring applications online and delete them. This user has no administration capabilities and can't perform any organization administration functions. This role is appropriate for the vast majority of Contrast users. |
 | Rules Admin   | The Rules Administrator has edit privilege to rules. Essentially, this user role inherits the same functionality as a user with the Editor role. |
 | View          | The user has read-only access to an organization's findings in Contrast. |
