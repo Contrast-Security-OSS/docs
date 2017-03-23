@@ -22,7 +22,7 @@ An example of getting an application:
 
 In some cases, you may want to filter applications, servers, traces or libraries. Any endpoint that involves filtering can use the appropriate filter object.
 
-These methods are easily identifiable on the ContrastSDK object by looking at any methods that start with the phrase *'filter'*.
+These methods are easily identifiable on the ContrastSDK object by looking at any methods that start with the phrase `filter`.
 
 ```python
     library_filter = LibraryFilter()
@@ -31,7 +31,7 @@ These methods are easily identifiable on the ContrastSDK object by looking at an
     contrast_sdk.filter_libraries(my_org_uuid, library_filter)
 ```
 
-You can easily use the responses as a Python dictionary by using the *.json()* method of the response:
+You can easily use the responses as a Python dictionary by using the `.json()` method of the response:
 
 ```python
     librariesResponse = contrast_sdk.filter_libraries(org_uuid, library_filter).json()
@@ -47,7 +47,7 @@ Use pip to install the projects dependencies:
     pip install -r requirements.txt
 ```
 
-To run the tests, create a file in the **/tests** directory called *test-config.json* with local Contrast information. An example test configuration can be seen in *tests/test-config.json.example*.
+To run the tests, create a file in the `/tests` directory called *test-config.json* with local Contrast information. An example test configuration can be seen in `tests/test-config.json.example`.
 
 > **Note:** The URL validation doesn't accept localhost as a Contrast URL. If you're running Contrast locally, use *http://127.0.0.1:19080* as your teamserver_url.
 
