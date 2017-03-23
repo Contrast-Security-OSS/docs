@@ -15,6 +15,7 @@ The Contrast Python module is available to install via *pip*.
 The SDK offers a majority of our public APIs through an instance of the ContrastSDK object.
 
 > **Note:** The Contrast URL is optional and defaults to https://app.contrastsecurity.com
+
 ```python
     contrast_sdk = ContrastSdk('username','api_key','service_key','teamserver_url')
 ```
