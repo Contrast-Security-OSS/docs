@@ -71,15 +71,13 @@ Build service broker app:
 
 Deploy service broker app:
 ```bash
-    cf push contrast-security-service-broker -p/path/to/servicebroker.jar
+    cf push contrast-security-service-broker -p /path/to/contrast-service-broker-<version>.jar
 ```
 
-The service broker does not offer any plans by default. Plans are configurable within the Pivotal Ops Manager or via the ```CONTRAST_SERVICE_PLANS``` environment variable. Example:
+The service broker should now appear in your Cloud Foundry console. The service broker doesn't offer any plans by default. Plans are configurable via the ```CONTRAST_SERVICE_PLANS``` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application then select **Runtime** > **Environment Variables** to set the value. Please refer to the following example to set the value through the commandline:
 
 ```
-
     cf set-env contrast-security-service-broker CONTRAST_SERVICE_PLANS
-
     " {
             "ServicePlan1": {
                  "name":"ServicePlan1",
@@ -100,8 +98,36 @@ The service broker does not offer any plans by default. Plans are configurable w
              } "
 ```
 
-After modifying the environment variable, you'll need to restage your application.
+If running the agent on Bluemix, you must use single quotes to set the ```CONTRAST_SERVICE_PLANS``` environment variable because Bluemix doesn't recognize double quotes. For example:
 
+
+```
+    cf set-env contrast-security-service-broker CONTRAST_SERVICE_PLANS
+    " {
+            'ServicePlan1': {
+                 'name':'ServicePlan1',
+                 'teamserver_url':'https://yourteamserverurl.com',
+                 'username':'your_username',
+                 'org_uuid':'00000000-1111-2222-3333-000000000000',
+                 'api_key':'your_api_key',
+                 'service_key':'your_service_key'
+             },
+             'AnotherServicePlan':{
+                 'name':'AnotherServicePlan',
+                 'teamserver_url':'https://yourteamserverurl.com',
+                 'username':'your_username',
+                 'org_uuid':'00000000-1111-2222-3333-000000000000',
+                 'api_key':'your_api_key',
+                 'service_key':'some_other_service_key'
+                 }
+             } "
+```
+
+After modifying the environment variable, restage your application.
+
+```
+cf restage contrast-security-service-broker
+```
 
 The application also requires an environment variable for a username and a password:
 
@@ -110,14 +136,18 @@ The application also requires an environment variable for a username and a passw
     cf set-env contrast-security-service-broker SECURITY_USER_PASSWORD aSecurePassword
 ```
 
-Create a service broker instance. (You must have defined at least one service plan.)
-
->**NOTE:** You must use the username and password configured above.
+Create a service broker instance. (At least one service plan must be defined.) You must use the username and password configured above.
 
 ```bash
     cf create-service-broker contrast-security-service-broker USER_NAME PASSWORD
-    https://contrast-security-service-broker
-    .local.pcfdev.io
+    <URL of your application>
+```
+
+If running on Bluemix, add ```--space-scoped``` at the end of the command. For example:
+
+```bash
+    cf create-service-broker contrast-security-service-broker USER_NAME PASSWORD
+    <URL of your application> --space-scoped
 ```
 
 All service brokers start off as private; you need to make it public.
@@ -126,8 +156,19 @@ All service brokers start off as private; you need to make it public.
     cf enable-service-access contrast-security-service-broker
 ```
 
-You should now be able to create a new service instance from the Contrast service broker and bind it to your application.
+Now that the service broker is working, create a service instance and bind it to the application. To create a service instance, run the following command:
 
+```
+cf create-service contrast-security-service-broker ServicePlan1 <name_of_service>
+```
+
+To bind it to your application, run the following command:
+
+```
+cf bind-service <app_name> <name_of_service>
+```
+
+You should see the agent start up with your application and also see it in your Contrast UI.
 
 ## Contrast Service Broker Tile
 
