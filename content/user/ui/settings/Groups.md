@@ -4,7 +4,7 @@ description: "Creating, Managing and Deleting Access Control Groups"
 tags: "TeamServer groups acls"
 -->
 
-Contrast provides role based access control (RBAC) capabilities through groups. RBAC is an approach used to assign system, organization and application access to authorized users. Contrast has two types of groups: Organization Groups, which are used to assign organization and application access, and System Groups, which are used to assign system access. System Groups are only available to on-premise customers.
+Contrast provides role based access control (RBAC) capabilities through groups. RBAC is an approach used to assign system, organization and application access to authorized users. Contrast has two types of groups: Organization Groups, which are used to assign organization and application access, and System Groups, which are used to assign system access. System Groups are only available to on-premises customers.
 
 ## Organization Groups
 
@@ -26,7 +26,7 @@ To create a group, you must have an Admin role in the organization in which you 
 
 Begin creating your group by defining the level of access that you want the group to provide. Groups define access as a pairing of application(s) and role. In the applications field, select a single application, multiple applications or all applications. Then select the role you want to provide to those applications. The available roles are Admin, Rules Admin, Edit, View and No Access. 
 
-For more information, read the article on [Roles](https://docs.contrastsecurity.com/user_tsguideset.html#roles).
+For more information, read the article on [Roles](user_tsguideset.html#roles).
 
 >Example: You can select App1 and App2 and the role Admin in a single line. This means the group provides users the Admin role for App1 and App2.
 
@@ -34,13 +34,13 @@ A single group can also provide more than one role assignment. Select **Add Acce
 
 > From the previous example: Your group provides Admin access to App1 and App2. You can add a second access line that provides Edit access to App3 and App4.
 
-Once you define the access that you want the group to provide, you can assign the users that you want to receive this access. You may select any user that is in your organization, other than yourself or any user that is considered a Guest user. When you’re finished, just hit save to create your access group.
+Once you define the access that you want the group to provide, you can assign the users that you want to receive this access. You may select any user that is in your organization, other than yourself or any user that is considered a Guest user. When you’re finished, just hit **save** to create your access group.
 
-To read more about Guest users, refer to the section under [About Access Control](https://docs.contrastsecurity.com/user_tsguideset.html#access).
+To read more about Guest users, refer to the section under [About Access Control](user_tsguideset.html#access).
 
 ### Editing an Organization Group from Organization Settings
 
-To edit an existing organization, go to the Edit interface by selecting the organization’s name.  Within the interface, you can edit any of the fields that are available when creating a group. This includes the name of the group, the users assigned to the group and any access provided by the group. 
+To edit an existing organization, go to the Edit interface by selecting the organization’s name. Within the interface, you can edit any of the fields that are available when creating a group. This includes the name of the group, the users assigned to the group and any access provided by the group. 
 
 Default groups are the single exception here. You can add or remove users from a Default group, but you can’t edit any of the applications or the roles to which the group provides access.
 
@@ -49,7 +49,7 @@ Default groups are the single exception here. You can add or remove users from a
 * move App2 from the Admin access row to the Edit access row 
 * remove App4 from Edit access and add App5 to Admin access. 
 
-Once you’re done editing, just hit save to keep your changes.
+Once you’re done editing, just hit **save** to keep your changes.
 
 ### Deleting an Organization Group from Organization Settings
 
@@ -61,5 +61,5 @@ If you place a user into multiple groups that provide different role access to t
 
 > Example: Let’s say that a group provides Edit level access to App1, another group provides RulesAdmin level access to App1, and you place a user in both groups. The user’s access for App1 will be Edit because it’s more restrictive than RulesAdmin.
 
-An administrator can see the level of access assigned to a user  and which groups provide that access by editing the user and scrolling down to see the user’s organization permissions. Hovering over the access indicators provides information regarding the group that provides the existing level of access.
+An administrator can see the level of access assigned to a user and which groups provide that access by editing the user and scrolling down to see the user’s organization permissions. Hovering over the access indicators provides information regarding the group that provides the existing level of access.
 
