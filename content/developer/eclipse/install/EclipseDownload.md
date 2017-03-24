@@ -6,7 +6,7 @@ tags: "Eclipse Download Installation"
 
 ## Drag and Drop (Option 1)
 
-The Contrast for Eclipse plugin can be found in the Eclipse Market place by searching **Contrast for Eclipse** or can be downloaded directly by dragging the preceding link into an active Eclipse workspace.
+The Contrast for Eclipse plugin can be found in the [Eclipse Marketplace](https://marketplace.eclipse.org/content/contrast-eclipse) by searching **Contrast for Eclipse**, or can be downloaded directly by dragging the preceding link into an active Eclipse workspace.
 Once installed, you will have to restart Eclipse for the plugin to be loaded. You can then open the Contrast view (***Window > Show View > Other > Contrast Security > Contrast***) or start a server with Contrast (***Servers > Right click on your server > Start with Contrast***).
 
 ## Install New Software (Option 2)
