@@ -20,7 +20,7 @@ Each organization has four default groups: View, Edit, Rules Admin and Admin. Th
 
 Groups created from the Organization Settings interface only impact the roles and permissions of the organization in which they are created. 
 
-> For example, let’s say that you have two organizations in Contrast: OrgA and OrgB. When you log into OrgB and create a group in OrgB, the permissions and roles that you define affect only OrgB users and OrgB applications.
+> For example: Let’s say that you have two organizations in Contrast: OrgA and OrgB. When you log into OrgB and create a group in OrgB, the permissions and roles that you define affect only OrgB users and OrgB applications.
 
 To create a group, you must have an Admin role in the organization in which you want to create the group. Once you log in as an Admin, navigate to the Organization Settings interface and then to the Groups interface.
 
@@ -34,7 +34,7 @@ A single group can also provide more than one role assignment. Select **Add Acce
 
 > From the previous example: Your group provides Admin access to App1 and App2. You can add a second access line that provides Edit access to App3 and App4.
 
-Once you define the access that you want the group to provide, you can assign the users that you want to receive this access. You may select any user that is in your organization, other than yourself or any user that is considered a Guest user. When you’re finished, just hit **save** to create your access group.
+Once you define the access that you want the group to provide, you can assign the users that you want to receive this access. You may select any user that is in your organization, other than yourself or any user that is considered a Guest user. When you’re finished, just hit **Save** to create your access group.
 
 To read more about Guest users, refer to the section under [About Access Control](user_tsguideset.html#access).
 
@@ -44,12 +44,12 @@ To edit an existing organization, go to the Edit interface by selecting the orga
 
 Default groups are the single exception here. You can add or remove users from a Default group, but you can’t edit any of the applications or the roles to which the group provides access.
 
-> Example: If your access group has three users and provides Admin access for App1 and App2, as well as Edit access for App3 and App4, I can edit the group to:
+> Example: If your access group has three users and provides Admin access for App1 and App2, as well as Edit access for App3 and App4, you can edit the group to:
 * remove User3 and add User4 
 * move App2 from the Admin access row to the Edit access row 
 * remove App4 from Edit access and add App5 to Admin access. 
 
-Once you’re done editing, just hit **save** to keep your changes.
+Once you’re done editing, just hit **Save** to keep your changes.
 
 ### Deleting an Organization Group from Organization Settings
 
