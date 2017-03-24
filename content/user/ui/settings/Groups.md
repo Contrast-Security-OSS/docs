@@ -12,7 +12,7 @@ Contrast uses Organization Groups to assign authorized users access to organizat
 
 ### Overview of the Organization Groups interface
 
-The Groups interface is accessed from Organization Settings. As an Organization Administrator, you can create, edit and delete groups from this interface. In the overview, you can see all the groups that affect only the organization you are logged into, the application role provided by the group, as well as how many users and applications are managed. Hovering over the details in each group provides information about the applications, users and the roles provided to the group members.
+The Groups interface is accessed from Organization Settings. As an Organization Admin, you can create, edit and delete groups from this interface. In the overview, you can see all the groups that affect only the organization you are logged into, the application role provided by the group, as well as how many users and applications are managed. Hovering over the details in each group provides information about the applications, users and the roles provided to the group members.
 
 Each organization has four default groups: View, Edit, Rules Admin and Admin. These groups provide access to all applications in the organization with the associated role. In other words, if a user is placed in the Admin group, that user has the application administrator role for all applications in the organization. Users should only be placed in one of the four default groups at a time. Users can be added or removed from these default groups, but they can’t have their applications or roles edited and they can’t be deleted.
 
@@ -53,7 +53,7 @@ Once you’re done editing, just hit **save** to keep your changes.
 
 ### Deleting an Organization Group from Organization Settings
 
-Groups can be deleted from the Groups interface by selecting the trash can icon in the row of the group that you want to delete, and then confirm the operation. Once confirmed, the group is removed and any access provided by that group is revoked from any of the users assigned to the group.
+You can delete groups from the Groups interface by selecting the trash can icon in the row of the group that you want to delete, and then confirming the operation. Once confirmed, the group is removed and any access provided by that group is revoked from any of the users assigned to the group.
 
 ## Access Collision
 
