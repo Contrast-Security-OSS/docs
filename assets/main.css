@@ -6,6 +6,10 @@
 	font-size: 14px;
 }
 
+body {
+	background-color: #e7e7e7;
+}
+
 
 /* Article Link Styling */
 
@@ -442,13 +446,15 @@ body {
 /* Tiles */
 
 .tile {
-	border: solid 1px #bfbfbf;
+	background-color: #ffffff;
+	border: solid 1px #dadada;
 	border-radius: 5px;
 	position: relative;
 	float: left;
 	text-align: left;
 	padding: 15px;
 	margin-right: 30px;
+	word-wrap: all; 
 }
 
 .tile p:nth-child(3) {
