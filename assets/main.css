@@ -221,24 +221,21 @@ h4 {
 
 /* Top Navigation */
 	
-.navbar-fixed-top,
+
 .navbar-header {
 	height: 200px;
-}
-
-/*.navbar-fixed-top {
-	overflow: hidden;
-}*/
-
-.navbar-header {
 	position: relative;
 }
 
-/* Top Nav Links */
 
-.navbar-nav > li > a.icon-link {
-	padding: 70px 5px 0 0; 
+.navbar-nav {
+	padding: 70px;
 }
+
+.navbar-nav .navbar-right {
+	padding: 20px 0 0 0; 
+}
+
 
 .navbar>.container-fluid .navbar-brand {
 	display: block;
@@ -246,11 +243,11 @@ h4 {
 	padding: 0;
 	float: none;
 	position: relative;
-	top: 50%;
+	top: 30%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
-	margin-left: 5px;
+	margin-left: 200px;
 	width: 150px;
 }
 
@@ -258,6 +255,7 @@ h4 {
 	.navbar-fixed-top {
 		height: auto;
 	}
+
 	.navbar-header {
 		height: 71px;
 	}
@@ -266,30 +264,13 @@ h4 {
 	.navbar-right > li > a {
 		display: inline-block;
 	}
-
-	.icon-link {
-		margin-right: 15px;
-		position: relative;
-		top: -20px;
-		left: 5px;
-	}
-	.navbar-toggle {
-		margin-top: 0;
-		margin-bottom: 0;
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-	}
-	.navbar>.container-fluid .navbar-brand {
-		margin-left: 20px;
-	}
+	
 }
 
-.navbar-nav {
-	padding: 10px;
-}
+
+
+
+
 
 /* Side Navigation */
 
