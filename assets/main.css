@@ -221,21 +221,26 @@ h4 {
 
 /* Top Navigation */
 	
-
-#navbar-fixed-top, {
+.navbar-fixed-top,
+.navbar-header {
 	height: 200px;
-	color: #292929;
 }
 
+/*.navbar-fixed-top {
+	overflow: hidden;
+}*/
 
+.navbar-header {
+	position: relative;
+}
 
 /* Top Nav Links */
 
-.navbar-links {
+.navbar-nav > li > a.icon-link {
 	padding: 70px 5px 0 0; 
 }
 
-.navbar-brand {
+.navbar>.container-fluid .navbar-brand {
 	display: block;
 	height: auto;
 	padding: 0;
