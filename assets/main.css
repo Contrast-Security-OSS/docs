@@ -418,11 +418,12 @@ body {
 .content {
 	position: relative;
 	top: 135px;
-	margin-left: 206px;
+	margin-left: auto;
+	margin-right: auto;
 	height: auto;
 }
 
-.container {
+.row {
 	position: relative;
 	padding-left: 20px;
 	padding-top:20px;
@@ -432,7 +433,8 @@ body {
 .container-content {
 	position: relative;
 	top: 115px;
-	margin-left: 220px;
+	margin-left: auto;
+	margin-right: auto;
 	height: auto;
 	border: solid 1px;
 	border-color: #C0C0C0;
@@ -445,7 +447,7 @@ body {
 
 /* Tiles */
 
-.tile {
+.col-md-3 {
 	background-color: #ffffff;
 	border: solid 1px #dadada;
 	border-radius: 5px;
@@ -457,7 +459,7 @@ body {
 	word-wrap: all; 
 }
 
-.tile p:nth-child(3) {
+.col-md-3 p:nth-child(3) {
 	color: #808080;
 }
 
