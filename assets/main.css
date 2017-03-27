@@ -221,34 +221,33 @@ h4 {
 
 /* Top Navigation */
 	
-
-.navbar-header {
+.container-fluid {
 	height: 200px;
 	position: relative;
 }
 
 
-.navbar-nav {
-	padding: 70px;
+.navbar-right > li {
+	display: inline-block;
 }
 
-.navbar-nav .navbar-right {
-	padding: 20px 0 0 0; 
+.navbar-form {
+	padding: 85px;
+}
+
+.navbar-form .input-group .tt-hint {
+	width: 400%;
 }
 
 
 .navbar>.container-fluid .navbar-brand {
-	display: block;
-	height: auto;
-	padding: 0;
-	float: none;
+	display: inline-block;
 	position: relative;
-	top: 30%;
+	top: 45px;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
-	margin-left: 200px;
-	width: 150px;
+	margin-left: 65px;
 }
 
 @media (max-width: 768px) {
@@ -256,14 +255,6 @@ h4 {
 		height: auto;
 	}
 
-	.navbar-header {
-		height: 71px;
-	}
-
-	.navbar-right > li,
-	.navbar-right > li > a {
-		display: inline-block;
-	}
 	
 }
 
