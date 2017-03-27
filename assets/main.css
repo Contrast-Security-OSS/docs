@@ -29,7 +29,7 @@
 a:link, 
 a:visited, 
 a:active {
-	color: #000000;
+	color: #ffffff;
 	text-decoration: none;
 	font-size: 12px;
 }
@@ -103,36 +103,34 @@ h4 {
 	width: 40%;
 }
 
-/* Index Labels */
+/* Tile Labels */
 
 .label0 {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: #292929; 
 	font-weight: 500;
 	font-size: 20px;
+	clear:all;
 }
 
+.label1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #BFBFBF;
+	font-size: 12px;
+}
 
-/* Latest Articles */
+/* Latest Articles 
 .label4 {
 	font-family: 'Roboto', sans-serif;
 	color: #292929; 
 	font-weight: 500;
 	font-size: 25px;
 }
+*/
 
 
-/* Developer */
 
-.label1 {
-	font-family: 'Roboto', sans-serif;
-	color: #292929;
-	font-weight: 500;
-	font-size: 20px;
-	float: right;
-	padding-top: 25px;
-	padding-right: 20px;
-}
+
 
 .label1cat {
 	color: #94B758;
@@ -224,6 +222,7 @@ h4 {
 .container-fluid {
 	height: 200px;
 	position: relative;
+	background-image:url("images/BackgroundPattern.png");
 }
 
 
@@ -231,8 +230,12 @@ h4 {
 	display: inline-block;
 }
 
+.nav > li > a {
+	padding: 10px 5px;
+}
+
 .navbar-form {
-	padding: 85px;
+	padding: 85px 0px 0px 85px;
 }
 
 .navbar-form .input-group .tt-hint {
@@ -247,18 +250,20 @@ h4 {
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
-	margin-left: 65px;
+	margin-left: 70px;
 }
 
 @media (max-width: 768px) {
 	.navbar-fixed-top {
 		height: auto;
-	}
-
-	
+	}	
 }
 
-
+.navbar-note {
+	color: #bababa;
+	float:left;
+	margin-left: 85px;
+}
 
 
 
@@ -362,23 +367,6 @@ h4 {
 }
 
 
-/*
-.button {
-	color: white;
-	margin-top: 35px;
-	margin-left: 20px;
-	width: 165px;
-}
-
-.btn {
-	color: white !important;
-}
-
-.btn a:hover {
-	color: #fff !important;
-}
-*/
-
 .latest {
 	margin-top: 37px;
 	margin-left: 20px;
@@ -451,15 +439,20 @@ body {
 	margin-bottom: 10px;
 }
 
-/* Cats */
+/* Tiles */
 
-.image {
+.tile {
+	border: solid 1px #bfbfbf;
+	border-radius: 5px;
 	position: relative;
 	float: left;
-	text-align: center;
-	padding-left: 30px;
-	padding-bottom: 30px;
+	text-align: left;
+	padding: 15px;
+	margin-right: 30px;
+}
 
+.tile p:nth-child(3) {
+	color: #808080;
 }
 
 /* Articles */
