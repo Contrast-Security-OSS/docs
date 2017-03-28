@@ -28,7 +28,7 @@ body {
 }
 
 
-/* Nav Link Styling */
+/* TopNav and Home Link Styling */
 
 a:link, 
 a:visited, 
@@ -43,6 +43,20 @@ a:hover {
 	text-decoration: none;
 }
 
+/* Side Nav Link Styling */
+
+#nav a:link, 
+#nav a:visited, 
+#nav a:active {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: inherit;
+}
+
+#nav a:hover {
+	color: #0DA1A9;
+	text-decoration: none;
+}
 
 /* List Styling */
 
@@ -287,7 +301,7 @@ h4 {
 
 .navbar-brand2 img {
 	margin-top: -25px;
-	margin-bottom: 25px;
+	margin-bottom: 45px;
 }
 
 .navbar-right2 > li {
@@ -485,9 +499,10 @@ body {
 	position: relative;
 	top: 25px;
 	left: 240px;
+	width: 100%;
 }
 
-/* For default2 layout */
+/* For default2 layout - homepage */
 
 #wrapper2 {
 	padding: 0 0 225px;
@@ -520,17 +535,6 @@ body {
 	margin-left: auto;
 }
 
-.container-content {
-	position: relative;
-	top: 115px;
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	margin-bottom: 10px;
-}
 
 .container-content {
 	position: relative;
@@ -621,7 +625,11 @@ table, th, td {
 }
 
 th {
-	background-color: rgba(204,204,204,0.5);
+	background-color: rgba(204,204,204,0.75);
+}
+
+tr {
+	background-color: #f9f9f9;
 }
 
 /* Tweet Button */
