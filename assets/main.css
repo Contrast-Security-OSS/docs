@@ -266,8 +266,20 @@ h4 {
 /* Top Navigation 2 - ARTICLES */
 	
 .container-fluid2 {
-	height: 50px;
 	position: relative;
+	top: 0;
+}
+
+.navbar-fixed-top2 {
+	position: fixed;
+	top: 0;
+	left: 220px;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.navbar2 {
+	height: 50px;
 }
 
 .navbar-right > li {
@@ -323,10 +335,12 @@ h4 {
 	-ms-overflow-style: none;
 }
 
+/*
 .persona {
 	padding-left: 20px;
 	padding-top: 20px;
 }
+*/
 
 .scroll {
 	margin-top: 45px;
@@ -435,10 +449,6 @@ h4 {
 
 .breadcontent{
 	position: absolute;
-	left: 206px;
-	width: calc(100% - 206px);
-	height: 550px;
-	margin: 0 auto;
 }
 
 .breadcontainer{
@@ -448,7 +458,6 @@ h4 {
 
 .breadcrumb {
 	margin-top: 30px;
-	float: right;
 	display: inline-block;
 }
 
@@ -466,6 +475,7 @@ body {
 	padding: 0 0 225px;
 	position: relative;
 	top: 25px;
+	left: 240px;
 }
 
 /*
@@ -499,9 +509,6 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	height: auto;
-	border: solid 1px;
-	border-color: #C0C0C0;
-	border-radius: 5px;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
