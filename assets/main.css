@@ -324,7 +324,22 @@ h4 {
     border-top: none;
 }
 
+/* Buttons */
 
+.btn-help {
+	color: #ffffff !important;
+	width: 175px;
+	float: right;
+	background-color: #0DA1A9; 
+	border-radius: 4px;
+	text-decoration: none;
+	padding: 8px 12px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+/*
 .btn-red {
 	color: #ffffff !important;
 	margin-top: 35px;
@@ -358,6 +373,8 @@ h4 {
 .btn-position2 {
 	margin-top: 35px;
 }
+
+*/
 
 .disabled {
 	opacity: 0.5;
@@ -457,6 +474,15 @@ body {
 	color: #808080;
 }
 
+.col-md-10 .help {
+	margin-top: 20px;
+	float: right;
+	display: inline;
+	font-size: 12px;
+}
+
+/* Icons */
+
 .fa,
 .fi-wrench {
 	color: #BABABA;
@@ -509,6 +535,7 @@ th {
 }
 
 /* Tweet Button */
+
 .twitter-share-button {
 	float: right;
 	margin-top: 7px;
