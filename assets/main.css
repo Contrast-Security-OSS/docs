@@ -468,7 +468,17 @@ body {
 	top: 25px;
 }
 
+/*
 .content {
+	position: relative;
+	top: 135px;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+}
+*/
+
+.container {
 	position: relative;
 	top: 135px;
 	margin-left: auto;
@@ -511,6 +521,7 @@ body {
 	margin-right: 30px;
 	word-wrap: all; 
 	max-width: 350px;
+	min-height: 167px;
 }
 
 .col-md-3 p:nth-child(4) {
