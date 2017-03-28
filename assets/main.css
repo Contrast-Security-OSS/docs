@@ -453,14 +453,24 @@ body {
 	max-width: 350px;
 }
 
-.col-md-3 p:nth-child(3) {
+.col-md-3 p:nth-child(4) {
 	color: #808080;
 }
 
-.fa {
+.fa,
+.fi-wrench {
 	color: #BABABA;
 	float: right;
 	margin-top: -30px;
+	font-size: 24px;
+}
+
+.octicon-cloud-download,
+.ion-clipboard {
+	color: #BABABA;
+	float: right;
+	margin-top: -30px;
+	font-size: 24px;
 }
 
 /* Articles */
