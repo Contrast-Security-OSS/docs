@@ -457,6 +457,12 @@ body {
 	color: #808080;
 }
 
+.fa {
+	color: #BABABA;
+	float: right;
+	margin-top: -30px;
+}
+
 /* Articles */
 
 a.anchor {
