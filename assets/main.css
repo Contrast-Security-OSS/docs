@@ -61,7 +61,7 @@ ul {
 /* Header Styling */
 
 h1 {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: 500;
 	font-size: 25px;
 }
@@ -175,11 +175,12 @@ h4 {
 }
 
 
-/* Sidebar Section Header Black */
+/* Sidebar Main Section Header White */
 .label5 {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
 	font-size: 16px;
+	color: #ffffff;
 }
 
 /* Sidebar Section Sub Header */
@@ -198,7 +199,7 @@ h4 {
 }
 
 
-/* Breadcrumb Label */
+/* Breadcrumb Label 
 
 .label6 {
 	font-family: 'Roboto', sans-serif;
@@ -207,6 +208,8 @@ h4 {
 	font-weight: 400;
 	font-size: 20px;
 }
+
+*/
 
 
 /* Top Navigation - MAIN */
@@ -279,10 +282,15 @@ h4 {
 }
 
 .navbar2 {
-	height: 50px;
+	height: 57px;
 }
 
-.navbar-right > li {
+.navbar-brand2 img {
+	margin-top: -25px;
+	margin-bottom: 25px;
+}
+
+.navbar-right2 > li {
 	display: inline-block;
 }
 
@@ -291,16 +299,16 @@ h4 {
 }
 
 
-.navbar-form {
-	padding: 85px 0px 0px 85px;
+.navbar-form2 {
+	padding: 10px 0px 0px 10px;
 }
 
-.navbar-form .input-group .tt-hint {
+.navbar-form2 .input-group .tt-hint {
 	width: 400%;
 }
 
 
-.navbar>.container-fluid .navbar-brand {
+.navbar>.container-fluid .navbar-brand2 {
 	display: inline-block;
 	position: relative;
 	top: 45px;
@@ -311,7 +319,7 @@ h4 {
 }
 
 @media (max-width: 768px) {
-	.navbar-fixed-top {
+	.navbar-fixed-top2 {
 		height: auto;
 	}	
 }
@@ -325,10 +333,10 @@ h4 {
 #nav {
 	position: fixed;
 	height: 100%;
-	top: 74px;
+	top: 0;
 	left: 0;
 	width: 220px;
-	background-color: white;
+	background-color: #292929;
 	overflow: auto;
 
 /* IE Hide Scrollbar Fix */
@@ -346,7 +354,7 @@ h4 {
 	margin-top: 45px;
 	margin-left: 20px;
 	height: 150%;
-	background-color: white;
+	background-color: #292929;
 }
 
 .navitems {
@@ -358,11 +366,11 @@ h4 {
 
 
 .panel-default>.panel-heading {
-    background-image: -webkit-linear-gradient(top,#fff 0,#fff 100%);
-    background-image: -o-linear-gradient(top,#fff 0,#fff 100%);
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff));
-    background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff, GradientType=0);
+    background-image: -webkit-linear-gradient(top,#292929 0,#292929 100%);
+    background-image: -o-linear-gradient(top,#292929 0,#292929 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#292929),to(#292929));
+    background-image: linear-gradient(to bottom,#292929 0,#292929 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#292929, endColorstr=#292929, GradientType=0);
     background-repeat: repeat-x;
     height: 20px;
 }
@@ -370,7 +378,7 @@ h4 {
 .panel {
 	border: none;
 	box-shadow: none;
-	background-color: #ffffff;
+	background-color: #292929;
 }
 
 .panel-title {
@@ -447,18 +455,19 @@ h4 {
 
 /* Breadcrumb */
 
-.breadcontent{
-	position: absolute;
-}
 
 .breadcontainer{
+	position: absolute;
 	width: 100%;
 	display: inline-block;
+	margin-left: 20px;
 }
 
-.breadcrumb {
-	margin-top: 30px;
-	display: inline-block;
+.bread {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #808080;
 }
 
 
@@ -476,6 +485,14 @@ body {
 	position: relative;
 	top: 25px;
 	left: 240px;
+}
+
+/* For default2 layout */
+
+#wrapper2 {
+	padding: 0 0 225px;
+	position: relative;
+	top: 25px;
 }
 
 /*
@@ -506,6 +523,18 @@ body {
 .container-content {
 	position: relative;
 	top: 115px;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+
+.container-content {
+	position: relative;
+	top: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	height: auto;
