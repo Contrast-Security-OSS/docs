@@ -209,7 +209,7 @@ h4 {
 }
 
 
-/* Top Navigation */
+/* Top Navigation - MAIN */
 	
 .container-fluid {
 	height: 200px;
@@ -261,6 +261,49 @@ h4 {
 .navbar-note a {
 	font-size: 12px;
 }
+
+
+/* Top Navigation 2 - ARTICLES */
+	
+.container-fluid2 {
+	height: 50px;
+	position: relative;
+}
+
+.navbar-right > li {
+	display: inline-block;
+}
+
+.nav > li > a {
+	padding: 10px 5px;
+}
+
+
+.navbar-form {
+	padding: 85px 0px 0px 85px;
+}
+
+.navbar-form .input-group .tt-hint {
+	width: 400%;
+}
+
+
+.navbar>.container-fluid .navbar-brand {
+	display: inline-block;
+	position: relative;
+	top: 45px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	margin-left: 70px;
+}
+
+@media (max-width: 768px) {
+	.navbar-fixed-top {
+		height: auto;
+	}	
+}
+
 
 
 
