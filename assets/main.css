@@ -33,9 +33,9 @@ body {
 a:link, 
 a:visited, 
 a:active {
-	color: #ffffff;
+	color: #0DA1A9;
 	text-decoration: none;
-	font-size: 12px;
+	font-weight: inherit;
 }
 
 a:hover {
@@ -123,6 +123,14 @@ h4 {
 	font-size: 12px;
 }
 
+.label2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #292929;
+	font-weight: 500;
+	font-size: 16px;
+	clear: all;
+}
+
 /* Latest Articles 
 .label4 {
 	font-family: 'Roboto', sans-serif;
@@ -130,35 +138,15 @@ h4 {
 	font-weight: 500;
 	font-size: 25px;
 }
-*/
-
-
-
-
 
 .label1cat {
 	color: #94B758;
 
 }
 
-/* Administrator */
-
-.label2 {
-	font-family: 'Roboto', sans-serif;
-	color: #292929;
-	font-weight: 500;
-	font-size: 20px;
-	float: right;
-	padding-top: 25px;
-	padding-right: 55px;
-}
-
 .label2cat {
 	color: #258CBF;
 }
-
-
-/* User */
 
 .label3 {
 	font-family: 'Roboto', sans-serif;
@@ -170,10 +158,10 @@ h4 {
 	padding-right: 70px;
 }
 
-
 .label3cat {
 	color: #0DA1A9;
 }
+*/
 
 
 /* Release Notes Headers */
@@ -229,7 +217,6 @@ h4 {
 	background-image:url("images/BackgroundPattern.png");
 }
 
-
 .navbar-right > li {
 	display: inline-block;
 }
@@ -237,6 +224,7 @@ h4 {
 .nav > li > a {
 	padding: 10px 5px;
 }
+
 
 .navbar-form {
 	padding: 85px 0px 0px 85px;
@@ -263,10 +251,15 @@ h4 {
 	}	
 }
 
-.navbar-note {
+.navbar-note p {
 	color: #bababa;
 	float:left;
 	margin-left: 85px;
+	font-size: 12px;
+}
+
+.navbar-note a {
+	font-size: 12px;
 }
 
 
@@ -457,6 +450,7 @@ body {
 	padding: 15px;
 	margin-right: 30px;
 	word-wrap: all; 
+	max-width: 350px;
 }
 
 .col-md-3 p:nth-child(3) {
