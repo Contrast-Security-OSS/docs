@@ -158,19 +158,32 @@ h4 {
 	clear: all;
 }
 
-.tile {
+.tile-container {
+	display: flex;
+	flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.tile-container .tile {
+	/*flex: 1 0 auto;*/
 	background-color: #ffffff;
 	border: solid 1px #dadada;
 	border-radius: 5px;
-	/*position: relative;*/
-	/*float: left;*/
 	text-align: left;
-	/*padding: 15px;*/
-	/*margin-right: 30px;*/
-	word-wrap: all; 
-	/*max-width: 350px;*/
+	margin: auto;
+	/*margin-right: 25px;*/
+	/*word-wrap: all;*/
+	max-width: 350px;
 	/*min-height: 167px;*/
 }
+
+/*@media (min-width: @screen-lg-min) {*/
+
+/*}*/
+
+/*.tile.col-sm-4 {*/
+	/*max-width: 280px;*/
+ /*}*/
 
 .tile p:nth-child(4) {
 	color: #808080;
