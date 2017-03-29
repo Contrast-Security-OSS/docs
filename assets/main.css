@@ -158,25 +158,25 @@ h4 {
 	clear: all;
 }
 
-.col-md-3 {
+.tile {
 	background-color: #ffffff;
 	border: solid 1px #dadada;
 	border-radius: 5px;
-	position: relative;
-	float: left;
+	/*position: relative;*/
+	/*float: left;*/
 	text-align: left;
-	padding: 15px;
-	margin-right: 30px;
+	/*padding: 15px;*/
+	/*margin-right: 30px;*/
 	word-wrap: all; 
-	max-width: 350px;
-	min-height: 167px;
+	/*max-width: 350px;*/
+	/*min-height: 167px;*/
 }
 
-.col-md-3 p:nth-child(4) {
+.tile p:nth-child(4) {
 	color: #808080;
 }
 
-.col-md-10 .help {
+.help {
 	margin-top: 20px;
 	float: right;
 	display: inline;
@@ -288,7 +288,7 @@ label {
 
 /* Top Navigation - MAIN */
 	
-.container-fluid {
+.home.navbar .container-fluid {
 	height: 200px;
 	position: relative;
 	background-image:url("images/BackgroundPattern.png");
@@ -554,14 +554,6 @@ body {
   height: 100%;
 }
 
-#wrapper {
-	padding: 0 0 225px;
-	position: relative;
-	top: 25px;
-	left: 240px;
-	width: 100%;
-}
-
 /* For default2 layout - homepage */
 
 #wrapper2 {
@@ -580,12 +572,8 @@ body {
 }
 */
 
-.container {
-	position: relative;
-	top: 135px;
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
+.home.container {
+    margin-top: 150px;
 }
 
 .row {
