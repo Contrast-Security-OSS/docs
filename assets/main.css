@@ -11,7 +11,7 @@ body {
 }
 
 
-/* Article Link Styling */
+/* In Article Link Styling */
 
 .article a:link, 
 .article a:visited, 
@@ -28,7 +28,7 @@ body {
 }
 
 
-/* TopNav and Home Link Styling */
+/* TopNav and Home Page Link Styling */
 
 a:link, 
 a:visited, 
@@ -100,17 +100,30 @@ h4 {
 }
 
 
-/* Icons */
-
-.fa {
-	color: white;
-}
-
+/* Icon Bar */
 
 .iconbar .fa-bug,
 .iconbar .fa-pencil {
 	float: right;
 	margin: 12px 15px 0 0;
+}
+
+/* Icons */
+
+.fa,
+.fi-wrench {
+	color: #BABABA;
+	float: right;
+	margin-top: -30px;
+	font-size: 24px;
+}
+
+.octicon-cloud-download,
+.ion-clipboard {
+	color: #BABABA;
+	float: right;
+	margin-top: -30px;
+	font-size: 24px;
 }
 
 
@@ -121,7 +134,7 @@ h4 {
 	width: 40%;
 }
 
-/* Tile Labels */
+/* Home Page Tiles */
 
 .label0 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -144,6 +157,66 @@ h4 {
 	font-size: 16px;
 	clear: all;
 }
+
+.col-md-3 {
+	background-color: #ffffff;
+	border: solid 1px #dadada;
+	border-radius: 5px;
+	position: relative;
+	float: left;
+	text-align: left;
+	padding: 15px;
+	margin-right: 30px;
+	word-wrap: all; 
+	max-width: 350px;
+	min-height: 167px;
+}
+
+.col-md-3 p:nth-child(4) {
+	color: #808080;
+}
+
+.col-md-10 .help {
+	margin-top: 20px;
+	float: right;
+	display: inline;
+	font-size: 12px;
+}
+
+/* Side Nav Level 1 Section Labels */
+
+label {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+
+/* Sidebar Main Section Header White
+.label5 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+/* Sidebar Section Sub Header
+.label10 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	margin-left: -5px;
+	text-transform: uppercase;
+}
+
+/* Sidebar Article Title Small
+.label9 {
+	font-weight: 400;
+	font-size: 12px;
+}
+
+ */
 
 /* Latest Articles 
 .label4 {
@@ -175,42 +248,20 @@ h4 {
 .label3cat {
 	color: #0DA1A9;
 }
-*/
 
 
-/* Release Notes Headers */
+
+/* Release Notes Headers 
 .label7 {
 	color: #E63025; 
 }
 
-/* Contribute Headers */
+/* Contribute Headers 
 .label8 {
 	color: #F7B600; 
 }
 
-
-/* Sidebar Main Section Header White */
-.label5 {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	color: #ffffff;
-}
-
-/* Sidebar Section Sub Header */
-.label10 {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 700;
-	font-size: 12px;
-	margin-left: -5px;
-	text-transform: uppercase;
-}
-
-/* Sidebar Article Title Small */
-.label9 {
-	font-weight: 400;
-	font-size: 12px;
-}
+*/
 
 
 /* Breadcrumb Label 
@@ -546,51 +597,6 @@ body {
 	padding-right: 20px;
 	padding-bottom: 20px;
 	margin-bottom: 10px;
-}
-
-/* Tiles */
-
-.col-md-3 {
-	background-color: #ffffff;
-	border: solid 1px #dadada;
-	border-radius: 5px;
-	position: relative;
-	float: left;
-	text-align: left;
-	padding: 15px;
-	margin-right: 30px;
-	word-wrap: all; 
-	max-width: 350px;
-	min-height: 167px;
-}
-
-.col-md-3 p:nth-child(4) {
-	color: #808080;
-}
-
-.col-md-10 .help {
-	margin-top: 20px;
-	float: right;
-	display: inline;
-	font-size: 12px;
-}
-
-/* Icons */
-
-.fa,
-.fi-wrench {
-	color: #BABABA;
-	float: right;
-	margin-top: -30px;
-	font-size: 24px;
-}
-
-.octicon-cloud-download,
-.ion-clipboard {
-	color: #BABABA;
-	float: right;
-	margin-top: -30px;
-	font-size: 24px;
 }
 
 /* Articles */
