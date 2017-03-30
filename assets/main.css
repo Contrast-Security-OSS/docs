@@ -60,17 +60,17 @@ ul {
 
 	flex-direction: row;
     height: 100vh;
+
+	background-color: #e7e7e7;
 }
 
 .article-page .left-sidenav {
 	flex: 220px 0;
-	background-color: #52565d;
 	background-image:url("images/BackgroundPattern.png");
 }
 
 .article-content-container {
 	flex: 1 0;
-	background-color: #999999;
 
 	display: -webkit-box;
 	display: -moz-box;
@@ -84,10 +84,24 @@ ul {
 .article-content-container .topnav {
 	flex: 57px 0;
 }
+
+/**
+ * Article breadcrumbs
+ */
 .article-content-container .breadcrumbs {
-	flex: 25px 0;
+	position: fixed;
+	/*flex: 25px 0;*/
+    top: 58px;
     list-style-type: none;
-	padding-left: 0;
+    padding: 15px;
+    width: 100%;
+
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #808080;
+
+	background-color: #e7e7e7;
 }
 .article-content-container .breadcrumbs .crumb {
 	text-transform: uppercase;
@@ -97,8 +111,10 @@ ul {
     content: "\003e";
 }
 .article-content-container .content {
+    margin-top: 37px;
 	flex: 1 0;
     overflow: scroll;
+	padding-left: 40px;
 }
 
 /* In Article Link Styling */
