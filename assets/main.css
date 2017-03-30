@@ -158,17 +158,27 @@ h4 {
 	clear: all;
 }
 
+.release-news {
+    margin: 25px 0;
+}
+
+/**
+ * Custom grid using flexbox
+ */
 .cs-row {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-content: center;
 	margin-bottom: 25px;
 }
 
-.cs-row .tile {
+.cs-col,
+.tile {
 	flex: 1 0;
-	margin-right: 25px;
+}
+
+.tile {
 	background-color: #ffffff;
 	border: solid 1px #dadada;
 	border-radius: 5px;
@@ -176,10 +186,26 @@ h4 {
 	max-width: 350px;
 	min-height: 167px;
 }
-
 .tile p:nth-child(4) {
 	color: #808080;
 }
+/* Media queries for different browser/screen sizes */
+@media (min-width: 768px) {
+	.tile {
+		max-width: 225px;
+	}
+}
+@media (min-width: 992px) {
+	.tile {
+		max-width: 300px;
+	}
+}
+@media (min-width: 1200px) {
+	.tile {
+		max-width: 350px;
+	}
+}
+
 
 .tile-content {
 	max-width: 350px;
@@ -648,16 +674,16 @@ tr {
 
 /* Footer */
 
-#footer {
-	position: absolute;
+.footer {
+	/*position: absolute;*/
 	text-align: center;
 	font-size: 12px;
 	padding-bottom: 10px;
-	margin-right: -50%;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	bottom: 0;
-	left: 50%;
+	/*margin-right: -50%;*/
+	/*transform: translateX(-50%);*/
+	/*-webkit-transform: translateX(-50%);*/
+	/*bottom: 0;*/
+	/*left: 50%;*/
 }
 
 
