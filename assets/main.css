@@ -166,18 +166,22 @@ h4 {
  * Custom grid using flexbox
  */
 .cs-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+
 	flex-direction: row;
 	justify-content: space-between;
 	align-content: center;
 	margin-bottom: 25px;
 }
-
 .cs-col,
 .tile {
+    -webkit-flex: 1 0;
 	flex: 1 0;
 }
-
 .tile {
 	background-color: #ffffff;
 	border: solid 1px #dadada;
