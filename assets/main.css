@@ -51,6 +51,55 @@ ul {
 	padding: 20px;
 }
 
+.article-page {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	flex-direction: row;
+    height: 100vh;
+}
+
+.article-page .left-sidenav {
+	flex: 220px 0;
+	background-color: #52565d;
+	background-image:url("images/BackgroundPattern.png");
+}
+
+.article-content-container {
+	flex: 1 0;
+	background-color: #999999;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	flex-direction: column;
+}
+
+.article-content-container .topnav {
+	flex: 57px 0;
+}
+.article-content-container .breadcrumbs {
+	flex: 25px 0;
+    list-style-type: none;
+	padding-left: 0;
+}
+.article-content-container .breadcrumbs .crumb {
+	text-transform: uppercase;
+    display: inline-block;
+}
+.article-content-container .breadcrumbs .crumb:not(:last-child)::after {
+    content: "\003e";
+}
+.article-content-container .content {
+	flex: 1 0;
+    overflow: scroll;
+}
 
 /* In Article Link Styling */
 
@@ -572,28 +621,28 @@ label {
 /* Breadcrumb */
 
 
-.breadcontainer{
-	position: absolute;
-	width: 100%;
-	display: inline-block;
-	margin-left: 20px;
-}
+/*.breadcontainer{*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*display: inline-block;*/
+	/*margin-left: 20px;*/
+/*}*/
 
-.bread {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 12px;
-	font-weight: 400;
-	color: #808080;
-}
+/*.bread {*/
+	/*font-family: 'Roboto Condensed', sans-serif;*/
+	/*font-size: 12px;*/
+	/*font-weight: 400;*/
+	/*color: #808080;*/
+/*}*/
 
 
 /* Body and Content */
 
 body {
-  padding-top: 55px;
-  padding-bottom: 30px;
-  padding-right: 20px;
-  height: 100%;
+  /*padding-top: 55px;*/
+  /*padding-bottom: 30px;*/
+  /*padding-right: 20px;*/
+  /*height: 100%;*/
 }
 
 /* For default2 layout - homepage */
