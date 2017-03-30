@@ -96,16 +96,15 @@ ul {
     padding: 15px;
     width: 100%;
 
-	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 12px;
-	font-weight: 400;
-	color: #808080;
-
 	background-color: #e7e7e7;
 }
 .article-content-container .breadcrumbs .crumb {
 	text-transform: uppercase;
     display: inline-block;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #808080;
 }
 .article-content-container .breadcrumbs .crumb:not(:last-child)::after {
     content: "\003e";
