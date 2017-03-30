@@ -675,15 +675,9 @@ tr {
 /* Footer */
 
 .footer {
-	/*position: absolute;*/
 	text-align: center;
 	font-size: 12px;
 	padding-bottom: 10px;
-	/*margin-right: -50%;*/
-	/*transform: translateX(-50%);*/
-	/*-webkit-transform: translateX(-50%);*/
-	/*bottom: 0;*/
-	/*left: 50%;*/
 }
 
 
