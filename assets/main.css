@@ -597,20 +597,9 @@ body {
 	top: 25px;
 }
 
-/*
-.content {
-	position: relative;
-	top: 135px;
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
-}
-*/
-
 .home.container {
     margin-top: 150px;
 }
-
 
 .container-content {
 	position: relative;
