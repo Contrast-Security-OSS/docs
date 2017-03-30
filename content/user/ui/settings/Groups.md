@@ -63,3 +63,45 @@ If you place a user into multiple groups that provide different role access to t
 
 An administrator can see the level of access assigned to a user and which groups provide that access by editing the user and scrolling down to see the user’s organization permissions. Hovering over the access indicators provides information regarding the group that provides the existing level of access.
 
+
+##Photo test
+
+##Three to one 
+
+
+Example one
+
+<a href="assets/images/750px-3to1-test.png" rel="lightbox" title="3 to 1, 750 px wide PNG"><img class="thumbnail" src="assets/images/750px-3to1-test.png"/></a>
+
+Example two
+
+<a href="assets/images/750px-3to1-test.jpg" rel="lightbox" title="3 to 1, 750 px wide JPEG"><img class="thumbnail" src="assets/images/750px-3to1-test.jpg"/></a>
+
+Example three
+
+<a href="assets/images/900px-3to1-test.png" rel="lightbox" title="3 to 1, 900 px wide PNG"><img class="thumbnail" src="assets/images/900px-3to1-test.png"/></a>
+
+Example four
+
+<a href="assets/images/900px-3to1-test.jpg" rel="lightbox" title="3 to 1, 900 px wide JPEG"><img class="thumbnail" src="assets/images/900px-3to1-test.jpg"/></a>
+
+Example 5, set
+
+<a href="assets/images/450px-3to1-test.png" rel="lightbox" title="3 to 1, 450 px wide PNG"><img class="thumbnail" src="assets/images/450px-3to1-test.png"/></a>
+
+
+<a href="assets/images/450px-3to1-test.jpg" rel="lightbox" title="3 to 1, 4500 px wide JPEG"><img class="thumbnail" src="assets/images/450px-3to1-test.jpg"/></a>
+
+Example 6, set
+
+<a href="assets/images/900px-3to1-large-test.png" rel="lightbox" title="3 to 1, 900 px wide PNG"><img class="thumbnail" src="assets/images/900px-3to1-large-test.png"/></a>
+
+
+<a href="assets/images/900px-2to1-large-test.png" rel="lightbox" title="2 to 1, 900 px wide PNG"><img class="thumbnail" src="assets/images/900px-2to1-large-test.png"/></a>
+
+
+Example 7
+
+<a href="assets/images/1200px-2to1-large-test.png" rel="lightbox" title="2 to 1, 1200 px wide PNG"><img class="thumbnail" src="assets/images/1200px-2to1-large-test.png"/></a>
+
+
