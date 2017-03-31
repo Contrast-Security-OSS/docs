@@ -16,7 +16,7 @@ For more information on adding an application, please read the article on [Addin
  
 ## Use the application
 
-The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the application's Vulnerabilities tab. (Note that the application appears the same way under the Vulnerabilities page.) 
+The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the application's Vulnerabilities tab. (Note that the same vulnerabilities appear on the Vulnerabilities page.) 
 
 To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](https://docs.contrastsecurity.com/user_tsguideapp.html#licapp).
  
@@ -26,7 +26,7 @@ Go to the Applications page to get detailed information, see findings, scores, m
  
 ## Set Up Environments
 
-In the Servers page, compare the differences across Development, QA and Production environments as code travels. Click into your application and track vulnerabilities across servers. Contrast set up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
+In the Servers page, you can set a Development, QA or Production environment for each server. Select your application in the grid to compare the differences across environments as code travel and track vulnerabilities in the Overview tab. Contrast set up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
  
 ## Discover Vulnerabilities
 
