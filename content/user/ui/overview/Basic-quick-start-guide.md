@@ -14,13 +14,13 @@ When you download an agent, the file should be called *contrast.jar*. This file 
 
 For more information on adding an application, please read the article on [Adding an Application](https://docs.contrastsecurity.com/user_tsguideapp.html#addapp).
  
-## Using the application
+## Use the application
 
 The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the Vulnerabilities tab. 
 
 To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](https://docs.contrastsecurity.com/user_tsguideapp.html#licapp).
  
-## Managing Applications
+## Manage Applications
 
 Go to the Applications page to get detailed information, see findings, scores, manage licenses, settings and more.
  
@@ -44,7 +44,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](https://docs.contrastsecurity.com/user_tsguideapp.html#scoreguide) for more information. 
  
-## Keep Track of Libraries
+## Track Libraries
 
 Be aware of libraries that may be vulnerable and bring them up to date by going to the Libraries tab in the Application page. 
  
@@ -52,7 +52,7 @@ Contrast provides you with a grade for the library, known Common Vulnerabilities
 
 For more information, read the article on [Library Analysis](https://docs.contrastsecurity.com/user_tsguidelib.html#analysis).
  
-## Managing Vulnerabilities
+## Manage Vulnerabilities
 
 Go the Vulnerabilities page to get details on each one and get rid of weaknesses so your application isn't compromised.
  
