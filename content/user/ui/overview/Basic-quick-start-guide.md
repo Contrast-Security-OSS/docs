@@ -4,7 +4,7 @@ description: "Overview of Contrast UI for new users"
 tags: "TeamServer user applications vulnerabilities"
 -->
 
-Welcome to Contrast! This is your guide to everything you need to know to get started in the interface. Start with onboarding your applications and then move on to environments, libraries and vulnerabilities – you’ll be up and running by the time you’re done. As always, if you have any more questions, please let us know by…[method of contact here]. 
+Welcome to Contrast! This is your guide to everything you need to know to get started in the interface. Start with onboarding your applications and then move on to environments, libraries and vulnerabilities – you’ll be up and running by the time you’re done. As always, if you have any more questions, let the Contrast Support team know by emailing <support@contrastsecurity.com>. 
 
 ## Onboard Your Application
 
@@ -34,9 +34,11 @@ Go to the Vulnerabilities tab in the Application page to get a list of all vulne
 
 ### How vulnerabilities work
 
-If a vulnerability is reported and Contrast has never seen it before, Contrast creates a new vulnerability. However, if that vulnerability already exists, Contrast updates the existing entry, issue count and last seen date. For example:
+If a vulnerability is reported and Contrast has never seen it before, Contrast creates a new vulnerability. However, if that vulnerability already exists, Contrast updates the existing entry, issue count and last seen date.
 
-In this example, this vulnerability was reported up to Contrast [X number] times. Instead of showing up as [x number] vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
+<a href="assets/images/Application-vulnerabilities-tab.png" rel="lightbox" title="Vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Application-vulnerabilities-tab.png"/></a>
+
+> Example: This vulnerability was reported up to Contrast five times. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
  
 ## Improve Your Application Score
 
@@ -65,18 +67,18 @@ Contrast discovers any code flaws, which are presented with a severity level to 
 | Confirmed     | Stays Open                      | No Change            |
 | Suspicious    | Stays Open                      | No Change            |
 | Not a Problem | Closed - Requires Justification | Stays Closed         |
-| Remediated    | Closed                          | Reopened as **Reported** |
+| Remediated    | Closed                          | Reopened as "Reported" |
 | Reported      | Default                         | No Change            |
 | Fixed         | Closed                          | Stays Closed         |
 
 ---
 
-What’s better than assigning a vulnerability to a user? Creating tags for each vulnerability. These tags can be names of users, groups or just about anything. They are very useful when trying to navigate through vulnerabilities. To create a tag, dive into an application and select the Vulnerabilities tab. The Tag Vulnerabilities option is greyed out until you select the vulnerability you want to tag.
+What’s better than assigning a vulnerability to a user? Creating tags for each vulnerability. These tags can be names of users, groups or just about anything. They are very useful when trying to navigate through vulnerabilities. To create a tag, dive into an application and select the Vulnerabilities tab. The Tag Vulnerabilities option is greyed out until you select the vulnerability you want to tag. 
 
-> Example: You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those. 
-
-<INSERT IMAGE OF CREATING A TAG>
+<a href="assets/images/Tag-vulnerability.png" rel="lightbox" title="Tag vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Tag-vulnerability.png"/></a>
  
+> Example: You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
+
 These tags can be created for applications and servers as well. To learn more about filters, please read [Navigating Vulnerabilities in the New User Interface](https://docs.contrastsecurity.com/user_tsguideapp.html#navvuln). 
  
 ## Reports
@@ -85,7 +87,7 @@ Go to the **Overview** tab in the application page to generate reports of securi
  
 ##Track Findings
 
-Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email for users who don't have access to Contrast. You can set up these and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by going the User menu (located beside your user icon), selecting **Organization Settings** and then **Integrations** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
+Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email for users who don't have access to Contrast. You can set up these and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by selecting **Organization Settings** in the User menu and then **Integrations** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
 
 For more information, read the article on [Integrations](https://docs.contrastsecurity.com/user_tsguideset.html#integrate).
  
@@ -93,9 +95,9 @@ For more information, read the article on [Integrations](https://docs.contrastse
 
 Find information on solutions and techniques to resolve a vulnerability by delving into Contrast's overview of the issue, which explains why it was flagged. Contrast also provides a **How To Fix** section which gives steps on resolving the issue. 
  
-### How to Test if a vulnerability has been Fixed
+### Check a fixed vulnerability 
 
-You've fixed your vulnerability, but how can you verify that in Contrast? There are a few things you can do:
+You fixed your vulnerability, but how can you verify that in Contrast? There are a few things you can do:
 
 * Replay the request:
 If the issue is remediated and marked accordingly, you can replay the http request under **HTTP Info** to see if the issue is fixed. If it hasn’t been fixed, the issue reappears with a status of "Reported".
