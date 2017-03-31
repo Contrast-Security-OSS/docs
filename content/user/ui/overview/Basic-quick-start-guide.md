@@ -16,7 +16,7 @@ For more information on adding an application, please read the article on [Addin
  
 ## Use the application
 
-The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the Vulnerabilities tab. 
+The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the application's Vulnerabilities tab. (Note that the application appears the same way under the Vulnerabilities page.) 
 
 To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](https://docs.contrastsecurity.com/user_tsguideapp.html#licapp).
  
@@ -26,11 +26,11 @@ Go to the Applications page to get detailed information, see findings, scores, m
  
 ## Set Up Environments
 
-Compare the differences across environments as code travels. Click into your application. Contrast set up a shell for you to designate servers. Once that’s in place, Contrast can get busy finding weaknesses.
+In the Servers page, compare the differences across Development, QA and Production environments as code travels. Click into your application and track vulnerabilities across servers. Contrast set up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
  
 ## Discover Vulnerabilities
 
-Go to the Vulnerabilities tab in the Application page to get a list of all vulnerabilities discovered. Then track, share and get remediation guidance for each one.
+Go to the Vulnerabilities tab in the application's page to get a list of all vulnerabilities discovered. Then track, share and get remediation guidance for each one.
 
 ### How vulnerabilities work
 
@@ -38,7 +38,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 <a href="assets/images/Application-vulnerabilities-tab.png" rel="lightbox" title="Vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Application-vulnerabilities-tab.png"/></a>
 
-> Example: This vulnerability was reported up to Contrast five times. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
+> Example: This vulnerability was reported up to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
  
 ## Improve Your Application Score
 
@@ -67,7 +67,7 @@ Contrast discovers any code flaws, which are presented with a severity level to 
 | Confirmed     | Stays Open                      | No Change            |
 | Suspicious    | Stays Open                      | No Change            |
 | Not a Problem | Closed - Requires Justification | Stays Closed         |
-| Remediated    | Closed                          | Reopened as "Reported" |
+| Remediated    | Closed                          | Reopened as **Reported** |
 | Reported      | Default                         | No Change            |
 | Fixed         | Closed                          | Stays Closed         |
 
@@ -97,15 +97,15 @@ Find information on solutions and techniques to resolve a vulnerability by delvi
  
 ### Check a fixed vulnerability 
 
-You fixed your vulnerability, but how can you verify that in Contrast? There are a few things you can do:
+You fixed your vulnerability, but how can you verify that in Contrast? There are a few things you can do from the application page:
 
 * Replay the request:
-If the issue is remediated and marked accordingly, you can replay the http request under **HTTP Info** to see if the issue is fixed. If it hasn’t been fixed, the issue reappears with a status of "Reported".
+If the issue is remediated and marked accordingly, you can replay the http request under **HTTP Info** tab in the Vulnerabilities tab to see if the issue is fixed. If it isn't fixed, the issue reappears with a status of **Reported**.
 
 * Check build number:
-For each application, you can assign it a build version number. By adding the property `-Dcontrast.override.appversion` to the `-javaagent` command, you can use this as a filter and verify whether the issue still exists for this build version.
+For each application, you can assign it a build version number. By adding the property `-Dcontrast.override.appversion` to the `-javaagent` command, you can use this as a filter and verify whether the issue still exists for this build version by clicking the **Advanced** link and the **Build Number** dropdown.
 
 * Check by time unit tests:
-Similar to checking the build number, you can also filter by the time of when your unit tests were run and set a date range to view your vulnerabilities.
+You can also filter by the time of when your unit tests were run and set a date range to view your vulnerabilities in the **Set Date Range** input field above the vulnerabilities grid.
  
 You can find additional properties in articles on [Java Agent System Properties](https://docs.contrastsecurity.com/user_javaconfig.html#props2) and [.NET Agent Configuration](https://docs.contrastsecurity.com/user_netconfig.html#config). 
