@@ -1,7 +1,7 @@
 <!--
 title: "Quick Start Guide"
 description: "Overview of Contrast UI for new users"
-tags: "Onboarding new user get started"
+tags: "Onboarding new user getting started"
 -->
 
 Welcome to Contrast! This is your guide to everything you need to know to get started in the interface. Start with onboarding your applications and then move on to environments, libraries and vulnerabilities – you’ll be up and running before you know it. As always, if you have any more questions, let the Contrast Support team know by emailing <support@contrastsecurity.com>. 
@@ -14,7 +14,7 @@ When you download an agent, the file should be called *contrast.jar*. This file 
 
 For more information on adding an application, please read the article on [Adding an Application](https://docs.contrastsecurity.com/user_tsguideapp.html#addapp).
  
-### Use The Application
+## Use The Application
 
 The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the application's Vulnerabilities tab. (Note that the same vulnerabilities appear on the Vulnerabilities page.) 
 
