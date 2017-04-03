@@ -1,5 +1,5 @@
 <!--
-title: "Disable SuperAdmin Access to Other Administrators"
+title: "Disable SuperAdmin Access for EOP Nodes"
 description: "EOP guide for disabling SuperAdmin accounts"
 tags: "SuperAdmin EOP disable permissions"
 -->
