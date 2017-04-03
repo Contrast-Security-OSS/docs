@@ -1,23 +1,22 @@
 <!--
-title: "Disabling SuperAdmin to Other Administrators"
+title: "Disable SuperAdmin Access to Other Administrators"
 description: "EOP guide for disabling SuperAdmin accounts"
 tags: "SuperAdmin EOP disable permissions"
 -->
 
+The following steps lead you through the process of disabling SuperAdmin access from Enterprise-on-Premises (EOP) nodes that are accessible to general users.  
 
-Disabling SuperAdmin access The following steps disable superadmin access from nodes available to general users access 
+##Disable Access for Specific EOP Nodes
 
-Disabling SuperAdmin On Specific EOP Nodes
-
-If you run Contrast in a [distributed setup](https://docs.contrastsecurity.com/admin_tsinstall.html#dist) and you have the ability to disable SuperAdmin access from the public nodes. If this is a new install, you'll only be prompted to disable SuperAdmin if you're installing as an application-only installation. A full installation won't have this option.
+To disable SuperAdmin access from generally accessible nodes, begin by running Contrast in a [distributed setup](https://docs.contrastsecurity.com/admin_tsinstall.html#dist). If this is a new install, you'll only be prompted to disable SuperAdmin if you're installing as an *application-only installation*; a full installation won't have this option.
 
 If you already have a distributed Contrast setup, add `-Dsuper.admin.disabled=(false or true)` to `$CONTRAST_HOME/bin/contrast-server.vmoptions`. If false, the node allows SuperAdmin logins. If true, the node doesn't allow SuperAdmin logins. 
 
-> **Note:** Contrast supports one secret node.
+>**Note:** Contrast supports one secret node.
 
-SAML(EOP ONLY)
+##Disable Access for SAML 
 
-To disable SuperAdmin for a SAML authenication setup, configure Contrast as two different applications in your identity provider: one for the publicly accessible address and one for the secret node's address. Update the URL in the *SAML.properties* on the secret node and then restart Contrast. 
+To disable SuperAdmin for a Security Assertion Markup Language (SAML) authentication setup, configure Contrast as two different applications in your identity provider: one for the publicly accessible address and one for the secret node's address. Update the URL in the *SAML.properties* on the secret node and then restart Contrast. 
 
 Example:
 
