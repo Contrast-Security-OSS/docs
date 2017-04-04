@@ -18,8 +18,6 @@ If you already have a distributed Contrast setup, add `-Dsuper.admin.disabled=(f
 
 To disable SuperAdmin access for a Security Assertion Markup Language (SAML) authentication setup, configure Contrast as two different applications in your identity provider: one for the publicly accessible address and one for the secret node's address. Update the URL in the `SAML.properties` on the secret node and then restart Contrast. 
 
-<a href="assets/images/Configure-SAML-identity-provider.png" rel="lightbox" title="Configure identity provider"><img class="thumbnail" src="assets/images/Configure-SAML-identity-provider.png"/></a>
-
 Example:
 
 ```
