@@ -162,4 +162,16 @@ Here is more sample code.
 
 - Within general text, spell out numbers **zero - nine** and use numbers for 10 and above.
 
+---
+
+## Other Open-Source Projects
+
+We've got a handful of open-source projects here at Contrast. Use the links below to check out some of our other repositories!
+
+* [Contrast SDK Java](https://github.com/Contrast-Security-OSS/contrast-sdk-java)
+* [Cassandra Migration](https://github.com/Contrast-Security-OSS/cassandra-migration)
+* [Contrast SDK .NET](https://github.com/Contrast-Security-OSS/contrast-sdk-dotnet)
+* [Contrast Jenkins](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin)
+* [Spring Security](https://github.com/Contrast-Security-OSS/spring-security)
+* [Contrast New Relic Plugin](https://github.com/Contrast-Security-OSS/contrast-newrelic-plugin)
 
