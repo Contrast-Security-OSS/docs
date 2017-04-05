@@ -8,51 +8,47 @@ tags: "Jenkins SDK Integration Java"
 
 ## Use The Plugin
 
-You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin). 
+You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin). Go to the **Configure System** page under **Manage Jenkins** to find a new Contrast TeamServer profiles section.
 
 <!-- The plugin can be found here on the Jenkins repository. -->
-
-Go to the **Configure System** page under **Manage Jenkins** to find a new Contrast TeamServer profiles section.
 
 ## Contrast API Settings
 Contrast API settings enable the plugin to connect to Contrast and query for results. The plugin leverages these result to authenticate to Contrast and make API calls in post-build actions. You'll need a unique profile name to identify your configuration and use it in a specific job.
 
 | Parameter                   | Description                                             |
 |-----------------------------|---------------------------------------------------------|
-| Contrast Username         | The username/email for your account in Contrast |
-| Contrast Service Key      | Service Key found in **Organization Settings**             |
+| Contrast Username         | Username/email for your account in Contrast |
 | Contrast API Key          | API Key found in **Organization Settings**                |
-| Contrast Url          | API URL to your Contrast instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; otherwise, use the URL of your Contrast UI (e.g., *http://contrastserver:8080/Contrast/api*) |
-| Organization Uuid | Organization Uuid of the configured user found in Organization Settings; you can also copy it from the URL when viewing the home page in Contrast. |
+| Contrast Service Key      | Service Key found in **Organization Settings**             |
+| Contrast URL          | API URL to your Contrast instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *http://contrastserver:8080/Contrast/api*). |
+| Organization UUID | Organization UUID of the configured user found in **Organization Settings**; you can also copy it from the URL when viewing the home page in Contrast. |
 
-A sample Contrast Profile configuration for the Contrast Jenkins Plugin:
+---
 
-<a href="assets/images/Jenkins_ts_profile.png" rel="lightbox" title="TeamServer Profile Configuration"><img class="thumbnail" src="assets/images/Jenkins_ts_profile.png"/></a>
+<a href="assets/images/Jenkins_ts_profile.png" rel="lightbox" title="Profile configuration"><img class="thumbnail" src="assets/images/Jenkins_ts_profile.png"/></a>
 
 ### Test the Contrast connection
 
 When you add a Contrast profile, use the validation button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful or gives an error message if it fails.
 
-### How threshold conditions work in a post-build action
+### Threshold conditions in a post-build action
 
-Select a profile from the dropdown, then:
+* Select a profile from the dropdown.
 * Add a count. The count is exclusive, so if you set a count for five, it fails on six or more vulnerabilities. This field is required.
 * Add a severity (Note, Low, Medium, High, or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field.
 * Add a vulnerability type. The type is the name of a rule. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count.
 
 Severity and vulnerability types aren't required, but suggested, to narrow down your results.
 
-You can add as many rules as you like. The plugin fails on the **first** bad condition in order, and tells you on which condition it failed.
+You can add as many rules as you like. The plugin fails on the **first** bad condition and tells you on which condition it failed.
 
 >**Note**: Even if your build succeeds, the plugin fails the overall build if the test finds a bad condition.
 
-A sample Threshold Condition configuration for the Contrast Jenkins Plugin:
+<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
 
-<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="TeamServer Threshold Condition"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+### Threshold conditions in a Pipeline step
 
-### How threshold conditions work in a pipeline step
-
-When you add a pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements.
+When you add a Pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements.
 
 Pipeline configuration:
 
