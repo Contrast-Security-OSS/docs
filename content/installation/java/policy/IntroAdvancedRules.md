@@ -1,7 +1,7 @@
 <!--
-title: "Advanced Rules Customization - Introduction"
+title: "Introduction to Advanced Rules Customization"
 description: "Introduction to Customizing Rules"
-tags: "java agent rules customization policy"
+tags: "java agent rules customization policy introduction"
 -->
 
 ## The Contrast Policy
@@ -57,8 +57,8 @@ If a custom [rule, source method, or tag-list] element shares the same 'id' attr
 
 For example: if the default rules contains a source method with ```id="source1"``` and an overriding file contains a source method also with ```id="source1"```, then the Contrast Agent, at runtime, will use the overriding file's source method.
 
-###Using contrast.policy.overrides
+### Using contrast.policy.overrides
 The second method, using the ```contrast.policy.overrides``` system property works almost exactly the same as the ```contrast.policy``` property. The main difference in this approach is that anything in the ```contrast.policy.overrides``` field will take precedence over anything in ```contrast.policy```, similar to how ```contrast.policy``` takes precedence over anything in the internal policy files.
 
-###Using contrast.policy.standalone
+### Using contrast.policy.standalone
 The final method, using the ```contrast.policy.standalone``` system property is the most aggressive of the three options. Unlike the previous two, the presence of this property indicates to the system that the external policy is the only policy that is to be used. As a result, no internal Contrast policies will be loaded. This policy should only be used in the case where one desires solely to use custom sources and rules without any underlying propagation from Contrast methods. It should be noted that without this propagation, most likely the detection process will fail; therefore, it is unlikely that this approach should be employed without strict supervision from the Contrast team. 

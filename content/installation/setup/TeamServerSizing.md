@@ -18,7 +18,8 @@ Second, TeamServer will maintain large amounts of data over extended periods of 
 
 The section below provides a wide selection of configurations optimized to fit different deployment scenarios for Contrast customers. These configurations are comprised of varying combinations of CPU, memory and storage capacity and give our customers the flexibility to choose the appropriate mix of resources for your applications allowing you to scale your resources to the requirements of your target workload.
 
-##TeamServer Configuration Options
+## TeamServer Configuration Options
+
 ### TS1 Configuration
 TS1 configurations are designed for small workloads of 1 to 3 agents communicating to TeamServer as part of the initial analysis of Contrast during a “Proof of Concept” exercise or a single application agent for a small team of end users. A small contingent of web traffic end users, possibly one to five may use the system from time to time or during specific training sessions with a sales engineer or for demonstration purposes with team members.
 

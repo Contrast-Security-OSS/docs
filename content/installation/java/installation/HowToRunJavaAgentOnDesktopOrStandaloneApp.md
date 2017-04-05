@@ -6,7 +6,8 @@ tags: "java agent desktop install"
 
 The process is pretty much the same, but you have to also pass a name in the ```contrast.appname``` system property under which to collect vulnerabilities.
 
-```-Dcontrast.appname=AcmeDesktopApp -javaagent:<path>/contrast.jar```
+```-Dcontrast.appname=AcmeDesktopApp -javaagent:<path>/contrast.jar
+```
 
 ## See Also
 

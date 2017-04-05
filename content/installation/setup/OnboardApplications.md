@@ -6,6 +6,7 @@ tags: "agent installation TeamServer onboarding application"
 
 ## Identify an application server to enable with Contrast
 The first step is to identify an application server that you want Contrast to analyze.  You can choose any of the following types of application servers:
+
 * Developer's local application server running in the IDE
 * Continuous integration application server that is used during the automated testing process
 * Test or QA application server
@@ -22,6 +23,7 @@ Click on the **Applications** tab and find the **Add Application** button.  This
 
 ## Install the Agent
 Follow the simple on-screen instructions to add the agent to your application server.  Once you restart the application server, Contrast Agent should start and immediately connect to the Contrast TeamServer.  If not, then something may be preventing the Agent from communicating with the TeamServer.  The most common causes of this are:
+
 * Firewalls that do not allow traffic to the TeamServer's IP address and port - need to configure host or network firewall
 * Web gateways and proxies that require authentication - This can be configured in the Agent config by returning to the Agent Download page, setting the proper configurations, and getting a new Agent.
 * Contrast Application Server URL is misconfigured, so the Agent is attempting to communicate with the wrong address.  This can be changed in the Agent configuration if necessary.

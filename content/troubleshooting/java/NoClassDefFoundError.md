@@ -6,7 +6,8 @@ tags: "java agent NoClassDefFoundError"
 
 ## Issue
 
-```java.lang.NoClassDefFoundError:com/.../EventController```
+```java.lang.NoClassDefFoundError:com/.../EventController
+```
 
 This error indicates you've renamed your agent jar from its original name, ***contrast.jar***. 
 

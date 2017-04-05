@@ -1,5 +1,5 @@
 <!--
-title: "How to Add a Level 2 Rule"
+title: "Level 2 Rules"
 description: "How to add a Level 2 rule to the Java Agent and TeamServer"
 tags: "java agent rules level 2"
 -->
@@ -22,7 +22,7 @@ The challenges with using a Level 2 rule, as opposed to a Level 1 rule, include:
 * Mistakes made using Level 2 rules can hurt performance and hide true positives
 * Requires a centralized management of a policy file outside of TeamServer
 
-******
+---
 
 ## Types Of Level 2 Rules
 There are two types of Level 2 Rules: **Regular Expression** and **Data Flow**. 
@@ -31,12 +31,12 @@ There are two types of Level 2 Rules: **Regular Expression** and **Data Flow**.
 
 Conversely, **Data Flow** rules, as their name implies, are used to track untrusted data throughout the application and report when said data gets to a trigger without being properly validated or sanitized. 
 
-******
+---
 
 ## Adding A Level 2 Rule
 Adding a new Level 2 Rule consists of two main parts: creating a new custom Policy file for the Agent to follow and creating a corresponding Groovy script to teach TeamServer how to process and render these custom rule results. Our tutorial starts with the creation of the Policy file and ends with a template of the Groovy file.
 
-******
+---
 
 ### Adding A Level 2 Regular Expression Rule
 This portion of the tutorial will walk through adding a new Regular Expression Rule that detects when an illegal value is passed into the Request object, thereby disabling its security. 

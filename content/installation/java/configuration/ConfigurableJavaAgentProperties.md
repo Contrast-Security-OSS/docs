@@ -47,7 +47,8 @@ For example, in the ***catalina.sh***:
 ```export JAVA_OPTS= "$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR -Dcontrast.properties=" /path/to/properties.file "..."```
 
 And a properties file located at ```/path/to/properties.file``` would look like:
-```web.session.timeout= 30```
+```web.session.timeout= 30
+```
 
 
 ## Direct Definition
@@ -55,7 +56,8 @@ And a properties file located at ```/path/to/properties.file``` would look like:
 Finally, the user could specify a property directly when launching their application container, like ```-Dweb.session.timeout=30```. This will override any settings in ***rules.xml*** and the properties file.
 
 ```export CONTRAST_AGENT_JAR= "..."```
-```export JAVA_OPTS= "$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR -Dweb.session.timeout=" 30 "..."```
+```export JAVA_OPTS= "$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR -Dweb.session.timeout=" 30 "..."
+```
 
 
 ## Supported Properties

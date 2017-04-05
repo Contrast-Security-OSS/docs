@@ -8,14 +8,16 @@ tags: "TeamServer restart troubleshooting"
 
 Run:
 
-```sudo service contrast-server restart```
+```sudo service contrast-server restart
+```
 
 
 ## Windows
 
 Run:
 
-```net stop "Contrast Server"```
+```net stop "Contrast Server"
+```
 
 Once the service is completely shutdown, run:
 

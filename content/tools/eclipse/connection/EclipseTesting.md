@@ -9,20 +9,24 @@ When the plugin first loads in Eclipse, it will deploy a Contrast Agent, a jar f
 
 ### Running a server with your account
 If you're running a server independent of Eclipse using the same account with which Eclipse is running, getting reports is pretty simple. As with the standard Contrast Agent installation, simply add the following line to the file where you set the JAVA_OPTS of your server:
-````
- Linux:
+
+```
+Linux:
 set JAVA_OPTS="$JAVA_OPTS -javaagent:${USER_HOME}/.contrast/contrast-engine-${version}.jar"
- Windows:
+
+Windows:
 set JAVA_OPTS="%JAVA_OPTS% -javaagent:${USER_HOME}/.contrast/contrast-engine-${version}.jar"
-````  
+```
+
 ### Running a server with a different user account
 If you're running a server with a different user account but on the same machine, the process is almost the same as above, but you will need to set an additional configuration flag to the file where you modify the ```JAVA_OPTS``` of your server. If, however, you're running a server on a different machine, you will need to copy the Contrast Agent file to that machine and place it into a ".contrast" directory in the ```${USER_HOME}``` before attempting to run with the following flags.
-````
- Linux:
+
+```
+Linux:
 set JAVA_OPTS="$JAVA_OPTS -javaagent:${USER_HOME}/.contrast/contrast-engine-${version}.jar \
  -Dcontrast.dir=${USER_HOME}/.contrast"
 
- Windows:
+Windows:
 set JAVA_OPTS="%JAVA_OPTS% -javaagent:${USER_HOME}/.contrast/contrast-engine-${version}.jar \
 -Dcontrast.dir=${USER_HOME}/.contrast"
-```` 
+``` 

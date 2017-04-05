@@ -30,7 +30,7 @@ ID | Description
 ```metrics``` | Shows **metrics** information for the current application
 ```mappings``` | Displays a collated list of all ```@RequestMapping``` paths
 ```shutdown``` | Allows the application to be gracefully shut down (not enabled by default)
-```trace``` | Displays trace information (by default the last few HTTP requests)
+```trace``` | Displays trace information (by default the last few HTTP requests) 
 
 ## TeamServer
 

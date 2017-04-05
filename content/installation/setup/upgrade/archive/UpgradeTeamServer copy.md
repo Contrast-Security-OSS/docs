@@ -17,4 +17,4 @@ To upgrade your on premises Contrast Team Server installation:
 
 Your Team Server will now apply any needed upgrades to your database and Contrast data on it's first boot.
 
-It is difficult for us to make any assumptions about the data stored in an On-Premise database, so while it is extremely rare it is possible that the upgrade process can encounter errors. In the event you encounter an error while upgrading your Team Server the best option is to roll-back to the previous version and restore your database to the state prior to the upgrade process then open a ticket and we will assist you to resolve the errors that you encountered during upgrade. 
+It is difficult for us to make any assumptions about the data stored in an On-Premise database, so while extremely rare, it is possible that the upgrade process can encounter errors. In the event you encounter an error while upgrading your Team Server the best option is to roll-back to the previous version and restore your database to the state prior to the upgrade process then open a ticket and we will assist you to resolve the errors that you encountered during upgrade. 
