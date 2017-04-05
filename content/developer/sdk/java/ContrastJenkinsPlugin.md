@@ -21,8 +21,7 @@ Contrast API settings enable the plugin to connect to Contrast and query for res
 | Contrast API Key          | API Key found in **Organization Settings**                |
 | Contrast Service Key      | Service Key found in **Organization Settings**             |
 | Contrast URL          | API URL to your Contrast instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *http://contrastserver:8080/Contrast/api*). |
-| Organization UUID | Organization UUID of the configured user found in **Organization Settings** <BR> 
-You can also copy it from the URL when viewing the home page in Contrast. |
+| Organization UUID | Organization UUID of the configured user found in **Organization Settings** <BR> You can also copy it from the URL when viewing the home page in Contrast. |
 
 ---
 
@@ -37,7 +36,7 @@ When you add a Contrast profile, use the validation button to test your connecti
 * Select a profile from the dropdown.
 * Add a count. The count is exclusive, so if you set a count for five, it fails on six or more vulnerabilities. This field is required.
 * Add a severity (Note, Low, Medium, High, or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field.
-* Add a vulnerability type. The type is the name of a rule. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count.
+* Add a vulnerability type (rule name). If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count.
 
 Severity and vulnerability types aren't required, but suggested, to narrow down your results.
 
