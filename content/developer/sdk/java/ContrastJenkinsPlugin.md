@@ -20,34 +20,28 @@ The plugin code can be viewed in our Github [repository](https://github.com/Cont
 
 Go to the `Configure System` page under `Manage Jenkins`. Here you will find a new Contrast TeamServer profiles section.
 
-## TeamServer Configuration Settings
+## Contrast API Settings
 
 These settings are for the plugin to connect to TeamServer and query for results. The plugin leverages these to authenticate to TeamServer and make API calls in the post-build actions.
 
+A Profile Name is needed to identify your configuration for use in a specific job. These profile names should be unique.
+
 | Parameter                   | Description                                             |
 |-----------------------------|---------------------------------------------------------|
-| TeamServer Server Name      | Name of the agent to use in the query for vulnerability results in the project post-build action. This can be specified in the agent arguments with ```-Dcontrast.server```, and by default is the hostname of the server the agent is running on.  Agent names are listed on the `Servers` page when logged in to TeamServer.  Note: this is not the address of the TeamServer. |
-| TeamServer Username         | This is the username/email for your account in TeamServer |
-| TeamServer Service Key      | Service Key found in Organization Settings             |
-| TeamServer API Key          | API Key found in Organization Settings                 |
-| TeamServer Url          | API URL to your TeamServer instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you are a SaaS customer, otherwise use the URL of your TeamServer, e.g. *http://contrastserver:8080/Contrast/api* |
+| Contrast Username         | This is the username/email for your account in TeamServer |
+| Contrast Service Key      | Service Key found in Organization Settings             |
+| Contrast API Key          | API Key found in Organization Settings                 |
+| Contrast Url          | API URL to your TeamServer instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you are a SaaS customer, otherwise use the URL of your TeamServer, e.g. *http://contrastserver:8080/Contrast/api* |
+| Organization Uuid | Organization Uuid of the configured user found in Organization Settings, or can be copied from the URL when viewing the home page in TeamServer. |
 
 ### Testing The TeamServer Connection
 
 When adding a TeamServer profile, a validation button is present to test your connection. Use this to make sure all your fields are accurate!
 It will prompt you if successful, or give an error message if it fails.
 
-## Threshold Condition Settings
-
-These settings are for filtering trace results in order to verify conditions configured in the post-build action.
-
-| Parameter                    | Description                                                              |
-|------------------------------|--------------------------------------------------------------------------|
-| TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings, or can be copied from the URL when viewing the home page in TeamServer. |
-| TeamServer Application Name  | Name of the application as listed on the `Applications` tab in TeamServer. <BR> This is used to filter results in the query for post-build actions. |
-
 ### How Threshold Conditions Work In Post-Build Action
 
+Select a profile from the dropdown then:
 * Add a count. The count is exclusive, so if you set a count for 5, it will fail on 6 or more vulnerabilities. This field is required.
 * Add a severity (Note, Low, Medium, High, or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field.
 * Add a vulnerability type. The type is the name of a rule. Here you can specify a single rule to filter for. The plugin checks for the number of vulnerabilities with the rule type and compares it to the count.
@@ -58,7 +52,25 @@ You can add as many rules as you like. The plugin fails on the **first** bad con
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a bad condition is found.
 
+### How Threshold Conditions Work in Pipeline Step
+
+A pipeline step with the name `contrastVerification` has been added. It follows the same principles as the Post-Build Action but in a newer format for Jenkins 2.0 improvements.
+
+### How We Test for Vulnerabilities
+
+In order for the Jenkins plugin to get accurate information, a unique identifier built from Jenkins CI configuration needs to be added as an agent property. The corresponding property for the Java Agent is: `contrast.override.appversion`. Also, the Job Name must match your application name or you will need to override your application name with another property to ensure we are testing for the correct information.
+
+Unique identifier: `${JOB_NAME}-${BUILD_NUMBER}`
+
+The plugin uses this identifier to filter the vulnerabilities and check the conditions. `JOB_NAME` and `BUILD_NUMBER` are available as Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
+
 ### Examples
+
+Pipeline Configuation:
+
+```
+contrastVerification profile: 'Localhost', count: 10, rule: 'xss', severity: 'High'
+```
 
 Below is a sample TeamServer Profile configuration for the Contrast Jenkins Plugin:
 
