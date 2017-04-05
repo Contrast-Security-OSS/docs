@@ -4,78 +4,67 @@ description: "Sample Jenkins plugin using the Contrast Java SDK"
 tags: "Jenkins SDK Integration Java"
 -->
 
-## About The Contrast Jenkins Plugin
+[Jenkins](https://jenkins.io/) is a Continuous Integration (CI) application that can be used to build, deploy and run applications. The Contrast Jenkins Plugin is a tool for integrating Contrast with your Jenkins CI instance. You can use it to test your connection to Contrast and verify your build with threshold conditions.
 
-The Contrast Jenkins Plugin is used to integrate Contrast with your Jenkins CI instance. It can be used to test your connection to TeamServer and verify your build with threshold conditions.
+## Use The Plugin
 
-[Jenkins](https://jenkins.io/) is a Continuous Integration application that can be used to build, deploy, and run applications.
-
-## Access To The Plugin
-
-The plugin code can be viewed in our Github [repository](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin). 
+You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin). 
 
 <!-- The plugin can be found here on the Jenkins repository. -->
 
-## How To Use The Plugin
-
-Go to the `Configure System` page under `Manage Jenkins`. Here you will find a new Contrast TeamServer profiles section.
+Go to the **Configure System** page under **Manage Jenkins** to find a new Contrast TeamServer profiles section.
 
 ## Contrast API Settings
-
-These settings are for the plugin to connect to TeamServer and query for results. The plugin leverages these to authenticate to TeamServer and make API calls in the post-build actions.
-
-A Profile Name is needed to identify your configuration for use in a specific job. These profile names should be unique.
+Contrast API settings enable the plugin to connect to Contrast and query for results. The plugin leverages these result to authenticate to Contrast and make API calls in post-build actions. You'll need a unique profile name to identify your configuration and use it in a specific job.
 
 | Parameter                   | Description                                             |
 |-----------------------------|---------------------------------------------------------|
-| Contrast Username         | This is the username/email for your account in TeamServer |
-| Contrast Service Key      | Service Key found in Organization Settings             |
-| Contrast API Key          | API Key found in Organization Settings                 |
-| Contrast Url          | API URL to your TeamServer instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you are a SaaS customer, otherwise use the URL of your TeamServer, e.g. *http://contrastserver:8080/Contrast/api* |
-| Organization Uuid | Organization Uuid of the configured user found in Organization Settings, or can be copied from the URL when viewing the home page in TeamServer. |
+| Contrast Username         | The username/email for your account in Contrast |
+| Contrast Service Key      | Service Key found in **Organization Settings**             |
+| Contrast API Key          | API Key found in **Organization Settings**                |
+| Contrast Url          | API URL to your Contrast instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; otherwise, use the URL of your Contrast UI (e.g., *http://contrastserver:8080/Contrast/api*) |
+| Organization Uuid | Organization Uuid of the configured user found in Organization Settings; you can also copy it from the URL when viewing the home page in Contrast. |
 
-### Testing The TeamServer Connection
+A sample Contrast Profile configuration for the Contrast Jenkins Plugin:
 
-When adding a TeamServer profile, a validation button is present to test your connection. Use this to make sure all your fields are accurate!
-It will prompt you if successful, or give an error message if it fails.
+<a href="assets/images/Jenkins_ts_profile.png" rel="lightbox" title="TeamServer Profile Configuration"><img class="thumbnail" src="assets/images/Jenkins_ts_profile.png"/></a>
 
-### How Threshold Conditions Work In Post-Build Action
+### Test the Contrast connection
 
-Select a profile from the dropdown then:
-* Add a count. The count is exclusive, so if you set a count for 5, it will fail on 6 or more vulnerabilities. This field is required.
+When you add a Contrast profile, use the validation button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful or gives an error message if it fails.
+
+### How threshold conditions work in a post-build action
+
+Select a profile from the dropdown, then:
+* Add a count. The count is exclusive, so if you set a count for five, it fails on six or more vulnerabilities. This field is required.
 * Add a severity (Note, Low, Medium, High, or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field.
-* Add a vulnerability type. The type is the name of a rule. Here you can specify a single rule to filter for. The plugin checks for the number of vulnerabilities with the rule type and compares it to the count.
+* Add a vulnerability type. The type is the name of a rule. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count.
 
-Severity and vulnerability type are not required, but suggested in order to narrow down your results.
+Severity and vulnerability types aren't required, but suggested, to narrow down your results.
 
-You can add as many rules as you like. The plugin fails on the **first** bad condition in order, and will tell you which condition it failed on.
+You can add as many rules as you like. The plugin fails on the **first** bad condition in order, and tells you on which condition it failed.
 
->**Note**: Even if your build succeeds, the plugin will fail the overall build if a bad condition is found.
+>**Note**: Even if your build succeeds, the plugin fails the overall build if the test finds a bad condition.
 
-### How Threshold Conditions Work in Pipeline Step
+A sample Threshold Condition configuration for the Contrast Jenkins Plugin:
 
-A pipeline step with the name `contrastVerification` has been added. It follows the same principles as the Post-Build Action but in a newer format for Jenkins 2.0 improvements.
+<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="TeamServer Threshold Condition"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
 
-### How We Test for Vulnerabilities
+### How threshold conditions work in a pipeline step
 
-In order for the Jenkins plugin to get accurate information, a unique identifier built from Jenkins CI configuration needs to be added as an agent property. The corresponding property for the Java Agent is: `contrast.override.appversion`. Also, the Job Name must match your application name or you will need to override your application name with another property to ensure we are testing for the correct information.
+When you add a pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements.
 
-Unique identifier: `${JOB_NAME}-${BUILD_NUMBER}`
-
-The plugin uses this identifier to filter the vulnerabilities and check the conditions. `JOB_NAME` and `BUILD_NUMBER` are available as Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
-
-### Examples
-
-Pipeline Configuation:
+Pipeline configuration:
 
 ```
 contrastVerification profile: 'Localhost', count: 10, rule: 'xss', severity: 'High'
 ```
 
-Below is a sample TeamServer Profile configuration for the Contrast Jenkins Plugin:
+## Test for Vulnerabilities
 
-<a href="assets/images/Jenkins_ts_profile.png" rel="lightbox" title="TeamServer Profile Configuration"><img class="thumbnail" src="assets/images/Jenkins_ts_profile.png"/></a>
+In order for the Jenkins plugin to get accurate information, you must add a unique identifier built from the Jenkins CI configuration as an agent property. The corresponding property for the Java agent is `contrast.override.appversion`. Also, the job name must match your application name or you must override your application name with another property to ensure that Contrast tests for the correct information.
 
-Below is a sample Threshold Condition configuration for the Contrast Jenkins Plugin:
+The plugin uses the unique identifier `${JOB_NAME}-${BUILD_NUMBER}` to filter vulnerabilities and check conditions. `JOB_NAME` and `BUILD_NUMBER` are available as Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
 
-<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="TeamServer Threshold Condition"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+
+
