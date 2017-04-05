@@ -4,7 +4,7 @@ description: "Sample Jenkins plugin using the Contrast Java SDK"
 tags: "Jenkins SDK Integration Java"
 -->
 
-[Jenkins](https://jenkins.io/) is a Continuous Integration (CI) application that can be used to build, deploy and run applications. The Contrast Jenkins Plugin is a tool for integrating Contrast with your Jenkins CI instance. You can use it to test your connection to Contrast and verify your build with threshold conditions.
+[Jenkins](https://jenkins.io/) is a continuous integration (CI) application that can be used to build, deploy and run applications. The Contrast Jenkins Plugin is a tool for integrating Contrast with your Jenkins CI instance. You can use it to test your connection to Contrast and verify your build with threshold conditions.
 
 ## Use The Plugin
 
@@ -13,7 +13,7 @@ You can view the plugin code in Contrast's [Github repository](https://github.co
 <!-- The plugin can be found here on the Jenkins repository. -->
 
 ## Contrast API Settings
-Contrast API settings enable the plugin to connect to Contrast and query for results. The plugin leverages these result to authenticate to Contrast and make API calls in post-build actions. You'll need a unique profile name to identify your configuration and use it in a specific job.
+Contrast API settings enable the plugin to connect to Contrast and query for results. The plugin leverages these result to authenticate to Contrast and make API calls in post-build actions. Among the following requirements, you'll need a unique profile name to identify your configuration and use it in a specific job.
 
 | Parameter                   | Description                                             |
 |-----------------------------|---------------------------------------------------------|
@@ -21,13 +21,14 @@ Contrast API settings enable the plugin to connect to Contrast and query for res
 | Contrast API Key          | API Key found in **Organization Settings**                |
 | Contrast Service Key      | Service Key found in **Organization Settings**             |
 | Contrast URL          | API URL to your Contrast instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *http://contrastserver:8080/Contrast/api*). |
-| Organization UUID | Organization UUID of the configured user found in **Organization Settings**; you can also copy it from the URL when viewing the home page in Contrast. |
+| Organization UUID | Organization UUID of the configured user found in **Organization Settings** <BR> 
+You can also copy it from the URL when viewing the home page in Contrast. |
 
 ---
 
 <a href="assets/images/Jenkins_ts_profile.png" rel="lightbox" title="Profile configuration"><img class="thumbnail" src="assets/images/Jenkins_ts_profile.png"/></a>
 
-### Test the Contrast connection
+### Test the connection
 
 When you add a Contrast profile, use the validation button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful or gives an error message if it fails.
 
