@@ -8,7 +8,7 @@ tags: "Jenkins SDK Integration Java"
 
 ## Use The Plugin
 
-You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin). Go to the **Configure System** page under **Manage Jenkins** to find a new Contrast TeamServer profiles section.
+You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin). In the Jenkins dashboard, go to **Manage Jenkins** in the left sidebar and select the **Configure System** page to find a new Contrast TeamServer profiles section.
 
 <!-- The plugin can be found here on the Jenkins repository. -->
 
