@@ -4,7 +4,6 @@ description: "ColdFusion installation process on JRun"
 tags: "java agent installation coldfusion JRUN"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Getting Started
 You can put the ```-javaagent``` JVM option into the ```java.args``` property in ***${JRUN}/bin/jvm.config***.

@@ -4,7 +4,6 @@ description: "Agent installation using Grails"
 tags: "java agent installation grails"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Running Contrast from the command line or script:
 To add a JVM option like Contrast requires, you should set a ```GRAILS_OPTS``` environment variable, like this:

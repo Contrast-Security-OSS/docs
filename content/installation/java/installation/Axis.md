@@ -4,7 +4,6 @@ description: "Axis2 installation process using Windows or startup script"
 tags: "java agent installation Axis"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Running Contrast From "axis2server.bat" (or ".sh")
 

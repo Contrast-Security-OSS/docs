@@ -3,7 +3,6 @@ title: "Installing on Play"
 description: "Agent installation using the Play framework"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Running Contrast From The Command Line With Activator
 Play makes adding JVM options to the application's JVM a little different than standard Java options syntax.

@@ -4,7 +4,6 @@ description: "Agent installation and running using the Jetty container"
 tags: "java agent installation run Jetty"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Installation
 Installing on Jetty is easy. Add the following lines to your ***${JETTY_DIR}\start.ini*** file:

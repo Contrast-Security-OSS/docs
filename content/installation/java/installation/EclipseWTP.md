@@ -4,7 +4,6 @@ description: "Overview of the process for installation of Contrast on an applica
 tags: "java agent installation Eclipse"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 This document will outline the process for installing Contrast on an application using the Eclipse IDE, running any application server from the Web Tools Platform (WTP) plugin.
 

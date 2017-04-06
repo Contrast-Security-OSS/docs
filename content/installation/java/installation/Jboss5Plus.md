@@ -4,7 +4,6 @@ description: "JBoss5 and higher agent installation process using Windows or star
 tags: "java agent installation JBoss RedHat"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Running JBoss from run.bat or standalone.bat (or .sh)
 Installing on JBoss is easy. If you run JBoss from ***domain.bat***, ***standalone.bat***, or ***run.bat*** with a ***.conf*** file, we suggest modifying the configuration file. It should enable the Contrast JVM parameters and then return to the start up script. To do this, simply append the following line to the end of your ***.conf*** file: 

@@ -4,7 +4,6 @@ description: "DropWizard installation of the Contrast Java Agent"
 tags: "java agent installation dropwizard"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Getting Started
 Here's an example of how to run the Java Agent with your standalone/fatjar Dropwizard application:

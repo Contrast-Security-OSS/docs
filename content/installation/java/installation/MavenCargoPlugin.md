@@ -4,7 +4,6 @@ description: "This document will outline the process for installing Contrast on 
 tags: "java agent installation maven codehaus"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Prerequisites
 Download the Contrast plugin (***contrast.jar***) from the Contrast site.

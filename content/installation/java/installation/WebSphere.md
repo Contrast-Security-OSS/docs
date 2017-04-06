@@ -4,7 +4,6 @@ description: "JBoss5 and higher agent installation process using Windows or star
 tags: "java agent installation websphere IBM"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Getting Started
 If you launch WebSphere yourself, you'll have to add Contrast's JVM parameter to the ***server.xml*** file in your cell directory, i.e. 

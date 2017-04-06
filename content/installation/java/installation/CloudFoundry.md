@@ -4,7 +4,6 @@ description: "Agent configuration using the Contrast service broker, Contrast bu
 tags: "java agent installation pivotal cloud foundry tile buildpack"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 Contrast offers a variety of Cloud Foundry integrations for your applications using the Contrast Java buildpack. The buildpack can be used on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker is the next step towards closer integration with Contrast. The service broker allows you to define multiple service plans, and allows you to generate service instances in order to bind to applications.
 

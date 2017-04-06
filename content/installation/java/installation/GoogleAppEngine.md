@@ -4,7 +4,6 @@ description: "Guidelines for configuring an agent with the Google App Engine"
 tags: "java agent installation Google"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Getting Started
 To install the Contrast agent in your Google App Engine environment, please follow the following instructions.

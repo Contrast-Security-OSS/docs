@@ -4,7 +4,6 @@ description: "Tomcat installation process using Windows or startup script"
 tags: "java agent installation Tomcat"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Running Contrast from "startup.bat" (or ".sh")
 

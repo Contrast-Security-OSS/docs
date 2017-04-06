@@ -4,7 +4,6 @@ description: "Configuring Vert.x"
 tags: "java agent installation Vert.x"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Getting Started With Vert.x 
 Support of the Vert.x framework within the Java Agent is based on the Contrast Netty implementation, specifically the ability to follow key data events through Vert.x's messaging system.

@@ -4,7 +4,6 @@ description: "Guideliness for configuring agents on WebLogic"
 tags: "java agent installation BEA Oracle WebLogic"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
 
 ## Getting Started on Unix
 
