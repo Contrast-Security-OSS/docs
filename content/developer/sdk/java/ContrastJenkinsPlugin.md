@@ -58,7 +58,7 @@ contrastVerification profile: 'Localhost', count: 10, rule: 'xss', severity: 'Hi
 
 ## Test for Vulnerabilities
 
-In order for the Jenkins plugin to get accurate information, you must add a unique identifier built from the Jenkins CI configuration as an agent property. The corresponding property for the Java agent is `contrast.override.appversion`. Also, the job name must match your application name or you must override your application name with another property to ensure that Contrast tests for the correct information.
+In order for the Jenkins plugin to get accurate information, you must add a unique identifier built from the Jenkins CI configuration as an agent property. The corresponding property for the Java agent is ```contrast.override.appversion```. Also, the job name must match your application name or you must override your application name with another property to ensure that Contrast tests for the correct information.
 
 The plugin uses the unique identifier `${JOB_NAME}-${BUILD_NUMBER}` to filter vulnerabilities and check conditions. `JOB_NAME` and `BUILD_NUMBER` are available as Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
 
