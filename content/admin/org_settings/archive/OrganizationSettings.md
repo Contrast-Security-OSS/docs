@@ -26,6 +26,13 @@ Contrast APIs are available to organization administrators for allowing access t
 ## Integrations
 Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
 
+## Servers
+Server Settings provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment. 
+
+<a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
+
+> **Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. Contrast is working on making this configurable in the future.
+
 ### Log level 
 The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in **ERROR** mode unless a problem occurs and you're asked to collect more metrics by support. 
 
