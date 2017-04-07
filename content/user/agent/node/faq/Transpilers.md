@@ -4,14 +4,12 @@ description: "Notes on Contrast compatibility with languages like CoffeeScript o
 tags: "node agent compatibility coffee coffeescript typescript babel"
 -->
 
-Contrast supports applications written in languages that compile to JavaScript, such as [CoffeeScript](http://coffeescript.org/) and [TypeScript](http://www.typescriptlang.org/). While Contrast only instruments Javascript, you can tell Contrast how to get to the compiled code; the method is determined whether the Javascript is precompiled or compiled at runtime.
+Contrast supports applications written in languages that compile to JavaScript, such as [CoffeeScript](http://coffeescript.org/) and [TypeScript](http://www.typescriptlang.org/). While Contrast only instruments JavaScript, you can tell Contrast how to get to the compiled code; whether the JavaScript is precompiled or compiled at runtime determines your method.
 
 ## Runtime Compilers
-Languages like [CoffeeScript](http://coffeescript.org/) run via a command line utility, which acts as a *runner* and compiles your application to Javascript at runtime. Contrast's Node.js agent is also a runner. It's possible to have Contrast act as a runner for the runtime transpiler, which acts as a runner for your application.
+Languages like [CoffeeScript](http://coffeescript.org/) run via a command line utility, which acts as a *runner* and compiles your application to JavaScript at runtime. It's possible to have Contrast's Node.js agent act as a runner for the runtime transpiler, which acts as a runner for your application.
 
-To set up Contrast as a runner, you must provide the entrypoint to the transpiler instead of providing the entrypoint to your application as an argument. You're essentially telling Contrast that your application is the transpiler.
-
-Next, you must use the ```--appArgs``` setting to tell Contrast to pass this argument along because the transpiler expects the entrypoint to your application as an argument.
+To set up Contrast as a runner, you must provide the entrypoint to the transpiler instead of providing the entrypoint to your application as an argument. (You're essentially telling Contrast that your application is the transpiler.) Next, you must use the ```--appArgs``` setting to tell Contrast to pass this argument along.
 
 Please refer to the following example script setup for running Contrast with a CoffeeScript application:
 
@@ -24,7 +22,7 @@ scripts: {
 ```
 
 ## Precompiled
-Some languages, like [TypeScript](http://www.typescriptlang.org/), have you precompile your code before runtime. In these cases, Contrast must simply point to the *compiled* entrypoint for your application:
+Some languages, like [TypeScript](http://www.typescriptlang.org/), require you to precompile your code before runtime. In these cases, Contrast must simply point to the *compiled* entrypoint for your application:
 
 ```javascript
 scripts: {
