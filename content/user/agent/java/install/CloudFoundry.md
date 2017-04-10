@@ -5,7 +5,7 @@ tags: "java agent installation pivotal cloud foundry tile buildpack"
 -->
 Contrast offers a variety of Cloud Foundry integrations for your applications using the Contrast Java buildpack. The buildpack can be used on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker is the next step towards closer integration with Contrast. The service broker allows you to define multiple service plans, and allows you to generate service instances in order to bind to applications.
 
-For Pivotal Cloud Foundry customers, we offer a Pivotal tile. This tile automates the BOSH deployment and configuration of Contrast Security service broker. 
+For Pivotal Cloud Foundry customers, we offer a Pivotal tile. This tile automates the BOSH deployment and configuration of Contrast Security service broker.
 
 ## Contrast Security Buildpack
 The Contrast Security agent buildpack allows an application to be configured to work with a bound Contrast service.
@@ -214,7 +214,7 @@ The Contrast tile can be found on our [Github site.](https://github.com/Contrast
 There are two ways to get the Pivotal tile.
 
 **Option 1 (download): **
-Within the repository root, there is a file called: contrast-security-service-broker-#.#.#.pivotal. Download this file.
+The Contrast Security Server Broker Tile for Pivotal Cloud Foundry can be downloded from the [Pivotal Network](https://network.pivotal.io/products/contrast-security-service-broker/).
 
 **Option 2 (manually build tile): **
 
@@ -302,4 +302,3 @@ Command line example:
 
 Pivotal Apps Manager example:
 <a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through UI"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
-
