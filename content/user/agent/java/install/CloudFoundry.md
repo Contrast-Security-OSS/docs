@@ -266,7 +266,7 @@ Once you define your plans, return to the Ops Manager dashboard and select the *
 
 This may take some time to deploy.
 
-## Step 2: Apps manager instructions
+### Step 2: Apps manager instructions
 Now that you've successfully deployed the service broker we can create services to bind the credentials to an application. Navigate to your Pivotal Apps Manager instance and go to the **Marketplace** tab, where a Contrast service broker option is present.
 
 <a href="assets/images/Pivotal_Marketplace.png" rel="lightbox" title="Contrast Security service broker in the marketplace"><img class="thumbnail" src="assets/images/Pivotal_Marketplace.png"/></a>
