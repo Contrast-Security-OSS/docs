@@ -6,7 +6,7 @@ tags: "SSO Single Sign-On configuration authentication"
 
 ## Get Started
 
-Single Sign On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. You can configure Contrast to use this service with a SAML 2.0 supported provider. 
+Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. You can configure Contrast to use this service with a SAML 2.0 supported provider. 
 
 > For more information on the **SAML 2.0 specification**, read [this article](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf).
 
@@ -24,12 +24,12 @@ For Enterprise-On-Premises (EOP) customers, SSO is configured at the System leve
 If a System Admin decides to set up SSO, it's important to note that Contrast doesn't support user provisioning; therefore, users must have an existing account in Contrast before authenticating with SSO. Also, if users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. 
 
 ### Before you start
-Contrast doesn't provide keys for SAML authentication. If you enable SSO without providing private keys, you're only able to perform IDP-initiated logins.
+Contrast doesn't provide keys for SAML authentication. If you enable SSO without providing private keys, you're only able to perform IdP-initiated logins.
 
 You need to generate your own self-signed key using the Java Keytool:
 ```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks```
 
-Use the [Encrypted Editor](admin_tsconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previoius step. 
+Use the [Encrypted Editor](admin_tsconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
 
  ```
  authenticator.saml.keystore.path                  : /path/to/samlKeystore.jks
@@ -40,7 +40,7 @@ Use the [Encrypted Editor](admin_tsconfig.html#encrypt) to modify *saml.properti
  
 Once you make the changes, restart Contrast so that it picks up the new keystore. 
 
-### Setup 
+### Set up 
 
 * From the **Authentication** tab in System Settings, Select **Change Authentication Method**.
 
@@ -79,7 +79,7 @@ If an Org Admin decides to set up SSO, it's important to note that Contrast does
 
 ### Set up 
 
-* From the **Single Sign-On** tab in Org Settings, click **Get Started**
+* From the ** Sign-On** tab in Org Settings, click **Get Started**
 
 <a href="assets/images/SSOOrgSettings.png" rel="lightbox" title="Single Sign-On Onboarding - Org Settings"><img class="thumbnail" src="assets/images/SSOOrgSettings.png"/></a>
 
