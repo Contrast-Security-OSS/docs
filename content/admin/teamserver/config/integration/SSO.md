@@ -79,7 +79,7 @@ If an Org Admin decides to set up SSO, it's important to note that Contrast does
 
 ### Set up 
 
-* From the ** Sign-On** tab in Org Settings, click **Get Started**
+* From the ** Sign-On** tab in Org Settings, click **Get Started**.
 
 <a href="assets/images/SSOOrgSettings.png" rel="lightbox" title="Single Sign-On Onboarding - Org Settings"><img class="thumbnail" src="assets/images/SSOOrgSettings.png"/></a>
 
@@ -106,7 +106,7 @@ If SSO is configured, a checkbox appears on the Contrast login page. Checking it
 
 Next, Contrast verifies your email with the configured IdP and directs you to the IdP login page. Once you submit your full SSO credentials and are successfully authenticated, you're logged in and directed back to the Contrast dashboard. If you try to sign in using SSO but don't have an account in Contrast, an error message appears on the login screen, informing you that your administrator must create your account.
 
->**NOTE:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See [Two-Step Verification](admin_tsconfig.html#tsv) for more information. 
+>**NOTE:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See the artcle on [Two-Step Verification](admin_tsconfig.html#tsv) for more information. 
 
 
 For more help with connectivity, go to the article on [Troubleshooting SSO](admin_tsfaq.html#sso). 
