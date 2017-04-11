@@ -1,7 +1,7 @@
 <!--
 title: "Monitoring A Crawler Instance"
 description: "Instructions on how to monitor a crawling instance"
-tags: "crawler monitoring Microservice JMX"
+tags: "crawler monitoring configuration Microservice JMX"
 -->
 
 ## Production Monitoring

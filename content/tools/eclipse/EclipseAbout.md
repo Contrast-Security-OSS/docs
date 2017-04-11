@@ -1,7 +1,7 @@
 <!--
 title: "What is Contrast for Eclipse?"
 description: "What is Contrast for Eclipse?"
-tags: "eclipse integration"
+tags: "tools eclipse integration"
 -->
 
 ## What is Contrast for Eclipse?

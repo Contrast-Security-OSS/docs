@@ -1,7 +1,7 @@
 <!--
 title: "Contrast Gradle Plugin" 
 description: "Sample Gradle build plugin using the Contrast Java SDK"
-tags: "Gradle SDK Integration Java"
+tags: "tools Gradle SDK Integration Java"
 -->
 
 ## About The Contrast Gradle Plugin

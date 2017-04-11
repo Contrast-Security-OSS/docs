@@ -1,6 +1,6 @@
 <!--title: "Contrast SDK Tutorial"
 description: "Tutorial for using the Contrast Java SDK"
-tags: "tutorial SDK Java"-->
+tags: "tools access tutorial SDK Java"-->
 
 ## Getting Started
 

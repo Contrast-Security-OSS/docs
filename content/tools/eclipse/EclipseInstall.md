@@ -1,7 +1,7 @@
 <!--
 title: "Downloading Contrast for Eclipse"
 description: "Instructions for Downloading and Installing Contrast for Eclipse"
-tags: "Eclipse Download Installation Ubuntu"
+tags: "tools Eclipse Download Installation Ubuntu"
 -->
 
 ## Drag and Drop (Option 1)

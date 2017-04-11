@@ -1,7 +1,7 @@
 <!--
 title: "Applications API Resources"
 description: "Resource Guide to Applications"
-tags: "API v2 appID HATEOS"
+tags: "tools application resource API v2 appID HATEOS"
 -->
 
 ## Data Objects

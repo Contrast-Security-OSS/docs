@@ -1,7 +1,7 @@
 <!--
 title: "Accessing The API"
 description: "Instructions on how to access the API"
-tags: "API v2 key authorization"
+tags: "tools access API v2 key authorization"
 -->
 
 To begin using the Contrast API, you will need to retrieve your **API Key** from the server. To do this, you will need to log in to your TeamServer account and have the application email you a generated API Key.

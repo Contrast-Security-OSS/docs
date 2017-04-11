@@ -1,7 +1,7 @@
 <!--
 title: "Contrast Maven Plugin"
 description: "Sample Maven build plugin using the Contrast Java SDK"
-tags: "Maven SDK Integration Java"
+tags: "tools Maven SDK Integration Java"
 -->
 
 ## About The Contrast Maven Plugin

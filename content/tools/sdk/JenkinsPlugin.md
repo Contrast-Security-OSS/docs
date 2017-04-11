@@ -1,7 +1,7 @@
 <!--
 title: "Contrast Jenkins Plugin"
 description: "Sample Jenkins plugin using the Contrast Java SDK"
-tags: "Jenkins SDK Integration Java"
+tags: "tools Jenkins SDK Integration Java"
 -->
 
 ## About The Contrast Jenkins Plugin

@@ -1,7 +1,7 @@
 <!--
 title: "Python SDK"
 description: "Install and use Python SDK"
-tags: "python sdk agent installation develop"
+tags: "tools access python sdk agent installation develop"
 -->
 
 

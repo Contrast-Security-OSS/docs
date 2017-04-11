@@ -1,7 +1,7 @@
 <!--
 title: "Supported Systems for Eclipse"
 description: "Supported Systems for Eclipse"
-tags: "eclipse configurations"
+tags: "tools eclipse configurations"
 -->
 
 ## Eclipse Versions

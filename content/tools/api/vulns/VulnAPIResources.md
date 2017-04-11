@@ -1,7 +1,7 @@
 <!--
-title: "Trace API Resources"
-description: "Resource Guide to Traces"
-tags: "v2 API trace"
+title: "Vulnerability API Resources"
+description: "Resource Guide to Vulnerabilities"
+tags: "tools vulnerability v2 API"
 -->
 
 

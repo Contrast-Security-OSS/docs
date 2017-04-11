@@ -1,7 +1,7 @@
 
 <!--title: "Getting Started with the Contrast Java SDK"\
 description: "Overview of how to use the Contrast Java SDK"\
-tags: " SDK Java Intro"-->
+tags: "tools SDK Java Intro"-->
 
 
 ## What Is An SDK?

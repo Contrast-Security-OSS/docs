@@ -1,7 +1,7 @@
 <!--
 title: "Get Application Vulnerabilities"
 description: "Information on how to get application vulnerabilities"
-tags: "API v1"
+tags: "tools vulnerability API v1"
 -->
 
 ## The "/s/api/traces/{appld}" Service

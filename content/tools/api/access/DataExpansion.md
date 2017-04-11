@@ -1,7 +1,7 @@
 <!--
 title: "Data Expansion"
 description: "Information on data expansion"
-tags: "API v2 data expansion HATEOS"
+tags: "tools API v2 data expansion HATEOS"
 -->
 
 Any data enclosed in a HATEOAS link as a **GET** for a resource can be expanded to be included in the resource result itself. To add a **Data Expansion** to an API call, you will add the ```expand``` parameter to the API Resource call. Each of the resources listed in this documentation lists the data available for expansion under the resource being queried.

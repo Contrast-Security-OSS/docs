@@ -1,7 +1,7 @@
 <!--
 title: "Response Codes"
 description: "List of response codes"
-tags: "API response codes"
+tags: "tools API response codes"
 -->
 
 Response Status Code | Description

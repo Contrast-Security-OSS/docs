@@ -1,7 +1,7 @@
 <!--
 title: "Contrast Bamboo Plugin"
 description: "Bamboo build plugin using the Contrast Java SDK"
-tags: "Bamboo SDK Integration Java Continuous Integration"
+tags: "tools Bamboo SDK Integration Java Continuous Integration"
 -->
 
 This plugin adds functionality to Bamboo so that you can configure profiles for connecting to Contrast and verify builds against vulnerability thresholds.

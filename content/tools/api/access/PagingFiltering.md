@@ -1,7 +1,7 @@
 <!--
 title: "Paging And Filtering"
 description: "Information on paging and filtering"
-tags: "API v2 filtering paging"
+tags: "tools API v2 filtering paging"
 -->
 
 The following parameters can be used for **paging and filtering** results on GET calls that return multiple results.
