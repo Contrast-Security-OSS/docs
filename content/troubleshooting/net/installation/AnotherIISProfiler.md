@@ -1,6 +1,6 @@
 <!--
 title: "Contrast.NET Service Cannot Start with Another Profiler Attached to IIS"
-description: "Troubleshooting guide for .NET agent issues"
+description: "Troubleshoot guide for .NET agent issues"
 -->
 
 ## Symptoms

@@ -1,7 +1,7 @@
 <!--
 title: "TeamServer Does Not Recognize Third Party .NET Libraries"
 description: "Troubleshooting guide for .NET agent issues"
-tags: "libraries troubleshooting agent .Net"
+tags: "libraries troubleshoot agent .Net"
 -->
 
 

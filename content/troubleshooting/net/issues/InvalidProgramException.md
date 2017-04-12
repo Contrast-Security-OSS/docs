@@ -1,6 +1,6 @@
 <!--
 title: "InvalidProgramException Using .NET Agent and Ninject"
-description: "Troubleshooting guide for .NET agent issues"
+description: "Troubleshoot guide for .NET agent issues"
 -->
 
 ## Symptoms

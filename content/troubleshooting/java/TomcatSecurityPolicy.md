@@ -1,7 +1,7 @@
 <!--
 title: "How to Handle Tomcat's Java Security Policy"
 description: "How to Handle Tomcat's Java Security Policy"
-tags: "java agent tomcat security policy"
+tags: "troubleshoot java agent tomcat security policy"
 -->
 
 Some Java applications define custom permissions enforced via the ***catalina.policy*** file in ***$CATALINA_BASE/conf/catalina.policy***. When applications run with this Java security policy, the Contrast Java agent requires an additional grant of permission to the agent JAR file. Without this permission, the application will either fail to instrument, or potentially fail to execute correctly. For more information about the ```catalina.policy``` please [read this](https://tomcat.apache.org/tomcat-7.0-doc/security-manager-howto.html).

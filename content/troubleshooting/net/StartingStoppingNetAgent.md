@@ -1,7 +1,7 @@
 <!--
 title: "Starting And Stopping The .NET Agent"
 description: "How to start and stop the .NET agent"
-tags: "starting stopping agent .Net"
+tags: "troubleshoot starting stopping agent .Net"
 -->
 
 The Contrast.NET Agent can be started to turn on analysis or stopped to temporarily disable analysis. The agent can be started or stopped by using shortcuts (**Start > Programs > Contrast.NET > Start Agent or Stop Agent**), or by right-clicking on the **Contrast Tray** and selecting the desired option as shown below:

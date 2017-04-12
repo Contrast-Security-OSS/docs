@@ -1,7 +1,7 @@
 <!--
 title: "A Particular Resource Returns 0 Bytes Under Contrast.NET"
 description: "Troubleshooting guide for .NET agent issues"
-tags: "zero bytes agent installation .Net"
+tags: "troubleshoot zero bytes agent installation .Net"
 -->
 
 

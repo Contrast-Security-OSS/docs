@@ -1,7 +1,7 @@
 <!--
 title: "Reason For "OutOfMemoryError" When Running Contrast Java Agent"
 description: "Explanation for the OutOfMemoryError"
-tags: "java agent memory"
+tags: "troubleshoot java agent memory"
 -->
 
 #### Contrast needs some of its own memory. Bump it up a bit!

@@ -1,7 +1,7 @@
 <!--
 title: "Troubleshooting the Agent"
 description: "Troubleshooting guide for the agent installation process."
-tags: "java agent troubleshooting installation guide"
+tags: "java agent troubleshoot installation guide"
 -->
 
 ## Scenario: I see "-javaagent failed, missing ZIP or bad..." error when starting up 

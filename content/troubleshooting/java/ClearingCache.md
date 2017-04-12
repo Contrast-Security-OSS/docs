@@ -1,7 +1,7 @@
 <!--
 title: "How to clear your agent cache"
 description: "Troubleshooting the Java Agent Cache"
-tags: "java agent troubleshoot clear cache"
+tags: "troubleshoot java agent clear cache"
 -->
 
 ## What is the agent cache?

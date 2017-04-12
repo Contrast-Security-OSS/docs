@@ -1,7 +1,7 @@
 <!--
 title: "Improving Startup Performance"
 description: "Instructions on improving startup performance"
-tags: "java agent performance IBM JDK startup quickstart skip cache"
+tags: "troubleshoot java agent performance IBM JDK startup quickstart skip cache"
 -->
 
 The time for an application to start up, referred to as **startup performance**, can be affected when Contrast is configured for assessment purposes. The startup is a crucial time for the agent, as the main operation involves analyzing libraries for reporting purposes. Many applications are affected by **20% to 30%** as part of the startup cost for security analysis. Some applications can be affected by **2x to 3x** depending on the number of libraries loaded and the configuration of the **Permanent Generation** space.
