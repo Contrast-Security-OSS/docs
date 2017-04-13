@@ -11,24 +11,24 @@ The Contrast configuration file ***DotnetAgentService.exe.config*** contains sev
 
 | Parameter                                             | Description                                                                                                                             |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| TeamServerUrl                                         | This value overrides the TeamServer URL that's packaged with the agent. This can be useful for networks that proxy the information. |
+| TeamServerUrl                                         | Overrides the TeamServer URL that's packaged with the agent. This can be useful for networks that proxy the information. |
 | *ProxyAuth*, *ProxyUser*, *ProxyPass*, *ProxyAddress* | Controls the proxy (if any) to be used by the agent to connect to TeamServer. |
-| TlsVersion                                            | Controls the version of TLS the agent will use to communicate with TeamServer. Valid TlsVersion values include: *Tls*, *Tls11*, *Tls12*. Agent default behavior is (*SecurityProtocolType.Tls* &#124; *SecurityProtocolType.Tls11* &#124; *SecurityProtocolType.Tls12* ) |
-| RestartIISOnConfigChange                              | Restarts IIS in the background if any of the following configuration settings are changed: *ProcessBlacklist*, *ProcessWhitelist*, *ProfilerBehavior*, *ResponseUrlWhiteListRegex*. The default value is *true*. If set to *false*, you must restart IIS for changes to the noted configuration settings to take effect. | 
-| AutoUpdateEnabled                                     | Controls whether or not the agent automatically updates to a newer version if a newer version is available on TeamServer. The default value is *true*. If set to *false* then the agent doesn't automatically update.  | 
-| Contrast.AppVersion                                   | *(Contrast Agent v.3.3.6 and above.)*  Controls the application version tag sent to TeamServer. Note that setting **Contrast.AppVersion** in the agent's configuration file uses the same version tag for all applications that do NOT have **Contrast.AppVersion** set in their *web.config* file. See [Application-Specific Settings](user_netconfig.html#apps). |
+| TlsVersion                                            | Controls the version of TLS the agent uses to communicate with TeamServer. Valid TlsVersion values include: *Tls*, *Tls11*, *Tls12*. Agent default behavior is (*SecurityProtocolType.Tls* &#124; *SecurityProtocolType.Tls11* &#124; *SecurityProtocolType.Tls12* ) |
+| RestartIISOnConfigChange                              | Restarts IIS in the background if any of the following configuration settings are changed: *ProcessBlacklist*, *ProcessWhitelist*, *ProfilerBehavior* or *ResponseUrlWhiteListRegex*. The default value is *true*. If set to *false*, you must restart IIS for changes to the noted configuration settings to take effect. | 
+| AutoUpdateEnabled                                     | Controls whether or not the agent automatically updates to a newer version if a newer version is available on TeamServer. The default value is *true*. If set to *false*, the agent doesn't automatically update.  | 
+| Contrast.AppVersion                                   | * Applies to Contrast Agent v.3.3.6 and above.* Controls the application version tag sent to TeamServer. Note that setting *Contrast.AppVersion* in the agent's configuration file uses the same version tag for all applications that do NOT have *Contrast.AppVersion* set in their *web.config* file. See [Application-Specific Settings](user_netconfig.html#apps) for more details. |
 
 
 ## Diagnostics
 More detailed levels of logging degrade performance but may generate useful information for debugging Contrast. The default value is *warn*. 
 
-| LogLevel | Controls the *logging* level |
+| LogLevel | Controls the logging level |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| error    | Only log error conditions such as un-handled exceptions.                                                                                                                        |
-| warn     | Error messages plus unexpected conditions that do not impact the agent.                                                                                                         |
-| info     | Error and warn messages plus general information about the agent's sensors (startup, shutdown, start/end of requests, etc.)                                                     |
-| debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request).                                                             |
-| trace    | All of the above and every trace event is logged (e.g. *String.Concat*). This logging level greatly degrades performance.                                                       |
+| Error    | Only log error conditions, such as unhandled exceptions                                                                                                                      |
+| Warn     | Error messages plus unexpected conditions that don't impact the agent                                                                                                         |
+| Info     | Error and warn messages plus general information about the agent's sensors (startup, shutdown, start and end of requests, etc.)                                                     |
+| Debug    | All of the above plus some high-level debugging information (e.g. number of vulnerabilities detected for a request)                                                             |
+| Trace    | All of the above as well as logging every trace event (e.g. *String.Concat*); this logging level greatly degrades performance                                                       |
 
 <br />
 
