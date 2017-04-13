@@ -1,7 +1,7 @@
 <!--
 title: "Enabling and Disabling MySQL Logging"
 description: "Enabling and Disabling MySQL Logging for Increased Database Telemetry"
-tags: "EOP mysql logging slow query"
+tags: "troubleshoot setup EOP mysql logging slow query"
 -->
 
 ## Logging Database Queries With The Embedded MySQL

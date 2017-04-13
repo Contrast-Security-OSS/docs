@@ -1,7 +1,7 @@
 <!--
 title: "Configuring Crawler to Connect to TeamServer After Rotating Service Keys"
 description: "Configuring Crawler to Connect to TeamServer After Rotating Service Keys."
-tags: "crawler configuration API Base64 phantomJS"
+tags: "troubleshoot authentication crawler configuration API Base64 phantomJS"
 -->
 
 ## Who Should Read This Article

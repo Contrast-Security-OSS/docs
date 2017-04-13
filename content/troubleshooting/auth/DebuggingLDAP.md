@@ -1,7 +1,7 @@
 <!--
 title: "Debugging the Configuration of Active Directory or LDAP authentication services."
 description: "Debugging the Configuration of Active Directory or LDAP authentication services."
-tags: "Debug LDAP AD logging"
+tags: "troubleshoot authentication Debug LDAP AD logging"
 -->
 
 ## Who Should Read this Article

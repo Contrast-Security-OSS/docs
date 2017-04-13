@@ -1,7 +1,7 @@
 <!--
 title: "Does Contrast Change Application Data?"
 description: "Answer to whether Contrast changes application data"
-tags: "TeamServer application data troubleshooting"
+tags: "troubleshoot setup FAQ TeamServer application data"
 -->
 
 #### No.

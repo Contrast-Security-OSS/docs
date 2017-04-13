@@ -1,7 +1,7 @@
 <!--
 title: "ActiveMQ Persistent Store Full"
 description: "ActiveMQ Disk Persistence"
-tags: "activemq disk disc full"
+tags: "troubleshoot setup FAQ activemq disk disc full"
 -->
 
 ## Disk Full (ActiveMQ)

@@ -1,7 +1,7 @@
 <!--
 title: "Uninstalling TeamServer"
 description: "Instructions for removing TeamServer."
-tags: "EOP Uninstall TeamSerer installer remove"
+tags: "troubleshoot setup EOP Uninstall TeamSerer installer remove"
 -->
 
 ## About Uninstallation

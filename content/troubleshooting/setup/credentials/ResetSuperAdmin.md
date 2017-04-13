@@ -1,7 +1,7 @@
 <!--
 title: "Reset the superadmin password"
 description: "EOP resetting of the SuperAdmin password"
-tags: "SuperAdmin EOP reset system"
+tags: "troubleshoot setup credentials SuperAdmin EOP reset system"
 -->
 
 ## Use this procedure to reset the superadmin password in the Contrast TeamServer for Windows:

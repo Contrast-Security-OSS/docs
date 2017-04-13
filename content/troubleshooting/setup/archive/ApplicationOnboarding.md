@@ -1,7 +1,7 @@
 <!--
 title: "My server appears on the Contrast site, but my application does not."
 description: "Troubleshooting the on-boarding of an application agent."
-tags: "TeamServer application on-boarding troubleshooting"
+tags: "troubleshoot setup FAQ TeamServer application on-boarding"
 -->
 
 ## Scenario: Your application hasn't been browsed to yet.

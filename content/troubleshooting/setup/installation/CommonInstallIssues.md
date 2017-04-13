@@ -1,7 +1,7 @@
 <!--
 title: "Troubleshooting the Installation"
 description: "Common issues encountered by customers while installing the TeamServer EOP."
-tags: "EOP installation troubleshooting migration flyway"
+tags: "troubleshoot setup FAQ EOP installation migration flyway"
 -->
 
 ## Corrupt Binary

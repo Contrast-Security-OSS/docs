@@ -1,7 +1,7 @@
 <!--
 title: "Troubleshooting Issues with Contrast Java SDK"
 description: "Troubleshooting Issues with Contrast Java SDK"
-tags: "Issues Github SDK Java"-->
+tags: "troubleshoot Issues Github SDK Java"-->
 
 
 While using the Contrast Java SDK, there are a few issues to look out for that are easy to catch early on in development. 

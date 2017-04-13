@@ -1,7 +1,7 @@
 <!--
 title: "Generating a HAR File"
 description: "Instructions on How To Generate a HAR File For Front End Debugging"
-tags: "TeamServer FAQ HAR debug"
+tags: "troubleshoot setup FAQ TeamServer HAR debug"
 -->
 
 
