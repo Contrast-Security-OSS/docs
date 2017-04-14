@@ -31,6 +31,7 @@ The .NET Contrast Agent can be installed on both 32-bit and 64-bit architectures
 * ASP.NET MVC 2-5
 * ASP.NET Web Forms
 * ASP.NET Web Pages
+* IIS-Hosted ASMX-based Web Services
 * IIS-Hosted Web API
 * IIS-Hosted WCF Services
 
