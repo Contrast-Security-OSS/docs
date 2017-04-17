@@ -1,7 +1,7 @@
 <!--
 title: "Deleting An Application"
 description: "Instructions on how to delete an application"
-tags: "TeamServer application deleting"
+tags: "user manage TeamServer application deleting"
 -->
 
 

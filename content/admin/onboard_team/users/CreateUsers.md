@@ -1,7 +1,7 @@
 <!--
 title: "Creating, Managing and Deleting Users in TeamServer"
 description: "Creating, Managing and Deleting Users in TeamServer"
-tags: "TeamServer user settings license RASP defend protection"
+tags: "Admin onboard TeamServer user settings license RASP defend protection"
 -->
 
 ## Viewing Users in TeamServer
@@ -22,7 +22,7 @@ To view a list of users within a single organization:
 * Search for users by email, name or status.
 
 ## Creating Users
-Users can be created by the System Administrator, as well as by the Organization Administrator. All users created in TeamServer will be required to have a default organization and a default role within that organization. Users can be added directly to TeamServer, one user at a time. Users can also be added via an integration with [Active Directory](admin_tsconfig.html#ad2) or [LDAP](admin_tsconfig.html#ldap).
+Users can be created by the System Administrator, as well as by the Organization Administrator. All users created in TeamServer will be required to have a default organization and a default role within that organization. Users can be added directly to TeamServer, one user at a time. Users can also be added via an integration with [Active Directory](installation_setupauth.html#ad) or [LDAP](installation_setupauth.html#ldap).
 
 ### Creating Users as a System Administrator
 
@@ -69,7 +69,7 @@ Users accounts can be locked based on failed login attempts or for not logging i
 * Click on "Unlock"
 
 ### Granting and Revoking SuperAdmin (System Administration)
-See the following article: [Granting and Revoking SuperAdmin Permissions](admin_tsconfig.html#super)
+See the following article: [Designate SuperAdmins](admin_manageorgs.html#sa)
 
 ### Impersonating Users 
 Users granted the SuperAdmin permission have the ability impersonate a user account. Impersonation allows a SuperAdmin user to become the account of another named user and view their organization content.

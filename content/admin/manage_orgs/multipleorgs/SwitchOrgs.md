@@ -1,7 +1,7 @@
 <!--
 title: "Toggling Across Organizations"
 description: "Moving from one organization to another from the user menu"
-tags: "TeamServer toggling"
+tags: "Admin manage multiple TeamServer toggling"
 -->
 
 Once a user's account has been configured to gain access to multiple organizations via one or more organization groups, the user is presented with an option to move between organizations via the User Menu.

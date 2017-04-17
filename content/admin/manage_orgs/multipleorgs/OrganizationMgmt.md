@@ -1,7 +1,7 @@
 <!--
 title: "Organizations Management"
 description: "Overview of Supporting Multiple Organizations"
-tags: "SuperAdmin EOP Organizations"
+tags: "Admin manage multiple SuperAdmin EOP Organizations"
 -->
 
 ## Deploying Multiple Organizations

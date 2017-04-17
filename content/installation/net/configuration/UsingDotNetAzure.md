@@ -1,7 +1,7 @@
 <!--
 title: "Using Contrast .NET on Microsoft Azure"
 description: "Using Contrast .NET on Microsoft Azure"
-tags: "microsoft azure cloud agent installation .Net"
+tags: "configuration microsoft azure cloud agent installation .Net"
 -->
 
 The Contrast .NET Agent can be used to analyze ASP.NET applications running on Azure Virtual Machines, Cloud Services, or Mobile Services.  Unfortunately, Contrast cannot be used on Azure Websites at this time.

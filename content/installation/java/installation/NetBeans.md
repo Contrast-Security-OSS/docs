@@ -38,4 +38,4 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 ## See Also
 
-[Running Contrast on GlassFish with NetBeans](user_javainstall.html#glassnetbeans)
+[Running Contrast on GlassFish with NetBeans](installation_javainstall.html#glass)

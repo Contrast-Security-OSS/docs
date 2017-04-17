@@ -1,7 +1,7 @@
 <!--
 title: "Using The .NET Agent With A TeamServer Using A Self-Signed SSL Certificate"
 description: "Instructions on using the .NET agent with a TeamServer and self-signed SSL certificate"
-tags: "SSL certifications agent installation .Net"
+tags: "configuration SSL certifications agent installation .Net"
 -->
 
 By default, the .NET framework doesn't allow SSL connections that can't be validated. If the **Contrast.NET Agent** is attempting to connect to a TeamServer with a self-signed SSL certificate, it could give the following error message:

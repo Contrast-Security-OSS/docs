@@ -1,3 +1,8 @@
+<!--
+title: "Java Agent System Properties"
+description: "Overview of java agent system properties"
+tags: "installation java agent configuration system properties"
+-->
 
 ## General Properties
 You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
@@ -167,13 +172,13 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 
 ## See Also
 
-[An Application Is Not Appearing In The List](user_tsfaq.html#list)
+[An Application Is Not Appearing In The List](troubleshooting_setup.html#missing)
 
-[Getting Contrast Java Agent Logs](user_javafaq.html#log)
+[Getting Java Agent Logs](troubleshooting_java.html#logs)
 
-[Java Agent Bytecode Changes](user_javaconfig.html#bytecode)
+[Java Agent Bytecode Changes](installation_javaconfig.html#bytecode)
 
-[Working With Contrast's Java Agent Cache](user_javaconfig.html#cache)
+[Clearing the Java Agent Cache](troubleshooting_java.html#cache)
 
-[Sampling](user_tsfaq.html#sample)
+[Sampling](admin_orgsettings.html#server)
 

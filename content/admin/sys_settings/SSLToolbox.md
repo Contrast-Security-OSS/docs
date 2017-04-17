@@ -1,7 +1,7 @@
 <!--
 title: "Common Java Keytool Commands"
 description: "Common Keytool commands and workflows"
-tags: "configuration SSL EOP administration tools keytool openssl"
+tags: "Admin system settings configuration SSL EOP tools keytool openssl"
 -->
 
 ## Who Should Read This Document

@@ -1,7 +1,7 @@
 <!--
 title: "Configuring TeamServer as a Distributed Deployment"
 description: "Instructions for configuring TeamServer in a distributed fashion by separating the application/container from the database."
-tags: "EOP distributed configuration database scalability"
+tags: "installation setup EOP distributed configuration database scalability"
 -->
 
 # Who Should Read this Document
@@ -33,7 +33,7 @@ We have written documentation for deploying a distributed TeamServer in two simp
 * Step 1: Database (MySQL)
 * Step 2: Application Server (Tomcat)
 
-All documentation assumes that you have previously installed Teamserver using the provided installer artifact from Hub.  If you need to go back and setup TeamServer again [click here](admin_tsinstall.html#install).  
+All documentation assumes that you have previously installed Teamserver using the provided installer artifact from Hub.  If you need to go back and setup TeamServer again [click here](installation_setupinstall.html#download).  
 
 #### Notes
 We've provided several code samples using an automation framework called [Ansible](https://www.ansible.com/). Feel free to use our code samples as a starting point for your own configuration. We are also big fans of Ubuntu, which we also use in our examples. We can assure you that the configuration runs on all of our supported platforms. You might have to make some slight changes to our scripts to run against other operating systems.
@@ -44,16 +44,16 @@ With a few changes it is possible to utilize an external MySQL database with you
 
 1. Install and Configure MySQL 5.6 on database server host.  We recommend 5.6.28.  
 2. Create maintenance window for TeamServer downtime.
-3. [Backup the embedded MySQL Database](admin_tsinstall.html#backup)
-4. [Restore the database](admin_tsinstall.html#backup) to an external MySQL Database
-5. [Update the TeamServer configuration](admin_tsinstall.html#encrypt) to utilize the new external database host.
+3. [Backup the embedded MySQL Database](installation_setup.html#mysql)
+4. [Restore the database](installation_setup.html#mysql) to an external MySQL Database
+5. [Update the TeamServer configuration](installation_setupconfig.html#encrypt) to utilize the new external database host.
 6. Restart your TeamServer and end the maintenance window.
 
 
 ### Installation and Configuration of MySQL Server
 We recommend running TeamServer with MySQL 5.6.28 but TeamServer will work with other versions of MySQL 5.6.x on Windows and Linux.  We recommend working with your Operations and/or Database team to ensure a secure and durable installation.  
 
-Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml)) is a snippet of Ansible that you could use to install the latest MySQL 5.6 on Ubuntu 14.04.   
+Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml) is a snippet of Ansible that you could use to install the latest MySQL 5.6 on Ubuntu 14.04.   
 
 ```
 - hosts: mysql
@@ -106,7 +106,7 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql
 
 ### Taking a Backup of MySQL
 
-To backup your database, you can use the embedded tool with your EOP installation.  For more information, see the [reference](admin_tsconfig.html#backup) in the documentation.
+To backup your database, you can use the embedded tool with your EOP installation.  For more information, see the [reference](installation_setup.html#mysql) in the documentation.
 
 ```
 $CONTRAST_HOME/bin/backup_db.sh

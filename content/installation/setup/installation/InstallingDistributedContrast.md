@@ -1,14 +1,14 @@
 <!--
 title: "Configuring Contrast as a Distributed Deployment"
 description: "Instructions for configuring TeamServer in a distributed fashion by separating the application/container from the database."
-tags: "EOP distributed configuration database scalability"
+tags: "installation setup EOP distributed configuration database scalability"
 -->
 
 ## Who Should Read This Document
 This guide is for Enterprise-On-Premises (EOP) administrators who want to move away from the bundled, self-contained Contrast configuration in favor of a distributed configuration in which the database and application server are deployed on separate servers. Most customers will not have the need to configure a distributed TeamServer. Customers who do fit this profile are likely running with 100 or more connected agents and are seeking greater performance and scalability. These configurations are introduced in Contrast TeamServer 3.3.2.
 
 ## About Distributing The Contrast Configuration
-EOP customers typically install and update the Contrast TeamServer by downloading the installer/updater artifact from the [Contrast Hub](https://hub.contrastsecurity.com). Instructions can be found [here](admin_tsinstall.html#install).
+EOP customers typically install and update the Contrast TeamServer by downloading the installer/updater artifact from the [Contrast Hub](https://hub.contrastsecurity.com). Instructions can be found [here](installation_setupinstall.html#download).
 
 Some customers have the need to run a more advanced configuration. This document is intended for such customers, who require additional administration and management by an EOP administrator. We have simplified the configuration of TeamServer for EOP administrators to run their own installations of Java, MySQL, and Tomcat, as long as they conform to our version requirements.
 
@@ -55,7 +55,7 @@ After the installation is complete, the TeamServer will perform its initial conf
 ```
 
 ## Convert A Default DB Installation Into A Distributed Installation
-Edit the encrypted file `$CONTRAST_HOME/data/conf/database.properties` using the [encrypted editor](admin_tsconfig.html#encrypt). Look for `database.type`, create it as a new property if it does not exist. This property can either be `default` or `distributed`. Since we are setting up a distributed installation, set this value to `distributed` and modify the database connection values to point to a distributed database you would like to use. [Restart TeamServer](admin_tsinstall.html#run) for changes to take affect.  
+Edit the encrypted file `$CONTRAST_HOME/data/conf/database.properties` using the [encrypted editor](installation_setupconfig.html#encrypt). Look for `database.type`, create it as a new property if it does not exist. This property can either be `default` or `distributed`. Since we are setting up a distributed installation, set this value to `distributed` and modify the database connection values to point to a distributed database you would like to use. [Restart TeamServer](installation_setupinstall.html#restart) for changes to take affect.  
 
 ```
 user@ubuntu:/opt/contrast/bin$ ./edit-properties  -e ../data/esapi/ -f ../data/conf/database.properties

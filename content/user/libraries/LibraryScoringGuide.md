@@ -1,7 +1,7 @@
 <!--
 title: "Library Scoring Guide"
 description: "Explanation of library scoring"
-tags: "TeamServer application library scoring guide"
+tags: "TeamServer application user library scoring guide"
 -->
 
 Contrast provides letter grades to let you know, in general, how secure the libraries of your application are. It's a composite score based upon: 

@@ -1,7 +1,7 @@
 <!--
   title: "System Requirements",
   description: "Minimum system requirements for running the EOP TeamServer",
-  tags: "EOP requirements installation sizing libraries libaio"
+  tags: "setup EOP requirements installation sizing libraries libaio"
 -->
 
 ## Preparing for the Installation

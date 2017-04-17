@@ -1,7 +1,7 @@
 <!--
 title: "Using the Encrypted Property Editor"
 description: "Instructions for editing encrypted property files using the encrypted properties editor."
-tags: "EOP encryption ESAPI SuperAdmin"
+tags: "installation setup config EOP encryption ESAPI SuperAdmin"
 -->
 
 ## Getting Started

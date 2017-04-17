@@ -1,7 +1,7 @@
 <!--
 title: "Security API Keys"
 description: "About article for the TeamServer API Keys"
-tags: "security API keys configuration administration"
+tags: "Admin system settings security API keys configuration"
 -->
 
 ## Getting Started

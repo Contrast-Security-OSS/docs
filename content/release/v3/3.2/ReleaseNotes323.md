@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.2.3 - December 2015"
 description: "Contrast 3.2.3 December 2015"
+tags: "3.2.3 December Release Notes"
 -->
 ## Java Agent
 * CONTRAST-4612: Refactor library class usage out of APPUPDATE and into APPACTIVITY

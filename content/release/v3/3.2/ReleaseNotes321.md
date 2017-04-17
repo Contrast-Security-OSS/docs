@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.2.1 - Patch Release November 11, 2015"
 description: "Contrast 3.2.1 - October 26, 2015"
+tags: "3.2.1 November Release Notes"
 -->
 
 ## Critical Java Vulnerability Issue Addressed

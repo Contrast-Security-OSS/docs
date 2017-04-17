@@ -1,10 +1,10 @@
 <!--
 title: "Instrumentation .NET Agent Data Flow Engine"
 description: "Instrumentation .NET Agent Data Flow Engine"
-tags: "microsoft Instrumentation agent installation .Net"
+tags: "configuration microsoft Instrumentation agent installation .Net"
 -->
 
-Beginning with version 3.2.4, the Contrast .NET Agent includes an entirely new method of tracking data flow through analyzed .NET 4+ (CLR4) web applications.  By default, the .NET Agent uses the instrumentation data flow engine against web applications running on CLR4 and will use the old Enter-Leave-based data flow engine against CLR2 applications. Users who wish to revert to the old data flow engine for all applications can do so by changing the ```ProfilerBehavior``` configuration setting to ```2``` in the ***DotnetAgentService.exe.config*** file. (The default values for ```ProfilerBehavior``` is ```3```, see [.NET Agent Configuration](user_netconfig.html#config))
+Beginning with version 3.2.4, the Contrast .NET Agent includes an entirely new method of tracking data flow through analyzed .NET 4+ (CLR4) web applications.  By default, the .NET Agent uses the instrumentation data flow engine against web applications running on CLR4 and will use the old Enter-Leave-based data flow engine against CLR2 applications. Users who wish to revert to the old data flow engine for all applications can do so by changing the ```ProfilerBehavior``` configuration setting to ```2``` in the ***DotnetAgentService.exe.config*** file. (The default values for ```ProfilerBehavior``` is ```3```, see [.NET Agent Configuration](installation_netconfig.html#config)
 
 The new instrumentation engine offers a number of benefits, including: 
 

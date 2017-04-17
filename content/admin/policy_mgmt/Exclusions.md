@@ -1,7 +1,7 @@
 <!--
 title: "Application Exclusions"
 description: "Overview of application exclusions in TeamServer"
-tags: "application exclusions suppress events"
+tags: "Admin policy application exclusions suppress events"
 -->
 
 Exclusions are used to suppress events that you don't want to hear about for one reason or another – usually because there's a compensating control that isn't visible from the application perspective. For example:

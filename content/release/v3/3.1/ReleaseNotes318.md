@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.1.8 Release Notes - July 13, 2015"
 description: "Contrast 3.1.8 Release Notes - July 13, 2015"
+tags: "3.1.8 July Release Notes"
 -->
 
 ## Java Agent

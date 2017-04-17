@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 1.0.0-BETA-P10 Release Notes, August 21st, 2012"
 description: "Contrast 1.0.0-BETA-P10 Release Notes, August 21st, 2012"
+tags: "1.0.0 Beta P10 August Release Notes"
 -->
 
 ## New Features:

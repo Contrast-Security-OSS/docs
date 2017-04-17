@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.1.0 Release Notes, October 3, 2014"
 description: "Contrast 3.1.0 Release Notes, October 3, 2014"
+tags: "3.1.0 October Release Notes"
 -->
 
 ## New Features

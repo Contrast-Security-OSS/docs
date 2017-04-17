@@ -1,7 +1,7 @@
 <!--
 title: "Understanding User Permissions"
 description: "Understanding User Permissions"
-tags: "TeamServer permissions"
+tags: "Admin manage TeamServer permissions"
 -->
 
 User permissions are dictated by access control groups. These groups provide the ability to define capabilities and restrictions to a set of users at either the System or Organization level. Permissions are defined within each access control group and leverage predefined roles as the input for allowing or restricting capability within the system.

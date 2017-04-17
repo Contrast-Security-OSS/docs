@@ -1,7 +1,7 @@
 <!--
 title: "Managing Applications"
 description: "Overview of the core operations for an application from the action bar."
-tags: "TeamServer application archiving restoring resetting deleting"
+tags: "user TeamServer application manage archiving restoring resetting deleting"
 -->
 
 ## Managing Applications

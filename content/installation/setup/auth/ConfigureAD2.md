@@ -1,7 +1,7 @@
 <!--
 title: "Configuring Active Directory"
 description: "TeamServer can be configured to connect to a Microsoft Active Directory."
-tags: "AD Microsoft Directory configuration authentication DN"
+tags: "installation setup AD Microsoft Directory configuration authentication DN"
 -->
 
 ## Getting Started

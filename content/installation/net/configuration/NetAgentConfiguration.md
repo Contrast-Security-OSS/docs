@@ -1,7 +1,7 @@
 <!--
 title: ".NET Agent Configuration"
 description: "Guide to configuring .NET agent settings"
-tags: "microsoft agent configuration settings .Net"
+tags: "installation microsoft agent configuration settings .Net"
 -->
 
 The Contrast Service's configuration file (***DotnetAgentService.exe.config***) contains several settings that can be modified to change the .NET agent's behavior.  Starting with version 3.2.7, the .NET Agent will automatically start using new configuration values when this file is edited.  Prior to 3.2.7, the .NET Agent's service must be restarted in order for configuration changes to take effect. 
@@ -16,7 +16,7 @@ The Contrast Service's configuration file (***DotnetAgentService.exe.config***) 
 | TlsVersion                                            | Controls the version of TLS the agent will use to communicate with TeamServer. Valid TlsVersion values include: *Tls*, *Tls11*, *Tls12*. Agent default behavior is (*SecurityProtocolType.Tls* &#124; *SecurityProtocolType.Tls11* &#124; *SecurityProtocolType.Tls12* ) |
 | RestartIISOnConfigChange                              | Will restart IIS in the background if any of the following configuration settings are changed: *ProcessBlacklist*, *ProcessWhitelist*, *ProfilerBehavior*, *ResponseUrlWhiteListRegex*. The default value is *true*. If set to *false* then IIS must be restarted by the user in order for changes to the noted configuration settings to take effect. | 
 | AutoUpdateEnabled                                     | Controls whether or not the agent will automatically update to a newer version if a newer version is available on TeamServer. The default value is *true*. If set to *false* then the agent will not automatically update.  | 
-| Contrast.AppVersion                                   | *(Contrast Agent v.3.3.6 and above.)*  Controls the application version tag sent to TeamServer. Note that setting **Contrast.AppVersion** in the agent's configuration file will use the same version tag for all applications that do NOT have **Contrast.AppVersion** set in their *web.config* file. See [Application-Specific Settings](user_netconfig.html#apps). |
+| Contrast.AppVersion                                   | *(Contrast Agent v.3.3.6 and above.)*  Controls the application version tag sent to TeamServer. Note that setting **Contrast.AppVersion** in the agent's configuration file will use the same version tag for all applications that do NOT have **Contrast.AppVersion** set in their *web.config* file. See [Application-Specific Settings](installation_netconfig.html#appname). |
 
 
 ## Diagnostics
@@ -83,10 +83,10 @@ More detailed levels of logging will degrade performance but may generate useful
 
 ## See Also
 
-[Getting .NET Agent Logs](user_netinstall.html#logs)
+[Getting .NET Agent Logs](troubleshooting_net.html#logs)
 
-[Sampling](user_tsfaq.html#sample)
+[Sampling](admin_orgsettings.html#server)
 
-[.NET Application Pool Filtering](user_netconfig.html#pool)
+[.NET Application Pool Filtering](installation_netconfig.html#pool)
 
-[Application-Specific Settings](user_netconfig.html#apps)
+[Application-Specific Settings](installation_netconfig.html#appname)

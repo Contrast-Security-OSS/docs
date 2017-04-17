@@ -1,7 +1,7 @@
 <!--
 title: "Connect &amp; Authenticate"
 description: "Overview of connection and authentication topics"
-tags: "EOP IP address hostname system settings connect authenticate"
+tags: "Admin EOP IP address hostname system settings connect authenticate"
 -->
 
 ## Update IP Address

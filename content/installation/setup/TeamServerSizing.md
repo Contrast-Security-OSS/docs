@@ -1,7 +1,7 @@
 <!--
   title: "TeamServer Sizing Recommendations",
   description: "AWS like sizing guidelines for TeamServer and Crawler",
-  tags: "EOP sizing TS1 TS2 TS3 C1 crawler"
+  tags: "installation setup EOP sizing TS1 TS2 TS3 C1 crawler"
 -->
 
 ## Overview

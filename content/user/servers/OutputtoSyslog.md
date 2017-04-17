@@ -1,7 +1,7 @@
 <!--
 title: "Output to Syslog"
 description: "Overview of how to send protection events to Syslog"
-tags: "Protection Syslog Output"
+tags: "user server Protection Syslog Output"
 -->
 
 This feature allows Java clients to send security logs to a remote Syslog server in addition to the Contrast security log. By sending logs to Syslog, you no longer have to monitor Contrast logs. 

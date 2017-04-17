@@ -1,7 +1,7 @@
 <!--
 title: "Getting Around the Contrast User Interface"
 description: "General overview of the Contrast UI"
-tags: "UI navigation"
+tags: "UI new user navigation"
 -->
 
 The Contrast interface is used for configuring Contrast agent deployments and triaging application weaknesses as we continuously monitor them. The UI provides a single view to analyze application vulnerabilities, discover vulnerable and out-of-date third-party libraries, and detect attacks. We also provide visibility into various environments to see how an application’s hidden risks are being handled through the development cycle. 

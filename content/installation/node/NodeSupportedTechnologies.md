@@ -1,7 +1,7 @@
 <!--
 title: "Supported Technologies"
 description: "List of supported technologies"
-tags: "Node agent frameworks support troubleshooting nodejs javascript modules"
+tags: "installation Node agent frameworks support troubleshooting nodejs javascript modules"
 -->
 Contrast supports Node versions 4 and 6 LTS. We will shift support for Node versions as the Node project shifts its LTS windows. For a schedule, see the [Node.js Long Term Support Release Schedule](https://github.com/nodejs/LTS).
 

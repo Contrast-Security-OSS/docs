@@ -1,7 +1,7 @@
 <!--
 title: "Configuring Single Sign-On (SSO)"
 description: "TeamServer can be configured to utilize Single Sign On Authentication"
-tags: "SSO Single Sign-On configuration authentication"
+tags: "installation setup SSO Single Sign-On configuration authentication"
 -->
 
 ## Getting Started
@@ -115,7 +115,7 @@ From here the user's email is verified with the configured IdP and once matched 
 
 ## See Also
 
-[Troubleshooting SSO](admin_tsfaq.html#sso)
+[Troubleshooting SSO](troubleshooting_auth.html#sso)
 
 <!--
 **Logging Out**

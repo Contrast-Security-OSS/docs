@@ -1,7 +1,7 @@
 <!--
 title: "Security Controls"
 description: "Overview of security controls within TeamServer rules"
-tags: "TeamServer application security controls"
+tags: "Admin policy TeamServer application security controls"
 -->
 
 

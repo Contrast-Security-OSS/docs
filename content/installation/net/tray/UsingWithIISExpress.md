@@ -1,7 +1,7 @@
 <!--
 title: "Using Contrast With IIS Express"
 description: "Guide to using IIS Express"
-tags: "configuration IIS express agent .Net"
+tags: "installation tray configuration IIS express agent .Net"
 -->
 
 Analyzing IIS Express with Contrast is performed using the **Contrast.NET Tray**. If installed, the tray will have a tab for IIS Express.
@@ -42,4 +42,4 @@ If there are no applications listed in the application list:
 
 If using Visual Studio 2015 and you don't see your application in the list:
 
-* See Visual Studio 2015 IIS Express instructions [below](user_netinstall.html#studio)
+* See [Visual Studio 2015 IIS Express Configuration](troubleshooting_netinstall.html#vs)

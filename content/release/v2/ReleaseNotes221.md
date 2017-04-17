@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 2.2.1 Release Notes, July 30th, 2013"
 description: "Contrast 2.2.1 Release Notes, July 30th, 2013"
+tags: "2.2.1 July Release Notes"
 -->
 
 ## New Features

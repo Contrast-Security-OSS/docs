@@ -1,7 +1,7 @@
 <!--
 title: "Level 2 Rules"
 description: "How to add a Level 2 rule to the Java Agent and TeamServer"
-tags: "java agent rules level 2"
+tags: "java agent installation policy rules level 2"
 -->
 
 ## When Should I Use A Level 2 Rule?
@@ -163,7 +163,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 5: Restart The TeamServer
-An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](user_tsfaq.html#restart).
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation_setupinstall.html#restart).
 
 <br>
 
@@ -362,7 +362,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 <br>
 
 #### Step 7: Restart The TeamServer
-An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](user_tsfaq.html#restart).
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation_setupinstall.html#restart).
 
 <br>
 

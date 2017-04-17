@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.0.2 Release Notes, July 31, 2014"
 description: "Contrast 3.0.2 Release Notes, July 31, 2014"
+tags: "3.0.2 July Release Notes"
 -->
 
 ## TeamServer

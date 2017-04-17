@@ -1,7 +1,7 @@
 <!--
 title: "About Access Control"
 description: "Overview of access control groups"
-tags: "TeamServer access groups"
+tags: "Admin onboard TeamServer access groups"
 -->
 
 ## About Access Control

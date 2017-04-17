@@ -1,7 +1,7 @@
 <!--
   title: "Downloading TeamServer from Contrast Hub",
   description: "Guide for EOP administrators to reference when downloading TeamServer binaries and licenses.",
-  tags: "EOP download Hub TeamServer installer installation"
+  tags: "setup EOP download Hub TeamServer installer installation"
 -->
 
 ## Setup an Account on the Contrast Hub

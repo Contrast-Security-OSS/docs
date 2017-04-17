@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 1.0.1 Release Notes, September 14th, 2012"
 description: "Contrast 1.0.1 Release Notes, September 14th, 2012"
+tags: "1.0.1 September Release Notes"
 -->
 
 ## New Features:

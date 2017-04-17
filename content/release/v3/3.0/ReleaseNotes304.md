@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.0.4 Release Notes, August 22, 2014"
 description: "Contrast 3.0.4 Release Notes, August 22, 2014"
+tags: "3.0.4 August Release Notes"
 -->
 
 ## Libraries

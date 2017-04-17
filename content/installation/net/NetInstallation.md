@@ -1,7 +1,7 @@
 <!--
 title: ".Net Agent Installation"
 description: "Installing the Contrast .NET Agent."
-tags: "configuration installation agent .Net"
+tags: "installation agent .Net"
 -->
 ## System Requirements
 
@@ -21,7 +21,7 @@ tags: "configuration installation agent .Net"
 
 Confirm the following:
 * You have administrative access to the web server and the server is supported by Contrast
-* There is a deployed application to be analyzed and the web application [technology](user_netinstall.html#supp) is supported by Contrast
+* There is a deployed application to be analyzed and the web application [technology](installation_net.html#supported) is supported by Contrast
 * The server meets the minimum system requirements (see above)
 * Contrast will be the only profiler present (unless using the Monitor mode added in version 3.3.5)
 * IIS can be restarted
@@ -55,12 +55,12 @@ The Contrast .NET Agent installer supports the command line options below. These
 
 You may wish to customize the behavior of the .NET Agent to better suit your needs.
 
-* [Configure Proxy, Performance, Logging, and Analysis](user_netconfig.html#config)
+* [Configure Proxy, Performance, Logging, and Analysis](installation_netconfig.html#config)
 
-* [Exclude Applications from Analysis](user_netconfig.html#pool)
+* [Exclude Applications from Analysis](installation_netconfig.html#pool)
 
-* [Customize the Server Name](user_netconfig.html#servers)
+* [Customize the Server Name](installation_netconfig.html#server)
 
-* [Customize Application Names](user_netconfig.html#apps)
+* [Customize Application Names](installation_netconfig.html#appname)
 
 Lastly, if you encounter any difficulties using the .NET Agent you can check out our **Troubleshooting** resources.

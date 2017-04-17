@@ -1,7 +1,7 @@
 <!--
 title: "Report Settings"
 description: "Overview of report settings"
-tags: "report settings organization"
+tags: "Admin report settings organization"
 -->
 
 Placeholder article (NEEDS TO BE WRITTEN)

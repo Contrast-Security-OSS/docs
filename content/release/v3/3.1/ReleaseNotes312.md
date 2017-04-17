@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.1.2 Release Notes - December 9, 2014"
 description: "Contrast 3.1.2 Release Notes - Dec 9, 2014"
+tags: "3.1.2 December Release Notes"
 -->
 
 ## On-Premises Installer

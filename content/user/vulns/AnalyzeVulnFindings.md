@@ -1,7 +1,7 @@
 <!--
 title: "Analyze Findings"
 description: "Explanation of vulnerability findings"
-tags: "vulnerabilities analyze findings quick start guide"
+tags: "user vulnerabilities analyze findings quick start guide"
 -->
 
 

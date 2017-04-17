@@ -1,7 +1,7 @@
 <!--
 title: "Configuring Java Runtime Environment"
 description: "Guidelines for configuring the JRE of Contrast TeamServer"
-tags: "Java JRE EOP"
+tags: "installation setup configuration Java JRE EOP"
 -->
 
 ## Changing The JRE

@@ -1,13 +1,13 @@
 <!--
 title: "Getting Started with the .Net Agent"
 description: "Planning for the Contrast .NET Agent."
-tags: "configuration planning agent .Net"
+tags: "installation overview planning agent .Net"
 -->
 
 There are a few things to take into consideration when you are planning to use Contrast to analyze your ASP.NET web applications. The following information should help you prepare your environment for the Contrast .NET agent.
 
 ## Administrative Access to Web Server with Application(s) to Analyze
-You'll need administrative access to the web server in order to install the Contrast .NET Agent. Additionally, the web server should have at least one web application deployed for Contrast to analyze. You'll also want to make sure that the server and application are supported by Contrast; see [.NET Contrast Agent Supported Technologies](user_netinstall.html#supp). Note that the .NET Contrast Agent requires that the machine have .NET Framework 4.5.1+ installed.  This requirement does not extend to applications to be analyzed; the .NET Contrast Agent can analyze web applications that run on CLR 2.0 (.NET 2.0/3.0/3.5) or CLR 4 (.NET 4.0+).
+You'll need administrative access to the web server in order to install the Contrast .NET Agent. Additionally, the web server should have at least one web application deployed for Contrast to analyze. You'll also want to make sure that the server and application are supported by Contrast; see [.NET Contrast Agent Supported Technologies](installation_net.html#supported). Note that the .NET Contrast Agent requires that the machine have .NET Framework 4.5.1+ installed.  This requirement does not extend to applications to be analyzed; the .NET Contrast Agent can analyze web applications that run on CLR 2.0 (.NET 2.0/3.0/3.5) or CLR 4 (.NET 4.0+).
 
 ## Contrast Must Be the Only Profiler 
 By default, the Contrast .NET Agent uses the CLR Profiling API to perform data and code flow analysis (i.e. detect SQL-injection, XSS, weak cryptography, etc.) as well as to detect libraries and technologies in use by the application. The Microsoft CLR has a built-in limitation that only one profiler can profile a process. This limitation comes from Microsoft and their implementation of the CLR. Please note that many performance/APM tools such as New Relic, AppDynamics, etc. also use the CLR Profiling API and therefore cannot be used on the same server as the Contrast .NET Agent.  
@@ -19,7 +19,7 @@ Only one profiler can profile a process at one time in a given environment.
 You can register two different profilers in different environments, but each must profile separate processes.
 ```
 
-As of version 3.3.5, the .NET Agent can be used alongside another profiling tool by enabling Monitor mode. See [.NET Agent Configuration](user_netconfig.html#config) for more information. 
+As of version 3.3.5, the .NET Agent can be used alongside another profiling tool by enabling Monitor mode. See [.NET Agent Configuration](installation_netconfig.html#config) for more information. 
 
 ## Contrast Must Restart IIS 
 

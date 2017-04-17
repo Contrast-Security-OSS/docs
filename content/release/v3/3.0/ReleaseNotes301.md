@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.0.1 Release Notes, July 17, 2014"
 description: "Contrast 3.0.1 Release Notes, July 17, 2014"
+tags: "3.0.1 July Release Notes"
 -->
 
 ## Summary

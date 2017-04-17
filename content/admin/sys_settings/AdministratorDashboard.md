@@ -1,7 +1,7 @@
 <!--
 title: "The Administrator's Dashboard"
 description: "Explanation of Administrator tools"
-tags: "EOP SuperAdmin System Messages Monitoring"
+tags: "Admin settings EOP SuperAdmin System Messages Monitoring"
 -->
 
 In addition to overall visibility into TeamServer, there are some specific tools designed to aid administrators in understanding scaling and performance issues, as well as to help troubleshoot user problems and get the most out of Enterprise Deployment.

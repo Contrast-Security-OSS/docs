@@ -1,7 +1,7 @@
 <!--
   title: "Migrating External Rules from 3.2.6 to 3.2.7+",
   description: "Guide for EOP administrators to reference when migrating their external rules from a 3.2.7 version to the post 3.2.7 version.",
-  tags: "Migrating External Rules 3.2.6 3.2.7 TeamServer Custom Level"
+  tags: "installation setup upgrade Migrating External Rules 3.2.6 3.2.7 TeamServer Custom Level"
 -->
 
 ## Who?
@@ -11,7 +11,7 @@ Any user with external rules for the 3.2.6 (or prior) version of TeamServer inte
 With the release of Contrast 3.2.7, we have partitioned the models associated with our Traces (Contrast's representation of a vulnerable code flow within your application). Rather than have a shared model for both storage and rendering, we have converted our internal Trace object to solely be responsible for data storage and created a new project, *contrast-model*, with an ITrace object responsible for data rendering. This means that any external rule created with the 3.2.6 specifications will need to be updated to the new format and any rules will need to be written to the 3.2.7 specification. 
 
 ## When? 
-These changes will need to be in place between the 3.2.6 and 3.2.7+ versions of Contrast. This means that you will need to have the new rules ready to be released during the 3.2.7+ upgrade process but *BEFORE* actually running the 3.2.7+ installer. Once these rules are complete, shut down TeamServer with the Contrast Server command (See [How To Restart Contrast](user_tsfaq.html#restart) for an example. **Note:** for Linux use *stop* instead of *restart*). After confirming that TeamServer is down, replace the rules in your *${contrast.dir}/data/rulepack* directory with the new versions. Finally, run the 3.2.7+ installer to update TeamServer and bring it back online. 
+These changes will need to be in place between the 3.2.6 and 3.2.7+ versions of Contrast. This means that you will need to have the new rules ready to be released during the 3.2.7+ upgrade process but *BEFORE* actually running the 3.2.7+ installer. Once these rules are complete, shut down TeamServer with the Contrast Server command (See [Restarting Contrast](installation_setupinstall.html#restart) for an example. **Note:** for Linux use *stop* instead of *restart*). After confirming that TeamServer is down, replace the rules in your *${contrast.dir}/data/rulepack* directory with the new versions. Finally, run the 3.2.7+ installer to update TeamServer and bring it back online. 
 
 ## Why?
 To make rule writing easier and more efficient for both you and for us. First, it is our hope that by switching to an interface rather than a concrete object, we will be able to insulate external rules from future internal changes. This will allow us to advance our rule rendering and output, providing the latest update to your custom rules seamlessly, without requiring future code changes. Second, the change eliminates the need for Babelfish-specific versions of the data objects. This reduces code duplication and rule dependencies, making rules easier to write and debug. Third, by making these dependencies an external project separate from TeamServer, we can expose the artifact - allowing for compilation testing and swifter rule development iterations. 
@@ -43,7 +43,7 @@ It can be a little daunting upgrading your rules to be ready for the 3.2.7+ rele
     - **TriggerSecurityRule** ```com.contrastsecurity.interfaces.rule.TriggerSecurityRule```
     - **Trace & BFTrace** ```com.contrastsecurity.interfaces.trace.ITrace```
     - **UniqueMethod & BFMethod** ```com.contrastsecurity.interfaces.trace.IUniqueMethod```.
-A full list of the new imports, as well as their former declarations, can be found in the [Where?](ExternalRulesUpgrade.html#where) section of this instruction set. 
+A full list of the new imports, as well as their former declarations, can be found in the **Where?** section below. 
 12. Anywhere that you instantiate a ```Snippet```, instead call ```ruleHelper.getNewSnippet()```.
 13. Anywhere that you instantiate a ```Story```, instead call ```ruleHelper.getNewStory()```.
 14. Anywhere that you instantiate a ```DataFlowChapter```, instead call ```chapterHelper.getNewDataFlowChapter()```.

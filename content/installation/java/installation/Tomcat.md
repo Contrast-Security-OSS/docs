@@ -31,10 +31,10 @@ Switching to the Java tab will show you where you need to add the ```-javaagent`
 
 Not using startup scripts or the Windows service? Here's how to run Contrast from other Tomcat Launchers:
 
-- [Running Contrast on Tomcat with Maven Apache Tomcat Plugin](user_javainstall.html#apache)
+- [Running Contrast on Tomcat with Maven Apache Tomcat Plugin](installation_javainstall.html#apache)
 
-- [Running Contrast on an Eclipse WTP Application](user_javainstall.html#eclipse)
+- [Running Contrast on an Eclipse WTP Application](installation_javainstall.html#eclipse)
 
-- [Running Contrast on an IntelliJ Application](user_javainstall.html#intellij)
+- [Running Contrast on an IntelliJ Application](installation_javainstall.html#intellij)
 
-- [Running Contrast on a NetBeans Application](user_javainstall.html#netbeans)
+- [Running Contrast on a NetBeans Application](installation_javainstall.html#netbeans)

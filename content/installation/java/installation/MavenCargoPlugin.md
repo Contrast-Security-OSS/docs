@@ -33,6 +33,7 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
   </plugins>
 </build>
 ````
+
 * Run your Maven target or Cargo unit test normally.
 * A Constart startup message should appear in the Console before your server messages appear (allow 1-2 minutes extra time for server startup).
 * Navigate to your application, and allow an extra minute for it to start up.

@@ -1,7 +1,7 @@
 <!--
 title: "Merging and Unmerging Applications"
 description: "Overview of application merging and unmerging"
-tags: "TeamServer application merging"
+tags: "TeamServer user application manage merging"
 -->
 
 ## Merging Applications

@@ -1,11 +1,11 @@
 <!--
 title: "Configuring TeamServer Settings"
 description: "Configuring TeamServer Settings"
-tags: "SuperAdmin EOP configuration system settings"
+tags: "Admin SuperAdmin EOP configuration system settings"
 -->
 
 ## Role Of The SuperAdmin
-The SuperAdmin is an [EOP role](user_tsguideset.html#roles) that has the ability to modify and manage TeamServer System Settings. Individual users can be [granted SuperAdmin](user_tsconfig.html#super) on a case by case basis. Only the SuperAdmin has access to these settings below. Many of these settings are accessible and can be changed via the [Organization Settings](user_tsguide.html#orgset) by an organization administrator. 
+The SuperAdmin is an [EOP role](admin_manageorgsroleperm.html#roles) that has the ability to modify and manage TeamServer System Settings. Individual users can be [granted SuperAdmin](admin_manageorgs.html#sa) on a case by case basis. Only the SuperAdmin has access to these settings below. Many of these settings are accessible and can be changed via the **Organization Settings** by an organization administrator. 
 
 ## Configuring Settings from the User Interface
 If a user is a SuperAdmin, he/she will have access to the system settings menu. To view this menu:
@@ -20,16 +20,17 @@ If a user is a SuperAdmin, he/she will have access to the system settings menu. 
 The general settings page defines the TeamServer URL for both browsing and RESTful requests. In addition, if an administrator would like to integrate with [Contrast Hub](https://hub.contrastsecurity.com) for updates of libraries and CVE's, the option to "Try Hub" can be selected. Any change to this value will require a system restart.
 
 ### Authentication 
-TeamServer supports three [authentications providers](admin_tsconfig.html#user):
+TeamServer supports four authentication providers:
 
 * Embedded: Stored within the TeamServer database
-* [LDAP](admin_tsconfig.html#ldap)
-* [Active Directory](admin_tsconfig.html#ad2)
+* [LDAP](installation_setupauth.html#ldap)
+* [Active Directory](installation_setupauth.html#ad)
+* [Single Sign-On](installation_setupauth.html#sso)
 
 Any change to this setting will require a system restart.
 
 ### Security
-SuperAdmin users can manage [password policies](admin_tsconfig.html#pw), API key management and session timeouts. Any change to this setting will require a system restart. 
+SuperAdmin users can manage [password policies](admin_systemsettings.html#pwd), API key management and session timeouts. Any change to this setting will require a system restart. 
 
 ### Mail
 TeamServer can send email notifications to users when significant events occur (e.g. resetting passwords and alerts). To configure a SMTP server:
@@ -68,11 +69,11 @@ The score settings for libraries can be customized from either the System or Org
 <a href="assets/images/Library_Score_Settings.png" rel="lightbox" title="Library Score Settings"><img class="thumbnail" src="assets/images/Library_Score_Settings.png"/></a>
 
 ### TeamServer License
-The TeamServer license and subsequent application licensing is managed from this location. The license can be updated directly in the [UI](admin_tsfaq.html#license) from this page.
+The TeamServer license and subsequent application licensing is managed from this location. The license can be updated directly in the [UI](admin_manageorgs.html#license) from this page.
 
 ### System Messages
 SuperAdmins have the ability to send a system message to all users upon immediate login. A simple message and expiration date are required inputs for the message. All users will receive this message every time they login to TeamServer until the message expires or is deleted.
 
 <a href="assets/images/System_Message.png" rel="lightbox" title="System Messages "><img class="thumbnail" src="assets/images/System_Message.png"/></a>
 
-For more on configuring system messages, see [The Administrator's Dashboard](admin_tsfaq.html#admin)
+For more on configuring system messages, see [The Administrator's Dashboard](admin_systemsettings.html#stats)

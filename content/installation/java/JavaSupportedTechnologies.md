@@ -1,7 +1,7 @@
 <!--
 title: "Supported Technologies"
 description: "List of supported technologies"
-tags: "Java agent containers JDKs frameworks libraries support troubleshooting"
+tags: "Java agent installation containers JDKs frameworks libraries support troubleshooting"
 -->
 
 ## Java

@@ -1,7 +1,7 @@
 <!--
 title: "Level 2 Rules - Instrumentation Source Rules"
 description: "Information on .NET Instrumentation Source Rules"
-tags: "customization rules level agent .Net instrumentation source"
+tags: "installation policy customization rules level agent .Net instrumentation source"
 -->
 
 Contrast.NET will instrument your application code and follow user-provided data in order to detect potential security issues.  

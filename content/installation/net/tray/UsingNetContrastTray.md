@@ -1,7 +1,7 @@
 <!--
 title: "Using The .NET Contrast Tray"
 description: "Guide to using the .NET Contrast Tray"
-tags: "configuration tray agent .Net"
+tags: "installation configuration tray agent .Net"
 -->
 
 The **.NET Contrast Tray** is a Windows system tray application (***ContrastTray.exe***) that displays high-level information about the health of the agent. The following annotated screenshot demonstrates an example of a healthy agent.

@@ -1,7 +1,7 @@
 <!--
 title: "Licensing An Application"
 description: "Instructions for applying an enterprise license to a trial application."
-tags: "TeamServer licensing"
+tags: "user applications TeamServer licensing"
 -->
 
 ## About Licenses

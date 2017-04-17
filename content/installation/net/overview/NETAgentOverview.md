@@ -1,7 +1,7 @@
 <!--
 title: ".NET Agent Overview"
 description: "Overview of the .NET agent"
-tags: "configuration overview agent .Net"
+tags: "installation configuration overview agent .Net"
 -->
 
 ## Usage
@@ -24,12 +24,12 @@ The .NET agent consists of several key components:
 
 ## See Also:
 
-[.NET Agent Supported Technologies](user_netinstall.html#supp)
+[.NET Agent Supported Technologies](installation_net.html#supported)
 
-[Starting And Stopping The .NET Agent](user_netinstall.html#startstop)
+[Starting And Stopping The .NET Agent](troubleshooting_net.html#start)
 
-[Using The .NET Contrast Tray](user_netinstall.html#tray)
+[Using The .NET Contrast Tray](installation_nettray.html#guide)
 
-[.NET Agent Configuration](user_netconfig.html#config)
+[.NET Agent Configuration](installation_netconfig.html#config)
 
-[Getting .NET Agent Logs](user_netinstall.html#logs)
+[Getting .NET Agent Logs](troubleshooting_net.html#logs)

@@ -1,7 +1,7 @@
 <!--
 title: "Configuring TeamServer"
 description: "There are a great deal of configurable options to customize how your deployment of TeamServer behaves. You can configure how and when Contrast functions with just a few clicks."
-tags: "Authentication configuration settings SuperAdmin"
+tags: "installation setup Authentication configuration settings SuperAdmin"
 -->
 
 ## Accessing TeamServer Configuration

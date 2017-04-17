@@ -1,7 +1,7 @@
 <!--
 title: "Single Sign On"
 description: "Overview of setting up SSO"
-tags: "sso authentication"
+tags: "Admin settings sso authentication"
 -->
 
 Placeholder article (NEEDS TO BE WRITTEN)

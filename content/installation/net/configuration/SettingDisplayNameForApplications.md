@@ -1,7 +1,7 @@
 <!--
 title: "Application Specific Settings"
 description: "Guide to setting the applications display name and version"
-tags: "microsoft IIS application name agent installation .NET version"
+tags: "configuration microsoft IIS application name agent installation .NET version"
 -->
 
 Users can customize the display name (**version 3.1.3**+) and application version (**version 3.3.6**+) used for a web application by adding settings to an application's *web.config* file. These settings must be added to the application web.config's root configuration ```appSettings``` section (in other words, the .NET Agent expects to find these settings under the XML path configuration/appSettings.) For example, the following configuration will set the application's display name to **MyWebAppName** and version tag to **1.2.3**:
@@ -31,4 +31,4 @@ If the **Contrast.AppVersion** configuration setting is not present, the .NET ag
 
 ## See Also
 
-[Setting The Display Name For Servers Running Contrast.NET](user_netconfig.html#servers)
+[Setting The Display Name For Servers Running Contrast.NET](installation_netconfig.html#server)

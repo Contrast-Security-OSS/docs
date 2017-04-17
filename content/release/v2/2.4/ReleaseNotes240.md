@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 2.4.0 Release Notes, October 20th, 2013"
 description: "Contrast 2.4.0 Release Notes, October 20th, 2013"
+tags: "2.4.0 October Release Notes"
 -->
 
 ## New Features

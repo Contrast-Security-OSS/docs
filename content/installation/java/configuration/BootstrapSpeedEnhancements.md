@@ -1,7 +1,7 @@
 <!--
 title: "Adding Bootstrap Speed Enhancements To The Java Agent"
 description: "Instructions on adding Bootstrap speed enhancements to the Java agent"
-tags: "java agent performance bootstrap"
+tags: "installation configuration java agent performance bootstrap"
 -->
 
 Many of the vulnerabilities Contrast discovers require analyzing the data flow of an application. This data flow analysis involves adding sensors to core classes in the JVM. Much of the runtime performance penalty introduced by those sensors can be avoided by bootstrapping custom versions of these core classes. The changes to these classes are very minimal - in fact, it's just adding a single field. 

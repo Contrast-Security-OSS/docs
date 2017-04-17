@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 2.4.9 Release Notes, December 17th, 2013"
 description: "Contrast 2.4.9 Release Notes, December 17th, 2013"
+tags: "2.4.9 December Release Notes"
 -->
 
 ## New Features:

@@ -1,7 +1,7 @@
 <!--
 title: "Enabling Application Servers with Contrast"
 description: "High-level overview for adding the Contrast agent to applications."
-tags: "agent installation TeamServer onboarding application"
+tags: "setup agent installation TeamServer onboarding application"
 -->
 
 ## Identify an application server to enable with Contrast

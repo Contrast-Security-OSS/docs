@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 3.0.3 Release Notes, August 6, 2014"
 description: "Contrast 3.0.3 Release Notes, August 6, 2014"
+tags: "3.0.3 August Release Notes"
 -->
 
 ## Enterprise Installer

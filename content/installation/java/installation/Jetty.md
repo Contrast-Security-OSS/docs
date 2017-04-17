@@ -32,12 +32,11 @@ Of course, you'll have to substitute the path to *contrast.jar* and the server f
 
 Not using ***jetty.ini***? Running Contrast from Other Jetty Launchers:
 
-- [Running Contrast on Jetty with Maven Jetty Plugin](user_javainstall.html#jettyrun)
+- [Running Contrast on Jetty with Maven Jetty Plugin](installation_javainstall.html#jetty)
 
-- [Running Contrast on an Eclipse WTP Application](user_javainstall.html#eclipse)
+- [Running Contrast on an Eclipse WTP Application](installation_javainstall.html#eclipse)
 
-- [Running Contrast on an IntelliJ Application](user_javainstall.html#intellij)
+- [Running Contrast on an IntelliJ Application](installation_javainstall.html#intellij)
 
-- [Running Contrast on GlassFish with IntelliJ](user_javainstall.html#glassintellij)
+- [Running Contrast on GlassFish with IntelliJ or NetBeans](installation_javainstall.html#glass)
 
-- [Running Contrast on GlassFish with NetBeans](user_javainstall.html#netbeans)

@@ -8,7 +8,7 @@ tags: "java agent installation coldfusion admin"
 ## Getting Started
 To monitor ColdFusion applications that run on a Tomcat server, like in the default ColdFusion 10 configuration, follow the normal instructions for installing Contrast onto Tomcat.
 
-[Installing Contrast on Tomcat](user_javainstall.html#tomcat)
+[Installing Contrast on Tomcat](installation_javainstall.html#tomcat)
 
 ## ColdFusion Admin
 The easiest way to install Contrast is in the ColdFusion Administrator. These instructions work in any environment supporting ColdFusion, including IIS.

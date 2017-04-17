@@ -1,13 +1,13 @@
 <!--
 title: "Everything You Need to Know About Notifications"
 description: "Overview of notifications within TeamServer" 
-tags: "TeamServer alerts notifications custom"
+tags: "Admin settings TeamServer alerts notifications custom"
 -->
 
 ## About Notifications
 Prior to release 3.2.6 (April 2016), TeamServer had a rule engine which would trigger emails when a particular condition was achieved, called **Alerts**. The rule engine still exists, but now rules created by administrators are called **Custom Notifications**. TeamServer not only provides custom notification, but several out-of-the-box notifications which we believe to be essential for any customer implementing an IAST and/or RASP solution. Notifications are a new form of rule-based communication for particular events and/or activities that occur within TeamServer or associated connected Agents. 
 
-Notifications are designed to provide feedback immediately, as well as daily through multiple channels. There are two primary channels available for notifications: E-mail and In-Application. E-mail notifications require TeamServer to be configured to communicate with an appropriate [SMTP system](admin_tsconfig.html#system). In-Application notifications are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
+Notifications are designed to provide feedback immediately, as well as daily through multiple channels. There are two primary channels available for notifications: E-mail and In-Application. E-mail notifications require TeamServer to be configured to communicate with an appropriate [SMTP system](admin_systemsettings.html#dbmail). In-Application notifications are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
 
 ### Administrative Notifications
 Administrators will receive automated notifications for certain high-level events in Contrast, including those pertaining to licensing and policy management. Such notifications will occur both in-app and via email.
@@ -45,7 +45,7 @@ Customers who have implemented RASP licensing will also see:
 Custom notifications as mentioned above is the feature formerly called Alerts. Users with Admin, Edit and Rules_Admin roles for the organization can create custom notifications using the steps below.
 
 ## Creating Custom Notifications
-Custom notifications are managed within [Organization Settings](user_tsguideset.html#orgset). Users with the [role](user_tsguideset.html#roles) of organization administrator, editor or rules administrator may create and manage custom notifications. 
+[Custom notifications](admin_orgsettings.html#notify) are managed within **Organization Settings**. Users with the [role](admin_manageorgsroleperm.html#roles) of organization administrator, editor or rules administrator may create and manage custom notifications. 
 
 The main purpose of a custom notification is to provide notification to one or more users when a specific condition has been observed within TeamServer. Notifications execute and alert users via email on event, daily and weekly. 
 

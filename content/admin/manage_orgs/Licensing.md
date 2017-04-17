@@ -1,7 +1,7 @@
 <!--
 title: "License Management"
 description: "Overview of Licensing visibility"
-tags: "SuperAdmin EOP SaaS RASP IAST Licensing"
+tags: "Admin manage SuperAdmin EOP SaaS RASP IAST Licensing"
 -->
 
 ## Granting Licenses

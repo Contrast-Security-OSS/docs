@@ -1,7 +1,7 @@
 <!--
 title: "Introduction to Advanced Rules Customization"
 description: "Introduction to Customizing Rules"
-tags: "java agent rules customization policy introduction"
+tags: "java agent installation rules customization policy introduction"
 -->
 
 ## The Contrast Policy

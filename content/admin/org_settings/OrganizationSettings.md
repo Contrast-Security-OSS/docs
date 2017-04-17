@@ -1,10 +1,10 @@
 <!--
 title: "Organization Settings"
 description: "Overview of administrating and managing an organization."
-tags: "TeamServer organization settings"
+tags: "Admin TeamServer organization settings"
 -->
 
-Organization administrators have access to a variety of configuration settings that are specific to operating and managing an organization, such as administering users and setting up password policy, integrations and server defaults. You can find these settings by selecting **Organization Settings** in the [User menu](user_tsguideui.html#overview).
+Organization administrators have access to a variety of configuration settings that are specific to operating and managing an organization, such as administering users and setting up password policy, integrations and server defaults. You can find these settings by selecting **Organization Settings** in the [User menu](user_starthere.html#overview).
 
 <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
  
@@ -12,19 +12,19 @@ Organization administrators have access to a variety of configuration settings t
 View basic information about your organization and configure high-level preferences such as Date and Time formats. Get a picture of your organization's licensing. A summary shows the number of licenses being used as well as the number of licenses available to allocate to other assets. 
 
 ## Groups
-[Organization groups](user_tsguideset.html#group) can be viewed, created, edited and deleted. Organization administrators use groups to designate a user's organization and application role. This provides the ability to customize what users can see and do in Contrast.
+[Organization groups](admin_manageorgs.html#access) can be viewed, created, edited and deleted. Organization administrators use groups to designate a user's organization and application role. This provides the ability to customize what users can see and do in Contrast.
 
 ## Users
-Manage users for an organization, including the ability to [add](user_tsguideset.html#user), edit or delete them. Users can be assigned a default group (or role), designated for API-only use and unlocked if they've been locked out. 
+[Manage users](admin_manageorgs.html#user) for an organization, including the ability to add, edit or delete them. Users can be assigned a default group (or role), designated for API-only use and unlocked if they've been locked out. 
 
 ## Security
-Organization administrators manage [password policy](admin_tsconfig.html#pw), [IP restrictions](admin_tsconfig.html#ip), [two-step verification](admin_tsconfig.html#tsv) and session timeouts. An audit log is also available and searchable by keyword and date.
+Organization administrators manage [password policy](admin_systemsettings.html#pwd), [IP restrictions](admin_policymgmt.html#ip), [two-step verification](admin_systemsettings.html#twostep) and session timeouts. An audit log is also available and searchable by keyword and date.
 
 ## API
-Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about them in our [API Documentation](dev_api3.html#openapi).
+Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about them in our [API Documentation](tools_api.html#about).
 
 ## Integrations
-Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
+Contrast offers basic [integrations](admin_orgsettings.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
 
 ### Log level 
 The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in **ERROR** mode unless a problem occurs and you're asked to collect more metrics by support. 
@@ -54,10 +54,10 @@ Assessment provides detailed information on vulnerabilities discovered by Contra
 #### Protection options
 Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. 
 
-You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature. 
+You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_servers.html#syslog) to learn more about enabling this feature. 
 
 ## Notifications
-[Notifications](user_tsguideset.html#notifications) provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. These notifications can occur in Contrast and/or via email, depending on what options are enabled. Organization administrators can set the default notification settings for all users in their organization. 
+[Notifications](admin_orgsettings.html#notify) provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. These notifications can occur in Contrast and/or via email, depending on what options are enabled. Organization administrators can set the default notification settings for all users in their organization. 
 
 ## Report Settings
 Report settings offer a single interface for organization administrators to define the template of hard-copy reports. This essentially involves defining the default values for reports such as:

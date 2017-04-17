@@ -1,7 +1,7 @@
 <!--
 title: "Level 2 Rules - Trigger Rules"
 description: "Information on .NET Instrumentation Trigger Rules"
-tags: "customization rules level agent .Net instrumentation trigger"
+tags: "installation policy customization rules level agent .Net instrumentation trigger"
 -->
 
 Trigger rules specify methods whose incoming data should be checked for security issues.  Any tainted data that does not have a proper escape tag allowed by the rule will raise a finding that will be sent to TeamServer.

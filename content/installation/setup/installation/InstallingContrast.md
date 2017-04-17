@@ -1,13 +1,13 @@
 <!--
 title: "Installing TeamServer"
 description: "Installation instructions for running the TeamServer installer."
-tags: "EOP installation installer TeamServer Install4J Logging"
+tags: "setup EOP installation installer TeamServer Install4J Logging"
 -->
 
 ## Gathering Information
 Prior to installing Contrast TeamServer you should download and fill out the information worksheets in the Attachments section at the bottom of this article. Preparing this information will greatly reduce configuration errors.
 
-> **NOTE:** If installing on Linux, make sure you have installed the required MySQL shared libraries. See "Preparing for the Installation" in [System Requirements](admin_tsinstall.html#system).
+> **NOTE:** If installing on Linux, make sure you have installed the required MySQL shared libraries. See "Preparing for the Installation" in [System Requirements](installation_setup.html#reqs).
 
 ## Running The Installation
 It is possible to run the installation as a regular user, however we recommend installation to your system as a *privileged* user.  This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.

@@ -1,7 +1,7 @@
 <!--
 title: "Two-Step Verification"
 description: "Overview and instructions for using the TSV feature"
-tags: "Two Step Verification TSV Multi Factor Authorization Security Backup Codes Google Authenticator"
+tags: "Admin system settings Two Step Verification TSV Multi Factor Authorization Security Backup Codes Google Authenticator"
 -->
 
 ## Overview

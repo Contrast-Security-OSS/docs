@@ -1,7 +1,7 @@
 <!--
 title: "Server Defaults"
 description: "Overview of server default settings"
-tags: "servers defaults organization settings sampling"
+tags: "Admin servers defaults organization settings sampling"
 -->
 
 Server Settings provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment. 

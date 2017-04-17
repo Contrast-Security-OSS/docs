@@ -1,6 +1,7 @@
 <!--
 title: "Installing on Play"
 description: "Agent installation using the Play framework"
+tags: "java agent installation Play"
 -->
 
 

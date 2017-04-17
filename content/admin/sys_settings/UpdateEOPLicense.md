@@ -1,7 +1,7 @@
 <!--
 title: "How Do I Update My EOP License File?"
 description: "Overview of the two license update options"
-tags: "license debug EOP update"
+tags: "Admin system settings license debug EOP update"
 -->
 
 Contrast Enterprise-On-Premise (EOP) customers may occasionally need a new license file. There are two possible approaches for updating this file. The license can be updated in the UI by logging into the application as a SuperAdmin.  Alternatively, the license file can be replaced on the local file system.

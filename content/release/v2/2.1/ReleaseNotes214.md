@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 2.1.4 Release Notes, June 20, 2013"
 description: "Contrast 2.1.4 Release Notes, June 20, 2013"
+tags: "2.1.4 June Release Notes"
 -->
 
 ## Bug Fixes:

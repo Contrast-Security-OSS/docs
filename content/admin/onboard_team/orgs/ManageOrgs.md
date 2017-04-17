@@ -1,7 +1,7 @@
 <!--
 title: "Organizations within Contrast"
 description: "Creating, Managing and Deleting Organizations"
-tags: "TeamServer organizations license defense protect RASP IAST assess"
+tags: "Admin onboard TeamServer organizations license defense protect RASP IAST assess"
 -->
 
 ## Overview
@@ -11,7 +11,7 @@ Contrast is a multi-tenant architecture in which a single software product can s
 An organization is a group of related users and applications that are associated together for a business purpose. 
 
 ### Viewing Organizations
-Users with a system administration role have the ability to view a list of one or more organizations in Contrast. The ability to view all organizations depends on whether the user has administrative access based on their [system access control group](user_tsguideset.html#access). 
+Users with a system administration role have the ability to view a list of one or more organizations in Contrast. The ability to view all organizations depends on whether the user has administrative access based on their [system access control group](admin_onboardteamgroups.html). 
 
 To view existing organizations:
 
