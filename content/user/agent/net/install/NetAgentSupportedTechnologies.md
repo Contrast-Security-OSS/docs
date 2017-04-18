@@ -6,7 +6,6 @@ tags: "configuration supported technologies agent .Net"
 
 The Contrast.NET Agent supports analysis of web applications built on the following technologies:
 
-## Supported Operating Systems
 * Windows 7
 * Windows 8
 * Windows 10
@@ -18,10 +17,9 @@ The Contrast.NET Agent supports analysis of web applications built on the follow
 * Azure Mobile Services
  
 ## .NET Version
-The server must have .NET Framework 4.5.1 installed; however, this requirement does not extend to applications that need to be analyzed. The .NET Contrast Agent can analyze web applications that run on CLR 2.0 (.NET 2.0/3.0/3.5) or CLR 4 (.NET 4.0+). 
+The server must have .NET Framework 4.5.1 installed; however, this requirement does not extend to applications that need to be analyzed. The .NET Contrast Agent can analyze web applications that run on CLR 4 (.NET 4.0+). 
 
 ## Supported CLRs
-* 2.0 (.NET 2.0/3.0/3.5)
 * 4.0 (.NET 4.0+)
 
 ## Architecture
