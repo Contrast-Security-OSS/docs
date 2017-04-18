@@ -318,4 +318,4 @@ Returns a **Trace** object.
 
 ## See Also
 
-[Glossary](user_tsfaq.html#glossary)
+[Glossary](glossary.html#glossary)

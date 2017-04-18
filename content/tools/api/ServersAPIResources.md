@@ -142,4 +142,4 @@ Returns a **Server** object.
 
 ## See Also
 
-[Glossary](user_tsfaq.html#glossary)
+[Glossary](glossary.html#glossary)

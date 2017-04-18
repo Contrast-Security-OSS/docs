@@ -38,8 +38,8 @@ Contrast also requires some memory to operate. If you're running close to your m
 
 ## See Also
 
-[Sampling](user_tsfaq.html#sample)
+[Sampling](admin_orgsettings.html#server)
 
-[Adding Bootstrap Speed Enhancements To The Java Agent](user_javaconfig.html#bootstrap)
+[Adding Bootstrap Speed Enhancements To The Java Agent](installation_javaconfig.html#bootstrap)
 
-[Java Agent System Properties](user_javaconfig.html#props2)
+[Java Agent System Properties](installation_javaconfig.html#system)
