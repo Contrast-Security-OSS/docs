@@ -19,9 +19,9 @@ Contrast.NET uses a filter within a ```System.Web.IHttpModule``` to gather HTTP 
 
 ## See Also
 
-[Getting .NET Agent Logs](user_netinstall.html#logs)
+[Getting .NET Agent Logs](troubleshooting_net.html#logs)
 
-[.NET Agent Configuration](user_netconfig.html#config)
+[.NET Agent Configuration](installation_netconfig.html#config)
 
-[.NET Response-based Rules](user_netrules.html#response)
+[.NET Response-based Rules](installation_netpolicy.html#response)
 

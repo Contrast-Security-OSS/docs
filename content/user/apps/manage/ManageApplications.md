@@ -5,7 +5,7 @@ tags: "user TeamServer application manage archiving restoring resetting deleting
 -->
 
 ## Managing Applications
-Users of TeamServer, depending on either their [organization or application role](user_tsguideset.html#roles) have the ability to manage applications. Certain functions can be found either inline or in the Action Bar. Operations found in the Action Bar can be performed in bulk.
+Users of TeamServer, depending on either their [organization or application role](admin_manageorgsroleperm.html#roles) have the ability to manage applications. Certain functions can be found either inline or in the Action Bar. Operations found in the Action Bar can be performed in bulk.
 
 <a href="assets/images/Application_Action_Bar.png" rel="lightbox" title="Application Action Bar"><img class="thumbnail" src="assets/images/Application_Action_Bar.png"/></a>
 
@@ -30,8 +30,8 @@ Customers will often reset applications for the purpose of clearing all history 
 
 
 ## Fully Deleting Applications 
-Applications cannot be fully deleted unless they are archived first. The application is not required to be reset as the deletion process will truncate any associated data; however, it is recommended as a best practice that the data be reviewed and ideally, reset, prior to a full delete. For a full guide to deleting applications, see [Deleting An Application](user_tsguideapp.html#deleteapp)
+Applications cannot be fully deleted unless they are archived first. The application is not required to be reset as the deletion process will truncate any associated data; however, it is recommended as a best practice that the data be reviewed and ideally, reset, prior to a full delete. For a full guide to deleting applications, see [Deleting An Application](user_appsmanage.html#delete)
 
 
 ## Grouping Applications
-Grouping is very different from [merging applications](user_tsguideapp.html#merge). Grouping is a simple way to tag or label one or more applications for search purposes. There are no other advantages in TeamServer for grouping other than using the Group attribute to improve search functionality.
+Grouping is very different from [merging applications](user_appsmanage.html#merge). Grouping is a simple way to tag or label one or more applications for search purposes. There are no other advantages in TeamServer for grouping other than using the Group attribute to improve search functionality.

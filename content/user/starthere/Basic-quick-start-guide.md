@@ -12,13 +12,13 @@ Once you've logged onto Contrast, click the **Add Applications** button on the t
  
 When you download an agent, the file should be called *contrast.jar*. This file needs to stay in its current form and shouldn’t be renamed. Once you download the *contrast.jar* file, regardless of your application server, Contrast needs to pass in **-javaagent:/path/to/server/contrast.jar** to your application server's JVM. Once complete, restart your application server. 
 
-For more information on adding an application, please read the article on [Adding an Application](https://docs.contrastsecurity.com/user_tsguideapp.html#addapp).
+For more information on adding an application, please read the article on [Adding an Application](user_apps.html#addapp).
  
 ## Use The Application
 
 The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the application's Vulnerabilities tab. (Note that the same vulnerabilities appear on the Vulnerabilities page.) 
 
-To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](https://docs.contrastsecurity.com/user_tsguideapp.html#licapp).
+To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](user_apps.html#license).
  
 ## Manage Applications
 
@@ -42,7 +42,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
  
 ## Improve Your Application Score
 
-Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](https://docs.contrastsecurity.com/user_tsguideapp.html#scoreguide) for more information. 
+Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](user_apps.html#score) for more information. 
  
 ## Track Libraries
 
@@ -50,7 +50,7 @@ Be aware of libraries that may be vulnerable and bring them up to date by going 
  
 Contrast provides you with a grade for the library, known Common Vulnerabilities and Exposures (CVEs), latest version and release date, used and total classes in the library, and the application that's using the library. Contrast calculates this grade based on three things: the age of the library, how many versions behind the library is, and the number of known CVEs that affect the library.
 
-For more information, read the article on [Library Analysis](https://docs.contrastsecurity.com/user_tsguidelib.html#analysis).
+For more information, read the article on [Library Analysis](user_libraries.html#analysis).
  
 ## Manage Vulnerabilities
 
@@ -79,17 +79,17 @@ What’s better than assigning a vulnerability to a user? Creating tags for each
  
 > Example: You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
 
-These tags can be created for applications and servers as well. To learn more about filters, please read [Navigating Vulnerabilities in the New User Interface](https://docs.contrastsecurity.com/user_tsguideapp.html#navvuln). 
+These tags can be created for applications and servers as well. To learn more about filters, please read the Using Contrast [Overview](user_starthere.html#overview). 
  
 ## Reports
 
-Go to the application's **Overview** page to generate reports of security issues that Contrast identifies while monitoring your application. To learn more, read the article on the [Vulnerability PDF Report](https://docs.contrastsecurity.com/user_tsguiderep.html#pdf).
+Go to the application's **Overview** page to generate reports of security issues that Contrast identifies while monitoring your application. To learn more, read the article on the [Vulnerability Trend](user_reports.html#vulntrend) report.
  
 ##Track Findings
 
 Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email for users who don't have access to Contrast. You can set up these and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by selecting **Organization Settings** in the User menu and then **Integrations** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
 
-For more information, read the article on [Integrations](https://docs.contrastsecurity.com/user_tsguideset.html#integrate).
+For more information, read the article on [Integrations](https://admin_orgsettings.html#integrate).
  
 ## Fix Findings
 
@@ -108,4 +108,4 @@ For each application, you can assign it a build version number. By adding the pr
 * Check by time unit tests:
 You can also filter by the time at which your unit tests were run, and set a date range to view your vulnerabilities in the **Set Date Range** input field above the vulnerabilities grid.
  
-You can find additional properties in articles on [Java Agent System Properties](https://docs.contrastsecurity.com/user_javaconfig.html#props2) and [.NET Agent Configuration](https://docs.contrastsecurity.com/user_netconfig.html#config). 
+You can find additional properties in articles on [Java Agent System Properties](installation_javaconfig.html#system) and [.NET Agent Configuration](installation_netconfig.html#config). 

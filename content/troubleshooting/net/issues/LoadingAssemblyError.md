@@ -19,14 +19,14 @@ tags: "microsoft troubleshoot assembly loading agent .Net"
 Contrast.NET's instrumentation data flow engine cannot be used with applications using the ```legacyCasModel="true"``` setting. Use one of the following strategies to resolve this issue:
 
 * Set ```legacyCasModel="false"``` The **ReportViewer** control's performance will suffer but will still work.
-* **OR** Change Contrast.NET's ```ProfilerBehavior``` setting to ```1``` for legacyCasModel support.  See [.NET Agent Configuration](user_netconfig.html#config)
+* **OR** Change Contrast.NET's ```ProfilerBehavior``` setting to ```1``` for legacyCasModel support. See [.NET Agent Configuration](installation_netconfig.html#config)
 * **OR** Configure Contrast.NET *to not analyze* the application pool containing the application with the **ReportViewer** control using the ```ProcessBlacklist``` setting.
 
 
 ## See Also
 
-[Getting .NET Agent Logs](user_netinstall.html#logs)
+[Getting .NET Agent Logs](troubleshooting_net.html#logs)
 
-[.NET Agent Configuration](user_netconfig.html#config)
+[.NET Agent Configuration](installation_netconfig.html#config)
 
 

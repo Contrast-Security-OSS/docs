@@ -11,7 +11,7 @@ To access the TeamServer configuration options, first log in to the Administrati
 The configuration menu gives you the most options for configuring how the TeamServer behaves, the bulk of the application's actual configuration is handled through this interface.
 
 ### Authentication Settings
-See [Configuring User Directories](admin_tsconfig.html#user)
+See [Configuring User Directories](installation_setupconfig.html#user)
 
 ### Database Settings (Deprecated)
 Database settings will no longer be available after 3.1.0 since the database is embedded and wholly managed outside of the TeamServer application itself.
@@ -34,7 +34,10 @@ After you have setup your new authentication mode and restarted your server, no 
 When this mode is enabled all authentication is handled by the application and database credentials are stored (using a one-way hash) in the internal Contrast database. No additional configuration is needed for this authentication mode.
 
 ### LDAP Mode
-See [Configuring LDAP Authentication](admin_tsconfigint.html#ldap)
+See [Configuring LDAP Authentication](installation_setupauth.html#ldap)
 
 ### Active Directory Mode
-See [Configuring Active Directory](admin_tsconfigint.html#ad) 
+See [Configuring Active Directory](installation_setupauth.html#ad) 
+
+### Single Sign-On
+See [Configuring Single Sign-On](installation_setupauth.html#sso)

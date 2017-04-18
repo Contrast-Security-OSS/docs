@@ -13,7 +13,7 @@ In order to merge an application, the user must be an Organization Administrator
 * Log in to Contrast
 * Navigate to the **Applications** page
 * Identify and select the applications to be merged via the checkboxes in the left column
-* Select the **Merge** icon from the [Action Bar](user_tsguideui.html#overview)
+* Select the **Merge** icon from the batch action menu at the top right of the grid
 * Determine which of the merged applications should represent the **Master Application**
 * Voila!  
 

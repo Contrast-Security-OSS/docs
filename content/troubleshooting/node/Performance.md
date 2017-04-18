@@ -28,4 +28,4 @@ If better performance is really important to your environment, consider the foll
 
 ## See Also
 
-[Node.js Agent Configuration](user_nodeconfig.html#config)
+[Node.js Agent Configuration](installation_node.html#config)

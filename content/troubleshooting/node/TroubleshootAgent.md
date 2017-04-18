@@ -30,4 +30,4 @@ When this happens, it's usually in one of three ways:
 
 ## See Also
 
-[Node.js Agent Configuration](user_nodeconfig.html#config)
+[Node.js Agent Configuration](installation_node.html#config)

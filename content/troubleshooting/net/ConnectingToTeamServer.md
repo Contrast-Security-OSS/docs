@@ -23,8 +23,8 @@ tags: "troubleshoot TeamServer agent installation .Net"
 
 ## See Also
 
-[Getting .NET Agent Logs](user_netinstall.html#logs)
+[Getting .NET Agent Logs](troubleshooting_net.html#logs)
 
-[.NET Agent Configuration](user_netconfig.html#config)
+[.NET Agent Configuration](installation_netconfig.html#config)
 
 
