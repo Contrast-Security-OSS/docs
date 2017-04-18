@@ -4,13 +4,13 @@ description: "Install and use JavaScript SDK"
 tags: "javascript sdk installation develop"
 -->
 
-## Install
+## Installation
 The Contrast API module is available to install via `npm`.
 ```commandline
     npm install contrast-sdk --save
 ```
 
-### Use case
+## Usage
 The SDK offers a majority of our public APIs through an instance of the ContrastSDK. Any method of the SDK that interacts with our API returns a promise.
 
 > **Note:** The Contrast URL is optional and defaults to https://app.contrastsecurity.com/Contrast/api.
@@ -40,17 +40,15 @@ In some cases, you may want to filter applications, servers, traces or libraries
     });
 ```
 
-### Develop
-Use `npm` to install the projects dependencies:
+## Testing 
+Use `npm` to install the project dependencies:
 
 ```commandline
     npm install
     npm install -g mocha
 ```
 
-To run the tests, create a file in the `/tests` directory called *config.json* with Contrast information. You can see an example test configuration in `tests/config.json.example`. 
-
-Finally, you can run tests with Mocha:
+To run the tests, create a file in the `/tests` directory called *config.json* with Contrast information. You can see an example test configuration in `tests/config.json.example`. Then run tests with Mocha:
 
 ```commandline
     npm run test
