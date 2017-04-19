@@ -4,9 +4,9 @@ description: "Information on .NET Instrumentation Propagator Rules"
 tags: "customization rules level agent .Net instrumentation propagator"
 -->
 
-Propagators are an advanced feature integral to correcting agent operation, and overriding any of the default propagators is highly discouraged.  You may need to add new propagators, although this scenario is not fully supported.  There is currently no way to add new propagators to the ELT (CLR2) profiler since they are not currently controlled by the policy file.  Only the new instrumentation (CLR4) profiler will load propagators from your policy file.  However, the syntax is not very user-friendly, as propagation is complex and propagator rule syntax is subject to change in future versions.
+Propagators are an advanced feature integral to correcting agent operation, and overriding any of the default propagators is highly discouraged. You may need to add new propagators, although this scenario isn't fully supported. The new instrumentation (CLR4) profiler loads propagators from your policy file. However, the syntax isn't very user-friendly because propagation is complex and propagator rule syntax is subject to change in future versions.
 
-Individual propagator rules can be disabled in the *customerPolicy.xml* file.  Add an override rule with the same signature and set its enabled attribute as *false*.  For example:
+You can disable individual propagator rules in the *customerPolicy.xml* file. Add an override rule with the same signature and set its enabled attribute as *false*. For example:
 
 ```xml
   <propagators>
