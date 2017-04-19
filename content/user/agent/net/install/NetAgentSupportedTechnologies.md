@@ -34,8 +34,7 @@ The .NET Contrast Agent can be installed on both 32-bit and 64-bit architectures
 
 Don't see your application's framework here? There's a good chance that Contrast can still analyze your application if its framework simply wraps the typical ASP.NET classes (e.g. ```System.Web.HttpRequest```). We just haven't built explicit tests against every framework yet. 
 
->**Note:** The **Mono** runtime is not supported because Mono does not have a **Profiler API**. The Profiler API is a **Component Object Model (COM)**-based interface and is not supported on Linux.  
-
->**Note:** The **Classic ASP** language is not supported because Classic ASP applications do not run on the .NET runtime. 
-
-In CLR 2.0, dataflow analysis can be stopped by three string methods (```String.Insert```, ```String.Remove``` and ```String.Replace```) that are implemented in native code and cannot currently be monitored by Contrast. These methods are fully analyzed for applications running on CLR 4.0.
+>**Note:** 
+* The **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. The Profiler API is an interface based on a **Component Object Model (COM)** and isn't supported on Linux.
+* The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime. 
+* All relevant data flow methods are instrumented by and analyzed by Contrast for applications running on CLR 4.0.
