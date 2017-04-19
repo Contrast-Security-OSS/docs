@@ -1,7 +1,7 @@
 <!--
 title: "Getting Around the Contrast User Interface"
 description: "General overview of the Contrast UI"
-tags: "UI new user navigation"
+tags: "UI navigation"
 -->
 
 The Contrast interface is used for configuring Contrast agent deployments and triaging application weaknesses as we continuously monitor them. The UI provides a single view to analyze application vulnerabilities, discover vulnerable and out-of-date third-party libraries, and detect attacks. We also provide visibility into various environments to see how an application’s hidden risks are being handled through the development cycle. 
@@ -26,7 +26,7 @@ The top navigation bar is persistent as you move through Contrast - giving easy 
 | Libraries 		     | Searchable list of libraries being used by all the applications in an organization. Perform limited functions including tagging and taking a look at manifests. Also provides statistics for known vulnerabilities present in libraries and out-of-date libraries.                          |
 | Vulnerabilities        | Searchable list of vulnerabilities discovered by all the applications in an organization. Perform various functions including marking status, merging, sharing, tagging, exporting, and deleting. Take a deep dive into any vulnerability for more information and guidance for fixing it.                                                                    |
 | Attacks 			     | Searchable list of attacks that are occurring/have occurred on all the applications in an organization. View attacks at the highest level or delve into the individual attack events. Perform various functions including blacklisting IPs, generating reports and creating exclusions or virtual patches.                                                                                                  |
-| Vulnerability ID Search | Search Contrast using the vulnerability ID to quickly jump to the details of an application vulnerability.                                                                                                         |
+| Search | Search any asset in Contrast by name or vulnerability ID to quickly jump to details.                                                                                                         |
 | Add Application 	     | Provides universal access to onboard an application at any time to begin monitoring.                                                                                                    |
 | Notifications 	     | Provides real-time feedback when key events happen through this in-application notification channel. Get notified about new vulnerabilities, active attacks, or offline servers and be able to react immediately.                                                                                                    |
 | User Menu 	   	     | Provides access to subsidiary pages of Contrast such as personal account information, Organization Settings, Policy Management (if permissions allow), Reports, Release Notes and Help. If part of multiple organizations, toggle between them here as well.                                                                                                    |

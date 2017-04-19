@@ -1,15 +1,16 @@
 <!--
-title: "Everything You Need to Know About Notifications"
+title: "Notifications"
 description: "Overview of notifications within TeamServer" 
 tags: "Admin settings TeamServer alerts notifications custom"
 -->
 
-## About Notifications
-Prior to release 3.2.6 (April 2016), TeamServer had a rule engine which would trigger emails when a particular condition was achieved, called **Alerts**. The rule engine still exists, but now rules created by administrators are called **Custom Notifications**. TeamServer not only provides custom notification, but several out-of-the-box notifications which we believe to be essential for any customer implementing an IAST and/or RASP solution. Notifications are a new form of rule-based communication for particular events and/or activities that occur within TeamServer or associated connected Agents. 
+Notifications provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. Contrast offers several out-of-the-box notifications which we believe to be essential for any customer implementation. Organization administrators can set the default notification settings for all users in their organization. Individual users can tailor those notification settings as needed. 
 
-Notifications are designed to provide feedback immediately, as well as daily through multiple channels. There are two primary channels available for notifications: E-mail and In-Application. E-mail notifications require TeamServer to be configured to communicate with an appropriate [SMTP system](admin_systemsettings.html#dbmail). In-Application notifications are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
+There are two primary channels available for notifications: E-mail and In-Application. 
 
-### Administrative Notifications
+* **E-mail notifications** require Contrast be configured to communicate with an appropriate [SMTP system](admin_systemsettings.html#dbmail). * **In-Application notifications** are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
+
+## Administrative Notifications
 Administrators will receive automated notifications for certain high-level events in Contrast, including those pertaining to licensing and policy management. Such notifications will occur both in-app and via email.
 
 * **Application Licensed** - A new application was licensed in Contrast
@@ -22,12 +23,12 @@ Administrators will receive automated notifications for certain high-level event
 
 <a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Admin Email Notification"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
 
-### Organizational Notifications
-Introduced in 3.2.6 (April 2016), organizational notifications provide organization administrators with an interface for notifying users when key events happen with their Contrast deployment. Organization administrators have the ability to define default values for all users within their organization in terms of what criteria to notify by default, as well as which channels to leverage. Individual users have the ability to modify the default subscriptions. To change an individual user's notification settings, do the following:
+## Organizational Notifications
+Organizational notifications provide organization administrators with an interface for notifying users when key events happen with their Contrast deployment. Organization administrators have the ability to define default values for all users within their organization in terms of what criteria to notify by default, as well as which channels to leverage. Individual users have the ability to modify the default subscriptions. To change an individual user's notification settings, do the following:
 
-* Log in as the user
-* From the **Settings** drop-down menu, select **My Account**
-* Select **Notifications**
+* Log in to Contrast
+* Select **Your Account** from the user menu in the upper right
+* Select **Notifications** in the left navigation
 * Change one or more values
 
 Below is a list of available subscription options:
@@ -36,27 +37,25 @@ Below is a list of available subscription options:
 * Server Goes Offline
 * New Comment
 * New Asset Onboarded: All, Application or Server
+* Email Digest: Daily summary of Contrast activities 
 
-Customers who have implemented RASP licensing will also see:
+Customers who have implemented Protection licensing will also see:
 
 * New Attacks: All or by attack status (Probed, Exploited or Protected)
 
-### Custom Notifications
-Custom notifications as mentioned above is the feature formerly called Alerts. Users with Admin, Edit and Rules_Admin roles for the organization can create custom notifications using the steps below.
+>**Note:** You can narrow or expand the notifications you receive by adjusting which applications your subscriptions apply to. 
 
-## Creating Custom Notifications
-[Custom notifications](admin_orgsettings.html#notify) are managed within **Organization Settings**. Users with the [role](admin_manageorgsroleperm.html#roles) of organization administrator, editor or rules administrator may create and manage custom notifications. 
-
-The main purpose of a custom notification is to provide notification to one or more users when a specific condition has been observed within TeamServer. Notifications execute and alert users via email on event, daily and weekly. 
+## Custom Notifications
+Custom notifications allow users with Admin, Edit and Rules Admin [roles](admin_manageorgsroleperm.html#roles) for the organization to provide notifications to one or more users when a specific condition has been observed within Contrast. These defined notifications execute and alert users via email on event, daily and weekly.  
 
 <a href="assets/images/CreateNotification.png" rel="lightbox" title="Creating A Custom Notification"><img class="thumbnail" src="assets/images/CreateNotification.png"/></a>
 
 To create a custom notification:
 
-* Log in to TeamServer
-* Select **Organization Settings** from the **Settings** menu
-* Select **Notifications** from the **Organization Settings** menu
-* Select **Create Notification**
+* Log in to Contrast
+* Select **Organization Settings** from the user menu in the upper right
+* Select **Notifications** from the left navigation
+* Click **Create Notification** in the Custom Notifications panel
 * Provide the following input:
 	* Name
 	* Interval: Daily, Weekly or On Event
@@ -65,7 +64,7 @@ To create a custom notification:
 	* Type(s): Multiple conditions may be chosen
 
 ### Custom Notification Types
-TeamServer supports (6) conditions for custom notifications based on: Category, Impact, Likelihood, URL, Class and Method.
+Contrast supports (6) conditions for custom notifications based on: Category, Impact, Likelihood, URL, Class and Method.
 
 | Notification Types | Description       | Condition      |
 |-----------------|-------------------|--------------|
@@ -76,8 +75,3 @@ TeamServer supports (6) conditions for custom notifications based on: Category, 
 | Class           | A specific Java or .Net class. | Is, Contains, Starts With |
 | Method          | A specific Java or .Net method. | Is, Contains, Starts With |
 
-
-## Deleting And Disabling Custom Notifications
-Alerts can be deleted at any time by selecting the checkbox next to the notification name and choosing the **Delete** button. In addition, custom notifications can be deleted inline by selecting the gear at the end of the notification list table.
-
-Custom notifications can be disabled from the **Notifications** settings page by toggling the green switch from Enabled to Disabled. 
