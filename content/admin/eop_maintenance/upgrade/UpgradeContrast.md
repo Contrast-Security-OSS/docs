@@ -1,7 +1,7 @@
 <!--
 title: "Upgrading EOP TeamServer"
 description: "Instructions for updating an EOP TeamServer with a new version."
-tags: "setup upgrade EOP upgrade install installation backup"
+tags: "Admin EOP maintenance upgrade install installation backup"
 -->
 
 ## About Upgrading An EOP TeamServer

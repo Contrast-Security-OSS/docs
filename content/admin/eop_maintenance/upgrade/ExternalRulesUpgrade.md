@@ -1,7 +1,7 @@
 <!--
   title: "Migrating External Rules from 3.2.6 to 3.2.7+",
   description: "Guide for EOP administrators to reference when migrating their external rules from a 3.2.7 version to the post 3.2.7 version.",
-  tags: "installation setup upgrade Migrating External Rules 3.2.6 3.2.7 TeamServer Custom Level"
+  tags: "Admin EOP maintenance Migrating External Rules 3.2.6 3.2.7 TeamServer Custom Level"
 -->
 
 ## Who?

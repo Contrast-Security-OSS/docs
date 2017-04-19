@@ -1,7 +1,7 @@
 <!--
 title: "Upgrading Agents on Contrast"
 description: "Instructions for upgrading agents for download purposes within and EOP TeamServer"
-tags: "EOP agent administration upgrade TeamServer"
+tags: "Admin EOP maintenance agent administration upgrade TeamServer"
 -->
 
 Enterprise On Premise (EOP) TeamServer administrators have the ability to upgrade the Contrast language agents independently within TeamServer. In prior releases of Contrast, the agents were bundled with the TeamServer updater artifact. Administrators now have the ability to download a new agent from the [Contrast Hub Site](https://hub.contrastsecurity.com) and copy the individual agent artifact(s) to a directory on TeamServer. No restart of TeamServer is required as the agent artifact will dynamically reload and become accessible for download.
