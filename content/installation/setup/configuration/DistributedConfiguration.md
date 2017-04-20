@@ -53,7 +53,7 @@ With a few changes it is possible to utilize an external MySQL database with you
 ### Installation and Configuration of MySQL Server
 We recommend running TeamServer with MySQL 5.6.28 but TeamServer will work with other versions of MySQL 5.6.x on Windows and Linux.  We recommend working with your Operations and/or Database team to ensure a secure and durable installation.  
 
-Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml) is a snippet of Ansible that you could use to install the latest MySQL 5.6 on Ubuntu 14.04.   
+Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml)) is a snippet of Ansible that you could use to install the latest MySQL 5.6 on Ubuntu 14.04.   
 
 ```
 - hosts: mysql
