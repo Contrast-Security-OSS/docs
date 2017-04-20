@@ -4,7 +4,7 @@ description: "Configuring Crawler to Connect to TeamServer After Rotating Servic
 tags: "troubleshoot authentication crawler configuration API Base64 phantomJS"
 -->
 
-## Who Should Read This Article
+## Connection Issues After Rotating Keys
 Enterprise On Premises (EOP) administrators responsible for installation, configuration and administration of both TeamServer and Crawler should read this article in the event of rotating the service key associated with the SuperAdmin account. The service key will only need to be modified within the Crawler configuration if the service key has been rotated by TeamServer.
 
 ## How To Resolve This Issue
