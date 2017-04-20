@@ -65,7 +65,7 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql
 
   - name: Accept gpg key
     sudo: True
-    apt_key: data="{{ lookup('file', 'mysql_pubkey.asc') }}" state=present
+    apt_key: data="\{{ lookup('file', 'mysql_pubkey.asc') }}" state=present
 
   - name: apt-get update
     sudo: True
@@ -73,7 +73,7 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql
 
   - name: install mysql packages
     sudo: True
-    apt: pkg={{ item }} state=latest
+    apt: pkg=\{{ item }} state=latest
     with_items:
       - mysql-server
       - mysql-client
@@ -217,7 +217,7 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/appse
     contrast_data_dir: /opt/contrast-data
     eop_config: contrastdata
     filename_extension: tar.gz
-    java_opts: "-XX:+UseTLAB -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSFullGCsBeforeCompaction=1 -XX:+CMSParallelRemarkEnabled -XX:+PrintVMOptions -XX:+PrintCommandLineFlags -Xmx4096m -Xms4096m -server -XX:MaxPermSize=768m -Dcontrast.data.dir={{ contrast_data_dir }} -Dcontrast.home={{ contrast_data_dir }} -XX:+HeapDumpOnOutOfMemoryError -Xloggc:{{ contrast_data_dir }}/gc.out"
+    java_opts: "-XX:+UseTLAB -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSFullGCsBeforeCompaction=1 -XX:+CMSParallelRemarkEnabled -XX:+PrintVMOptions -XX:+PrintCommandLineFlags -Xmx4096m -Xms4096m -server -XX:MaxPermSize=768m -Dcontrast.data.dir=\{{ contrast_data_dir }} -Dcontrast.home=\{{ contrast_data_dir }} -XX:+HeapDumpOnOutOfMemoryError -Xloggc:\{{ contrast_data_dir }}/gc.out"
   tasks:
   - name: Install Tomcat7 Software
     apt: name=tomcat7 update_cache=yes state=present
@@ -238,21 +238,21 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/appse
     apt: name=oracle-java7-set-default state=latest install_recommends=yes
 
   - name: Move local files to virtual machine
-    copy: src={{ contrast_local_artifact_path }}/{{ contrast_war }} dest=/opt/ mode=0655 backup=yes
+    copy: src=\{{ contrast_local_artifact_path }}/\{{ contrast_war }} dest=/opt/ mode=0655 backup=yes
 
   - name: Create contrast-data directory
-    file: path={{ contrast_data_dir }} state=directory mode=0755 owner=tomcat7 group=tomcat7 recurse=yes
+    file: path=\{{ contrast_data_dir }} state=directory mode=0755 owner=tomcat7 group=tomcat7 recurse=yes
 
   - name: Unarchive configuration directory
-    unarchive: copy=yes src={{ contrast_local_artifact_path}}/{{ eop_config }}.{{ filename_extension }} dest={{ contrast_data_dir }} owner=tomcat7 group=tomcat7
+    unarchive: copy=yes src=\{{ contrast_local_artifact_path}}/\{{ eop_config }}.\{{ filename_extension }} dest=\{{ contrast_data_dir }} owner=tomcat7 group=tomcat7
 
   - name: Establish Permissions for contrast-data directory
-    file: path={{ contrast_data_dir }} state=directory mode=0755 owner=tomcat7 group=tomcat7 recurse=yes
+    file: path=\{{ contrast_data_dir }} state=directory mode=0755 owner=tomcat7 group=tomcat7 recurse=yes
 
   - name: Create symlink to war (very important that warname is "Contrast.war")
     file: >
       state=link
-      src=/opt/{{ contrast_war }}
+      src=/opt/\{{ contrast_war }}
       dest=/var/lib/tomcat7/webapps/Contrast.war
       owner=tomcat7
       group=tomcat7
@@ -262,10 +262,10 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/appse
     replace: >
       dest=/etc/default/tomcat7
       regexp='JAVA_OPTS="-Djava\.awt\.headless=true -Xmx128m -XX:\+UseConcMarkSweepGC"'
-      replace='JAVA_OPTS="{{ java_opts }}"'
+      replace='JAVA_OPTS="\{{ java_opts }}"'
 
   - name: Mark your license as pre-initialized
-    file: path={{ contrast_data_dir }}/.initialized state=touch owner=tomcat7 group=tomcat7
+    file: path=\{{ contrast_data_dir }}/.initialized state=touch owner=tomcat7 group=tomcat7
 
   - name: Restart tomcat7
     service: name=tomcat7 state=restarted
