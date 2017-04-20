@@ -1,7 +1,7 @@
 <!--
 title: "Java Agent Overview"
 description: "Overview of the Java Agent"
-tags: "Java agent overview introduction"
+tags: "installation Java agent overview introduction"
 -->
 
 The Java Agent analyzes the behavior of Java applications running on J2EE containers, newer frameworks like netty, Play or Vert.X, fatjar/microservice applications like SpringBoot, or even regular old desktop Java applications. If there's a JVM, the Java Agent can get security insights into it.

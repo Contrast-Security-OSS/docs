@@ -1,14 +1,15 @@
 <!--
 title: "Notifications"
 description: "Overview of notifications within TeamServer" 
-tags: "Admin settings TeamServer alerts notifications custom"
+tags: "Admin organization settings TeamServer alerts notifications custom"
 -->
 
 Notifications provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. Contrast offers several out-of-the-box notifications which we believe to be essential for any customer implementation. Organization administrators can set the default notification settings for all users in their organization. Individual users can tailor those notification settings as needed. 
 
 There are two primary channels available for notifications: E-mail and In-Application. 
 
-* **E-mail notifications** require Contrast be configured to communicate with an appropriate [SMTP system](admin_systemsettings.html#dbmail). * **In-Application notifications** are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
+* **E-mail notifications** require Contrast be configured to communicate with an appropriate [SMTP system](admin_systemsettings.html#glance). 
+* **In-Application notifications** are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
 
 ## Administrative Notifications
 Administrators will receive automated notifications for certain high-level events in Contrast, including those pertaining to licensing and policy management. Such notifications will occur both in-app and via email.

@@ -1,7 +1,7 @@
 <!--
 title: "Protection Rules"
 description: "Overview of protection rules"
-tags: "protection rules policy management protect"
+tags: "Admin protection rules policy management protect"
 -->
 
 Protection Rules allow you to set applications to monitor for attacks.

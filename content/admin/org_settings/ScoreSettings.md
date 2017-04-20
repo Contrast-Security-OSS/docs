@@ -1,7 +1,7 @@
 <!--
 title: "Score Settings"
 description: "Overview of score settings"
-tags: "score settings organization"
+tags: "Admin organization score settings"
 -->
 
 Organization administrators can customize score settings for both overall score of applications and libraries by selecting **Organization Settings** in the user menu and **Score Settings** in the sidebar. Settings are separated into two sections: Overall Score and Library Score.

@@ -1,7 +1,7 @@
 <!--
 title: "Cross-Organization Groups"
 description: "Overview of groups across multiple organizations"
-tags: "Admin groups organization EOP"
+tags: "Admin manage groups organization EOP"
 -->
 
 Enterprise On-Premises (EOP) customers will now have the ability to identify user accounts with permissions in order to perform activities across organizations beyond the user's default organization. This assumes multiple organizations have been created within Contrast as part of a multi-tenant deployment. This feature allows users to toggle between many organizations via the User menu in the main navigation bar.

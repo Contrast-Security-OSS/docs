@@ -1,7 +1,7 @@
 <!--
 title: "Single Sign-On"
 description: "Overview of single sign-on authentication"
-tags: "Organization settings IP address hostname connect authenticate SSO"
+tags: "Admin Organization settings IP address hostname connect authenticate SSO"
 -->
 
 Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. Contrast can now be configured to use this service with a [SAML 2.0 supported provider](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf). 

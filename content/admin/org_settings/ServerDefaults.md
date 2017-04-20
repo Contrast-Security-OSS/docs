@@ -1,7 +1,7 @@
 <!--
 title: "Server Defaults"
 description: "Overview of server default settings"
-tags: "servers defaults organization settings sampling"
+tags: "Admin servers defaults organization settings sampling"
 -->
 
 Server Settings provide default configurations to be applied to new servers (agents) being brought on board. Organization administrators can customize these configurations specifically to each environment. Select Organization Settings in the user menu and Servers in the left navigation. 
@@ -22,7 +22,7 @@ Contrast's logs follow the general [Log4J standard](https://logging.apache.org/l
 * **Trace:** Designates finer-grained informational events than the DEBUG.
 
 ## Automatic Server Cleanup
-Automatic server cleanup enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activitiy received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. This feature is available for Java and .Net servers only.
+Automatic server cleanup enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activity received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. This feature is available for Java and .Net servers only.
 
 The General section of the Servers page includes a checkbox to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown.
 
@@ -64,6 +64,6 @@ Alternatively, you can use ```-Dcontrast.sampling``` = X, Y, Z where:
 ## Protection Options
 Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation.
 
-You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_tsguideservers.html#syslog) to learn more about enabling this feature.
+You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_servers.html#syslog) to learn more about enabling this feature.
 
 >**Note:** Turning Protection ON by default requires licenses automatically be applied to servers.

@@ -1,7 +1,7 @@
 <!--
 title: "Report Settings"
 description: "Overview of report settings"
-tags: "report settings organization"
+tags: "Admin organization report settings"
 -->
 
 Contrast offers compliance reports for understanding an application's compliance status.
@@ -20,4 +20,4 @@ Report settings offer a single interface for organization administrators to defi
 
 <a href="assets/images/Report_Settings.png" rel="lightbox" title="Report Settings"><img class="thumbnail" src="assets/images/Report_Settings.png"/></a>
 
-When viewing the **Application Details" page, users can generate a PDF report to see how the application is doing as it relates to compliance requirements. The defaults will prepopulate the report generation dialog, but the user can still make any necessary changes. 
+When viewing the **Application Details** page, users can generate a PDF report to see how the application is doing as it relates to compliance requirements. The defaults will prepopulate the report generation dialog, but the user can still make any necessary changes. 
