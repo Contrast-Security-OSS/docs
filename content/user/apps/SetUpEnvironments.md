@@ -1,7 +1,7 @@
 <!--
 title: "Set Up Environments"
 description: "Overview of setting up environments"
-tags: "user environment setup quick start guide"
+tags: "user applications environment setup quick start guide"
 -->
 
 Being able to better compare the differences across environments as code travels is a key piece to application security. Contrast provides constant visibility throughout the software development process from the second code is written to when it’s pushed to production.

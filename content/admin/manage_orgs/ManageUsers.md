@@ -1,7 +1,7 @@
 <!--
 title: "Manage Users"
 description: "Managing Users in Contrast"
-tags: "Admin manage configuration TeamServer Users roles permissions API"
+tags: "Admin manage organization configuration TeamServer Users roles permissions API"
 -->
 
 Administrators have the ability to add users to the system via the SuperAdmin interface (EOP customers only) or within an organization. 

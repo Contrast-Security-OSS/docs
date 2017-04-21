@@ -12,7 +12,7 @@ Updating Contrast's IP address is fairly straightforward. Whether you moved the 
 * Select **General Settings** 
 * Change the TeamServer URL to ***IP:port/Contrast***
 * Click ***Save Configuration***
-* [Restart Contrast](user_tsfaq.html#restart) to apply the changes
+* [Restart Contrast](installation_setupinstall.html#restart) to apply the changes
 
 
 >**Note:** You will have to replace your agents so they know which new address to report to

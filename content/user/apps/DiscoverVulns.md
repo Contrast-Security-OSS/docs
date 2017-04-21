@@ -1,7 +1,7 @@
 <!--
 title: "Discover Vulnerabilities"
 description: "Overview of discovering vulnerabilities"
-tags: "user discover vulnerabilities quick start guide"
+tags: "user applications discover vulnerabilities quick start guide"
 -->
 
 Get a list of all vulnerabilities discovered including SQL Injection, Cross Site Scripting (XSS), Command Injection, Path Traversal, XML External Entity Processing (XXE), Cross Site Request Forgery (CSRF), Java Deserialization and many more. Track, share and get remediation guidance. Go to the **Vulnerabilities** tab in the application's Overview page to get a list of all vulnerabilities discovered in that application or go to the main Vulnerabilities page to get a big picture of all vulnerabilities across your portfolio. 

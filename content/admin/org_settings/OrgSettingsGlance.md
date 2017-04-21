@@ -27,7 +27,7 @@ Contrast APIs are available to organization administrators for allowing access t
 Contrast offers basic [integrations](admin_orgsettings.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
 
 ## Servers 
-[Server Settings](admin_orgsettings.html#server) provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment.
+[Server Settings](admin_orgsettings.html#org-server) provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment.
 
 ## Notifications
 [Notifications](admin_orgsettings.html#notify) provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. These notifications can occur in Contrast and/or via email, depending on what options are enabled. Organization administrators can set the default notification settings for all users in their organization. 
