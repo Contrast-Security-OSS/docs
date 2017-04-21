@@ -1,7 +1,7 @@
 <!--
 title: "Manage Access Groups"
 description: "Overview of managing access groups"
-tags: "Admin groups access manage organizations"
+tags: "Admin groups access manage"
 -->
 
 Contrast provides role based access control (RBAC) capabilities through groups. Administrators have the ability to create these groups for providing or restricting system, organization and application access and privileges to users within Contrast. Contrast has two types of access control groups: **System** and **Organization**. System groups, only available to on-premises customers, allow for delegated system administration. Organization groups allow for cross-organization access and application access/restriction.
@@ -21,7 +21,7 @@ Go to the **Groups** page in the System Administration interface. From there:
 * **Delete** any system-created group by simply clicking the trash can icon on the row. This action can also be done if viewing the details of a group in the lower left corner of the Edit Group page. Once this action is confirmed, the group is removed and any access provided by that group is revoked from any of the users assigned to the group.
 
 ## Organization Groups
-An organization group is used to assign authorized users access to organizations and applications. An Organization Admin can create, edit and delete groups from the Organization Settings page. System administrators (EOP only) may also create [Cross-Organization Groups](admin_manageorgs.html#crossorg) to allow users access to more than one organization.
+An organization group is used to assign authorized users access to organizations and applications. An Organization Admin can create, edit and delete groups from the Organization Settings page. System administrators (EOP only) may also create [Cross-Organization Groups](tbd) to allow users access to more than one organization.
 
 Contrast provides four default groups within each organization. These groups provide access to all applications in the organization with the associated role. That role grants or restricts what he/she can do with the application. Those roles are:
 
@@ -36,7 +36,7 @@ Organization administrators can create custom groups within an organization for 
 Go to the **Groups** section of the Organization Settings page. From there:
 
 * Configure a new group by clicking the **Add Group** button
-* See all groups (both default and custom) and hone in on anything specific by searching or using the quick vies alonside the group search 
+* See all groups (both default and custom) and hone in on anything specific by searching or using the quick views alongside the group search 
 * **View** the details of any group by clicking the Group Name
 * **Edit** a group from the Edit Group page by clicking the Group Name. Make any modifications as needed. You may change the Group Name or Application Access as well as change members of the group. Make sure to **Save** changes.
 * **Delete** any group by simply clicking the trash can icon on the row. This action can also be done if viewing the details of a group in the lower left corner of the Edit Group page. Once this action is confirmed, the group is removed and any access provided by that group is revoked from any of the users assigned to the group.

@@ -1,8 +1,20 @@
 <!--
-title: "Managing Users in TeamServer"
-description: "Managing Users in TeamServer"
+title: "Manage Users"
+description: "Managing Users in Contrast"
 tags: "Admin manage configuration TeamServer Users roles permissions API"
 -->
+
+Administrators have the ability to add users to the system via the SuperAdmin interface (EOP customers only) or within an organization. 
+
+A user may be added to a [system group](admin_manageorgs.html#access) to gain access to the System Administration interface or to perform activities across organizations in [cross-organization groups](admin_manageorgs.html#crossorg). More typically, users can also be added within a single organization with a defined role to determine their application access and privileges.
+
+Go to the **Users** section of the Organization Settings page. From there:
+
+* Onboard any new users by clicking the **Add User** button
+* See all users and hone in on anyone specific by searching or using the quick views alongside the user search
+* **View** the details of any user by clicking the User Name. This will provide you insight into their persmissions throughout the organization.
+* **Edit** a user from the Edit User page by clicking the User Name. Make any modifications as needed. You may change their Organization Role or Application Access Group as well as enable or disable their access Contrast. Make sure to Save changes.
+* **Delete** any uesr by simply clicking the trash can icon on the row. This action can also be done if viewing the details of a user in the lower left corner of the Edit User page. Once this action is confirmed, the user is removed and will no longer have access to the organization. 
 
 ## User Roles
 There are several different roles that can be selected for Users within an organization. We will discuss each of those roles briefly below.
