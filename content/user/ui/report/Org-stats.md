@@ -32,7 +32,7 @@ For a different view of the data, take a look at the circular charts with breakd
 
 ## Applications
 
-In the Applications tab, a Status thermometer chart shows the total number of applications broken down by the number that are licensed, unlicensed and archived. Click on the total number to go to the Applications page for more details on each one. 
+In the Applications tab, a Status thermometer chart shows the total number of applications broken down by the number that are licensed, unlicensed and archived. Click on the total number of onboarded applications to go to the Applications page for more details on each one. Contrast also remdinds you of how many licenses are available in your organization. 
 
 The circular Language Breakdown chart shows the number of applications by language in the inner band and by Technology or Grade in the outer band. Click number of active applications to go to the grid in the Applications page. 
 
