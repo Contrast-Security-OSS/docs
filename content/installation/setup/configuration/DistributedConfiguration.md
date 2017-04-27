@@ -4,10 +4,10 @@ description: "Instructions for configuring TeamServer in a distributed fashion b
 tags: "installation setup EOP distributed configuration database scalability"
 -->
 
-# Who Should Read this Document
+## Who Should Read this Document
 This guide is for enterprise on premise (EOP) administrators, who want to move away from the bundled, self-contained TeamServer configuration in favor of a distributed configuration in which the database and application server are deployed on separate servers. Most customers will not have this need of configuring a distributed TeamServer. Customers who fit this profile are likely running with 100 or more connected agents and are seeking greater performance and scalability. 
 
-# About Distributing the TeamServer Configuration
+## About Distributing the TeamServer Configuration
 EOP customers typically install and update the Contrast TeamServer by downloading the installer/updater artifact from the [Contrast Hub](https://hub.contrastsecurity.com). This artifact is an executable file and includes all of the necessary software and components to install, upgrade, and run Contrast TeamServer.  The TeamServer is designed for all embeded components and storage to reside on a single server in a very basic, monolithic configuration.
 
 Some customers have a need to run in a more advanced configuration. We've written this document for those customers opting for a slightly more advanced configuration that will require additional administration and management by an EOP administrator. We have simplified the configuration of TeamServer for EOP administrators to run their own installations of Tomcat, Java and MySQL, as long as they conform to our version requirements.
@@ -16,7 +16,7 @@ This documentation will guide you through the setup and configuration of additio
 
 Also, check back often for updates. Feel free to submit a Pull Request if you have suggestions or find any instructions incorrect.  All code that we have shared here is also available in our GitHub [repo](https://github.com/Contrast-Security-OSS/ctdc).   
 
-# Before You Get Started
+## Before You Get Started
 Before you get started with configuring a distributed TeamServer, make sure to read through the entire document. We've made several assumptions, which we list below. Make sure these assumptions hold true so that you don't run into an issue with your TeamServer. The following assumptions have been made prior to distributing the configuration:
 
 * Previous installation of TeamServer EOP
@@ -28,14 +28,14 @@ Before you get started with configuring a distributed TeamServer, make sure to r
 
 We are interested in your progress!  If you are planning to explore Contrast TeamServer Distributed Configuration (CTDC), please contrast our [Technical Support Team](https://support.contrastsecurity.com).
 
-# Simple As Two Steps
+## Simple As Two Steps
 We have written documentation for deploying a distributed TeamServer in two simple steps:
 * Step 1: Database (MySQL)
 * Step 2: Application Server (Tomcat)
 
 All documentation assumes that you have previously installed Teamserver using the provided installer artifact from Hub.  If you need to go back and setup TeamServer again [click here](installation_setupinstall.html#download).  
 
-#### Notes
+### Notes
 We've provided several code samples using an automation framework called [Ansible](https://www.ansible.com/). Feel free to use our code samples as a starting point for your own configuration. We are also big fans of Ubuntu, which we also use in our examples. We can assure you that the configuration runs on all of our supported platforms. You might have to make some slight changes to our scripts to run against other operating systems.
 
 ## Step 1: Separating the Database
@@ -104,13 +104,14 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql
 * We change the bind address to "*" above but that is only for illustration.  We recommend binding your MySQL server to the ip of your application server.
 * As with the bind address, we recommend creating a user and grants that offer access to only the contrast schema and limited to the host ip address or subnet.
 
-### Taking a Backup of MySQL
+## Taking a Backup of MySQL
 
 To backup your database, you can use the embedded tool with your EOP installation.  For more information, see the [reference](installation_setup.html#mysql) in the documentation.
 
 ```
 $CONTRAST_HOME/bin/backup_db.sh
- ```
+```
+
 Please move the backup taken to the external MySQL database host and make a note of the path.
 
 ### Restore the Database
@@ -130,7 +131,7 @@ It is possible to edit your database configuration through the TeamServer SuperA
 
 *Either of these changes will require a restart of your TeamServer*  
 
-##### SuperAdmin Portal
+#### SuperAdmin Portal
 1. Log into Contrast TeamServer
 2. Assume SuperAdmin role
 3. Click "System Settings" from the top right drop down menu.
@@ -138,7 +139,7 @@ It is possible to edit your database configuration through the TeamServer SuperA
 5. Fill in the property values for your external database host.  *Make sure to adjust the port to match your external database.  For new installations, MySQL runs on 3306.*
 
 
-##### Encrypted Property Editor
+#### Encrypted Property Editor
 You will need to use the [encrypted property editor](admin_tsinstall.html#run) to change your database properties to access your new host. Follow the instructions in the tool to update:
 - jdbc.port
 - jdbc.host
@@ -167,9 +168,9 @@ jdbc.user                                         : contrast
 database.bk.dir                                   : /usr/local/contrast/data/backups/db
 jdbc.dialect                                      : com.aspectsecurity.contrast.teamserver.persistence.CustomMySQL5Dialect
 jdbc.driver                                       : com.mysql.jdbc.Driver
+```
 
 Enter the name of the property to edit [q to Quit]:
-```
 
 ### Restart TeamServer
 This command will be slightly different if you have chosen the non-root installation.
@@ -182,18 +183,18 @@ At this point it will be helpful to tail the server logs.
 ```
 $ tail -f $CONTRAST_HOME/logs/server.log
 ```
-And then the application logs.
 
+And then the application logs.
 ```
 $ tail -f $CONTRAST_HOME/logs/contrast.log
 ```
+
 If TeamServer starts successfully, you will see this message in the server.log
 
-```
 190116 21.22.15,703 {} {} {} INFO  (ConnectionTester.java:50) Received code 200 from TeamServer
 190116 21.22.15,707 {} {} {} INFO  (ConnectionTester.java:60) Server start has been verified
 190116 21.22.15,709 {} {} {} INFO  (Server.java:319) Contrast TeamServer Ready - Took 208323ms
-```
+
 
 ## Step 2: Application Server
 Before you begin, it is important that you work with Contrast Support and have access to the TeamServer WAR file before beginning this process.  
@@ -208,6 +209,7 @@ Here is an outline of the steps it will take to migrate TeamServer to your own T
 4. Restart Tomcat
 
 Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/appserver.yml)) is a snippet of Ansible that you could use to install the latest versions of Tomcat7 and Java7 on Ubuntu 14.04.  We use Ubuntu and Ansible here as examples only.  This software will run on supported versions of Windows and Linux.
+
 ```
 - hosts: appserver
   sudo: True
@@ -271,7 +273,7 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/appse
     service: name=tomcat7 state=restarted
 ```
 
-#### Collect Configuration from Current TeamServer
+### Collect Configuration from Current TeamServer
 In the example below, Contrast has been installed at path `/usr/local/contrast`.  You will need to gather the following:
 * data/conf/
 * data/esapi/
@@ -282,11 +284,13 @@ In the example below, Contrast has been installed at path `/usr/local/contrast`.
 * webapps/Contrast.war
 
 This code will compress necessary artifacts into your user's home directory.
+
 ```
 $ cd /usr/local/contrast
 $ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/cache/ data/.initialized data/.contrast webapps/Contrast.war
 ```
-#### Install Tomcat7 and Java
+
+### Install Tomcat7 and Java
 This process will vary based on your operating system.  You will need to install:
 * Tomcat7. (We recommend tomcat7.0.61)
 * Java7. (We recommend Java 1.7.0_80)
@@ -297,19 +301,24 @@ This process will vary based on your operating system.  You will need to install
 The first thing you will need to decide is the location of your contrast-data.  In the example above, we create a folder inside /opt/ named 'contrast-data' but this could be anywhere.  We want to make sure this volume is large enough for log files, caches, and activemq persistence.  We recommend making this a separate volume to handle growth without impacting your overall system.
 
 Go ahead and create your contrast-data folder:
+
 ```
 $ mkdir /opt/contrast-data
 ```
+
 #### Transfer and Unzip Configuration and License
 Next, the configuration and data files you compressed on your running TeamServer need to be unarchived into your contrast-data directory of your new server.  
 
 As a test, let's run a command.
+
 ```
 $ ls /opt/contrast-data/conf  
 ```
+
 There should be files named `general.properties`, `database.properties`, and several others.  
 
 To be sure we don't have any issues, let's adjust the permissions on the contrast-data directory
+
 ```
 $ chown -R tomcat7:tomcat7 /opt/contrast-data
 ```
@@ -336,6 +345,7 @@ Now, it's time to set your JAVA_OPTS.  Here are the options you should set:
 -Xloggc:/opt/contrast-data/gc.out
 ```
 
+
 Notice above that you need to set the `contrast.home` and `contrast.data.dir` to the location where you have unzipped the archive above.  
 
 Every distribution is different for setting JAVA_OPTS. Please refer to your distributions documentation for best practices.
@@ -348,22 +358,25 @@ Symlink, Copy, or Move the WAR into the Tomcat webapps directory.  For the defau
 
 *Warning: yours may be different.*
 
+
+```$ sudo ln -s /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
 ```
-$ sudo ln -s /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
-```
+
 or
 
 ```
 $ cp /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
 ```
+
 or
+
 ```
 $ cp /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
 ```
 
 Once the WAR is deployed, you should be able to start your newly configured and distributed TeamServer. If you run into any problems, please let our Technical Support team know right away and we will help.
 
-# External Resources
+## External Resources
 Please let us know if you are interested in specific topics below.  We will expand our documentation based on customer demand.
 
 * [Load Balancing with nginx](http://blogs.mulesoft.com/dev/tomcat-tcat-server/load-balancing-apache-tomcat-with-nginx/)
