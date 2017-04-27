@@ -101,7 +101,7 @@ In the dialog that follows, choose which information should be included when exp
 
 <a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
 
->**Note:** Bug trackers must be configured before vulnerabilities can be sent.
+>**Note:** Bugtrackers must be configured before vulnerabilities can be sent.
 
 <a href="assets/images/NoBugTracker.png" rel="lightbox" title="No Bugtrackers Available"><img class="thumbnail" src="assets/images/NoBugTracker.png"/></a>
 
