@@ -8,7 +8,7 @@ Organization administrators have access to a variety of configuration settings t
 
 <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
  
-## General Information And Licensing
+## General Information and Licensing
 View basic information about your organization and configure high-level preferences such as Date and Time formats. Get a picture of your organization's licensing. A summary shows the number of licenses being used as well as the number of licenses available to allocate to other assets. 
 
 ## Groups
@@ -40,4 +40,4 @@ Contrast offers basic [integrations](admin_orgsettings.html#integrate) with vari
 * Custom Footer
 
 ## Score Settings
-[Score settings](admin_orgsettings.html#score) allow for customization of how **Overall Application Score** and **Library Score** gets calculated and determines what letter grade (or score) is communicated within Contrast.   
+[Score settings](admin_orgsettings.html#score-settings) allow for customization of how **Overall Application Score** and **Library Score** gets calculated and determines what letter grade (or score) is communicated within Contrast.   

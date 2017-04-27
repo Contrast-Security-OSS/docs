@@ -6,7 +6,7 @@ tags: "Admin organization report settings"
 
 Contrast offers compliance reports for understanding an application's compliance status.
 
-* **DISA ASD STIG:** DISA's Application Security and Development STIG reports the security posture as it relatese to policy requirements for security programs and best practices for Information Assurance (IA)-enabled applications.
+* **DISA ASD STIG:** DISA's Application Security and Development STIG reports the security posture as it relates to policy requirements for security programs and best practices for Information Assurance (IA)-enabled applications.
 * **OWASP 2013 Top 10:** The Open Web Application Security Project reports the problems that are “worth fixing” or in the top ten list of flaws. 
 * **PCI DSS - 2.0 & 3.0:** The Payment Card Industry Data Security Standard protects cardholder data in the event of a data breach. To achieve compliance, organizations must identify and remediate all critical vulnerabilities.
 

@@ -38,7 +38,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 <a href="assets/images/Application-vulnerabilities-tab.png" rel="lightbox" title="Vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Application-vulnerabilities-tab.png"/></a>
 
-> Example: This vulnerability was reported to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
+> **Example:** This vulnerability was reported to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
  
 ## Improve Your Application Score
 
@@ -77,7 +77,7 @@ What’s better than assigning a vulnerability to a user? Creating tags for each
 
 <a href="assets/images/Tag-vulnerability.png" rel="lightbox" title="Tag vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Tag-vulnerability.png"/></a>
  
-> Example: You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
+> **Example:** You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
 
 These tags can be created for applications and servers as well. To learn more about filters, please read the Using Contrast [Overview](user_starthere.html#overview). 
  

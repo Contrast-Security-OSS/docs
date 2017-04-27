@@ -27,7 +27,7 @@ Contrast provides four default groups within each organization. These groups pro
 
 * **View:** Allows users to see an application's score, libraries and vulnerabilities, and add comments
 * **Edit:** Allows users to manage an application's vulnerabilities as well as basic application management functions
-* **Rules Admin:** Allows users all the capabiity of the Edit role plus the ability to manage security rules for an application 
+* **Rules Admin:** Allows users all the capability of the Edit role plus the ability to manage security rules for an application 
 * **Admin** Provides full access to configure an application  
 
 ### Managing Organization Groups
