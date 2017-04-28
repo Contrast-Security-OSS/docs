@@ -33,13 +33,11 @@ New reporting on your organization and the ability to save custom views of the V
 * Language Quick Views for rules make it easy to zero in on the rules that apply to your application language.
 * See what rules have been modified in the Assess Rules grid. 
 * Welcome to our new role, ServerAdmin! It has the configuration of SuperAdmin without any of the user management worries.
-* Changes to .NET instrumentation mode.
-
 
 ## Agent Updates
-* **Java Agent Summary:** Must bug Arshan again and then add summary here...
+* **Java Agent Summary:** Added some minor performance enhancements, better support for Equinox environments, and rules for RabbitMQ and Liferay. Also fixed multiple bugs.
 * **.NET Agent Summary:** Added exclusions and enabled Syslog output for Protect. Changed the default instrumentation engine to Duplex mode. Made a few improvements to agent performance, accuracy and reliability.
-* **Node.js Agent Summary:** Added Better ES6 support and runtime enabling/disabling of instrumentation. Database support and bug fixes for SQLite3, and bug fix for tainted values in nested parameters.
+* **Node.js Agent Summary:** Added better ES6 support and runtime enabling/disabling of instrumentation. Provided database support. Fixed bugs for SQLite3 and tainted values in nested parameters.
 
 
 
