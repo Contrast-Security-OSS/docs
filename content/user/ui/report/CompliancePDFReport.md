@@ -1,7 +1,7 @@
 <!--
-title: "Vulnerability PDF Report"
+title: "Compliance Reports"
 description: "Overview of vulnerability PDF reports"
-tags: "TeamServer application vulnerability PDF report"
+tags: "TeamServer application compliance PDF report"
 -->
 
 Contrast offers the ability to generate timestamped PDF reports of security issues identified during the monitoring of an application. These PDFs act as snapshots in time of your application's security status.
