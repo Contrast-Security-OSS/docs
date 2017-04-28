@@ -1,7 +1,7 @@
 <!--
 title: "Contrast 3.3.9 - April 2017"
 description: "Contrast 3.3.9 April 2017"
-tags: "3.3.9 March Release Notes"
+tags: "3.3.9 April Release Notes"
 -->
 
 New reporting on your organization and the ability to save custom views of the Vulnerability Trend report make this release a must-see. We also made rule management a little bit easier, and even snuck in fixes to some annoying bugs. Right on!
@@ -26,13 +26,13 @@ New reporting on your organization and the ability to save custom views of the V
 * Organization Statistics: It’s like a minimap of all your app security stats.
 * Filter your Vulnerability Trend report just the way you like it, then save that view for easy access at any time. Now do it again. Ah, the convenience...
 * Now you can decide how your Assessment rules (policy) get applied throughout your portfolio.
-* Search by explicit CVE numbers and click on them in the CVE Shilds page to get more details when managing your policy.
+* Search by explicit CVE numbers and click on them in the CVE Shields page to get more details when managing your policy.
 * We added rules that make it easy to apply policy to your portfolio based on application language. Finally! 
 * Change the severity of a vulnerability right in the grid. High five.
 * Updated our messaging in Attack Monitor to be more precise.
 * Language Quick Views for rules make it easy to zero in on the rules that apply to your application language.
 * See what rules have been modified in the Assess Rules grid. 
-* Welcome to our new role, ServerAdmin! It has the configuration of SuperAdmin without any of the user management worries.
+* Welcome our new role, ServerAdmin! It has the configuration of SuperAdmin without any of the user management worries.
 
 ## Agent Updates
 * **Java Agent Summary:** Added some minor performance enhancements, better support for Equinox environments, and rules for RabbitMQ and Liferay. Also fixed multiple bugs.
