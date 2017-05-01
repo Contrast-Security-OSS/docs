@@ -36,7 +36,7 @@ New reporting on your organization and the ability to save custom views of the V
 
 ## Agent Updates
 * **Java Agent Summary:** Added some minor performance enhancements, better support for Equinox environments, and rules for RabbitMQ and Liferay. Also fixed multiple bugs.
-* **.NET Agent Summary:** Added exclusions and enabled Syslog output for Protect. Changed the default instrumentation engine to Duplex mode. Made a few improvements to agent performance, accuracy and reliability.
+* **.NET Agent Summary:** Added exclusions, enabled Syslog output and implemented Command Injection for Protect. Made a few improvements to agent performance, accuracy and reliability.
 * **Node.js Agent Summary:** Added better ES6 support and runtime enabling/disabling of instrumentation. Provided database support. Fixed bugs for SQLite3 and tainted values in nested parameters.
 
 
