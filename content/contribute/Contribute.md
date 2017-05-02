@@ -5,7 +5,7 @@ category: "Style Guide", "Open Documentation Project"
 tags: "contribute OpenDocs Github"
 }-->
 
-**Want to contribute to OpenDocs?**  Great! We want to make it easy so below you'll find some general guidelines to help YOU help US. Thanks in advance!
+**Want to contribute to OpenDocs?**  Great! We want to make it easy so below you'll find some general guidelines to help YOU help us. Thanks in advance!
 
 
 ## Reporting Bugs
