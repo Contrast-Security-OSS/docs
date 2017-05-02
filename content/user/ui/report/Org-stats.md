@@ -9,7 +9,7 @@ Gain robust and comprehensive visibility into your organization data with Organi
 
 Go to the Reports page via the User Menu to find widgets with information about licensing utilization and expirations, breakdowns across various data points for onboarded applications, and deployed servers and how they’re being utilized. Use the filters in the dropdown menus to choose which data to compare at a glance.
 
-<a href="assets/images/org-stats-reports-page.png" rel="lightbox" title="Organization statistics on Reports page"><img class="thumbnail" src="assets/images/org-stats-reports-page.png"/></a>
+<a href="assets/images/Org-stats-reports-page.png" rel="lightbox" title="Organization statistics on Reports page"><img class="thumbnail" src="assets/images/Org-stats-reports-page.png"/></a>
 
 In the Licenses chart, view the number of overall licenses for Assess and Protect, as well as the number of unlicensed applications and servers that exist in your organization. Click the application count to navigate to the Unlicensed quick view in the Applications page. 
 
@@ -25,7 +25,7 @@ The Licenses tab features an Activity trend chart of data on license consumption
 
 If your organization doesn't own any licenses for either Protection or Assessment, Contrast alerts you to the count of unlicensed assets in that mode.
 
-<a href="assets/images/org-stats-licenses.png" rel="lightbox" title="Organization statistics for licenses"><img class="thumbnail" src="assets/images/org-stats-licenses.png"/></a>
+<a href="assets/images/Org-stats-licenses.png" rel="lightbox" title="Organization statistics for licenses"><img class="thumbnail" src="assets/images/Org-stats-licenses.png"/></a>
 
 ## Applications
 
