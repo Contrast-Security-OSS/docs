@@ -28,7 +28,7 @@ Assessment is applied to each application. Once your application has been assess
 ## Contrast Assessment Policies
 There are two types of policies available in Contrast Assess. They are as follows:
 
-* **Assess Rules** TBD
+* **Assess Rules** which can detect specific types of vulnerabilities, such as SQL Injection or Cross-Site Scripting
 * **Security Controls** which are methods in your code that make sure data is safe to use
 
 Read more about these policies in our [Assessment Policy](assess_managevulns.html#assess-policy) article.

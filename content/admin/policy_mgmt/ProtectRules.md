@@ -1,10 +1,10 @@
 <!--
 title: "Protect Rules"
 description: "Overview of protection rules"
-tags: "Admin protection rules policy management protect"
+tags: "admin protection rules policy management protect"
 -->
 
-Protect Rules allow you to set applications to monitor for attacks. They correspond to an attack type, such as SQL Injection or Cross-Site Scripting, that seeks to exploit any vulnerabilities that allow that type of attack in both custom code as well as third-party libraries. 
+Protect Rules allow you to set applications to monitor for attacks. They correspond to an attack type, such as SQL Injection or Cross-Site Scripting, that seeks to exploit any vulnerabilities that allow that type of attack in both custom code as well as 3rd party libraries. 
 
 Contrast ships with built-in protection rules:
 
@@ -28,9 +28,9 @@ Protect Rules can be configured within the application details page, under the *
 * **BLOCK** which enables the agent to identify attacks, report on them and block the attack
 * **BLOCK AT PERIMETER** BLOCK (P) only appears for some rules and means that the agent makes a blocking decision before the application is able to process the request
 
->**Note:** You may notice that for a single app, a single Protect Rule can have a different configuration per environment - OFF for Development, BLOCK for QA and MONITOR for Production. This granularity enables testing of different policies in pre-production environments without disrupting production defenses.
+>*Note:** You may notice that for a single app, a single Protect Rule can have a different configuration per environment - OFF for Development, BLOCK for QA and MONITOR for Production. This granularity enables testing of different policies in pre-production environments without disrupting production defenses.
 
 Protect Rules can also be managed in bulk by clicking the checkbox next to the rules you want to edit and then clicking the **Change Mode** button. Select which environments to modify and what policy to apply and then hit **Save**. All selected rules will have their policies updated.
 
 ## Configuring Protect Rules Across Applications
-Protect Rules can be configured from the application portfolio view. Go to the **Protect Rules** section of the Policy Management page. You'll be able to see how your protection policy is being applied across your portfolio. Clicking into a rule will allow you to select OFF, MONITOR or BLOCK for each server type. The agents will then apply the correct behavior appropriately. Each rule can be independently configured for each application, so you can disable, enable monitoring or enable monitoring and blocking separately, for each Protect Rule, for each application.
+Protect Rules can be configured by organization administrators or Rules Admin users from the application portfolio view. Go to the **Policy Management** page from the user menu. You'll be able to see how your protection policy is being applied across your portfolio. Clicking into a rule will allow you to select OFF, MONITOR or BLOCK for each server type. The agents will then apply the correct behavior appropriately. Each rule can be independently configured for each application, so you can disable, enable monitoring or enable monitoring and blocking separately, for each Protect Rule, for each application.

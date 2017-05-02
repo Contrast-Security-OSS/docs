@@ -6,7 +6,7 @@ tags: "Admin cve shields policy management protect"
 
 Common Vulnerabilities and Exposures (CVE) shields provide a standardized identifier for a given vulnerability or exposure. It also provies a baseline for evaluating the coverage of your tools. Contrast offers a number of CVEs to help protect you. Organization and Policy (Rules) administrators can adjust how they are applied throughout your portfolio by going to **Policy Management** from the user menu and selecting CVE Shields from the left navigation.
 
-CVE shields are configured the same way as [Protection Rules](admin_policymgmt.html#protect), but instead of detecting categories of attacks, they defend specific CVEs from attack. This is a great feature for legacy apps with vulnerable libraries that are difficult to update.
+CVE shields are configured the same way as [Protect Rules](admin_policymgmt.html#protect), but instead of detecting categories of attacks, they defend specific CVEs from attack. This is a great feature for legacy apps with vulnerable libraries that are difficult to update.
 
 Here is the list of CVEs that we defend with built-in CVE Shields:
 
