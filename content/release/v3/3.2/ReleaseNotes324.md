@@ -76,15 +76,15 @@ A future version of the .NET Agent will increase the .NET Framework version requ
 	
 ## OpenDocs
 
-* Java Agent Custom Rules: https://docs.contrastsecurity.com/user_javarules.html
-* .Net Agent Level 2 Rules: https://docs.contrastsecurity.com/user_netrules.html
-* Java Agent Support for Karaf: https://docs.contrastsecurity.com/user_javainstall.html#karaf
-* IIS Express Configuration: https://docs.contrastsecurity.com/user_netconfig.html#iis
-* Granting and Revoking SuperAdmin Permissions: https://docs.contrastsecurity.com/admin_tsconfig.html#super
-* Configuring TeamServer Logging: https://docs.contrastsecurity.com/admin_tsconfig.html#log
-* Uninstalling TeamServer: https://docs.contrastsecurity.com/admin_tsinstall.html#uninstall
-* Using the Encrypted Properties Editor: https://docs.contrastsecurity.com/admin_tsconfig.html#encrypt
-* Backing Up MySQL: https://docs.contrastsecurity.com/admin_tsconfig.html#backup
+* [Java Agent Custom Rules](installation_javapolicy.html#level2)
+* [.Net Agent Level 2 Rules](installation_netpolicy.html)
+* [Java Agent Support for Karaf](installation_javainstall.html#karaf)
+* [IIS Express Configuration](installation_netconfig.html#iis)
+* [Granting and Revoking SuperAdmin Permissions](admin_manageorgs.html#sa)
+* [Configuring Contrast Logging](installation_setupconfig.html#log)
+* [Uninstalling Contrast](installation_setupinstall.html#uninstall)
+* [Using the Encrypted Properties Editor](installation_setupconfig.html#encrypt)
+* [Backing Up MySQL](installation_setup.html#setup-mysql)
 
 
 ## Database Migrations

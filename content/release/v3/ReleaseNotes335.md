@@ -182,4 +182,4 @@ tags: "3.3.5 December Release Notes"
 * Updates to SheepDog: https://github.com/Contrast-Security-OSS/sheepdog
 
 ## OpenDocs:
-* Support Technologies: https://docs.contrastsecurity.com/user_javagetstart.html#support
+* [Supported Technologies](installation_java.html#java-supported)

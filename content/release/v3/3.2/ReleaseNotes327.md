@@ -137,11 +137,11 @@ Customers who write or have implemented custom rules in TeamServer should read t
 * CONTRAST-8194: Libraries - Hide archived apps in 'App' Using column
 
 ## OpenDocs
-*  [Installing on Play](user_javainstall.html#play)
-* [Two Step Verification](admin_tsconfig.html#tsv)
-* [Upgrading Agents with TeamServer EOP](admin_tsconfig.html#agents)
-* [Everything You Wanted to Know About Notifications](user_tsguideset.html#alert)
-* [Migrating External Rules from 3.2.6 to 3.2.7+](admin_tsinstall.html#external)
+* [Installing on Play](installation_javainstall.html#play)
+* [Two-Step Verification](admin_systemsettings.html#twostep)
+* [Upgrading Agents on Contrast](admin_eop.html#agent)
+* [Notifications](admin_orgsettings.html#org-notify)
+* [Migrating External Rules from 3.2.6 to 3.2.7+](admin_eopupgrade.html#rules)
 
 ## Database Migrations
 * V3_2_7_000: Remove Invalid XXE Samples

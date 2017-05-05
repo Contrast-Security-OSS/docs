@@ -136,5 +136,5 @@ tags: "3.3.7 February Release Notes"
 
 
 ## OpenDocs:
-* Using Assess and Protect Exclusions: https://docs.contrastsecurity.com/user_tsguideapp.html#exclusions
-* Working with Cloud Foundry and Pivotal: https://docs.contrastsecurity.com/user_javainstall.html#cloud
+* [Using Assess and Protect Exclusions](admin_policymgmt.html#exclude)
+* [Working with Cloud Foundry and Pivotal](installation_javainstall.html#cloud)

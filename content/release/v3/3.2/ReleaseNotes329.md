@@ -121,7 +121,7 @@ tags: "3.2.9 June Release Notes"
 
 
 ## OpenDocs
-* ActiveMQ Disk Full: https://docs.contrastsecurity.com/admin_tsfaq.html#activemq
-* Java Supported Technologies: https://docs.contrastsecurity.com/user_javafaq.html#support
-* .Net Supported Technologies: https://docs.contrastsecurity.com/user_netinstall.html#supp
-* NodeJS Supported Technologies: https://docs.contrastsecurity.com/user_nodefaq.html#support
+* [ActiveMQ Disk Full](troubleshooting_setupinstallation.html#activemq)
+* [Java Agent Supported Technologies](installation_java.html#java-supported)
+* [.Net Supported Technologies](installation_net.html#net-supported)
+* [NodeJS Supported Technologies](installation_node.html#node-supported)
