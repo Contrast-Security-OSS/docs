@@ -4,8 +4,6 @@ description: "ColdFusion installation process via the ColdFusion Adminstrator"
 tags: "java agent installation coldfusion admin"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
-
 ## Getting Started
 The easiest way to install Contrast is in the ColdFusion Administrator. These instructions work in any environment supporting ColdFusion, including IIS.
 * Expand Server Settings and hit **Java and JVM**

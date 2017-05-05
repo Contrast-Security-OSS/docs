@@ -4,8 +4,6 @@ description: "Agent installation using the Jetty container"
 tags: "java agent installation Jetty"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
-
 ## Running Contrast from the command line or script:
 Installing on Jetty is easy. Add the following lines to your ***${JETTY_DIR}\start.ini*** file:
 

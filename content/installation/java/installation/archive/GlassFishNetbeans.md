@@ -4,8 +4,6 @@ description: "Agent configuration using the GlassFish NetBeans IDE"
 tags: "java agent installation GlassFish NetBeans IDE"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
-
 ## Prerequisites
 Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 

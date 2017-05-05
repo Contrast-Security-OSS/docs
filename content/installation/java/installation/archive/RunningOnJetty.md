@@ -4,8 +4,6 @@ description: "Agent on-boarding for Jetty container"
 tags: "java agent running Jetty"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
-
 ## Prerequisites
 Download the Contrast plugin (***contrast.jar***) from the TeamServer.
 

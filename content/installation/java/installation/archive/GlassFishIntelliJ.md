@@ -4,8 +4,6 @@ description: "Agent configuration using the GlassFish IntelliJ IDE"
 tags: "java agent installation glassfish IntelliJ IDE"
 -->
 
-[Back to Quick Links](user_javainstall.html#links)
-
 ## Prerequisites
 This document will outline the process for installing Contrast on an application using the IntelliJ IDE, running GlassFish. Prerequisites
 Download the Contrast plugin (***contrast.jar***) from the Contrast site.
