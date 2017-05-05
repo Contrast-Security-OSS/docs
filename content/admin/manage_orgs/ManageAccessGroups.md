@@ -4,7 +4,7 @@ description: "Overview of managing access groups"
 tags: "Admin manage organizations access groups"
 -->
 
-Contrast provides role based access control (RBAC) capabilities through groups. Administrators have the ability to create these groups for providing or restricting system, organization and application access and privileges to users within Contrast. Contrast has two types of access control groups: **System** and **Organization**. System groups, only available to on-premises customers, allow for delegated system administration. Organization groups allow for cross-organization access and application access/restriction.
+Contrast provides role-based access control (RBAC) capabilities through groups. Administrators have the ability to create these groups for providing or restricting system, organization and application access and privileges to users within Contrast. Contrast has two types of access control groups: **System** and **Organization**. System groups, only available to on-premises customers, allow for delegated system administration. Organization groups allow for cross-organization access and application access/restriction.
 
 ## System Administration Groups
 A system group is a convenient way to manage administrative tasks across users and organizations. Users can belong to many groups. They do not have to be created within an organization in order to gain access to that organization. 

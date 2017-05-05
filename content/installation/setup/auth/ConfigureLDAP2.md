@@ -66,7 +66,7 @@ There are four supported types of BIND that can be used by Contrast. Each of the
 ---
 
 ### Implementing a service user
-Contrast recommendeds that you implement a dedicated user for binding to the LDAP directory. This Service User should be setup as either a read-only or read-write user, depending on how Contrast is configured to interact with the LDAP directory.
+Contrast recommends that you implement a dedicated user for binding to the LDAP directory. This Service User should be setup as either a read-only or read-write user, depending on how Contrast is configured to interact with the LDAP directory.
 
 ### Testing LDAP connection
 Once you configure the connection to the LDAP server, click the **Test Connection** button located near the bottom of the form. Testing the connection ensures that the application can connect to the LDAP server and perform queries. 
@@ -115,7 +115,7 @@ User Management is LDAP Managed (standard) or Contrast Managed. If you select Co
  
 You can choose to dedicate a LDAP server to Contrast for authentication. If you want to set this up, Contrast can manage the users in the directory by setting the User Management selection to **Contrast Manages LDAP**. In this mode, users are added to the LDAP directory when they are added to the application. Most users leave this set to **LDAP Manages Contrast**, which means that Contrast only reads from LDAP, and users must be added to the correct group in the directory before they can be added to the application.
 
-<a href="assets/images/KB4-c10_3.png" rel="lightbox" title="Configurig Users"><img class="thumbnail" src="assets/images/KB4-c10_3.png"/></a>
+<a href="assets/images/KB4-c10_3.png" rel="lightbox" title="Configuring Users"><img class="thumbnail" src="assets/images/KB4-c10_3.png"/></a>
 
 <BR>
 
