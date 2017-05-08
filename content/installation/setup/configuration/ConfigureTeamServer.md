@@ -40,4 +40,4 @@ See [Configuring LDAP Authentication](installation_setupauth.html#ldap)
 See [Configuring Active Directory](installation_setupauth.html#ad) 
 
 ### Single Sign-On
-See [Configuring Single Sign-On](installation_setupauth.html#sso)
+See [Configuring Single Sign-On](installation_setupauth.html#sso-setup)
