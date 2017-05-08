@@ -9,7 +9,6 @@ tags: "java agent installation dropwizard"
 Here's an example of how to run the Java Agent with your standalone/fatjar Dropwizard application:
 
 ````
-
 java -javaagent:/path/to/contrast.jar -Dcontrast.appname="AppNameToReportUnder" -jar /path/to/your/app.jar server /path/to/your/appconfig.yml
 ````
 

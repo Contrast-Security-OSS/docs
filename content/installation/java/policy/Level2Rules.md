@@ -22,16 +22,12 @@ The challenges with using a Level 2 rule, as opposed to a Level 1 rule, include:
 * Mistakes made using Level 2 rules can hurt performance and hide true positives
 * Requires a centralized management of a policy file outside of TeamServer
 
----
-
 ## Types Of Level 2 Rules
 There are two types of Level 2 Rules: **Regular Expression** and **Data Flow**. 
 
 **Regular Expression** rules use pattern matching to evaluate the input to a given trigger and report any time the pattern is violated, regardless of the source of the input.
 
 Conversely, **Data Flow** rules, as their name implies, are used to track untrusted data throughout the application and report when said data gets to a trigger without being properly validated or sanitized. 
-
----
 
 ## Adding A Level 2 Rule
 Adding a new Level 2 Rule consists of two main parts: creating a new custom Policy file for the Agent to follow and creating a corresponding Groovy script to teach TeamServer how to process and render these custom rule results. Our tutorial starts with the creation of the Policy file and ends with a template of the Groovy file.
@@ -42,7 +38,6 @@ This portion of the tutorial will walk through adding a new Regular Expression R
 
 #### Step 1: Create A New Policy File
 We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml.zip) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
-<br>
 
 #### Step 2: Add A New ```<rule>``` To The Policy
 Regular Expression rules work by pattern matching one or more parameter values passed into a specified method. By supplying a pattern to the rule, you're telling Contrast to report any time the pattern *is* matched and should *not* have been (```bad-value-regex```) or is *not* matched and *should* have been (```good-value-regex```). 
@@ -67,7 +62,6 @@ The following attributes, present above, should be in your rules.
 - ```disallowed-tags```: For regular expression-based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
 - ```required-tags```: For regular expression-based rules, this field should always be set to "". It is covered more in depth in the Dataflow rule section below. 
 - ```tracked```: For regular expression-based rules, this field should always be set to false. The **Adding A Level 2 Data Flow Rule** section later in this article covers this in more detail. 
-<br>
 
 #### Step 3: Create A New Groovy Script For The Rule
 Create a Groovy script based on one of the template files provided here: 
@@ -135,8 +129,6 @@ class SecureRule extends TriggerSecurityRule {
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
 
-<br>
-
 #### Step 4: Teach TeamServer About The New Rule
 There are two steps to teaching the TeamServer about your new rule:
 
@@ -157,12 +149,10 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 </beans>
 ```
 
-<br>
 
 #### Step 5: Restart The TeamServer
 An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation_setupinstall.html#restart).
 
-<br>
 
 #### Step 6: Configure And Restart The Application Server
  In order for the agent to use this custom policy, add the ```-Dcontrast.policy.overrides``` flag to the run configuration where the ```-javaagent``` flag is set. You will need to set the overrides value to the path to the new policy file (e.g., *custom_rules.xml*).
@@ -185,7 +175,6 @@ Finally, for a vulnerability to be reported, the tracked data has to violate a r
 
 The format of each is explained in greater detail below. 
 
-<br>
 
 #### Step 1: Create A New Policy File
 We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The file name becomes important in Step #8 below).
@@ -349,8 +338,6 @@ xml
             script-source="classpath:rulepack/cnn.groovy"/>                
 </beans>
 ```
-
-<br>
 
 #### Step 7: Restart The TeamServer
 An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation_setupinstall.html#restart).

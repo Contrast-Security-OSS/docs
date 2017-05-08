@@ -31,7 +31,6 @@ We recommend the following before performing the uninstallation process:
 The vast majority of files will be deleted when performing an uninstall. However, a few key files will be left on the system. These can be manually deleted by the administrator. 
 
 >**NOTE:** The uninstaller will **not** delete the following:
-
 * The Contrast Home directory
 * The Contrast DATA directory
 * The Contrast LOGS directory

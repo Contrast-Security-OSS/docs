@@ -40,7 +40,6 @@ After choosing **LDAP** in Step 1 of the Authentication Wizard, Step 2 provides 
 
 ---
 
-<BR>
 
 ### BIND to server
 
@@ -71,7 +70,7 @@ Contrast recommends that you implement a dedicated user for binding to the LDAP 
 ### Testing LDAP connection
 Once you configure the connection to the LDAP server, click the **Test Connection** button located near the bottom of the form. Testing the connection ensures that the application can connect to the LDAP server and perform queries. 
 
-<BR>
+---
 
 ## Configure Groups
 It's important to note that each application handles roles and access to data within the application, and Organization Administrators set the roles for users. Contrast doesn't perform Data Access Control using the integrated LDAP servers. However, the Access Control check when you log in (or create new users) ensures that the provided user belongs to the correct group within the LDAP directory.
@@ -92,7 +91,6 @@ The table below describes the different groups options available.
 
 ---
 
-<BR>
 
 >**NOTE:** The difference between Static and Dynamic groups is the way group membership is managed. In a Static group, the group tracks its members through an attribute on the object - like *uniqueMember*. In a Dynamic group, the user object is responsible for tracking its own membership, and groups are added dynamically to the user object when the user becomes a member of a group.
 
@@ -106,6 +104,8 @@ Once you enter the configuration values, select the groups that the application 
 
 You can use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
 
+---
+
 ## Configuring Users
 To fully integrate with a LDAP directory, Contrast needs information on how to connect to the LDAP server as well as how to find users and groups within the directory.
 
@@ -116,8 +116,6 @@ User Management is LDAP Managed (standard) or Contrast Managed. If you select Co
 You can choose to dedicate a LDAP server to Contrast for authentication. If you want to set this up, Contrast can manage the users in the directory by setting the User Management selection to **Contrast Manages LDAP**. In this mode, users are added to the LDAP directory when they are added to the application. Most users leave this set to **LDAP Manages Contrast**, which means that Contrast only reads from LDAP, and users must be added to the correct group in the directory before they can be added to the application.
 
 <a href="assets/images/KB4-c10_3.png" rel="lightbox" title="Configuring Users"><img class="thumbnail" src="assets/images/KB4-c10_3.png"/></a>
-
-<BR>
 
 
 ### Finding users
@@ -154,7 +152,6 @@ Once you've configured your application to connect to LDAP, set up user and grou
 
 <a href="assets/images/KB4-c09_4.png" rel="lightbox" title="Test Login"><img class="thumbnail" src="assets/images/KB4-c09_4.png"/></a>
 
-<BR>
 
 Once you've successfully logged in as both a User and an Administrator, click **Finish** to complete the configuration. You must restart Contrast in order for the authentication changes to be applied.
 

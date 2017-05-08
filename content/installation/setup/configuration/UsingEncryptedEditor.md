@@ -12,8 +12,7 @@ The tool can be found in the *$CONTRAST_HOME/bin* directory. On Linux the file i
 
 Inputs are needed in order to view and/or edit an encrypted property. In the example below, we are simply showing the usage of the command. The primary inputs needed to view/edit the file include the path to *ESAPI.properties* and the target file for editing purposes.
 
-```
-bash
+```bash
 contrast@EOP-TeamServer:~/contrast/bin$ ./edit-properties 
 
 usage: property-editor
@@ -25,7 +24,7 @@ usage: property-editor
  -v,--value <val>         The value of the property
 
 ```
-<br/>
+
 ### Encrypted Files Within EOP TeamServer
 The following files are encrypted by default for security purposes:
 
@@ -36,12 +35,12 @@ The following files are encrypted by default for security purposes:
 | database.properties  | Contains host and connection information for configuring communication between TeamServer and MySQL                  |
 | cassandra.properties | Contains host and connection information for configuring communication between TeamServer and Cassandra              |
 | saml.properties      | Contains saml keystore information.                                                                                  |
-<br/>
+
+
 ### Example Of Editing/Viewing An Encrypted File
 The following is an example of editing an encrypted file in TeamServer. In this example we are loading our *ad.properties* file to edit the configuration of our TeamServer connecting to ActiveDirectory.
 
-```
-bash
+```bash
 contrast@TeamServer:~/contrast/bin$ ./edit-properties -e ../data/esapi/ -f ../data/conf/ad.properties
 
 ad.userDn                                         : cn=Directory Manager
@@ -53,5 +52,5 @@ ad.group.admin                                    : cn=ContrastAdmins,cn=Users,d
 ad.url                                            : ldap://localhost:389
 ad.base                                           : dc=contrastsecurity,dc=com
 ```
-<br/>
+
 The editor will show all of the existing values encrypted in the file. You could use the flags listed above to view or edit a single property. The editor will also ask for a comment to be placed in the file for auditing purposes. It is strongly suggested that you make use of the comment feature for noting any change you make to the file.

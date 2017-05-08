@@ -10,25 +10,19 @@ Contrast takes security seriously, especially when it comes to the security of y
 
 You can access two-step verification codes via your Contrast-associated email address, or by using the Google Authenticator mobile application, available on the following devices:
 
-[Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
-<br/>
-[iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8)
-<br/>
-[Blackberry](https://appworld.blackberry.com/webstore/content/29401059/?lang=en&countrycode=US)
+* [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
+* [iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8)
+* [Blackberry](https://appworld.blackberry.com/webstore/content/29401059/?lang=en&countrycode=US)
 
 
 ## Getting Started
 
-Two-step verification (TSV) is controlled at three hierarchical levels: System, Organization and User.  The System administrator can Enable or Disable the feature, as well as choose whether or not individual organizations may override this setting.  
+Two-step verification (TSV) is controlled at three hierarchical levels: System, Organization and User.  The System administrator can Enable or Disable the feature, as well as choose whether or not individual organizations may override this setting, by going to **System Settings > Security > Two-Step Verification**.  
 
-**System Settings > Security > Two-Step Verification**
-<br/>
 <a href="assets/images/TSVSystemEnabledOverrideOff.png" rel="lightbox" title="System Settings"><img class="thumbnail" src="assets/images/TSVSystemEnabledOverrideOff.png"/></a>
 
 If override is not enabled, then the system setting will carry down through the remaining levels of the hiearchy to the organization and the user. A lock icon will indicate changes may not be made. 
 
-**Org Settings > Security > Two-Step Verification**
-<br/>
 <a href="assets/images/TSVOrgLocked.png" rel="lightbox" title="Locked Organization Settings"><img class="thumbnail" src="assets/images/TSVOrgLocked.png"/></a>
 
 If override IS enabled, the Organization administrator may choose to toggle the feature ON or OFF.  If ON, the administrator may choose whether or not to require two-step verification for users.
@@ -52,7 +46,7 @@ If TSV is enabled and **not** required, the user will still be onboarded upon lo
 
 <a href="assets/images/TSVOnboardOpt.png" rel="lightbox" title="Optional Onboarding"><img class="thumbnail" src="assets/images/TSVOnboardOpt.png"/></a>
 
-> **Please Note:** If a user belongs to multiple organizations, then their default organization will determine their TSV settings.
+> **Note:** If a user belongs to multiple organizations, then their default organization will determine their TSV settings.
 
 
 ## Setup

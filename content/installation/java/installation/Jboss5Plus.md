@@ -18,7 +18,6 @@ Of course, you'll have to substitute the path to ***contrast.jar*** and your JBo
 If you're running in domain mode (using ***domain.bat*** or ***domain.sh***), you'll have to add the ```-javaagent``` switch to the JVM options in ***$JBOSS_HOME/domain/configuration/domain.xml***. Here's an example file snippet:
 
 ````
-
 <server-group ...>
   <jvm name="default">
     <jvm-options>

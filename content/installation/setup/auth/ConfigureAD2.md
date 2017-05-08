@@ -52,7 +52,6 @@ It is recommended that a dedicated read-only user be created specifically for co
 ### Testing Active Directory Connection
 Like setting up LDAP, after configuring your connection details and bind credentials, you will want to ensure connectivity to the server by using the **Test Connection** button located below the form. Once connectivity has been verified, click **Next** to proceed to Groups. 
 
-<BR>
 
 ## Configure Groups
 An important distinction is that Contrast does not perform Data Access Control using the integrated Active Directory Servers - that is to say that roles and access to data within the application are handled by the application, and user roles are set by the Organization Administrators. That being said, there is an Access Control check when logging in (or creating new users) to ensure that the provided user does in fact belong to the correct group within the Active Directory.
@@ -67,7 +66,6 @@ You can use the **Query for Groups** button to enable a live search of existing 
 
 <a href="assets/images/KB4-c09_2.png" rel="lightbox" title="Configuring Groups"><img class="thumbnail" src="assets/images/KB4-c09_2.png"/></a>
 
-<BR>
 
 ## Advanced Settings
 
@@ -87,7 +85,6 @@ You can use the **Query for Groups** button to enable a live search of existing 
 
 <a href="assets/images/KB4-c09_3.png" rel="lightbox" title="Advanced Settings"><img class="thumbnail" src="assets/images/KB4-c09_3.png"/></a>
 
-<BR>
 
 ### Selecting The User ID Attribute
 It is important to pick the correct User ID Attribute when setting up the Active Directory integration so that users can use the username that they are most familiar with.
@@ -105,13 +102,11 @@ Once all of the configuration options are set, verify that you are able to log i
 
 <a href="assets/images/KB4-c09_4.png" rel="lightbox" title="Test Login"><img class="thumbnail" src="assets/images/KB4-c09_4.png"/></a>
 
-<BR>
 
 > **NOTE:** If testing a login seems to take an excessive amount of time, this is likely a result of having the wrong setting for the Follow Referrals option on the Advanced Settings screen. Flip the setting and you should be able to verify login functionality quickly.
 
 After all settings are verified and test logins are successful, click **Finish** to complete the configuration. You will need to restart TeamServer in order for the authentication changes to be applied.
 
-<BR>
 
 ## Using Self-Signed or Privately Signed Certificates
 

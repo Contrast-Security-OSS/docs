@@ -17,8 +17,7 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 2. Select the IntelliJ Server configuration instance
 3. Select the **Server** tab and enter the Contrast launcher string in **VM Options**: 
 
-```
-sh
+```sh
 -javaagent:${DOWNLOADS}/contrast.jar -noverify
 ```
 

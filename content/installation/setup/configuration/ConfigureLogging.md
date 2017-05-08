@@ -16,7 +16,7 @@ The TeamServer logs can be found under the *$CONTRAST_HOME/logs* directory. The 
 | Contrast.log        | The *contrast.log* is the equivalent of Tomcat's *stdout* or *console log*. Most, if not all, key events happening inside of TeamServer will be logged to this file for informational or debugging purposes. This includes information about applications, servers, libraries, traces and users. This log file will also store Java stack traces for debugging purposes when a server exception takes place.                                                                    |
 | Migration.log       | The *migration.log* contains a summary of all database migrations that occur against the TeamServer between updates. The log file will reference the version of the TeamServer, as well as the migration script that ran. The status of the script will also be provided in the log message.                                                                                                                                                                              |
 | Security-events.log | The *security-events.log* was formally the *esapi.log*. This log file is used for capturing key events from the TeamServer such as the loading of a given property file.                                                                                                                                                                                                                                                                                                    |
-<br/>
+
 ## Configuring Logging Settings
 A very basic log setting can be found within the SuperAdmin user interface by navigating to **System Settings** and then choosing **Log Level**. From this location in the user interface, an EOP administrator of TeamServer can change the logging from informational to any of the following options: ```FATAL```, ```ERROR```, ```WARNING```, ```INFO```, ```DEBUG``` and ```TRACE```. A detailed review of log settings for **log4j** can be found [here](http://logging.apache.org/log4j/2.x/manual/customloglevels.html).
 
@@ -29,7 +29,7 @@ Contrast recommends that customers only make changes to the *log4j2.xml* file un
 ````
 <Configuration monitorInterval="60">
 ````
-<br/>
+
 #### Understanding The Appenders Section
 Appenders are responsible for delivering *LogEvents* to their destination. Every Appender must implement the Appender interface. Most Appenders will extend *AbstractAppender*, which adds Lifecycle and Filterable support. **Lifecycle** allows components to finish initialization after configuration has completed, and to perform cleanup during shutdown. **Filterable** allows the component to have filters attached to it, which are evaluated during event processing.
 

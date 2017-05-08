@@ -28,7 +28,8 @@ Contrast doesn't provide keys for SAML authentication. If you enable SSO without
 
 You need to generate your own self-signed key using the Java Keytool:
 
-```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
+```
+keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
 ```
 
 Use the [Encrypted Editor](installation_setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 

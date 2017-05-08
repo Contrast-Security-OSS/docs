@@ -21,8 +21,7 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 4. Add Contrast's JVM options to the **VM Options** field
 
-```
-sh
+```sh
 -javaagent:${DOWNLOADS}/contrast.jar
 ```
 

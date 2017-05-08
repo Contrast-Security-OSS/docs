@@ -6,7 +6,7 @@ tags: "installation java agent configuration rules properties"
 
 Parameters for certain rules are now configurable by the end user. The following are methods of applying custom parameters to these rules.
 
-## Setting In *rules.xml*
+## Setting In "rules.xml"
 
 An optional top level ```<properties>``` element has been added to the ***rules.xml***.
 
