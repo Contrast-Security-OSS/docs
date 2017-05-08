@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 2.6.1 Release Notes, February 26th, 2014"
 description: "Contrast 2.6.1 Release Notes, February 26th, 2014"
+tags: "2.6.1 February Release Notes"
 -->
 
 ## New Features:
