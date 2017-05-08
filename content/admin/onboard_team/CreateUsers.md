@@ -32,7 +32,7 @@ Enterprise On-Premises (EOP) customers have the ability to delegate users to per
 * Click the **Add User** button
 * Provide the required inputs (Email, First & Last Name, and default Organization Role)
 
->**Note:** Make sure you verify the [Role](uadmin_manageorgsroleperm.html#roles) so that users will have the privileges to carry out the actions you intend.
+>**Note:** Make sure you verify the [Role](admin_manageorgsroleperm.html#roles) so that users will have the privileges to carry out the actions you intend.
 
 <a href="assets/images/Create_User.png" rel="lightbox" title="Add User"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
 

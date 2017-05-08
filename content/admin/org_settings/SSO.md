@@ -14,11 +14,12 @@ To get started you'll need to set up an identity provider (if you don't use one 
 Contrast does not provide keys for SAML authentication. If you enable SSO without providing private keys, you will only be able to perform IDP-initiated logins.
 
 You will need to generate your own self-signed key using the Java Keytool:
-```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks```
+```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
+```
 
-Use the [Encrypted Editor](admin_tsconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the step above. 
+Use the [Encrypted Editor](installation_setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the step above. 
 
- ```
+```
  authenticator.saml.keystore.path                  : /path/to/samlKeystore.jks
  authenticator.saml.keystore.default.key           : some-alias
  authenticator.saml.keystore.passwordMap           : some-alias=changeit

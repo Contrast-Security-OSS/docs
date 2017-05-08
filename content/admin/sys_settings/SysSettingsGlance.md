@@ -39,7 +39,7 @@ Contrast supports a variety of [authentications providers](installation_setupaut
 * Embedded: Stored within the Contrast TeamServer database
 * [LDAP](installation_setupauth.html#ldap)
 * [Active Directory](installation_setupauth.html#ad)
-* [Single Sign-On](installation_setupauth.html#sso)
+* [Single Sign-On](installation_setupauth.html#sso-setup)
 
 Any change to this setting will require a system restart.
 
