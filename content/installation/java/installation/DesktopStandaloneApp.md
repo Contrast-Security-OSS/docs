@@ -10,6 +10,3 @@ The process is pretty much the same, but you have to also pass a name in the ```
 -Dcontrast.appname=AcmeDesktopApp -javaagent:<path>/contrast.jar
 ```
 
-## See Also
-
-[Java Agent Installation](installation_javainstall.html)

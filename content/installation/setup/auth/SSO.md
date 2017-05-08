@@ -27,11 +27,13 @@ If a System Admin decides to set up SSO, it's important to note that Contrast do
 Contrast doesn't provide keys for SAML authentication. If you enable SSO without providing private keys, you're only able to perform IdP-initiated logins.
 
 You need to generate your own self-signed key using the Java Keytool:
-```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks```
 
-Use the [Encrypted Editor](admin_tsconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
+```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
+```
 
- ```
+Use the [Encrypted Editor](installation_setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
+
+```
  authenticator.saml.keystore.path                  : /path/to/samlKeystore.jks
  authenticator.saml.keystore.default.key           : some-alias
  authenticator.saml.keystore.passwordMap           : some-alias=changeit
