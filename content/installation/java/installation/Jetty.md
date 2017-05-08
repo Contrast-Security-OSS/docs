@@ -28,7 +28,7 @@ Of course, you'll have to substitute the path to *contrast.jar* and the server f
 * Navigate to your application, and allow an extra minute for it to start up.
 
 
-## See Also
+## More Information
 
 Not using ***jetty.ini***? Running Contrast from Other Jetty Launchers:
 

@@ -5,7 +5,7 @@ tags: "java agent installation NetBeans IDE JBose"
 -->
 
 
-This document will outline the process for installing Contrast on an application using the NetBeans IDE with JBoss.
+This document outlines the process for installing Contrast on an application using the NetBeans IDE with JBoss.
 
 ## Prerequisites
 
@@ -20,7 +20,9 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 <a href="assets/images/KB2-f03_1.png" rel="lightbox" title="Platform Tab"><img class="thumbnail" src="assets/images/KB2-f03_1.png"/></a>
 
 4. Add Contrast's JVM options to the **VM Options** field
-```sh
+
+```
+sh
 -javaagent:${DOWNLOADS}/contrast.jar
 ```
 
@@ -36,6 +38,6 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 7. Navigate to your application, and allow an extra minute for it to start up
 
-## See Also
+## More Information
 
 [Running Contrast on GlassFish with NetBeans](installation_javainstall.html#glass)

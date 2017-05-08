@@ -6,7 +6,7 @@ tags: "installation java agent configuration rules properties"
 
 Parameters for certain rules are now configurable by the end user. The following are methods of applying custom parameters to these rules.
 
-## Setting In "rules.xml"
+## Setting In *rules.xml*
 
 An optional top level ```<properties>``` element has been added to the ***rules.xml***.
 
@@ -43,20 +43,21 @@ Also, users can use ```-Dcontrast.properties="/path/to/properties.file"``` to po
 
 For example, in the ***catalina.sh***:
 
-```export CONTRAST_AGENT_JAR= "..."```
-```export JAVA_OPTS= "$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR -Dcontrast.properties=" /path/to/properties.file "..."```
-
-And a properties file located at ```/path/to/properties.file``` would look like:
-```web.session.timeout= 30
 ```
+export CONTRAST_AGENT_JAR= "..."
+export JAVA_OPTS= "$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR -Dcontrast.properties=" /path/to/properties.file "..."
+```
+
+And a properties file located at ```/path/to/properties.file``` would look like ```web.session.timeout= 30```.
 
 
 ## Direct Definition
 
 Finally, the user could specify a property directly when launching their application container, like ```-Dweb.session.timeout=30```. This will override any settings in ***rules.xml*** and the properties file.
 
-```export CONTRAST_AGENT_JAR= "..."```
-```export JAVA_OPTS= "$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR -Dweb.session.timeout=" 30 "..."
+```
+export CONTRAST_AGENT_JAR= "..." 
+export JAVA_OPTS= "$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR -Dweb.session.timeout=" 30 "..."
 ```
 
 

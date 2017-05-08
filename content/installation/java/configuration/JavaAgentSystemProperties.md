@@ -5,13 +5,12 @@ tags: "installation java agent configuration system properties"
 -->
 
 ## General Properties
-You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: **java -jar path/to/contrast.jar properties**
+You can generate a list of these properties directly from the command line using the Contrast Agent jar. To do so, execute the following: `java -jar path/to/contrast.jar properties` 
 
-This markdown file could be generated directly from the command line. To do so, execute the following:
-**java -jar contrast.jar properties --generate-markdown --write-to-file=/path/to/file.md**
+This markdown file could be generated directly from the command line. To do so, execute the following: `java -jar contrast.jar properties --generate-markdown --write-to-file=/path/to/file.md`
 
 You can combine the above command with tools like *grep* to search for commands, for example:
-**java -jar path/to/contrast.jar properties | grep -A5 "proxy"** would yield a list of proxy-related properties.
+`java -jar path/to/contrast.jar properties | grep -A5 "proxy"` would yield a list of proxy-related properties.
 
 |Property|Description|
 |-|-|
@@ -170,7 +169,7 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 |-|-|
 | contrast.forceupdate |  If you set this value to *true*, Contrast will download the latest available agent from whatever TeamServer the current agent was downloaded from. This feature is useful if you've changed the configuration of the agent and want to ensure that all current agents pick up this change. By default, the agent will smart update on application server restart, downloading a new agent from TeamServer if the TeamServer has been upgraded since the last time the application server was started. |
 
-## See Also
+## More Information
 
 [An Application Is Not Appearing In The List](troubleshooting_setup.html#missing)
 

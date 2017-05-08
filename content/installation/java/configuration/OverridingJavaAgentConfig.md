@@ -6,11 +6,15 @@ tags: "installation java agent configuration override"
 
 If you'd like to override configuration options in your agent, you can run with a custom configuration. To start, let's copy the configuration that's shipped with the agent. The following [JAR](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jar.html) command will copy the configuration file out of an agent that's been downloaded from the Contrast site:
 
-```user:tomcat majordomo$ jar -xf contrast.jar contrast.config```
+```
+user:tomcat majordomo$ jar -xf contrast.jar contrast.config
+```
 
 Now that you have a ***contrast.config*** file, which is just XML, you can edit it like any other file. However, to tell the agent to use this configuration file, we have to modify our ```-javaagent``` line to point to it, as shown here:
 
-```export JAVA_OPTS="$JAVAOPTS -javaagent:/tomcat6/contrast.jar=/tomcat6/contrast.config"```
+```
+export JAVA_OPTS="$JAVAOPTS -javaagent:/tomcat6/contrast.jar=/tomcat6/contrast.config"
+```
 
 The following marked-up ***contrast.config*** file shows what can be controlled here:
 

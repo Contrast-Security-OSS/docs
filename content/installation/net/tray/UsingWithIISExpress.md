@@ -40,6 +40,4 @@ If there are no applications listed in the application list:
 * Confirm the IIS Express configuration file exists and is valid: ```%Documents%\IISExpress\config\applicationhost.config```
 * For each application, confirm the physical path is valid and accessible
 
-If using Visual Studio 2015 and you don't see your application in the list:
-
-* See [Visual Studio 2015 IIS Express Configuration](troubleshooting_netinstall.html#vs)
+If using Visual Studio 2015 and you don't see your application in the list, see [Visual Studio 2015 IIS Express Configuration](troubleshooting_netinstall.html#vs)

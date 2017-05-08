@@ -36,6 +36,7 @@ When binding Contrast using a user-provided service, you must give it a name or 
 ---
 
 An example of creating a user-provided service and binding it to an application:
+
 ```bash
 cf create-user-provided-service contrast-security-service -p "teamserver_url,username,org_uuid,api_key,service_key"
 cf bind-service spring-music contrast-security-service
@@ -219,24 +220,25 @@ Download the Contrast server broker tile for PCF from the [Pivotal Network](http
 
 **Option 2 (Manually build tile): **
 
-    Begin with the installation:
+Begin with the installation:
 
-    1. [Maven](http://maven.apache.org/install.html)
-    2. [Tile Generator CLI](https://github.com/cf-platform-eng/tile-generator)
+1. [Maven](http://maven.apache.org/install.html)
+2. [Tile Generator CLI](https://github.com/cf-platform-eng/tile-generator)
 
-    Once you've installed Maven and the Tile Generator CLI, clone the Contrast service broker and build it.
+Once you've installed Maven and the Tile Generator CLI, clone the Contrast service broker and build it.
 
-        ```bash
-            git clone https://github.com/Contrast-Security-OSS/contrast-service-broker.git
-            cd contrast-service-broker
-            mvn clean package spring-boot:repackage -DskipTests=true
-            git clone https://github.com/Contrast-Security-OSS/contrast-pivotal-tile.git
-            cp ~/path/to/contrast-service-broker/target/contrast-service-broker-#.#.#.jar ~/path/to/contrast-pivotal-tile/resources
-            cd ~/path/to/contrast-pivotal-tile
-            tile build
-        ```
+```bash
+    git clone https://github.com/Contrast-Security-OSS/contrast-service-broker.git
+    cd contrast-service-broker
+    mvn clean package spring-boot:repackage -DskipTests=true
+    git clone https://github.com/Contrast-Security-OSS/contrast-pivotal-tile.git
+    cp ~/path/to/contrast-service-broker/target/contrast-service-broker-#.#.#.jar ~/path/to/contrast-pivotal-tile/resources
+    cd ~/path/to/contrast-pivotal-tile
+    tile build
+        
+```
 
-        This will generate a contrast-security-service-broker.#.#.#.pivotal file within the product directory.
+This will generate a *contrast-security-service-broker.#.#.#.pivotal* file within the product directory.
 
 Once you've stored the file locally, navigate to your Pivotal Ops Manager instance. In the Ops Manager, click on the **Import a Product** button and select the *contrast-security-service-broker-#.#.#.pivotal* tile that you downloaded or created in the previous step.
 
@@ -288,8 +290,8 @@ If you want to override Java agent properties, such as the application name, you
 Command line example:
 
 ```bash
-    cf set-env APP-NAME JAVA_OPTS " -Dcontrast.appname.override=PivotalSpringApp
-  -Dcontrast.server=PivotalServerName "
+cf set-env APP-NAME JAVA_OPTS " -Dcontrast.appname.override=PivotalSpringApp
+-Dcontrast.server=PivotalServerName "
 ```
 
 Pivotal Apps Manager example:

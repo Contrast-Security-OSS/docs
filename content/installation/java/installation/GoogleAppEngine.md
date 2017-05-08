@@ -36,9 +36,9 @@ to end up with something like:
   </configuration>
 </plugin>
 ````
-NOTE: If you don't provide the ```-Dcontrast.rootapp jvmFlag```, Contrast will simply refer to your application by the name ```ROOT```.
+> **NOTE:** If you don't provide the ```-Dcontrast.rootapp jvmFlag```, Contrast will simply refer to your application by the name ```ROOT```.
  
-Once this is done, you can simply run: 
+Once this is done, you can run: 
 ````
 mvn clean install
 mvn appengine:devserver

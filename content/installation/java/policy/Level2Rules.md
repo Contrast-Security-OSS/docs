@@ -36,12 +36,9 @@ Conversely, **Data Flow** rules, as their name implies, are used to track untrus
 ## Adding A Level 2 Rule
 Adding a new Level 2 Rule consists of two main parts: creating a new custom Policy file for the Agent to follow and creating a corresponding Groovy script to teach TeamServer how to process and render these custom rule results. Our tutorial starts with the creation of the Policy file and ends with a template of the Groovy file.
 
----
 
 ### Adding A Level 2 Regular Expression Rule
 This portion of the tutorial will walk through adding a new Regular Expression Rule that detects when an illegal value is passed into the Request object, thereby disabling its security. 
-
-<br>
 
 #### Step 1: Create A New Policy File
 We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml.zip) for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file *custom_rules.xml*, although any file name can be used (The filename becomes important in Step #6 below).
@@ -195,7 +192,6 @@ We provide a [skeleton](https://docs.contrastsecurity.com/assets/attachments/lev
 
 > **Note:** A single policy file can either have many rules in it, or just one at a time. It's up to you how you want to organize your custom rules. So if you already have a policy file for a custom Regular Expression rule or an existing DataFlow rule, you can add new Data Flow rules to that policy file, rather than creating a new one.
 
-<br>
 
 #### Step 2: Add A New ```<source>``` To The Policy
 This tells Contrast to tag and monitor objects coming out of this method. In this example, we create a source tag ```ccn``` on the target ```P1``` (Parameter #1) of the method ```com.acme.ticketbook.Person.setCreditCard(java.lang.String)```. 
@@ -218,7 +214,6 @@ The following attributes, highlighted in red above, should be customized for you
 The following attributes, present above, should be in your rules. 
 - ```enabled```: Indicates if the source is active. It should always be true.
 
-<br>
 
 #### Step 3: Add A New ```<tag-list>``` To The Policy
 Tags are an integral part of the Contrast policy language. In this rule, they provide a means of marking credit cards as safe for logging. One can use tags to determine if an object is used in an unsafe manner and needs to be reported, or if sufficient controls were exercised to mitigate the risk implied by the source tag. In this example, we create a new tag ```ccn-masked``` to indicate that a credit card number has been sufficiently obscured by the methods in the list. In this case, the return value (target="R") of  ```com.acme.ticketbook.Person.mask(java.lang.String)```. Again, it is worth noting that the method must be enabled for tagging to occur and both the 'id' and 'name' fields of the tag-list must be unique.
@@ -236,7 +231,6 @@ The following fields, highlighted in red above, should be customized for your ru
 The following fields, present above, should be in your rules. 
 - ```enabled```: Indicates if the tag list is active. It should always be true.
 
-<br>
 
 #### Step 4: Add A New ```<rule>``` To The Policy
 
@@ -257,8 +251,6 @@ The following fields, present above, should be in your rules.
 - ```enabled```: Indicates if the rule is active. It should always be true.
 - ```inherit```: Indicates if the children of the class specified in the ```signature``` field also satisfy the rule. By default, this should be true.
 - ```tracked```: The 'tracked' field is omitted in this section of the rule because the check is implicit at this point. 'Tracked' indicates that the Agent has taken action on an object and therefore is aware of its status. Having either a required or disallowed tag makes an object 'tracked'.
-
-<br>
 
 #### Step 5: Create A New Groovy Script For The Rule
 Create a Groovy script based on one of the template files provided here: 
@@ -337,8 +329,6 @@ class CNNRule extends DataFlowSecurityRule {
 
 As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found [here](https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf).
 
-<br>
-
 #### Step 6: Teach TeamServer About The New Rule
 There are two steps to teaching the TeamServer about your new rule. 
 
@@ -348,7 +338,8 @@ Next, you need to update the configuration of TeamServer to know about the exist
 
 Your ```script-source``` will be the same as the one shown below, with the exception of the file name and the 'id' MUST be the id of your rule followed by the String ```-rule```.
 
-```xml
+```
+xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" ...>
     ...
@@ -364,7 +355,6 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 #### Step 7: Restart The TeamServer
 An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation_setupinstall.html#restart).
 
-<br>
 
 #### Step 8: Configure And Restart The Application Server
  In order for the agent to use this custom policy, add the ```-Dcontrast.policy.overrides``` flag to the run configuration where the ```-javaagent``` flag is set. You will need to set the overrides value to the path to the new policy file (e.g., *custom_rules.xml*).

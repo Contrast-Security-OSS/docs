@@ -10,13 +10,13 @@ The **.NET Contrast Tray** is a Windows system tray application (***ContrastTray
 
 >**Note:** The Contrast Tray is not required to be running in order to analyze applications with Contrast; the Contrast Tray exists only to provide status information about the agent. This information can be useful when verifying that the agent is behaving as expected (especially when the agent is first installed).
 
-#### Contrast Tray Status Indicators
+### Contrast Tray Status Indicators
 
 * **Contrast.NET Service** displays a green light when the Contrast Service has been installed correctly and is running
 * **TeamServer Communication** displays a green light when the Contrast Service can communicate with [TeamServer](https://app.contrastsecurity.com). The most common error causing TeamServer communication to fail is incorrect proxy settings.
 
 
-#### Contrast Tray Tabs
+### Contrast Tray Tabs
 
 * The **Action** tab provides high-level instructions for using the Contrast.NET Agent; these instructions change based on the agent's state. For example, if the agent is unable to connect to TeamServer then the Action tab will provide details on the error and suggestions on how to resolve the problem. 
 
@@ -35,6 +35,6 @@ The **.NET Contrast Tray** is a Windows system tray application (***ContrastTray
 * The **Console** tab includes status and error messages that may be useful for troubleshooting problems with the Contrast.NET Agent
 
 
-## See Also
+## More Information
 
 [Using Contrast With IIS Express](user_netinstall.html#iis)

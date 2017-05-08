@@ -17,7 +17,7 @@ Afterwards, run the Karaf server like normal. A Contrast startup message should 
 Navigate to your application, and allow an extra minute for it to start up.
 
 
-## Note
+## Additional System Properties
 
 Many Karaf users will probably want to use two extra system properties when running Contrast:
  * *contrast.classpath.libs*, which tells Contrast to use the standard classpath libraries instead of libraries found in */WEB-INF/lib*

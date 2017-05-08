@@ -16,6 +16,6 @@ Starting with **Version 3.1.4**, the .NET agent allows users to customize the di
 
 If the **ServerName** configuration setting is not present, the .NET agent will use the computer name for the server's display name. You can view the computer name by viewing the **System** properties in the **Control Panel**.
 
-## See Also
+## More Information
 
 [Setting The Display Name For Applications Analyzed By Contrast.NET](installation_netconfig.html#appname)

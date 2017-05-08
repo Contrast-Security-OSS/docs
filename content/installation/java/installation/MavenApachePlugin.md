@@ -9,7 +9,7 @@ This document will outline the process for installing Contrast on an application
 
 ## Prerequisites
 
-Download the Contrast plugin (**contrast.jar**) from the TeamServer that you work with, either Contrast's SaaS deployment or your EOP installation.
+Download the Contrast plugin (*contrast.jar*) from the TeamServer that you work with, either Contrast's SaaS deployment or your EOP installation.
 
 ## Installation with ```MAVEN_OPTS```
 

@@ -15,8 +15,10 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 1. Click on **Run** in the application toolbar then click on the **Edit Configuration** menu item from the dropdown
 2. Select the IntelliJ Server configuration instance
-3. Select the **Server** tab and enter the Contrast launcher string in **VM Options**
-```sh
+3. Select the **Server** tab and enter the Contrast launcher string in **VM Options**: 
+
+```
+sh
 -javaagent:${DOWNLOADS}/contrast.jar -noverify
 ```
 
@@ -32,6 +34,6 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 7. Navigate to your application, and allow an extra minute for it to start up
 
-## See Also
+## More Information
 
 [Running Contrast on GlassFish with IntelliJ](installation_javainstall.html#glass)

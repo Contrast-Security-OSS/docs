@@ -16,9 +16,10 @@ Users can customize the display name (**version 3.1.3**+) and application versio
     ...
 ```
 
->**Note:** The **Contrast.AppName** setting should be present on each server where the application is to be analyzed. Otherwise the applications could potentially have different display names (see below) and be considered different applications by TeamServer. 
+>**Note:** 
+* The **Contrast.AppName** setting should be present on each server where the application is to be analyzed. Otherwise the applications could potentially have different display names (see below) and be considered different applications by TeamServer. 
 
->**Note:** In order for the agent to pick up customized AppName and/or AppVersion settings, the settings must be placed in the application web.config's root configuration appSettings section. In versions previous to 3.3.8, the appSettings section must also not be protected/encrypted or located in another configuration file (i.e. not using configSource.)
+* In order for the agent to pick up customized AppName and/or AppVersion settings, the settings must be placed in the application web.config's root configuration appSettings section. In versions previous to 3.3.8, the appSettings section must also not be protected/encrypted or located in another configuration file (i.e., not using configSource.)
 
 ## Application Display Name When 'Contrast.AppName' Setting Is Absent
 
@@ -29,6 +30,6 @@ If the **Contrast.AppName** configuration setting is not present, the .NET agent
 If the **Contrast.AppVersion** configuration setting is not present, the .NET agent will use the application version set in the agent's configuration file. Note that setting **Contrast.AppVersion** in the agent's configuration file will use the same version tag for all applications that do NOT have **Contrast.AppVersion** set in their *web.config* file. 
 
 
-## See Also
+## More Information
 
 [Setting The Display Name For Servers Running Contrast.NET](installation_netconfig.html#server)

@@ -22,7 +22,7 @@ The .NET agent consists of several key components:
 * **Contrast Tray** (***ContrastTray.exe***) is a Windows system tray application that displays high-level information about the health of the agent. The Contrast Tray does not perform any analysis and does not need to be run; it only displays information for agent users that are logged into the server where the agent is installed.
 
 
-## See Also:
+## More Information
 
 [.NET Agent Supported Technologies](installation_net.html#supported)
 

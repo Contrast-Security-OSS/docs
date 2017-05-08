@@ -29,7 +29,7 @@ If you're running in domain mode (using ***domain.bat*** or ***domain.sh***), yo
 </server-group>
 ````
 
-## See Also
+## More Information
 
 * [Running Contrast on an Eclipse WTP application](installation_javainstall.html#eclipse)
 

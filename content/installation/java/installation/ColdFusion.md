@@ -6,14 +6,14 @@ tags: "java agent installation coldfusion admin"
 
 
 ## Getting Started
-To monitor ColdFusion applications that run on a Tomcat server, like in the default ColdFusion 10 configuration, follow the normal instructions for installing Contrast onto Tomcat.
-
-[Installing Contrast on Tomcat](installation_javainstall.html#tomcat)
+To monitor ColdFusion applications that run on a Tomcat server, like in the default ColdFusion 10 configuration, follow the normal instructions for [Installing Contrast on Tomcat](installation_javainstall.html#tomcat)
 
 ## ColdFusion Admin
 The easiest way to install Contrast is in the ColdFusion Administrator. These instructions work in any environment supporting ColdFusion, including IIS.
 * Expand Server Settings and hit **Java and JVM**
-* Under **JVM Arguments**, enter ```-javaagent:/path/to/contrast.jar```. This path to the ***contrast.jar*** can be an absolute or relative path. We recommend absolute as its easier to get correct. Note: the ```-Dcontrast.timeout``` property in this example is not necessary, but can be used in networks with poor connectivity. 
+* Under **JVM Arguments**, enter ```-javaagent:/path/to/contrast.jar```. This path to the ***contrast.jar*** can be an absolute or relative path. We recommend absolute as its easier to get correct. 
+
+> **Note:** the ```-Dcontrast.timeout``` property in this example is not necessary, but can be used in networks with poor connectivity. 
 
 <a href="assets/images/KB2-i03.jpg" rel="lightbox" title="JVM Arguments"><img class="thumbnail" src="assets/images/KB2-i03.jpg"/></a>
 
@@ -29,5 +29,5 @@ C:\ColdFusion9\bin>cfstart.bat
 Starting Macromedia JRun 4.0 (Build 108858), coldfusion server
 ````
 
-* If you do not see "Starting Contrast ..." when you first run ***cfstart.bat*** then you likely have a configuration error in your ```javaagent``` setup for Contrast.
+* If you do not see `Starting Contrast` when you first run ***cfstart.bat*** then you likely have a configuration error in your ```javaagent``` setup for Contrast.
 * If for some reason you want to disable Contrast, but the Administrator interface won't start, you can remove the flag directly inside ***$CF_HOME/bin/jvm.config*** (CF 9) or ***$CF_HOME/runtime/bin/config*** (CF 10) and search for ```javaagent```.

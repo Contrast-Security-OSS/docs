@@ -12,13 +12,17 @@ To experiment with this new feature, follow the two steps shown below.
 
 We have to generate a custom version of your JVM core classes, because we don't know which version of the JVM you're using. You can do this by performing this command with the regular ***contrast.jar*** agent you monitor your applications with.
 
-```$ java -jar contrast.jar bootstrap```
+```
+$ java -jar contrast.jar bootstrap
+```
 
 This will create a new **JAR**, called ***contrast-bootstrap.jar***, that contains the modified versions of your core classes.
 
 If the JRE that your application runs with isn't the same one used when you call ```java``` from the command line, you can pass the location of the correct JRE as a parameter:
 
-```$ java -jar contrast.jar bootstrap /path/to/some/other/jre-or-jdk```
+```
+$ java -jar contrast.jar bootstrap /path/to/some/other/jre-or-jdk
+```
 
 
 ## Step 2: Add a New JVM Argument

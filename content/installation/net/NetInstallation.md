@@ -11,7 +11,7 @@ tags: "installation agent .Net"
 * 2 CPU
 * 4 GB memory
 
-(Note that Contrast 3.3.1 required .NET 4.5.2 but this requirement was reduced to 4.5.1 in Contrast 3.3.2)
+> **Note:** Contrast 3.3.1 required .NET 4.5.2, but this requirement was reduced to 4.5.1 in Contrast 3.3.2.
 
 ### Recommended
 * .NET Framework 4.5.1 present
@@ -64,4 +64,4 @@ You may wish to customize the behavior of the .NET Agent to better suit your nee
 
 * [Customize Application Names](installation_netconfig.html#appname)
 
-Lastly, if you encounter any difficulties using the .NET Agent you can check out our **Troubleshooting** resources.
+If you encounter any difficulties using the .NET Agent you can check out our **Troubleshooting** resources.

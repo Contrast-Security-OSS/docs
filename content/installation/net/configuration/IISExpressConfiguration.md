@@ -20,11 +20,7 @@ Click the **Configure Sites...** link on the IIS Express page to bring up the II
 
 ## Add A New IIS Express Command
 
-IIS Express provides an option to run sites from the command line without using up a configuration file. 
-
-See [IIS Express Command Line Documentation](http://www.iis.net/learn/extensions/using-iis-express/running-iis-express-from-the-command-line) for more information.  
-
-You can save a command line as an entry in the Contrast agent.
+IIS Express provides an option to run sites from the command line without using up a configuration file. See [IIS Express Command Line Documentation](http://www.iis.net/learn/extensions/using-iis-express/running-iis-express-from-the-command-line) for more information. You can save a command line as an entry in the Contrast agent.
 
 * Enter a site name identifier and the command parameters in the **Manual Commands** section. Click **Add** to add it to the list.
 * Click **OK** to save your changes.  

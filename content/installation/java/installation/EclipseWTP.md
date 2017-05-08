@@ -36,4 +36,4 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 8. Navigate to your application, and allow an extra minute for it to start up
 
-As an alternative to modifying your existing Run Configuration, you could create a new server, i.e. **Apache Tomcat 6.x with Contrast**, and add the Contrast JVM parameters to it as shown above.
+As an alternative to modifying your existing Run Configuration, you could create a new server - i.e. **Apache Tomcat 6.x with Contrast** - and add the Contrast JVM parameters to it as shown above.

@@ -11,7 +11,7 @@ Support of the Vert.x framework within the Java Agent is based on the Contrast N
 ### Configuring Vert.x Web Applications with the Java Agent 
 
 #### Recommendeded Approach:
-The simplest approach for configuring the Contrast Java Agent with a Vert.x Web Application is to package the web application as a standalone or *fat* jar. This can be achieved by including the following plugin in the ***POM.xml*** file:
+The simplest approach for configuring the Contrast Java Agent with a Vert.x Web Application is to package the web application as a standalone or *fat* jar. This can be achieved by including the following plugin in the **POM.xml** file:
 
 ```xml
 <plugin>
@@ -47,7 +47,8 @@ The simplest approach for configuring the Contrast Java Agent with a Vert.x Web 
 
 Once the standalone jar is assembled, include ```-javaagent:/PATH/TO/YOUR/contrast.jar``` as one of the JVM arguments:
 
-```bash
+```
+bash
 java -javaagent:/PATH/TO/YOUR/contrast.jar <other_options> 
 -jar /PATH/TO/YOUR/application.jar
 ```
@@ -55,7 +56,7 @@ java -javaagent:/PATH/TO/YOUR/contrast.jar <other_options>
 #### Alternative Configuration:
 Alternatively, the Contrast Java Agent can be configured as a ```JVM_OPT``` in the "vertx" script file:
 
-**NOTE:** the paths to the application's dependencies will need to be included in the vertx script's ```CLASSPATH``` property.
+>**NOTE:** the paths to the application's dependencies will need to be included in the vertx script's ```CLASSPATH``` property.
 
 ```bash
 JVM_OPTS="-XX:+UseBiasedLocking -XX:BiasedLockingStartupDelay=0 
@@ -69,7 +70,8 @@ vertx run /PATH/TO/YOUR/src/MainVerticle.java
 
 The Vert.x application is unlikely to have a ***/WEB-INF/web.xml*** file, from which the Contrast Java Agent can identify the application name. If this is the case, please define the application name via ```-Dcontrast.appname=AppName``` property when launching the Vert.x application with Contrast enabled. For example:
 
-```bash
+```
+bash
 java -javaagent:/PATH/TO/YOUR/contrast.jar 
 -Dcontrast.appname="<Name_to_show_on_TeamServer>" <other options> 
 -jar /PATH/TO/YOUR/application.jar
