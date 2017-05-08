@@ -7,7 +7,7 @@ tags: "java agent installation Axis"
 
 ## Running Contrast From "axis2server.bat" (or ".sh")
 
-If you run Axis2 from **axis2server.bat**, we suggest creating a new startup script: **startup-with-contrast.bat**. It should enable the Contrast JVM parameters and call the startup script:
+If you run Axis2 from `axis2server.bat`, we suggest creating a new startup script: `startup-with-contrast.bat`. It should enable the Contrast JVM parameters and call the startup script:
 
 ``` sh
 set PROGRAM_PARAMS="$PROGRAM_PARAMS -javaagent:${DOWNLOADS}\contrast.jar"

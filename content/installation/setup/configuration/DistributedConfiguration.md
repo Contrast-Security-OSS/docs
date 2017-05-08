@@ -189,11 +189,13 @@ And then the application logs.
 $ tail -f $CONTRAST_HOME/logs/contrast.log
 ```
 
-If TeamServer starts successfully, you will see this message in the server.log
+If TeamServer starts successfully, you will see this message in the server.log:
 
+```
 190116 21.22.15,703 {} {} {} INFO  (ConnectionTester.java:50) Received code 200 from TeamServer
 190116 21.22.15,707 {} {} {} INFO  (ConnectionTester.java:60) Server start has been verified
 190116 21.22.15,709 {} {} {} INFO  (Server.java:319) Contrast TeamServer Ready - Took 208323ms
+```
 
 
 ## Step 2: Application Server
@@ -359,7 +361,8 @@ Symlink, Copy, or Move the WAR into the Tomcat webapps directory.  For the defau
 *Warning: yours may be different.*
 
 
-```$ sudo ln -s /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
+```
+$ sudo ln -s /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
 ```
 
 or
@@ -376,7 +379,7 @@ $ cp /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
 
 Once the WAR is deployed, you should be able to start your newly configured and distributed TeamServer. If you run into any problems, please let our Technical Support team know right away and we will help.
 
-## External Resources
+## More Information
 Please let us know if you are interested in specific topics below.  We will expand our documentation based on customer demand.
 
 * [Load Balancing with nginx](http://blogs.mulesoft.com/dev/tomcat-tcat-server/load-balancing-apache-tomcat-with-nginx/)

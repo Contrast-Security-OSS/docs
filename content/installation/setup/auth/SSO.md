@@ -8,7 +8,7 @@ tags: "installation setup SSO Single Sign-On configuration authentication"
 
 Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. You can configure Contrast to use this service with a SAML 2.0 supported provider. 
 
-> For more information on the **SAML 2.0 specification**, [read this article](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf).
+> **Note:** For more information on the **SAML 2.0 specification**, [read this article](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf).
 
 Authentication happens through an **identity provider (IdP)**. You may use your own generic IdP or one of many popular third-party providers, such as [Okta](https://www.okta.com/), [OneLogin](https://www.onelogin.com/) or [Ping Identity](https://www.pingidentity.com/en.html).
 
@@ -42,7 +42,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 
 ### Set up 
 
-* From the **Authentication** tab in System Settings, Select **Change Authentication Method**.
+* From the **Authentication** tab in System Settings, select **Change Authentication Method**.
 
 <a href="assets/images/SSOChangeAuth.png" rel="lightbox" title="Changing Authentication Method"><img class="thumbnail" src="assets/images/SSOChangeAuth.png"/></a>
 
