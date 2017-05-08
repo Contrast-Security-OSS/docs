@@ -109,7 +109,7 @@ Next, Contrast verifies your email with the configured IdP and directs you to th
 >**NOTE:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See the artcle on [Two-Step Verification](admin_systemsettings.html#twostep) for more information. 
 
 
-For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting_auth.html#sso). 
+For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting_auth.html#troubleshoot-sso). 
 
 <!--
 **Logging Out**
