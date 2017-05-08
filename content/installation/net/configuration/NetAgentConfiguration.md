@@ -85,7 +85,7 @@ This mode has the same behavior as **mode 3**, but also enables Enter-Leave even
 
 * [Getting .NET Agent Logs](troubleshooting_net.html#logs)
 
-* [Sampling](admin_orgsettings.html#server)
+* [Sampling](admin_orgsettings.html#org-server)
 
 * [.NET Application Pool Filtering](installation_netconfig.html#pool)
 

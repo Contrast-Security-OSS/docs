@@ -179,5 +179,5 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 
 [Clearing the Java Agent Cache](troubleshooting_java.html#cache)
 
-[Sampling](admin_orgsettings.html#server)
+[Sampling](admin_orgsettings.html#org-server)
 

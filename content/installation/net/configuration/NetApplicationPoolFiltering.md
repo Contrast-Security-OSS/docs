@@ -13,7 +13,7 @@ To disable Contrast.NET for a specific application, populate ```ProcessBlacklist
 <add key="ProcessBlacklist" value=""/>
 ```
 
-For more information, see [.NET Agent Configuration](installation_netconfig.html#config).
+For more information, see the [Configuration Overview](installation_netconfig.html#overview).
 
 Customers could find the need to only enable Contrast.NET for specific applications hosted by IIS. Contrast 3.2.3 introduced a ```ProcessWhitelist``` that can be configured to only analyze certain application pools. If an application pool is whitelisted, the Contrast.NET agent will analyze the matching pools and there should be no performance impact for any other applications.
 
@@ -24,7 +24,7 @@ To enable Contrast.NET for only specific applications, populate ```ProcessWhitel
 <add key="ProcessWhitelist" value=""/>
 ```
 
-For more information, see [.NET Agent Configuration](installation_netconfig.html#config).
+For more information, see the [Configuration Overview](installation_netconfig.html#overview).
 
 >**Note:** Blacklisting an application takes precedence over whitelisting.  Application pools satisfying both lists will not be analyzed.
 
