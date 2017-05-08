@@ -38,15 +38,15 @@ In the event of needing to restore a database backup, we have provided the neces
 
 * Using the [encrypted property editor](installation_setupconfig.html#encrypt), identify the MySQL database settings
 * Shut down the TeamServer gracefully
-* Start up MySQL individually by using the MySQL service packaged with the TeamServer
-** On Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema>```
-** On Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema>```
+* Start up MySQL individually by using the MySQL service packaged with the TeamServer <br/>
+On Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema>```<br/>
+On Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema>```
 * Drop the Contrast database via ```drop database <jdbc.schema>;```
 * Create the Contrast database via ```create database <jdbc.schema>;```
 * Grant permissions to the Contrast user via ```GRANT ALL PRIVILEGES ON *.* to 'contrast'@'%';```
 * Exit from MySQL
 * Restore the MySQL backup
-** Restore on Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
-** Restore on Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
+..* Restore on Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
+..* Restore on Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
 * Shut down MySQL
 * Restart TeamServer and MySQL together, fully restored

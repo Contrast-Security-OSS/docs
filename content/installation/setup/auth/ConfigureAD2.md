@@ -107,7 +107,7 @@ Once all of the configuration options are set, verify that you are able to log i
 
 <BR>
 
-**NOTE** - If testing a login seems to take an excessive amount of time, this is likely a result of having the wrong setting for the Follow Referrals option on the Advanced Settings screen. Flip the setting and you should be able to verify login functionality quickly.
+> **NOTE:** If testing a login seems to take an excessive amount of time, this is likely a result of having the wrong setting for the Follow Referrals option on the Advanced Settings screen. Flip the setting and you should be able to verify login functionality quickly.
 
 After all settings are verified and test logins are successful, click **Finish** to complete the configuration. You will need to restart TeamServer in order for the authentication changes to be applied.
 

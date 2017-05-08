@@ -38,11 +38,11 @@ You can customize the behavior of the TeamServer installer by providing argument
 ## Logging In For The First Time
 The first time you access the TeamServer, you will be able to log in using the same credentials used when signing up for your Contrast Hub account. The login page is located at ***/Contrast***. It is recommended that you change the administrator password after you've installed and configured TeamServer.
 
-> **Your Superadmin Username:** contrast_superadmin@your-email-domain.com
+* **Your Superadmin Username:** contrast_superadmin@your-email-domain.com
 
-> **Default Superadmin Password:** default1!
+* **Default Superadmin Password:** default1!
 
-## Attachments
+## More Information
 
 Information Worksheets:
 
