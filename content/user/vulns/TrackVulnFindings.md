@@ -13,7 +13,7 @@ Contrast gives you the ability to send vulnerabilities to bugtracker integration
 
 Organization administrators have the ability to set up any of these bugtrackers and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by selecting **Organization Settings** in the user menu and then **Integrations** in the left navigation. Through integrations, you can streamline your workflows by sending vulnerabilities found in Contrast directly to your tool to orchestrate standard development processes. You can also have Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
 
-For more information, read the article on [Integrations](admin_orgsettings.html#integrate).
+For more information, read the article on [Integrations](admin_orgintegrations.html).
 
 ## Custom Processing
 Vulnerability data can also be dumped to CSV or XML for custom processing. From the **Vulnerabiities** page, you can select all or any number of vulnerabilities to export via the paper airplane icon.  

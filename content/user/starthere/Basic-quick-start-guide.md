@@ -42,7 +42,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
  
 ## Improve Your Application Score
 
-Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](user_apps.html#score) for more information. 
+Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](user_apps.html#score-guide) for more information. 
  
 ## Track Libraries
 
@@ -108,4 +108,4 @@ For each application, you can assign it a build version number. By adding the pr
 * Check by time unit tests:
 You can also filter by the time at which your unit tests were run, and set a date range to view your vulnerabilities in the **Set Date Range** input field above the vulnerabilities grid.
  
-You can find additional properties in articles on [Java Agent System Properties](installation_javaconfig.html#system) and [.NET Agent Configuration](installation_netconfig.html#config). 
+You can find additional properties in articles on [Java Agent System Properties](installation_javaconfig.html#system) and [.NET Agent Configuration](installation_netconfig.html). 

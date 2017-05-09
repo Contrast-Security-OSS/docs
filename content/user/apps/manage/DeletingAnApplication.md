@@ -22,7 +22,7 @@ From the **Application Overview** page, verify that no agents are reporting to t
 
 ## Step 3: Reset Application
 
-It is considered best practice to [reset](installation_setupinstall.html#restart) the application to make sure all associated vulnerabilities, URL’s, and components are properly cleared.  Do this by clicking the **Application Settings** (gear) icon in the top right of the Application Overview page.
+It is considered best practice to reset the application to make sure all associated vulnerabilities, URL’s, and components are properly cleared.  Do this by clicking the **Application Settings** (gear) icon in the top right of the Application Overview page.
 
 At the bottom of the dialog that follows, select **Reset Application**.
 
