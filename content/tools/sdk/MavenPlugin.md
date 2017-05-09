@@ -20,9 +20,7 @@ The plugin code can be viewed in our Github [repository](https://github.com/Cont
 
 ### Configuration
 
-Below is a table showing all the different parameters for the plugin:
-
-These settings are for connecting to TeamServer and filtering your vulnerabilities.
+Below is a table showing all the different parameters for the plugin. These settings are for connecting to TeamServer and filtering your vulnerabilities.
 
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
@@ -35,10 +33,10 @@ These settings are for connecting to TeamServer and filtering your vulnerabiliti
 | Minimum Severity Level       | Minimum Severity level to filter for (Note, Low, Medium, High, Critical). This property is inclusive. |
 | Server Name                  | Name of server you set with ```-Dcontrast.server``` <BR> Use *app.contrastsecurity.com/Contrast/api* if you are a SaaS customer |
 | Jar Path                     | Path of a local jar file if you don't want to download the agent again                  |
-<BR>
+
+
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a bad condition is found.
 
-### Example
 
 Below is a sample TeamServer configuration for the Contrast Maven Plugin:
 

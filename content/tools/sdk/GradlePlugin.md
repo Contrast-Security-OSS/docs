@@ -35,11 +35,12 @@ These settings are for connecting to TeamServer and filtering your vulnerabiliti
 | Server Name                  | Name of server you set with ```-Dcontrast.server``` <BR> Use *app.contrastsecurity.com/Contrast/api* if you are a SaaS customer |
 | Jar Path                     | Path of a local jar file if you don't want to download the agent again                  |
 
-<br/>
+
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability is found at or above the severity level set in the configuration.
 
 ### Guide To Onboarding A Sample Web Application
 The easiest way to set up a project is to clone our sample Gradle-based web application.  This application has been migrated from Maven to Gradle, and relies on MongoDB, so we will install that and set up the database path.
+
 ```
 git clone https://github.com/Contrast-Security-OSS/Contrast-Sample-Gradle-Application
 brew install mongodb
@@ -69,6 +70,7 @@ gradle build -x test contrastInstall
 ```
 
 * The next step is to run the application with the Java agent. 
+
 ```
 cd path/to/Contrast-Sample-Gradle-Application/build
 java -javaagent:contrast.jar -Dcontrast.appname=mytestapp -Dcontrast.server=mytestserver -jar libs/Contrast-Sample-Gradle-Application-0.0.1-SNAPSHOT.jar
@@ -78,6 +80,7 @@ java -javaagent:contrast.jar -Dcontrast.appname=mytestapp -Dcontrast.server=myte
 
 * In TeamServer, verify that the application with the appname specified in the command above shows up.
 * In the Contrast-Sample-Gradle-Application project's *build.gradle* we will now edit the contrastConfiguration to specify the appName and serverName that we specified as options with the Java agent in the previous step.
+
 ```
 contrastConfiguration {
     username = "alreadySetup"
@@ -90,6 +93,7 @@ contrastConfiguration {
 }
 ```
 *  We can now run the verification task at any time to check for vulnerabilities.
+
 ```
 gradle build contrastVerify -x test
 ```

@@ -19,7 +19,7 @@ If performance is really important to your environment, consider the following o
 * Run Contrast on a single node in a load balanced environment
 * Change the stack trace configuration of Contrast to **Limited** or **Minimal**
 
-## See Also
+## More Informance
 
 * [Sampling](admin_orgsettings.html#org-server)
 * [.NET Agent Configuration](installation_netconfig.html#config)

@@ -21,10 +21,10 @@ tags: "troubleshoot TeamServer agent installation .Net"
 4. Verify that the API Key is correct. If the above settings are correct then the API Key used by the agent may have changed. Follow these *directions* to view your user's current API Key.
 
 
-## See Also
+## More Information
 
-[Getting .NET Agent Logs](troubleshooting_net.html#logs)
+* [Getting .NET Agent Logs](troubleshooting_net.html#logs)
 
-[.NET Agent Configuration](installation_netconfig.html#config)
+* [.NET Agent Configuration](installation_netconfig.html#config)
 
 

@@ -12,7 +12,8 @@ The Contrast Assess product deeply inspects every piece of bytecode loaded in th
 
 To enable skipping these deep inspections, add the following JVM properties:
 
-```-Dcontrast.inspect.allclasses=false -Dcontrast.process.codesources=false
+```
+-Dcontrast.inspect.allclasses=false -Dcontrast.process.codesources=false
 ```
  
 ## Run It Again
@@ -26,5 +27,7 @@ Web applications leveraging the IBM JDK will experience slower-than-expected sta
 [IBM ```-Xquickstart``` Overview](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.win.70.doc/diag/appendixes/cmdline/xquickstart.html?lang=en)
 
 >*"The effect is faster compilation times that improve startup time, but longer-running applications might run slower. When the AOT compiler is active (both shared classes and AOT compilation enabled), ```-Xquickstart``` causes all methods to be AOT compiled. The AOT compilation improves the startup time of subsequent runs, but might reduce performance for longer-running applications. ```-Xquickstart``` can degrade performance if it is used with long-running applications that contain hot methods. The implementation of ```-Xquickstart``` is subject to change in future releases. By default, ```-Xquickstart``` is disabled. Another way to specify a behavior identical to ```-Xquickstart``` is to use the ```-client``` option. These two options can be used interchangeably on the command line."*
+
+<br>
 
 >**Note:** Customers should test their application without Contrast enabled to ensure this option does not cause any functional instability with their application. This option has been tested by Contrast, but as stated by IBM, this option is subject to change in future releases.

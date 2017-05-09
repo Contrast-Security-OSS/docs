@@ -23,6 +23,6 @@ You can fix this in two ways:
    <UseGlobalApplicationHostFile>True</UseGlobalApplicationHostFile>
    ```
 
-## See Also
+## More Information 
 
 [IIS Express Configuration Instructions](installation_netconfig.html#iis)

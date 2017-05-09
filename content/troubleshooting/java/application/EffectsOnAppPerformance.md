@@ -36,10 +36,10 @@ Contrast also requires some memory to operate. If you're running close to your m
 2. Add another 128MB to the maximum heap size
 
 
-## See Also
+## More Information
 
-[Sampling](admin_orgsettings.html#server)
+* [Sampling](admin_orgsettings.html#server)
 
-[Adding Bootstrap Speed Enhancements To The Java Agent](installation_javaconfig.html#bootstrap)
+* [Adding Bootstrap Speed Enhancements To The Java Agent](installation_javaconfig.html#bootstrap)
 
-[Java Agent System Properties](installation_javaconfig.html#system)
+* [Java Agent System Properties](installation_javaconfig.html#system)

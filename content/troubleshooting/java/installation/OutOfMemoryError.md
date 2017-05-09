@@ -8,7 +8,7 @@ tags: "troubleshoot java agent memory"
 
 Contrast keeps some metadata, but not a lot. Maybe the JVM is already close to its heap size limit? Adding another 32MB should be more than enough for Contrast. If you think we're doing something wrong, [send us a heap dump](mailto:bugs@contrastsecurity.com) and we'll gladly take a look!
 
-## See Also
+## More Information
 
 [How The Java Agent Affects App Performance](troubleshooting_javaapp.html#effect)
 

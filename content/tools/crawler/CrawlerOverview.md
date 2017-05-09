@@ -53,11 +53,11 @@ builder.crawlRules().click("image").when(new XPathCondition("//*[contains(@ng-cl
 
 To isolate the resource consumption by the crawler from the TeamServer's core platform, Contrast has built the crawler component as a micro-service. This not only allows TeamServer to operate without competing for resources, but also enables the crawler to scale. Each micro-service instance polls the next crawl from TeamServer's FIFO queue one at a time. However, you can achieve concurrency via deployment of multiple crawlers. The number of concurrency maps to the number of deployed micro-services. 
 
->**Note:** One (virtual) machine should only run one crawler
+>**Note:** One (virtual) machine should only run one crawler.
 
 <a href="assets/images/KB3-g01.png" rel="lightbox" title="Micro Service Architecture"><img class="thumbnail" src="assets/images/KB3-g01.png"/></a>
 
-## See Also
+## More information
 
 * [Crawler Installation](tools_crawler.html#crawler-install)
 * [How To Crawl A Web Application](user_apps.html#crawl)

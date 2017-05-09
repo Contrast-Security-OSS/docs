@@ -13,16 +13,17 @@ The Contrast .NET Agent uses the CLR Profiling API to perform data and code flow
 
 The conflicting profiler can often be identified by searching for the GUID in the Tray's error message (```BX7CFC47-3E35-2c2e-B495-534F93B28123``` in the example above.)
 
-## How To Solve
+## How to Solve
 
 * Enable Monitor mode for the .NET Agent. As of version 3.3.5, the .NET Agent can be used alongside another profiling tool by enabling Monitor mode. See [.NET Agent Configuration](installation_netconfig.html#config) for more information. 
-* Or, disable or uninstall the other software that has a profiler registered with or attached to IIS, restart IIS, and then start the Contrast .NET Agent.
-* NOTE: Some software does **NOT** remove the registry settings (```COR_ENABLE_PROFILING``` and ```COR_PROFILER```) used to attach a profiler to IIS when disabled or uninstalled. 
+* Or, disable or uninstall the other software that has a profiler registered with or attached to IIS, restart IIS, and then start the Contrast .NET Agent. 
   * Use regedit to edit the values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment``` key. Set ```COR_ENABLE_PROFILING``` value to **0** and delete the ```COR_PROFILER``` value.
   * You may also need to repeat this process for the following keys:
     * ```HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment```
     * ```HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Environment```
 
-## See Also
+> **Note:** Some software does **NOT** remove the registry settings (```COR_ENABLE_PROFILING``` and ```COR_PROFILER```) used to attach a profiler to IIS when disabled or uninstalled.
+
+## More Information 
 
 [Getting Started with the .NET Agent](installation_netoverview.html#getstart)
