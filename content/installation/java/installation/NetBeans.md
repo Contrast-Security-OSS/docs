@@ -13,13 +13,13 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 ## Instructions
 
-1. Open the NetBeans project
-2. Select **Tools > Servers**
-3. Select the server you wish to add Contrast to (in this example, **JBoss**), and click on the **Platform** tab
+* Open the NetBeans project
+* Select **Tools > Servers**
+* Select the server you wish to add Contrast to (in this example, **JBoss**), and click on the **Platform** tab
 
 <a href="assets/images/KB2-f03_1.png" rel="lightbox" title="Platform Tab"><img class="thumbnail" src="assets/images/KB2-f03_1.png"/></a>
 
-4. Add Contrast's JVM options to the **VM Options** field
+* Add Contrast's JVM options to the **VM Options** field: 
 
 ```sh
 -javaagent:${DOWNLOADS}/contrast.jar
@@ -27,15 +27,15 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 <a href="assets/images/KB2-f03_2.png" rel="lightbox" title="VM Options"><img class="thumbnail" src="assets/images/KB2-f03_2.png"/></a>
 
-5. Select **Run > Run Main Project** or right-click on the project and select **Run**
+* Select **Run > Run Main Project** or right-click on the project and select **Run**
 
 <a href="assets/images/KB2-f03_3.png" rel="lightbox" title="Run Project"><img class="thumbnail" src="assets/images/KB2-f03_3.png"/></a>
 
-6. A Contrast startup message should appear in the **Server** console (allow 1-2 minutes extra time for server startup)
+* A Contrast startup message should appear in the **Server** console (allow 1-2 minutes extra time for server startup)
 
 <a href="assets/images/KB2-f03_4.png" rel="lightbox" title="Startup Message"><img class="thumbnail" src="assets/images/KB2-f03_4.png"/></a>
 
-7. Navigate to your application, and allow an extra minute for it to start up
+* Navigate to your application, and allow an extra minute for it to start up
 
 ## More Information
 

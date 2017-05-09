@@ -36,7 +36,7 @@ to end up with something like:
   </configuration>
 </plugin>
 ````
-> **NOTE:** If you don't provide the ```-Dcontrast.rootapp jvmFlag```, Contrast will simply refer to your application by the name ```ROOT```.
+> **Note:** If you don't provide the ```-Dcontrast.rootapp jvmFlag```, Contrast will simply refer to your application by the name ```ROOT```.
  
 Once this is done, you can run: 
 ````

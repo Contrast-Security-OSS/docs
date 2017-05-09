@@ -55,7 +55,7 @@ java -javaagent:/PATH/TO/YOUR/contrast.jar <other_options>
 #### Alternative Configuration:
 Alternatively, the Contrast Java Agent can be configured as a ```JVM_OPT``` in the "vertx" script file:
 
->**NOTE:** the paths to the application's dependencies will need to be included in the vertx script's ```CLASSPATH``` property.
+>**Note:** the paths to the application's dependencies will need to be included in the vertx script's ```CLASSPATH``` property.
 
 ```bash
 JVM_OPTS="-XX:+UseBiasedLocking -XX:BiasedLockingStartupDelay=0 

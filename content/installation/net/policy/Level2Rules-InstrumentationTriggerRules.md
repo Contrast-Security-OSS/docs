@@ -119,7 +119,6 @@ Trigger rules specify methods whose incoming data should be checked for security
       * REQUIRED_TAGS, DISALLOWED_TAGS, TRACKED, STARTS_WITH_TAINT, GOOD_VALUE_REGEX: same as in This object, see above
       
 
-
 #### Stack Blacklist:
   
   If the trigger method contains one of these methods in its stack trace, the finding will not be satisfied.
