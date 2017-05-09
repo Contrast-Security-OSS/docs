@@ -28,6 +28,6 @@ When this happens, it's usually in one of three ways:
 
 **Contrast has changed data in a way that changes the behavior of the application.** For example, data has been malformed by the agent and may break some business logic or cause conditional statements to pass or fail incorrectly. This is very rare, as Contrast tries to avoid ever modifying the *meaning* of the data. This is often the hardest type of problem to pin down, as on the surface it may seem like the application is fully functional. If you suspect the agent is doing this somewhere, please try to track down what behavior is changing and how it is changing from when the application is run without Contrast. With a known behavior, it becomes easier to track which data is being incorrectly changed. If it is possible to cause a stack trace once you know where this is happening, this information can make it much easier for us to figure out what we're breaking.
 
-## See Also
+## More Information
 
 [Node.js Agent Configuration](installation_node.html#config)

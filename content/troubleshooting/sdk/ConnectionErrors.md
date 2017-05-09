@@ -21,5 +21,5 @@ While using the Contrast Java SDK, there are a few issues to look out for that a
 
 	This error is commonly thrown when you specify an incorrect API url. SaaS customers do not need to explicitly specify the API url because it will use the default. However, EoP customers should check to verify that the full url is being specified to the Contrast API. 
 
-	* *Example:* `String apiUrl = "http://localhost:19080/Contrast/api";`
+	Example: `String apiUrl = "http://localhost:19080/Contrast/api";`
 

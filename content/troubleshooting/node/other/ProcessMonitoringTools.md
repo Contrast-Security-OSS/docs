@@ -12,32 +12,36 @@ We recommend creating a new configuration for your tool, rather than modifying a
 
 To illustrate the purpose change, take the example of running an application normally, where the application entry point is an argument to the Node binary:
 
-```node app.js
+```
+node app.js
 ```
 
 Compare it to what the ```npm run contrast``` command does, where the application entry point is an argument to Contrast:
 
-```./node_modules/node_contrast app.js>
+```
+./node_modules/node_contrast app.js>
 ```
 
 The process monitoring tool needs to be configured such that Contrast is an argument to the process monitoring tool's binary, and the process monitoring tool passes your application's entry point to Contrast:
 
-```<process monitoring tool> ./node_modules/node_contrast -- app.js>
+```
+<process monitoring tool> ./node_modules/node_contrast -- app.js>
 ```
 
 ### PM2
 There are a couple of ways we recommend using pm2 to start your application with Contrast:
 
-**Command Line**
+#### Command Line
 
 The command used to run Contrast normally, ```npm run contrast```, can be passed into pm2 via a command line argument:
 
-```pm2 start --name appName_contrast npm -- run contrast
+```
+pm2 start --name appName_contrast npm -- run contrast
 ```
 
 Note that the ```--name``` flag is optional here and only used so that the process doesn't show up as "npm."
 
-**Creating A New Configuration**
+#### Creating A New Configuration
 
 When creating a new configuration, the two important attributes needed for running with Contrast are ```script``` and ```args```. A sample configuration may look like this:
 

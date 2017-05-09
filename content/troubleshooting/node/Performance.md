@@ -26,6 +26,6 @@ If better performance is really important to your environment, consider the foll
 * Run Contrast in an alternate environment (QA system or DEV environment)
 * Run Contrast on a single node in a load-balanced environment
 
-## See Also
+## More Information
 
 [Node.js Agent Configuration](installation_node.html#config)

@@ -4,7 +4,7 @@ description: "Troubleshooting guide for .NET agent issues"
 tags: "microsoft troubleshoot assembly loading agent .Net"
 -->
 
-#The Issue
+## The Issue
 
 **Error:** *Loading this assembly would produce a different grant set from other instances*.
 
