@@ -21,7 +21,7 @@ Connecting to a LDAP directory server is useful if you manage users and groups i
 
 LDAP configuration is performed by the System Administrator and requires creating two groups to be used by Contrast. Go to **System Settings > Authentication** to begin configuration in the Authentication Wizard. 
 
->**NOTE:** Switching to LDAP from a different authentication method such as a local database may result in issues if the user ID attribute is inconsistent.
+>**Note:** Switching to LDAP from a different authentication method such as a local database may result in issues if the user ID attribute is inconsistent.
 
 ## Configuring The Server
 
