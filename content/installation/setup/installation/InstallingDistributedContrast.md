@@ -25,7 +25,7 @@ Before you get started with configuring a distributed TeamServer, make sure to r
 
 In this example, Contrast has been installed at path `/usr/local/contrast`. To collect Contrast TeamServer application version numbers, look in the VERSION file in `/usr/local/contrast/VERSION`. To collect the Contrast TeamSever database version please run the following query: ``select `version` from schema_version ORDER BY `installed_on` DESC LIMIT 1;``. Let's say the app version stands at: `3.3.2` and the database is at `3.3.2.012`. We can say the versions are the same as it is safe to drop `.012` from the db version. Let's assume that you have an existing application server (A) running with a separate database (B), both running `3.3.2` and you're about to install `3.4.2` onto a new application server (C) and connect it to B. You will either need to stop A before installing `3.4.2` on C, or you will need to update A before installing on C.  
 
-> **NOTE:** If you have already installed TeamServer and want to use a distributed install instead, please see the section on converting from one to the other later in this article. 
+> **Note:** If you have already installed TeamServer and want to use a distributed install instead, please see the section on converting from one to the other later in this article. 
 
 
 ## Collect Configuration From Current TeamServer
@@ -48,7 +48,7 @@ It is possible to run the installation as a regular user; however, we recommend 
 
 Once you have launched the installer, you will be presented with several questions. Please select the **Application Server Only** installation option when prompted. Provide the compressed file you created in the previous section and follow the onscreen steps.
 
-> **NOTE:** Pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. Please set this value to a TeamServer host or load balancer that is reachable by your agent hosts. 
+> **Note:** Pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. Please set this value to a TeamServer host or load balancer that is reachable by your agent hosts. 
 
 After the installation is complete, the TeamServer will perform its initial configuration and can take 2-3 minutes to fully start up. You can check the status of startup by watching `server.log` and `contrast.log`. Once the server has started successfully you will see something similar to the following in `server.log`:
 ```
@@ -102,6 +102,6 @@ Enter the name of the property to edit [q to Quit]:
 ```
 
 
->**NOTE:** If you are converting from a default embedded database configuration to a distributed configuration, ```database.bk.enabled``` also needs to be set to 'false'. It is your responsibility to configure your own backups when running a distributed database configuration with TeamServer.
+>**Note:** If you are converting from a default embedded database configuration to a distributed configuration, ```database.bk.enabled``` also needs to be set to 'false'. It is your responsibility to configure your own backups when running a distributed database configuration with TeamServer.
 
 Once this is done, you may continue to add more application-only installations. 

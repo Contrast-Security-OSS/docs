@@ -7,14 +7,14 @@ tags: "setup EOP installation installer TeamServer Install4J Logging"
 ## Gathering Information
 Prior to installing Contrast TeamServer you should download and fill out the information worksheets in the Attachments section at the bottom of this article. Preparing this information will greatly reduce configuration errors.
 
-> **NOTE:** If installing on Linux, make sure you have installed the required MySQL shared libraries. See "Preparing for the Installation" in [System Requirements](installation_setup.html#reqs).
+> **Note:** If installing on Linux, make sure you have installed the required MySQL shared libraries. See "Preparing for the Installation" in [System Requirements](installation_setup.html#reqs).
 
 ## Running The Installation
 It is possible to run the installation as a regular user, however we recommend installation to your system as a *privileged* user.  This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
 
 Once you have launched the installer, you will be presented with several questions. You can use the information in the worksheets to answer these questions as you step through the installation.  More advanced configuration options are available within that application after startup when managing your account. If you are going to set up Contrast TeamServer in a distributed manner, please use a distributed MySQL instance during setup. 
 
-> **NOTE:** Pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. We make our best attempt to determine the hostname and pre-populate this value, but if the provided hostname is not resolvable by clients on the network, they won't be able to communicate back to the server.
+> **Note:** Pay particularly close attention to the value used for the TeamServer URL. This is the URL that client agents will use to communicate back to the TeamServer. We make our best attempt to determine the hostname and pre-populate this value, but if the provided hostname is not resolvable by clients on the network, they won't be able to communicate back to the server.
 
 After the installation is complete, the TeamServer will perform its initial configuration (this includes performing any required update tasks if you are upgrading your version of Contrast).
 

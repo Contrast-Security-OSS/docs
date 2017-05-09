@@ -17,22 +17,25 @@ database.bk.time                                  : 4:0:0
 database.bk.enabled                               : true
 database.bk.dir                                   : /mnt/backups/mysql/contrast
 ```
-<br/>
+
 ## Manually Taking Database Backups
 Sometimes EOP administrators want to take fresh backups of their MySQL system. Often this happens prior to an upgrade to capture any data created or changed since the last scheduled backup. In order to take backups, the user executing the script must have permission to run the script. This is typically the owner of the installation for a Contrast, Root or a Windows Administrator account. In addition, TeamServer must be up and running - specifically, MySQL needs to be available. Finally, the database backup location ```database.bk.dir``` must be configured.
 
 The tool to take a backup is an interactive script. It must be run from a command line for both Linux and Windows.
 
-#### To Run On Linux
+To run on Linux:
+
 ````
 $CONTRAST_HOME/bin/backup_db.sh
 ````
 
-#### To Run On Windows
+To run on Windows:
+
 ````
 $CONTRAST_HOME\bin\backup_db.cmd
 ````
-<br/>
+
+
 ## Restoring Database Backups
 In the event of needing to restore a database backup, we have provided the necessary steps to reliably perform this operation below. Database restoration should be performed by a MySQL Database Administrator.
 
@@ -46,7 +49,7 @@ On Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schem
 * Grant permissions to the Contrast user via ```GRANT ALL PRIVILEGES ON *.* to 'contrast'@'%';```
 * Exit from MySQL
 * Restore the MySQL backup
-..* Restore on Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
-..* Restore on Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
+	- * Restore on Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
+	- * Restore on Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
 * Shut down MySQL
 * Restart TeamServer and MySQL together, fully restored
