@@ -8,7 +8,7 @@ tags: "tools vulnerability API v1"
 
 You can get a list of vulnerabilities with this service. It only takes one URL path parameter: the ID of the application, which can be retrieved with the [/s/api/app/list](tools_apiapps.html#monitor) service.
 
-## Sample Request
+Sample request:
 
 ```
 PUT /Contrast/s/api/traces/b4cc1c84-8965-4362-8144-0e8ae1e6fa9f HTTP/1.1
@@ -20,7 +20,7 @@ Authorization: <insert authorization token here>
 API-Key: <insert API key here>
 ```
 
-## Sample Response
+Sample response:
 
 ```
 HTTP/1.1 200 OK

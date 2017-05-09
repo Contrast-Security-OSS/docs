@@ -20,7 +20,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 >**Example:** A vulnerability was reported to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
 
-### See Also
+## More Information 
 * [Analyze Findings](user_vulns.html#analyze)
 * [Manage Vulnerabilities](user_vulns.html#manage)
 * [How to Fix Them](user_vulns.html#remediate)

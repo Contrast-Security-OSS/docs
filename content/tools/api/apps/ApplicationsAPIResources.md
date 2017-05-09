@@ -162,27 +162,23 @@ Relevance | Description
 
 Retrieves a list of applications accessible to the authenticated user that are not archived.
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications
 ```
 
-#### Request
+**Request:** Accepts pagination, filtering, and expansion parameters.
 
-Accepts pagination, filtering, and expansion parameters.
-
-#### Sample Request
+Sample Request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/applications
 ```
 
-#### Response
+**Response:** Returns a collection of **Application** objects.
 
-Returns a collection of **Application** objects.
-
-#### Sample Response
+Sample response:
 
 ```
 [
@@ -240,29 +236,28 @@ Returns a collection of **Application** objects.
 
 Retrieves an **Application** by its unique identifier.
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications/{app-id}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 app-id  | guid   | true  |  The ID of the **Application** to retrieve
 
-#### Sample Request
+
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/applications/8dfdd006-c2a4-4e90-bb24-bc90cbc03433
 ```
 
-#### Response
+**Response:** Returns an **Application** object.
 
-Returns an **Application** object.
-
-#### Sample Response
+Sample response:
 
 ```
 [
@@ -296,29 +291,28 @@ Returns an **Application** object.
 
 ### Retrieve Application Statistics
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications/{app-id}/stats
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 app-id | guid   | true  |  The ID of the **Application** to retrieve
 
-#### Sample Request
+
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/applications/8dfdd006-c2a4-4e90-bb24-bc90cbc03433/stats
 ```
 
-#### Response
+**Response:** Returns an **ApplicationStats** object.
 
-Returns an **ApplicationStats** object.
-
-#### Sample Response
+Sample response:
 
 ```
 {
@@ -365,29 +359,28 @@ Resets an application by deleting all library, coverage, statistics and trace in
 
 >**Note:** **USE CAREFULLY**
 
-#### Resource URI
+Resource URI
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications/{app-id}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 app-id | guid   | true  |  The ID of the **Application** to reset
 
-#### Sample Request
+
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= -XDELETE https://app.contrastsecurity.com/Contrast/api/applications/8dfdd006-c2a4-4e90-bb24-bc90cbc03433
 ```
 
-#### Response
+**Response:** Returns the **Application** object after it has been reset.
 
-Returns the **Application** object after it has been reset.
-
-#### Sample Response
+Sample response:
 
 ```
 {
@@ -420,29 +413,27 @@ Returns the **Application** object after it has been reset.
 
 ### Retrieve Application Libraries
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications/{app-id}/libraries
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 app-id | guid  |  true  |  The ID of the **Application** to retrieve
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/applications/8dfdd006-c2a4-4e90-bb24-bc90cbc03433/libraries
 ```
 
-#### Response
+**Response:** Returns a collection of **Library** objects.
 
-Returns a collection of **Library** objects.
-
-#### Sample Response
+Sample response:
 
 ```
 [ {
@@ -487,13 +478,13 @@ Returns a collection of **Library** objects.
 
 ### Retrieve Specific Application Library
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications/{app-id}/libraries/{lib-id}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
@@ -501,17 +492,15 @@ app-id | guid  |  true  |  The ID of the **Application** to retrieve
 lib-id | guid  |  true  |  The ID of the **Library** to retrieve
 expand | Collection<String> | false  | The extra fields to include in the library - manifest, servers, and CVEs
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/applications/8dfdd006-c2a4-4e90-bb24-bc90cbc03433/libraries/4
 ```
 
-#### Response
+**Response:** Returns a single **Library** object.
 
-Returns a single **Library** object.
-
-#### Sample Response
+Sample response:
 
 ```
 {
@@ -554,15 +543,15 @@ Returns a single **Library** object.
 ```
 
  
-### Retrieve All CVEs For A Library
+### Retrieve All CVEs for a Library
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications/{app-id}/libraries/{lib-id}/cves
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
@@ -570,17 +559,15 @@ app-id | guid  |  true  |  The ID of the **Application** to retrieve
 lib-id | long  |  true   | The ID of the **Library** to retrieve
 expand | Collection<String> | false  | The extra fields to include in the **CVE**
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/applications/8dfdd006-c2a4-4e90-bb24-bc90cbc03433/libraries/4/cves
 ```
 
-#### Response
+**Response:** Returns a collection of **CVE** objects.
 
-Returns a collection of **CVE** objects.
-
-#### Sample Response
+Sample response:
 
 ```
 [ {
@@ -667,13 +654,13 @@ Returns a collection of **CVE** objects.
 
 ### Retrieve A CVE For A Library
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/applications/{app-id}/libraries/{lib-id}/cves/{cve-id}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
@@ -682,17 +669,15 @@ lib-id | long  |  true  |  The ID of the **Library** to retrieve
 cve-id | String | true  |  The CVE-Identifier of the **CVE** to retrieve
 expand | Collection<String> | false  | The extra fields to include in the CVE
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/applications/8dfdd006-c2a4-4e90-bb24-bc90cbc03433/libraries/4/cves/CVE-2012-5351
 ```
 
-#### Response
+**Response:** Returns a **CVE** object.
 
-Returns a **CVE** object.
-
-#### Sample Response
+Sample response:
 
 ```
 [

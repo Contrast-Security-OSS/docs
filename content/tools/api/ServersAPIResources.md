@@ -25,9 +25,9 @@ server-type | string  | Indicates the type of server
 enabled | boolean | Indicates whether or not the Agent on the server is currently active
 engine-version | string | The version of the Agent currently running on the server, in the form ```Major.Minor.Patch```
 
-* A startup message is sent by the Agent when the server first starts to tell TeamServer that it is still available and to determine what, if any, applications should be monitored
+A startup message is sent by the Agent when the server first starts to tell TeamServer that it is still available and to determine what, if any, applications should be monitored
 
-** An AppActivity message indicates some type of action was performed on the application. These types of messages provide updates to Coverage, Architecture and Library information.
+An AppActivity message indicates some type of action was performed on the application. These types of messages provide updates to Coverage, Architecture and Library information.
 
 #### HATEOAS Links
 
@@ -42,27 +42,23 @@ application | The application to which the coverage belongs
 
 Retrieves a list of the **Servers** to which the user has access.
 
-#### Resource URI
+Resource URI:
 
 ```
 GET https://app.contrastsecurity.com/Contrast/api/servers
 ```
 
-#### Request
+**Request:** Static URL that doesn't have any custom parameters.
 
-Static URL that doesn't have any custom parameters.
-
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/servers
 ```
 
-#### Response
+**Response:** Returns a collection of **Server** objects.
 
-Returns a collection of **Server** objects.
-
-#### Sample Response
+Sample response:
 
 ```
 [ {
@@ -98,29 +94,27 @@ Returns a collection of **Server** objects.
 
 Retrieve the given **Server**.
 
-#### Resource URI
+Resource URI:
 
 ```
 GET https://app.contrastsecurity.com/Contrast/api/servers/{server-id}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 server-id  | long  |  true  |  The ID of the server for which you want information 
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/servers/1
 ```
 
-#### Response
+**Response:** Returns a **Server** object.
 
-Returns a **Server** object.
-
-#### Sample Response
+Sample response:
 
 ```
 {
@@ -140,6 +134,6 @@ Returns a **Server** object.
 ```
 
 
-## See Also
+## More Information
 
 [Glossary](glossary.html#glossary)

@@ -44,29 +44,27 @@ application | The application to which the coverage belongs
 
 Retrieves the traces for an **Application** by the application's identifier.
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/traces/{app-id}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 app-id | guid  |  true  |  The ID of the application for which you want traces
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/traces/45adaa6a-ab7d-4ba1-af2c-5ee1301c1771
 ```
 
-#### Response
+**Response:** Returns a **Trace** object.
 
-Returns a **Trace** object.
-
-#### Sample Response
+Sample response:
 
 ```
 [ {
@@ -215,32 +213,30 @@ Returns a **Trace** object.
 
 ### Retrieve Specific Trace
 
-Retrieves the traces for an **Application** by the application's identifier.
+Retrieve the traces for an **Application** by the application's identifier.
 
-#### Resource URI
+Resource URI:
 
 ```
 https://app.contrastsecurity.com/Contrast/api/traces/{app-id}/{trace-id}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 app-id | guid  |  true  |  The ID of the Application for which you want information
 trace-id  |  guid   | true  |  The ID of the Trace for which you want information
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/traces/45adaa6a-ab7d-4ba1-af2c-5ee1301c1771/
 ```
 
-#### Response
+**Response:** Returns a **Trace** object.
 
-Returns a **Trace** object.
-
-#### Sample Response
+Sample response:
 
 ```
 {
@@ -316,6 +312,6 @@ Returns a **Trace** object.
 ```
 
 
-## See Also
+## More Information
 
 [Glossary](glossary.html#glossary)

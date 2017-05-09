@@ -32,36 +32,32 @@ override-teamserver-url | boolean | Whether or not the agent should override the
 teamserver-url | string  | The URL the agent will use in order to reach the TeamServer
 engine-type | string | The engine-type indicates the type of language for which the Agent was designed. It MUST be ```JAVA```, ```DOTNET_x86```, or ```DOTNET_x64``` and **MUST BE INCLUDED**
 
-* A *stacktrace-capture-mode* of **Some** indicates that traces are only saved for the first and last events of a **Trace**
+> **Note:** A *stacktrace-capture-mode* of **Some** indicates that traces are only saved for the first and last events of a **Trace**
 
 
 ## API Operations
 
-### Retrieve Profiles
+###Retrieve Profiles
 
-Retrieves a list of user **Profiles**.
+**Retrieve Profiles** retrieves a list of user **Profiles**.
 
-#### Resource URI
+Resource URI: 
 
 ```
 GET https://app.contrastsecurity.com/Contrast/api/engine/profiles
 ```
 
-#### Request
+**Request:** Static URL that doesn't have any custom parameters.
 
-Static URL that doesn't have any custom parameters.
-
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/engine/profiles
 ```
 
-#### Response
+**Response:** Returns a collection of **Profile** objects.
 
-Returns a collection of **Profile** objects.
-
-#### Sample Response
+Sample response:
 
 ```
 [ {
@@ -128,32 +124,27 @@ Returns a collection of **Profile** objects.
 } ]
 ```
 
-
 ### Send Profiles
 
-Send a **Profile** created by the user.
+**Send Profiles** sends a **Profile** created by the user.
 
-#### Resource URI
+Resource URI: 
 
 ```
 POST https://app.contrastsecurity.com/Contrast/api/engine/profiles
 ```
 
-#### Request
+**Request:** Static URL that doesn't have any custom parameters.
 
-Static URL that doesn't have any custom parameters.
-
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/engine/profiles --data "{"name":"REST PROFILE","sampling-baseline":5,"sampling-window":180,"sampling-frequency":10,"log-level":"","log-file":"","proxy-host":"","proxy-auth":"","proxy-user":"","proxy-pass":"","proxy-port":"","teamserver-url":"","stacktrace-capture-mode":"ALL","use-proxy":false,"override-teamserver-url":false,"engine-type":"JAVA"}"
 ```
 
-#### Response
+**Response:** Returns the sent **Profile** object.
 
-Returns the sent **Profile** object.
-
-#### Sample Response
+Sample response: 
 
 ```
 {
@@ -194,29 +185,27 @@ Returns the sent **Profile** object.
 
 Get a **Profile** based on the name provided by the user.
 
-#### Resource URI
+Resource URI: 
 
 ```
 GET https://app.contrastsecurity.com/Contrast/api/engine/profiles/{profile-name}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 profile-name  |  string | true  |  The name of the profile you wish to retrieve 
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%20PROFILE
 ```
 
-#### Response
+**Response:** Returns the selected **Profile** object.
 
-Returns the selected **Profile** object.
-
-#### Sample Response
+Sample response:
 
 ```
 {
@@ -254,30 +243,28 @@ Returns the selected **Profile** object.
 
 Update a **Profile** with changes made by the user.
 
-#### Resource URI
+Resource URI:
 
 ```
 PUT https://app.contrastsecurity.com/Contrast/api/engine/profiles/{profile-name}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 profile-name  |  string | true  |  The name of the profile you wish to update 
 
-#### Sample Request
+Sample Request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/engine/profiles/UPDATE%20PROFILE
 --data "{"name":"UPDATE PROFILE","sampling-baseline":5,"sampling-window":180,"sampling-frequency":10,"log-level":"","log-file":"","proxy-host":"","proxy-auth":"","proxy-user":"","proxy-pass":"","proxy-port":"","teamserver-url":"","stacktrace-capture-mode":"ALL","use-proxy":false,"override-teamserver-url":false,"engine-type":"JAVA"}"
 ```
 
-#### Response
+**Response:** Returns the updated **Profile** object.
 
-Returns the updated **Profile** object.
-
-#### Sample Response
+Sample response:
 
 ```
 {
@@ -314,68 +301,61 @@ Returns the updated **Profile** object.
 ```
 
 
-### Delete Profile
+## Delete Profile
 
 Delete a **Profile** with the given name.
 
-#### Resource URI
+Resource URI:
 
 ```
 DELETE https://app.contrastsecurity.com/Contrast/api/engine/profiles/{profile-name}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 profile-name  |  string | true  |  The name of the profile you wish to delete 
 
-#### Sample Request
+Sample Request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/engine/profiles/NEW%20PROFILE
 --data "{"name":"UPDATE PROFILE","sampling-baseline":5,"sampling-window":180,"sampling-frequency":10,"log-level":"","log-file":"","proxy-host":"","proxy-auth":"","proxy-user":"","proxy-pass":"","proxy-port":"","teamserver-url":"","stacktrace-capture-mode":"ALL","use-proxy":false,"override-teamserver-url":false,"engine-type":"JAVA"}"
 ```
 
-#### Response
-
-Returns *200* if the **Profile** was successfully deleted.
+**Response:** Returns *200* if the **Profile** was successfully deleted.
 
 
-### Retrieve Agent
+## Retrieve Agent 
 
 Get an **Agent** for the given platform: ```java``` or ```dotnet```.
 
-#### Resource URI
+Resource URI:
 
 ```
 GET https://app.contrastsecurity.com/Contrast/api/engine/{profile}/{platform}
 ```
 
-#### Request
+**Request:**
 
 Parameter | Type | Required | Description
 :----------|:------|:----------|:------------
 jvm  | string | false  | The jvm level on which your application runs (Java only)
 
-#### Sample Request
+Sample request:
 
 ```
 curl -HAccept:application/json -HAPI-Key:test -HAuthorization:dGVzdF91c2VyOnRlc3Q= https://app.contrastsecurity.com/Contrast/api/engine/default/java?jvm=1.6
 ```
 
-#### Response
+**Response:** Returns an **Agent** with which to monitor your **Application**.
 
-Returns an **Agent** with which to monitor your **Application**.
-
-#### Sample Response
-
-```Contrast.jar
-```
+Sample response: ```Contrast.jar```
 
 
-## See Also
+## More Information
 
-[Sampling](admin_orgsettings.html#org-server)
+* [Sampling](admin_orgsettings.html#org-server)
 
-[Glossary](glossary.html#glossary)
+* [Glossary](glossary.html#glossary)
