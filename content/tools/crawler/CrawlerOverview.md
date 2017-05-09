@@ -59,6 +59,6 @@ To isolate the resource consumption by the crawler from the TeamServer's core pl
 
 ## See Also
 
-* [Crawler Installation](tools_crawler.html#install)
+* [Crawler Installation](tools_crawler.html#crawler-install)
 * [How To Crawl A Web Application](user_apps.html#crawl)
 * [Monitoring A Crawler Instance](tools_crawler.html#config)

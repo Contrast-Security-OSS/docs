@@ -15,9 +15,9 @@ After installation the following login screen should be displayed:
 
 <a href="assets/images/KB4-c01_1.png" rel="lightbox" title="TeamServer Login"><img class="thumbnail" src="assets/images/KB4-c01_1.png"/></a>
 
-https://MyTeamServer/Contrast
+https://contrastserver/Contrast
 
->**Note:** The hostname ‘MyTeamServer’ shown in the above URL should be either be the IP address or hostname setup during TeamServer installation.
+>**Note:** The hostname ‘contrastserver’ shown in the above URL should be either be the IP address or hostname setup during TeamServer installation.
 
 At this login screen, the default admin will enter his/her Hub account credentials (email address and password) to access the TeamServer as the default admin account provisioned automatically during installation.
 

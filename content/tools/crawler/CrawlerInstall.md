@@ -5,7 +5,7 @@ tags: "tools crawler installation Microservice sizing fontconfig PhantomJS"
 -->
 
 ## Getting Started
-For more information about the Contrast Crawler Micro-Service [click here](tools_crawler.html#about).  Before installing, see [System Requirements](tools_crawler.html#reqs).
+For more information about the Contrast Crawler Micro-Service [click here](tools_crawler.html#crawler-about).  Before installing, see [System Requirements](tools_crawler.html#crawler-reqs).
 
 ## Installing the Crawler Micro-Service
 Crawling can take significant amount of CPU time and JVM heap for an extended period. To avoid exhausting TeamServer's server resource, Contrast's crawl feature requires deployment of a micro-service that executes crawling outside the TeamServer's JVM or physical/virtual machine. Multiple micro-service instances can be deployed in order to process more than one scheduled crawl executions simultaneously. It is recommended to start with a single Crawler installation until additional capacity and testing resources are needed.

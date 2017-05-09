@@ -11,7 +11,7 @@ The Contrast.NET Agent logs information to the ***Contrast.NET\LOGS*** directory
 
 Depending on how the Windows profile is set up (folder view settings), the directories may be hidden so you can't browse directly to them. If so, paste the paths into the Windows Explorer location (replace the drive letter **C** with **D** if necessary).
 
-You can change what information is logged by changing the logging level in the [.NET Agent Configuration](user_netconfig.html#config).
+You can change what information is logged by changing the logging level in the [.NET Agent Configuration](installation_netconfig.html).
 
 There are several types of log files in the ***LOGS*** directory: ***DotnetAgentSvc_***,  ***Profiler_*** (or ***Monitor_***), and ***Module_*** (or ***Hooks_***) logs. ***DotnetAgentSvc_*** logs include details about ***DotnetAgentService.exe***'s work, including any details of errors communicating with the Contrast TeamServer. The other types of logs include details about data flow and control flow analysis peformed by the agent's sensors.
 
@@ -35,4 +35,4 @@ If there was an error, then you will probably see something similar to this:
 
 <a href="assets/images/KB3-e04_3.jpg" rel="lightbox" title="Error Message"><img class="thumbnail" src="assets/images/KB3-e04_3.jpg"/></a>
 
-Starting with **Version 3.1.8**, the .NET agent will produce a minidump file (***.dmp***) when it encounters an error that would crash the worker process. These minidump files can be sent to Contrast as part of a [bug report](https://support.contrastsecurity.com/tickets/new). Dump files will help the Contrast team resolve the bug much more quickly than without the information in the dump file. Dump files are located in the same directory as other log files.
+Starting with **Version 3.1.8**, the .NET agent will produce a minidump file (***.dmp***) when it encounters an error that would crash the worker process. These minidump files can be sent to Contrast as part of a [bug report](mailto:bugs@contrastsecurity.com). Dump files will help the Contrast team resolve the bug much more quickly than without the information in the dump file. Dump files are located in the same directory as other log files.

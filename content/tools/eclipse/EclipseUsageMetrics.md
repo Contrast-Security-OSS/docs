@@ -5,7 +5,7 @@ tags: "tools eclipse report metrics"
 -->
 
 ## Getting Started
-Contrast for Eclipse includes an option to disable its default function of collecting and sending usage metrics back to the developers. For more information on these metrics, see [Usage Metrics](tools_eclipse.html#metrics).
+Contrast for Eclipse includes an option to disable its default function of collecting and sending usage metrics back to the developers.
 
 This preference can be toggled in Eclipse by navigating to **File > Preferences > Contrast**.
 

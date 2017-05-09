@@ -6,7 +6,7 @@ tags: "tools basic data API v1 sample"
 
 ## The "/s/api/app/stats/{appld}" Service
 
-You can get basic data about a monitored application with this service. It only takes one URL path parameter: the ID of the application, which can be retrieved with the [/s/api/app/list](dev_api1.html#monitor) service.
+You can get basic data about a monitored application with this service. It only takes one URL path parameter: the ID of the application, which can be retrieved with the [/s/api/app/list](tools_apiapps.html#monitor) service.
 
 ## Sample Request
 

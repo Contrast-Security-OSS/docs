@@ -370,11 +370,12 @@ Returns an **Agent** with which to monitor your **Application**.
 
 #### Sample Response
 
-```Contrast.jar```
+```Contrast.jar
+```
 
 
 ## See Also
 
-[Sampling](user_tsfaq.html#sample)
+[Sampling](admin_orgsettings.html#org-server)
 
-[Glossary](user_tsfaq.html#glossary)
+[Glossary](glossary.html#glossary)
