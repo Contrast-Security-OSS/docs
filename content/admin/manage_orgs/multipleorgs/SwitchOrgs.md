@@ -18,5 +18,4 @@ Steps to toggle between organizations:
 <a href="assets/images/Settings_MultiOrg.png" rel="lightbox" title="User Menu with Multiple Organizations"><img class="thumbnail" src="assets/images/Settings_MultiOrg.png"/></a>
 
 
-## Note About Organization Settings
-Each organization contains settings specific to that organization. If a user is an organization administrator for multiple organizations, that user will need to toggle between organizations in order to configure settings for a specific organization. 
+> **Note:** Each organization contains settings specific to that organization. If a user is an organization administrator for multiple organizations, that user needs to toggle between organizations in order to configure settings for a specific organization. 

@@ -25,11 +25,10 @@ At this login screen, the default admin will enter his/her Hub account credentia
 
 There is a separate credential for managing the TeamServer installation, called SuperAdmin.
 
-* username: contrast_superadmin@example.com
-* password: (contact Support)
+* Username: contrast_superadmin@example.com
+* Password: (contact Support)
 
 If the Hub user account is john.doe@mycompany.com, the SuperAdmin convention is:
 contrast_superadmin@mycompany.com
 
-Note: This password is the password automatically provisioned in TeamServer when the license file was downloaded from Hub.
-
+> **Note:** This password is the password automatically provisioned in TeamServer when the license file was downloaded from Hub.

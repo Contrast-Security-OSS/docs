@@ -12,11 +12,11 @@ If the license is expired, then the second method (file system) below must be us
 
 1. Log in to TeamServer as a SuperAdmin, for example:
 
-    > **URL:** ```http://teamserver:8080/Contrast/static/ng/admin_index.html#/superadmin/signin```
-    > 
-    > **Username:** *contrast_superadmin@example.com* (replace *example.com* with the email suffix of the user registered on Hub)
-    > 
-    > **Password:** Provided when the trial license is originally downloaded from Hub (refer to your account team or Support for the password)
+	- **URL:** ```http://teamserver:8080/Contrast/static/ng/admin_index.html#/superadmin/signin```
+    
+    - **Username:** *contrast_superadmin@example.com* (replace *example.com* with the email suffix of the user registered on Hub)
+   
+    - **Password:** Provided when the trial license is originally downloaded from Hub (refer to your account team or Support for the password)
 
 2. Navigate to **System Settings > Licensing**.
 3. Click the **Update This License** button at the bottom of the panel.

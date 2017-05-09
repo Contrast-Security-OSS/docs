@@ -13,13 +13,13 @@ Groups are highly flexible. They can be configured with a single role and single
 
 | Field           | Value         |
 |-----------------|---------------|                                             
-| Name            | Unique string naming the system group (ie: "My Company")  | 
-| Role            | **System:** Administrative privileges in the System Administration interface. |
-|     | **Observer:** View-only privileges in the System Administration interface |
-|     | **No Access:** Restrict access to an organization  |
-|     | **Note:** Multiple roles can be defined for a given group of users |
-| Organization(s) | Select one or more organizations to associate with one or more roles    |                                                            
-| Member(s)         | Select one or more users to assign to a group |
+| Name            | Unique string naming the system group (ie: "My Company")  |
+| Role            | **System:** Administrative privileges in the System Administration interface.| 
+|				  | **Observer:** View-only privileges in the System Administration interface |
+|     			  | **No Access:** Restrict access to an organization |
+|     			  | **Note:** Multiple roles can be defined for a given group of users |
+| Organization(s) | Select one or more organizations to associate with one or more roles|
+| Member(s)       | Select one or more users to assign to a group |
 
 When a user is added to a system administration group that contains one or more organizations outside their default organization, they will then have access to the System Administration interface. A new **SuperAdmin** option in the user menu will be available for them to navigate to for managing the organization(s), applications, users and groups associated with the organization(s) defined. 
 
@@ -41,10 +41,10 @@ If more granular control is required, you can create organization groups in the 
 | Name            | Unique string naming the system or organization group (ie: My Test Group)|
 | Organization(s) **SuperAdmin only** | Select one or more organizations to associate with one or more roles|
 | Organization Role **SuperAdmin only** | **No Access:** The user has no access to the organization.  |
-|     | **View:** The user has read-only access to an organization's findings in Contrast. |
-|     | **Edit:** The user can interact with the full lifecycle of vulnerabilities as well as bring applications online and delete them. This user has no administration capabilities and can't perform any organization administration functions. This role is appropriate for the vast majority of Contrast users.  |
-|     | **Rules Admin:** The user has the same privileges as an Edit user in addition to being able to edit policy and rules. |
-|     | **Admin:** The user is responsible for configuration of the organization with the ability to license applications, manage user accounts and perform other advanced configuration functions. |
+|     									| **View:** The user has read-only access to an organization's findings in Contrast. |
+|     									| **Edit:** The user can interact with the full lifecycle of vulnerabilities as well as bring 		applications online and delete them. This user has no administration capabilities and can't perform any organization administration functions. This role is appropriate for the vast majority of Contrast users.  |
+|     				 					|**Rules Admin:** The user has the same privileges as an Edit user in addition to being able to edit policy and rules. |
+|    									| **Admin:** The user is responsible for configuration of the organization with the ability to license applications, manage user accounts and perform other advanced configuration functions. |
 | Application Access | Define access as a pairing of application(s) and role. In the applications field, select a single application, multiple applications or all applications. Then select the role you want to provide to those applications. A single group can provide more than one role assignment by clicking **Add Access** to add another line in the group definition to define a separate application and role assignment.|
 | Member(s)         | Select one or more users to assign to a group. See [Create Users](admin_onboardteam.html#create-user) for more information.|
 
