@@ -13,13 +13,12 @@ Parameter | Description
 ***sort_by*** | The field on which to sort within the returned result (Only *Strings*, *Numbers* or *Timestamps*)
 ***sort_order*** | The direction in which to sort the collection (*asc* or *desc*)
 
----
+<br>
 
 ```
 curl -HAccept:application/json -HAuthorization:test -HAPI-Key:test https://app.contrastsecurity.com/Contrast/api/applications/?count=10&start_index=11&sort_by=name&sort_order=desc
 ```
 
----
 
 Additionally, there are also pre-generated filters for filtering data in useful ways. This list will continue to grow as we add more filters based on user feedback and client need.
 
@@ -27,7 +26,6 @@ Resource Type | Filter | Description
 ------------- | ------ | -----------
 ***Libraries*** | withCVE | Filter out libraries that do not have any CVE's associated with them.
 
----
 
 To use a filter on a request, simply add the filter parameter and any parameters required by that filter to the URL.
 

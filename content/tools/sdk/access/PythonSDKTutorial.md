@@ -60,8 +60,5 @@ To run the tests, create a file in the `/tests` directory called *test-config.js
 
 > **Note:** The URL validation doesn't accept localhost as a Contrast URL. If you're running Contrast locally, use http://127.0.0.1:19080 as your teamserver_url.
 
-Then run tests with `nose`:
+Then run tests with ```nosetests```.
 
-```commandline
-nosetests
-```

@@ -13,7 +13,7 @@ With the release of Contrast 3.2.7, we have partitioned the models associated wi
 ## When? 
 These changes will need to be in place between the 3.2.6 and 3.2.7+ versions of Contrast. This means that you will need to have the new rules ready to be released during the 3.2.7+ upgrade process but *BEFORE* actually running the 3.2.7+ installer. Once these rules are complete, shut down TeamServer with the Contrast Server command. (See [Restarting Contrast](installation_setupinstall.html#restart) for an example. 
 
-> **Note:** for Linux use *stop* instead of *restart*). 
+> **Note:** for Linux, use *stop* instead of *restart*. 
 
 After confirming that TeamServer is down, replace the rules in your *${contrast.dir}/data/rulepack* directory with the new versions. Finally, run the 3.2.7+ installer to update TeamServer and bring it back online. 
 

@@ -22,11 +22,13 @@ To  see all the information, these applications must be licensed. For more infor
  
 ## Manage Applications
 
-Go to the Applications page to get detailed information, see findings, scores, manage licenses, settings and more.
+Go to the Applications page to get detailed information, see findings, scores, manage licenses, settings and more. Read the [Manage Applications article](user_appsmanage.html) for more details.
  
 ## Set Up Environments
 
 In the Servers page, you can set the environment for each server to Development, QA or Production. Select your application in the grid to compare the differences across environments as code travels and track vulnerabilities in the Overview page. Contrast sets up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
+
+For more information, including screenshots, go to the [Set Up Environments article](articleuser_apps.html#environ). 
  
 ## Discover Vulnerabilities
 
@@ -54,7 +56,7 @@ For more information, read the article on [Library Analysis](user_libraries.html
  
 ## Manage Vulnerabilities
 
-Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised.
+Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised. Read the [Manage Vulnerabilities article](user_vulns.html#manage) to understand them even better. 
  
 ## Analyze Findings
 

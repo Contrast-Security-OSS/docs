@@ -9,7 +9,7 @@ Contrast has a few API versions:
 * Application APIs (v2) 
 * HATEOS-compliant REST API (v3) **Recommended**
 
->**NOTE:** We haven't officially deprecated v1 or v2, but strongly recommend using v3.
+>**Note:** We haven't officially deprecated v1 or v2, but strongly recommend using v3.
 
 ## Overview
 The Contrast plugin allows you to collect nearly all the same information that is accessible through the Contrast UI. You can get vulnerability data, application, server and library information, download agents and much more.
