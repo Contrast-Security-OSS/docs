@@ -32,7 +32,7 @@ When binding Contrast using a user-provided service, you must give it a name or 
 | `api_key` | (Required) Your user's API key
 | `service_key` | (Required) Your user's service key
 
----
+<br>
 
 An example of creating a user-provided service and binding it to an application:
 
@@ -258,11 +258,12 @@ You can now see six form fields.
 | Organization UUID            | Organization UUID to onboard app to                    |
 | Plan Name                    | Name of the plan as it will appear in Apps Manager     |
 
----
+<br>
 
 Once you're finished defining a plan, click the **Save** button. If you want some apps to belong to different organizations, define any other plans you may need.
 
 Once you define your plans, return to the Ops Manager dashboard and select the **Apply Changes** button.
+
 <a href="assets/images/Pivotal_Apply_Changes.png" rel="lightbox" title="Apply changes"><img class="thumbnail" src="assets/images/Pivotal_Apply_Changes.png"/></a>
 
 This may take some time to deploy.
@@ -279,6 +280,7 @@ Select the plan you want to bind to an application by clicking the **Select this
 
 On the next screen, specify an instance name of the plan. (This doesn't effect the service broker, so you can name it anything you like.)
 Under the **Bind to App** dropdown, select the application to which you want to bind this service.
+
 <a href="assets/images/Pivotal_Bind_App.png" rel="lightbox" title="Binding service instance to application"><img class="thumbnail" src="assets/images/Pivotal_Bind_App.png"/></a>
 
 Now that you bound our service instance to an application, you can restage the application. The latest Java agent will be retrieved from your Teamserver and run on your application.
@@ -294,4 +296,5 @@ cf set-env APP-NAME JAVA_OPTS " -Dcontrast.appname.override=PivotalSpringApp
 ```
 
 Pivotal Apps Manager example:
+
 <a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through UI"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>

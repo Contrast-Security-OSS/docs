@@ -12,26 +12,25 @@ This document will outline the process for installing Contrast on an application
 Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 ##Instructions
+<ol>
+<li>* Click on **Run** in the application toolbar then click on the **Edit Configuration** menu item from the dropdown</li>
+<li> Select the IntelliJ Server configuration instance</li>
+<li> Select the **Server** tab and enter the Contrast launcher string in **VM Options**: ```-javaagent:${DOWNLOADS}/contrast.jar -noverify``` 
+</li>
 
-1. Click on **Run** in the application toolbar then click on the **Edit Configuration** menu item from the dropdown
-2. Select the IntelliJ Server configuration instance
-3. Select the **Server** tab and enter the Contrast launcher string in **VM Options**: 
-
-```sh
--javaagent:${DOWNLOADS}/contrast.jar -noverify
-```
 
 <a href="assets/images/KB2-f04_1.png" rel="lightbox" title="Edit Configuration"><img class="thumbnail" src="assets/images/KB2-f04_1.png"/></a>
 
 <a href="assets/images/KB2-f04_2.png" rel="lightbox" title="VM Options"><img class="thumbnail" src="assets/images/KB2-f04_2.png"/></a>
 
-4. Hit **Apply** and then **Ok**
-5. Start the **Server**
-6. A Contrast startup message should appear in the **Server** console (allow 1-2 minutes extra time for server startup)
+<li> Hit **Apply** and then **Ok** </li>
+<li> Start the **Server** </li>
+<li> A Contrast startup message should appear in the **Server** console. (Allow 1-2 extra minutes for server startup.) </li>
 
 <a href="assets/images/KB2-f04_3.png" rel="lightbox" title="Startup Message"><img class="thumbnail" src="assets/images/KB2-f04_3.png"/></a>
 
-7. Navigate to your application, and allow an extra minute for it to start up
+<li> Navigate to your application and allow an extra minute for it to start up. </li>
+</ol>
 
 ## More Information
 
