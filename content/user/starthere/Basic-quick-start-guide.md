@@ -28,7 +28,7 @@ Go to the Applications page to get detailed information, see findings, scores, m
 
 In the Servers page, you can set the environment for each server to Development, QA or Production. Select your application in the grid to compare the differences across environments as code travels and track vulnerabilities in the Overview page. Contrast sets up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
 
-For more information, including screenshots, go to the [Set Up Environments article](articleuser_apps.html#environ). 
+For more information, including screenshots, go to the [Set Up Environments article](user_apps.html#environ). 
  
 ## Discover Vulnerabilities
 
@@ -40,7 +40,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 <a href="assets/images/Application-vulnerabilities-tab.png" rel="lightbox" title="Vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Application-vulnerabilities-tab.png"/></a>
 
-> Example: This vulnerability was reported to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
+> **Example:** This vulnerability was reported to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
  
 ## Improve Your Application Score
 

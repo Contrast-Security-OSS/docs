@@ -64,7 +64,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 
 <a href="assets/images/SSOConfigRestart.png" rel="lightbox" title="Restart TeamServer to Apply Authentication Changes"><img class="thumbnail" src="assets/images/SSOConfigRestart.png"/></a>
 
->**NOTE:** You can edit your configuration later within the Authentication tab; however, you must retest and restart Contrast to apply the changes.
+>**Note:** You can edit your configuration later within the Authentication tab; however, you must retest and restart Contrast to apply the changes.
 
 ####Public and secret nodes
 
@@ -93,7 +93,7 @@ If an Org Admin decides to set up SSO, it's important to note that Contrast does
 * Once the test is successfull, click **Finish**.
 * Open a **new** browser window, private browsing session or Incognito window and attempt the SSO login with your account. If you're unsuccessful, go back to the browser in which you're still logged in, disable SSO for the Organization and then contact Support. 
 
->**NOTE:** You can edit your SSO configuration later within the SSO tab.
+>**Note:** You can edit your SSO configuration later within the SSO tab.
 
 To return the organization back to the default configuration, select **Revert to Contrast-Managed Authentication** and confirm the change. The Contrast SuperAdmin controls these settings and no configuration is necessary.
 
@@ -109,7 +109,7 @@ If SSO is configured, a checkbox appears on the Contrast login page. Checking it
 
 Next, Contrast verifies your email with the configured IdP and directs you to the IdP login page. Once you submit your full SSO credentials and are successfully authenticated, you're logged in and directed back to the Contrast dashboard. If you try to sign in using SSO but don't have an account in Contrast, an error message appears on the login screen, informing you that your administrator must create your account.
 
->**NOTE:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See the artcle on [Two-Step Verification](admin_systemsettings.html#twostep) for more information. 
+>**Note:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See the artcle on [Two-Step Verification](admin_systemsettings.html#twostep) for more information. 
 
 
 For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting_auth.html#troubleshoot-sso). 
