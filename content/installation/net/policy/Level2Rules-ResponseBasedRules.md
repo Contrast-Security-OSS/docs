@@ -7,7 +7,6 @@ tags: "installation policy rules level agent .Net rules"
 Contrast.NET will scan the response stream of your application for various security issues.  You can disable some or all of these checks.  Disabling all response-based checks will result in a small performance improvement for analyzed web applications.
 
 ```xml
-
   <response-based-rules>
     <full-content-analysis enabled="true">
       <clickjacking-controls enabled="true" />
@@ -22,9 +21,8 @@ Contrast.NET will scan the response stream of your application for various secur
     </header-analysis>
   </response-based-rules>
 
-
 ```
-
+<br>
 
 Setting | Description
 :------ |:-----------

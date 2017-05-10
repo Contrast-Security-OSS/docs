@@ -44,8 +44,7 @@ More detailed levels of logging degrade performance but may generate useful info
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | *SamplingBaseline*, *SamplingFrequency*, *SamplingWindow* | Enable and configure sampling mode.                                                    |
 | *StackTraceConfig*                                      | <ul><li>Limits stack traces captured by the agent. Default is **Full**.</li><li> **Full** (default): Capture all stack traces with file and line number information. Note that deployments must include .PDB files for line number information.</li><li> **Limited**: Better performance. Capture all stack traces but without file and line number information. Best used for builds without debugging symbols (.PDB files).</li><li> **Minimal**: Best performance. Doesn't capture intermediate propagator stack traces, no file and line information. Best used for Release builds and production environments.</li></ul> |
-
-        
+      
 
 ## Analysis
 
@@ -54,7 +53,7 @@ More detailed levels of logging degrade performance but may generate useful info
 | *UseMonitor*                                         | <ul><li>Controls the instrumentation engine used by the .NET agent.</li><li> Enabling Monitor mode allows the .NET Agent to be used alongside other profiling tools. Protect features require the use of Monitor mode.</li><li> The default value is *false*. If set to *true*, the .NET Agent Service must be restarted by the user in order for changes to the noted configuration settings to take effect. </li><li> Note that Monitor mode only analyzes applications running on CLR4.</li></ul>|
 | *ProfilerBehavior*                                         | <ul><li>Controls the data flow engine used and the amount of instrumentation performed by the .NET agent.</li><li> Note that this setting is ignored by Monitor mode. </li></ul> |
 | *EnableInstrumentationOptimizations*                       | <ul><li>**Applies to Contrast Agent v.3.2.9 and above.** </li><li> Optionally disable code optimizations under instrumentation-based flow analysis when ProfilerBehavior=3 (Instrumentation mode). </li><li> The default is ```true```. Set to ```false``` to disable. </li></ul>
-<br/>
+
 
 **1. legacyCasModel Support**
 

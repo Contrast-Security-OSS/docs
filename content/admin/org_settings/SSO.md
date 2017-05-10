@@ -14,7 +14,9 @@ To get started you'll need to set up an identity provider (if you don't use one 
 Contrast does not provide keys for SAML authentication. If you enable SSO without providing private keys, you will only be able to perform IDP-initiated logins.
 
 You will need to generate your own self-signed key using the Java Keytool:
-```keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
+
+```
+keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
 ```
 
 Use the [Encrypted Editor](installation_setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the step above. 
@@ -44,6 +46,7 @@ If an Org Admin decides to set up SSO, it is important to note that Contrast doe
 * Once successfully tested, click **Finish**.
 * Open a **new** browser window, Private Browsing Session or Incognito window and attempt the SSO login with your account. If you are unsuccessful, go back to the browser where you are still logged in and disable SSO for the Organization, then contact Support. 
 
->**NOTE:** Should you need to edit your SSO configuration later, you may do so inline within the Single Sign-On tab.
+>**Note:** Should you need to edit your SSO configuration later, you may do so inline within the Single Sign-On tab.
 
 To return the organization back to the default configuration, simply select **Revert to Contrast-Managed Authentication** and confirm. These settings are controlled by the Contrast SuperAdmin and no configuration is necessary.
+
