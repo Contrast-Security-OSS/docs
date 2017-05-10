@@ -30,14 +30,14 @@ In conjunction with the input type, you must choose how to apply URLs:
 
 * **These URLs** (allows regex): Specify a set of URLs to which to apply the exclusion. 
 
->**NOTE:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
+>**Note:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
 
 
 ### URL
 
 This type of exclusion allows you to focus on a list of specific URLs to be ignored using **These URLs**. In this field, you can list the specific URLs to exclude, resulting in any findings from these URLs being suppressed. 
 
->**NOTE:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
+>**Note:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
 
 
 ### Code
@@ -68,7 +68,7 @@ Choosing **Code** (allows regex) will allow you to specify a list of method sign
 
 This can be narrowed down by selecting individual Assess or Protect rules. We’ll only apply the exclusion to vulnerabilities found by the selected rules in the corresponding mode.
 
->**NOTE:** To help you understand what your exclusion will do, a summarized sentence is displayed at the bottom of the wizard.
+>**Note:** To help you understand what your exclusion will do, a summarized sentence is displayed at the bottom of the wizard.
 
 
 ## Create a new exclusion from an existing attack event
