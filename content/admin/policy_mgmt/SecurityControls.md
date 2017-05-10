@@ -33,7 +33,7 @@ After choosing a Name, Type, and Language, specify the API and choose the vulner
 <a href="assets/images/SecurityControlEdit.png" rel="lightbox" title="Security Control Details"><img class="thumbnail" src="assets/images/SecurityControlEdit.png"/></a>
 
 
->**NOTE:** Servers may require restart and a list of affected servers based on your selection is provided.
+>**Note:** Servers may require restart and a list of affected servers based on your selection is provided.
 
 ### From A Vulnerability
 
@@ -45,7 +45,7 @@ Additionally, if marking a vulnerability as **Not A Problem** with the reason "G
 
 <a href="assets/images/SecurityControlOptionDialog.png" rel="lightbox" title="Option To Create A Security Control Within The Context Of Status Marking"><img class="thumbnail" src="assets/images/SecurityControlOptionDialog.png"/></a>
 
->**NOTE:** In both vulnerability contexts, the **Add Security Control** dialog will give you the option to immediately create another control from your current location, rather than having to navigate back to **Policy Management**.
+>**Note:** In both vulnerability contexts, the **Add Security Control** dialog will give you the option to immediately create another control from your current location, rather than having to navigate back to **Policy Management**.
 
 
 ## API Guidelines
