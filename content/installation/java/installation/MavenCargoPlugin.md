@@ -10,8 +10,7 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 ## Instructions
 
-<ol>
-<li> Add a ```<cargo.jvmargs>``` property to the ```<properties>``` section of ```<configuration>``` in your ***pom.xml***, like this: </configuration <li>
+1. Add a ```<cargo.jvmargs>``` property to the ```<properties>``` section of ```<configuration>``` in your ***pom.xml***, like this: </configuration 
 
 ````
 <build>
@@ -36,10 +35,8 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 </build>
 ````
 
-<li> Run your Maven target or Cargo unit test normally. </li>
-<li> A Constart startup message should appear in the Console before your server messages appear (allow 1-2 minutes extra time for server startup). </li>
-<li> Navigate to your application, and allow an extra minute for it to start up. </li>
-
-</ol>
+2. Run your Maven target or Cargo unit test normally. 
+3. A Constart startup message should appear in the Console before your server messages appear (allow 1-2 minutes extra time for server startup). 
+4. Navigate to your application, and allow an extra minute for it to start up. 
 
 For more information on adding JVM arguments to Cargo container, consult the [Cargo documentation](https://codehaus-cargo.github.io/cargo/Configuration+properties.html).

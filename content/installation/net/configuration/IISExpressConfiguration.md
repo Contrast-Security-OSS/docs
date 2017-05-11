@@ -13,15 +13,24 @@ Click the **Configure Sites...** link on the IIS Express page to bring up the II
 
 <a href="assets/images/iisexpress_configure_page.png" rel="lightbox" title="Configure IIS"><img class="thumbnail" src="assets/images/iisexpress_configure_page.png"/></a>
 
-* Click the **Add** button under Config Files and browse to another IIS Express configuration file from which to load applications.  Visual Studio 2015 saves these files as ```[Solution Directory]\.vs\config\applicationhost.config```.
-* Click **OK** to save your changes.  
-  The file you specified will be scanned, and sites in the file will be added to the IIS Express application list.
+<ol>
+
+<li> Click the **Add** button under Config Files and browse to another IIS Express configuration file from which to load applications. Visual Studio 2015 saves these files as ```[Solution Directory]\.vs\config\applicationhost.config```. </li>
+<li> * Click **OK** to save your changes. </li>
+
+</ol>
+The file you specified will be scanned, and sites in the file will be added to the IIS Express application list.
 
 
 ## Add A New IIS Express Command
 
 IIS Express provides an option to run sites from the command line without using up a configuration file. See [IIS Express Command Line Documentation](http://www.iis.net/learn/extensions/using-iis-express/running-iis-express-from-the-command-line) for more information. You can save a command line as an entry in the Contrast agent.
 
-* Enter a site name identifier and the command parameters in the **Manual Commands** section. Click **Add** to add it to the list.
-* Click **OK** to save your changes.  
-  A site with the name you added will be shown in the IIS Express application list.  Clicking **Start** will run *iisexpress.exe* with the parameters you specified and attach the agent to the process.
+<ol>
+
+<li> Enter a site name identifier and the command parameters in the **Manual Commands** section. </li>
+<li> Click **Add** to add it to the list. </li>
+<li> Click **OK** to save your changes. </li> 
+<li> A site with the name you added will be shown in the IIS Express application list. Click **Start** to run *iisexpress.exe* with the parameters you specified and attach the agent to the process. </li>
+
+</ol>
