@@ -10,35 +10,35 @@ tags: "user TeamServer application crawler crawling"
 
 To crawl a web application:
 
-* Log in to TeamServer
-* Navigate to your application
-* Select the **Activity** tab in the application page
-* Click on the **+** button next to **Add a new crawl configuration** in the **Crawler** widget
-* Enter a name - this is for the user to quickly identify configurations in the **Configuration** popup
-* Enter the site - this is where the crawl begins (must be a URL)
-* For non-basic authentication and form field entry, refer to the **Form Fields** section
-* For basic authentication, check the **Basic Authentication** button and fill in the username and password
-* For custom headers, see the **Custom Header** tab to add new key-value pairs to be passed in the request to the server
-* Click **Save**
-* The configuration should appear in the **Crawl Configurations** widget
-* To launch a crawl, click the **Selector** button to the right of the configuration and click **Execute**
-* After the crawl is finished, the **History** button will show the record
+1. Log in to TeamServer
+2. Navigate to your application
+3. Select the **Activity** tab in the application page
+4. Click on the **+** button next to **Add a new crawl configuration** in the **Crawler** widget
+5. Enter a name - this is for the user to quickly identify configurations in the **Configuration** popup
+6. Enter the site - this is where the crawl begins (must be a URL)
+7. For non-basic authentication and form field entry, refer to the **Form Fields** section
+8. For basic authentication, check the **Basic Authentication** button and fill in the username and password
+9. For custom headers, see the **Custom Header** tab to add new key-value pairs to be passed in the request to the server
+10. Click **Save**
+11. The configuration should appear in the **Crawl Configurations** widget
+12. To launch a crawl, click the **Selector** button to the right of the configuration and click **Execute**
+13. After the crawl is finished, the **History** button will show the record
 
 ## Form Fields
 
 If your application contains input fields that need to be populated with specific values:
 
-* Navigate to the form field section of the **Configuration** popup by clicking on the **Form Fields** tab
-* The **Use random values in form fields** checkbox will allow Crawler to insert random data into unspecified form fields
-* Click the **Add A New Field** button to add a new specified form field
-* The field that will be filled in needs to be identified by either an ```id``` or ```name``` attribute
+14. Navigate to the form field section of the **Configuration** popup by clicking on the **Form Fields** tab
+15. The **Use random values in form fields** checkbox will allow Crawler to insert random data into unspecified form fields
+16. Click the **Add A New Field** button to add a new specified form field
+17. The field that will be filled in needs to be identified by either an ```id``` or ```name``` attribute
     - Navigate to the element in question in your browser
     - Right-click on the element and select **Inspect Element** from the **Context** menu
     - The field should now be highlighted. From the example above, our ```id``` attribute value would be ```exampleInputEmail1```. The name attribute value can also be used.
 
     <a href="assets/images/KB3-g02.png" rel="lightbox" title="ID Attribute Value"><img class="thumbnail" src="assets/images/KB3-g02.png"/></a>
 
-* The value is the String that will be inserted into the field - in our example, the element with ```id=exampleInputEmail1``` will be populated with ```webgoat```
+18. The value is the String that will be inserted into the field - in our example, the element with ```id=exampleInputEmail1``` will be populated with ```webgoat```
 
 ## Custom Headers
 
@@ -52,22 +52,22 @@ Allows you to add custom key-value pairs that crawler will send in the request t
 
 To either click or not click on a certain element:
 
-* Navigate to the **Click Rules** section of the **Configuration** popup by clicking on the **Click Rules** tab
-* You will see all of the default click rules
-* Add an additional click rule by clicking the **+** button at the top right
-* Select whether this rule is to **click** or **not click**
-* Select which element to apply this to
-* Select either **No conditions**, which implies unconditional, or any number of conditions similar to the process in **Page Conditions** (below)
-* Continue to **Step 8** in **Basic Instructions** (above)
+1. Navigate to the **Click Rules** section of the **Configuration** popup by clicking on the **Click Rules** tab
+2. You will see all of the default click rules
+3. Add an additional click rule by clicking the **+** button at the top right
+4. Select whether this rule is to **click** or **not click**
+5. Select which element to apply this to
+6. Select either **No conditions**, which implies unconditional, or any number of conditions similar to the process in **Page Conditions** (below)
+7. Continue to **Step 8** in **Basic Instructions** (above)
 
 ## Page Conditions
 
 **Page Conditions** enables you to filter the pages you want to crawl. Add criteria that must exist on a page in order for the crawler to evaluate.
 
-* Navigate to the **Click Rules** section of the **Configuration** popup by clicking on the **Page Conditions** tab
-* Add an additional click rule by clicking the **+** button at the top right
-* Select the condition type from the **Condition Type** dropdown
-* Enter an appropriate expression or value
+1. Navigate to the **Click Rules** section of the **Configuration** popup by clicking on the **Page Conditions** tab
+2. Add an additional click rule by clicking the **+** button at the top right
+3. Select the condition type from the **Condition Type** dropdown
+4. Enter an appropriate expression or value
 
 ## Advanced
 

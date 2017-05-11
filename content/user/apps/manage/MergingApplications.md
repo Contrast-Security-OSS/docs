@@ -10,12 +10,12 @@ Merging two or more applications into a single application is a common operation
 
 In order to merge an application, the user must be an Organization Administrator and follow these steps:
 
-* Log in to Contrast
-* Navigate to the **Applications** page
-* Identify and select the applications to be merged via the checkboxes in the left column
-* Select the **Merge** icon from the batch action menu at the top right of the grid
-* Determine which of the merged applications should represent the **Master Application**
-* Voila!  
+1. Log in to Contrast
+2. Navigate to the **Applications** page
+3. Identify and select the applications to be merged via the checkboxes in the left column
+4. Select the **Merge** icon from the batch action menu at the top right of the grid
+5. Determine which of the merged applications should represent the **Master Application**
+6. Voila!  
 
 Now that your applications are merged, you will see the **Master Application** accompanied by an icon. You can always see the application modules represented by clicking this icon or choosing "Show child applications" from the **Advanced** filter options. To quickly get to any merged applications, there is a predefined **Merged** filter available from the search bar.
 
