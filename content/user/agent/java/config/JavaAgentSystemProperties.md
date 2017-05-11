@@ -24,8 +24,10 @@ You can combine the above command with tools like *grep* to search for commands,
 | contrast.deepclone | boolean to enable/disable cloning of leaf nodes in object graphs of deserialized objects<br>**DEFAULT VALUE:** false</br> |
 | contrast.dir | This value can override the default Contrast working directory<br>**DEFAULT VALUE:** ${HOME}/.contrast of the user account the application runs under.</br> |
 | contrast.duplicate.delay | The period for which duplicate traces, based on Contrast hashing methods, will be supressed (in milliseconds)<br>**DEFAULT VALUE:** 5000</br> |
+| contrast.enable.auto.update | If false, Contrast will not contact TeamServer to see if an updated version is available. This check occurs before contrast.forceupdate<br>**DEFAULT VALUE:** true</br> |
 | contrast.enabled | Determines whether or not Contrast will monitor the JVM. You can use this feature to quickly turn Contrast on or off without removing the *-javaagent* flag.<br>**DEFAULT VALUE:** true</br> |
 | contrast.external.lib.dir | semi-colon delimited list of directories where external libraries are stored; used during library analysis<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.forceupdate | If true, Contrast will replace itself with the latest version available on TeamServer, without checking version number. This check occurs after contrast.enable.auto.update<br>**DEFAULT VALUE:** false</br> |
 | contrast.inject.browseragent | manually override name of browser agent<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.j2ee.context.discovery | boolean to enable/disable J2EE context discovery<br>**DEFAULT VALUE:** true</br> |
 | contrast.mode | assess: data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features; Note when this property is enabled, the Agent will ignore all customizations from TeamServer.<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
