@@ -46,8 +46,8 @@ If more granular control is required, you can create organization groups in the 
 |     				 					|**Rules Admin:** The user has the same privileges as an Edit user in addition to being able to edit policy and rules. |
 |    									| **Admin:** The user is responsible for configuration of the organization with the ability to license applications, manage user accounts and perform other advanced configuration functions. |
 | Application Access | Define access as a pairing of application(s) and role. In the applications field, select a single application, multiple applications or all applications. Then select the role you want to provide to those applications. A single group can provide more than one role assignment by clicking **Add Access** to add another line in the group definition to define a separate application and role assignment.|
-| Member(s)         | Select one or more users to assign to a group. See [Create Users](admin_onboardteam.html#create-user) for more information.|
+| Member(s)         | Select one or more users to assign to a group. See [Create Users](admin-onboardteam.html#create-user) for more information.|
 
 >**Example:** App1 and App2 with the role Admin on a single line. App3 and App4 with the role Edit on another line. This means the group provides users the Admin role for App1 and App2 and only Edit role for App3 and App4.
 
-For more information, read about how to [Manage Groups](admin_manageorgs.html#access). 
+For more information, read about how to [Manage Groups](admin-manageorgs.html#access). 

@@ -38,7 +38,7 @@ uri                      | Address of the TeamServer installation you would like
 
 The API key and service key can be retrieved within the dropdown menu on your user name (upper right). Navigate to **Organization Settings** and then select **API** in the left column.
 
-For a full list of configuration options that can be placed in this file, see [Node Agent Configuration](installation_node.html#config).
+For a full list of configuration options that can be placed in this file, see [Node Agent Configuration](installation-node.html#config).
 
 ## Running The Agent
 First, add the following script to your application's *package.json*:
@@ -51,4 +51,4 @@ First, add the following script to your application's *package.json*:
 }
 ```
 
-Then, the agent can be run with ```npm run contrast```. This npm script can be changed to include other runtime configurations, such as an alternate configuration file location. For more information, see [Node Agent Configuration](installation_node.html#config).
+Then, the agent can be run with ```npm run contrast```. This npm script can be changed to include other runtime configurations, such as an alternate configuration file location. For more information, see [Node Agent Configuration](installation-node.html#config).

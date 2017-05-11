@@ -6,7 +6,7 @@ tags: "tools vulnerability API v1"
 
 ## The "/s/api/traces/{appld}" Service
 
-You can get a list of vulnerabilities with this service. It only takes one URL path parameter: the ID of the application, which can be retrieved with the [/s/api/app/list](tools_apiapps.html#monitor) service.
+You can get a list of vulnerabilities with this service. It only takes one URL path parameter: the ID of the application, which can be retrieved with the [/s/api/app/list](tools-apiapps.html#monitor) service.
 
 Sample request:
 

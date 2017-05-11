@@ -13,4 +13,4 @@ You fixed your vulnerability, but how can you verify that in Contrast? There are
 * **Check build number:** For each application, you can assign it a build version number. By adding the property -Dcontrast.override.appversion to the -javaagent command, you can use this as a filter and verify whether the issue still exists for this build version by clicking the Advanced link and the Build Number dropdown.
 * **Check by time unit tests:** You can also filter by the time at which your unit tests were run, and set a date range to view your vulnerabilities in the Set Date Range input field above the vulnerabilities grid.
 
-You can find additional properties in articles on [Java Agent System Properties](installation_javaconfig.html#system) and [.NET Agent Configuration](installation_netconfig.html#config). 
+You can find additional properties in articles on [Java Agent System Properties](installation-javaconfig.html#system) and [.NET Agent Configuration](installation-netconfig.html#config). 

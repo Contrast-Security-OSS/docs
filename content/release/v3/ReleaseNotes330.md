@@ -68,8 +68,8 @@ tags: "3.3.0 July Release Notes"
 * .Net Dvnr Application: https://github.com/Contrast-Security-OSS/dotnet-dvnr
 
 ## OpenDocs
-* [Generating a HAR File](troubleshooting_setupfaq.html#har)
-* [Jenkins Plugin](tools_sdk.html#jenkins)
-* [Gradle Plugin](tools_sdk.html#gradle)
-* [Maven Plugin](tools_sdk.html#maven)
-* [Java SDK FAQ](tools_sdkaccess.html#java)
+* [Generating a HAR File](troubleshooting-setupfaq.html#har)
+* [Jenkins Plugin](tools-sdk.html#jenkins)
+* [Gradle Plugin](tools-sdk.html#gradle)
+* [Maven Plugin](tools-sdk.html#maven)
+* [Java SDK FAQ](tools-sdkaccess.html#java)

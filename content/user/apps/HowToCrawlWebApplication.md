@@ -6,7 +6,7 @@ tags: "user TeamServer application crawler crawling"
 
 ## Basic Instructions
 
->**Note:** This assumes [installation](tools_crawler.html#crawler-install) and [configuration](tools_crawler.html#config) of the Crawler Micro-Service.
+>**Note:** This assumes [installation](tools-crawler.html#crawler-install) and [configuration](tools-crawler.html#config) of the Crawler Micro-Service.
 
 To crawl a web application:
 

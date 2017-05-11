@@ -55,5 +55,5 @@ Contrast recommends the creation of two groups in the directory, dedicated to ea
 ## Types of Directories Supported
 Contrast supports the following types of Directories:
 
-* [Lightweight Directory Access Protocol (LDAP)](installation_setupauth.html#ldap)
-* [Microsoft Active Directory (AD)](installation_setupauth.html#ad)
+* [Lightweight Directory Access Protocol (LDAP)](installation-setupauth.html#ldap)
+* [Microsoft Active Directory (AD)](installation-setupauth.html#ad)

@@ -15,7 +15,7 @@ The conflicting profiler can often be identified by searching for the GUID in th
 
 ## How to Solve
 
-* Enable Monitor mode for the .NET Agent. As of version 3.3.5, the .NET Agent can be used alongside another profiling tool by enabling Monitor mode. See [.NET Agent Configuration](installation_netconfig.html#config) for more information. 
+* Enable Monitor mode for the .NET Agent. As of version 3.3.5, the .NET Agent can be used alongside another profiling tool by enabling Monitor mode. See [.NET Agent Configuration](installation-netconfig.html#config) for more information. 
 * Or, disable or uninstall the other software that has a profiler registered with or attached to IIS, restart IIS, and then start the Contrast .NET Agent. 
   * Use regedit to edit the values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment``` key. Set ```COR_ENABLE_PROFILING``` value to **0** and delete the ```COR_PROFILER``` value.
   * You may also need to repeat this process for the following keys:
@@ -26,4 +26,4 @@ The conflicting profiler can often be identified by searching for the GUID in th
 
 ## More Information 
 
-[Getting Started with the .NET Agent](installation_netoverview.html#getstart)
+[Getting Started with the .NET Agent](installation-netoverview.html#getstart)

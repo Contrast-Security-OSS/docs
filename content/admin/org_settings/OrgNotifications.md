@@ -8,7 +8,7 @@ Notifications provide a mechanism for Contrast users to be alerted in specific c
 
 There are two primary channels available for notifications: E-mail and In-Application. 
 
-* **E-mail notifications** require Contrast be configured to communicate with an appropriate [SMTP system](admin_systemsettings.html#glance). 
+* **E-mail notifications** require Contrast be configured to communicate with an appropriate [SMTP system](admin-systemsettings.html#glance). 
 * **In-Application notifications** are made available directly in the product and are visible by selecting the Notification bell in the top menu bar.
 
 ## Administrative Notifications
@@ -47,7 +47,7 @@ Customers who have implemented Protection licensing will also see:
 >**Note:** You can narrow or expand the notifications you receive by adjusting which applications your subscriptions apply to. 
 
 ## Custom Notifications
-Custom notifications allow users with Admin, Edit and Rules Admin [roles](admin_manageorgsroleperm.html#roles) for the organization to provide notifications to one or more users when a specific condition has been observed within Contrast. These defined notifications execute and alert users via email on event, daily and weekly.  
+Custom notifications allow users with Admin, Edit and Rules Admin [roles](admin-manageorgsroleperm.html#roles) for the organization to provide notifications to one or more users when a specific condition has been observed within Contrast. These defined notifications execute and alert users via email on event, daily and weekly.  
 
 <a href="assets/images/CreateNotification.png" rel="lightbox" title="Creating A Custom Notification"><img class="thumbnail" src="assets/images/CreateNotification.png"/></a>
 

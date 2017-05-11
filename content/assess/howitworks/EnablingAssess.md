@@ -18,7 +18,7 @@ When Assess is enabled, you will need to restart the application in order for th
 Assessment is applied to each application. Once your application has been assessed, Contrast presents a multitude of information, including:
 
 * Accurate vulnerability identification that comes with details on the code and solutions to fix it
-* Overall score to let you know how the application is performing in general - read about [Score Settings](admin_orgsettings.html#score-settings)
+* Overall score to let you know how the application is performing in general - read about [Score Settings](admin-orgsettings.html#score-settings)
 * Activity of the URLs being hit
 * Application usage metrics
 * Insight into the architecture of the running application 
@@ -31,4 +31,4 @@ There are two types of policies available in Contrast Assess. They are as follow
 * **Assess Rules** which can detect specific types of vulnerabilities, such as SQL Injection or Cross-Site Scripting
 * **Security Controls** which are methods in your code that make sure data is safe to use
 
-Read more about these policies in our [Assessment Policy](assess_managevulns.html#assess-policy) article.
+Read more about these policies in our [Assessment Policy](assess-managevulns.html#assess-policy) article.

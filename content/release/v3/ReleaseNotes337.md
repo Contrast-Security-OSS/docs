@@ -136,5 +136,5 @@ tags: "3.3.7 February Release Notes"
 
 
 ## OpenDocs:
-* [Using Assess and Protect Exclusions](admin_policymgmt.html#exclude)
-* [Working with Cloud Foundry and Pivotal](installation_javainstall.html#cloud)
+* [Using Assess and Protect Exclusions](admin-policymgmt.html#exclude)
+* [Working with Cloud Foundry and Pivotal](installation-javainstall.html#cloud)

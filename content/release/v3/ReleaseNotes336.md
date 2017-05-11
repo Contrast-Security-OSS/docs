@@ -130,8 +130,8 @@ tags: "3.3.6 January Release Notes"
 * Updates to Ticketbook, a purposely vulnerable application: https://github.com/Contrast-Security-OSS/ticketbook
 
 ## OpenDocs:
-* [Node Agent Troubleshooting](troubleshooting_node.html#node-ts-install)
-* [Node Agent Connectivity Issues](troubleshooting_node.html#connect)
-* [Node Agent Performance](troubleshooting_node.html#perform)
-* [Node Working with Other Agents](troubleshooting_nodeother.html)
-* [Node Process Monitoring Tools](troubleshooting_nodeother.html#tools)
+* [Node Agent Troubleshooting](troubleshooting-node.html#node-ts-install)
+* [Node Agent Connectivity Issues](troubleshooting-node.html#connect)
+* [Node Agent Performance](troubleshooting-node.html#perform)
+* [Node Working with Other Agents](troubleshooting-nodeother.html)
+* [Node Process Monitoring Tools](troubleshooting-nodeother.html#tools)

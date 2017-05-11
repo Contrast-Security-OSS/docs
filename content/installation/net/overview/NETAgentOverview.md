@@ -24,12 +24,12 @@ The .NET agent consists of several key components:
 
 ## More Information
 
-* [.NET Agent Supported Technologies](installation_net.html#supported)
+* [.NET Agent Supported Technologies](installation-net.html#supported)
 
-* [Starting And Stopping The .NET Agent](troubleshooting_net.html#start)
+* [Starting And Stopping The .NET Agent](troubleshooting-net.html#start)
 
-* [Using The .NET Contrast Tray](installation_nettray.html#guide)
+* [Using The .NET Contrast Tray](installation-nettray.html#guide)
 
-* [.NET Agent Configuration](installation_netconfig.html#config)
+* [.NET Agent Configuration](installation-netconfig.html#config)
 
-* [Getting .NET Agent Logs](troubleshooting_net.html#logs)
+* [Getting .NET Agent Logs](troubleshooting-net.html#logs)

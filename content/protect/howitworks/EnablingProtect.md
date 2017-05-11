@@ -17,7 +17,7 @@ When Protect is enabled, you will need to restart the application in order for t
 ## Protecting an Application
 Protection is applied for each agent, so in order to fully protect an application, say in a production environment, you will need to make sure that all production agents that host the application are licensed and have Protect enabled. This is most vital in production environments, since you want to make sure that all application instances are protected when they initially come online without any human intervention. As noted above, the easiest way to accomplish this is to set the organizational defaults to automatically license all production agents and enable Protection for Production environments.
 
-Read more about [Server Defaults](admin_orgsettings.html#org-server).
+Read more about [Server Defaults](admin-orgsettings.html#org-server).
 
 ## Contrast Protection Policies
 There are five types of policies available in Contrast Protect. They are as follows:
@@ -28,4 +28,4 @@ There are five types of policies available in Contrast Protect. They are as foll
 * **Log Enhancers** which provide additional instrumentation instructions 
 * **IP Management** where you can manage a blacklist and whitelist (trusted hosts)
 
-Read more about these policies in our [Protection Policy](protect_manageattacks.html#protect-policy) article.
+Read more about these policies in our [Protection Policy](protect-manageattacks.html#protect-policy) article.

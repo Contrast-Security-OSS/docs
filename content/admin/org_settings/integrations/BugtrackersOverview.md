@@ -42,7 +42,7 @@ If integration with an unsupported system is needed, this can be accomplished in
 
 Method | Description
 ------ | -----------
-**Integrate With The Contrast REST API** | You can find complete documentation here: [REST API](tools_api.html#api-about)
+**Integrate With The Contrast REST API** | You can find complete documentation here: [REST API](tools-api.html#api-about)
 **Export Findings To CSV** | Findings can be exported to **Comma-Separated Values (CSV)** and imported into a bugtracker of your choice.
 **Export Findings To XML** | Individual or groups of findings can be exported to **XML** format and imported into a bugtracker of your choice.
 

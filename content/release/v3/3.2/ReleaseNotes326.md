@@ -81,9 +81,9 @@ The new release of Crawler and changes to TeamServer will force old Crawler conf
 
 
 ## OpenDocs
-* [Two-Step Verification](admin_systemsettings.html#twostep)
-* [.Net and Ninject](troubleshooting_netissues.html#invalid)
-* [Installing Play with the Java Agent](installation_javainstall.html#play)
+* [Two-Step Verification](admin-systemsettings.html#twostep)
+* [.Net and Ninject](troubleshooting-netissues.html#invalid)
+* [Installing Play with the Java Agent](installation-javainstall.html#play)
 
 ## Database Migrations
 * V3_2_6_000: Custom Notifications Support

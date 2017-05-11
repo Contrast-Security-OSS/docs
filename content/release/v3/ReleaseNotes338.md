@@ -121,7 +121,7 @@ There are three important things to call out for the 3.3.8 release of the .NET A
 
 
 ## OpenDocs
-* [Python SDK Tutorial](tools_sdkaccess.html#python)
-* [Bamboo Plugin](tools_sdk.html#bamboo)
-* [Cloud Foundry](installation_javainstall.html#cloud)
-* [Improving SSL Setup](admin_systemsettings.html#ssl)
+* [Python SDK Tutorial](tools-sdkaccess.html#python)
+* [Bamboo Plugin](tools-sdk.html#bamboo)
+* [Cloud Foundry](installation-javainstall.html#cloud)
+* [Improving SSL Setup](admin-systemsettings.html#ssl)

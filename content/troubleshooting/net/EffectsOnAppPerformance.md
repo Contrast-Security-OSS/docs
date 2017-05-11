@@ -21,7 +21,7 @@ If performance is really important to your environment, consider the following o
 
 ## More Information
 
-* [Sampling](admin_orgsettings.html#org-server)
-* [.NET Agent Configuration](installation_netconfig.html#config)
+* [Sampling](admin-orgsettings.html#org-server)
+* [.NET Agent Configuration](installation-netconfig.html#config)
 
 

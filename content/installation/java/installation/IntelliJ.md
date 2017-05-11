@@ -34,4 +34,4 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 ## More Information
 
-[Running Contrast on GlassFish with IntelliJ](installation_javainstall.html#glass)
+[Running Contrast on GlassFish with IntelliJ](installation-javainstall.html#glass)

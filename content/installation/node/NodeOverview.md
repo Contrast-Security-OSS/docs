@@ -7,7 +7,7 @@ tags: "installation NodeJS agent troubleshooting"
 The **Contrast Node Agent** analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution. Just as tools such as Istanbul and CoffeeScript use this technique to weave new features into JavaScript, Contrast uses it to help you keep your applications secure.
 
 ## Usage
-To start analyzing an application, download the Node.js agent and create a configuration file as described in [Node Agent Installation](installation_node.html#node-install).
+To start analyzing an application, download the Node.js agent and create a configuration file as described in [Node Agent Installation](installation-node.html#node-install).
 One way to think of the agent is as a middle-man between your code and the Node runtime. To this end, just as you might normally run your app with ```node <app-main.js>```, the Contrast Node Agent allows you to run your app with ```node ./node_modules/node_contrast <app-main>.js```.
 
 ## Node Agent Overview

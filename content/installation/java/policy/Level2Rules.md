@@ -151,7 +151,7 @@ Your ```script-source``` will be the same as the one shown below, with the excep
 
 
 #### Step 5: Restart The TeamServer
-An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation_setupinstall.html#restart).
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation-setupinstall.html#restart).
 
 
 #### Step 6: Configure And Restart The Application Server
@@ -340,7 +340,7 @@ xml
 ```
 
 #### Step 7: Restart The TeamServer
-An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation_setupinstall.html#restart).
+An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found [here](installation-setupinstall.html#restart).
 
 
 #### Step 8: Configure And Restart The Application Server

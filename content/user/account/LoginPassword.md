@@ -21,7 +21,7 @@ To change your password, do the following:
 
 The next time you go to log in, you'll need to provide this new password.
 
->**Note:** Customers using [Single Sign-On (SSO)](installation_setupauth.html#sso-setup) will not have this option.
+>**Note:** Customers using [Single Sign-On (SSO)](installation-setupauth.html#sso-setup) will not have this option.
 
 ## Two-Step Verification
 If your administrator has enabled this capability, you may add an extra layer of protection beyond your username and password by using two-step verification. To do so:
@@ -36,4 +36,4 @@ If your administrator has enabled this capability, you may add an extra layer of
 	* [Blackberry](https://appworld.blackberry.com/webstore/content/29401059/?lang=en&countrycode=US) 
 * Download the backup codes provided if you run into issues using either methods
 
-To learn more, read our article on [Two-Step Verification](admin_systemsettings.html#twostep).
+To learn more, read our article on [Two-Step Verification](admin-systemsettings.html#twostep).

@@ -88,6 +88,6 @@ tags: "3.3.3 October Release Notes"
 
 
 ## OpenDocs
-* [Configuring the JRE](installation_setupconfig.html#jre)
-* [MySQL Logging](troubleshooting_setup.html#troubleshoot-mysql)
-* [Installing on Axis2](installation_javainstall.html#axis)
+* [Configuring the JRE](installation-setupconfig.html#jre)
+* [MySQL Logging](troubleshooting-setup.html#troubleshoot-mysql)
+* [Installing on Axis2](installation-javainstall.html#axis)

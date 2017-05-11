@@ -58,6 +58,6 @@ Alternatively, you can use ```-Dcontrast.sampling``` = X, Y, Z where:
 ## Protection Options
 Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation.
 
-You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user_servers.html#syslog) to learn more about enabling this feature.
+You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
 
 >**Note:** Turning Protection ON by default requires licenses automatically be applied to servers.
