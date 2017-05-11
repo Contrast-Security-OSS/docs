@@ -16,3 +16,4 @@ We asked ourselves, however, what would happen if a bad guy get a hold of an Eng
 
 ## Enabling and Changing an API key
 To enable or change an API key, go to Settings menu option and select API. From this screen you'll be able to inspect the current API key and update it to a new value.
+

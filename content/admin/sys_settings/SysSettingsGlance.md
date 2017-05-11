@@ -8,10 +8,10 @@ Enterprise On-Premises (EOP) customers can manage their own instance of Contrast
 
 To get to System Settings: 
 
-* Log in to Contrast 
-* Navigate to the user menu in the upper right 
-* Select **SuperAdmin** in the "Use Contrast Security as:" section
-* Once in the SuperAdmin view, select **System Settings** from that same menu
+1. Log in to Contrast 
+2. Navigate to the user menu in the upper right 
+3. Select **SuperAdmin** in the "Use Contrast Security as:" section
+4. Once in the SuperAdmin view, select **System Settings** from that same menu
 
 <a href="assets/images/Settings_Admin.png" rel="lightbox" title="Settings Navigation Bar for an System Administrator"><img class="thumbnail" src="assets/images/Settings_Admin.png"/></a>
 

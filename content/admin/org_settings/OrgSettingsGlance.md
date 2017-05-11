@@ -41,3 +41,5 @@ Contrast offers basic [integrations](admin_orgintegrations.html) with various to
 
 ## Score Settings
 [Score settings](admin_orgsettings.html#score-settings) allow for customization of how **Overall Application Score** and **Library Score** gets calculated and determines what letter grade (or score) is communicated within Contrast.   
+
+

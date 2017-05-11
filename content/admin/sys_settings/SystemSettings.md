@@ -12,9 +12,9 @@ If a user is a SuperAdmin, he/she will have access to the system settings menu. 
 
 <a href="assets/images/Settings_Admin.png" rel="lightbox" title="Settings Navigation Bar for an System Administrator"><img class="thumbnail" src="assets/images/Settings_Admin.png"/></a>
 
-* Login to TeamServer
-* Select SuperAdmin from the settings menu
-* Select System Settings
+1. Login to TeamServer
+2. Select SuperAdmin from the settings menu
+3. Select System Settings
 
 ### General Settings
 The general settings page defines the TeamServer URL for both browsing and RESTful requests. In addition, if an administrator would like to integrate with [Contrast Hub](https://hub.contrastsecurity.com) for updates of libraries and CVE's, the option to "Try Hub" can be selected. Any change to this value will require a system restart.
@@ -37,11 +37,11 @@ TeamServer can send email notifications to users when significant events occur (
 
 <a href="assets/images/Configure_Mail.png" rel="lightbox" title="Configure SMTP"><img class="thumbnail" src="assets/images/Configure_Mail.png"/></a>
 
-* Login to TeamServer.
-* Select SuperAdmin from the settings menu.
-* Select System Settings.
-* Select Mail.
-* Complete the information as follows:
+1. Login to TeamServer.
+2. Select SuperAdmin from the settings menu.
+3. Select System Settings.
+4. Select Mail.
+5. Complete the information as follows:
 
 | Setting         | Possible Values                                              |
 |-----------------|--------------------------------------------------------------|

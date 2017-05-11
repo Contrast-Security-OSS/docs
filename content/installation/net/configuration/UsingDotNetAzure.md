@@ -17,6 +17,7 @@ Follow these steps to install the .NET agent on an Azure Virtual Machine:
 <li> Log in to the Contrast TeamServer and download the .NET Agent zip file. </li>
 <li> Access the Azure VM by Remote Desktop ([Log on to a Windows virtual machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-log-on-windows-server) </li>
 
+<br>
 <a href="assets/images/KB3-e15_1.png" rel="lightbox" title="Azure Virtual Machine"><img class="thumbnail" src="assets/images/KB3-e15_1.png"/></a>
 
 <li> Copy the .NET Agent zip file to the Azure VM and extract the archive. </li>
@@ -34,6 +35,7 @@ Follow these steps to install the .NET agent on an Azure Virtual Machine:
 <li> Log in to the Contrast TeamServer and download the .NET Agent zip file. </li>
 <li> Access the Cloud Service Instance by Remote Desktop ([see Using Remote Desktop with Azure Roles](https://msdn.microsoft.com/en-us/library/azure/gg443832.aspx) </li>
 
+<br>
 <a href="assets/images/KB3-e15_3.png" rel="lightbox" title="Cloud Remote Desktop Services"><img class="thumbnail" src="assets/images/KB3-e15_3.png"/></a>
 
 <li> Copy the .NET Agent zip file to the Cloud Service Instance and extract the archive. </li>
@@ -42,6 +44,7 @@ Follow these steps to install the .NET agent on an Azure Virtual Machine:
 
 </ol>
 
+<br> 
 <a href="assets/images/KB3-e15_4.png" rel="lightbox" title="Cloud RDP"><img class="thumbnail" src="assets/images/KB3-e15_4.png"/></a>
 
 ## Azure Websites
