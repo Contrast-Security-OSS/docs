@@ -10,9 +10,9 @@ Contrast can connect to bugtrackers in order to streamline the remediation proce
 
 Contrast supports integrations with:
 
-1. Mozilla Bugzilla
-2. Atlassian JIRA
-3. Serena Business Manager
+* Mozilla Bugzilla
+* Atlassian JIRA
+* Serena Business Manager
 
 ## Exporting findings
 

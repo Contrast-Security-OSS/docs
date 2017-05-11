@@ -10,17 +10,17 @@ Contrast supports Slack integration! With this connection you can receive notifi
 
 To add, go to your team's **Build** settings in Slack:
 
-* Add a new **Incoming Webhooks** custom integration
-* Choose the appropriate channel to which to send messages
-* Copy the **Webhook URL**
+1. Add a new **Incoming Webhooks** custom integration
+2. Choose the appropriate channel to which to send messages
+3. Copy the **Webhook URL**
 
 To connect in Contrast:
 
-* Navigate to the **Integrations** tab under **Organization Settings**
-* Click **Connect** within the Slack row
-* Name the integration and paste the URL
-* Select the application(s) for which you want to enable notifications
-* Click **Save**
+1. Navigate to the **Integrations** tab under **Organization Settings**
+2. Click **Connect** within the Slack row
+3. Name the integration and paste the URL
+4. Select the application(s) for which you want to enable notifications
+5. Click **Save**
 
 You are connected!
 
