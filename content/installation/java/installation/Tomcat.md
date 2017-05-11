@@ -20,9 +20,13 @@ Of course, you'll have to substitute the path to ***contrast.jar*** and your Tom
 
 If you run Tomcat from **as a service**, changing the JVM options to add the agent requires opening the Tomcat service manager. You can do this by double clicking the Tomcat icon in the System tray (or right clicking and hitting **Configure**.) If the icon is not there, you might have to start it manually by running ***tomcat7w.exe*** in the Tomcat bin directory.
 
+<br>
+
 <a href="assets/images/KB2-a01_1.png" rel="lightbox" title="System Tray Icon"><img class="thumbnail" src="assets/images/KB2-a01_1.png"/></a>
 
 Switching to the Java tab will show you where you need to add the ```-javaagent``` flag:
+
+<br>
 
 <a href="assets/images/KB2-a01_2.png" rel="lightbox" title="Tomcat Properties"><img class="thumbnail" src="assets/images/KB2-a01_2.png"/></a>
 

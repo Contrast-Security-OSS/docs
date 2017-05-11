@@ -25,36 +25,36 @@ The following steps are from the [Websphere support site](http://www-01.ibm.com/
 
 ### Application Server
 
-<ul>
+<ol>
 <li> In the Administration Console select **Servers** </li>
 <li> Expand **Server Type** and select **WebSphere application servers** </li>
 <li> Click on the name of your server </li>
 <li> Expand **Java and Process Management** and select **Process Definition**. </li>
 <li> Under the **Additional Properties** section, click **Java Virtual Machine**. </li>
 <li> Scroll down and locate the textbox for Generic JVM arguments. </li>
-</ul>
+</ol>
 
 ### Node Agent
 
-<ul>
+<ol>
 <li> In the **Administration Console**, select **System Administration** </li>
 <li> Select **Node agents** </li>
 <li> Choose which *nodeagent* to edit </li>
 <li> In the **Server Infrastructure** section, expand **Java and Process Management** and select **Process Definition**. </li>
 <li> Under the **Additional Properties** section, click **Java Virtual Machine**. </li>
 <li> Scroll down and locate the textbox for Generic JVM arguments. </li>
-</ul>
+</ol>
 
 ### Deployment Manager
 
-<ul>
+<ol>
 <li> In the **Administration Console**, select **System Administration** </li>
 <li> Select **Deployment manager** </li>
 <li> In the **Server Infrastructure** section, expand **Java and Process Management** and select **Process Definition**. </li>
 <li> Under the **Additional Properties** section, click **Java Virtual Machine**. </li>
 <li> Scroll down and locate the textbox for Generic JVM arguments. </li>
 <li> Add this text to the Generic JVM arguments, as noted in the screenshot below: </li>
-</ul>
+</ol>
 
 ````
 -javaagent:${DOWNLOADS}/contrast.jar -Xshareclasses:none

@@ -18,7 +18,7 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 <li> Select the **Server** tab and enter the Contrast launcher string in **VM Options**: ```-javaagent:${DOWNLOADS}/contrast.jar -noverify``` 
 </li>
 
-
+<br>
 <a href="assets/images/KB2-f04_1.png" rel="lightbox" title="Edit Configuration"><img class="thumbnail" src="assets/images/KB2-f04_1.png"/></a>
 
 <a href="assets/images/KB2-f04_2.png" rel="lightbox" title="VM Options"><img class="thumbnail" src="assets/images/KB2-f04_2.png"/></a>
@@ -27,6 +27,7 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 <li> Start the **Server** </li>
 <li> A Contrast startup message should appear in the **Server** console. (Allow 1-2 extra minutes for server startup.) </li>
 
+<br>
 <a href="assets/images/KB2-f04_3.png" rel="lightbox" title="Startup Message"><img class="thumbnail" src="assets/images/KB2-f04_3.png"/></a>
 
 <li> Navigate to your application and allow an extra minute for it to start up. </li>

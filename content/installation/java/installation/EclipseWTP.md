@@ -15,23 +15,23 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 <ol>
 <li> Double click on the server the application runs on in the **Servers** tab </li>
 <li> Hit the **Open launch configuration** link </li>
-
+<br>
 <a href="assets/images/KB2-f02_1.gif" rel="lightbox" title="Servers Tab"><img class="thumbnail" src="assets/images/KB2-f02_1.gif"/></a>
 
 <a href="assets/images/KB2-f02_2.gif" rel="lightbox" title="Open Launch Configuration"><img class="thumbnail" src="assets/images/KB2-f02_2.gif"/></a>
 
 <li> Select the **Arguments** tab </li>
 <li> Enter the ```-javaagent:/your/path/to/contrast.jar``` in **VM Options** </li>
-
+<br>
 <a href="assets/images/KB2-f02_3.png" rel="lightbox" title="VM Options"><img class="thumbnail" src="assets/images/KB2-f02_3.png"/></a>
 
 <li> Hit **Apply** and then **Ok** </li>
 <li> Start the **Server** </li>
-
+<br>
 <a href="assets/images/KB2-f02_4.gif" rel="lightbox" title="Start The Server"><img class="thumbnail" src="assets/images/KB2-f02_4.gif"/></a>
 
 <li> A Contrast startup message should appear in the **Server** console (allow 1-2 minutes extra time for server startup) </li>
-
+<br>
 <a href="assets/images/KB2-f02_5.gif" rel="lightbox" title="Startup Message"><img class="thumbnail" src="assets/images/KB2-f02_5.gif"/></a>
 
 <li> Navigate to your application, and allow an extra minute for it to start up </li>
