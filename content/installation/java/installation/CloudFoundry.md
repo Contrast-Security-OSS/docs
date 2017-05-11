@@ -32,7 +32,6 @@ When binding Contrast using a user-provided service, you must give it a name or 
 | `api_key` | (Required) Your user's API key
 | `service_key` | (Required) Your user's service key
 
-<br>
 
 An example of creating a user-provided service and binding it to an application:
 

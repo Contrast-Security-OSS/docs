@@ -23,12 +23,14 @@ The Contrast Enterprise on Premise (EOP) TeamServer includes a Tomcat servlet co
 ## MySQL Shared Libraries
 Customers running TeamServer will need to pre-configure their base operating system on Linux with a shared library for running MySQL. Depending on which flavor of Linux deployed with TeamServer, follow the installation options below:
 
-**Customers Running Centos or RHL**
+Customers running **Centos or RHL**:
+
 ````
 [contrast@myserver ~]# yum install libaio 
 ````
 
-**Customers Running Ubuntu or Debian**
+Customers running **Ubuntu or Debian**:
+
 ````
 [contrast@myserver ~]# apt-get install libaio1 libaio-dev
 ````
