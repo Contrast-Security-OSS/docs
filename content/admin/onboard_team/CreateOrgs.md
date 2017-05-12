@@ -8,12 +8,12 @@ Contrast is a multi-tenant architecture in which a single software product can s
 
 Organizations can be created by the System Administrator. All organizations created in Contrast will require a unique name as well as an administrator to oversee the organization. This administrator can be a new user or an existing Contrast user.  
 
-* Log in to Contrast 
-* Navigate to the user menu in the upper right 
-* Select **SuperAdmin** in the "Use Contrast Security as:" section
-* Select **Organizations** from the top navigation
-* Click the **Add Organization** button
-* Fill out all fields. Do **not** check *Require Email Activation* unless you have a mail server set up with TeamServer.
+1. Log in to Contrast 
+2. Navigate to the user menu in the upper right 
+3. Select **SuperAdmin** in the "Use Contrast Security as:" section
+4. Select **Organizations** from the top navigation
+5. Click the **Add Organization** button
+6. Fill out all fields. Do **not** check *Require Email Activation* unless you have a mail server set up with TeamServer.
 
 <a href="assets/images/Create_Org.png" rel="lightbox" title="Add Organization"><img class="thumbnail" src="assets/images/Create_Org.png"/></a>
 

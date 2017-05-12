@@ -13,7 +13,6 @@ Parameter | Description
 ***sort_by*** | The field on which to sort within the returned result (Only *Strings*, *Numbers* or *Timestamps*)
 ***sort_order*** | The direction in which to sort the collection (*asc* or *desc*)
 
-<br>
 
 ```
 curl -HAccept:application/json -HAuthorization:test -HAPI-Key:test https://app.contrastsecurity.com/Contrast/api/applications/?count=10&start_index=11&sort_by=name&sort_order=desc

@@ -10,10 +10,10 @@ Once a user's account has been configured to gain access to multiple organizatio
 
 Steps to toggle between organizations:
 
-* Log in to TeamServer
-* Navigate to the User menu at the top right of the screen
-* If the user has multiple organizations available via an Access Control Group, he or she will see a list of organizations to select
-* Select the organization of choice
+1. Log in to TeamServer
+2. Navigate to the User menu at the top right of the screen
+3. If the user has multiple organizations available via an Access Control Group, he or she will see a list of organizations to select
+4. Select the organization of choice
 
 <a href="assets/images/Settings_MultiOrg.png" rel="lightbox" title="User Menu with Multiple Organizations"><img class="thumbnail" src="assets/images/Settings_MultiOrg.png"/></a>
 

@@ -8,11 +8,11 @@ Contrast is set up with the basics of your profile from when you created your ac
 
 To change your profile settings, do the following:
 
-* Log in to Contrast
-* Select **Your Account** from the user menu in the upper right
-* Modify any of the **General Settings** around your user avatar or time zone
-* Change any **Preferences** 
-* Make sure to **Save** your changes
+1. Log in to Contrast
+2. Select **Your Account** from the user menu in the upper right
+3. Modify any of the **General Settings** around your user avatar or time zone
+4. Change any **Preferences** 
+5. Make sure to **Save** your changes
 
 <a href="assets/images/Profile_Settings.png" rel="lightbox" title="Profile Settings"><img class="thumbnail" src="assets/images/Profile_Settings.png"/></a>
 

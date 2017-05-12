@@ -23,13 +23,13 @@ Sometimes EOP administrators want to take fresh backups of their MySQL system. O
 
 The tool to take a backup is an interactive script. It must be run from a command line for both Linux and Windows.
 
-To run on Linux:
+To run on **Linux**:
 
 ````
 $CONTRAST_HOME/bin/backup_db.sh
 ````
 
-To run on Windows:
+To run on **Windows**:
 
 ````
 $CONTRAST_HOME\bin\backup_db.cmd

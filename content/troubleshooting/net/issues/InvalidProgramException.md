@@ -16,4 +16,5 @@ This bug is a known issue with Ninject vs. instrumenting profilers: https://gith
 ## How To Solve
 
 * Update the application to use Ninject version 3.2.3 (e.g. https://www.nuget.org/packages/Ninject/3.2.3-unstable-012)
-* OR, add code to the application to work around the bug in Ninject. The code is located here: https://github.com/ninject/Ninject/issues/175 and can be found by searching for "Kernel.Components.RemoveAll<ISelector>();"
+**OR**
+* Add code to the application to work around the bug in Ninject. The code is located here: https://github.com/ninject/Ninject/issues/175 and can be found by searching for "Kernel.Components.RemoveAll<ISelector>();"

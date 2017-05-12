@@ -8,10 +8,10 @@ Contrast.NET will instrument your application code and follow user-provided data
 
 Contrast.NET will mark all user-provided data (such as FORMS posts, web service calls or HTTP headers) as tainted.  A potential security issue exists if tainted data is not safely escaped before it gets to an output sink (such as HTML pages, databases or system commands).  
 
-* **Sources** - Set methods whose return data should be tagged.
-* **Tag-lists** - Set methods that will add tags to data as it flows through them.  For example, you can tag data as "escaped" so it does not trigger a security finding.
-* **Propagators** - Instrument methods with more advanced syntax to control how data should be propagated through them.  Unlike tag-lists, new tags aren't attached to this data.
-* **Rules** - Set output methods that check incoming data.  Tags present on the data will determine if a security finding is generated.
+* **Sources:** Set methods whose return data should be tagged.
+* **Tag-lists:** Set methods that will add tags to data as it flows through them.  For example, you can tag data as "escaped" so it does not trigger a security finding.
+* **Propagators:** Instrument methods with more advanced syntax to control how data should be propagated through them.  Unlike tag-lists, new tags aren't attached to this data.
+* **Rules:** Set output methods that check incoming data.  Tags present on the data will determine if a security finding is generated.
 
 
 ## Source Rule Syntax

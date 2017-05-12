@@ -24,28 +24,37 @@ You can also install Contrast through the WebSphere administration console. Thes
 The following steps are from the [Websphere support site](http://www-01.ibm.com/support/docview.wss?uid=swg21417365) (includes documentation for other versions):
 
 ### Application Server
-* In the Administration Console select **Servers**
-* Expand **Server Type** and select **WebSphere application servers**
-* Click on the name of your server
-* Expand **Java and Process Management** and select **Process Definition**.
-* Under the **Additional Properties** section, click **Java Virtual Machine**.
-* Scroll down and locate the textbox for Generic JVM arguments.
+
+<ol>
+<li> In the Administration Console select **Servers** </li>
+<li> Expand **Server Type** and select **WebSphere application servers** </li>
+<li> Click on the name of your server </li>
+<li> Expand **Java and Process Management** and select **Process Definition**. </li>
+<li> Under the **Additional Properties** section, click **Java Virtual Machine**. </li>
+<li> Scroll down and locate the textbox for Generic JVM arguments. </li>
+</ol>
 
 ### Node Agent
-* In the **Administration Console**, select **System Administration**
-* Select **Node agents**
-* Choose which *nodeagent* to edit
-* In the **Server Infrastructure** section, expand **Java and Process Management** and select **Process Definition**.
-* Under the **Additional Properties** section, click **Java Virtual Machine**.
-* Scroll down and locate the textbox for Generic JVM arguments.
+
+<ol>
+<li> In the **Administration Console**, select **System Administration** </li>
+<li> Select **Node agents** </li>
+<li> Choose which *nodeagent* to edit </li>
+<li> In the **Server Infrastructure** section, expand **Java and Process Management** and select **Process Definition**. </li>
+<li> Under the **Additional Properties** section, click **Java Virtual Machine**. </li>
+<li> Scroll down and locate the textbox for Generic JVM arguments. </li>
+</ol>
 
 ### Deployment Manager
-* In the **Administration Console**, select **System Administration**
-* Select **Deployment manager**
-* In the **Server Infrastructure** section, expand **Java and Process Management** and select **Process Definition**.
-* Under the **Additional Properties** section, click **Java Virtual Machine**.
-* Scroll down and locate the textbox for Generic JVM arguments.
-* Add this text to the Generic JVM arguments, as noted in the screenshot below: 
+
+<ol>
+<li> In the **Administration Console**, select **System Administration** </li>
+<li> Select **Deployment manager** </li>
+<li> In the **Server Infrastructure** section, expand **Java and Process Management** and select **Process Definition**. </li>
+<li> Under the **Additional Properties** section, click **Java Virtual Machine**. </li>
+<li> Scroll down and locate the textbox for Generic JVM arguments. </li>
+<li> Add this text to the Generic JVM arguments, as noted in the screenshot below: </li>
+</ol>
 
 ````
 -javaagent:${DOWNLOADS}/contrast.jar -Xshareclasses:none

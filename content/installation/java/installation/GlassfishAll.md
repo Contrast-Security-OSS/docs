@@ -22,88 +22,87 @@ This document will outline the process for installing Contrast on an application
 download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 ### Instructions
-* On the menu bar, click the **Start/Run** icon next to the GlassFish service
-* Wait for the server to finish launching
 
+<ol>
+<li> On the menu bar, click the **Start/Run** icon next to the GlassFish service </li>
+<li> Wait for the server to finish launching </li>
+<br>
 <a href="assets/images/KB2-c03_1.png" rel="lightbox" title="Launch Server"><img class="thumbnail" src="assets/images/KB2-c03_1.png"/></a>
 
-* Navigate to the GlassFish Server Administration Console (usually http://localhost:4848/)
-* After the console has finished loading, Select ***Configurations > server-config***
-* Select **JVM Settings**
-
+<li> Navigate to the GlassFish Server Administration Console (usually http://localhost:4848/) </li>
+<li> After the console has finished loading, Select ***Configurations > server-config*** </li>
+<li> Select **JVM Settings** </li>
+<br>
 <a href="assets/images/KB2-c03_2.png" rel="lightbox" title="Server Administration Console: Configurations"><img class="thumbnail" src="assets/images/KB2-c03_2.png"/></a>
 
 <a href="assets/images/KB2-c03_3.png" rel="lightbox" title="JVM Settings"><img class="thumbnail" src="assets/images/KB2-c03_3.png"/></a>
 
-* Select the tab for **Profiler**
-* Add the Name **Contrast**
-* Add the following JVM Options:
+<li> Select the tab for **Profiler** </li>
+<li> Add the Name **Contrast** </li>
+<li> Add the following JVM Options: ```-javaagent:${DOWNLOADS}/contrast.jar``` </li>
 
-````
--javaagent:${DOWNLOADS}/contrast.jar
-````
-
-* Select **Save**
-
+<li> Select **Save** </li>
+<br>
 <a href="assets/images/KB2-c03_4.png" rel="lightbox" title="Profiler Tab"><img class="thumbnail" src="assets/images/KB2-c03_4.png"/></a>
 
 <a href="assets/images/KB2-c03_5.png" rel="lightbox" title="Profiler Name"><img class="thumbnail" src="assets/images/KB2-c03_5.png"/></a>
 
 <a href="assets/images/KB2-c03_6.png" rel="lightbox" title="Save JVM Options"><img class="thumbnail" src="assets/images/KB2-c03_6.png"/></a>
 
-* Click on the **Start/Run** icon next to the GlassFish service trom the top menu bar and select **Restart Server**
-* A Contrast startup message should appear in the GlassFish server log Console (allow 1-2 minutes extra time for server startup).
-
+<li> Click on the **Start/Run** icon next to the GlassFish service trom the top menu bar and select **Restart Server** </li>
+<li> A Contrast startup message should appear in the GlassFish server log Console (allow 1-2 minutes extra time for server startup). </li>
+<br>
 <a href="assets/images/KB2-c03_7.png" rel="lightbox" title="Restart Server"><img class="thumbnail" src="assets/images/KB2-c03_7.png"/></a>
 
 <a href="assets/images/KB2-c03_8.png" rel="lightbox" title="Startup Message"><img class="thumbnail" src="assets/images/KB2-c03_8.png"/></a>
 
-* After GlassFish has finished the startup process, IntelliJ will open a new web browser.
-* Navigate to your application, and allow an extra minute for it to start up.
+<li> After GlassFish has finished the startup process, IntelliJ will open a new web browser. </li>
+<li> Navigate to your application, and allow an extra minute for it to start up. </li>
+
+</ol>
 
 ---
 
 ## Running Contrast on GlassFish with NetBeans
-As a prerequisite, download the Contrast plugin (***contrast.jar***) from the Contrast site.
+
+As a prerequisite, download the Contrast plugin (**contrast.jar**) from the Contrast site.
 
 ### Instructions
-* Select the **Services** Tab
-* Under **Servers** right click on the GlassFish Server and select **Start**
-* Wait for the server to finish launching
 
+<ol>
+<li> Select the **Services** Tab </li>
+<li> Under **Servers** right click on the GlassFish Server and select **Start** </li>
+<li> Wait for the server to finish launching </li>
+<br>
 <a href="assets/images/KB2-c02_1.png" rel="lightbox" title="Services Tab"><img class="thumbnail" src="assets/images/KB2-c02_1.png"/></a>
 
 <a href="assets/images/KB2-c02_2.png" rel="lightbox" title="Start GlassFish Server"><img class="thumbnail" src="assets/images/KB2-c02_2.png"/></a>
 
 <a href="assets/images/KB2-c02_3.png" rel="lightbox" title="Server Launched"><img class="thumbnail" src="assets/images/KB2-c02_3.png"/></a>
 
-* Navigate to the GlassFish Server Administration Console (usually http://localhost:4848/)
-* After the console has finished loading, Select ***Configurations > server-config***
-* Select **JVM Settings**
-
+<li> Navigate to the GlassFish Server Administration Console (usually http://localhost:4848/) </li>
+<li> After the console has finished loading, Select ***Configurations > server-config*** </li>
+<li> Select **JVM Settings** </li>
+<br>
 <a href="assets/images/KB2-c02_4.png" rel="lightbox" title="GlassFish Server Admin Console"><img class="thumbnail" src="assets/images/KB2-c02_4.png"/></a>
-
+<br>
 <a href="assets/images/KB2-c02_5.png" rel="lightbox" title="Configurations"><img class="thumbnail" src="assets/images/KB2-c02_5.png"/></a>
 
 <a href="assets/images/KB2-c02_6.png" rel="lightbox" title="JVM Settings"><img class="thumbnail" src="assets/images/KB2-c02_6.png"/></a>
 
-* Select the tab for **JVM Options**
-* Add the following JVM options:
+<li> Select the tab for **JVM Options** </li>
+<li> Add the following JVM options: ```-javaagent:${DOWNLOADS}/contrast.jar``` </li>
 
-````
--javaagent:${DOWNLOADS}/contrast.jar
-````
-
-* Select **Save**
-
+<li> Select **Save** </li>
+<br>
 <a href="assets/images/KB2-c02_7.png" rel="lightbox" title="JVM Options Tab"><img class="thumbnail" src="assets/images/KB2-c02_7.png"/></a>
 
 <a href="assets/images/KB2-c02_8.png" rel="lightbox" title="Add JM Options"><img class="thumbnail" src="assets/images/KB2-c02_8.png"/></a>
 
-* In NetBeans, right click on the GlassFish Server and select **Stop**
-* After the server has finished shutting down, right click on the project and select **Run**
-* A Contrast startup message should appear in the GlassFish server log Console (allow 1-2 minutes extra time for server startup).
-
+<li> In NetBeans, right click on the GlassFish Server and select **Stop** </li>
+<li> After the server has finished shutting down, right click on the project and select **Run** </li>
+<li> A Contrast startup message should appear in the GlassFish server log Console. (Allow 1-2 extra minutes for server startup.) </li>
+<br>
 <a href="assets/images/KB2-c02_9.png" rel="lightbox" title="Stop GlassFish Server"><img class="thumbnail" src="assets/images/KB2-c02_9.png"/></a>
 
 <a href="assets/images/KB2-c02_10.png" rel="lightbox" title="Run Project"><img class="thumbnail" src="assets/images/KB2-c02_10.png"/></a>
@@ -111,6 +110,9 @@ As a prerequisite, download the Contrast plugin (***contrast.jar***) from the Co
 <a href="assets/images/KB2-c02_11.png" rel="lightbox" title="Startup Message"><img class="thumbnail" src="assets/images/KB2-c02_11.png"/></a>
 
 
-* After GlassFish has finished the startup process, NetBeans will switch to the HTTP Server Monitor mode and open a new web browser.
-* Navigate to your application, and allow an extra minute for it to start up.
+<li> After GlassFish has finished the startup process, NetBeans will switch to the HTTP Server Monitor mode and open a new web browser. </li>
+<li> Navigate to your application, and allow an extra minute for it to start up. </li>
+
+</ol>
+
 

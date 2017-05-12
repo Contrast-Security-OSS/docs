@@ -65,3 +65,6 @@ You may wish to customize the behavior of the .NET Agent to better suit your nee
 * [Customize Application Names](installation-netconfig.html#appname)
 
 If you encounter any difficulties using the .NET Agent you can check out our **Troubleshooting** resources.
+
+
+

@@ -8,15 +8,15 @@ Notifications provide a mechanism for Contrast users to be alerted in specific c
 
 There are two primary channels available for notifications: E-mail and In-Application. 
 
-* **E-mail notifications** Available if mail has been set up by your organization administrator 
-* **In-Application notifications** Made available directly in the product and are visible by selecting the notification bell in the top menu bar.
+* **E-mail notifications:** Available if mail has been set up by your organization administrator 
+* **In-Application notifications:** Made available directly in the product and are visible by selecting the notification bell in the top menu bar.
 
 To change your notification settings, do the following:
 
-* Log in to Contrast
-* Select **Your Account** from the user menu in the upper right
-* Select **Notifications** in the left navigation
-* Change one or more values
+1. Log in to Contrast
+2. Select **Your Account** from the user menu in the upper right
+3. Select **Notifications** in the left navigation
+4. Change one or more values
 
 Below is a list of available subscription options:
 

@@ -16,16 +16,16 @@ We recommend the following before performing the uninstallation process:
 * Shut down TeamServer using either the Windows or Unix service script
 
 ### Running The Uninstaller On Windows
-* Open the Windows explorer
-* Navigate to the Contrast installation directory
-* Click on the file *uninstall.exe* and run either as an Administrator or simply run if not installed as an Administrator
-* Follow the prompts to perform uninstallation
+1. Open the Windows explorer
+2. Navigate to the Contrast installation directory
+3. Click on the file *uninstall.exe* and run either as an Administrator or simply run if not installed as an Administrator
+4. Follow the prompts to perform uninstallation
 
 ### Running The Installer On Linux
-* Open a Linux console
-* Change directory (cd) to the Contrast installation directory
-* Execute the command ```uninstall```
-* Follow the prompts to perform uninstallation
+1. Open a Linux console
+2. Change directory (cd) to the Contrast installation directory
+3. Execute the command ```uninstall```
+4. Follow the prompts to perform uninstallation
 
 ## Some Files Will Remain
 The vast majority of files will be deleted when performing an uninstall. However, a few key files will be left on the system. These can be manually deleted by the administrator. 

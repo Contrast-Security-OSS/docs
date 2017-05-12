@@ -18,12 +18,12 @@ Contrast supports a generic webhook integration. Generic webhooks allow you to r
 
 ## Setup
 
-* Retrieve the URL to which you want Contrast to send notifications
-* Navigate to the **Integrations** tab under **Organization Settings**
-* Click **Connect** within the Generic Webhook row
-* Name the webhook and paste the URL into the input field
-* Select the application(s) you wish to filter on
-* Click **Save**
+1. Retrieve the URL to which you want Contrast to send notifications
+2. Navigate to the **Integrations** tab under **Organization Settings**
+3. Click **Connect** within the Generic Webhook row
+4. Name the webhook and paste the URL into the input field
+5. Select the application(s) you wish to filter on
+6. Click **Save**
 
 You are connected!
 

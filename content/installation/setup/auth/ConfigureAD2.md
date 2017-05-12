@@ -15,12 +15,12 @@ Active Directory configuration is performed by the System Administrator and requ
 ## Configuring The Server
 After choosing **Active Directory** in Step 1 of the Authentication Wizard (**System Settings > Authentication**), the following information will be needed in order to integrate Contrast:
 
- * **Protocol** - Should be one of LDAP or LDAPS (LDAPS is LDAP over SSL and additional configuration may be needed. See the section on Self-Signed or Private CA-Signed Certificates below)
- * **Hostname** - This is either the DNS hostname or IP Address of the Active Directory server. In multi-tenant forests, this should be the Global Catalog Server.
- * **Port** - This is the port that Contrast should connect to. For standard directories (single-tenant, single-domain), this should be either port 389 for LDAP or 636 for LDAPS. In multi-tenant or multi-domain forests, this will be either 3268 for LDAP or 3269 for LDAPS.
- * **Search Base** - The Search Base is a Distinguished Name that represents the global base level contain for your Active Directory environment. This is usually just your domain or sub-domain name. For example, if your login domain is example.com, then your Base DN would be *dc=example,dc=com*.
- * **Username** - This is the username of a user who can bind to the directory to perform search functionality. Generally this should be a service user configured in the directory explicitly for use by Contrast and needs read-only access.
- * **Password** - This is the password for the Bind user described above.
+ * **Protocol:** Should be one of LDAP or LDAPS (LDAPS is LDAP over SSL and additional configuration may be needed. See the section on Self-Signed or Private CA-Signed Certificates below)
+ * **Hostname:** This is either the DNS hostname or IP Address of the Active Directory server. In multi-tenant forests, this should be the Global Catalog Server.
+ * **Port:** This is the port that Contrast should connect to. For standard directories (single-tenant, single-domain), this should be either port 389 for LDAP or 636 for LDAPS. In multi-tenant or multi-domain forests, this will be either 3268 for LDAP or 3269 for LDAPS.
+ * **Search Base:** The Search Base is a Distinguished Name that represents the global base level contain for your Active Directory environment. This is usually just your domain or sub-domain name. For example, if your login domain is example.com, then your Base DN would be *dc=example,dc=com*.
+ * **Username:** This is the username of a user who can bind to the directory to perform search functionality. Generally this should be a service user configured in the directory explicitly for use by Contrast and needs read-only access.
+ * **Password:** This is the password for the Bind user described above.
 
 
 ### Connecting The Server
@@ -56,9 +56,9 @@ Like setting up LDAP, after configuring your connection details and bind credent
 ## Configure Groups
 An important distinction is that Contrast does not perform Data Access Control using the integrated Active Directory Servers - that is to say that roles and access to data within the application are handled by the application, and user roles are set by the Organization Administrators. That being said, there is an Access Control check when logging in (or creating new users) to ensure that the provided user does in fact belong to the correct group within the Active Directory.
 
-**Contrast User Group** This group allows users to be added to an organization and log in to the standard user interface. This is the group that most users will need to be a member of.
+**Contrast User Group:**: This group allows users to be added to an organization and log in to the standard user interface. This is the group that most users will need to be a member of.
 
-**Contrast SuperAdmin Group** This group allows users to log in to the Super Administrator interface. This interface should only be accessible to Application and System administrators.
+**Contrast SuperAdmin Group:** This group allows users to log in to the Super Administrator interface. This interface should only be accessible to Application and System administrators.
 
 It is important to note that a user can not belong to both the User and Admin groups.
 

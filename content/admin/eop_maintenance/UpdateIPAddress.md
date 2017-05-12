@@ -7,6 +7,7 @@ tags: "Admin EOP maintenance IP address system settings connect"
 ## Update IP Address
 Updating Contrast's IP address is fairly straightforward. Whether you moved the installation or had to change the hostname or IP address, letting Contrast know is a matter of a few simple steps:
 
+
 * Log in as the SuperAdmin
 * Browse to the **System Settings** page
 * Select **General Settings** 

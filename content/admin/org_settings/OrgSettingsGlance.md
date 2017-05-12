@@ -40,4 +40,6 @@ Contrast offers basic [integrations](admin-orgintegrations.html) with various to
 * Custom Footer
 
 ## Score Settings
+
 [Score settings](admin-orgsettings.html#score-settings) allow for customization of how **Overall Application Score** and **Library Score** gets calculated and determines what letter grade (or score) is communicated within Contrast.   
+

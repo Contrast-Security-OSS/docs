@@ -4,6 +4,7 @@ description: "Debugging the Configuration of Active Directory or LDAP authentica
 tags: "troubleshoot authentication Debug LDAP AD logging"
 -->
 
+
 ## Debugging Active Directory &amp; LDAP Configurations
 Enterprise On Premises customers configuring an LDAP service or Microsoft Active Directory that run into setup and configuration issues should read this article and apply the logging configuration provided in the section below. Configuration of a directory service can be challenging for TeamServer administrators. As noted in the [configuration guide](installation-setupconfig.html#ts), there are many pieces of information needed for basic connectivity, as well as dependencies for configuration. Many customers find this administrative task to be the hardest part of the setup of TeamServer and therefore, we provide a quick and simple way to assist with the debugging process.
 

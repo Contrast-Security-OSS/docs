@@ -20,16 +20,21 @@ In the .NET Framework, an application's compiled code is generally contained in 
 
 The following steps configure the build/package process for the Release configuration to include .PDB files in Visual Studio 2013:
 
-* Open the web application's solution in Visual Studio.
-* Right click on the application's project and select **Properties**.
-* Select the **Package/Publish Web** tab.
-* Select the **Release** configuration from the **Configuration** dropdown.
-* Uncheck the **Exclude generated debug symbols** checkbox, if it's checked.
-* Save the project file.
-* Build and publish the web application using your normal deployment process. 
+<ol>
+
+<li> Open the web application's solution in Visual Studio. </li>
+<li> Right click on the application's project and select **Properties**. </li>
+<li> Select the **Package/Publish Web** tab. </li>
+<li> Select the **Release** configuration from the **Configuration** dropdown. </li>
+<li> Uncheck the **Exclude generated debug symbols** checkbox, if it's checked. </li>
+<li> Save the project file. </li>
+<li> Build and publish the web application using your normal deployment process. </li>
+
+</ol>
 
 <a href="assets/images/KB3-e14.jpg" rel="lightbox" title="Instrumentation Configuration"><img class="thumbnail" src="assets/images/KB3-e14.jpg"/></a>
 
 
 ## Monitor Mode and Instrumentation
+
 As of version 3.3.5, the .NET Agent has an additional instrumentation engine named "Monitoring". See the [Configuration Overview](installation-netconfig.html#overview) for information on enabling this mode. Monitor mode does NOT use the profiling API for instrumentation but continues to support source code information, improved stability and the use of custom rules. 

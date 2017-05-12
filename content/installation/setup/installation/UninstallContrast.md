@@ -15,13 +15,13 @@ We recommend the following before performing the uninstallation process:
 * Create a backup of MySQL using the database backup tool provided with TeamServer
 * Shut down TeamServer using either the Windows or Unix service script
 
-### Running The Uninstaller On Windows
+Running the uninstaller on **Windows**:
 * Open the Windows explorer
 * Navigate to the Contrast installation directory
 * Click on the file *uninstall.exe* and run either as an Administrator or simply run if not installed as an Administrator
 * Follow the prompts to perform uninstallation
 
-### Running The Installer On Linux
+Running the uninstaller on **Linux**:
 * Open a Linux console
 * Change directory (cd) to the Contrast installation directory
 * Execute the command ```uninstall```

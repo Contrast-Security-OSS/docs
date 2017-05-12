@@ -26,9 +26,9 @@ Contrast provides you information on what was observed when navigating your appl
 ### Source Events
 The first event in the vulnerability is likely a **source event**, or the start of a scope. You can use the source event's file and line number to see exactly where the call is made. The stacktrace in the source can be used to understand how the program invoked the notable method. You can also view all the data related to the method. This includes:
 
-* **Object** - the underlying object instance on which this call is invoked (if not a static call)
-* **Return** - the object returned from this call (or null if void)
-* **Parameters** - the objects passed into this call
+* **Object:** The underlying object instance on which this call is invoked (if not a static call).
+* **Return:** The object returned from this call (or null if void).
+* **Parameters:** The objects passed into this call.
 
 ### Propagator Events
 Each vulnerability may contain one or more **propagation events**. These events contain the same information as the **source event**, but they also have a type which indicates how the data was propagated. For example, a **P2R** propagator takes the data from one or more of the parameters (hence the **P** in **P2R**) and transfers it into the method return value (hence the **R** in **P2R**).
