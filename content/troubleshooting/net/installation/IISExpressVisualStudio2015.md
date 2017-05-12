@@ -25,5 +25,5 @@ You can fix this in two ways:
 
 ## More Information 
 
-* [IIS Express Configuration Instructions](installation_netconfig.html#iis)
+* [IIS Express Configuration Instructions](installation-netconfig.html#iis)
 * [Visual Studio forum](http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/6079923-store-project-related-information-in-vs-folder-to)

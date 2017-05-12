@@ -4,7 +4,7 @@ description: "Instrumentation .NET Agent Data Flow Engine"
 tags: "configuration microsoft Instrumentation agent installation .Net"
 -->
 
-Beginning with version 3.2.4, the Contrast .NET Agent includes an entirely new method of tracking data flow through analyzed .NET 4+ (CLR4) web applications. By default, the .NET Agent uses the instrumentation data flow engine against web applications running on CLR4. If you want to revert to the old data flow engine for all applications, you can change the ```ProfilerBehavior``` configuration setting to ```2``` in the *DotnetAgentService.exe.config* file. (The default values for ```ProfilerBehavior``` is ```3```. See the [Configuration Overview](installation_netconfig.html#overview) for more details.)
+Beginning with version 3.2.4, the Contrast .NET Agent includes an entirely new method of tracking data flow through analyzed .NET 4+ (CLR4) web applications. By default, the .NET Agent uses the instrumentation data flow engine against web applications running on CLR4. If you want to revert to the old data flow engine for all applications, you can change the ```ProfilerBehavior``` configuration setting to ```2``` in the *DotnetAgentService.exe.config* file. (The default values for ```ProfilerBehavior``` is ```3```. See the [Configuration Overview](installation-netconfig.html#overview) for more details.)
 
 The new instrumentation engine offers a number of benefits, including: 
 
@@ -36,5 +36,5 @@ The following steps configure the build/package process for the Release configur
 
 
 ## Monitor Mode and Instrumentation
-As of version 3.3.5, the .NET Agent has an additional instrumentation engine named "Monitoring". See the [Configuration Overview](installation_netconfig.html#overview) for information on enabling this mode. Monitor mode does NOT use the profiling API for instrumentation but continues to support source code information, improved stability and the use of custom rules. 
 
+As of version 3.3.5, the .NET Agent has an additional instrumentation engine named "Monitoring". See the [Configuration Overview](installation-netconfig.html#overview) for information on enabling this mode. Monitor mode does NOT use the profiling API for instrumentation but continues to support source code information, improved stability and the use of custom rules. 

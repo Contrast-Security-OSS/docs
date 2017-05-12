@@ -5,7 +5,7 @@ tags: "3.2.7 April Release Notes"
 -->
 
 ## Special Note About External Rules
-Customers who write or have implemented custom rules in TeamServer should read this [article](admin_tsinstall.html#external) prior to upgrading to 3.2.7.
+Customers who write or have implemented custom rules in TeamServer should read this [article](admin-tsinstall.html#external) prior to upgrading to 3.2.7.
 
 ## Java Agent
 * CONTRAST-8243: Ability to Canary SQL Statements (RASP)
@@ -137,11 +137,11 @@ Customers who write or have implemented custom rules in TeamServer should read t
 * CONTRAST-8194: Libraries - Hide archived apps in 'App' Using column
 
 ## OpenDocs
-* [Installing on Play](installation_javainstall.html#play)
-* [Two-Step Verification](admin_systemsettings.html#twostep)
-* [Upgrading Agents on Contrast](admin_eop.html#agent)
-* [Notifications](admin_orgsettings.html#org-notify)
-* [Migrating External Rules from 3.2.6 to 3.2.7+](admin_eopupgrade.html#rules)
+* [Installing on Play](installation-javainstall.html#play)
+* [Two-Step Verification](admin-systemsettings.html#twostep)
+* [Upgrading Agents on Contrast](admin-eop.html#agent)
+* [Notifications](admin-orgsettings.html#org-notify)
+* [Migrating External Rules from 3.2.6 to 3.2.7+](admin-eopupgrade.html#rules)
 
 ## Database Migrations
 * V3_2_7_000: Remove Invalid XXE Samples

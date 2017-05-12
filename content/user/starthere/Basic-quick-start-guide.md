@@ -12,23 +12,23 @@ Once you've logged onto Contrast, click the **Add Applications** button on the t
  
 When you download an agent, the file should be called *contrast.jar*. This file needs to stay in its current form and shouldn’t be renamed. Once you download the *contrast.jar* file, regardless of your application server, Contrast needs to pass in **-javaagent:/path/to/server/contrast.jar** to your application server's JVM. Once complete, restart your application server. 
 
-For more information on adding an application, please read the article on [Adding an Application](user_apps.html#addapp).
+For more information on adding an application, please read the article on [Adding an Application](user-apps.html#addapp).
  
 ## Use The Application
 
 The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the application's Vulnerabilities tab. (Note that the same vulnerabilities appear on the Vulnerabilities page.) 
 
-To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](user_apps.html#license).
+To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](user-apps.html#license).
  
 ## Manage Applications
 
-Go to the Applications page to get detailed information, see findings, scores, manage licenses, settings and more. Read the [Manage Applications article](user_appsmanage.html) for more details.
+Go to the Applications page to get detailed information, see findings, scores, manage licenses, settings and more. Read the [Manage Applications article](user-appsmanage.html) for more details.
  
 ## Set Up Environments
 
 In the Servers page, you can set the environment for each server to Development, QA or Production. Select your application in the grid to compare the differences across environments as code travels and track vulnerabilities in the Overview page. Contrast sets up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
 
-For more information, including screenshots, go to the [Set Up Environments article](user_apps.html#environ). 
+For more information, including screenshots, go to the [Set Up Environments article](user-apps.html#environ). 
  
 ## Discover Vulnerabilities
 
@@ -44,7 +44,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
  
 ## Improve Your Application Score
 
-Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](user_apps.html#score-guide) for more information. 
+Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](user-apps.html#score-guide) for more information. 
  
 ## Track Libraries
 
@@ -52,11 +52,11 @@ Be aware of libraries that may be vulnerable and bring them up to date by going 
  
 Contrast provides you with a grade for the library, known Common Vulnerabilities and Exposures (CVEs), latest version and release date, used and total classes in the library, and the application that's using the library. Contrast calculates this grade based on three things: the age of the library, how many versions behind the library is, and the number of known CVEs that affect the library.
 
-For more information, read the article on [Library Analysis](user_libraries.html#analysis).
+For more information, read the article on [Library Analysis](user-libraries.html#analysis).
  
 ## Manage Vulnerabilities
 
-Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised. Read the [Manage Vulnerabilities article](user_vulns.html#manage) to understand them even better. 
+Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised. Read the [Manage Vulnerabilities article](user-vulns.html#manage-vuln) to understand them even better. 
  
 ## Analyze Findings
 
@@ -81,17 +81,17 @@ What’s better than assigning a vulnerability to a user? Creating tags for each
  
 > **Example:** You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
 
-These tags can be created for applications and servers as well. To learn more about filters, please read the [Using Contrast Overview](user_starthere.html#ui-overview).  
+These tags can be created for applications and servers as well. To learn more about filters, please read the [Using Contrast Overview](user-starthere.html#ui-overview).  
  
 ## Reports
 
-Go to the application's **Overview** page to generate reports of security issues that Contrast identifies while monitoring your application. To learn more, see the [Vulnerability Trend](user_reports.html#vulntrend) report.
+Go to the application's **Overview** page to generate reports of security issues that Contrast identifies while monitoring your application. To learn more, see the [Vulnerability Trend](user-reports.html#vulntrend) report.
  
 ##Track Findings
 
 Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email for users who don't have access to Contrast. You can set up these and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by selecting **Organization Settings** in the User menu and then **Integrations** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
 
-For more information, read the article on [Integrations](admin_orgintegrations.html).
+For more information, read the article on [Integrations](admin-orgintegrations.html).
  
 ## Fix Findings
 
@@ -110,4 +110,4 @@ For each application, you can assign it a build version number. By adding the pr
 * Check by time unit tests:
 You can also filter by the time at which your unit tests were run, and set a date range to view your vulnerabilities in the **Set Date Range** input field above the vulnerabilities grid.
  
-You can find additional properties in articles on [Java Agent System Properties](installation_javaconfig.html#system) and [.NET Agent Configuration](installation_netconfig.html). 
+You can find additional properties in articles on [Java Agent System Properties](installation-javaconfig.html#system) and [.NET Agent Configuration](installation-netconfig.html). 

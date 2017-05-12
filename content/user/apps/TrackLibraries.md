@@ -14,4 +14,4 @@ Contrast provides you with a grade for the library, known Common Vulnerabilities
 * How many versions behind the library is
 * Number of known CVEs that affect the library
 
-For more information, read the article on [Library Analysis](user_libraries.html#analysis).
+For more information, read the article on [Library Analysis](user-libraries.html#analysis).

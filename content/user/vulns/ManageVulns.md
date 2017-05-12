@@ -27,7 +27,7 @@ You may opt to add comments to logged status changes for providing more context.
 
 <a href="assets/images/Vulnerability_Filters.png" rel="lightbox" title="Vulnerability Filters"><img class="thumbnail" src="assets/images/Vulnerability_Filters.png"/></a>
 
-See [Analyze Findings](user_vulns.html#analyze) to understand the behaviors when a vulnerability is marked and found again.
+See [Analyze Findings](user-vulns.html#analyze) to understand the behaviors when a vulnerability is marked and found again.
 
 ## Understanding Severity
 Vulnerabilities in an application are classified into five categories in Contrast. The classification is based on the likelihood and impact of a vulnerability in the application. Those categories are:

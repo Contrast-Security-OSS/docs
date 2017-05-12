@@ -33,4 +33,4 @@ If the **Contrast.AppVersion** configuration setting is not present, the .NET ag
 
 ## More Information
 
-[Setting The Display Name For Servers Running Contrast.NET](installation_netconfig.html#server)
+[Setting The Display Name For Servers Running Contrast.NET](installation-netconfig.html#server)

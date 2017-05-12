@@ -19,7 +19,7 @@ You will need to generate your own self-signed key using the Java Keytool:
 keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
 ```
 
-Use the [Encrypted Editor](installation_setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the step above. 
+Use the [Encrypted Editor](installation-setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the step above. 
 
 ```
  authenticator.saml.keystore.path                  : /path/to/samlKeystore.jks

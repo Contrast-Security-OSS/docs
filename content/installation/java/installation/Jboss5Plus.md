@@ -30,8 +30,8 @@ If you're running in domain mode (using ***domain.bat*** or ***domain.sh***), yo
 
 ## More Information
 
-* [Running Contrast on an Eclipse WTP application](installation_javainstall.html#eclipse)
+* [Running Contrast on an Eclipse WTP application](installation-javainstall.html#eclipse)
 
-* [Running Contrast on an IntelliJ application](installation_javainstall.html#intellij)
+* [Running Contrast on an IntelliJ application](installation-javainstall.html#intellij)
 
-* [Running Contrast on GlassFish using IntelliJ or NetBeans](installation_javainstall.html#glass)
+* [Running Contrast on GlassFish using IntelliJ or NetBeans](installation-javainstall.html#glass)

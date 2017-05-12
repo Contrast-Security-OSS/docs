@@ -14,5 +14,5 @@ This will provide a detailed view of the assigned permissions for both the organ
 
 <a href="assets/images/Permissions.png" rel="lightbox" title="User Permissions"><img class="thumbnail" src="assets/images/Permissions.png"/></a>
 
-For more information on the roles Contrast has, read the article on [User Roles & Permissions](admin_manageorgsroleperm.html).
+For more information on the roles Contrast has, read the article on [User Roles & Permissions](admin-manageorgsroleperm.html).
 

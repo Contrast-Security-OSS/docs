@@ -33,7 +33,7 @@ We have written documentation for deploying a distributed TeamServer in two simp
 * Step 1: Database (MySQL)
 * Step 2: Application Server (Tomcat)
 
-All documentation assumes that you have previously installed Teamserver using the provided installer artifact from Hub.  If you need to go back and set up TeamServer again [click here](installation_setupinstall.html#download).  
+All documentation assumes that you have previously installed Teamserver using the provided installer artifact from Hub.  If you need to go back and set up TeamServer again [click here](installation-setupinstall.html#download).  
 
 >**Note:** We've provided several code samples using an automation framework called [Ansible](https://www.ansible.com/). Feel free to use our code samples as a starting point for your own configuration. We are also big fans of Ubuntu, which we also use in our examples. We can assure you that the configuration runs on all of our supported platforms. You might have to make some slight changes to our scripts to run against other operating systems.
 
@@ -43,9 +43,9 @@ With a few changes it is possible to utilize an external MySQL database with you
 
 1. Install and Configure MySQL 5.6 on database server host.  We recommend 5.6.28.  
 2. Create maintenance window for TeamServer downtime.
-3. [Back up the embedded MySQL Database](installation_setup.html#setup-mysql)
-4. [Restore the database](installation_setup.html#setup-mysql) to an external MySQL Database
-5. [Update the TeamServer configuration](admin_eopupgrade.html#contrast) to utilize the new external database host.
+3. [Back up the embedded MySQL Database](installation-setup.html#setup-mysql)
+4. [Restore the database](installation-setup.html#setup-mysql) to an external MySQL Database
+5. [Update the TeamServer configuration](admin-eopupgrade.html#contrast) to utilize the new external database host.
 6. Restart your TeamServer and end the maintenance window.
 
 
@@ -105,7 +105,7 @@ Below (or [here](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql
 
 ## Taking a Backup of MySQL
 
-See [Create a MySQL Backup](installation_setup.html#setup-mysql)
+See [Create a MySQL Backup](installation-setup.html#setup-mysql)
 
 To back up your database, you can use the embedded tool with your EOP installation.  
 
@@ -140,7 +140,7 @@ It is possible to edit your database configuration through the TeamServer SuperA
 
 
 #### Encrypted Property Editor
-You will need to use the [encrypted property editor](installation_setupconfig.html#encrypt) to change your database properties to access your new host. Follow the instructions in the tool to update:
+You will need to use the [encrypted property editor](installation-setupconfig.html#encrypt) to change your database properties to access your new host. Follow the instructions in the tool to update:
 - jdbc.port
 - jdbc.host
 - jdbc.pass

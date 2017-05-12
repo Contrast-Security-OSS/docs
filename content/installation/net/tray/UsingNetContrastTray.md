@@ -24,7 +24,7 @@ The **.NET Contrast Tray** is a Windows system tray application (***ContrastTray
 
     >**Note:** This tab is only displayed if IIS is installed
 
-* The **IIS AppPools** tab displays a list of all application pools configured on the IIS server. This tab displays each application pool's configuration (architecture, pipeline mode, CLR version, identity) and whether or not applications in that application pool will be analyzed. Application pool analysis is configured using the .NET Agent's [Application Pool Filtering](installation_netconfig.html#pool) (The AppPools tab was added in version 3.2.7)
+* The **IIS AppPools** tab displays a list of all application pools configured on the IIS server. This tab displays each application pool's configuration (architecture, pipeline mode, CLR version, identity) and whether or not applications in that application pool will be analyzed. Application pool analysis is configured using the .NET Agent's [Application Pool Filtering](installation-netconfig.html#pool) (The AppPools tab was added in version 3.2.7)
 
     >**Note:** This tab is only displayed if IIS is installed
 
@@ -37,4 +37,4 @@ The **.NET Contrast Tray** is a Windows system tray application (***ContrastTray
 
 ## More Information
 
-[Using Contrast With IIS Express](installation_nettray.html#iis)
+[Using Contrast With IIS Express](installation-nettray.html#iis)

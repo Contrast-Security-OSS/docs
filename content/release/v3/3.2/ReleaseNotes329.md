@@ -121,7 +121,7 @@ tags: "3.2.9 June Release Notes"
 
 
 ## OpenDocs
-* [ActiveMQ Disk Full](troubleshooting_setupinstallation.html#activemq)
-* [Java Agent Supported Technologies](installation_java.html#java-supported)
-* [.Net Supported Technologies](installation_net.html#net-supported)
-* [NodeJS Supported Technologies](installation_node.html#node-supported)
+* [ActiveMQ Disk Full](troubleshooting-setupinstallation.html#activemq)
+* [Java Agent Supported Technologies](installation-java.html#java-supported)
+* [.Net Supported Technologies](installation-net.html#net-supported)
+* [NodeJS Supported Technologies](installation-node.html#node-supported)

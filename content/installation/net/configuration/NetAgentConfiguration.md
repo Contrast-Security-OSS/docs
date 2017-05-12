@@ -16,7 +16,7 @@ The Contrast configuration file ***DotnetAgentService.exe.config*** contains sev
 | TlsVersion                                            | <ul><li>Controls the version of TLS the agent uses to communicate with TeamServer.</li><li>Valid TlsVersion values include *Tls*, *Tls11* and *Tls12*.</li><li> Agent default behavior is *SecurityProtocolType.Tls* &#124; *SecurityProtocolType.Tls11* &#124; *SecurityProtocolType.Tls12*</li></ul> |
 | RestartIISOnConfigChange                              | <ul><li>Restarts IIS in the background if any of the following configuration settings are changed: *ProcessBlacklist*, *ProcessWhitelist*, *ProfilerBehavior* or *ResponseUrlWhiteListRegex*.</li><li>The default value is *true*. If set to *false*, you must restart IIS for changes to the noted configuration settings to take effect.</li></ul> | 
 | AutoUpdateEnabled                                     | <ul><li> Controls whether or not the agent automatically updates to a newer version if a newer version is available on TeamServer.</li><li> The default value is *true*. If set to *false*, the agent doesn't automatically update.</li></ul>  | 
-| Contrast.AppVersion                                   | <ul><li>** Applies to Contrast Agent v.3.3.6 and above.** </li><li> Controls the application version tag sent to TeamServer.</li><li>Note that setting *Contrast.AppVersion* in the agent's configuration file uses the same version tag for all applications that do NOT have *Contrast.AppVersion* set in their *web.config* file. See [Application-Specific Settings](installation_netconfig.html#appname) for more details.</li></ul> |
+| Contrast.AppVersion                                   | <ul><li>** Applies to Contrast Agent v.3.3.6 and above.** </li><li> Controls the application version tag sent to TeamServer.</li><li>Note that setting *Contrast.AppVersion* in the agent's configuration file uses the same version tag for all applications that do NOT have *Contrast.AppVersion* set in their *web.config* file. See [Application-Specific Settings](installation-netconfig.html#appname) for more details.</li></ul> |
 
 
 ## Diagnostics
@@ -82,10 +82,10 @@ This mode has the same behavior as **mode 3**, but also enables Enter-Leave even
 
 ## More Information
 
-* [Getting .NET Agent Logs](troubleshooting_net.html#logs)
+* [Getting .NET Agent Logs](troubleshooting-net.html#net-logs)
 
-* [Sampling](admin_orgsettings.html#org-server)
+* [Sampling](admin-orgsettings.html#org-server)
 
-* [.NET Application Pool Filtering](installation_netconfig.html#pool)
+* [.NET Application Pool Filtering](installation-netconfig.html#pool)
 
-* [Application-Specific Settings](installation_netconfig.html#appname)
+* [Application-Specific Settings](installation-netconfig.html#appname)

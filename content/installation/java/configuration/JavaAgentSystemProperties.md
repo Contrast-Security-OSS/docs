@@ -171,14 +171,14 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 
 ## More Information
 
-* [An Application Is Not Appearing In The List](troubleshooting_setup.html#missing)
+* [An Application Is Not Appearing In The List](troubleshooting-setup.html#missing)
 
-* [Getting Java Agent Logs](troubleshooting_java.html#logs)
+* [Getting Java Agent Logs](troubleshooting-java.html#java-logs)
 
-* [Java Agent Bytecode Changes](installation_javaconfig.html#bytecode)
+* [Java Agent Bytecode Changes](installation-javaconfig.html#bytecode)
 
-* [Clearing the Java Agent Cache](troubleshooting_java.html#cache)
+* [Clearing the Java Agent Cache](troubleshooting-java.html#cache)
 
-* [Sampling](admin_orgsettings.html#org-server)
+* [Sampling](admin-orgsettings.html#org-server)
 
 

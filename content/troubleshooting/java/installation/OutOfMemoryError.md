@@ -10,5 +10,5 @@ Contrast keeps some metadata, but not a lot. Maybe the JVM is already close to i
 
 ## More Information
 
-[How The Java Agent Affects App Performance](troubleshooting_javaapp.html#effect)
+[How The Java Agent Affects App Performance](troubleshooting-javaapp.html#effect)
 

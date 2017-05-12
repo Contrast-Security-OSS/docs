@@ -21,7 +21,7 @@ Go to the **Groups** page in the System Administration interface. From there:
 * **Delete** any system-created group by simply clicking the trash can icon on the row. This action can also be done if viewing the details of a group in the lower left corner of the Edit Group page. Once this action is confirmed, the group is removed and any access provided by that group is revoked from any of the users assigned to the group.
 
 ## Organization Groups
-An organization group is used to assign authorized users access to organizations and applications. An Organization Admin can create, edit and delete groups from the Organization Settings page. System administrators (EOP only) may also create [Cross-Organization Groups](admin_manageorgs.html#crossorg) to allow users access to more than one organization.
+An organization group is used to assign authorized users access to organizations and applications. An Organization Admin can create, edit and delete groups from the Organization Settings page. System administrators (EOP only) may also create [Cross-Organization Groups](admin-manageorgs.html#crossorg) to allow users access to more than one organization.
 
 Contrast provides four default groups within each organization. These groups provide access to all applications in the organization with the associated role. That role grants or restricts what he/she can do with the application. Those roles are:
 

@@ -6,7 +6,7 @@ tags: "Admin manage organization configuration TeamServer Users roles permission
 
 Administrators have the ability to add users to the system via the SuperAdmin interface (EOP customers only) or within an organization. 
 
-A user may be added to a [system group](admin_manageorgs.html#access) to gain access to the System Administration interface or to perform activities across organizations in [cross-organization groups](admin_manageorgs.html#crossorg). More typically, users can also be added within a single organization with a defined role to determine their application access and privileges.
+A user may be added to a [system group](admin-manageorgs.html#access) to gain access to the System Administration interface or to perform activities across organizations in [cross-organization groups](admin-manageorgs.html#crossorg). More typically, users can also be added within a single organization with a defined role to determine their application access and privileges.
 
 Go to the **Users** section of the Organization Settings page. From there:
 

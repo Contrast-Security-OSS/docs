@@ -18,10 +18,10 @@ Certain third-party libraries are shown as **Unknown** or gray on TeamServer
 
 ## More Information
 
-* [Getting .NET Agent Logs](troubleshooting_net.html#logs)
+* [Getting .NET Agent Logs](troubleshooting-net.html#net-logs)
 
-* [Library Analysis](user_libraries.html#analysis)
+* [Library Analysis](user-libraries.html#analysis)
 
-* [.NET Agent Configuration](installation_netconfig.html#config)
+* [.NET Agent Configuration](installation-netconfig.html)
 
 

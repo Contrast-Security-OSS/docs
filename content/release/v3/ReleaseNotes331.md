@@ -101,5 +101,5 @@ tags: "3.3.1 August Release Notes"
 
 
 ## OpenDocs
-* [Node Configuration Changes](installation_node.html#config)
-* [.Net System Requirements](installation_net.html#net-install)
+* [Node Configuration Changes](installation-node.html#node-config)
+* [.Net System Requirements](installation-net.html#net-install)

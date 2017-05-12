@@ -22,15 +22,15 @@ Contrast.NET's instrumentation data flow engine cannot be used with applications
 
 * Set ```legacyCasModel="false"``` The **ReportViewer** control's performance will suffer but will still work. 
 <br> **OR** </br>
-* Change Contrast.NET's ```ProfilerBehavior``` setting to ```1``` for legacyCasModel support. See [.NET Agent Configuration](installation_netconfig.html#config)
+* Change Contrast.NET's ```ProfilerBehavior``` setting to ```1``` for legacyCasModel support. See [.NET Agent Configuration](installation-netconfig.html)
 <br> **OR** </br>
 * Configure Contrast.NET *to not analyze* the application pool containing the application with the **ReportViewer** control using the ```ProcessBlacklist``` setting.
 
 
 ## More Information
 
-* [Getting .NET Agent Logs](troubleshooting_net.html#logs)
+* [Getting .NET Agent Logs](troubleshooting-net.html#net-logs)
 
-* [.NET Agent Configuration](installation_netconfig.html#config)
+* [.NET Agent Configuration](installation-netconfig.html)
 
 

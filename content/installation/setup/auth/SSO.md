@@ -32,7 +32,7 @@ You need to generate your own self-signed key using the Java Keytool:
 keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
 ```
 
-Use the [Encrypted Editor](installation_setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
+Use the [Encrypted Editor](installation-setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
 
 ```
  authenticator.saml.keystore.path                  : /path/to/samlKeystore.jks
@@ -68,7 +68,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 
 ####Public and secret nodes
 
-If [SuperAdmin was disabled](installation_setupinstall.html#disable-sa) during installation, you're provided with two sets of metadata: one for the public node and one for the secret node. You need to set up the configuration for both in the UI. 
+If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during installation, you're provided with two sets of metadata: one for the public node and one for the secret node. You need to set up the configuration for both in the UI. 
 
 <a href="assets/images/Configure-SAML-identity-provider.png" rel="lightbox" title="Configure your SAML Identity Provider"><img class="thumbnail" src="assets/images/Configure-SAML-identity-provider.png"/></a>
 
@@ -109,10 +109,10 @@ If SSO is configured, a checkbox appears on the Contrast login page. Checking it
 
 Next, Contrast verifies your email with the configured IdP and directs you to the IdP login page. Once you submit your full SSO credentials and are successfully authenticated, you're logged in and directed back to the Contrast dashboard. If you try to sign in using SSO but don't have an account in Contrast, an error message appears on the login screen, informing you that your administrator must create your account.
 
->**Note:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See the artcle on [Two-Step Verification](admin_systemsettings.html#twostep) for more information. 
+>**Note:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See the artcle on [Two-Step Verification](admin-systemsettings.html#twostep) for more information. 
 
 
-For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting_auth.html#troubleshoot-sso). 
+For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting-auth.html#troubleshoot-sso). 
 
 <!--
 **Logging Out**

@@ -76,15 +76,15 @@ A future version of the .NET Agent will increase the .NET Framework version requ
 	
 ## OpenDocs
 
-* [Java Agent Custom Rules](installation_javapolicy.html#level2)
-* [.Net Agent Level 2 Rules](installation_netpolicy.html)
-* [Java Agent Support for Karaf](installation_javainstall.html#karaf)
-* [IIS Express Configuration](installation_netconfig.html#iis)
-* [Granting and Revoking SuperAdmin Permissions](admin_manageorgs.html#sa)
-* [Configuring Contrast Logging](installation_setupconfig.html#log)
-* [Uninstalling Contrast](installation_setupinstall.html#uninstall)
-* [Using the Encrypted Properties Editor](installation_setupconfig.html#encrypt)
-* [Backing Up MySQL](installation_setup.html#setup-mysql)
+* [Java Agent Custom Rules](installation-javapolicy.html#level2)
+* [.Net Agent Level 2 Rules](installation-netpolicy.html)
+* [Java Agent Support for Karaf](installation-javainstall.html#karaf)
+* [IIS Express Configuration](installation-netconfig.html#iis)
+* [Granting and Revoking SuperAdmin Permissions](admin-manageorgs.html#sa)
+* [Configuring Contrast Logging](installation-setupconfig.html#log)
+* [Uninstalling Contrast](installation-setupinstall.html#uninstall)
+* [Using the Encrypted Properties Editor](installation-setupconfig.html#encrypt)
+* [Backing Up MySQL](installation-setup.html#setup-mysql)
 
 
 ## Database Migrations

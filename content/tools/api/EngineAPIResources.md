@@ -356,6 +356,6 @@ Sample response: ```Contrast.jar```
 
 ## More Information
 
-* [Sampling](admin_orgsettings.html#org-server)
+* [Sampling](admin-orgsettings.html#org-server)
 
 * [Glossary](glossary.html#glossary)

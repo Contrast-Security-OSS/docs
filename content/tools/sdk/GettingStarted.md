@@ -17,6 +17,6 @@ Once those prerequisites are met, you will need to clone the SDK repository, whi
 * [Java SDK Repository](https://github.com/Contrast-Security-OSS/contrast-sdk-java)
 * [Python SDK Repository](https://github.com/Contrast-Security-OSS/contrast-sdk-python)
 
-For more information see [Accessing the SDKs](tools_sdkaccess.html).
+For more information see [Accessing the SDKs](tools-sdkaccess.html).
 
 

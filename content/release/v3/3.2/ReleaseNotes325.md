@@ -97,9 +97,9 @@ If administrators enable this feature, users who log in will need their password
 * CONTRAST-7450: LDAP setup issues
 
 ## OpenDocs
-* [Debugging User Directories](troubleshooting_auth.html#debug)
-* [Upgrading Contrast](admin_eopupgrade.html)
-* [Rotating Keys](troubleshooting_auth.html#keys)
+* [Debugging User Directories](troubleshooting-auth.html#debug)
+* [Upgrading Contrast](admin-eopupgrade.html)
+* [Rotating Keys](troubleshooting-auth.html#keys)
 
 ## Database Migrations
 * V3_2_5_000: Addition of Two Step Verification settings tables

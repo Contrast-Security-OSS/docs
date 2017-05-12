@@ -8,7 +8,7 @@ tags: "EOP MySQL administration backup database ESAPI"
 TeamServer can be configured to automatically create a MySQL backup of the database on a regular, scheduled basis. During installation, EOP administrators are prompted as to whether or not they would like to make a backup of the database and if so, they can define a time as well as a location to store it. Most customers, if not all, configure backups during installation. In the event that the administrator decides to skip over this step, TeamServer can be configured post-installation to schedule database backups. In addition, EOP administrators have the ability to run a packaged tool to back up the database.
 
 ## Using The Encrypted Properties Editor For Database Settings
-The TeamServer database settings can be found in *$CONTRAST_HOME/data/conf/database.properties*. This file is encrypted by default and requires use of the [encrypted property editor](installation_setupconfig.html#encrypt) to identify database settings. The example below shows that database backups are enabled, scheduled and have a specific location. These properties can be edited if any specific settings need to change.
+The TeamServer database settings can be found in *$CONTRAST_HOME/data/conf/database.properties*. This file is encrypted by default and requires use of the [encrypted property editor](installation-setupconfig.html#encrypt) to identify database settings. The example below shows that database backups are enabled, scheduled and have a specific location. These properties can be edited if any specific settings need to change.
 
 ```bash
 contrast@TeamServer:~/contrast/bin$ ./edit-properties -e ../data/esapi/ -f ../data/conf/database.properties
@@ -39,7 +39,7 @@ $CONTRAST_HOME\bin\backup_db.cmd
 ## Restoring Database Backups
 In the event of needing to restore a database backup, we have provided the necessary steps to reliably perform this operation below. Database restoration should be performed by a MySQL Database Administrator.
 
-* Using the [encrypted property editor](installation_setupconfig.html#encrypt), identify the MySQL database settings
+* Using the [encrypted property editor](installation-setupconfig.html#encrypt), identify the MySQL database settings
 * Shut down the TeamServer gracefully
 * Start up MySQL individually by using the MySQL service packaged with the TeamServer <br/>
 On Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema>```<br/>

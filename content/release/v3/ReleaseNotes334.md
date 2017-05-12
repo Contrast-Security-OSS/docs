@@ -84,5 +84,5 @@ tags: "3.3.4 November Release Notes"
 * Java SDK Updates: https://github.com/Contrast-Security-OSS/contrast-sdk-java
 
 ## OpenDocs:
-* [Configuring Single Sign-On](installation_setupauth.html#sso-setup)
-* [Installing on Axis](installation_javainstall.html#axis)
+* [Configuring Single Sign-On](installation-setupauth.html#sso-setup)
+* [Installing on Axis](installation-javainstall.html#axis)
