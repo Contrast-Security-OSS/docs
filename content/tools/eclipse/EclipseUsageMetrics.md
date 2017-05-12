@@ -14,7 +14,9 @@ Users who wish to opt out in advance need to modify the preference before the pl
 ### Modifying the .prefs files
 
 This method is probably the most straightforward and involves implementing a two-step process:
-* Locate the ***.prefs*** file associated with your installation of the plugin. If the plugin has not been started yet, then this file probably does not exist. It should be created and placed in the correct location: ```<workspace-location>/.metadata/.plugins/org.eclipse.core.runtime/.settings/```
+* Locate the ***.prefs*** file associated with your installation of the plugin. If the plugin has not been started yet, then this file probably does not exist. It should be created and placed in the correct location: 
+<workspace-location>/.metadata/.plugins/org.eclipse.core.runtime/.settings/
+
 * The file to edit or create will be called ***com.contrastsecurity.eclipse.prefs***
 * Modify the key for the preference you wish to override and change its value as desired. In this case: ```report_usage=false```
 
@@ -60,4 +62,4 @@ What we don't collect:
 * The types of vulnerabilities in your code
 * The libraries you're using in your code
 
-We collect anonymized usage statistics to better improve your Contrast for Eclipse experience 
+We collect anonymized usage statistics to better improve your Contrast for Eclipse experience.
