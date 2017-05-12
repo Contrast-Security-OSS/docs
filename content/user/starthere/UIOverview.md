@@ -8,7 +8,7 @@ The Contrast interface is used for configuring Contrast agent deployments and tr
 
 To get the best experience out of Contrast, familiarize yourself with the components of the UI that will most often be used. 
 
-Here at Contrast, we work hard to engage and guide our users. Don’t hesitate to <a href="mailto:andria.mattsen@contrastsecurity.com, terra.caussin@contrastsecurity.com">give us some suggestions</a>! 
+Here at Contrast, we work hard to engage and guide our users. Don’t hesitate to <a href="mailto:andria.mattsen@contrastsecurity.com,terra.caussin@contrastsecurity.com">give us some suggestions</a>! 
 
 ## Navigation
 The top navigation bar is persistent as you move through Contrast - giving easy access to core pieces at any time. There are two versions of the top navigation bar depending on your system role and access levels. Most users will interface with the organization view. Users with system administration capabilities will have the luxury of toggling between the organization view and system administration view.
