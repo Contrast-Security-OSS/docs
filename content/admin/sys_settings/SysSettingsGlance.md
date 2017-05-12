@@ -65,7 +65,7 @@ Contrast can send email notifications to users when significant events occur (e.
 The SuperAdmin can change the default log level for the various TeamServer log files. Any change to this setting will take place after a system restart.
 
 ## Score Settings
-The score settings for both overall application score and libraries can be customized. This setting allows EOP administrators to configure how scores get calculated, as well as determine if an individual organization can override the setting. For more information, see [Score Settings](admin-orgsettings.html#score).
+The score settings for both overall application score and libraries can be customized. This setting allows EOP administrators to configure how scores get calculated, as well as determine if an individual organization can override the setting. For more information, see [Score Settings](admin-orgsettings.html#score-settings).
 
 ## System Messages
 SuperAdmins have the ability to send a system message to all users upon immediate login. A simple message and expiration date are required inputs. All users will receive this message every time they login to Contrast until the message expires or is deleted.

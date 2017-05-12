@@ -82,7 +82,7 @@ This mode has the same behavior as **mode 3**, but also enables Enter-Leave even
 
 ## More Information
 
-* [Getting .NET Agent Logs](troubleshooting-net.html#logs)
+* [Getting .NET Agent Logs](troubleshooting-net.html#net-logs)
 
 * [Sampling](admin-orgsettings.html#org-server)
 

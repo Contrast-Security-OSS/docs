@@ -22,5 +22,5 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 ## More Information 
 * [Analyze Findings](user-vulns.html#analyze)
-* [Manage Vulnerabilities](user-vulns.html#manage)
+* [Manage Vulnerabilities](user-vulns.html#manage-vuln)
 * [How to Fix Them](user-vulns.html#remediate)

@@ -22,7 +22,7 @@ tags: "installation agent .Net"
 
 Confirm the following:
 * You have administrative access to the web server and the server is supported by Contrast
-* There is a deployed application to be analyzed and the web application [technology](installation-net.html#supported) is supported by Contrast
+* There is a deployed application to be analyzed and the web application [technology](installation-net.html#net-supported) is supported by Contrast
 * The server meets the minimum system requirements (see above)
 * Contrast will be the only profiler present (unless using the Monitor mode added in version 3.3.5)
 * IIS can be restarted
@@ -56,7 +56,7 @@ The Contrast .NET Agent installer supports the command line options below. These
 
 You may wish to customize the behavior of the .NET Agent to better suit your needs.
 
-* [Configure Proxy, Performance, Logging, and Analysis](installation-netconfig.html#config)
+* [Configure Proxy, Performance, Logging, and Analysis](installation-netconfig.html)
 
 * [Exclude Applications from Analysis](installation-netconfig.html#pool)
 

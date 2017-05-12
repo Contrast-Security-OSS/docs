@@ -29,6 +29,6 @@ Customers making use of Contrast's Protection capability can enable one or more 
 
 Upon enabling Protection, the administrator will be prompted to select which users to grant these permissions to.
 
-For more information, read about how to [Manage Organizations](admin-manageorgsmultiple.html#manage). 
+For more information, read about how to [Manage Organizations](admin-manageorgsmultiple.html#manage-org). 
 
 

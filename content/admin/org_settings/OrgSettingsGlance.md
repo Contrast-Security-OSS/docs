@@ -18,10 +18,10 @@ View basic information about your organization and configure high-level preferen
 Manage users for an organization, including the ability to [add](admin-onboardteam.html#create-user), edit or delete them. Users can be assigned a default group (or role), designated for API-only use and unlocked if they've been locked out. 
 
 ## Security
-Organization administrators manage [password policy](admin-systemsettings.html#pwd), [IP restrictions](admin-policymgmt.html#ip), [two-step verification](admin_systemsettings.html#twostep) and session timeouts. An audit log is also available and searchable by keyword and date.
+Organization administrators manage [password policy](admin-systemsettings.html#pwd), [IP restrictions](admin-policymgmt.html#ip), [two-step verification](admin-systemsettings.html#twostep) and session timeouts. An audit log is also available and searchable by keyword and date.
 
 ## API
-Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about them in our [API Documentation](tools-api.html#about).
+Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about them in our [API Documentation](tools-api.html#api-about).
 
 ## Integrations
 Contrast offers basic [integrations](admin-orgintegrations.html) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
@@ -33,7 +33,7 @@ Contrast offers basic [integrations](admin-orgintegrations.html) with various to
 [Notifications](admin-orgsettings.html#org-notify) provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. These notifications can occur in Contrast and/or via email, depending on what options are enabled. Organization administrators can set the default notification settings for all users in their organization. 
 
 ## Report Settings
-[Report settings](admin-orgsettings.html#report) offer a single interface for organization administrators to define the template of hard-copy reports. This essentially involves defining the default values for reports such as:
+[Report settings](admin-orgsettings.html#org-report) offer a single interface for organization administrators to define the template of hard-copy reports. This essentially involves defining the default values for reports such as:
 
 * Report Type
 * Vulnerability Status

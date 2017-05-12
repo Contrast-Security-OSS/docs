@@ -7,7 +7,7 @@ tags: "troubleshoot setup FAQ TeamServer application on-boarding"
 After onboarding, you may not see your application appear in the list. There are a few reasons why this could happen:
 
 ## The server on which the app is running hasn't had Contrast successfully installed.
-Check out **standard** or file a ticket with the [diagnostic log output file](troubleshooting-java.html#logs) attached to see what's happening. If your server isn't appearing in the Contrast site, check out [Installation Issues](troubleshooting-setupinstallation.html#common) page.
+Check out **standard** or file a ticket with the [diagnostic log output file](troubleshooting-java.html#java-logs) attached to see what's happening. If your server isn't appearing in the Contrast site, check out [Installation Issues](troubleshooting-setupinstallation.html#common) page.
 
 ## The app is running at the root context and has no ```<display-name>``` in ***web.xml***.
 Contrast needs a name to uniquely identify an application, so if an app runs at the root, it requires a ```<display-name>``` to be set to provide this unique name. You can use the *contrast.rootapp* system property to specify the name of an app running at the root if a ```<display-name>``` can't be added.

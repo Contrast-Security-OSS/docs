@@ -131,7 +131,7 @@ tags: "3.3.6 January Release Notes"
 
 ## OpenDocs:
 * [Node Agent Troubleshooting](troubleshooting-node.html#node-ts-install)
-* [Node Agent Connectivity Issues](troubleshooting-node.html#connect)
+* [Node Agent Connectivity Issues](troubleshooting-node.html#node-connect)
 * [Node Agent Performance](troubleshooting-node.html#perform)
 * [Node Working with Other Agents](troubleshooting-nodeother.html)
 * [Node Process Monitoring Tools](troubleshooting-nodeother.html#tools)

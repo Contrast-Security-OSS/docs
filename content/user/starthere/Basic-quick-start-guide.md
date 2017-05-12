@@ -56,7 +56,7 @@ For more information, read the article on [Library Analysis](user-libraries.html
  
 ## Manage Vulnerabilities
 
-Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised. Read the [Manage Vulnerabilities article](user-vulns.html#manage) to understand them even better. 
+Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised. Read the [Manage Vulnerabilities article](user-vulns.html#manage-vuln) to understand them even better. 
  
 ## Analyze Findings
 
