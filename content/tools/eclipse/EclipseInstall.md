@@ -14,7 +14,7 @@ Once installed, you will have to restart Eclipse for the plugin to be loaded. Yo
 <ol>
 <li> In Eclipse, open the **Help** menu and select **Install New Software**. </li>
 <li> Click **Add** and add https://eclipse.contrastsecurity.com/repository to your repositories. </li> 
-
+<br>
 <a href="assets/images/KB6-a02.png" rel="lightbox" title="Add Repository"><img class="thumbnail" src="assets/images/KB6-a02.png"/></a>
 
 <li> Select the **Contrast Security** software and click **Next**. </li>
