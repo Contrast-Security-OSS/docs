@@ -1,6 +1,7 @@
 <!--
 title: "Contrast 1.1 Release Notes, December 27, 2012"
 description: "Contrast 1.1 Release Notes, December 27, 2012"
+tags: "1.1 December Release Notes"
 -->
 
 ## New Features:

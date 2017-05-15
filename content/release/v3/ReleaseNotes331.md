@@ -100,6 +100,6 @@ tags: "3.3.1 August Release Notes"
 * Project SheepDog: https://github.com/Contrast-Security-OSS/sheepdog
 
 
-OpenDocs
-Node Configuration Changes: https://docs.contrastsecurity.com/user_nodeconfig.html#config
-.Net System Requirements: https://docs.contrastsecurity.com/user_netinstall.html#install
+## OpenDocs
+* [Node Configuration Changes](installation-node.html#node-config)
+* [.Net System Requirements](installation-net.html#net-install)
