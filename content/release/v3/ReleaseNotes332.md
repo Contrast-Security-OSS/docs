@@ -158,5 +158,5 @@ tags: "3.3.2 September Release Notes"
 * Updates to Contrast Maven Plugin: https://github.com/Contrast-Security-OSS/contrast-maven-plugin
 
 ## OpenDocs
-* HipChat Integration: https://docs.contrastsecurity.com/user_tsguideset.html#integrate
+* [HipChat Integration](admin-orgintegrations.html#hipchat)
 

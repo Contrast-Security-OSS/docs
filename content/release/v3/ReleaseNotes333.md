@@ -88,6 +88,6 @@ tags: "3.3.3 October Release Notes"
 
 
 ## OpenDocs
-* Configuring the JRE: https://docs.contrastsecurity.com/admin_tsconfig.html#jre
-* MySQL Logging: https://docs.contrastsecurity.com/admin_tsfaq.html#mysqllog
-* Installing on Axis2: https://docs.contrastsecurity.com/user_javainstall.html#axis2
+* [Configuring the JRE](installation-setupconfig.html#jre)
+* [MySQL Logging](troubleshooting-setup.html#troubleshoot-mysql)
+* [Installing on Axis2](installation-javainstall.html#axis)
