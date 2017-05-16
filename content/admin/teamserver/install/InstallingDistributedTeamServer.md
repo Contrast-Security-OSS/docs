@@ -43,6 +43,8 @@ $ cd /usr/local/contrast
 $ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/.initialized data/.contrast VERSION
 ```
 
+If you would rather use ZooKeeper as the configuration tool you can follow the instructions [here](TODO: not sure of this link) to enable ZooKeeper. On installations of newer nodes you will get an option to provide zookeeper as configuration files. 
+
 ## Distributed Fresh Installation 
 It is possible to run the installation as a regular user; however, we recommend installation to your system as a *privileged* user. This means if you are on Windows, you can right-click the installer and select **Run As Administrator** and if you are on Linux, use the ```sudo``` command to launch the installer.
 
