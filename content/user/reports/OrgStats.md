@@ -1,7 +1,7 @@
 <!--
 title: "Organization Statistics"
 description: "Overview of organization statistics charts"
-tags: "user reports licenses applications servers organizations report"
+tags: "TeamServer licenses applications servers organizations report"
 -->
 
 Gain robust and comprehensive visibility into your organization data with Organization Statistics.
@@ -31,9 +31,11 @@ If your organization doesn't own any licenses for either Protection or Assessmen
 
 In the Applications tab, the Status thermometer chart shows the total number of applications broken down by the number that are licensed, unlicensed and archived. Click on the total number of onboarded applications to go to the Applications page for more details on each one. Contrast also reminds you of how many licenses are available in your organization. 
 
-The circular Language Breakdown chart shows the number of applications by language in the inner band, and by Technology or Grade in the outer band. Click the number of active applications to go directly to the Applications page. High Risk, Monitored and Expirations snapshots show the number of applications with critical open vulnerabilities, no protection and expiring licenses, respectively. Applications that were added within the last week and applications that reside on an offline server are listed separately in the sidebar. 
+The circular Language Breakdown chart shows the number of applications by language in the inner band, and by Technology or Grade in the outer band. Click the number of active applications to go directly to the Applications page. High Risk and Expirations snapshots show the number of applications with critical open vulnerabilities and expiring licenses, respectively. The Protection Coverage snapshot shows the number of applications on Production servers that have incomplete Protection coverage. Click the link to see a breakdown of Protection coverage by application. 
 
-<a href="assets/images/org-stats-applications.png" rel="lightbox" title="Organization statistics for applications"><img class="thumbnail" src="assets/images/org-stats-applications.png"/></a>
+Applications that were added within the last week and applications that reside on an offline server are listed separately in the sidebar. 
+
+<a href="assets/images/Org-stats-applications.png" rel="lightbox" title="Organization statistics for applications"><img class="thumbnail" src="assets/images/Org-stats-applications.png"/></a>
 
 ## Servers  
 
