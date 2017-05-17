@@ -1,7 +1,7 @@
 <!--
 title: "Organization Statistics"
 description: "Overview of organization statistics charts"
-tags: "TeamServer licenses applications servers organizations report"
+tags: "user reports licenses applications servers organizations report"
 -->
 
 Gain robust and comprehensive visibility into your organization data with Organization Statistics.
