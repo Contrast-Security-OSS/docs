@@ -1,5 +1,5 @@
 <!--
-title: "Bluemix for Node.js"
+title: "Installation on Bluemix"
 description: "Installing Bluemix for Node.js"
 tags: "Bluemix NodeJS agent installation"
 -->
