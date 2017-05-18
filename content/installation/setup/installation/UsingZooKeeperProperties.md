@@ -7,7 +7,7 @@ tags: "installation EOP distributed configuration ZooKeeper"
 ## About ZooKeeper and Contrast
 This guide is for enterprise-on-premises (EOP) administrators who are looking to move to a distributed setup of Contrast and want to use ZooKeeper as their configuration management. 
 
-> **Note:** While it guides you through the setup and configuration of additional software, keep in mind that you're responsible for the monitoring, backups and durability of ZooKeeper. 
+> **Note:** While the following steps guide you through the setup and configuration of additional software, keep in mind that you're responsible for the monitoring, backups and durability of ZooKeeper. 
 
 All code that's shared here is also available in our GitHub [repo](https://github.com/Contrast-Security-OSS/docs), so check back often for updates. You can also submit a Pull Request if you have suggestions or find any bugs in the instructions.
 
@@ -25,7 +25,7 @@ imokConnection closed by foreign host.
 
 In this case, ZooKeeper responds with ```imok```. You can also use other [four letter words](https://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html#sc_zkCommands) as ZooKeeper commands. 
 
-> **Note:** Keep in mind that since ZooKeeper is accessible through the network, anyone who has access to the ZooKeeper node can view your Contrast settings. You can address this by allowing only specified Contrast/Administrator nodes to access the ZooKeeper node.
+> **Note:** ZooKeeper is accessible through the network, anyone who has access to the ZooKeeper node can view your Contrast settings. You can address this by allowing only specified Contrast/Administrator nodes to access the ZooKeeper node.
 
 ## Configuration 
  
