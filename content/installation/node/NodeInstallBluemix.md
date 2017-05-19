@@ -6,13 +6,17 @@ tags: "Bluemix NodeJS agent installation"
 
 Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. The following steps walk you through the installation process.
 
+## Download
+
 * Download the Node.js agent from Contrast. The latest version is **nodecontrast-0.9.0.tgz**.
 
 * Download the *contrast.json* file from Contrast.
 
-* In the *contrast.json* file, you have the option to configure the name of the server to which this application will report. (Contrast recommends that you do this step to avoid creating duplicate servers in the application.) To configure the server name as "BluemixNodeServer" in Contrast, add ```"servername":"BluemixNodeServer"```.
+## Setup
 
-	* Other options to customize the Node agent can be found in the [Configuration article](installation-node.html#node-config). 
+* In the *contrast.json* file, you can configure the name of the server to which this application will report. (Contrast recommends that you complete this step to avoid creating duplicate servers in the application.) To configure the server name as "BluemixNodeServer" in Contrast, add ```"servername":"BluemixNodeServer"```.
+
+> ** Note:** To find other options for customizing the Node agent, go to the [Configuration article](installation-node.html#node-config). 
 
 * Create a folder named *contrast* in your application’s root directory.
 
@@ -24,6 +28,8 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
 "bluemix-with-contrast": "npm install /home/vcap/app/contrast/node-contrast-
 0.9.0.tgz && node-contrast -c /home/vcap/app/contrast/contrast.json index.js",
 ```
+
+## Run the Agent
 
 * Since Bluemix runs the start script by default, you must change the start command to point to the ```bluemix-with-contrast``` line given in the previous step.
 
@@ -40,3 +46,4 @@ Now the scripts section of the package.json should look like the following:
 * Push the application to Bluemix using ```cf push <application name> -t 180```.
 
 Once the the deploy is finished, you should see the application in Contrast.
+
