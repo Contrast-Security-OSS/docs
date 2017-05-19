@@ -26,7 +26,7 @@ tags: "tools Eclipse Download Installation Ubuntu"
 
 ### Step four 
 
-* Check the connectivity to Contrast by clicking **Test Connection**, then click **OK**. 
+* Check the connectivity to Contrast by clicking **Test Connection** and then **OK**. 
 
 Well done! Your Eclipse is configured to get vulnerability information from Contrast. 
 
