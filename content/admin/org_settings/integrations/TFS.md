@@ -12,9 +12,13 @@ Integrating Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) w
 
 ## Setup
 
-<!-- Remove username, update password to below
+In the Integrations page, click **Connect** in the TFS row. In the **Connect with TFS** page, complete the following fields. 
 
-Personal Access Token : The token associated with your user to [authenticate to your host](https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/overview). -->
+Field | Description
+------ | -----------
+**Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers
+**Personal Access Token** | The token associated with your user to [authenticate to your host](https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/overview).
+**Host** | The JIRA URL; must be accessible from the Contrast interface instance being configured
 
 Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS/TFS projects. The test verifies that Contrast can reach the VSTS/TFS instance and that the specified user can log in.
 
