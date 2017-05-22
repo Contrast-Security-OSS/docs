@@ -30,7 +30,7 @@ In this case, ZooKeeper responds with ```imok```. You can also use other [four l
 ## Configuration 
  
 ### Step One: Shutdown Contrast
-Stop Contrast from running. In Linux, you can do this by running ```contrast-server stop```. Find more info [here](installation-setup.html#run) about how to stop Contrast.
+In Linux, stop Contrast by running ```contrast-server stop```. For more information about how to stop Contrast, refer to [this article](installation-setup.html#run).
 
 ### Step Two: Enable ZooKeeper
 Update the enable flag for ```zookeeper.properties``` to ```true```.
@@ -44,7 +44,7 @@ zookeeper.character.encoding=UTF-8
 ```
 
 ### Step Three: Restart Contrast
-Restart Contrast. In Linux, run ```contrast-server start```. Find more information [here](installation-setup.html#run) about how to restart Contrast.
+In Linux, restart Contrast by running ```contrast-server start```. Find more information [in this article](installation-setup.html#run) about how to restart Contrast.
 
 On start up, Contrast checks ZooKeeper and uploads its current configurations. 
 
