@@ -42,32 +42,33 @@ Below is a sample TeamServer configuration for the Contrast Maven Plugin:
 
 ```xml
 <plugin>
-     <groupId>com.aspectsecurity.contrast</groupId>
-     <artifactId>contrast-maven-plugin</artifactId>
-     <executions>
-         <execution>
-             <id>install-contrast-jar</id>
-             <goals>
+    <groupId>com.contrastsecurity</groupId>
+    <artifactId>contrast-maven-plugin</artifactId>
+    <version>1.3</version>
+    <executions>
+        <execution>
+            <id>install-contrast-jar</id>
+            <goals>
                 <goal>install</goal>
-             </goals>
-         </execution>
-         <execution>
+            </goals>
+        </execution>
+        <execution>
             <id>verify-with-contrast</id>
             <phase>post-integration-test</phase>
             <goals>
                 <goal>verify</goal>
             </goals>
-         </execution>
-     </executions>
-     <configuration>
-         <username>test_user</username>
-         <apiKey>testApiKey</apiKey>
-         <serviceKey>testServiceKEy</serviceKey>
-         <apiUrl>http://www.app.contrastsecurity.com/Contrast/api</apiUrl>
-         <orgUuid>QWER-ASDF-ZXCV-ERTY</orgUuid>
-         <appName>Test Application</appName>
-         <serverName>jenkins.slave1</serverName>
-         <minSeverity>High</minSeverity>
-     </configuration>
+        </execution>
+    </executions>
+    <configuration>
+        <username>test_user</username>
+        <apiKey>testApiKey</apiKey>
+        <serviceKey>testServiceKEy</serviceKey>
+        <apiUrl>http://www.app.contrastsecurity.com/Contrast/api</apiUrl>
+        <orgUuid>QWER-ASDF-ZXCV-ERTY</orgUuid>
+        <appName>VehicleMPG-Master</appName>
+        <serverName>jenkins.slave1</serverName>
+        <minSeverity>High</minSeverity>
+    </configuration>
 </plugin>
 ```
