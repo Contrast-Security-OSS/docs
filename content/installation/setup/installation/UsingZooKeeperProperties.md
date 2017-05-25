@@ -7,12 +7,12 @@ tags: "installation EOP distributed configuration ZooKeeper"
 ## About ZooKeeper and Contrast
 This guide is for enterprise-on-premises (EOP) administrators who are looking to move to a distributed setup of Contrast and want to use ZooKeeper as their configuration management. 
 
-> **Note:** While the following steps guide you through the setup and configuration of additional software, keep in mind that you're responsible for the monitoring, backups and durability of ZooKeeper. 
+> **Note:** While the following steps guide you through the setup and configuration of additional software, keep in mind that you're responsible for the monitoring, backup and durability of ZooKeeper. 
 
-All code that's shared here is also available in our GitHub [repo](https://github.com/Contrast-Security-OSS/docs), so check back often for updates. You can also submit a Pull Request if you have suggestions or find any bugs in the instructions.
+All code that's shared here is also available in our GitHub repo, so check back often for updates. You can also submit a Pull Request if you have suggestions or find any bugs in the instructions.
 
 ## Before You Get Started
-Make sure you have a working installation of ZooKeeper that can be accessible from Contrast nodes. To test the connectivity from Contrast, log into that node, run a ```telnet``` command and send ```ruok```.
+Make sure you have a working installation of ZooKeeper that can be accessed from Contrast nodes. To test the connectivity from Contrast, log into that node, run a ```telnet``` command and send ```ruok```.
 
 ```
 telnet localhost 2181
@@ -25,11 +25,11 @@ imokConnection closed by foreign host.
 
 In this case, ZooKeeper responds with ```imok```. You can also use other [four letter words](https://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html#sc_zkCommands) as ZooKeeper commands. 
 
-> **Note:** ZooKeeper is accessible through the network, anyone who has access to the ZooKeeper node can view your Contrast settings. You can address this by allowing only specified Contrast/Administrator nodes to access the ZooKeeper node.
+> **Note:** ZooKeeper is accessible through the network; as a result, anyone who has access to the ZooKeeper node can view your Contrast settings. You can address this by allowing only specified Contrast/Administrator nodes to access the ZooKeeper node.
 
 ## Configuration 
  
-### Step One: Shutdown Contrast
+### Step One: Shut down Contrast
 In Linux, stop Contrast by running ```contrast-server stop```. For more information about how to stop Contrast, refer to [this article](installation-setup.html#run).
 
 ### Step Two: Enable ZooKeeper
@@ -44,9 +44,9 @@ zookeeper.character.encoding=UTF-8
 ```
 
 ### Step Three: Restart Contrast
-In Linux, restart Contrast by running ```contrast-server start```. Find more information [in this article](installation-setup.html#run) about how to restart Contrast.
+In Linux, restart Contrast by running ```contrast-server start```. Find more information [in this article](installation-setup.html#run) about how to restart Contrast. 
 
-On start up, Contrast checks ZooKeeper and uploads its current configurations. 
+On startup, Contrast checks ZooKeeper and uploads its current configurations. 
 
 > **Note:** If you're running a distributed set of nodes only, start up one node at a time. 
 
