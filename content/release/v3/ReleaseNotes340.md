@@ -1,0 +1,43 @@
+<!--
+title: "Contrast 3.4.0 - May 2017"
+description: "Contrast 3.4.0 May 2017"
+tags: "3.4.0 May Release Notes"
+-->
+
+
+## Fixes
+* No more duplicated information in application security PDF report
+* Straightened out new asset and new vulnerability notifications. 
+* Change protect policy for all rules without any errors.
+* Fixed agent directory permissions during EOP upgrade.
+* Superadmin can export trace XML for vulnerabilities in Production. 
+* Navigate to the Notes tab for a .Net server without fear of 403s.
+* Syslog IP address validation supports IPV6.
+* Disabled editing of Protection policies for child applications. 
+* Save new integrations and send vulnerabilities with JIRA no matter what's in your fields.
+* Delete a licensed application and still keep the license in the organization. Win, win. 
+* Update organization roles without interference from groups. You do you.
+* Fixed functionality of Syslog features
+* Restored module filter for vulnerabilities in merged applications 
+
+* Fixed duplicate vulnerabilities displaying in Applications page CONTRAST-13904
+* Access Group members have permission to see applications
+
+## Improvements 
+* With User Attribution, Contrast enriches attack data with user information so you can put a (user)name to the face...err...IP address.
+* Use our new integration to now export vulnerabilities from Contrast into directy into Visual Studio Team Services or Team Foundation Server.
+* Select two-way integration in your JIRA configuration to automatically update the status of a vulnerability (or vulnerabilities - we won’t judge) in Contrast when you close the corresponding ticket.
+* Security controls for Node are here! If you know your data is secure, go ahead and add those Input Validator or Sanitizer APIs into Contrast.
+* Use the new filter in the Vulnerability Trend chart to search for applications that are out of compliance. 
+* Need to Blacklist a range of IPs? Just add them to the newly extended fields for Attacks, Events and IP management.
+* Look for the new Protection coverage for applications in Organization Statistics, Attack Monitor and, of course, the Applications page. 
+* Use new Advanced filters to find any empty servers and focus on libraries by language 
+* Looking to move to a distributed setup of Contrast? Use ZooKeeper! 
+
+## Agent Updates
+* **Java Agent Summary:** We made improvements to heap usage as well as the accuracy of Assess and Protect Rules.
+* **.NET Agent Summary:** We added Protect Virtual Patches, Protect Path-Traversal, .NET 4.7 Support, and improved reliability of Duplex instrumentation for you. You can also specify the agent environment as a configuration setting as well as control the instrumentation mode used by the agent in Contrast.
+* **Node.js Agent Summary:** 
+
+
+
