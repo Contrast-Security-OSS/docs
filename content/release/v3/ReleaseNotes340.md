@@ -3,7 +3,7 @@ title: "Contrast 3.4.0 - May 2017"
 description: "Contrast 3.4.0 May 2017"
 tags: "3.4.0 May Release Notes"
 -->
-Our new Visual Studio Team Services and improved JIRA integrations make it even easier to keep track of your bugs. (We fixed a few of our own while we were there.) Of course, you have to check out out Protection coverage for applications on your way over. We'll get you back on track!  
+Our new Visual Studio Team Services and improved JIRA integrations make it even easier to keep track of your bugs. (We fixed a few of our own while we were there, too.) Of course, you have to check out out Protection coverage for applications on your way over. We'll help you stay on track!  
 
 ## Fixes
 * Weeded out duplicate information in application security PDF report.
@@ -36,7 +36,7 @@ Our new Visual Studio Team Services and improved JIRA integrations make it even 
 ## Agent Updates
 * **Java Agent Summary:** We made improvements to heap usage as well as the accuracy of Assess and Protect Rules.
 * **.NET Agent Summary:** We added Protect Virtual Patches, Protect Path-Traversal and .NET 4.7 Support. We even improved reliability of Duplex instrumentation. You can also specify the agent environment as a configuration setting as well as control the instrumentation mode used by the agent in Contrast.
-* **Node.js Agent Summary:** We support level 1 rule creation as well as runtime enabling and disabling of Security Controls and Assess rules. We also send server environment information to Contrast. Library reporting errors have been a bit too verbose, so we'll do better next time. 
+* **Node.js Agent Summary:** We support level 1 rule creation as well as runtime enabling and disabling of Security Controls and Assess rules. We also send server environment information to Contrast. Library reporting errors have been a bit too verbose, so they'll better from now on. 
 
 
 
