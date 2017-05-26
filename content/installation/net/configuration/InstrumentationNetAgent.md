@@ -35,6 +35,6 @@ The following steps configure the build/package process for the Release configur
 <a href="assets/images/KB3-e14.jpg" rel="lightbox" title="Instrumentation Configuration"><img class="thumbnail" src="assets/images/KB3-e14.jpg"/></a>
 
 
-## Monitor Mode and Instrumentation
+## Duplex Mode and Instrumentation
 
-As of version 3.3.5, the .NET Agent has an additional instrumentation engine named "Monitoring". See the [Configuration Overview](installation-netconfig.html#overview) for information on enabling this mode. Monitor mode does NOT use the profiling API for instrumentation but continues to support source code information, improved stability and the use of custom rules. 
+As of version 3.3.5, the .NET Agent has an additional instrumentation engine named "Duplex". See the [Configuration Overview](installation-netconfig.html#overview) for information on enabling this mode. Duplex mode does **not** use the profiling API for instrumentation but continues to support source code information, improved stability and the use of custom rules. 

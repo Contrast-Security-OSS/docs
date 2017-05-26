@@ -20,10 +20,9 @@ By default, the Contrast .NET agent uses the CLR Profiling API to perform data a
 
 > **Note:** Many performance/APM tools such as New Relic, AppDynamics, etc., also use the CLR Profiling API. As a result, you can't use them on the same server as the Contrast .NET agent.  
 
+### Duplex
 
-### Monitor
-
-As of version 3.3.5, you can use the .NET agent along with another profiling tool by enabling Monitor mode. See the article on [.NET Agent Configuration](installation-netconfig.html) for more information. 
+As of version 3.3.5, you can use the .NET agent along with another profiling tool by enabling Duplex mode. See the article on [.NET Agent Configuration](installation-netconfig.html) for more information. 
 
 ## Restart IIS 
 
