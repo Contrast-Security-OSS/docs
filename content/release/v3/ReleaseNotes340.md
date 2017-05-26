@@ -30,7 +30,7 @@ Our new Visual Studio Team Services and improved JIRA integrations make it even 
 * Use the new filter in the Vulnerability Trend chart to search for applications that are out of compliance. 
 * Need to Blacklist a range of IPs? Just add them to the newly extended fields for Attacks, Events and IP management.
 * Look for the new Protection coverage for applications in Organization Statistics, Attack Monitor and, of course, the Applications page. 
-* Use new Advanced filters to find any empty servers and focus on libraries by language 
+* Find any empty servers and focus on libraries by language with new Advanced filters.
 * Looking to move to a distributed setup of Contrast? Use ZooKeeper! 
 
 ## Agent Updates
