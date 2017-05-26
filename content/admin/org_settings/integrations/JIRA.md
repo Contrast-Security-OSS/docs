@@ -38,11 +38,11 @@ Once a connection is made, select the applications that you want to be available
 
 Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in JIRA. 
 
-<!-- screenshot -->
+<a href="assets/images/Two-way-jira-integration.png" rel="lightbox" title="Enable two-way integration"><img class="thumbnail" src="assets/images/Two-way-jira-integration.png"/></a>
 
 In the JIRA configuration page, begin setup by checking the box to **Enable two-way integration**. This generates a URL that appears below the checkbox, which your JIRA administrator must use to register a webhook in JIRA. Clicking the link opens a new tab that takes you to [instructions for registering webhooks](https://developer.atlassian.com/jiradev/jira-apis/webhooks#Webhooks-rest).
 
-> **Note:** When you delete a configuration with two-way integration enabled, you must delete the webhook configuration from your JIRA admin console to completely remove the integration.
+> **Note:** When you delete a configuration with two-way integration enabled, you must delete the webhook configuration from your JIRA administrator console to completely remove the integration.
 
 Continue to the fields below to set a vulnerability status based on each JIRA ticket status and resolution. Beside each ticket status and resolution pairing, choose a vulnerability status from the dropdown menu. The table below shows the default options in **bold**. 
 
@@ -54,9 +54,9 @@ Continue to the fields below to set a vulnerability status based on each JIRA ti
 
 If you choose **Not a Problem**, Contrast requires you to enter a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection in the dropdown menu is **Other**. 
 
-Once the two-way integration is saved, Contrast will autogenerate comments in the Discussion tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
+Once the two-way integration is saved, Contrast will automatically generate comments in the Discussion tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
 
-<!-- screenshot -->
+#### Multiple vulnerabilities
 
 For multiple vulnerabilities sent to JIRA in bulk as a single issue, the JIRA ticket status applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be closed when all the tickets are closed.
 
