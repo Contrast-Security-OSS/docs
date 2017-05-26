@@ -12,6 +12,8 @@ tags: "tools Eclipse Download Installation Ubuntu"
 * Search for “Contrast Security”.
 * Click **Install**. 
 
+<a href="assets/images/Eclipse-plugin-install.png" rel="lightbox" title="Install Contrast for Eclipse"><img class="thumbnail" src="assets/images/Eclipse-plugin-install.png"/></a>
+
 ### Step two
 
 * Open the **Contrast View** to configure communication to Contrast application. 
@@ -24,6 +26,8 @@ tags: "tools Eclipse Download Installation Ubuntu"
 * Once you add the Contrast View, enter your Username, API Key and Service Key in the configuration screen. You can also navigate to the configuration screen by going to **Eclipse Preferences** and searching for "Contrast". 
 * To find the keys in the Contrast application, go to the API page in Organization Settings.
 
+<a href="assets/images/Eclipse-plugin-preferences.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-preferences.png"/></a>
+
 ### Step four 
 
 * Check the connectivity to Contrast by clicking **Test Connection** and then **OK**. 
@@ -32,5 +36,13 @@ Well done! Your Eclipse is configured to get vulnerability information from Cont
 
 ## Find Vulnerabilities
 
-The Vulnerabilities view in Eclipse shows a list of all the vulnerabilities from Contrast. You can sort and filter them by servers or applications. For more information, click the **View Details** link, or click on the page button in the Contrast Vulernabilities tab to go to Contrast. 
+The Vulnerabilities view in Eclipse shows a list of all the vulnerabilities from Contrast. You can sort and filter them by servers or applications.  
+
+<a href="assets/images/Eclipse-plugin-vulnerabilities.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerabilities.png"/></a>
+
+For more information, click the **View Details** link, or click on the page button in the Contrast Vulnerabilities tab to go to Contrast.
+
+<a href="assets/images/Eclipse-plugin-vulnerability-details.png" rel="lightbox" title="View vulnerability details"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerability-details.png.png"/></a>
+
+
 
