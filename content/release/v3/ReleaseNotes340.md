@@ -24,7 +24,7 @@ Our new Visual Studio Team Services and improved JIRA integrations make it even 
 
 ## Improvements 
 * With User Attribution, Contrast enriches attack data with user information so you can put a (user)name to the face...err...IP address.
-* Use our new integration to now export vulnerabilities from Contrast directly into Visual Studio Team Services or Team Foundation Server.
+* Use our new integration to export vulnerabilities from Contrast directly into Visual Studio Team Services or Team Foundation Server.
 * Select two-way integration in your JIRA configuration to automatically update the status of a vulnerability (or vulnerabilities - we won’t judge) in Contrast when you close the corresponding ticket.
 * Security controls for Node are here! If you know your data is secure, go ahead and add those Input Validator or Sanitizer APIs into Contrast.
 * Use the new filter in the Vulnerability Trend chart to search for applications that are out of compliance. 
@@ -34,7 +34,7 @@ Our new Visual Studio Team Services and improved JIRA integrations make it even 
 * Looking to move to a distributed setup of Contrast? Use ZooKeeper! 
 
 ## Agent Updates
-* **Java Agent Summary:** We made improvements to heap usage as well as the accuracy of Assess and Protect Rules.
+* **Java Agent Summary:** We made improvements to heap usage as well as the accuracy of Assess and Protect Rules. We also added better support for applications running in Pivotal Cloud Foundry.
 * **.NET Agent Summary:** We added Protect Virtual Patches, Protect Path-Traversal and .NET 4.7 Support. We even improved reliability of Duplex instrumentation. You can also specify the agent environment as a configuration setting as well as control the instrumentation mode used by the agent in Contrast.
 * **Node.js Agent Summary:** We support level 1 rule creation as well as runtime enabling and disabling of Security Controls and Assess rules. We also send server environment information to Contrast. Library reporting errors have been a bit too verbose, so they'll be better from now on. 
 
