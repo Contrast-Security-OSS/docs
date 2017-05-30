@@ -30,7 +30,9 @@ Export details on findings from the Libraries grid, a library's overview page, o
 
 Choose between CSV and XML formats.
 
-Select specific libraries to export using the check boxes or use our filtering. When you apply a filter, an option to export all libraries that match that filter is available when you click the export icon. If no filter is applied, you can export all libraries.
+<a href="assets/images/Library-export.png" rel="lightbox" title="Export library details"><img class="thumbnail" src="assets/images/Library-export.png"/></a>
+
+In the Libraries grid, select specific libraries with the check boxes or use your filters to focus on data. When you apply a filter, an option to export all libraries that match that filter is available when you click the export icon. If you don't select any checkboxes or apply any filters, you can export all libraries.
 
 ### Data
 
