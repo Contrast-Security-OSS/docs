@@ -3,7 +3,7 @@ title: "Contrast 3.4.0 - May 2017"
 description: "Contrast 3.4.0 May 2017"
 tags: "3.4.0 May Release Notes"
 -->
-Our new Visual Studio Team Services and improved JIRA integrations make it even easier to keep track of your bugs. (We fixed a few of our own while we were in the area, too.) Of course, you have to check out out Protection coverage for applications on your way over. We'll help you stay on track!  
+Our new Visual Studio Team Services and improved JIRA integrations make it even easier to keep track of your bugs. (We fixed a few of our own while we were in the area, too.) Of course, you have to check out Protection coverage for applications on your way over. We'll help you stay on track!  
 
 ## Fixes
 * Weeded out duplicate information in application security PDF report.
