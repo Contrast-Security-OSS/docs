@@ -9,7 +9,7 @@ Integrating Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) w
 ## Prerequisites
 
 * VSTS or TFS account credentials (username and personal access token)
-* At a minimum, we require the access token to have the "Work items (read and write)" scope.
+* An access token with "Work items (read and write)" scope (minimum requirement)
 * A running VSTS or TFS instance accessible via HTTP(s) to Contrast
 * A project which to associate the application instrumented by Contrast
 
