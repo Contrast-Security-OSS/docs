@@ -14,7 +14,7 @@ Our new Visual Studio Team Services and improved JIRA integrations make it even 
 * Superadmin can export trace XML for vulnerabilities in Production.
 * Straightened out new asset and new vulnerability notifications. 
 * Navigate to Notes for .Net servers without fear of 403s.
-* Syslog features - validation support for IPV6 - are up and running.
+* Syslog features - like validation support for IPV6 - are up and running.
 * Disabled editing of Protection policies for child applications. 
 * Save new integrations and send vulnerabilities with JIRA no matter what's in your fields.
 * Delete a licensed application and still keep the license in the organization. Win, win. 
