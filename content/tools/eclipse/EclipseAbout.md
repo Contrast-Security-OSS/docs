@@ -20,4 +20,5 @@ Operating systems:
 
 * Mac/OS
 * Windows
-* Linux (unsupported)
+
+
