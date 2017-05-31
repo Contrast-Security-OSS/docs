@@ -6,9 +6,9 @@ tags: "tools eclipse integration"
 
 ## Use Contrast for Eclipse
 
-For applications deployed with the Contrast agent, you can access vulnerability information right within your Eclipse IDE. It's free, powerful application security that expertly pinpoints vulnerabilities such as SQL Injection and Cross-Site Scripting for easy remediation. You're taken to the line of code inside Eclipse, and can view more details on the Contrast console. 
+Contrast provides visibility to vulnerabilities in your applications and protects them against attacks. For applications deployed with the Contrast agent, access vulnerability information directly within your Eclipse IDE. You're directed to the line of code inside Eclipse and can view more details in the Contrast console, allowing you to provide application security feedback to developers right at the time of development for faster remediation.
 
-## Supported Systems 
+### Supported systems 
 
 Eclipse versions:
 
