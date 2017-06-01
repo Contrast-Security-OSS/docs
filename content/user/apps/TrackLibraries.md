@@ -18,25 +18,23 @@ Contrast provides you with a grade for:
 
 Contrast calculates this grade based on three things: 
 
-* Age of the library
-* Number of versions that postdate the library
-* Number of known CVEs that affect the library
+* age of the library
+* number of versions that postdate the library
+* number of known CVEs that affect the library
 
 For more information, read the article on [Library Analysis](user-libraries.html#analysis).
 
 ##Export Findings
 
-Export details on findings from the Libraries grid, a library's overview page, or the application or server's Libraries tabs.
-
-Choose between CSV and XML formats.
+Export details on findings from the Libraries page, a library's overview page, or the application or server's Libraries tabs. Click the **Export** icon to choose either CSV or XML formats for the grouping of libraries that you want to include in the report. 
 
 <a href="assets/images/Library-export.png" rel="lightbox" title="Export library details"><img class="thumbnail" src="assets/images/Library-export.png"/></a>
 
-In the Libraries grid, select specific libraries with the check boxes or use your filters to focus on data. When you apply a filter, an option to export all libraries that match that filter is available when you click the export icon. If you don't select any checkboxes or apply any filters, you can export all libraries.
+In the Libraries grids, select individual libraries with the check boxes or use your filters to focus on specific data sets. When you apply a selection, you can choose to export all or selected libraries. If you don't select any checkboxes or filters, you can export data for all libraries. 
 
 ### Data
 
-The exported file will contain the following for each library:
+The exported file contains the following for each library:
 
 * NAME
 * TECHNOLOGY
@@ -44,9 +42,9 @@ The exported file will contain the following for each library:
 * VERSION
 * LATEST_VERSION
 * HASH
-* CVE: A list of CVEs, separated by commas, found in this library
-* NUMBER_APPS: The number of applications that use the library
-* NUMBER_CLASSES: The number of classes that use this library
+* CVE <br> (A list of CVEs, separated by commas, found in this library.)
+* NUMBER_APPS <br> (The number of applications that use the library.)
+* NUMBER_CLASSES <br> (The number of classes that use this library.)
 
 
 
