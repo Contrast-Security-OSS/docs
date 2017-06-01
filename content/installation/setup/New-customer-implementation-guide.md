@@ -20,7 +20,7 @@ Designate people for each of the following roles. Your Contrast Security Certifi
 | Role                                       | Description                                                                                                                                             |
 |--------------------------------------------|--------------------------------------------------------------------------------------|
 | Project Manager <br> (often the Security Lead) | Oversee project <br> Copied on every email|
-| TeamServer Admin                           | **SaaS and EOP:** <br> Create and delete users <br> Configure roles <br> Contrast UI administration <br> **EOP only:** <br> Perform upgrades and DB backup <br> Manage infrastructure |
+| Contrast Admin                           | **SaaS and EOP:** <br> Create and delete users <br> Configure roles <br> Contrast UI administration <br> **EOP only:** <br> Perform upgrades and DB backup <br> Manage infrastructure |
 | Security Lead                              | Create and maintain security policies <br> Produce success metrics  |
 | Development Lead <br> (for each application) | Oversee agent installation <br> Perform initial review of results <br> Triage vulnerabilities <br> Serve as a lead in vulnerability remediation |
 
@@ -44,7 +44,7 @@ If SaaS is an option, please read about [six benefits of using the SaaS option](
 
 #### Saas
 
-To connect to the SaaS offering of Contrast, follow the instructions that are emailed to your TeamServer Admin. They include your credentials to log in to the [Contrast application](https://app.contrastsecurity.com/Contrast/static/ng/index.html#/pages/signin).
+To connect to the SaaS offering of Contrast, follow the instructions that are emailed to your Contrast Admin. They include your credentials to log in to the [Contrast application](https://app.contrastsecurity.com/Contrast/static/ng/index.html#/pages/signin).
 
 #### EOP
 
@@ -52,7 +52,7 @@ To install Contrast in your own environment, we’ll do the following together.
 1. Verify that your configuration complies with those that are supported and suggested, which is documented in the [System Requirements](installation-setup.html#contrast-reqs) article.  
 2. Follow the steps listed in the Contrast [Installation](https://docs.contrastsecurity.com/installation-setupinstall.html) article. 
  
-Before we begin, make sure that the CSCP knows the contact information for your TeamServer Admin and for your Security Lead.
+Before we begin, make sure that the CSCP knows the contact information for your Contrast Admin and for your Security Lead.
 
 ## Administration
 Read more about configuring [System Settings](admin-systemsettings.html#system-glance), including the role of SuperAdmin.
@@ -88,9 +88,15 @@ Contrast has an ecosystem of optional [integrations](admin-orgintegrations.html)
  
 > **Note:** You can set up these configurations after including Contrast in your processes.
 
+## Get Started
 
+With everything in place, it’s time to include Contrast in your existing workflow. We’ll do the following together:
 
+* Train your team
+* Include Assess and Protect in your current workflow
+	* [Access Contrast via APIs](https://api.contrastsecurity.com/) (optional)
 
+Before we begin, make sure that the CSCP knows the contact information for your Contrast Admin, Security Lead and Development Lead for each web application server. If other people (e.g., JIRA Administrator or Software Developers) will be involved, your CSCP needs their contact information as well.
 
 ## People
 
