@@ -7,7 +7,7 @@ tags: "Admin policy TeamServer application security controls"
 
 ## About Security Controls
 
-Security controls are methods in your code that make sure data is safe to use. Only users assigned an organizational role of *Rules_Admin* or higher can view or modify security controls.
+Security controls are methods in your code that make sure data is safe to use. Only users assigned an organizational role of **Rules_Admin** or higher can view or modify security controls.
 
 There are two types of security controls:
 
@@ -32,7 +32,7 @@ After choosing a Name, Type and Language, specify the API and choose the vulnera
 
 >**Note:** Servers may require restart. Contrast provides a list of servers affected by your selection.
 
-### Vulnerability details
+### Vulnerability Details
 
 You can also create security controls in the **Details** tab of a specific vulnerability. Expanding the details of a low severity (green) event reveals a button to add a security control in the Details page.
 
@@ -57,11 +57,13 @@ When specifying the API, it's important to consider the following conventions:
 * Mark the parameters that are going to be validated or sanitized with an asterisk ( ** * **).
 
 
-## Suggested Security Controls
+### Suggested Security Controls
 
 If Contrast recognizes potential security controls, they're automatically populated in a **Suggestions** section in the Security Controls grid. (You can hide the section by clicking on the carrot in the header row.) Suggestions are governed by [Enterprise Access Control](admin-manageorgs.html#access), which allows a user to see suggestions from applications only if they have a **View** role or higher.
 
 Contrast names suggested security controls with the class and method; however, you can edit the Name, API and Type fields inline before adding it as an active security control. Hovering over the API reveals shows to the applications in which it was discovered and links directly to the Vulnerabilities tab in the application's Details page. 
+
+<a href="assets/images/Security-controls-suggested.png" rel="lightbox" title="Suggested security controls"><img class="thumbnail" src="assets/images/Security-controls-suggested.png"/></a>
 
 Click the **Add** icon in the row to accepts the suggestion and move it up in the grid as a Rule. Anyone with a **Rules_Admin** role can then view or edit it. Click the **Delete** icon to remove the suggestion (with option to Undo it). Contrast doesn't repeat suggestions, so once it's deleted, an API is never suggested again. There is no way to view historical suggestions or get them back.
 
