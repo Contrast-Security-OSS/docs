@@ -22,9 +22,11 @@ There are two types of security controls:
 
 Access security controls by navigating from the **User menu > Policy Management > Security Controls tab**. If there are existing security controls, click on the name in the grid to edit further details or delete it altogether. You can also edit the API directly in the grid.
 
+<a href="assets/images/Security-controls-grid.png" rel="lightbox" title="Security Controls grid"><img class="thumbnail" src="assets/images/Security-controls-grid.png"/></a>
+
 To create a new security control, click the **Add Security Control** button.  
 
-<a href="assets/images/SecurityControlGrid.png" rel="lightbox" title="Security Controls"><img class="thumbnail" src="assets/images/SecurityControlGrid.png"/></a>
+<a href="assets/images/Security-control-add.png" rel="lightbox" title="Add a security control"><img class="thumbnail" src="assets/images/Security-control-add.png"/></a>
 
 After choosing a Name, Type and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control. You can choose **All**, or select one or more individual vulnerabilities.
 
@@ -42,7 +44,7 @@ If you mark a vulnerability as **Not A Problem** with the reason "Goes through a
 
 In both vulnerability contexts, the **Add Security Control** dialog gives you the option to immediately create another control in your current location.
 
-## API Guidelines
+### API Guidelines
 
 When specifying the API, it's important to consider the following conventions:
 
@@ -59,13 +61,9 @@ When specifying the API, it's important to consider the following conventions:
 
 If Contrast recognizes potential security controls, they're automatically populated in a **Suggestions** section in the Security Controls grid. (You can hide the section by clicking on the carrot in the header row.) Suggestions are governed by [Enterprise Access Control](admin-manageorgs.html#access), which allows a user to see suggestions from applications only if they have a **View** role or higher.
 
-<a href="assets/images/SecurityControlSuggestions.png" rel="lightbox" title="Suggested Security Controls"><img class="thumbnail" src="assets/images/SecurityControlSuggestions.png"/></a>
-
 Contrast names suggested security controls with the class and method; however, you can edit the Name, API and Type fields inline before adding it as an active security control. Hovering over the API reveals shows to the applications in which it was discovered and links directly to the Vulnerabilities tab in the application's Details page. 
 
-Clicking the **Add** icon in the row accepts the suggestion and moves it up in the grid as a Rule. Anyone with a *Rules_Admin* role can then view or edit it. 
-
-Clicking the **Delete** icon removes the suggestion, but provides the option to Undo. Contrast doesn't repeat suggestions, so once it's deleted, an API is never suggested again. There is no way to view historical suggestions or get them back.
+Click the **Add** icon in the row to accepts the suggestion and move it up in the grid as a Rule. Anyone with a **Rules_Admin** role can then view or edit it. Click the **Delete** icon to remove the suggestion (with option to Undo it). Contrast doesn't repeat suggestions, so once it's deleted, an API is never suggested again. There is no way to view historical suggestions or get them back.
 
 ## Notifications
 
