@@ -21,7 +21,7 @@ Field | Description
 ------ | -----------
 **Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers
 **Personal Access Token** | The token associated with your user to [authenticate to your host](https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/overview).
-**Host** | The JIRA URL; must be accessible from the Contrast interface instance being configured
+**Host** | The VSTS/TFS URL; must be accessible from the Contrast interface instance being configured
 
 Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in.
 
