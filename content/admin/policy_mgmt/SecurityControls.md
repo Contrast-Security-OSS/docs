@@ -16,7 +16,7 @@ There are two types of security controls:
 * **Sanitizers** are methods that clean the data passed in, rendering it safe for consumption by any interpreter. Many sanitizers may prevent one type of attack, but not necessarily another.
 
 
-## Creating and Managing Security Controls
+## Create and Manage Security Controls
 
 ### Policy Management
 
@@ -60,7 +60,7 @@ When specifying the API, it's important to consider the following conventions:
 
 ## Suggested Security Controls
 
-If Contrast recognizes potential security controls, they're automatically populated in a **Suggestions** section in the Security Controls grid. (You can hide the section by clicking on the carrot in the header row.) Suggestions are governed by [Enterprise Access Control](admin-manageorgs.html#access), which allows a user to see suggestions from applications only if they have a *View* role or higher.
+If Contrast recognizes potential security controls, they're automatically populated in a **Suggestions** section in the Security Controls grid. (You can hide the section by clicking on the carrot in the header row.) Suggestions are governed by [Enterprise Access Control](admin-manageorgs.html#access), which allows a user to see suggestions from applications only if they have a **View** role or higher.
 
 <a href="assets/images/SecurityControlSuggestions.png" rel="lightbox" title="Suggested Security Controls"><img class="thumbnail" src="assets/images/SecurityControlSuggestions.png"/></a>
 
@@ -72,10 +72,9 @@ Clicking the **Delete** icon removes the suggestion, but provides the option to 
 
 <a href="assets/images/SecurityControlUndoRemove.png" rel="lightbox" title="Undo Option When Removing A Suggested Security Control"><img class="thumbnail" src="assets/images/SecurityControlUndoRemove.png"/></a>
 
-
 ## Notifications
 
-Auto-discovered security controls generate notifications OnEvent in Contrast the very first time they are discovered, regardless of the application. If a control is discovered for an application that for which a user doesn't have *View* role or higher, they won't receive the notification.
+Auto-discovered security controls generate notifications OnEvent in Contrast the very first time they are discovered, regardless of the application. If a control is discovered for an application that for which a user doesn't have **View** role or higher, they won't receive the notification.
 
 
 
