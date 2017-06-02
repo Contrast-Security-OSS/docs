@@ -28,9 +28,6 @@ To create a new security control, click the **Add Security Control** button.
 
 After choosing a Name, Type and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control. You can choose **All**, or select one or more individual vulnerabilities.
 
-<a href="assets/images/SecurityControlEdit.png" rel="lightbox" title="Security Control Details"><img class="thumbnail" src="assets/images/SecurityControlEdit.png"/></a>
-
-
 >**Note:** Servers may require restart. Contrast provides a list of servers affected by your selection.
 
 ### Vulnerability details
@@ -43,7 +40,7 @@ If you mark a vulnerability as **Not A Problem** with the reason "Goes through a
 
 <a href="assets/images/SecurityControlOptionDialog.png" rel="lightbox" title="Option To Create A Security Control Within The Context Of Status Marking"><img class="thumbnail" src="assets/images/SecurityControlOptionDialog.png"/></a>
 
->**Note:** In both vulnerability contexts, the **Add Security Control** dialog gives you the option to immediately create another control in your current location.
+In both vulnerability contexts, the **Add Security Control** dialog gives you the option to immediately create another control in your current location.
 
 ## API Guidelines
 
@@ -69,8 +66,6 @@ Contrast names suggested security controls with the class and method; however, y
 Clicking the **Add** icon in the row accepts the suggestion and moves it up in the grid as a Rule. Anyone with a *Rules_Admin* role can then view or edit it. 
 
 Clicking the **Delete** icon removes the suggestion, but provides the option to Undo. Contrast doesn't repeat suggestions, so once it's deleted, an API is never suggested again. There is no way to view historical suggestions or get them back.
-
-<a href="assets/images/SecurityControlUndoRemove.png" rel="lightbox" title="Undo Option When Removing A Suggested Security Control"><img class="thumbnail" src="assets/images/SecurityControlUndoRemove.png"/></a>
 
 ## Notifications
 
