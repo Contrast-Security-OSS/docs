@@ -48,9 +48,14 @@ Continue to the fields below to set a vulnerability status based on each JIRA ti
 
 | Ticket Status | Ticket Resolution  | Vulnerability Status Options                               |
 |---------------|--------------------|------------------------------------------------------------|
-| CLOSED        | WON'T FIX          | **Not a Problem** <br> Remediated <br>  Fixed <br>  Do Nothing |
-| CLOSED        | FIXED              | Not a Problem <br> **Remediated** <br>  Fixed <br> Do Nothing  |
-| REOPENED      | N/A                | **Reported** <br> Confirmed <br> Suspicious <br> Do Nothing    |
+| OPEN          | N/A                | **Confirmed** <br> Suspicious <br>  Reported               |
+| IN PROGRESS   | N/A                | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
+| RESOLVED      | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| REOPENED      | N/A                | **Confirmed** <br> Suspicious <br> Reported                |
+| CLOSED        | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| BLOCKED       | N/A                | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
+| NEEDS CLARIFICATION | N/A          | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
+| READY TO DEPLOY | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
 
 If you choose **Not a Problem**, Contrast requires you to enter a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection in the dropdown menu is **Other**. 
 
