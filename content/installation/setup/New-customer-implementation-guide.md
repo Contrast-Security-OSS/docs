@@ -52,12 +52,12 @@ To install Contrast in your own environment, we’ll do the following together.
  
 Before we begin, make sure that the CSCP knows the contact information for your Contrast Admin and for your Security Lead.
 
-## Administration
+#### Administration
 Read more about configuring [System Settings](admin-systemsettings.html#system-glance), including the role of SuperAdmin.
 
-## Agents
+### Agents
 
-Include the agent on all of your web application servers. <!-- Contrast inventories all included servers, applications in each run, vulnerabilities in each application, and CVEs in each library used by each application. --> This unlimited **inventory mode** is included for free with Contrast and doesn’t require a license.
+Include the agent on all of your web application servers. Contrast inventories all included servers, applications in each run, vulnerabilities in each application, and CVEs in each library used by each application. This unlimited **inventory mode** is included for free with Contrast and doesn’t require a license.
  
 To install the Contrast agent into an application web server, we’ll do the following together:
  
@@ -127,7 +127,7 @@ Start by turning on Assess licenses for all applications in a QA environment. Wh
 Start by turning on Protect for an application being attacked as part of a security assessment. By default, all Protect rules are in Monitor mode. Notice which attacks Protect is able to rebuff and log. Based on your environment and requirements, teach Protect about any IPs that should be implicitly trusted and added to the Trusted Hosts list, or automatically blocked and added to the Blacklist. Begin to switch any appropriate rules to Block mode in order to make your applications self protecting. Once you’re comfortable with this workflow, include Protect in deployment web servers.
 
 ## APIs
-Contrast includes APIs to give programmatic access to a myriad of features and functions. The APIs, return objects, and flows for using APIs and objects are available on the [Contrast RESTful API page](https://api.contrastsecurity.com). 
+Contrast includes APIs to give programmatic access to a myriad of features and functions. The APIs, return objects and flows for using APIs and objects are available on the [Contrast RESTful API page](https://api.contrastsecurity.com). 
  
 Access to APIs is included with your access to Contrast. Ask your CSCP for suggestions on which APIs to use to create your intended workflow. They can also help you scope any professional services that may help you.
 
