@@ -34,7 +34,7 @@ After choosing a Name, Type and Language, specify the API and choose the vulnera
 
 ### Vulnerability Details
 
-You can also create security controls in the **Details** tab of a specific vulnerability. Expanding the details of a low severity (green) event reveals a button to add a security control in the Details page.
+The Details tab is available for specific vulnerabilities for which Contrast captured runtime data flow. If Contrast notices a potential security control or an interesting event, it's shown in the tab as a low severity (green) event. After expanding the details of this event, you can click a button to add a security control. 
 
 <a href="assets/images/SecurityControlVulnEventDetail.png" rel="lightbox" title="Creating A Security Control From Vulnerability Event Details"><img class="thumbnail" src="assets/images/SecurityControlVulnEventDetail.png"/></a>
 
@@ -52,7 +52,7 @@ When specifying the API, it's important to consider the following conventions:
 
 * **.NET** must include return type (or void), method name and parameters. Use fully qualified types.
 
-* **Node** ... 
+* **Node** must include the function to be marked and the package module name. For individual files in a package, include the file path relative to the application's root directory.
 
 * Mark the parameters that are going to be validated or sanitized with an asterisk ( ** * **).
 
