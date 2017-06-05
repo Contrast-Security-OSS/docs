@@ -109,7 +109,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.contrastsecurity:ContrastGradlePlugin:1.0-SNAPSHOT"
+    classpath "gradle.plugin.com.contrastsecurity:ContrastGradlePlugin:1.1.1"
   }
 }
 
