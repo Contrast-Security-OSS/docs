@@ -48,7 +48,7 @@ To connect to the SaaS offering of Contrast, follow the instructions that are em
 
 To install Contrast in your own environment, we’ll do the following together.
 1. Verify that your configuration complies with those that are supported and suggested, which is documented in the [System Requirements](installation-setup.html#contrast-reqs) article.  
-2. Follow the steps listed in the Contrast [Installation](https://docs.contrastsecurity.com/installation-setupinstall.html) article. 
+2. Follow the steps listed in the Contrast [Installation](installation-setupinstall.html) article. 
  
 Before we begin, make sure that the CSCP knows the contact information for your Contrast Admin and for your Security Lead.
 
