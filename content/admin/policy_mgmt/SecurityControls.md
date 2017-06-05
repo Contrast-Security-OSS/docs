@@ -52,16 +52,15 @@ When specifying the API, it's important to consider the following conventions:
 
 * **.NET** must include return type (or void), method name and parameters. Use fully qualified types.
 
-<!-- * **Node** ... -->
+* **Node** ... 
 
 * Mark the parameters that are going to be validated or sanitized with an asterisk ( ** * **).
-
 
 ### Suggested Security Controls
 
 If Contrast recognizes potential security controls, they're automatically populated in a **Suggestions** section in the Security Controls grid. (You can hide the section by clicking on the carrot in the header row.) Suggestions are governed by [Enterprise Access Control](admin-manageorgs.html#access), which allows a user to see suggestions from applications only if they have a **View** role or higher.
 
-Contrast names suggested security controls with the class and method; however, you can edit the Name, API and Type fields inline before adding it as an active security control. Hovering over the API reveals shows to the applications in which it was discovered and links directly to the Vulnerabilities tab in the application's Details page. 
+Contrast names suggested security controls with the class and method; however, you can edit the Name, API and Type fields inline before adding it as an active security control. Hovering over the API gives the name of each application in which it was discovered, which links directly to the Vulnerabilities tab in the application's Details page. 
 
 <a href="assets/images/Security-controls-suggested.png" rel="lightbox" title="Suggested security controls"><img class="thumbnail" src="assets/images/Security-controls-suggested.png"/></a>
 
