@@ -36,11 +36,11 @@ After choosing a Name, Type and Language, specify the API and choose the vulnera
 
 The Details tab is available for specific vulnerabilities for which Contrast captured runtime data flow. If Contrast notices a potential security control or an interesting event, it's shown in the tab as a low severity (green) event. After expanding the details of this event, you can click a button to add a security control. 
 
-<a href="assets/images/SecurityControlVulnEventDetail.png" rel="lightbox" title="Creating A Security Control From Vulnerability Event Details"><img class="thumbnail" src="assets/images/SecurityControlVulnEventDetail.png"/></a>
+<a href="assets/images/Security-control-details-tab.png" rel="lightbox" title="Create a security control from the vulnerability Details tab"><img class="thumbnail" src="assets/images/Security-control-details-tab.png"/></a>
 
 If you mark a vulnerability as **Not A Problem** with the reason "Goes through an internal security control", you have the option to define that security control at this time. 
 
-<a href="assets/images/SecurityControlOptionDialog.png" rel="lightbox" title="Option To Create A Security Control Within The Context Of Status Marking"><img class="thumbnail" src="assets/images/SecurityControlOptionDialog.png"/></a>
+<a href="assets/images/SecurityControlOptionDialog.png" rel="lightbox" title="Create a security control after status marking"><img class="thumbnail" src="assets/images/SecurityControlOptionDialog.png"/></a>
 
 In both vulnerability contexts, the **Add Security Control** dialog gives you the option to immediately create another control in your current location.
 
