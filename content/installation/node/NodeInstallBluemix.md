@@ -8,7 +8,7 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
 
 ## Download
 
-* Download the Node.js agent from Contrast. The latest version is **nodecontrast-0.9.0.tgz**.
+* Download the Node.js agent from Contrast. 
 
 * Download the *contrast.json* file from Contrast.
 
@@ -38,7 +38,7 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
 Now the scripts section of the package.json should look like the following:
 "scripts": {
 "bluemix-with-contrast": "npm install /home/vcap/app/contrast/node-contrast-
-0.9.0.tgz && node-contrast -c /home/vcap/app/contrast/contrast.json index.js",
+x.y.z.tgz && node-contrast -c /home/vcap/app/contrast/contrast.json index.js",
 "start":"npm run bluemix-with-contrast”
 },
 ```
