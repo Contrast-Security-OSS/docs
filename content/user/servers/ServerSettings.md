@@ -30,14 +30,14 @@ Sampling is a mode of operation in Contrast that greatly reduces the runtime per
 
 You can enable sampling while downloading an engine in the **Download the Engine** step of the installation wizard. To do this, perform the following steps:
 
-1. Select **I want to configure a proxy or customize my settings**
-2. Select the **Sampling** tab and check the **Use Sampling** checkbox
+1. Select **I want to configure a proxy or customize my settings**.
+2. Select the **Sampling** tab and check the **Use Sampling** checkbox.
 3. Input **Baseline**, **Frequency** and **Window** values.
 
 #### Set sampling values
 Contrast provides helpful default values, but you may want to configure these values more precisely.
 
-* **Baseline:** How many times a URL needs to be analyzed before it is considered *sampled*. Once a URL is hit this number of times, Contrast is *turned off* during future requests for that URL, which allows them to be processed a lot faster. 
+* **Baseline:** The number of times a URL needs to be analyzed before it is considered *sampled*. Once a URL is hit this number of times, Contrast is *turned off* during future requests for that URL, which allows them to be processed a lot faster. 
 * **Frequency:** After the **Baseline** samples of a URL have been taken, only every **N**th request is analyzed fully. Frequency is the **N** value.
 * **Window:** After the given number of seconds passes, the *sampling window* is reset and the **Baseline** samples are drawn again.
 
