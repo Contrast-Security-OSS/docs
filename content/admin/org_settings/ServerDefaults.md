@@ -47,8 +47,8 @@ Contrast provides default values, but you may want to configure these values mor
 * **Frequency:** After the **Baseline** samples of a URL are taken, only every **N**th request is analyzed fully. Frequency is the **N** value.
 * **Window:** After this number of seconds passes, the *sampling window* is reset and the **Baseline** samples are drawn again.
 
-#### Enabling sampling via system properties (Java agent)
-You can also enable sampling by passing in the ```-Dcontrast.sampling``` JVM System property. Passing an empty system property enables sampling with a:
+#### Enabling sampling via system properties
+Java agent customers can also enable sampling by passing in the ```-Dcontrast.sampling``` JVM System property. Passing an empty system property enables sampling with a:
 
 * **Frequency** of 5
 * **Baseline** of 5
