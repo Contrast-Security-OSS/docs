@@ -32,9 +32,6 @@ If you choose the **Enable Output to Syslog** action, the workflow proceeds dire
 <a href="assets/images/SyslogConfigureOutput.png" rel="lightbox" title="Configure Output to Syslog"><img class="thumbnail" src="assets/images/SyslogConfigureOutput.png"/></a>
 
 * If Syslog defaults have been set in **Organization Settings**, those values are prepopulated here. 
-* If you change the organization default values, a link to restore them appears. 
-* If there is no organization default, fields are either blank or default to the first selection of dropdown menu. 
-* If there is a previous configuration other than the organization default, those values are saved and shown with the option to restore the organization defaults. 
 * If no organization default exists, there is a checkbox to set the current configuration as the default. (This option is only available to Organization Administrators.)
 
 When Syslog output is enabled on a server, the shield icon next to the server name is updated to include a blue arrow. Hovering over this icon produces a tooltip with the output location of Protection events. 
@@ -49,9 +46,7 @@ You can also control licensing within the menu. When you select **Apply Protecti
 * If checked, the workflow proceeds to the configuration dialog.
 * If a default configuration is set via **Organization Settings**, those default values are prepopulated into the dialog fields.
 
-When you choose the **Enable Output to Syslog** action from the menu, a dialog appears if any of the selected servers have previous Syslog configurations. You may then decide whether to keep the existing configurations and set up the remaining servers, or to (re)configure all. 
-* If there are no previous configurations, you're taken straight to the configuration dialog. 
-* If an organization default exists, those default values are pre-populated into the dialog fields.
+<!-- When you choose the **Enable Output to Syslog** action from the menu, a dialog appears if any of the selected servers have previous Syslog configurations. You may then decide whether to keep the existing configurations and set up the remaining servers, or to (re)configure all.  -->
 
 ## Server Settings
 

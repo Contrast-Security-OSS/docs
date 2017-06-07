@@ -4,7 +4,7 @@ description: "Overview of server settings"
 tags: "user server settings"
 -->
 
-Server Settings allow you to configure how your server functions. You can modify these configurations directly in the main Servers page or from the Server Settings dialog triggered from any server. 
+Server Settings allow you to configure how your servers function in each environment. You can modify these configurations directly in the main Servers page or from the Server Settings dialog triggered from any server. 
 
 <a href="assets/images/Individual_Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Individual_Server_Settings.png"/></a>
 
