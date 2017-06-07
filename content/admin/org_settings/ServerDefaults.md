@@ -4,14 +4,14 @@ description: "Overview of server default settings"
 tags: "Admin servers defaults organization settings sampling"
 -->
 
-Server Settings provide default configurations to be applied to new servers (agents) being brought on board. Organization administrators can customize these configurations specifically to each environment. Select Organization Settings in the user menu and Servers in the left navigation. 
+Server Settings provide default configurations to be applied to new servers (agents) being brought on board. Organization administrators can customize these configurations and set defaults specifically to each environment. Go to the **User menu > Organization Settings > Servers tab** to get started.
 
 <a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
 
 >**Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. Contrast is working on making this configurable in the future.
 
 ## Log Level
-The log level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in **Error** mode unless a problem occurs and you're asked to collect more metrics by support.
+The Log Level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in **Error** mode unless a problem occurs and you're asked to collect more metrics by support.
 
 Contrast's logs follow the general [Log4J standard](https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html), so we honor their level designations as much as possible. Contrast offers the following log levels:
 
@@ -36,34 +36,33 @@ Sampling is a mode of operation in Contrast that greatly reduces the runtime per
 
 You can enable sampling while downloading an engine in the **Download the Engine** step of the installation wizard. To do this, perform the following steps:
 
-* Select **I want to configure a proxy or customize my settings**
-* Select the **Sampling** tab and check the **Use Sampling** checkbox
-
-At this point, you can input **Baseline**, **Frequency** and **Window** values.
+1. Select **I want to configure a proxy or customize my settings**.
+2. Select the **Sampling** tab and check the **Use Sampling** checkbox.
+3. Input **Baseline**, **Frequency** and **Window** values.
 
 #### Setting sampling values
-The default values provided will help a lot, but you may want to configure these values more precisely.
+Contrast provides default values, but you may want to configure these values more precisely.
 
-* **Baseline:** This is how many times a URL needs to be analyzed before it is considered *sampled*. Once a URL has been hit this number of times, Contrast will be *turned off* during future requests for that URL, which will allow them to be processed a lot faster. 
-* **Frequency:** After the **Baseline** samples of a URL have been taken, only every **N**th request will be analyzed fully. Frequency is that **N** value.
-* **Window:** After this many seconds passes, the *sampling window* will be reset and the **Baseline** samples will be drawn again.
+* **Baseline:** The number of times a URL needs to be analyzed before it is considered *sampled*. Once a URL has been hit the given number of times, Contrast is *turned off* during future requests for that URL, which allows them to be processed a lot faster. 
+* **Frequency:** After the **Baseline** samples of a URL are taken, only every **N**th request is analyzed fully. Frequency is the **N** value.
+* **Window:** After this number of seconds passes, the *sampling window* is reset and the **Baseline** samples are drawn again.
 
 #### Enabling sampling via system properties (Java agent)
-You can also enable sampling by passing in the ```-Dcontrast.sampling``` JVM System property. Passing an empty system property will enable sampling with a:
+You can also enable sampling by passing in the ```-Dcontrast.sampling``` JVM System property. Passing an empty system property enables sampling with a:
 
->**Frequency** of 5
->**Baseline** of 5
->**Window** of 180 
+* **Frequency** of 5
+* **Baseline** of 5
+* **Window** of 180 
 
 Alternatively, you can use ```-Dcontrast.sampling``` = X, Y, Z where: 
 
->X = **Baseline**
->Y = **Frequency** 
->Z = **Window**
+* X = **Baseline**
+* Y = **Frequency** 
+* Z = **Window**
 
 ## Protection Options
 Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation.
 
-You can also output events to syslog for one or multiple servers. Read our article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
+You can also output events to Syslog for one or multiple servers. Read the article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
 
->**Note:** Turning Protection ON by default requires licenses automatically be applied to servers.
+>**Note:** Turning Protection **on** by default requires licenses automatically be applied to servers.
