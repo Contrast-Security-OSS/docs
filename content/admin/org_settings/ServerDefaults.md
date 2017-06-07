@@ -6,7 +6,7 @@ tags: "Admin servers defaults organization settings sampling"
 
 Server Settings provide default configurations to be applied to new servers (agents) being brought on board. Organization administrators can customize these configurations and set defaults specifically to each environment. Go to the **User menu > Organization Settings > Servers tab** to get started.
 
-<a href="assets/images/Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Server_Settings.png"/></a>
+<a href="assets/images/Server-settings.png" rel="lightbox" title="Server settings"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
 
 >**Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. Contrast is working on making this configurable in the future.
 
