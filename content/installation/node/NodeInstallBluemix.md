@@ -26,7 +26,7 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
 
 ```
 "bluemix-with-contrast": "npm install /home/vcap/app/contrast/node-contrast-
-0.9.0.tgz && node-contrast -c /home/vcap/app/contrast/contrast.json index.js",
+x.y.z.tgz && node-contrast -c /home/vcap/app/contrast/contrast.json index.js",
 ```
 
 ## Run the Agent
