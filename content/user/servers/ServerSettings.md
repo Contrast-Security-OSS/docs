@@ -4,9 +4,13 @@ description: "Overview of server settings"
 tags: "user server settings"
 -->
 
-Server Settings allow you to configure how your servers function in each environment. You can modify these configurations directly in the main Servers page or from the Server Settings dialog triggered from any server. 
+Server Settings allow you to configure how your servers function in each environment. You can modify these configurations directly in the Servers tab in the Organization Settings page or from the Server Settings dialog triggered from the servers grid. 
 
-<a href="assets/images/Individual_Server_Settings.png" rel="lightbox" title="Server Settings"><img class="thumbnail" src="assets/images/Individual_Server_Settings.png"/></a>
+<a href="assets/images/Individual_Server_Settings.png" rel="lightbox" title="Server Settings dialog"><img class="thumbnail" src="assets/images/Individual_Server_Settings.png"/></a>
+
+You can also set defaults for servers per environment in the Servers tab. 
+
+<a href="assets/images/Server-settings.png" rel="lightbox" title="Servers tab"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
 
 ## The Basics
 You can rename your server anything you like, and designate the environment in which a server will be running. Feel free to override the server log file path, too.
