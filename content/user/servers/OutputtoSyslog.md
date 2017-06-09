@@ -10,7 +10,7 @@ This feature allows Java clients to send security logs to a remote Syslog server
 
 ## Organization Settings
 
-Organization settings act as the default configuration for all new servers. You can set these by going to the **User menu > Organization Settings > Servers tab**. Select the checkbox to **Enable output of Protection events to Syslog**, which expands the dialog, and then enter your desired settings.
+Organization settings act as the default configuration for all new servers. You can set these by going to the **User menu > Organization Settings > Servers tab**. Select the checkbox to **Enable output of Protection events to Syslog**, which reveals additional fields, and then enter your desired settings.
 
 You can toggle through the severity badges to define severity levels for each. The defaults are:
 
@@ -18,7 +18,7 @@ You can toggle through the severity badges to define severity levels for each. T
 * **4 - Warning** for Blocked
 * **5 - Notice** for Probed
 
-For more information on this configuration, go to the [Server Defaults](admin-orgsettings.html#org-server) article. 
+For more information on creating server configurations in Organization Settings, go to the [Server Defaults](admin-orgsettings.html#org-server) article. 
 
 ## Servers Grid
 
@@ -28,7 +28,7 @@ From the **Servers** page, you can enable and configure Syslog output to individ
 
 ###Configure output to Syslog
 
-If you choose the **Enable Output to Syslog** action, the workflow proceeds directly to a configuration dialog. If environment or Syslog defaults have been set in **Organization Settings**, those values are prepopulated here.
+If you choose the **Enable Output to Syslog** action, the workflow proceeds directly to a configuration dialog. If Syslog defaults have been set for the server environment in **Organization Settings**, those values are prepopulated here.
 
 <a href="assets/images/Output-to-syslog-configure.png" rel="lightbox" title="Configure output to Syslog"><img class="thumbnail" src="assets/images/Output-to-syslog-configure.png"/></a>
 
