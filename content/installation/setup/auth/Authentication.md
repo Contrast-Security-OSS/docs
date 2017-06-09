@@ -10,6 +10,7 @@ Contrast supports a variety of authentications providers:
 * LDAP
 * Active Directory
 * Single Sign-On
+* HTTP Header
 
 ## Changing Authentication Settings
 Changing this setting will require a system restart.
