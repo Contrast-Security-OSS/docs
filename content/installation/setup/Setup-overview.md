@@ -18,7 +18,7 @@ As you prepare to [install Contrast](installation-setupinstall.html) in your own
 
 ## Setup 
 
-Take advantage of Contrast logs and tools when [running Contrast](installation-setup.html#run) on Windows or Linux. 
+Update Java options, and take advantage of Contrast logs and tools when you [run Contrast](installation-setup.html#run) on Windows or Linux. 
 
 To access configuration options, log in to the Administrative interface (/Contrast/superadmin/login.html). The bulk of the application's configuration is handled here. You can configure and update [authentication settings](installation-setupauth.html) from a variety of authentication providers, including Microsoft Active Directory, LDAP and Single Sign-On. Contrast can also be configured to automatically create a [MySQL backup](installation-setup.html#setup-mysql) of the database on a regular, scheduled basis. 
 
@@ -30,6 +30,6 @@ To connect agents connected to Contrast, install an agent into your web applicat
 
 * The [Java agent](installation-java.html#java-overview) analyzes the behavior of Java web applications running on your container of choice. 
 
-* The [.NET agent](installation-net.html#net-overview) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
+* The [.NET agent](installation-netoverview.html) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
 
 * The [Node agent](installation-node.html#node-overview) analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution. 
