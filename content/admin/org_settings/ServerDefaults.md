@@ -11,7 +11,7 @@ Server Settings provide default configurations to be applied to new servers (age
 >**Note:** Administrators are emailed each time a server is licensed. As servers go up and down frequently, you may want to setup an email filter for any unwanted traffic. Contrast is working on making this configurable in the future.
 
 ## Log Level
-The Log Level field allows you to control which events are processed by server logging, and can help you more effectively capture events. We generally recommend that you run in **Error** mode unless a problem occurs and you're asked to collect more metrics by support.
+The Log Level field allows you to control which events are processed by server logging, and can help you more effectively capture events. Contrast generally recommends that you run in **Error** mode unless a problem occurs and you're asked to collect more metrics by support.
 
 For more details on log levels, go to the [Server Settings](user-servers.html#settings) article.
 
@@ -28,8 +28,8 @@ Assessment provides detailed information on vulnerabilities discovered by Contra
 For more information on sampling and stacktraces, go to the [Server Settings](user-servers.html#settings) article.
 
 ## Protection Options
-Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation.
+Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. 
 
 You can also output events to Syslog for one or multiple servers. Read the article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
 
->**Note:** Turning Protection **on** by default requires licenses automatically be applied to servers.
+>**Note:** Turning Protection **on** by default requires that Protect licenses are automatically applied to servers.
