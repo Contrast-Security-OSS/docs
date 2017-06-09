@@ -30,6 +30,6 @@ For more information on sampling and stacktraces, go to the [Server Settings](us
 ## Protection Options
 Protection provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protection on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. 
 
-You can also output events to Syslog for one or multiple servers. Read the article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
+Protection also allows you to output events to Syslog for one or multiple servers. Read the article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
 
 >**Note:** Turning Protection **on** by default requires that Protect licenses are automatically applied to servers.
