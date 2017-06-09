@@ -14,11 +14,9 @@ Using Assess, Protect or both requires two installations:
 
 We strongly advise the use of Contrast Software as a Service (SaaS). It’s SOC-2 Type II compliant, and gets security and feature updates as they become available. To connect to SaaS mode, follow the instructions provided to your administrator. These instructions also contain the credentials you need to log in to the Contrast application. 
 
-As you prepare to [install Contrast](installation-setupinstall.html) in your own environment, verify that your configuration complies with Contrast's [system requirements](installation-setup.html#contrast-reqs) and [sizing requirements](installation-setup.html#size). 
+As you prepare to [install Contrast](installation-setupinstall.html) in your own environment, verify that your configuration complies with Contrast's [system requirements](installation-setup.html#contrast-reqs) and [sizing requirements](installation-setup.html#size). You can also update Java options, and take advantage of Contrast logs and tools when you [run Contrast](installation-setup.html#run) on Windows or Linux. 
 
-## Setup 
-
-Update Java options, and take advantage of Contrast logs and tools when you [run Contrast](installation-setup.html#run) on Windows or Linux. 
+## Configuration  
 
 To access configuration options, log in to the Administrative interface (/Contrast/superadmin/login.html). The bulk of the application's configuration is handled here. You can configure and update [authentication settings](installation-setupauth.html) from a variety of authentication providers, including Microsoft Active Directory, LDAP and Single Sign-On. Contrast can also be configured to automatically create a [MySQL backup](installation-setup.html#setup-mysql) of the database on a regular, scheduled basis. 
 
@@ -26,7 +24,7 @@ Begin [onboarding applications](installation-setup.html#onboard) by choosing an 
 
 ## Agents 
 
-To connect agents connected to Contrast, install an agent into your web application server. Contrast inventories all included servers, applications in each run, vulnerabilities in each application, and CVEs in each library used by each application.
+To connect to Contrast agents, install an agent into your web application server. Contrast inventories all included servers, applications in each run, vulnerabilities in each application, and CVEs in each library used by each application.
 
 * The [Java agent](installation-java.html#java-overview) analyzes the behavior of Java web applications running on your container of choice. 
 
