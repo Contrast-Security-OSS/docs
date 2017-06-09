@@ -20,9 +20,9 @@ As you prepare to [install Contrast](installation-setupinstall.html) in your own
 
 Take advantage of Contrast logs and tools when [running Contrast](installation-setup.html#run) on Windows or Linux. 
 
-To access configuration options, log in to the Administrative interface(/Contrast/superadmin/login.html). The bulk of the application's actual configuration is handled through this interface. You can configure and update [authentication settings](installation-setupauth.html) from a variety of authentication providers, including Microsoft Active Directory, LDAP and Single Sign-On. Contrast can also be configured to automatically create a [MySQL backup](installation-setup.html#setup-mysql) of the database on a regular, scheduled basis. 
+To access configuration options, log in to the Administrative interface (/Contrast/superadmin/login.html). The bulk of the application's configuration is handled here. You can configure and update [authentication settings](installation-setupauth.html) from a variety of authentication providers, including Microsoft Active Directory, LDAP and Single Sign-On. Contrast can also be configured to automatically create a [MySQL backup](installation-setup.html#setup-mysql) of the database on a regular, scheduled basis. 
 
-[Onboard applications](installation-setup.html#onboard) by downloading the Contrast agent that's right for you. 
+Begin [onboarding applications](installation-setup.html#onboard) by choosing an application server that you want Contrast to analyze. You can then download and install the Contrast agent that's right for you. 
 
 ## Agents 
 
