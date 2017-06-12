@@ -9,7 +9,7 @@ Contrast provides role-based access control (RBAC) capabilities through groups. 
 ## System Administration Groups
 A system group is a convenient way to manage administrative tasks across users and organizations. Users can belong to many groups. They do not have to be created within an organization in order to gain access to that organization. 
 
-### Managing System Groups
+### Manage System Groups
 When a user is added to a system administration group that contains one or more organizations outside their default organization, they will then have access to the System Administration interface. A new **SuperAdmin** option in the user menu will be available for them to navigate to for managing the organization(s), applications, users and groups associated with the organization(s) defined. 
 
 Go to the **Groups** page in the System Administration interface. From there:
@@ -30,7 +30,7 @@ Contrast provides four default groups within each organization. These groups pro
 * **Rules Admin:** Allows users all the capability of the Edit role plus the ability to manage security rules for an application 
 * **Admin** Provides full access to configure an application  
 
-### Managing Organization Groups
+### Manage Organization Groups
 Organization administrators can create custom groups within an organization for the purpose of providing granular control and/or access at the application level. A user assigned to an organization can have various roles across applications within that organization. That role grants or restricts what he/she can do with the application. This supports the most common deployments of Contrast in which an organization contains multiple applications with many users; however, the users associated with the organization may only require awareness of one or just a couple of the many applications within the organization. This allows users to focus directly on what matters to them rather than sorting through infromation that has no bearing on their work. 
 
 Go to the **Groups** section of the Organization Settings page. From there:
@@ -48,9 +48,19 @@ In some cases, a user has a GUEST designation next to their name on the **Users*
 
 Guest users can’t be managed by an Organization Admin. They have the organization role and the application access provided to them by the system-created organization group. An Organization Admin can add a guest user to their organization by clicking on the GUEST link. Once this has happened, that user can then be edited as well as assigned to any group. Deleting a user that was once a guest reverts that user back to a GUEST user, if they still have access to the organization from a system-created group.
 
-#### Access Collision
-If you place a user into multiple groups that provide different role access to the same application, it creates access collision. Contrast handles collisions by the rule of least privileges: the group that provides the most restrictive access applies their access to the applications involved.
+#### Role Collision
 
->**Example:** One group provides Edit level access to App1, another group provides Admin level access to App1, and you place a user in both groups. The user’s access for App1 will be Edit because it’s more restrictive than Admin.
+If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. Contrast handles collisions by the rule of least privileges: the role that provides the most restrictive access applies. The roles, from most to least restrictive: No Access, View, Edit, Rules Admin, Admin.
 
-An administrator can see the level of access assigned to a user and which groups provide that access by editing the user and scrolling down to see the user’s organization permissions. Hovering over the access indicators provides information regarding the group that provides the existing level of access.
+> **Example:** If you assigned a user to the default "Admin" group and then assigned that same user to the "Edit" group, the user would have the "Edit" role for all applications since "Edit" is more restrictive than "Admin".
+
+Contrast also handles role collision by determining the specificity of the role assignment. Roles assigned to a specific application override a role assigned to all applications, even if the application specific role is more permissive than the role given to all applications. 
+
+> **Example:** If you assigned a user to the default "View" group, and then assigned them to a custom access group that provides the "Admin" role to App1, the user has the "Admin" role for App1 and the "View" role for the remaining applications.
+
+If a user is assigned to two custom groups that provide roles to the same application, the rule of least privilege applies.
+
+> **Example:** If you assigned a user to a custom group that provides the "Rules Admin" role to App1, and then assigned them to another group that provides the "No Access" role to App1, the user has "No Access" to App1 because "No Access" is more restrictive than "Rules Admin".
+
+An administrator can see the level of access assigned to a user and which groups provide that access by editing the user and scrolling down to see the user’s organization permissions. Hovering over the access indicators provides information about the group that provides the existing level of access.
+
