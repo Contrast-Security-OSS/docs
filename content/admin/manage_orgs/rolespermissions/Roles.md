@@ -5,12 +5,12 @@ tags: "Admin manage TeamServer roles observer superadmin system"
 -->
 
 ## System Roles
-Contrast offers system roles for Enterprise on Premises (EOP) customers responsible for administrating and managing the Contrast UI. There are three system roles:
+Contrast offers system roles for Enterprise on Premises (EOP) customers responsible for administrating and managing the Contrast interface. There are three system roles:
 
 | Role                 | Description                                                                                                                                                                                                                                                          |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SuperAdmin           | The SuperAdmin role is assigned to a select individual or group of individuals who are primarily responsible for the system administration of Contrast. These activities include installation, upgrades, licensing, integrations and other advanced configurations. |
-| System Administrator | The System Administrator role provides one or more users the ability to create, manage and delete organizations and groups. They can view users to assign to groups.
+| System Administrator | The System Administrator role provides one or more users the ability to create, manage and delete organizations and groups. They can view users to assign them to groups.
 | Observer             | The Observer role provides one or more users read-only access to organizations, users, applications, groups and traces.                                                                                                                                              |
 
 ## Organization Roles
@@ -18,7 +18,7 @@ Every user is provided a default role for the default organization. Users that a
 
 | Role                 | Description                                                                                                                                                                                                                                                          |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Administrator | The Organization Administrator is responsible for configuration of the organization. This user has the ability to license applications, manage user accounts and perform other advanced configuration functions found in Organization Settings. |
+| Administrator | The Organization Administrator is responsible for configuration of the organization. This user can license applications, manage user accounts and perform other advanced configuration functions found in Organization Settings. |
 | Editor        | The Organization Editor can interact with the full lifecycle of traces and vulnerabilities as well as bring applications online and delete them. This user has no administration capabilities and can't perform any organization administration functions. This role is appropriate for the vast majority of Contrast users. |
 | Rules Admin   | The Rules Administrator has edit privilege to rules. Essentially, this user role inherits the same functionality as a user with the Editor role. |
 | View          | The user has read-only access to an organization's findings in Contrast. |
@@ -26,7 +26,7 @@ Every user is provided a default role for the default organization. Users that a
 
 
 ## Application Roles
-When you include a user in an organization group, you have the option to provide the user with a default organization role, as well as define individual application roles for more granular control of what a user can or can't do with an application. There are five application roles:
+When you include a user in an organization group, you can provide the user with a default organization role, as well as define individual application roles for more granular control of user permissions with an application. There are five application roles:
 
 | Role                 | Description                                                                                                                                                                                                                                                          |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
