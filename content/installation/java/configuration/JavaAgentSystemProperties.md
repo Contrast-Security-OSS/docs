@@ -12,6 +12,8 @@ This markdown file could be generated directly from the command line. To do so, 
 You can combine the above command with tools like *grep* to search for commands, for example:
 `java -jar path/to/contrast.jar properties | grep -A5 "proxy"` would yield a list of proxy-related properties.
 
+To tell an agent to send its environment to Contrast, add this JVM option: `-Dcontrast.env=<environment>`. For example, if you want to tell Contrast that an agent is part of the QA environment, add `-Dcontrast.env=qa`.
+
 |Property|Description|
 |-|-|
 | contrast.activity | boolean to enable/disable the Contrast activity thread<br>**DEFAULT VALUE:** true</br> |
