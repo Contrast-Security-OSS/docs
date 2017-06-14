@@ -17,6 +17,9 @@ To get started, go to the **Users** tab in the Organization Settings page. From 
 ## User Roles
 There are several different roles that can be selected for Users within an organization. 
 
+### Unassigned
+A user is Unassigned by default for all applications. If a user has been assigned another role - general or specific - it replaces the Unassigned role for the given applications. A user has no access to the applications for which they have the Unassigned role. 
+
 ### View
 The View user can access the user interface and browse the organization's applications in Read-Only mode. The View user can't perform edits to traces or the application.
 

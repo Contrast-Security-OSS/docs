@@ -23,7 +23,7 @@ Go to the **Groups** page in the System Administration interface. From there:
 ## Organization Groups
 An organization group is used to assign authorized users access to organizations and applications. An Organization Admin can create, edit and delete groups from the Organization Settings page. System administrators (EOP only) may also create [Cross-Organization Groups](admin-manageorgs.html#crossorg) to allow users access to more than one organization.
 
-Contrast provides four default groups within each organization. These groups provide access to all applications in the organization with the associated role. That role grants or restricts what he/she can do with the application. Those roles are:
+Contrast provides four default groups within each organization. These groups provide access to all applications in the organization with the associated role. That role grants or restricts what the user can do with the application. Those roles are:
 
 * **View:** Allows users to see an application's score, libraries and vulnerabilities, and add comments
 * **Edit:** Allows users to manage an application's vulnerabilities as well as basic application management functions
@@ -50,17 +50,19 @@ Guest users can’t be managed by an Organization Admin. They have the organizat
 
 #### Role Collision
 
-If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. Contrast handles collisions by the rule of least privileges: the role that provides the most restrictive access applies. The roles, from most to least restrictive: No Access, View, Edit, Rules Admin, Admin.
+If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. The roles, from most to least restrictive, are Unassigned, View, Edit, Rules Admin, Admin. For more information on each role, see the [Manage Users](admin-manageorgs.html#manage-user) article.
 
-> **Example:** If you assigned a user to the default "Admin" group and then assigned that same user to the "Edit" group, the user would have the "Edit" role for all applications since "Edit" is more restrictive than "Admin".
+Contrast handles collisions by the rule of least privileges: the role that provides the most restrictive access applies.
 
-Contrast also handles role collision by determining the specificity of the role assignment. Roles assigned to a specific application override a role assigned to all applications, even if the application specific role is more permissive than the role given to all applications. 
+> **Example:** If you assign a user to the "Admin" group and then assign that same user to the "Edit" group, the user has the "Edit" role for all applications because "Edit" is more restrictive than "Admin".
 
-> **Example:** If you assigned a user to the default "View" group, and then assigned them to a custom access group that provides the "Admin" role to App1, the user has the "Admin" role for App1 and the "View" role for the remaining applications.
+Contrast also handles role collision by determining the specificity of the role assignment. A role assigned to a specific application overrides a role assigned to all applications, even if the application-specific role is more permissive than the role given to all applications. 
+
+> **Example:** If you assign a user to the "View" group, and then assign them to a custom access group that provides the "Admin" role to App1, the user has the "Admin" role for App1 and the "View" role for the remaining applications.
 
 If a user is assigned to two custom groups that provide roles to the same application, the rule of least privilege applies.
 
-> **Example:** If you assigned a user to a custom group that provides the "Rules Admin" role to App1, and then assigned them to another group that provides the "No Access" role to App1, the user has "No Access" to App1 because "No Access" is more restrictive than "Rules Admin".
+> **Example:** If you assign a user to a custom group that provides the "Rules Admin" role to App1, and then assign them to another group that provides the "No Access" role to App1, the user has "No Access" to App1 because both roles are specific and "No Access" is more restrictive than "Rules Admin".
 
 An administrator can see the level of access assigned to a user and which groups provide that access by editing the user and scrolling down to see the user’s organization permissions. Hovering over the access indicators provides information about the group that provides the existing level of access.
 
