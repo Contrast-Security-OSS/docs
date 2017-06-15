@@ -18,4 +18,6 @@ To set a library policy, go to the **User menu > Policy Management > Library Pol
 
 Check the box to **Restrict libraries** and click on the multiselect field choose the libraries you want to include. Check the box to **Enable version requirements** and click on the multiselect field choose one or multiple libraries that must be within your given number of versions. Click the **Add another requirement** link to create version requirements for additional library groupings. 
 
-By checking the box to **Fail libraries in violation of policy**, you allow Contrast to automatically assign a failing score (F) to any library that violates a set policy. If you choose this option, Contrast alerts you when adjusting Score Settings in the **Organization Management** page. To learn more about scoring and how it applies to libraries, go to the [Score Settings](admin-orgsettings.html#score-settings) article. 
+By checking the box to **Fail libraries in violation of policy**, you allow Contrast to automatically assign a failing score (F) to any library that violates a set policy. If you choose this option, Contrast alerts you when adjusting Score Settings in the **Organization Management** page. To learn more about scoring libraries, go to the [Score Settings](admin-orgsettings.html#score-settings) article. 
+
+If a library fails to comply with a set policy, the name and a warning icon are highlighted in red in the **Libraries** page. Hover over the icon or go the the library's details page for more information about the violation. 
