@@ -31,8 +31,8 @@ When you include a user in an organization group, you can provide the user with 
 | Role                 | Description                                                                                                                                                                                                                                                          |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Administrator | The Organization Administrator has no restrictions within the application. |
-| Edit          | The Editor can remediate findings, edit attributes about the application, and create or delete applications and servers. |
-| Rules Admin   | The Rules Administrator has edit privilege to rules. Essentially, this user role inherits the same functionality as a user with the Editor role. |
+| Edit          | The Edit-level user can remediate findings, edit attributes about the application, and create or delete applications and servers. |
+| Rules Admin   | The Rules Administrator has the same functonality as an Editor user; however, this user can also edit rules. |
 | View          | The user has read-only access to the application, which limits the user to viewing application findings in Contrast. |
-| No Access     | The user has no access to the application. |
+| Unassigned    | The user has no access to the application, if not assigned to a group. |
 
