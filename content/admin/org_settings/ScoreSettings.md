@@ -20,4 +20,4 @@ This determines how applications are scored in Contrast.
 
 <a href="assets/images/Library_Score_Settings.png" rel="lightbox" title="Score Settings"><img class="thumbnail" src="assets/images/Library_Score_Settings.png"/></a>
 
-You can also configure policy settings in **Policy Management** so that any library in violation automatically receives a failing score (F). Once these settings are chosen, you'll see an alert message in Score Settings. Clicking the policy link in the alert navigates you to Library Policy, where administrators may view and revise these settings.
+You can also configure policy settings in **Policy Management** so that any library in violation automatically receives a failing score (F). Once these settings are chosen, you'll see an alert message in Score Settings. Clicking the policy link in the alert navigates you to [Library Policy](admin-policymgmt.html#library), where administrators may view and revise these settings.
