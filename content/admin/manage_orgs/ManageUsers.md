@@ -11,13 +11,13 @@ To get started, go to the **Users** tab in the Organization Settings page. From 
 * Onboard new users by clicking the **Add User** button.
 * See all users or focus on one in particular with the user search or quick views beside the search field.
 * **View** the details of any user, including their permissions throughout the organization, by clicking the User Name.
-* **Edit** a user from the **Edit User** page by clicking the User Name and make any modifications as needed. You can change their Organization Role or Application Access Group as well as enable or disable their access Contrast. Make sure to Save changes.
+* **Edit** a user from the **Edit User** page by clicking the User Name and make any modifications as needed. You can change their Organization Role or Application Access Group as well as enable or disable their access Contrast. Make sure to **Save** changes.
 * **Delete** a user by clicking the trash can icon on the row. This action is also available in the lower-left corner of the Edit User page when viewing the details of a user. Once the action is confirmed, the user is removed and no longer has access to the organization. 
 
 ## User Roles
 There are several different roles that an administrator can assign to users within an organization. By default, the user doesn't possess any roles. If no role is assigned to a user for any or all applications, the user has no access to those applications. 
 
-### No access
+### No Access
 A user with the No Access role can access the user interface, but has no access to the application(s) that the administrator chose to block. 
 
 ### View
