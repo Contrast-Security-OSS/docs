@@ -17,17 +17,20 @@ To get started, go to the **Users** tab in the Organization Settings page. From 
 ## User Roles
 There are several different roles that an administrator can assign to users within an organization. By default, the user doesn't possess any roles. If no role isn't assigned to a user for any or all applications, the user has no access to those applications. 
 
+### No access
+A user with the No Access role can access the user interface, but has no access to the application(s) that the administrator chose to block. 
+
 ### View
-The View user can access the user interface and browse the organization's applications in Read-Only mode. The View user can't perform edits to traces or the application.
+A View user can access the user interface and browse the organization's applications in Read-Only mode. The View user can't perform edits to traces or the application.
 
 ### Edit
-The Edit user has all the rights of the view user plus the ability to edit information about traces, such as updating triage status and making notes.
+A Edit user has all the rights of the view user plus the ability to edit information about traces, such as updating triage status and making notes.
 
 ### Rules Admin
-The rules administrator has all the privileges of the Edit user plus the ability to manage rule information at the organizational level. This includes tasks such as adding validation and sanitization methods, and adding organization guidance and references to existing rules.
+A rules administrator has all the privileges of the Edit user plus the ability to manage rule information at the organizational level. This includes tasks such as adding validation and sanitization methods, and adding organization guidance and references to existing rules.
 
 ### Administrator
-The Organization Administrator is responsible for overall management of the organization within Contrast. This user can add and delete users, update the configuration settings for an organization and make purchases (SaaS Only).
+A Organization Administrator is responsible for overall management of the organization within Contrast. This user can add and delete users, update the configuration settings for an organization and make purchases (SaaS Only).
 
 ### API-Only Users
 An API-Only user can access Contrast's REST API, but not log in to the user interface. <!-- An API-Only user can also be granted and of the roles described above (creating administrator API accounts is not recommended). -->
