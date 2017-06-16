@@ -26,7 +26,7 @@ Every user is provided a default role for the default organization. Users that a
 
 
 ## Application Roles
-When you include a user in an organization group, you can provide the user with a default organization role, as well as define individual application roles for more granular control of user permissions with an application. By default, a user won't have any access to applications for which they haven't been assigned a role. There are four primary application roles and a fifth role used to exclude one or more users from accessing the organization.
+When you include a user in an organization group, you can provide the user with a default organization role, as well as define individual application roles for more granular control of user permissions with an application. By default, a user won't have any access to applications for which they haven't been assigned a role. There are four primary application roles and a fifth role used to block a user from accessing one or more applications.
 
 | Role                 | Description                                                                                                                                                                                                                                                          |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
