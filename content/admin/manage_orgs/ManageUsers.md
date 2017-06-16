@@ -15,10 +15,7 @@ To get started, go to the **Users** tab in the Organization Settings page. From 
 * **Delete** a user by clicking the trash can icon on the row. This action is also available in the lower-left corner of the Edit User page when viewing the details of a user. Once the action is confirmed, the user is removed and no longer has access to the organization. 
 
 ## User Roles
-There are several different roles that can be selected for Users within an organization. 
-
-### Unassigned
-A user is Unassigned by default for all applications. If a user has been assigned another role - general or specific - it replaces the Unassigned role for the given applications. A user has no access to the applications for which they have the Unassigned role. 
+There are several different roles that an administrator can assign to users within an organization. By default, the user doesn't possess any roles. If no role isn't assigned to a user for any or all applications, the user has no access to those applications. 
 
 ### View
 The View user can access the user interface and browse the organization's applications in Read-Only mode. The View user can't perform edits to traces or the application.
