@@ -15,7 +15,7 @@ To get started, go to the **Users** tab in the Organization Settings page. From 
 * **Delete** a user by clicking the trash can icon on the row. This action is also available in the lower-left corner of the Edit User page when viewing the details of a user. Once the action is confirmed, the user is removed and no longer has access to the organization. 
 
 ## User Roles
-There are several different roles that an administrator can assign to users within an organization. By default, the user doesn't possess any roles. If no role isn't assigned to a user for any or all applications, the user has no access to those applications. 
+There are several different roles that an administrator can assign to users within an organization. By default, the user doesn't possess any roles. If no role is assigned to a user for any or all applications, the user has no access to those applications. 
 
 ### No access
 A user with the No Access role can access the user interface, but has no access to the application(s) that the administrator chose to block. 
