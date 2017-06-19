@@ -9,7 +9,7 @@ As Contrast assesses your applications, it can also flag libraries that don't me
 
 ##How It Works 
 
-If a library is restricted or used in an application is below a specific version, it's marked as a policy violation by Contrast. You can also tell Contrast to automatically grade any library that fails the policy with the letter "F" to flag it in the Contrast interface. (Administrators are notified of violations in both the product and by email.)
+If a library is restricted or used in an application that's below a specific version, it's marked as a policy violation by Contrast. You can also tell Contrast to automatically grade any library that violates the policy with the letter "F" to flag it in the Contrast interface. (Administrators are notified of violations in both the product and by email.)
 
 ## Set Up Policies
 
@@ -17,7 +17,7 @@ To set a library policy, go to the **User menu > Policy Management > Library Pol
 
 <a href="assets/images/Library-policy.png" rel="lightbox" title="Security Controls grid"><img class="thumbnail" src="assets/images/Library-policy.png"/></a>
 
-Check the box to **Restrict libraries** and click on the multiselect field to choose which libraries you want to include. Check the box to **Enable version requirements** and click on the multiselect field choose one or multiple libraries that must be within your given number of versions. Click the **Add another requirement** link to create version requirements for additional library groupings. 
+Check the box to **Restrict libraries** and click on the multiselect field to choose which libraries you want to exclude from your portfolio. Check the box to **Enable version requirements** and click on the multiselect field to choose one or multiple libraries that must be within your given number of versions. Click the **Add another requirement** link to create version requirements for additional library groupings. 
 
 ### Fail libraries 
 
