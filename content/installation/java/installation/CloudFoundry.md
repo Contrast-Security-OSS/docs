@@ -3,7 +3,7 @@ title: "Running Contrast on Cloud Foundry"
 description: "Agent configuration using the Contrast service broker, Contrast buildpack, and the Pivotal Tile"
 tags: "java agent installation pivotal cloud foundry tile buildpack"
 -->
-Contrast offers a variety of Cloud Foundry integrations for your applications using the default Java buildpack. You can use the buildpack on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker is the next step towards closer integration between Contrast and a Cloud Foundry.The service broker allows you to define multiple service plans, and allows you to generate service instances in order to bind to applications.
+Contrast offers a variety of Cloud Foundry integrations for your applications using the default Java buildpack. You can use the buildpack on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker allows you to define multiple service plans, and allows you to generate service instances in order to bind to applications.
 
 For Pivotal Cloud Foundry (PCF) customers, Contrast offers a Pivotal tile. This tile automates the BOSH deployment and configuration of the Contrast service broker.
 
@@ -285,10 +285,9 @@ Pivotal Apps Manager example:
 <a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through UI"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
 
 [Contrast Security]: https://www.contrastsecurity.com
-[Configuration and Extension]: ../README.md#configuration-and-extension
 [Contrast Security Service]: https://www.contrastsecurity.com
-[`config/contrast_security_agent.yml`]: ../config/contrast_security_agent.yml
-[Configuration and Extension]: ../README.md#configuration-and-extension
-[repositories]: extending-repositories.md
+[`config/contrast_security_agent.yml`]: https://github.com/cloudfoundry/java-buildpack/blob/master/config/contrast_security_agent.yml
+[Configuration and Extension]: https://github.com/cloudfoundry/java-buildpack/blob/master/README.md#configuration-and-extension
+[repositories]: https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-repositories.md
 [this listing]: https://artifacts.contrastsecurity.com/agents/java/index.yml
-[version syntax]: extending-repositories.md#version-syntax-and-ordering
+[version syntax]: https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-repositories.md#version-syntax-and-ordering
