@@ -33,5 +33,5 @@ A rules administrator has all the privileges of the Edit user plus the ability t
 An Organization Administrator is responsible for overall management of the organization within Contrast. This user can add and delete users, update the configuration settings for an organization and make purchases (SaaS Only).
 
 ### API-Only Users
-An API-Only user can access Contrast's REST API, but not log in to the user interface. <!-- An API-Only user can also be granted and of the roles described above (creating administrator API accounts is not recommended). -->
+An API-Only user can access Contrast's REST API, but not log in to the user interface. Contrast does not recommend creating administrator API accounts.
 
