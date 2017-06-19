@@ -4,7 +4,7 @@ description: "Managing Users in Contrast"
 tags: "Admin manage organization configuration TeamServer Users roles permissions API"
 -->
 
-Administrators (EOP customers only) can add users to the system via the SuperAdmin interface or within an organization. Adding a user to a [system group](admin-manageorgs.html#access) to provides them access to the System Administration interface or allows them to perform activities across organizations in [cross-organization groups](admin-manageorgs.html#crossorg). More often, you can also add users within a single organization with a defined role to determine their application access and privileges.
+Administrators (EOP customers only) can add users to the system via the SuperAdmin interface or within an organization. Adding a user to a [system group](admin-manageorgs.html#access) provides them access to the System Administration interface or allows them to perform activities across organizations in [cross-organization groups](admin-manageorgs.html#crossorg). More often, you can also add users within a single organization with a defined role to determine their application access and privileges.
 
 To get started, go to the **Users** tab in the Organization Settings page. From there:
 
@@ -24,13 +24,13 @@ A user with the No Access role can access the user interface, but has no access 
 A View user can access the user interface and browse the organization's applications in Read-Only mode. The View user can't perform edits to traces or the application.
 
 ### Edit
-A Edit user has all the rights of the view user plus the ability to edit information about traces, such as updating triage status and making notes.
+An Edit user has all the rights of the view user plus the ability to edit information about traces, such as updating triage status and making notes.
 
 ### Rules Admin
 A rules administrator has all the privileges of the Edit user plus the ability to manage rule information at the organizational level. This includes tasks such as adding validation and sanitization methods, and adding organization guidance and references to existing rules.
 
 ### Administrator
-A Organization Administrator is responsible for overall management of the organization within Contrast. This user can add and delete users, update the configuration settings for an organization and make purchases (SaaS Only).
+An Organization Administrator is responsible for overall management of the organization within Contrast. This user can add and delete users, update the configuration settings for an organization and make purchases (SaaS Only).
 
 ### API-Only Users
 An API-Only user can access Contrast's REST API, but not log in to the user interface. <!-- An API-Only user can also be granted and of the roles described above (creating administrator API accounts is not recommended). -->
