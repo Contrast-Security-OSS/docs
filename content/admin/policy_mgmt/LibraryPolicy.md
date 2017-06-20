@@ -23,4 +23,4 @@ Check the box to **Restrict libraries** and click on the multiselect field to ch
 
 By checking the box to **Fail libraries in violation of policy**, you allow Contrast to automatically assign a failing score to any library that violates a set policy. If a library fails to comply with a set policy, the name, a warning icon and the library grade are highlighted in red in the **Libraries** page. Hover over the icon or go the the library's details page for more information about the violation. 
 
-If you choose this option, Contrast alerts you when adjusting Score Settings in the **Organization Management** page. To learn more about scoring libraries, go to the [Score Settings](admin-orgsettings.html#score-settings) article. 
+If you choose to automatically fail libraries, Contrast alerts you when adjusting Score Settings in the **Organization Management** page. To learn more about scoring libraries, go to the [Score Settings](admin-orgsettings.html#score-settings) article. 

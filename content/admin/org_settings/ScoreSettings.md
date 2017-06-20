@@ -13,7 +13,7 @@ This determines how applications are scored in Contrast.
 * **Custom Code-Only Scoring** ignores library score when calculating the overall application score. You have the option to select specific languages, as shown. 
 
 ## Library Score
-There are two ways to determine how libraries are scored in Contrast:
+There are two methods for determining library scores in Contrast:
 
 * **Default Scoring** uses an algorithm that includes vulnerabilities as well as the age and versioning of a library.
 * **Vulnerability-Only Scoring** bases scoring solely on vulnerabilities present in the library.
