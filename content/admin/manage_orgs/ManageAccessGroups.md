@@ -32,7 +32,7 @@ Contrast provides four default groups within each organization. These groups pro
 ### Manage Organization Groups
 Organization administrators can create custom groups within an organization for the purpose of providing granular control and/or access at the application level. This supports the most common deployments of Contrast, in which an organization contains multiple applications with many users.
 
-A user assigned to an organization can have various roles across applications within that organization; each role grants or restricts what the user can do with the given application. However, the users associated with the organization may only require awareness of one or few of the many applications within the organization. This allows users to focus directly on what matters to them rather than sorting through infromation that has no bearing on their work. 
+A user assigned to an organization can have various roles across applications within that organization; each role grants or restricts what the user can do with the given application. However, the users associated with the organization may only require awareness of one or few of the many applications within the organization. This allows users to focus directly on what matters to them rather than sorting through information that has no bearing on their work. 
 
 Go to the **Groups** section of the Organization Settings page. From there:
 
@@ -50,7 +50,7 @@ An Organization Admin can add a guest user to their organization by clicking on 
 
 #### Role Collision
 
-If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. The roles, from most to least restrictive, are: No Access, View, Edit, Rules Admin, Admin. If no role is assigned to a user for any or applications, the user has no access to those applications. For more information on each role, see the [Manage Users](admin-manageorgs.html#manage-user) article.
+If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. The roles, from most to least restrictive, are: No Access, View, Edit, Rules Admin, Admin. If the user has no role assigned to an application, the user won't be able to access it. For more information on each role, see the [Manage Users](admin-manageorgs.html#manage-user) article.
 
 Contrast handles collisions by the rule of least privileges: the role that provides the most restrictive access applies.
 
