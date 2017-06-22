@@ -22,9 +22,9 @@ Yada, yada, yada...
 * 
 
 ## Improvements 
-* Set environment-specific defaults for servers before they even come online! 
+* Set environment-specific [defaults for servers](admin-orgsettings.html#org-server) before they even come online! 
 * We added Compliance Policies to help you watch out for noncompliant applications based on rules or security standards like DISA STIG, PCI DSS or OWASP Top-10.
-* If you want to use HTTP header authentication, we now support client-side SSL PKI certificates
+* Contrast supports x509 client certificate authentication through a [Trusted HTTPS proxy](installation-setupauth.html#http-proxy)
 * Our new vulnerability standards filter in the Vulnerability Trend Report lets you sort your applications by security standards.
 * Protect log events now have the application name embedded in them for easier identification with other events. If only those phone numbers from last night were so easy...
 * New user default for Access Control groups helps roles avoid a nasty collision. (Unless, you know, you want to...)
