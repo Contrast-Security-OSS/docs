@@ -9,7 +9,7 @@ As Contrast assesses your applications, it can flag vulnerabilities that don't m
 
 ## How It Works 
 
-Administrators can define requirements for vulnerability remediation based on any vulnerability type or severity as well as any application(s) which should comply. Contrast then marks any vulnerabilities in violation of this policy with a warning in the interface. (Administrators are also notified of violations both in the product and via email.)
+Administrators can define requirements for vulnerability remediation based on any vulnerability type or severity as well as any application(s) which should comply. Contrast then marks any vulnerabilities in violation of this policy with a warning in the interface. (Administrators are also notified of violations both in the product and by email.)
 
 ## Set Up Policies
 
