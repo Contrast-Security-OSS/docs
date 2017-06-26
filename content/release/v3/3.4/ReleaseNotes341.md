@@ -4,7 +4,7 @@ description: "Contrast 3.4.1 June 2017"
 tags: "3.4.1 June Release Notes"
 -->
 
-New application Compliance policies, environment-specific defaults for servers, and a security standards filter for Vulnerability Trend reports make it easier to set your sights high and keep them there. You're not bossy - you're the boss! 
+New application Compliance policies, environment-specific defaults for servers, and a security standards filter for Vulnerability Trend reports make it easier to set your sights high and keep them there. 
 
 ## Fixes
 * Added some stickiness to New and Total views in Vulnerability Trend, so it's there when you come back to it.  
@@ -31,5 +31,5 @@ New application Compliance policies, environment-specific defaults for servers, 
 
 * **.NET Agent Summary:** We added IIS Express support and looked into CLR2 support under Duplex instrumentation. We also added Protect bot blocking and body parsing to detect attacks in API applications, and got rid of a few bugs for overall accuracy and reliability. 
 
-* **Node.js Agent Summary:** While were nearly one hundrd percent focused on Protect, we fixed a bug where libraries weren't reporting when an applications started from non-app-root directory.
+* **Node.js Agent Summary:** While we were nearly one-hundred percent focused on Protect, we fixed a bug where libraries weren't reporting when an applications started from non-app-root directory.
 
