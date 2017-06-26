@@ -41,7 +41,7 @@ TS2 configurations provide a suitable level of performance for most deployments 
 ### TS3 configuration
 TS3 configurations are intended for larger workloads of 30 to more than 100 agents communicating to Contrast and larger web traffic of users for full-scale enterprise deployments. Agents are connected at all times and transporting findings to Contrast. End users access the system multiple times of day, and actively engage in Contrast features such as alerts, reports and integrations including Active Directory, LDAP and Issue Tracking Systems.
 
-TS3 configurations provide a high degree of performance and scalability for most deployments fitting the workloads described above. The greater the number of connected agents and end users, the greater the memory requirements for Contrast to handle inflight traces. Storage depends on the life of trace data and the preservation of log files by system administrators. Taking advantage of the Crawler micro-server requires an extra storage demand. 
+TS3 configurations provide a high degree of performance and scalability for most deployments fitting the workloads described above. The greater the number of connected agents and end users, the greater the memory requirements for Contrast to handle inflight traces. Storage depends on the life of trace data and the preservation of log files by system administrators. Taking advantage of the Crawler microservice requires an extra storage demand. 
 
 | vCPUs | Clock Speed      | RAM | Storage |
 |:--------:|:----------------:|:---:|:-------:|
@@ -54,7 +54,7 @@ TS3 configurations provide a high degree of performance and scalability for most
 
 
 ### C1 configuration
-C1 configurations are recommended for Enterprise on Premises (EOP) customers deploying the Crawler micro-service. The compute, resource and storage requirements are minimal for the Crawler.
+C1 configurations are recommended for Enterprise on Premises (EOP) customers deploying the Crawler microservice. The compute, resource and storage requirements are minimal for the Crawler.
 
 Most Crawler installations are suitable to run on a single vCPU. However, crawling performance improves with at least two vCPUs. Memory can be configured for the Crawler processes, which are both a Java Virtual Machine and PhantomJS process. Storage is only needed during the crawling operation. Once crawling is complete, the results of the crawling exercise are transferred to the Contrast. 
 
