@@ -4,10 +4,10 @@ description: "Contrast 3.4.1 June 2017"
 tags: "3.4.1 June Release Notes"
 -->
 
-New application Compliance policies, environment-specific defaults for servers, and a vulnerability standards filter for Vulnerability Trend reports make it easier to set your sights high and keep them there. 
+New application compliance policies, environment-specific defaults for servers, and a vulnerability standards filter for Vulnerability Trend reports make it easier to set your sights high and keep them there. 
 
 ## Fixes
-* Added some stickiness to New and Total views in Vulnerability Trend, so it's there when you come back.  
+* Added some stickiness to New and Total Views in Vulnerability Trend, so it's there when you come back.  
 * Debugged some bugtracker integrations (and made an ironic tee to prove it). 
 * Cleared the way to create Rule Exclusions from Attack Events. 
 * Sorted out mail configurations in our interface. 
