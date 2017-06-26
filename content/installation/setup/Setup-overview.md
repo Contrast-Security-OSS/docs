@@ -14,6 +14,8 @@ Using Assess, Protect or both requires two installations:
 
 We strongly advise the use of Contrast Software as a Service (SaaS). It’s SOC-2 Type II compliant, and gets security and feature updates as they become available. To connect to SaaS mode, follow the instructions provided to your administrator. These instructions also contain the credentials you need to log in to the Contrast application. 
 
+The Contrast application for Enterprise on Premises (EOP) is designed for ease of deployment and simplicity of configuration. The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, Cassandra NoSQL instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
+
 As you prepare to [install Contrast](installation-setupinstall.html) in your own environment, verify that your configuration complies with Contrast's [system requirements](installation-setup.html#contrast-reqs) and [sizing requirements](installation-setup.html#size). You can also update Java options, and take advantage of Contrast logs and tools when you [run Contrast](installation-setup.html#run) on Windows or Linux. 
 
 ## Configuration  

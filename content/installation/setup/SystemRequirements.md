@@ -5,7 +5,7 @@
 -->
 
 ## Prepare for the Installation
-The Contrast application for Enterprise on Premises (EOP) includes a Tomcat servlet container, a MySQL database instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture. Customers should prepare the following prior to installing the application:
+The Contrast application for Enterprise on Premises (EOP) includes a Tomcat servlet container, a MySQL database instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture. You should prepare the following prior to installing the application:
 
 * System with adequate compute and memory resources based on guidance from our [sizing recommendations](installation-setup.html#size)
 * Adherence to the system requirements specified below
@@ -21,7 +21,7 @@ The Contrast application for Enterprise on Premises (EOP) includes a Tomcat serv
 | **MySQL** | 5.6.28 | 5.6.33 | MySQL versions 5.7 and higher are currently **not** supported |
 
 ## MySQL Shared Libraries
-Customers running Contrast need to preconfigure their base operating system on Linux with a shared library for running MySQL. Depending on which flavor of Linux deployed with Contrast, follow the installation options below:
+To run Contrast, you must preconfigure your base operating system on Linux with a shared library for running MySQL. Depending on which flavor of Linux you deployed with Contrast, follow the installation options below:
 
 Customers running **Centos** or **RHL**:
 
