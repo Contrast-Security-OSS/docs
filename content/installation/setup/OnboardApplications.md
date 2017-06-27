@@ -4,32 +4,31 @@ description: "High-level overview for adding the Contrast agent to applications.
 tags: "setup agent installation TeamServer onboarding application"
 -->
 
-## Identify an application server to enable with Contrast
-The first step is to identify an application server that you want Contrast to analyze.  You can choose any of the following types of application servers:
+## Identify an Application Server
+Start using Contrast by identifying an application server that you want Contrast to analyze. You can choose any of the following types:
 
-* Developer's local application server running in the IDE
-* Continuous integration application server that is used during the automated testing process
+* Developer's local application server running in the integrated development environment (IDE)
+* Continuous integration application server that's used during the automated testing process
 * Test or QA application server
 * Staging application server
 * Embedded server in an appliance
 * Application server running in a virtual machine
 * Remote application server running in the cloud
-* Production application server (generally we recommend using Contrast earlier in the lifecycle if possible)
+* Production application server <br> (Using Contrast earlier in the lifecycle is generally advised.)
 
-## Download the Appropriate Contrast Agent
-The next step is to log into your Contrast TeamServer using your Organization Admin (not superadmin) account.  Your user name and password are the same as the Contrast Hub credentials that you used to download the installer and license.
+## Download the Contrast Agent
+Log into the Contrast interface using your Organization Admin (not SuperAdmin) account. Your username and password are the same as the Contrast Hub credentials that you used to download the installer and license.
 
-Click on the **Applications** tab and find the **Add Application** button.  This will start the Agent download and installation wizard.  Follow the on-screen instructions to configure and download the appropriate Agent for the application server you are enabling with Contrast.
+Click on the **Applications** tab and then the **Add Application** button to start the agent download and installation wizard.  Follow the on-screen instructions to configure and download the appropriate agent for the application server that you're enabling.
 
 ## Install the Agent
-Follow the simple on-screen instructions to add the agent to your application server.  Once you restart the application server, Contrast Agent should start and immediately connect to the Contrast TeamServer.  If not, then something may be preventing the Agent from communicating with the TeamServer.  The most common causes of this are:
+Follow the on-screen instructions to add the agent to your application server. Once you restart the application server, the Contrast agent should start and immediately connect to the Contrast application. If this doesn't happen, something may be preventing the agent from communicating with the application. The most common causes and solutions are:
 
-* Firewalls that do not allow traffic to the TeamServer's IP address and port - need to configure host or network firewall
-* Web gateways and proxies that require authentication - This can be configured in the Agent config by returning to the Agent Download page, setting the proper configurations, and getting a new Agent.
-* Contrast Application Server URL is misconfigured, so the Agent is attempting to communicate with the wrong address.  This can be changed in the Agent configuration if necessary.
+* Firewalls that don't allow traffic to the Contrast application's IP address and port: You need to configure host or network firewall.
+* Web gateways and proxies that require authentication: You can configure this in the agent configuration by returning to the **Agent Download** page, setting the proper configurations and getting a new agent.
+* Contrast application server URL is misconfigured, so the agent is attempting to communicate with the wrong address. You can change this in the agent configuration, if necessary.
 
-## Browse Applications
-The next step is to browse the applications on the newly Contrast-enabled application server a bit.  Just click through a few pages and forms, and that should generate enough activity to generate good information on your application inventory and dashboard.
+## Test the Configuration
+Browse the applications on the application server with Contrast enabled - just click through a few pages and forms - to generate enough activity for good information on your application inventory and dashboard. You can check that Contrast is working by returning to the Dashboard of your Contrast interface to review results. From this point forward, you have an up-to-date application security dashboard for all the applications on that application server. 
 
-## Check Results in Your Contrast TeamServer Dashboard
-Finally, you can check that Contrast is working by returning to your Contrast TeamServer dashboard to review results.  From this point forward, you'll have an up-to-date application security dashboard for all the applications on that application server. 
+
