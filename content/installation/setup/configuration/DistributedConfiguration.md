@@ -6,16 +6,13 @@ tags: "installation setup EOP distributed configuration database scalability"
 
 ## About a Distributed Configuration of Contrast
 
-This guide is for enterprise on premise (EOP) administrators who want to move away from the bundled, self-contained Contrast configuration to a distributed configuration in which the database and application server are deployed on separate servers. Most customers don't need to configure a distributed Contrast application. Customers who fit this profile are usually running with 100 or more connected agents, and seeking greater performance and scalability. 
+This guide is for Enterprise-On-Premises (EOP) administrators who want to move away from the bundled, self-contained Contrast configuration in favor of a distributed configuration, in which the database and application server are deployed on separate servers. Customers who fit this profile are likely running with 100 or more connected agents, seeking greater performance and scalability, and require additional administration and management by an EOP administrator. (These configurations are introduced in Contrast TeamServer 3.3.2.) Contrast simplified the configuration of the application for EOP administrators to run their own installations of Tomcat, Java and MySQL, as long as they conform to our version requirements.
+
+> **Note:** While the following instructions guide you through the setup and configuration of additional software, be aware that you're responsible for the monitoring and durability of this software. If you're familiar with installing and administering MySQL and Tomcat, the process is easy to set up and maintain. 
 
 EOP customers typically install and update the Contrast application by downloading the installer/updater artifact from the [Contrast Hub](https://hub.contrastsecurity.com). This artifact is an executable file that includes all the necessary software and components to install, upgrade and run Contrast. The Contrast application is designed for all embeded components and storage to reside on a single server in a very basic, monolithic configuration.
 
-Some customers need to run in a more advanced configuration. We've written this document for those customers opting for a slightly more advanced configuration that will require additional administration and management by an EOP administrator. We have simplified the configuration of TeamServer for EOP administrators to run their own installations of Tomcat, Java and MySQL, as long as they conform to our version requirements.
-
-This documentation will guide you through the setup and configuration of additional software but please be aware you will be responsible for the monitoring and durability of additional software.  That being said, if you are familiar with installing and administering Tomcat and MySQL the process is straightforward to setup and maintain.
-
-Check back often for updates and feel free to submit a Pull Request if you have suggestions or find any instructions incorrect.  All code that we have shared here is also available in our GitHub [repo](https://github.com/Contrast-Security-OSS/ctdc).   
-
+  
 ## Before You Get Started
 Before you get started configuring a distributed Contrast application, make sure to read through the entire document and complete the following steps before distributing the configuration:
 
