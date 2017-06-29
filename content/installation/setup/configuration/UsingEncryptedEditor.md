@@ -4,13 +4,15 @@ description: "Instructions for editing encrypted property files using the encryp
 tags: "installation setup config EOP encryption ESAPI SuperAdmin"
 -->
 
-## Getting Started
-Bundled with TeamServer are several configuration files located in the *$CONTRAST_HOME/data/conf* directory that are by design, encrypted on first creation. Some of these files can be modified through workflows within the User Interface. Contrast has bundled a small tool capable of decrypting the file as well as providing a tool for EOP system administrators to modify the configuration of the TeamServer deployment.
+## About the Encrypted Properties Editor
 
-## General Use Of The Encrypted Properties Editor
-The tool can be found in the *$CONTRAST_HOME/bin* directory. On Linux the file is a simple shell script called ```edit-properties```. On Windows, the file is a Windows command file called *edit-properties.cmd*. In both cases, the tool needs to be run from a command prompt, as no graphical user interface is provided.
+Contrast is bundled with several configuration files that are encrypted intentionally on first creation. They're located in the *$CONTRAST_HOME/data/conf* directory. You can modify some of these files through workflows within the Contrast interface. 
 
-Inputs are needed in order to view and/or edit an encrypted property. In the example below, we are simply showing the usage of the command. The primary inputs needed to view/edit the file include the path to *ESAPI.properties* and the target file for editing purposes.
+Contrast also bundled a small tool capable of decrypting the file, and provided a tool for Enterprise-on-Premises (EOP) system administrators to modify the configuration of the Contrast deployment. You can find the tool in the *$CONTRAST_HOME/bin* directory. On Linux, the file is a simple shell script called `edit-properties`. On Windows, the file is a Windows command file called *edit-properties.cmd*. In both cases, you need to run the tool from a command prompt; an user interface isn't provided.
+
+## Edit and View an Encrypted File
+
+You must have inputs to view and/or edit an encrypted property. The example below shows how to use the command. The primary inputs that you need to view or edit the file include the path to *ESAPI.properties* and the target file for editing purposes.
 
 ```bash
 contrast@EOP-TeamServer:~/contrast/bin$ ./edit-properties 
@@ -25,20 +27,20 @@ usage: property-editor
 
 ```
 
-### Encrypted Files Within EOP TeamServer
-The following files are encrypted by default for security purposes:
 
-| File Name            | Description of the File                                                                                               |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------|
-| ad.properties        | Contains information for connecting and configuring TeamServer to Active Directory groups for authentication purposes |
-| ldap.properties      | Contains information for connecting and configuring TeamServer to LDAP groups for authentication purposes            |
-| database.properties  | Contains host and connection information for configuring communication between TeamServer and MySQL                  |
-| cassandra.properties | Contains host and connection information for configuring communication between TeamServer and Cassandra              |
-| saml.properties      | Contains saml keystore information.                                                                                  |
+The following files for EOP are encrypted by default for security purposes:
 
 
-### Example Of Editing/Viewing An Encrypted File
-The following is an example of editing an encrypted file in TeamServer. In this example we are loading our *ad.properties* file to edit the configuration of our TeamServer connecting to ActiveDirectory.
+| Name            | Description                                                                                              |
+|----------------------|------------------------------------------------------------------------------------------------------------|
+| ad.properties        | Contains information for connecting and configuring Contrast to Active Directory groups for authentication purposes. |
+| ldap.properties      | Contains information for connecting and configuring Contrast to LDAP groups for authentication purposes.   |
+| database.properties  | Contains host and connection information for configuring communication between Contrast and MySQL.         |
+| cassandra.properties | Contains host and connection information for configuring communication between Contrast and Cassandra.     |
+| saml.properties      | Contains SAML keystore information.                                                                        |
+
+
+The following code is an example of editing an encrypted file in Contrast. Load the *ad.properties* file to edit the configuration of your Contrast application that's connecting to ActiveDirectory.
 
 ```bash
 contrast@TeamServer:~/contrast/bin$ ./edit-properties -e ../data/esapi/ -f ../data/conf/ad.properties
@@ -53,4 +55,8 @@ ad.url                                            : ldap://localhost:389
 ad.base                                           : dc=contrastsecurity,dc=com
 ```
 
-The editor will show all of the existing values encrypted in the file. You could use the flags listed above to view or edit a single property. The editor will also ask for a comment to be placed in the file for auditing purposes. It is strongly suggested that you make use of the comment feature for noting any change you make to the file.
+The editor shows all of the existing values encrypted in the file. You can use the flags listed above to view or edit a single property. The editor also asks you to place a comment in the file for auditing purposes. Contrast strongly suggests that you make use of the comment feature for noting any change you make to the file.
+
+
+
+
