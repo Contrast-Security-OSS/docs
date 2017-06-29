@@ -17,7 +17,7 @@ Before you get started with configuring a distributed Contrast application, read
 * Successful backup(s) and exports of the Contrast application database
 * Collect Contrast version numbers for the application and database 
 
-If you already installed Contrast and want to use a distributed install instead, please see the section below to **Convert an Installation**. 
+EOP customers typically install and update the Contrast application by downloading the installer/updater artifact from the [Contrast Hub](https://hub.contrastsecurity.com). Instructions can be found [here](installation-setupinstall.html#download). If you already installed Contrast and want to use a distributed installation instead, please see the section below to **Convert an Installation**. 
 
 ## How It Works
 
