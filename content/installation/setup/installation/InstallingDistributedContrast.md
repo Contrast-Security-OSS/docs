@@ -5,14 +5,9 @@ tags: "installation setup EOP distributed configuration database scalability"
 -->
 
 ## About Distributed Contrast Configuration 
-This guide is for Enterprise-On-Premises (EOP) administrators who want to move away from the bundled, self-contained Contrast configuration in favor of a distributed configuration, in which the database and application server are deployed on separate servers. Customers who fit this profile are likely running with 100 or more connected agents, seeking greater performance and scalability, and require additional administration and management by an EOP administrator. (These configurations are introduced in Contrast TeamServer 3.3.2.) 
+This guide is for Enterprise-On-Premises (EOP) administrators who want to intall a distributed configuration of Contrast, in which the database and application server are deployed on separate servers. Customers who fit this profile are likely running with 100 or more connected agents, seeking greater performance and scalability, and require additional administration and management by an EOP administrator. (These configurations are introduced in Contrast TeamServer 3.3.2.) 
 
-EOP customers typically install and update the Contrast application by downloading the installer/updater artifact from the [Contrast Hub](https://hub.contrastsecurity.com). Instructions can be found [here](installation-setupinstall.html#download).
-Contrast has simplified the configuration of the application for EOP administrators to run their own installations of Java, MySQL, and Tomcat, as long as they conform to our version requirements.
-
-> **Note:** While the following instructions guide you through the setup and configuration of additional software, be aware that you're responsible for the monitoring and durability of this software. If you're familiar with installing and administering MySQL and Tomcat, the process is straightforward to set up and maintain. 
-
-Check back often for updates, and please feel free to submit a pull request if you have suggestions or find any issues with the instructions.   
+For more information on the configuration process, go to the article on [Distributed Configuration](installation-setupconfig.html#dist).
 
 ## Before You Get Started
 
@@ -22,7 +17,7 @@ Before you get started with configuring a distributed Contrast application, read
 * Successful backup(s) and exports of the Contrast application database
 * Collect Contrast version numbers for the application and database 
 
-If you already installed Contrast and want to use a distributed install instead, please see the section below to **Conver an Installation**. 
+If you already installed Contrast and want to use a distributed install instead, please see the section below to **Convert an Installation**. 
 
 ## How It Works
 
@@ -90,7 +85,7 @@ jdbc.dialect                                      : com.aspectsecurity.contrast.
 jdbc.driver                                       : com.mysql.jdbc.Driver
 
 Enter the name of the property to edit [q to Quit]: database.type
-Create new Property [database.type] (y/N): y
+Create new Property [database.type](y/N): y
 Enter a value for the property: distributed
 
 jdbc.type                                         : MYSQL
