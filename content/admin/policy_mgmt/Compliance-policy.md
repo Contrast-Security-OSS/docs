@@ -15,7 +15,7 @@ Administrators can define policies for application compliance with their organiz
 
 ## Set Up Policies 
 
-Go to the **User menu > Policy Management > Compliance Policy tab** to get started. 
+Go to the **User menu > Policy Management > Compliance Policy tab** to get started. View current policies in the grid or enter a policy name in the search field above it.
 
 <a href="assets/images/Compliance-policy-grid.png" rel="lightbox" title="Compliance Policy grid"><img class="thumbnail" src="assets/images/Compliance-policy-grid.png"/></a>
 
@@ -27,7 +27,7 @@ To add a new policy, click the **Add policy** button above the grid.
 
 #Edit policies
 
-Click on a policy name in the Compliance policy grid to edit your criteria. 
+Click on a policy name in the Compliance policy grid to edit your criteria. In the **Edit Compliance Policy** form, click in the multiselect fields to change your selections. 
 
 You can also enable or disable a policy using the toggle in each grid row. 
 
@@ -39,3 +39,4 @@ Click the **Advanced** link to filter application by Compliance policy. (This fi
 
 
 <!-- Merged apps? -->
+
