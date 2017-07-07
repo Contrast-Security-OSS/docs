@@ -12,6 +12,8 @@ The new instrumentation engine offers a number of benefits, including:
 * Improved stability and comparable performance compared to the old method of tracking data flow
 * Ability to use custom rules
 
+You can also tell an agent to send its environment to Contrast. For example, if you you want to tell Contrast that the agent is part of the Development environment, add this value: `<add key="ServerEnvironment" value="DEVELOPMENT"/>`. 
+
 ## Source Code Information 
 
 In the .NET Framework, an application's compiled code is generally contained in .DLL files, while debug information is contained in .PDB files. These .PDB files contain symbol information that Contrast can use to tie stack trace frames to specific lines of code. By default, the Debug build of web applications includes .PDB files while the Release build doesn't. However, most deployments of web applications use the Release build - which they should because deploying the Debug build can introduce some unnecessary risks. It's possible to include .PDB files in the Release build of a web application by changing a project setting. 
