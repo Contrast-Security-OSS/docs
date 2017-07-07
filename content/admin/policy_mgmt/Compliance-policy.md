@@ -5,38 +5,43 @@ tags: "Admin compliance application policy management"
 -->
 
 
-As you add libraries to your organization, Contrast can flag the ones that no longer meet your criteria for maintaining security. 
+As your organization grows, let Contrast flag applications that no longer meet your security criteria. 
 
 ## How it Works
 
-Administrators can define policies for application compliance with their organization based on selected Policy Criteria, including Assess rules and vulnerability severity, and specific Applications. If any applications violate this policy, Contrast marks them in the interface so that you can find them and fix them. (Administrators are also notified of violations both in the product and by email.)
-
-<!-- Defaults? -->
+Administrators can define policies for application compliance within their organization based on Policy Criteria, including [Assess Rules](admin-policymgmt.html#assess) and vulnerability severity, and specific applications. If any designated applications violate this policy, Contrast marks them in the interface so that you can quickly find them and fix them. (Administrators are notified of violations both in the product and by email.) Contrast also provides default policies based on standard security rules that your company may need to follow. 
 
 ## Set Up Policies 
 
-Go to the **User menu > Policy Management > Compliance Policy tab** to get started. View current policies in the grid or enter a policy name in the search field above it.
+Go to the **User menu > Policy Management > Compliance Policy tab** to get started. Find current policies in the grid or enter a policy name in the search field above it.
 
 <a href="assets/images/Compliance-policy-grid.png" rel="lightbox" title="Compliance Policy grid"><img class="thumbnail" src="assets/images/Compliance-policy-grid.png"/></a>
 
-## Add policies
+### Add policies
 
 To add a new policy, click the **Add policy** button above the grid. 
 
 <a href="assets/images/Compliance-policy.png" rel="lightbox" title="Compliance Policy"><img class="thumbnail" src="assets/images/Compliance-policy.png"/></a>
 
-#Edit policies
+In the **Add Compliance Policy** form, enter a name for the policy and click in the multiselect fields to choose Policy Criteria and Applications. Select vulnerabilities by severity level(s), Security Standards and Assess Rules to include in the Policy Criteria. Select applications by level(s) of importance and individual name. Click the **Add** button to save the policy. 
 
-Click on a policy name in the Compliance policy grid to edit your criteria. In the **Edit Compliance Policy** form, click in the multiselect fields to change your selections. 
+### Edit policies
 
-You can also enable or disable a policy using the toggle in each grid row. 
+Click on a policy name in the Compliance Policy grid to edit your criteria. In the **Edit Compliance Policy** form, click in the multiselect fields to change your selections. 
+
+> **Note:** The Name and Policy Criteria fields are locked for default policies. However, you can modify application selections by clicking in the field and then clicking the **Save** button.
+
+To delete a policy, click the trashcan icon below the form or in the grid row. You can also enable or disable policies, including default policies, using the toggle in each grid row. 
+
+### Filter applications by policy 
+
+In the **Applications** page, click the **Advanced** link to filter application by Compliance policy. (This filter is only available when one or more policies are enabled, and only displays those enabled policies.) 
 
 ## Policy Violations 
 
-Go to the **Applications** page...
-
-Click the **Advanced** link to filter application by Compliance policy. (This filter is only available when one or more policies are enabled, and only displays those enabled policies.)
+If an applicable vulnerability isn't remediated, or applicable Security Standards and Assess Rules are being violated, Contrast flags the corresponding applications in the Applications page. Hover over the warning symbol in the Applications grid or go to the application's details page for a link to the violated policy. 
 
 
-<!-- Merged apps? -->
+
+
 
