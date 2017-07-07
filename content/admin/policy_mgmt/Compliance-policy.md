@@ -9,7 +9,7 @@ As your organization grows, let Contrast flag applications that no longer meet y
 
 ## How it Works
 
-Administrators can define policies for application compliance within their organization based on Policy Criteria, including [Assess Rules](admin-policymgmt.html#assess) and vulnerability severity, and specific applications. If any designated applications violate this policy, Contrast marks them in the interface so that you can quickly find them and fix them. (Administrators are notified of violations both in the product and by email.) Contrast also provides default policies based on standard security rules that your company may need to follow. 
+Administrators can define policies for application compliance within their organization based on Policy Criteria, including [Assess Rules](admin-policymgmt.html#assess) and [vulnerability severity](user-vulns.html#manage-vuln), and specific applications. If any designated applications violate this policy, Contrast marks them in the interface so that you can quickly find them and fix them. (Administrators are notified of violations both in the product and by email.) Contrast also provides default policies based on standard security rules that your company may need to follow. 
 
 ## Set Up Policies 
 
