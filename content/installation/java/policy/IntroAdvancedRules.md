@@ -40,7 +40,7 @@ There are a few ways that you can change the loaded policy used by the Contrast 
 
 ### Use `contrast.policy`
 
-The primary way to alter the internal policy is using the `contrast.policy` system property. This method allows the end-user to apply custom rules in addition to the default Contrast rules without the task of maintaining and modifying a copy of these default rules. It also lets you specify a list of files containing new pieces of polices to add to or overwrite the internal policy.
+The primary way to alter the internal policy is using the `contrast.policy` system property. This method allows the end-user to apply custom rules in addition to the default Contrast rules without the task of maintaining and modifying a copy of the default rules. It also lets you specify a list of files containing new pieces of polices to add to or overwrite the internal policy.
 
 Example syntax:
 
@@ -66,7 +66,7 @@ The example above indicates that *file1* is applied first, then *file2*, all the
 
 #### Custom elements
 
-If a custom element - rule, source method, or tag list - shares the same `id` attribute as an existing element, the custom element  replaces the existing element. 
+If a custom element - a rule, source method or tag list - shares the same `id` attribute as an existing element, the custom element  replaces the existing element. 
 
 > **Example:** If the default rules contains a source method with `id="source1"` and an overriding file contains a source method also with `id="source1"`, then the Contrast agent uses the overriding file's source method at runtime.
 
