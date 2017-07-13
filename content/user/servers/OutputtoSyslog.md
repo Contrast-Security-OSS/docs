@@ -10,7 +10,7 @@ This feature allows Java clients to send security logs to a remote Syslog server
 
 ## Organization Settings
 
-Organization settings act as the default configuration for all new servers. You can set these by choosing **Organization Settings** in the User menu and then **Servers** in the sidebar. Select the checkbox to **Enable output of Protection events to Syslog**, which expands the dialog, and then enter your desired settings.
+Organization settings act as the default configuration for all new servers. You can set these by going to the **User menu > Organization Settings > Servers tab**. Select the checkbox to **Enable output of Protection events to Syslog**, which reveals additional fields, and then enter your desired settings.
 
 You can toggle through the severity badges to define severity levels for each. The defaults are:
 
@@ -18,24 +18,19 @@ You can toggle through the severity badges to define severity levels for each. T
 * **4 - Warning** for Blocked
 * **5 - Notice** for Probed
 
+For more information on creating server configurations in Organization Settings, go to the [Server Defaults](admin-orgsettings.html#org-server) article. 
 
 ## Servers Grid
 
-From the main **Servers** page, you can enable and configure Syslog output to individual servers or to multiple servers at one time. (See the **Batch Actions** section in this article for more information.) For an individual server, select **Enable Output to Syslog** in the row dropdown menu. **Edit** and **Disable** actions are available once Syslog is enabled.
+From the **Servers** page, you can enable and configure Syslog output to individual servers or to multiple servers at one time. (See the **Batch Actions** section in this article for more information.) For an individual server, select **Enable Output to Syslog** in the row dropdown menu. **Edit** and **Disable** actions are available once Syslog is enabled.
 
 <a href="assets/images/SyslogServersGridMenu.png" rel="lightbox" title="Individual server row menu"><img class="thumbnail" src="assets/images/SyslogServersGridMenu.png"/></a>
 
 ###Configure output to Syslog
 
-If you choose the **Enable Output to Syslog** action, the workflow proceeds directly to a configuration dialog. 
+If you choose the **Enable Output to Syslog** action, the workflow proceeds directly to a configuration dialog. If Syslog defaults have been set for the server environment in **Organization Settings**, those values are prepopulated here.
 
-<a href="assets/images/SyslogConfigureOutput.png" rel="lightbox" title="Configure Output to Syslog"><img class="thumbnail" src="assets/images/SyslogConfigureOutput.png"/></a>
-
-* If Syslog defaults have been set in **Organization Settings**, those values are prepopulated here. 
-* If you change the organization default values, a link to restore them appears. 
-* If there is no organization default, fields are either blank or default to the first selection of dropdown menu. 
-* If there is a previous configuration other than the organization default, those values are saved and shown with the option to restore the organization defaults. 
-* If no organization default exists, there is a checkbox to set the current configuration as the default. (This option is only available to Organization Administrators.)
+<a href="assets/images/Output-to-syslog-configure.png" rel="lightbox" title="Configure output to Syslog"><img class="thumbnail" src="assets/images/Output-to-syslog-configure.png"/></a>
 
 When Syslog output is enabled on a server, the shield icon next to the server name is updated to include a blue arrow. Hovering over this icon produces a tooltip with the output location of Protection events. 
 
@@ -45,19 +40,17 @@ When Syslog output is enabled on a server, the shield icon next to the server na
 
 Selecting one or more servers in the Servers grid enables the **Protection Licensing and Output** menu, which includes the **Enable**, **Edit** and **Disable Output to Syslog** actions. These actions are only functional when at least one of the selected servers is eligible, and the action is only applied to the eligible selection(s).
 
-You can also control licensing within the menu. When you select **Apply Protection License** for one or more servers, the Upgrade License dialog includes a checkbox to **Enable output of Protection events to Syslog**. 
-* If checked, the workflow proceeds to the configuration dialog.
-* If a default configuration is set via **Organization Settings**, those default values are prepopulated into the dialog fields.
+* If all eligible selections are in the same environment and an environment default was set in **Organization Settings**, the configuration dialog fields are prepopulated with the defaults settings. You can then decide to proceed with the default or repopulate the fields to create a custom setting.
+* If the eligible selections are in different environments, you can choose to use the default settings for the applicable servers or manually configure the settings for all servers. 
+* If any or all servers are in environments for which no defaults have been set, they must be manually configured.
 
-When you choose the **Enable Output to Syslog** action from the menu, a dialog appears if any of the selected servers have previous Syslog configurations. You may then decide whether to keep the existing configurations and set up the remaining servers, or to (re)configure all. 
-* If there are no previous configurations, you're taken straight to the configuration dialog. 
-* If an organization default exists, those default values are pre-populated into the dialog fields.
+You can also control licensing within the menu. When you select **Apply Protection License** for one or more servers, the Upgrade License dialog includes a checkbox to **Enable output of Protection events to Syslog**. 
+
+* If checked, the workflow proceeds to the configuration dialog.
+* If an environment default configuration was set in **Organization Settings**, those default values are prepopulated into the dialog fields.
 
 ## Server Settings
 
-You can access server settings for an individual server in the row dropdown menu or from the **Server Settings** icon in the top right of the server's Overview page. The Server Settings dialog includes a checkbox to **Enable output of Protection events to Syslog**. Checking the box expands the dialog to show the configuration, where you can create server-specific Syslog properties, as well as restore or set up organization defaults for Syslog.
-
-<a href="assets/images/SyslogServerSettings.png" rel="lightbox" title="Server Settings expanded to show Syslog configuration"><img class="thumbnail" src="assets/images/SyslogServerSettings.png"/></a>
-
+You can access server settings for an individual server in the row dropdown menu or from the **Server Settings** icon in the top right of the server's Overview page. The Server Settings dialog includes a checkbox to **Enable output of Protection events to Syslog**. Checking the box expands the dialog to show the configuration, where you can create server-specific Syslog properties.
 
 > **Note:** You may have to enable remote logging so that your Syslog can receive outside messages. 
