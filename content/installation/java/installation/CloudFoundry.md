@@ -12,11 +12,12 @@ The Contrast Security Agent Framework takes care of automatically downloading th
 
 <table>
   <tr>
-    <td><strong>Detection Criterion</strong></td><td>Existence of a single bound Contrast Security service. The existence of an Contrast Security service defined by the <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES"><code>VCAP_SERVICES</code></a> payload containing a service name, label or tag with <code>contrast-security</code> as a substring.
+    <td><strong>Detection Criterion</strong></td><td>Existence of a single bound Contrast service. The existence of an Contrast service defined by the <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES"><code>VCAP_SERVICES</code></a> payload containing a service name, label or tag with <code>contrast-security</code> as a substring.
 </td>
   </tr>
 </table>
-Tags are printed to standard output by the buildpack detect script
+
+Tags are printed to standard output by the buildpack detect script.
 
 ### User-Provided Service
 When binding ContrastSecurity using a user-provided service, it must have name or tag with `contrast-security` in it. The credential payload must contain the following entries:
@@ -52,7 +53,7 @@ cf restage spring-music
 The Contrast service broker allows Cloud Foundry users to easily bind services to their application and make use of the Contrast Java agent.
 
 ### Prerequisites
-Any applications that you wish to use with the service broker should employ the default Java buildpack in order to download and run the agent.
+Any applications that you want to use with the service broker should employ the default Java buildpack to download and run the agent.
 
 ```bash
 cf push YOUR_APP_NAME_GOES_HERE
@@ -214,7 +215,7 @@ Download the Contrast server broker tile for PCF from the [Pivotal Network](http
 
 Once you've stored the file locally, navigate to your Pivotal Ops Manager instance. In the Ops Manager, click on the **Import a Product** button and select the *contrast-security-service-broker-#.#.#.pivotal* tile that you downloaded or created in the previous step.
 
-*Note:* If the file you downloaded is automatically given a .zip extension, simply rename it to `contrast-security-service-broker-#.#.#.pivotal`
+> **Note:** If the file you downloaded is automatically given a .zip extension, rename it to `contrast-security-service-broker-#.#.#.pivotal`.
 
 The tile requires some configuration before we can deploy it. 
 
@@ -226,10 +227,10 @@ You can now see six form fields.
 
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
-| TeamServer                   | URL to your Teamserver instance                        |
+| TeamServer                   | URL to your Contrast application instance                |
 | TeamServer Service Key       | Service Key found in Organization Settings             |
 | TeamServer API Key           | API Key found in Organization Settings                 |
-| Organization UUID            | The organization the application will belong to        |
+| Organization UUID            | The organization to which the application will belong  |
 | Username                     | Contrast username                                      |
 | Plan Name                    | Name of the plan as it will appear in Apps Manager     |
 
@@ -258,7 +259,7 @@ Under the **Bind to App** dropdown, select the application to which you want to 
 
 <a href="assets/images/Pivotal_Bind_App.png" rel="lightbox" title="Binding service instance to application"><img class="thumbnail" src="assets/images/Pivotal_Bind_App.png"/></a>
 
-Now that you bound our service instance to an application, you can restage the application. The latest Java agent will be retrieved from your Teamserver and run on your application.
+Now that you bound our service instance to an application, you can restage the application. The latest Java agent will be retrieved from Contrast and run on your application.
 
 ### Set environment variables for Contrast
 If you want to override Java agent properties, such as the application name, you can use environment variables through the Pivotal UI or the Cloud Foundry command line.
@@ -274,6 +275,7 @@ Pivotal Apps Manager example:
 
 <a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through UI"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
 
+
 [Contrast Security]: https://www.contrastsecurity.com
 [Contrast Security Service]: https://www.contrastsecurity.com
 [`config/contrast_security_agent.yml`]: https://github.com/cloudfoundry/java-buildpack/blob/master/config/contrast_security_agent.yml
@@ -281,3 +283,4 @@ Pivotal Apps Manager example:
 [repositories]: https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-repositories.md
 [this listing]: https://artifacts.contrastsecurity.com/agents/java/index.yml
 [version syntax]: https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-repositories.md#version-syntax-and-ordering
+
