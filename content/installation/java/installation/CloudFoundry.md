@@ -18,7 +18,7 @@ The Contrast Security Agent Framework takes care of automatically downloading th
 </table>
 Tags are printed to standard output by the buildpack detect script
 
-## User-Provided Service
+### User-Provided Service
 When binding ContrastSecurity using a user-provided service, it must have name or tag with `contrast-security` in it. The credential payload must contain the following entries:
 
 | Name | Description
@@ -47,19 +47,12 @@ cf bind-service spring-music contrast-security-service
 cf restage spring-music
 ```
 
-### Configuration
-For general information on configuring the buildpack, including how to specify configuration values through environment variables, refer to [Configuration and Extension][].
-
-
 ## Contrast Service Broker
 
 The Contrast service broker allows Cloud Foundry users to easily bind services to their application and make use of the Contrast Java agent.
 
 ### Prerequisites
-Any applications that you wish to use with the service broker should employ the Contrast buildpack in order to download and run the agent.
-You can find the default Java buildpack [here](https://github.com/Contrast-Security-OSS/java-buildpack).
-Run the following command to use the buildpack:
-
+Any applications that you wish to use with the service broker should employ the default Java buildpack in order to download and run the agent.
 
 ```bash
 cf push YOUR_APP_NAME_GOES_HERE
@@ -217,9 +210,6 @@ cf push spring-music
 ### Step 1: Ops manager configuration
 The first step of integrating Contrast with your PCF is installing the Contrast tile.
 
-There are two ways to get the Pivotal tile.
-
-**Option 1 (Download): **
 Download the Contrast server broker tile for PCF from the [Pivotal Network](https://network.pivotal.io/products/contrast-security-service-broker/).
 
 Once you've stored the file locally, navigate to your Pivotal Ops Manager instance. In the Ops Manager, click on the **Import a Product** button and select the *contrast-security-service-broker-#.#.#.pivotal* tile that you downloaded or created in the previous step.
