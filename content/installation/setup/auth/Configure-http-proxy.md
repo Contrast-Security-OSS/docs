@@ -9,10 +9,10 @@ Contrast supports client authentication through a trusted proxy, which authentic
 
 To enable trusted HTTPS proxy authentication:
 
-* Update the *auth.properties* property file by changing the `authentication.mode` in *~/path_to_contrast_installation/conf/auth.properties* to `http_header`. 
+* Update the *auth.properties* property file by changing the `authentication.mode` in *~/path_to_contrast_installation/data/conf/auth.properties* to `http_header`. 
 * By default, the HTTP header name is `Contrast-Authentication`. You can also configure this in the *auth.properties* file by updating the value of `auth.http.header.field.name`.
 * After restarting Contrast, each request must include the HTTP header `Contrast-Authentication: username` to login. 
 
->**Note:** Trusted HTTPS proxy authentication should only be used if all Contrast nodes are accessible exclusively through a trusted proxy. No nodes should be accessible directly.
+>**Note:** Trusted HTTPS proxy authentication should only be used if all Contrast nodes are accessible exclusively through a trusted proxy. No nodes should be accessible directly; otherwise, an attacker could impersonate any authorized user.
 
 
