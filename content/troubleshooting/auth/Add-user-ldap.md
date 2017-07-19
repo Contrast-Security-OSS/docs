@@ -5,6 +5,8 @@ description: "Add user to the Configuration of Active Directory or LDAP authenti
 tags: "troubleshoot authentication user role LDAP AD"
 -->
 
-If you've added a user to a Microsoft Active Directory or LDAP group, but Contrast still says that they can't be found, maybe you've added them to both the User and SuperAdmin groups. (Hint: This is not allowed.)
+If you've added a user to a Microsoft Active Directory (AD) or LDAP group, but Contrast still says that they can't be found, you might have added them to both the User and SuperAdmin groups when you set up the configuration. (Hint: This is not allowed.)
 
-For more information about configuring these authentication methods, go to the [Authentication page](installation-setupauth.html).
+After you choose one group for the user and remove them from the other in your AD or LDAP configuration, go back to the Contrast interface. If you chose to keep the user in the Admin group, Contrast automatically adds them as a SuperAdmin-level user in the Contrast interface but doesn't assign them to any Organization Role or Application Access Groups. If you chose to keep the user in the User group, you must go through the steps to add a user in Contrast. 
+
+For more information about configuring these authentication methods, go to the [Authentication page](installation-setupauth.html)
