@@ -6,7 +6,7 @@ tags: "user applications licensing"
 
 ## About Licenses
 
-Once you bring an application online, and it's reporting results, you may assign a license to the application. All applications in Contrast start with a temporary license by default. You can't transfer licenses between applications that are active or archived. To free a license from one application and assign it to another, you must reset and fully delete the licensed application. Once the application is deleted, the license returns to the organization pool. 
+Once you bring an application online, and it's reporting results, you may assign a license to the application. Without a license, vulnerability findings, application activity and a view of how the application is being used in real time aren't available. All applications in Contrast start with a temporary license by default. You can't transfer licenses between applications that are active or archived. To free a license from one application and assign it to another, you must reset and fully delete the licensed application. Once the application is deleted, the license returns to the organization pool. 
 
 ## License an Application
 
@@ -25,7 +25,7 @@ You must be an Organization Administrator to assign a license to an individual a
 * The application is no longer marked as "Unlicensed" in the grid, and all findings are visible.
 
 
-### Apply a license within an application page
+### Apply a license in an application page
 
 You can also enable a license in an application's overview page. Follow these steps from the Applications page:
 
