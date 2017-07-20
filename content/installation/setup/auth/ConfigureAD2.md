@@ -60,9 +60,9 @@ An important distinction is that Contrast does not perform Data Access Control u
 
 **Contrast SuperAdmin Group:** This group allows users to log in to the Super Administrator interface. This interface should only be accessible to Application and System administrators.
 
-It is important to note that a user can not belong to both the User and Admin groups.
+**A user can't belong to both the User and Admin groups. If you add them to both groups in your AD instance, Contrast won't be able to find them during configuration.** 
 
-You can use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
+> Note: You can use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
 
 <a href="assets/images/KB4-c09_2.png" rel="lightbox" title="Configuring Groups"><img class="thumbnail" src="assets/images/KB4-c09_2.png"/></a>
 
