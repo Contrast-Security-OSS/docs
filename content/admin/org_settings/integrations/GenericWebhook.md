@@ -5,7 +5,7 @@ tags: "Admin organization settings integrations generic webhook"
 -->
 
 
-Contrast supports generic webhook integration, which allows you to receive notifications on any URL that receives POST messages. The simple integration format requires you to fill in fields for **Title** and **Message**.
+Contrast supports generic webhook integration, which allows you to receive notifications on any URL that receives POST messages. The simple integration format requires you to fill the `title` and `message`.
 
 Sample code:
 
