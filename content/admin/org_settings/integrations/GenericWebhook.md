@@ -5,7 +5,7 @@ tags: "Admin organization settings integrations generic webhook"
 -->
 
 
-Contrast supports generic webhook integration, which allows you to receive notifications on any URL that receives POST messages. The simple integration format requires you to fill in the `title` and `message`.
+Contrast supports generic webhook integration, which allows you to receive notifications on any URL that receives POST messages. The simple integration format includes an optional Payload field where you can include a `title` and `message`.
 
 <a href="assets/images/Webhook-integration.png" rel="lightbox" title="Set up Webhook integration"><img class="thumbnail" src="assets/images/Webhook-integration.png"/></a>
 
@@ -16,7 +16,7 @@ Contrast supports generic webhook integration, which allows you to receive notif
 * In the row for Generic Webhook, click the button to **Connect**.
 * Name the webhook, and paste the URL in the designated field.
 * Select the application(s) that you want to filter.
-* In the Payload field, enter the `title` and `message`. Sample code:
+* If you want to complete the Payload field, enter the `title` and `message`. Sample code:
 
 ```javascript
 {
@@ -24,7 +24,6 @@ Contrast supports generic webhook integration, which allows you to receive notif
 	'message': 'Test User commented on a Insecure JSP Placement vulnerability in WebGoat. \"Fixed in CVE-2015\"'
 }
 ```
-
 * Click **Save**.
 
 You are connected!
