@@ -24,6 +24,17 @@ Contrast supports generic webhook integration, which allows you to receive notif
 	'message': 'Test User commented on a Insecure JSP Placement vulnerability in WebGoat. \"Fixed in CVE-2015\"'
 }
 ```
+You can also add placeholders in the payload so that Contrast changes the text for different notifications - a new application, server, vulnerability, etc. Sample code for VictorOps integration:
+
+```json
+{ 
+	"message_type":"INFO", 
+	"entity_id":"$Title", 
+	"entity_display_name":"$Title", 
+	"state_message":"$Message" 
+}
+```
+
 * Click **Save**.
 
 You are connected!
