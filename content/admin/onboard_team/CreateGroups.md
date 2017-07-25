@@ -17,8 +17,7 @@ Groups are highly flexible. You can configure them with a single role and single
 * In the **Role** field, choose from one of the following:
  * **System:** Administrative privileges in the System Administration interface.
  * **Observer:** View-only privileges in the System Administration interface.
- * **No Access:** Restrict access to an organization.
- * **Note:** You can define multiple roles for a given group of users.
+ * **No Access:** Restricts access to an organization.
  
 * In the **Organization(s)** field, select one or more organizations to associate with one or more roles.
 
@@ -30,10 +29,10 @@ When you add a user to a System Administration group that contains one or more o
 
 Use an organization group to assign authorized users access to organizations and applications. Contrast provides four default groups within each organization to help you get started. These groups provide access to all applications in the organization with the associated role. That role grants or restricts what the user can do with the application. The four roles are:
 
-* **View:** Allows users to see an application's score, libraries and vulnerabilities, and add comments.
-* **Edit:** Allows users to manage an application's vulnerabilities and basic application functions.
-* **Rules Admin:** Allows users the capability of the Edit role as well as the ability to manage security rules for an application.
-* **Admin** Provides full access to configure an application. 
+* **View:** See an application's score, libraries and vulnerabilities, and add comments.
+* **Edit:** Manage an application's vulnerabilities and basic application functions.
+* **Rules Admin:** Capability of the Edit role as well as the ability to manage security rules for an application.
+* **Admin:** Full access to configure an application. 
 
 ## Create Organization Groups 
 
@@ -47,16 +46,20 @@ If you need more granular control, create organization groups in the System Admi
 
 * In the **Organization Role** field (available only to SuperAdmins), choose from the following:
 
- * **No Access:** The user has no access to the organization.
- * **View:** The user has read-only access to an organization's findings in Contrast. 
- *  **Edit:** The user can interact with the full lifecycle of vulnerabilities as well as bring applications online and delete them. This user has no administration capabilities and can't perform any organization administration functions. This role is appropriate for most Contrast users. 
- * **Rules Admin:** The user has the same privileges as an Edit user as well as the ability to edit policy and rules. 
- * **Admin:** The user is responsible for configuration of the organization with the ability to license applications, manage user accounts and perform other advanced configuration functions. 
+ * **No Access:** No access to the organization.
+ * **View:** Read-only access to an organization's findings in Contrast. 
+ *  **Edit:** Interact with the full lifecycle of vulnerabilities as well as bring applications online and delete them. No administrative capabilities or functions. <br>
+ (This role is appropriate for most Contrast users.)
+ * **Rules Admin:** Privileges of an Edit user as well as the ability to edit policy and rules. 
+ * **Admin:** Responsible for configuration of the organization with the ability to license applications, manage user accounts and perform other advanced configuration functions. 
 
-* In the **Application Access** field, define access as a pairing of application(s) and role. In the applications field, select a single application, multiple applications or all applications. Then select the role you want to provide to those applications. A single group can provide more than one role assignment by clicking **Add Access** to add another line in the group definition to define a separate application and role assignment.
+* In the **Application Access** fields, define access as a pairing of application(s) and role. 
+ * In the multiselect field, select a single application, multiple applications or all applications. You can also choose to have **Applications onboarded to group**, which allows you to grant group access to individual applications during onboarding. 
+ * In the dropdown menu, select the role you want to provide to those applications. 
+ * Click **Add Access** to define separate application and role assignment(s) in a separate line.
 
 * In the **Member(s)** field, select one or more users to assign to a group. See the article to [Create Users](admin-onboardteam.html#create-user) for more information.
 
 >**Example:** Add user access to App1 and App2 with the Admin role on one line. Click the link to **Add access** to App3 and App4 with the role Edit on the next line. Therefore, the group provides the Admin role for App1 and App2 but the Edit role for App3 and App4 to the selected users.
 
-For more information, read about how to [Manage Groups](admin-manageorgs.html#access). 
+Learn how to access and update your groups while using Contrast by reading the [Manage Groups](admin-manageorgs.html#access) article. 
