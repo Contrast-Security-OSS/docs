@@ -132,7 +132,7 @@ As part of the script generation, you will be asked to create two Mustache Strin
 #### Step 4: Teach TeamServer About The New Rule
 There are two steps to teaching the TeamServer about your new rule:
 
-First, on the TeamServer, you need to place the Groovy script built in Step #5 into the directory *$contrast.data.dir\data\rulepack*. Typically, the *contrast.data.dir* can be found at *C:/Program Files/Contrast* on Windows and *opt/Contrast* on Linux. If this is not the case, your administrator may have specified a custom directory for installation. Please contact them to determine where the TeamServer Contrast directory is located.
+First, on the TeamServer, you need to place the Groovy script built in Step #5 into the directory *$contrast.data.dir\data\data\rulepack*. Typically, the *contrast.data.dir* can be found at *C:/Program Files/Contrast* on Windows and *opt/Contrast* on Linux. If this is not the case, your administrator may have specified a custom directory for installation. Please contact them to determine where the TeamServer Contrast directory is located.
 
 Next, you need to update the configuration for TeamServer to know about the existence of this rule file. In the rulepack directory you just put your Groovy script, there should be a *contrast-rules.external.xml* file. Open this file and add an entry to point to your new Groovy script. 
 
