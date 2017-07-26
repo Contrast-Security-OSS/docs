@@ -4,7 +4,6 @@ description: "Instructions on how to add an application"
 tags: "TeamServer user application adding"
 -->
 
-## Add Applications
 
 You can access the **Add Application Wizard** from any page by clicking the button in the top navigation.
 
@@ -26,6 +25,28 @@ Select your container to view the installation instructions for the specific lan
 
 <a href="assets/images/KB3-f03_3.gif" rel="lightbox" title="Container Selection"><img class="thumbnail" src="assets/images/KB3-f03_3.gif"/></a>
 
+### Choose an access control group
+
+To make access to an application more granular, you can specify the access control group to which an application will belong before initial startup by setting the group name in the agent configuration for your application. 
+
+For **Ruby**, add the `group` field to the `application` section of the *contrast_security.yaml* file from Contrast. An example configuration for the group `Contrast Testing`: 
+
+```
+application:
+   group: Contrast Testing
+```
+
+In **Java**, add the system property `contrast.app.group` to make your new startup command. Example:
+
+```
+-Dcontrast.group="Contrast Testing" -javaagent:/path/to/contrast.jar
+```
+
+<!-- Other agents will behave with similarly, language-specific ways of specifying this field. -->
+
+When Contrast recognizes the group you named, it automagically associates the application with that group, and allows all group members access to the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an Admin to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
+
+To learn more, go to the articles to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
 
 ## Step 3: Restart Your Server
 
