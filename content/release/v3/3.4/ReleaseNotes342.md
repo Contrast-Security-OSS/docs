@@ -42,7 +42,7 @@ With new agent reports for virtual patch, IP blacklist and BotBlocker events - n
 
 * **Java Agent Summary:** We introduced a new CVE Shield for CVE-2017-9791, added adaptive optimization techniques to improve performance over time, improved support for various libraries and frameworks, and introduced memory usage improvements. We also fixed a few false positives and one false negative.
 
-* **.NET Agent Summary:** We improved our XXE detection in Assess mode, and added support for Assess exclusions. We also added experimental support for CLR2 under Duplex mode (which supports Assess and Protect).
+* **.NET Agent Summary:** We improved our XXE detection in Assess mode, and added support for Assess exclusions. We also added experimental support for CLR2 under Duplex mode (which supports both Assess and Protect).
 
 * **Node.js Agent Summary:** We improved error handling when the agent is given an invalid URL for the Contrast interface, and made the autocompletion prevention missing rule less permissive. We also found a few bugs in setting apiKey arguments in the command line, reporting URL activity, and applications loading the *requirejs* module, but those are long gone. 
 
