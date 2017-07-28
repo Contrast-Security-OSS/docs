@@ -54,7 +54,7 @@ If you need more granular control, create organization groups in the System Admi
  * **Admin:** Responsible for configuration of the organization with the ability to license applications, manage user accounts and perform other advanced configuration functions. 
 
 * In the **Application Access** fields, define access as a pairing of application(s) and role. 
- * In the multiselect field, select a single application, multiple applications or all applications. You can also choose to have **Applications onboarded to group**, which allows you to grant group access to individual applications during onboarding. 
+ * In the multiselect field, choose a single application, multiple applications or all applications. You can also choose to have **Applications onboarded to group**, which allows you to grant group access to individual applications during onboarding. 
  * In the dropdown menu, select the role you want to provide to those applications. 
  * Click **Add Access** to define separate application and role assignment(s) in a separate line.
 

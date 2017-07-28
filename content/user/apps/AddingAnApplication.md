@@ -27,7 +27,7 @@ Select your container to view the installation instructions for the specific lan
 
 ### Choose an access control group
 
-To determine users' access to an application, you can specify the access control group to which an application will belong before initial startup. Use the workflow appropriate for your language to set the group name in the agent configuration for your application. 
+To determine users' access to an application, you can specify the access control group to which an application will belong before initial startup. Use the appropriate workflow for your language to set the group name in the agent configuration for your application. 
 
 For **Java**, add the system property `contrast.app.group` to make your new startup command. Example:
 
@@ -52,7 +52,7 @@ For **Node.js**, there are two options.
 }
 ```
 
-* You can also add `--appGroup "groupname"` to command line arguments or the `npm command` in your *package.json*. Example:
+* You can also add `--appGroup "groupname"` to command line arguments or the `npm command` in your *package.json* file. Examples:
 
 ```
 node-contrast index.js --appGroup groupName
@@ -71,7 +71,7 @@ application:
 
 When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an Admin to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
 
-To learn more, read how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
+Learn more by reading how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
 
 ## Step 3: Restart Your Server
 

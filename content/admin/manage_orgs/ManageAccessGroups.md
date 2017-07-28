@@ -42,7 +42,7 @@ Go to the **Groups** section of the Organization Settings page. From there:
 
 * Configure a new group by clicking the **Add Group** button.
 * See all groups (both default and custom) and focus on specific details by using the group search field or quick views in the dropdown menu.  
-* Click the Group name to go to the **Edit Group** configuration page, where you can view the details of the group and make any modifications. You may change the Group name, Application Access and members of the group, and then **Save** your changes. To allow applications to be added to a group during onboarding, choose **Applications onboarded to group** in the Application Access field. 
+* Click the Group name to go to the **Edit Group** configuration page, where you can view the details of the group and make any modifications. You may change the Group name, Application Access and members of the group. To allow applications to be added to a group during onboarding, choose **Applications onboarded to group** in the Application Access field. 
 
 * **Delete** any group by clicking the trash can icon in the grid row or on **Edit Group** configuration page. Once this action is confirmed, the group is removed and any access provided by that group is revoked from any of the users assigned to the group.
 
