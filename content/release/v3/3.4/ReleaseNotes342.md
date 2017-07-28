@@ -8,30 +8,30 @@ By sending more reports to the attack event record and adding access group names
 
 ## Fixes
 
-* CONTRAST-15421: Linked correct version of our latest Release News in the User menu
+* Linked correct version of our latest Release News in the User menu
 * CONTRAST-12241, -15731: Launch API documentation from Contrast
 * CONTRAST-15423: Cookie value conforms to RFC 6265
 * CONTRAST-15810: Showing environment information in Application Overview page 
 * CONTRAST-15786: Save and view Superadmin groups 
-* CONTRAST-15556, -14367: Add a payload and retest updates your WebHook integration without leaving the page
-* CONTRAST-14393: Edit servers in bulk without enabling Syslog 
-* CONTRAST-12775, -15042: Adjusted Dashboard and Library Stats to show correct Library count and grade
+* Add a payload and retest updates your WebHook integration without leaving the page
+* Edit servers in bulk without enabling Syslog 
+* Adjusted Dashboard and Library Stats to show correct Library count and grade
 * CONTRAST-14250: Corrected list of Not Seen applications in Organization Statistics
 * CONTRAST-15615: Screener can start Contrast
 * CONTRAST-15503: No more editing other users' comments on vulnerabilities
-* CONTRAST-15544, -15671: SuperAdmins can login on the first try, and even assign licenses to an organization
-* CONTRAST-15522: Update your expired password without the added shame of page errors
+* SuperAdmins can login on the first try, and even assign licenses to an organization
+* Update your expired password without the added shame of page errors
 * CONTRAST-15499, -15521: Fixed staging synthetics 
 * CONTRAST-14988: Storing Syslog values correctly in the database
-* CONTRAST-15133, -15520, -15610: See full stacktrace from .NET applications and create Security Controls in Vulnerability Details  
+* See full stacktrace from .NET applications and create Security Controls in Vulnerability Details  
 * CONTRAST-15029: Send bugs to JIRA locally 
-* CONTRAST-15340, -15309, -15310: Application Importance, Attackers and Severity filters working in Attacks page 
+* Application Importance, Attackers and Severity filters working in Attacks page 
 
 ## Improvements 
 
 * We’re making it easier to add applications to the appropriate access groups by letting Admins add the group name during application onboarding.
 
-* For our Protect users, agents now send virtual patch, IP blacklist and BotBlocker events to the attack event record. We also added some new advanced filters to help you make sure that you don’t get swamped by all those bad bots.
+* For our Protect users, agents now send virtual patch, IP blacklist and BotBlocker events to the attack event record. We also added some new Advanced filters to help you make sure that you don’t get swamped by all those bad bots.
 
 * We extended our exclusions technology to .NET Assess rules to you make Contrast even more accurate within your environment.
 
@@ -41,7 +41,7 @@ By sending more reports to the attack event record and adding access group names
 
 ## Agent Updates
 
-* **Java Agent Summary:** 
+* **Java Agent Summary:** We introduced a new CVE Shield for CVE-2017-9791, added adaptive optimization techniques to improve performance over time, improved support for various libraries and frameworks, and introduced memory usage improvements. We also fixed a few false positives and one false negative.
 
 * **.NET Agent Summary:** We improved our XXE detection in Assess mode, and added support for Assess exclusions. We also added experimental support for CLR2 under Duplex mode (which supports Assess and Protect).
 
