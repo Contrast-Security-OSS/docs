@@ -58,7 +58,7 @@ For **Node.js**, there are two options.
 node-contrast index.js --appGroup groupName
 ```
 ```
-npm run contrast -- --appGroup groupName`
+npm run contrast -- --appGroup groupName
 ```
 
 
