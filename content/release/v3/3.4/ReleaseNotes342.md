@@ -21,8 +21,9 @@ By sending more reports to the attack event record and adding access group names
 * CONTRAST-15503: No more editing other users' comments on vulnerabilities
 * CONTRAST-15544, -15671: SuperAdmins can login on the first try, and even assign licenses to an organization
 * CONTRAST-15522: Update your expired password without the added shame of page errors
+* CONTRAST-15499, -15521: Fixed staging synthetics 
 * CONTRAST-14988: Storing Syslog values correctly in the database
-* CONTRAST-15133, -15520: See full stacktrace from .NET applications and create Security Controls in Vulnerability Details  
+* CONTRAST-15133, -15520, -15610: See full stacktrace from .NET applications and create Security Controls in Vulnerability Details  
 * CONTRAST-15029: Send bugs to JIRA locally 
 * CONTRAST-15340, -15309, -15310: Application Importance, Attackers and Severity filters working in Attacks page 
 
