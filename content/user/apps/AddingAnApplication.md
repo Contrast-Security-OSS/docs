@@ -29,7 +29,7 @@ Select your container to view the installation instructions for the specific lan
 
 To determine users' access to an application, you can specify the access control group to which an application will belong before initial startup. Use the appropriate workflow for your language to set the group name in the agent configuration for your application. 
 
-For **Java**, add the system property `contrast.app.group` to make your new startup command. Example:
+For **Java**, add the system property `contrast.group` to make your new startup command. Example:
 
 ```
 -Dcontrast.group="Contrast Testing" -javaagent:/path/to/contrast.jar
