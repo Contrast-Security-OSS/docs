@@ -75,7 +75,7 @@ Learn more by reading how to [Create](admin-onboardteam.html#group) and [Manage 
 
 ## Step 3: Restart Your Server
 
-Before you begin browsing an application, it's important to restart your server. The wizard additional includes this step to guarentee that you don't forget. 
+Before you begin browsing an application, it's important to restart your server. The wizard also includes this step to guarantee that you don't forget. 
 
 <a href="assets/images/KB3-f03_4.png" rel="lightbox" title="Restart Server"><img class="thumbnail" src="assets/images/KB3-f03_4.png"/></a>
 
