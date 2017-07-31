@@ -8,4 +8,4 @@ Virtual patches are custom defense rules that you can define to protect against 
 
 ## Add a Virtual Patch
 
-<a href="assets/images/Add-virtual-patch.png" rel="lightbox" title="Remediation Policy grid"><img class="thumbnail" src="assets/images/Add-virtual-patch.png"/></a>
+<a href="assets/images/Add-virtual-patch.png" rel="lightbox" title="Add virtual patch"><img class="thumbnail" src="assets/images/Add-virtual-patch.png"/></a>

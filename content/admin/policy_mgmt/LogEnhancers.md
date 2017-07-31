@@ -4,13 +4,29 @@ description: "Overview of log enhancers"
 tags: "Admin log enhancers policy management protect"
 -->
 
-Log Enhancers are instrumentation instructions that allow the Contrast agent to log additional parameters and data in the application without requiring any source code changes. Utilizing our deep security instrumentation techniques, a user can specify the API and parameter to log, and the Contrast agent then adds this information to the *security.log* file as part of RASP logging. Organization and Policy (Rules) Administrators can manage log enhancers by going to the **User menu > Policy Management > Log Enhancercers tab**. 
+Log Enhancers are instrumentation instructions that allow the Contrast agent to log additional parameters and data in the application without requiring any source code changes. Utilizing our deep security instrumentation techniques, a user can specify the API and parameter to log, and the Contrast agent then adds this information to the *security.log* file as part of RASP logging. Organization and Policy (Rules) Administrators can manage log enhancers by going to the **User menu > Policy Management > Log Enhancers tab**. 
+
+
+<!-- Add grid screenshot once UI is finished. -->
+
 
 ## Add a Log Enhancer
 
-To create a Log Enhancer, complete the following steps. 
+To create a Log Enhancer, click the button to **Add Log Enhancer** above the grid. 
 
-* Find an API to which you want to add a log message. For example: 
+<a href="assets/images/Add-log-enhancer.png" rel="lightbox" title="Add Log Enhancer"><img class="thumbnail" src="assets/images/Add-log-enhancer.png"/></a>
+
+* In the form, add a **Name** and **Description** for this log enhancer. 
+
+* In the dropdown fields, choose a **Log Level** and **Log Type**. 
+
+* In the **API to Log** section, choose a **Language** from the dropdown menu. Then enter the **API** and the **Format** description.  
+
+
+<br>
+
+
+Then enter the API to which you want to add a log message. For example: 
 
 ```
 public boolean com.acme.Authenticator.authenticate(String user, String password)
@@ -23,5 +39,9 @@ public boolean com.acme.Authenticator.authenticate(String user, String password)
 > * `{Pn}`: Print the given parameter at index `n`. Note that `n` is zero-based.
 > * `{R}`: Print the return value of the function.
 
-* Make a name for the Log Enhancer, like “spring-forgot-password”. 
+
+
+
+
+
 
