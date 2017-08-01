@@ -6,7 +6,7 @@ tags: "ruby on rails connectivitiy agent service teamserver"
 
 ## Connectivity
 
-For performance reasons the Ruby agent middleware that runs within your application sends its findings to a locally running service which is responseible for collating and bundling that information before sending it to TeamServer. 
+For performance reasons the Ruby agent that runs within your application sends its findings to a locally running service which is responsible for collecting and bundling that information before sending it to TeamServer. If either communcation link (agent to service or service to TeamServer) is broken the agent will be unable to get updated configuration information from TeamServer nor will it be able to send findings to be viewed.
 
 ### Agent to Service
 
