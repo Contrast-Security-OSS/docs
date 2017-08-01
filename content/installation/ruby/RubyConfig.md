@@ -11,7 +11,7 @@ The configuration file is assumed to be called `contrast_security.yaml` wherever
 The ruby agent and service load the configuration yaml from the following paths in order of precedence:
 
 1. The current working directory (e.g. `./contrast_security.yaml`)
-2. A subdirectory called `config` which is the default for Ruby on Rails applications (e.g. `.config/contrast_security.yaml`)
+2. A subdirectory called `config` which is the default for Ruby on Rails applications (e.g. `./config/contrast_security.yaml`)
 3. Within in the server's `etc` directory (e.g. `/etc/contrast_security.yaml`)
 
 ## General Configuration Options
@@ -32,7 +32,7 @@ The configuration yaml consists of four sections. The agent and service may shar
   * `port`: The port on which the agent will use to communicate with the service (e.g. 30555)
 * `server`: information about the server that the web application is hosted on 
   * `name`: Name to register the server under in TeamServer
-  * `environment`: The environment applications on this server should register themselves as (default is "development")
+  * `environment`: (development) The environment applications on this server should register themselves as on TeamServer
 * `application`: information about the application that is being protected by the ruby agent
   * `name`: Name to register the application udner in TeamServer. If not provided, the Rails application name is used instead
   * `logger`:
