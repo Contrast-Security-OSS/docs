@@ -6,16 +6,16 @@ tags: "ruby on rails connectivitiy agent service teamserver"
 
 ## Connectivity
 
-For performance reasons the Ruby agent that runs within your application sends its findings to a locally running service which is responsible for collecting and bundling that information before sending it to TeamServer. If either communcation link (agent to service or service to TeamServer) is broken the agent will be unable to get updated configuration information from TeamServer nor will it be able to send findings to be viewed.
+For performance reasons, the Ruby agent that runs within your application sends its findings to a locally running service, which is responsible for collecting and bundling that information before sending it to Contrast. If either the agent-to-service or service-to-Contrast communcation link is broken, the agent won't be able to get updated configuration information from Contrast or send findings for you to view.
 
 ### Agent to Service
 
-The Contrast Security ruby service is an executable that must be running to allow communcation between the protected application and TeamServer. It can be added to an init or serivce script or run manually.
+The Ruby service is an executable that must be running to allow communcation between the protected application and the Contrast application. It can be added to an *init* or service script, or run manually.
 
-If the Contrast ruby agent and ruby service are *not* sharing the same configuration file, ensure that the `host` and `port` fields in the `service` section of the respective `contrast_security.yaml` files are identical. 
+If the Ruby agent and service are **not** sharing the same configuration file, ensure that the `host` and `port` fields in the `service` section of the respective `contrast_security.yaml` files are identical. 
 
-### Service to TeamServer
+### Service to Contrast
 
-The service must authenticate itself with TeamServer on startup. Verify that the credentials in the `teamserver` section of the `contrast_security.yaml` file that the service is using are correct.  If you believe that the credentials are correct but the service is unable to authenticate against TeamServer, contact your account administrator and ensure that your account has the correct permissions.
+The service must authenticate itself with the Contrast application on startup. Verify that the credentials are correct in the `teamserver` section of the `contrast_security.yaml` file that the service is using. If you believe that the credentials are correct but the service is unable to authenticate against Contrast, contact your account administrator and make sure that your account has the correct permissions.
 
 

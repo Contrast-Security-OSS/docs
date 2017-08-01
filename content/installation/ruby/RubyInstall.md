@@ -5,13 +5,19 @@ tags: "Ruby on Rails agent installation"
 -->
 
 ## Installation
-Installing the Contrast Security agent into your Ruby on Rails application consists of adding the `contrast-agent-*.gem` to the application Gemfile, adding the `contrast_security.yaml` to the application's `config` directory and running the `contrast-service-*.gem` as a stand-alone service on the same server as the application.
+
+To installing the Contrast Security agent into your Ruby on Rails application, you will:  
+
+* Add the `contrast-agent-*.gem` to the application Gemfile,
+* Adding the `contrast_security.yaml` to the application's `config` directory, and  
+* Run the `contrast-service-*.gem` as a stand-alone service on the same server as the application.
 
 ## Setup
-The `contrast-agent-*.gem` is a standard ruby library that can be added to the application Gemfile.
+
+The `contrast-agent-*.gem` is a standard Ruby library that you can add to the application Gemfile.
 
 
-### Using TeamSever as a Gem Source
+### Use Contrast as a Gem Source
 
 Add this line to your application's Gemfile:
 
@@ -25,7 +31,7 @@ Add this line to the top of your application's Gemfile:
 source 'https://app.contrastsecurity.com/Contrast/api/repo/rvm'
 ```
 
-After editing the Gemfile, you'll need to bundle the contrast-agent gem. To do that, you'll need to add authorization to your Bundler:
+After editing the Gemfile, you must bundle the `contrast-agent` gem by adding authorization to your Bundler:
 
 ``` bash
 bundle config https://app.contrastsecurity.com/Contrast/api/repo/rvm ${username}:${service_key}
@@ -38,25 +44,26 @@ bundle update
 ```
 
 ### Manual installation
-Download the `contrast-agent-*.gem` file to a local directory.
 
-Add the gem to the project Gemfile.
+Download the *contrast-agent-*.gem* file to a local directory. Add the gem to the project Gemfile.
 
 ``` ruby
 gem 'contrast-agent'
 ```
 
-Install the gem in the gemset for the current application. Note that in systems using the `rvm` or `rbenv` the environment of a user on the system might not be the same environment that the runtime server environment is using.
+Install the gem in the gemset for the current application. 
 
 ``` bash
 bundle install ./path/to/contrast-agent-*.gem
 ``` 
 
-If the gem can not be found after server startup, ensure that the gem is in a gemset available to running web server environment. 
+> **Note:** In systems using the `rvm` or `rbenv`, the environment of a user on the system might be different than the environment that the runtime server environment is using.
+
+If you can't find the gem after server startup, make sure that the gem is in a gemset available to running web server environment. 
 
 ### Configuration
 
-A standard configuration file can be downloaded from TeamServer. This must be placed in the web application's `config` directory. The following fields, at minimum, must be defined:
+Download a standard configuration file from the Contrast application. You must place the file in the web application's `config` directory, and define the following fields, at a minimum:
 
 ``` yaml
 service:
@@ -68,19 +75,18 @@ application:
     level:
 ```
 
-
 ## Run the Service
-The `contrast-service-*.gem` is an executable that must be run on the same server as the web application.
 
-First, download the `contrast-service-*.gem` from TeamServer. It must be the same version as the `contrast-agent-*.gem`.
+The `contrast-service-*.gem` is an executable that you must run on the same server as the web application. Begin by downloading the `contrast-service-*.gem` from the Contrast application. It must be the same version as the `contrast-agent-*.gem`.
 
-The service, like the agent, reads it's configuration from one of the following locations in the following order. 
+The service, like the agent, reads its configuration from one of the following locations in the following order: 
 
 #. the current working directory
 #. if the working directory of the service is the web app's root directory, the YAML file in the `config` subdirectory (e.g. `config/contrast_security.yaml`) will be used
 #. the system's `/etc/contrast_security.yaml` file.
 
-The following sections, at minimum, must be defined in the configuration file:
+Define the following sections, at minimum, in the configuration file:
+
 ```yaml
 teamserver:
   user_name:
