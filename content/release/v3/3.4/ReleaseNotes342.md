@@ -16,11 +16,9 @@ With new agent reports for virtual patch, IP blacklist and BotBlocker events - n
 * Dashboard and Library Stats show your correct Library count and grade.
 * Edit servers in bulk without enabling Syslog. 
 * Deflated number of Not Seen applications in Organization Statistics. 
-* Screener can start Contrast.
 * No more editing other users' comments on vulnerabilities.
 * SuperAdmins can login on the first try, save and view groups, and even assign licenses to an organization.
 * Update your expired password without the added shame of page errors.
-* Staging synthetics are up and running. 
 * See the full stacktrace from .NET applications and create Security Controls in Vulnerability Details.  
 * Syslog values are stored correctly in the database.
 * Send bugs to JIRA locally. 
