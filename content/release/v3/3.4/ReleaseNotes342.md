@@ -4,14 +4,14 @@ description: "Contrast 3.4.2 July 2017"
 tags: "3.4.2 July Release Notes"
 -->
 
-With new agent reports for virtual patch, IP blacklist and BotBlocker events - not to mention more powerful Advanced filters - the Attacks page is more lethal than ever before. Just choose a language to start the creative process. 
+With new agent reports for virtual patch, IP blacklist and BotBlocker events - not to mention more powerful Advanced filters - the Attacks page is more lethal than ever before. Just choose a language to start creating your own. 
 
 ## Fixes
 
 * Linked the latest Release News in the User menu.
-* API documentation is ready for launch (again). 
+* API documentation is ready for (re)launch. 
+* Environment information is back in the Application Overview page. 
 * Cookie value conforms to RFC 6265.
-* Environment information is back in Application Overview page. 
 * Add a payload and retest updates to your WebHook integration without leaving the page.
 * Dashboard and Library Stats show your correct Library count and grade.
 * Edit servers in bulk without enabling Syslog. 
@@ -30,9 +30,9 @@ With new agent reports for virtual patch, IP blacklist and BotBlocker events - n
 
 * For our Protect users, agents now send virtual patch, IP blacklist and BotBlocker events to the Attack Events record. We also added some new Advanced filters to help you make sure that you don’t get swamped by all those bad bots.
 
-* We extended our exclusions technology to .NET Assess rules to you make Contrast even more accurate within your environment.
+* We extended our exclusions technology to .NET Assess rules to help you make Contrast even more accurate within your environment.
 
-* Choose the right application language(s) for you when creating a virtual patch or log enhancer.
+* Choose the right application language(s) for you when creating a virtual patch or Log Enhancer.
 
 * Get better visualization of vulnerability details - and more improvements to come! 
 
