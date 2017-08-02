@@ -6,20 +6,19 @@ tags: "Ruby on Rails agent installation"
 
 ## Installation
 
-To installing the Contrast Security agent into your Ruby on Rails application, you will:  
+To install the Contrast agent into your Ruby on Rails application, you must complete the following steps.  
 
-* Add the `contrast-agent-*.gem` to the application Gemfile,
-* Adding the `contrast_security.yaml` to the application's `config` directory, and  
-* Run the `contrast-service-*.gem` as a stand-alone service on the same server as the application.
+1. Add the <i>contrast-agent-*.gem</i> to the application Gemfile. (This is outlined in the **Setup** section below.) 
+2. Add the *contrast_security.yaml* file to the application's *config* directory. (This is outlined in the **Configuration** section below.)
+3. Run the `contrast-service-*.gem` as a standalone service on the same server as the application. (This is outlined in the section below to **Run the Service**.)
 
 ## Setup
 
-The `contrast-agent-*.gem` is a standard Ruby library that you can add to the application Gemfile.
+The <i>contrast-agent-*.gem</i> is a standard Ruby library that you can add to the application Gemfile. You can complete setup using Contrast as a Gem Source or by installing Contrast manually.
 
+### Contrast as a Gem Source
 
-### Use Contrast as a Gem Source
-
-Add this line to your application's Gemfile:
+To use Contrast as a Gem Source, add this line to your application's Gemfile:
 
 ``` ruby
 gem 'contrast-agent'
@@ -37,7 +36,7 @@ After editing the Gemfile, you must bundle the `contrast-agent` gem by adding au
 bundle config https://app.contrastsecurity.com/Contrast/api/repo/rvm ${username}:${service_key}
 ```
 
-Then run an update:
+Finally, run an update:
 
 ``` bash
 bundle update
@@ -45,13 +44,13 @@ bundle update
 
 ### Manual installation
 
-Download the *contrast-agent-*.gem* file to a local directory. Add the gem to the project Gemfile.
+To install the Contrast agent manually, download the <i>contrast-agent-*.gem</i> file to a local directory, and add the gem to the project Gemfile:
 
 ``` ruby
 gem 'contrast-agent'
 ```
 
-Install the gem in the gemset for the current application. 
+Install the gem in the gemset for the current application:
 
 ``` bash
 bundle install ./path/to/contrast-agent-*.gem
@@ -63,7 +62,7 @@ If you can't find the gem after server startup, make sure that the gem is in a g
 
 ### Configuration
 
-Download a standard configuration file from the Contrast application. You must place the file in the web application's `config` directory, and define the following fields, at a minimum:
+Download a standard configuration file from the Contrast application. You must place the file in the web application's *config* directory, and define the following fields, at a minimum:
 
 ``` yaml
 service:
@@ -81,9 +80,9 @@ The `contrast-service-*.gem` is an executable that you must run on the same serv
 
 The service, like the agent, reads its configuration from one of the following locations in the following order: 
 
-#. the current working directory
-#. if the working directory of the service is the web app's root directory, the YAML file in the `config` subdirectory (e.g. `config/contrast_security.yaml`) will be used
-#. the system's `/etc/contrast_security.yaml` file.
+1. The current working directory
+2. The YAML file in the *config* subdirectory (e.g. *config/contrast_security.yaml*), if the working directory of the service is the web application's root directory
+3. The system's */etc/contrast_security.yaml* file
 
 Define the following sections, at minimum, in the configuration file:
 

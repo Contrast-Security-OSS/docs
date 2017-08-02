@@ -12,6 +12,6 @@ The Ruby Agent has SQL Injection modules for MySQL (`mysql2` gem), SQLite3 and P
 
 ## OS Support
 
-Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has no `C` dependencies, and may work in other operating system environments. However, the associated service depends on Nokogiri and EventMachine, and may have trouble compiling under non-supported operating systems.
+Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has no *C* dependencies, and may work in other operating system environments. However, the associated service depends on Nokogiri and EventMachine, and may have trouble compiling under non-supported operating systems.
 
 
