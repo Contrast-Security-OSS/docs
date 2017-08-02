@@ -15,7 +15,7 @@ Organization and Policy (Rules) Administrators can manage log enhancers by going
 
 To find an existing rule, use the dropdown menu to filter them by language or type the rule name in the search field above the grid. 
 
-## Add a Log Enhancer
+### Add a Log Enhancer
 
 To create a Log Enhancer, click the button to **Add Log Enhancer** above the grid. 
 
@@ -43,7 +43,7 @@ To create a Log Enhancer, click the button to **Add Log Enhancer** above the gri
 
 * Click the **Add** button to save the rule. 
 
-## Edit a Log Enhancer
+### Edit a Log Enhancer
 
 Click the name in the grid to go to the **Edit Log Enhancer** form, where you can adjust the log level using the dropdown menu. Use the toggles in the grid row to enable or disable the rule in each environment.
 
