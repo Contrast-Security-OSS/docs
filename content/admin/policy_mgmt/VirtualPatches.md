@@ -4,7 +4,7 @@ description: "Overview of virtual patches"
 tags: "Admin virtual patches policy management protect"
 -->
 
-Virtual patches are custom defense rules that you can define to protect against specific vulnerabilities in your code. You can specify the criteria that each attack event needs to match as well as how the patch is applied. You can apply virtual patches to specific applications or all applications using a specific technology (e.g., Spring MVC). 
+Virtual patches are short-term, custom defense rules that protect against specific, newly discovered vulnerabilities in your code. You can specify the criteria that each attack event needs to match, to which application(s) the patch applies and in which environments the patch is enabled. 
 
 ## Manage Virtual Patches 
 
@@ -23,9 +23,7 @@ To add a virtual patch, click the button above the grid.
 
 * In the **Apply to** section, use the radio button to choose whether the rule applies to specific **Applications**, an **Application language** or an **Application technology**. After clicking the appropriate button, use the multiselect field that appears to further refine your choice. 
 
-* In the **Conditions** section, use the dropdown menus...
-
-* Select the link to **Add another condition** in a separate row, if necessary. 
+* Use the dropdown menus to define the **Conditions** under which the patch should apply to your application selection(s). Select the link to **Add another condition** in a separate row, if necessary. 
 
 ### Edit a virtual patch 
 
