@@ -60,7 +60,7 @@ bundle install ./path/to/contrast-agent-*.gem
 
 If you can't find the gem after server startup, make sure that the gem is in a gemset available to running web server environment. 
 
-### Configuration
+## Configuration
 
 Download a standard configuration file from the Contrast application. You must place the file in the web application's *config* directory, and define the following fields, at a minimum:
 
