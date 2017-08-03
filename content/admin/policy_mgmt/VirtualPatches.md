@@ -12,7 +12,6 @@ Organization and Policy (Rules) Administrators can view and manage their virtual
 
 <!-- Add screenshot of the UI. -->
 
-
 ### Add a virtual patch
 
 To add a virtual patch, click the button above the grid. 

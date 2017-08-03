@@ -10,7 +10,6 @@ Log Enhancers are instrumentation instructions that allow the Contrast agent to 
 
 Organization and Policy (Rules) Administrators can manage log enhancers by going to the **User menu > Policy Management > Log Enhancers tab**. 
 
-
 <!-- Add grid screenshot once UI is finished. -->
 
 To find an existing rule, use the dropdown menu to filter them by language or type the rule name in the search field above the grid. 
