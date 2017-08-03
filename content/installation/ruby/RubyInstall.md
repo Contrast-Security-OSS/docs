@@ -56,9 +56,7 @@ Install the gem in the gemset for the current application:
 bundle install ./path/to/contrast-agent-*.gem
 ``` 
 
-> **Note:** In systems using the `rvm` or `rbenv`, the environment of a user on the system might be different than the environment that the runtime server environment is using.
-
-If you can't find the gem after server startup, make sure that the gem is in a gemset available to running web server environment. 
+> **Note:** In systems using the `rvm` or `rbenv`, the environment of a user on the system might be different than the environment that the runtime server environment is using. If you can't find the gem after server startup, make sure that the gem is in a gemset available to the running web server environment. 
 
 ## Configuration
 
