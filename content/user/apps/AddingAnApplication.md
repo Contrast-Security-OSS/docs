@@ -41,14 +41,13 @@ For **Java**, add the system property `contrast.group` to make your new startup 
 -Dcontrast.group="Contrast Testing" -javaagent:/path/to/contrast.jar
 ```
 
-For **.Net**, add `Contrast.AppGroup` to one or both of the following locations: 
+For **.Net**, you can configure group access at the application level, server level or both. 
 
-* the `appSettings` group in the *web.config* file for the web application 
-* the *DotnetAgentService.exe.config* file for the agent server
+* To add the individual application to the group, add the `Contrast.AppGroup` property to the `appSettings` group in the application's *web.config* file. 
 
-> **Note:** Application configuration takes precedence over server-level configuration.
+* To add all applications on a server to a a group, add `Contrast.AppGroup` to the *DotnetAgentService.exe.config* file for the agent server.   
 
-For **Node.js**, there are two options. 
+For **Node.js**, you can choose from two configuration methods. 
 
 * You can add `"appGroup":"groupname"` to the *contrast.json* file. Example:
 
@@ -72,7 +71,6 @@ node-contrast index.js --appGroup groupName
 ```
 npm run contrast -- --appGroup groupName
 ```
-
 
 For **Ruby**, add the `group` field to the `application` section of the *contrast_security.yaml* file from Contrast. Example configuration for the group `Contrast Testing`: 
 
