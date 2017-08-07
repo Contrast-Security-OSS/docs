@@ -27,7 +27,13 @@ Select your container to view the installation instructions for the specific lan
 
 ### Choose an access control group
 
-To determine users' access to an application, you can specify the access control group to which an application will belong before initial startup. Use the appropriate workflow for your language to set the group name in the agent configuration for your application. 
+To determine users' access to an application, you can specify the access control group to which an application will belong before initial startup. Use the appropriate workflow for your language to set the group name in the agent configuration for your application.
+
+When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an Admin to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
+
+Learn more by reading how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
+
+#### Agent configurations 
 
 For **Java**, add the system property `contrast.group` to make your new startup command. Example:
 
@@ -35,8 +41,12 @@ For **Java**, add the system property `contrast.group` to make your new startup 
 -Dcontrast.group="Contrast Testing" -javaagent:/path/to/contrast.jar
 ```
 
+For **.Net**, you can configure group access at the application or server level. 
 
-For **Node.js**, there are two options. 
+* To add the individual application to the group, add the `Contrast.AppGroup` property to the `appSettings` group in the application's *web.config* file. 
+* To add all applications on a server to a group, add `Contrast.AppGroup` to the *DotnetAgentService.exe.config* file for the agent server.   
+
+For **Node.js**, you can choose from two configuration methods. 
 
 * You can add `"appGroup":"groupname"` to the *contrast.json* file. Example:
 
@@ -61,17 +71,12 @@ node-contrast index.js --appGroup groupName
 npm run contrast -- --appGroup groupName
 ```
 
-
 For **Ruby**, add the `group` field to the `application` section of the *contrast_security.yaml* file from Contrast. Example configuration for the group `Contrast Testing`: 
 
 ```
 application:
    group: Contrast Testing
 ```
-
-When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an Admin to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
-
-Learn more by reading how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
 
 ## Step 3: Restart Your Server
 
