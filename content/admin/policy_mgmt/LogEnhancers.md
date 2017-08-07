@@ -8,19 +8,21 @@ Log Enhancers are instrumentation instructions that allow the Contrast agent to 
 
 ## Manage Log Enhancers
 
-Organization and Policy (Rules) Administrators can manage log enhancers by going to the **User menu > Policy Management > Log Enhancers tab**. 
+Organization and Policy (Rules) Administrators can manage Log Enhancers by going to the **User menu > Policy Management > Log Enhancers tab**. 
 
-<!-- Add grid screenshot once UI is finished. -->
+<a href="assets/images/Log-enhancers-grid.png" rel="lightbox" title="Log enhancers grid"><img class="thumbnail" src="assets/images/Log-enhancers-grid.png"/></a>
 
 To find an existing rule, use the dropdown menu to filter them by language or type the rule name in the search field above the grid. 
 
 ### Add a Log Enhancer
 
-To create a Log Enhancer, click the button to **Add Log Enhancer** above the grid. 
+To create a Log Enhancer, complete the following steps:
+
+* Click the button to **Add Log Enhancer** above the grid. 
 
 <a href="assets/images/Add-log-enhancer.png" rel="lightbox" title="Add Log Enhancer"><img class="thumbnail" src="assets/images/Add-log-enhancer.png"/></a>
 
-* In the form, add a **Name** and **Description** for this log enhancer. 
+* In the form, add a **Name** and **Description** for this Log Enhancer. 
 
 * In the dropdown fields, choose a **Log Level** and **Log Type**. 
 
