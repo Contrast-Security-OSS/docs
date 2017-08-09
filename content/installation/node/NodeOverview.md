@@ -4,7 +4,7 @@ description: "Troubleshooting the Node.js Agent"
 tags: "installation NodeJS agent troubleshooting"
 -->
 
-The Contrast Node agent analyzes the behavior of Node.js web applications using established techniques, such as source-to-source compilation, to intercept <!-- code --> and add Contrast sensors to an application prior to execution. Just as tools such as Istanbul and CoffeeScript use this technique to weave new features into JavaScript, Contrast uses it to help you keep your applications secure.
+The Contrast Node agent analyzes the behavior of Node.js web applications using established techniques, such as source-to-source compilation, to add Contrast sensors to an application prior to execution. Just as tools such as Istanbul and CoffeeScript use this technique to weave new features into JavaScript, Contrast uses it to help you keep your applications secure.
 
 ## About the Agent
 
