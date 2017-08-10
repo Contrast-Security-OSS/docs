@@ -4,42 +4,43 @@ description: "Overview of administrating and managing an organization."
 tags: "Admin TeamServer organization settings"
 -->
 
-Organization administrators have access to a variety of configuration settings that are specific to operating and managing an organization, such as administering users and setting up password policy, integrations and server defaults. You can find these settings by selecting **Organization Settings** in the user menu.
+Organization Administrators have access to a variety of configuration settings for operating and managing an organization, such as administering users and setting up password policy, integrations and server defaults. Go to the **User menu* and choose **Organization Settings** to see all of the functions available. 
 
-<a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a>
- 
+<!-- <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a> --> 
+
 ## General Information and Licensing
-View basic information about your organization and configure high-level preferences such as Date and Time formats. Get a picture of your organization's licensing. A summary shows the number of licenses being used as well as the number of licenses available to allocate to other assets. 
+View basic information about your organization and configure high-level preferences including date and time formats in the **Organization** tab. You can also see a breakdown of your organization's Assess and Protect licenses. 
 
 ## Groups
-[Organization groups](admin-manageorgs.html#access) can be viewed, created, edited and deleted. Organization administrators use groups to designate a user's organization and application role. This provides the ability to customize what users can see and do in Contrast.
+Use [Organization groups](admin-manageorgs.html#access) to designate a user's organization and application role, which determines what users can see and do in Contrast. You can create, view, edit and delete groups at any time. 
 
 ## Users
-Manage users for an organization, including the ability to [add](admin-onboardteam.html#create-user), edit or delete them. Users can be assigned a default group (or role), designated for API-only use and unlocked if they've been locked out. 
+Manage users for an organization, by [adding](admin-onboardteam.html#create-user), editing or deleting them. You can also assign users to a default group (or role), designate them for API-only use and unlock their account. 
 
 ## Security
-Organization administrators manage [password policy](admin-systemsettings.html#pwd), [IP restrictions](admin-policymgmt.html#ip), [two-step verification](admin-systemsettings.html#twostep) and session timeouts. An audit log is also available and searchable by keyword and date.
+Manage [password policy](admin-systemsettings.html#pwd), [two-step verification](admin-systemsettings.html#twostep), [IP range](admin-policymgmt.html#ip) and session timeouts. You can also access an audit log that's searchable by keyword and date.
 
 ## API
-Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about them in our [API Documentation](tools-api.html#api-about).
+Contrast [APIs](tools-api.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
 
 ## Integrations
 Contrast offers basic [integrations](admin-orgintegrations.html) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
 
 ## Servers 
-[Server Settings](admin-orgsettings.html#org-server) provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment.
+[Server Settings](admin-orgsettings.html#org-server) provide default configurations for new servers (agents) that are being brought on board. You can customize these configurations for each environment.
 
 ## Notifications
-[Notifications](admin-orgsettings.html#org-notify) provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. These notifications can occur in Contrast and/or via email, depending on what options are enabled. Organization administrators can set the default notification settings for all users in their organization. 
+[Notifications](admin-orgsettings.html#org-notify) provide a mechanism for Contrast to alert users in specific cases, such as the discovery of a vulnerability or an attack on an application. These notifications occur in Contrast and/or by email. Organization Administrators can set the default notification settings for all users in their organization. 
 
 ## Report Settings
-[Report settings](admin-orgsettings.html#org-report) offer a single interface for organization administrators to define the template of hard-copy reports. This essentially involves defining the default values for reports such as:
+[Report Settings](admin-orgsettings.html#org-report) offer a centralized view of format options for hard-copy reports in your organization. Categories include:
 
 * Report Type
 * Vulnerability Status
+* Vulnerability Tag
 * Custom Footer
 
 ## Score Settings
 
-[Score settings](admin-orgsettings.html#score-settings) allow for customization of how **Overall Application Score** and **Library Score** gets calculated and determines what letter grade (or score) is communicated within Contrast.   
+[Score Settings](admin-orgsettings.html#score-settings) allow you to customize how Contrast calculates **Overall Score** and **Library Score**, and determine what letter grade (or score) is assigned within Contrast.   
 
