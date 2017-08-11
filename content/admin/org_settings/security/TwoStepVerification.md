@@ -12,15 +12,17 @@ Two-step verification (TSV) uses an auto-generated Time-Based One-Time Password 
 
 ## Administrator Set Up
 
-TSV is controlled at three levels: System, Organization and User. The System Administrator can enable or disable the feature using a radio button by going to **System Settings > Security > Two-Step Verification**.  
+TSV is controlled at three levels: System, Organization and User. 
+
+The System Administrator can enable or disable the feature using a radio button by going to **System Settings > Security > Two-Step Verification**. If you'd like to allow an Organization Admin to override this choice, check the box to **Allow organization override**.
+
+Organization Administrators can use the radio button to require users to set up TSV. If users are required to set up TSV, a lock icon indicates that users can't make changes. If users aren't required to set up TSV, the Organization Administrator can toggle the feature on or off. If TSV is on, the Administrator may choose whether or not to require TSV for users. This configuration decision results in two potential workflows for the user as described below.
 
 <a href="assets/images/Security-two-step.png" rel="lightbox" title="Two-step verification configuration"><img class="thumbnail" src="assets/images/Security-two-step.png"/></a>
 
-Use the radio button choose if users are required to to set up TSV. If users are required to set up TSV, a lock icon indicates changes may not be made. If users aren't required to set up TSV, the Organization Administrator can toggle the feature on or off. If TSV is on, the Administrator may choose whether or not to require TSV for users. This configuration decision results in two potential workflows for the user as described below.
-
 > **Note:** If a user belongs to multiple organizations, their default organization determines their TSV settings.
 
-Check the boxes for **Google Authenticator** or **Email**
+Check the box for **Google Authenticator** or **Email** to set your notification method.
 
 ## User Onboarding
 
