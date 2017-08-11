@@ -40,7 +40,7 @@ If TSV is enabled but not required, the user is prompted to begin onboarding the
 
 <a href="assets/images/TSVOnboardOpt.png" rel="lightbox" title="Optional Onboarding"><img class="thumbnail" src="assets/images/TSVOnboardOpt.png"/></a>
 
-
+To learn more about user setup process, go to the [Login and Password article](user-account.html#loginpwd).
 
 
 

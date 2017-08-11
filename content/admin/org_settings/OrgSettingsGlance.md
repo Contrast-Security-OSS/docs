@@ -18,7 +18,7 @@ Use [Organization groups](admin-manageorgs.html#access) to designate a user's or
 Manage users for an organization, by [adding](admin-onboardteam.html#create-user), editing or deleting them. You can also assign users to a default group (or role), designate them for API-only use and unlock their account. 
 
 ## Security
-Manage [password policy](admin-systemsettings.html#pwd), [two-step verification](admin-systemsettings.html#twostep), [IP range](admin-policymgmt.html#ip) and session timeouts. You can also access an audit log that's searchable by keyword and date.
+Manage [password policy](admin-systemsettings.html#pwd), [two-step verification](admin-systemsettings.html#twostep), [IP restrictions](admin-orgsecurity.html#security-ip) and session timeouts. You can also access an [audit log](admin-orgsecurity.html#audit-log), which is searchable by keyword and date.
 
 ## API
 Contrast [APIs](tools-api.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
