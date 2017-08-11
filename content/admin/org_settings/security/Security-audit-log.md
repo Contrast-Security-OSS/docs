@@ -14,4 +14,4 @@ Contrast captures activity about all user sessions, including changes to setting
 
 The grid shows the date of each activity and a message including the user's name and what they did. Use the search and date control fields to find specific instances within the log. 
 
-Once you've found the information you needed, use the "x" icon to exit the log and return to the main Security page. 
+Once you've found the information you needed, use the **x** icon to exit the log and return to the main Security page. 
