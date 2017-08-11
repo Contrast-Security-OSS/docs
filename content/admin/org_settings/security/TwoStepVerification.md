@@ -22,7 +22,7 @@ Organization Administrators can go to **Organization Settings > Security > Two-S
 
 > **Note:** If a user belongs to multiple organizations, their default organization determines their TSV settings.
 
-Check the box for **Google Authenticator** or **Email** to set your notification method.
+Check the box for **Google Authenticator** or **Email** to set your notification method. 
 
 ## User Onboarding
 
