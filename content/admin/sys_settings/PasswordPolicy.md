@@ -4,7 +4,7 @@ description: "Guidelines for configuring the password policy for TeamServer"
 tags: "Admin system settings security password policy administration"
 -->
 
-Regulate passwords within your organization by creating a password policy. You must be a SuperAdmin to configure the default policy or an Organization Admin to manage the policy in the **Security** tab in **Organization Settings**.  
+Regulate passwords within your organization by creating a password policy. You must be a SuperAdmin to configure the default policy in the **Security** tab in **System Settings** or an Organization Admin to manage the policy in the **Security** tab in **Organization Settings**.  
 
 <a href="assets/images/Security-password-policy.png" rel="lightbox" title="Password Policy form"><img class="thumbnail" src="assets/images/Security-password-policy.png"/></a>
 
