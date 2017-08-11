@@ -28,7 +28,7 @@ You must use this password the next time that you log in to Contrast.
 
 ## Two-Step Verification
 
-If your administrator has enabled two-step verification (TSV), you may add an extra layer of protection beyond your username and password by using TSV. Complete the following steps to enable the feature:
+If your administrator has enabled two-step verification (TSV), you can add an extra layer of protection beyond your username and password by using TSV. Complete the following steps to enable the feature:
 
 * From the **Your Account** page, select the **Two-Step Verification** tab in the left navigation.
 * Use the toggle to enable TSV. 
@@ -36,11 +36,11 @@ If your administrator has enabled two-step verification (TSV), you may add an ex
 	* [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
 	* [iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8)
 	* [Blackberry](https://appworld.blackberry.com/webstore/content/29401059/?lang=en&countrycode=US) 
-* If you run into issues using either method, download the backup codes provided.
+* If you run into issues using either method, use the backup codes provided.
 
 ### Verification codes 
 
-If you choose to receive your verification codes by email, Contrast sends you a verification code to enter on the following screen.  
+If you choose to receive your verification codes by email, Contrast sends you a verification code to enter on the following configuration screen.  
 
 If you select Google Authenticator, Contrast provides QR code with further instructions. You can scan the QR code, enter the code manually or use the provided dropdown to select the device type. Use the Google Authenticator application to obtain a verification code and validate your device.
 

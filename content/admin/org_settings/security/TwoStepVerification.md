@@ -4,8 +4,6 @@ description: "Overview and instructions for using the TSV feature"
 tags: "Admin system settings Two Step Verification TSV Multi Factor Authorization Security Backup Codes Google Authenticator"
 -->
 
-## How it Works 
-
 Two-step verification (TSV) uses an auto-generated Time-Based One-Time Password Algorithm (TOTP) security token to add an extra layer of protection beyond your username and password. You can access TSV codes with your Contrast-associated email address, or by using the Google Authenticator mobile application that's available on the following devices:
 
 * [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)

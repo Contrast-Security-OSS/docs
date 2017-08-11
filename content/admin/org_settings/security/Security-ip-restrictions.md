@@ -4,9 +4,6 @@ description: "Set up IP restrictions"
 tags: "organization settings security ip restrictions"
 -->
 
-
-## IP Restrictions 
-
 Restrict which IP addresses can access your Contrast account by going to the **User Menu > Organization Settings > Security tab > IP Restrictions** section. 
 
 <a href="assets/images/Security-ip-restriction.png" rel="lightbox" title="IP restrictions configuration"><img class="thumbnail" src="assets/images/Security-ip-restriction.png"/></a>
