@@ -35,7 +35,7 @@ The circular Language Breakdown chart shows the number of applications by langua
 
 Applications that were added within the last week and applications that reside on an offline server are listed separately in the sidebar. 
 
-<a href="assets/images/Org-stats-applications.png" rel="lightbox" title="Organization statistics for applications"><img class="thumbnail" src="assets/images/Org-stats-applications.png"/></a>
+<a href="assets/images/Org-stats-apps.png" rel="lightbox" title="Organization statistics for licenses"><img class="thumbnail" src="assets/images/Org-stats-apps.png"/></a>
 
 ## Servers  
 
