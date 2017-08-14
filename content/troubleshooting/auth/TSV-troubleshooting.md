@@ -15,6 +15,6 @@ If email is already the chosen notification method, contact your Administrator t
 
 ## Reset Device
 
-If you're having issues with Google Authenticator, you can troubleshoot by manually resetting your device by clicking the **Reset Device** link in User Settings. This clears all data for the current device and requires resetting Google Authenticator on the same or a new device.
+If you're having issues with Google Authenticator, you manually reset your device by clicking the **Reset Device** link in User Settings. This clears all data for the current device and requires resetting Google Authenticator on the same or a new device.
 
 <a href="assets/images/TSVResetDevice.png" rel="lightbox" title="Resetting Your Device in User Settings"><img class="thumbnail" src="assets/images/TSVResetDevice.png"/></a>
