@@ -1,6 +1,6 @@
 <!--
-title: "Configure the Password Policy of TeamServer"
-description: "Guidelines for configuring the password policy for TeamServer"
+title: "Configure the Password Policy of the Contrast Interface"
+description: "Guidelines for configuring the password policy for the Contrast interface"
 tags: "Admin system settings security password policy administration"
 -->
 
