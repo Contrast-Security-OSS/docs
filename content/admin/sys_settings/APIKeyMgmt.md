@@ -10,7 +10,7 @@ When you download the Contrast JVM plugin (also called the Engine), it comes pre
 
 ## How it Works 
 
-Contrast added another layer of security through an "organizational API key" that you can enable and manage on your own. In the case of a security breach, an unauthorized user can't submit forged or malicious data to your organization because their organizational API key is wrong. With the API key enabled, authentication follows the process shown in the image below.
+Contrast added another layer of security through an organization API key that you can enable and manage on your own. In the case of a security breach, an unauthorized user can't submit forged or malicious data to your organization because their organization API key is wrong. With the API key enabled, authentication follows the process shown in the image below.
 
 <a href="assets/images/KB4-a04_2.png" rel="lightbox" title="Organizational API Key"><img class="thumbnail" src="assets/images/KB4-a04_2.png"/></a>
 
