@@ -10,9 +10,7 @@ System and Organization Administrators can create users individually, in groups,
 
 You may decide to designate an [Application Access Group](admin-onboardteam.html#group) which can provide more administrative function for an application to the users, or restrict what applications the users in the group can view or modify.
 
-## Create Users 
-
-### System Settings
+## System Settings
 
 To create users as a System Administrator, go to the **User menu >  "Use Contrast Security as:" section > SuperAdmin**. Select **Users** from the top navigation. 
 
@@ -27,11 +25,11 @@ You can set the user up with a password or invite users to join Contrast with a 
 
 Enterprise-on-Premises (EOP) customers can delegate users to perform system administration functions across organizations such as managing users, groups, applications, licenses, API keys and security policies. This assumes that you created multiple organizations in Contrast as part of a multi-tenant deployment. See [Granting and Revoking SuperAdmin Permissions](admin-manageorgs.html#sa) to get started.
 
-### Organization Settings
+## Organization Settings
 
 To create users as an Organization Administrator, go to the **User menu > Organization Settings > Users tab**. 
 
-#### Individual users
+### Individual users
 
 To add a single user, click the button to **Add User** above the grid, and complete the following steps: 
 
@@ -44,7 +42,7 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * Switch off the **Access** toggle to disable the user's access to your organization in the Contrast interface.
 * Check the box if you want the user to have **API Only** access. (This user will have access Contrast's REST API, but won't have access to the Contrast interface.)
 
-#### Multiple users
+### Multiple users
 
 To bulk add users, click the upload icon above the grid to import a spreadsheet with the users' information. The spreadsheet must be CSV or XLS format, and include the following field for each user: 
 
