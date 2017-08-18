@@ -53,3 +53,21 @@ On Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schem
 	* Restore on Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema> < <backup_location>/<backup_filename>```
 * Shut down MySQL
 * Restart TeamServer and MySQL together, fully restored
+
+## Disabling Automated Backups
+Automated backups are scheduled through `crontab` and `schtasks` on Linux and Windows respectively. To disable automated
+back-ups follow one of the following guides based on your installation.
+
+**Linux**
+What you can do is switch to the user which was used to install Contrast and run:
+```crontab -l```
+This will list the job, so you should see something like:
+```0 2 * * * /usr/local/contrast/bin/backup-db.sh```
+You can then delete it using:
+```crontab -e```
+Or if its the only one, you can remove all with
+```crontab -r```
+The -r will delete everything so do be careful with that one. The -e will allow edits via vim.
+
+**Windows**
+Use Task Scheduler to disable or delete ```ContrastBackup```.
