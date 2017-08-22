@@ -12,18 +12,25 @@ You may decide to designate an [Application Access Group](admin-onboardteam.html
 
 ## System Settings
 
+Enterprise-on-Premises (EOP) customers can delegate users to perform system administration functions across organizations such as managing users, groups, applications, licenses, API keys and security policies. This assumes that you created multiple organizations in Contrast as part of a multi-tenant deployment. See [Granting and Revoking SuperAdmin Permissions](admin-manageorgs.html#sa) to get started.
+
 To create users as a System Administrator, go to the **User menu** and choose **SuperAdmin** in the **Use Contrast Security as** section. Select the **Users** page in the top navigation. 
 
 ### Individual users
 
-To create a single user, click the **Add User** button, and provide the required information in the fields: 
+To add a single user, click the button to **Add User** above the grid, and complete the following steps: 
 
 * Enter the user's **First Name**, **Last Name** and **Email Address** in the provided fields. 
-* Choose the default **Organization** and **Organization Role** in the dropdown menus.
+* Check the box if you want to **Require email activation** instead of requiring a password.
+* Choose which of the **System Roles** shoud apply to the user in the dropdown menu. The default is **None**. 
+* Choose the **Organization** to which the user belongs. 
+* Once you decide on an organization, you can choose the default **Organization Role** in the dropdown menu as well as an **Application Access Group** in the multiselect field.
+* Choose the **Date Format**, **Time Format** and **Time Zone** in the dropdown fields. 
+* The box to **Use Organization Settings** is checked by default. You can uncheck the box to create your own settings using the **Access** toggle or the box to **make user API only**. 
+* Click the **Add** button to save the user's information. 
 
-You can set the user up with a password or invite users to join Contrast with a required email activation. <!-- How? --> 
+<a href="assets/images/User-system-admin.png" rel="lightbox" title="User page"><img class="thumbnail" src="assets/images/User-system-admin.png"/></a>
 
-Enterprise-on-Premises (EOP) customers can delegate users to perform system administration functions across organizations such as managing users, groups, applications, licenses, API keys and security policies. This assumes that you created multiple organizations in Contrast as part of a multi-tenant deployment. See [Granting and Revoking SuperAdmin Permissions](admin-manageorgs.html#sa) to get started.
 
 ### Multiple users 
 
@@ -60,14 +67,14 @@ To create users as an Organization Administrator, go to the **User menu > Organi
 
 To add a single user, click the button to **Add User** above the grid, and complete the following steps: 
 
-<a href="assets/images/Create_User.png" rel="lightbox" title="Add User"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
-
 * Enter the user's **First Name**, **Last Name** and **Email Address** in the provided fields. 
 * Choose the user's **Organization Role** in the dropdown menu. 
 * Select an **Application Access Group** to which to add the user in the dropdown menu, if desired. 
 * Choose **Date Format**, **Time Format** and **Time Zone** settings in the dropdown menus. 
 * Switch off the **Access** toggle to disable the user's access to your organization in the Contrast interface.
 * Check the box if you want the user to have **API Only** access. (This user will have access Contrast's REST API, but won't have access to the Contrast interface.)
+
+<a href="assets/images/Create_User.png" rel="lightbox" title="Add User"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
 
 ### Multiple users
 
