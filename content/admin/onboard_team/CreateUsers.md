@@ -29,7 +29,7 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * The box to **Use Organization Settings** is checked by default. You can uncheck the box to create your own settings using the **Access** toggle or the box to **make user API only**. 
 * Click the **Add** button to save the user's information. 
 
-<a href="assets/images/User-system-admin.png" rel="lightbox" title="User page for Super Administrators"><img class="thumbnail" src="assets/images/User-system-admin.png"/></a>
+<a href="assets/images/User-system-admin.png" rel="lightbox" title="Add a user as a Super Administrator"><img class="thumbnail" src="assets/images/User-system-admin.png"/></a>
 
 
 ### Multiple users 
@@ -74,7 +74,7 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * If you want to disable the user's access to your organization in the Contrast interface, use the **Access** toggle. (The user has access by default.)
 * Check the box if you want the user to have **API Only** access. (The user will have access Contrast's REST API, but won't have access to the Contrast interface.)
 
-<a href="assets/images/Create_User.png" rel="lightbox" title="Add a user as a Super Administrator"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
+<a href="assets/images/Create_User.png" rel="lightbox" title="Add a user as an Organization Administrator"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
 
 ### Multiple users
 
