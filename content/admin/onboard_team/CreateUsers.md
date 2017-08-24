@@ -8,7 +8,7 @@ System and Organization Administrators can create users individually, in groups,
 
 >**Note:** Verify the [Roles](admin-manageorgsroleperm.html#roles) that you want to assign to users so that they have the appropriate level of functionality.
 
-You may decide to designate an [Application Access Group](admin-onboardteam.html#group) which can provide more administrative function for an application to the users, or restrict what applications the users in the group can view or modify.
+You may decide to designate an [Application Access Group](admin-onboardteam.html#group), which provides more administrative functionality to the users for specific applications or restricts which applications the users in the group can view or modify.
 
 ## System Settings
 
@@ -29,7 +29,7 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * The box to **Use Organization Settings** is checked by default. You can uncheck the box to create your own settings using the **Access** toggle or the box to **make user API only**. 
 * Click the **Add** button to save the user's information. 
 
-<a href="assets/images/User-system-admin.png" rel="lightbox" title="User page"><img class="thumbnail" src="assets/images/User-system-admin.png"/></a>
+<a href="assets/images/User-system-admin.png" rel="lightbox" title="User page for Super Administrators"><img class="thumbnail" src="assets/images/User-system-admin.png"/></a>
 
 
 ### Multiple users 
@@ -71,10 +71,10 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * Choose the user's **Organization Role** in the dropdown menu. 
 * Select an **Application Access Group** to which to add the user in the dropdown menu, if desired. 
 * Choose **Date Format**, **Time Format** and **Time Zone** settings in the dropdown menus. 
-* Switch off the **Access** toggle to disable the user's access to your organization in the Contrast interface.
-* Check the box if you want the user to have **API Only** access. (This user will have access Contrast's REST API, but won't have access to the Contrast interface.)
+* If you want to disable the user's access to your organization in the Contrast interface, use the **Access** toggle. (The user has access by default.)
+* Check the box if you want the user to have **API Only** access. (The user will have access Contrast's REST API, but won't have access to the Contrast interface.)
 
-<a href="assets/images/Create_User.png" rel="lightbox" title="Add User"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
+<a href="assets/images/Create_User.png" rel="lightbox" title="Add a user as a Super Administrator"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
 
 ### Multiple users
 
@@ -101,9 +101,9 @@ Once the spreadsheet upload is in progress, you can leave the page and continue 
 
 ## User Status
 
-Once added, each user's status is displayed on the main **Users** page so that you can see who's waiting activation, active or inactive, or locked out of their account based on security policy. For more information about user administration, read how to [Manage Users](admin-manageorgs.html#manage-user). 
+Once added, each user's status is displayed on the main **Users** page so that you can see who's awaiting activation, active or inactive, or locked out of their account based on a security policy. For more information about user administration, read how to [Manage Users](admin-manageorgs.html#manage-user). 
 
-<a href="assets/images/User-grid.png" rel="lightbox" title="User grid"><img class="thumbnail" src="assets/images/User-grid.png"/></a>
+<a href="assets/images/User-grid.png" rel="lightbox" title="Users grid for Organization Administrators"><img class="thumbnail" src="assets/images/User-grid.png"/></a>
 
 
 
