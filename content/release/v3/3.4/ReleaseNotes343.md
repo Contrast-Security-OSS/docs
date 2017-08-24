@@ -8,11 +8,15 @@ Rah, rah, rah...
 
 ## Fixes
 
-* 
+* CONTRAST-12241 - Launch API documentation from Contrast interface on Windows
+* CONTRAST-16128 - Removed (fake) option to set Node security controls for specific rules
+* CONTRAST-14764 - Virtual Patches now showing up for right applications
+* CONTRAST-16032 - IP Blacklist page loading 
+* CONTRAST-16600 - Fixed REST Assured tests
 
 ## Improvements 
 
-* xAdmins can now set Protect policies before licensing and onboarding any application. Go to the Protect Rules page to quickly configure rules for any environment.
+* Admins can now set Protect policies before licensing and onboarding any application. Go to the Protect Rules page to quickly configure rules for any environment.
  
 * The .NET agent no longer supports instrumentation through the Profiler API and only uses Duplex technology: a patented mechanism that allows us to coexist peacefully with your other favorite .NET agents.
  
