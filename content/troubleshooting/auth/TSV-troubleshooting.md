@@ -7,7 +7,7 @@ tags: "troubleshoot authentication tsv two-step verificiation"
 
 ## Backup Methods
 
-If you've implemented [two-step verification](admin-orgsecurity.html#security-tsv), but can't successfully receive a verification code through the method you chose, you can click the **Can't Sign In?** link in Step Two of the login process, and Contrast will email a temporary code to you. Temporary codes are valid for five minutes. You can also use a backup code. 
+If you've implemented [two-step verification](admin-orgsecurity.html#security-tsv), haven't successfully received a verification code through the method you chose, you can click the **Can't Sign In?** link in Step Two of the login process. Contrast will then email a temporary code to you, which is valid for five minutes. You can also use a backup code. 
 
 If email is already the chosen notification method, contact your Administrator to investigate potential issues with email settings.
 
