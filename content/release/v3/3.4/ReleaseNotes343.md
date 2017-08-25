@@ -4,36 +4,39 @@ description: "Contrast 3.4.3 August 2017"
 tags: "3.4.3 August Release Notes"
 -->
 
-Rah, rah, rah...
+Need even more control over your organization? Use the overhauled the Security page and set up Protect policies before onboarding to any applications. You can also check out our newest supported technology, SignalR, an ASP.NET library. 
 
 ## Fixes
 
-* CONTRAST-16619 - No more SAML issues as you set up authentication 
-* CONTRAST-12241 - Launch API documentation from Contrast interface on Windows
+* CONTRAST-16619 - No more SAML issues during authentication set up 
+* Launch API documentation from Contrast interface on Windows
 * CONTRAST-15477 - Login and check out compliance violations without errors
 * CONTRAST-16128 - (Fake) option to set Node security controls for specific rules is no more
-* CONTRAST-16015 - Patch name appears in virtual patch Attack Events
+* Virtual patches display names in Attack Events and show up in the right applications
 * CONTRAST-15223 - Link to Ruby Agent configuration is active 
 * CONTRAST-16520 - Servers with no UUID value are gone from the Production database for SaaS
-* CONTRAST-16548 - Menu options for Node applications have been restored 
+* Menu options for Node applications are restored 
 * CONTRAST-16060 - Password validation works on the registration page
-* CONTRAST-16531, CONTRAST-16532, CONTRAST-16165 - XML errors are in the past
-* CONTRAST-16483 - Trace processing accepts trace events  
-* CONTRAST-16032, CONTRAST-16038 - IP Blacklist page is back  
-* CONTRAST-14764 - Virtual Patches show up for the right applications
+* XML errors are in the past
+* Trace processing accepts trace events  
+* IP Blacklist page is back  
 * CONTRAST-15994 - Protect events render again 
 
 ## Improvements 
-
-* Admins can now set Protect policies before licensing and onboarding any application. Go to the Protect Rules page to quickly configure rules for any environment.
-
-* Search attacks and attack events by ID, just like you search for vulnerabilities.
  
+* Use the revamped Security page to manage password policy, session timeouts, two-step verification and IP restrictions. You can also access an audit log, where you can search for past activity in your organization by keyword and date.
+
 * We no longer support instrumentation through the Profiler API and only uses Duplex technology: a patented mechanism that allows us to coexist peacefully with your other favorite .NET agents.
  
+* Admins can now set Protect policies before licensing and onboarding any application. Go to the Protect Rules page to quickly configure rules for any environment.
+
+* Specify the application language(s) when you're creating virtual patches and Log Enhancers. 
+
 * We added every pirate’s favorite ASP.NET library, SignalR, to our list of supported technologies, so you can rest assured that your application’s real-time web functionality is secure with Contrast.
 
-* Forgotten to test your applications? We'll start reminding you so your servers aren't so empty. 
+* We'll give you some guidance on using your applications so you see results and recognize them on your servers.
+
+* Change the severity for an entire vulnerability type with the click of a confirmation button. 
 
 ## Agent Updates
 
