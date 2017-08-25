@@ -8,44 +8,42 @@ Rah, rah, rah...
 
 ## Fixes
 
+* CONTRAST-16619 - No more SAML issues as you set up authentication 
 * CONTRAST-12241 - Launch API documentation from Contrast interface on Windows
-* CONTRAST-16128 - Removed (fake) option to set Node security controls for specific rules
 * CONTRAST-15477 - Login and check out compliance violations without errors
-* CONTRAST-16015 - Added patch name to virtual patch Attack Events
-* CONTRAST-15223 - Fixed the link to Ruby Agent configuration
-* CONTRAST-16520 - Removed servers with no UUID value from the Production database for SaaS
-* CONTRAST-16548 - Fixed menu options for Node applications
-
-* CONTRAST-14764 - Virtual Patches now showing up for right applications
-* CONTRAST-16032, CONTRAST-16038 - IP Blacklist page loading 
-* CONTRAST-16600 - Fixed REST Assured tests
-* CONTRAST-16483 - Trace processing no longer rejects trace events with 'sources' 
-* CONTRAST-16343 - Stopped removing return type from .NET potential security controls
-* CONTRAST-16060 - Fixed password validation on registration page
-* CONTRAST-15994 - Protect events render 
-* CONTRAST-16531 - Corrected character in trace XML
+* CONTRAST-16128 - (Fake) option to set Node security controls for specific rules is no more
+* CONTRAST-16015 - Patch name appears in virtual patch Attack Events
+* CONTRAST-15223 - Link to Ruby Agent configuration is active 
+* CONTRAST-16520 - Servers with no UUID value are gone from the Production database for SaaS
+* CONTRAST-16548 - Menu options for Node applications have been restored 
+* CONTRAST-16060 - Password validation works on the registration page
+* CONTRAST-16531, CONTRAST-16532, CONTRAST-16165 - XML errors are in the past
+* CONTRAST-16483 - Trace processing accepts trace events  
+* CONTRAST-16032, CONTRAST-16038 - IP Blacklist page is back  
+* CONTRAST-14764 - Virtual Patches show up for the right applications
+* CONTRAST-15994 - Protect events render again 
 
 ## Improvements 
 
 * Admins can now set Protect policies before licensing and onboarding any application. Go to the Protect Rules page to quickly configure rules for any environment.
- 
-* The .NET agent no longer supports instrumentation through the Profiler API and only uses Duplex technology: a patented mechanism that allows us to coexist peacefully with your other favorite .NET agents.
- 
-* We’ve added every pirate’s favorite ASP.NET library, SignalR, to our list of supported technologies, so you can rest assured that your application’s real-time web functionality is secure with Contrast.
 
 * Search attacks and attack events by ID, just like you search for vulnerabilities.
+ 
+* We no longer support instrumentation through the Profiler API and only uses Duplex technology: a patented mechanism that allows us to coexist peacefully with your other favorite .NET agents.
+ 
+* We added every pirate’s favorite ASP.NET library, SignalR, to our list of supported technologies, so you can rest assured that your application’s real-time web functionality is secure with Contrast.
 
-* Forgetting to test your applications? We'll start reminding you so your servers aren't so empty. 
+* Forgotten to test your applications? We'll start reminding you so your servers aren't so empty. 
 
 ## Agent Updates
 
 * **Java Agent Summary:** 
 
-* **.NET Agent Summary:** 
+* **.NET Agent Summary:** We now report potential security controls and provide more reliable initialization. We also improved stability of IIS-Express instrumentation as well as Assess and Protect accuracy.
 
 * **Node.js Agent Summary:** We're supporting more useful logging for application clustering and automatically adding applications to existing groups. We fixed an issue that was preventing URLs from showing up in application activity - and, yes, it’s really fixed this time.
 
-* **Ruby Agent Summary:** We've added logic for reporting the application build number, the initial SSRF rule implementation, and the ability to set or override configuration values with command line options. As we enter the final month before our GA with Contrast version 3.4.4, our September workload will be focused on increasing performance and preparing for advanced Protect rules and Assess features.
+* **Ruby Agent Summary:** We've added logic for reporting the application build number, the initial SSRF rule implementation, and the ability to set or override configuration values with command line options. As we enter the final month before our GA with Contrast version 3.4.4, our September work will be focused on increasing performance and preparing for advanced Protect rules and Assess features.
 
 
 
