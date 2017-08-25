@@ -12,7 +12,6 @@ The Contrast.NET Agent supports analysis of web applications built on the follow
 * Windows Server 2008 R2
 * Windows Server 2012
 * Windows Server 2016
-* Windows Server 2016 R2
 * Azure Virtual Machines 
 * Azure Cloud Services
 * Azure Mobile Services
@@ -38,6 +37,7 @@ The .NET Contrast Agent can be installed on both 32-bit and 64-bit architectures
 Don't see your application's framework here? There's a good chance that Contrast can still analyze your application if its framework simply wraps the typical ASP.NET classes (e.g. ```System.Web.HttpRequest```). We just haven't built explicit tests against every framework yet. 
 
 >**Note:** 
-* The **Mono** runtime isn't supported.
+* The **Mono** runtime isn't supported.  
+* The **.NET Core** runtime isn't supported.  We are working on supporting in the future.
 * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime. 
 * All relevant data flow methods are instrumented by and analyzed by Contrast for applications running on .NET CLR.
