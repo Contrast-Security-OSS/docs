@@ -8,23 +8,23 @@ After onboarding, you might not see your application appear in the **Application
 
 ## The server and application are displayed incorrectly
 
-* **The server on which the application is running doesn't have Contrast installed.**
+* Reason: The server on which the application is running doesn't have Contrast installed.
 
 Check out **standard** or file a ticket with the [diagnostic log output file](troubleshooting-java.html#java-logs) to see what's happening. If your server isn't appearing in the Contrast interface, learn more from the [Installation Issues](troubleshooting-setupinstallation.html#common) page.
 
-* **The application is running at the root context and has no `<display-name>` in *web.xml*.**
+* Reason: The application is running at the root context and has no `<display-name>` in *web.xml*.
 
 Contrast needs a name to uniquely identify an application; if an application runs at the root, it requires a `<display-name>` to provide this unique name. You can use the *contrast.rootapp* system property to specify the name of an application running at the root if you can't add a `<display-name>`.
 
-* **The application, or an application with the same name and context path, was archived.**
+* Reason: The application, or an application with the same name and context path, was archived.
 
 ## The server appears in the Contrast interface, but the application doesn't
 
-* **The application hasn't been used yet.**
+* Reason: The application hasn't been used yet.
 
 Contrast won't recognize your application until you use it. Visit the application after you successfully start up your server with Contrast. Once it's accessed, Contrast spends a few seconds analyzing it - even big applications should take less than a minute. You may notice a pause when you first access your application as this analysis is taking place.  
 
-* **The application is running on an unsupported container.**
+* Reason: The application is running on an unsupported container.
 
 Contrast is officially supported on the following containers:
 * Tomcat 5, 6, 7, 8
