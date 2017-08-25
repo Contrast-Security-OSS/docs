@@ -13,14 +13,14 @@ Trigger rules specify methods whose incoming data should be checked for security
   ...
   <rule id="reflected-xss">
       <pattern>
-        <event startsWithTaint="true">
-          <method signature="void Acme.MyObject.Write(System.Web.TextWriter)" />
+        <event>
+          <method assembly="Acme" signature="void Acme.MyObject.Write(System.Web.TextWriter)" />
             <object tracked="true" required-tags="cross-site" disallowed-tags="html-encoded,url-encoded,js-encoded,custom-encoded,limited-chars" />
         </event>
         <event performPreMatchSubstring="true">
-          <method signature="void System.Web.HttpWriter.WriteString(System.String)" />
+          <method assembly="Acme" signature="void System.Web.HttpWriter.WriteString(System.String)" />
           <params>
-            <param index="1" tracked="true" required-tags="cross-site" disallowed-tags="html-encoded,url-encoded,js-encoded,custom-encoded,limited-chars" good-value-regex="^(ESCAPED.*)" />
+            <param index="1" tracked="true" required-tags="cross-site" disallowed-tags="html-encoded,url-encoded,js-encoded,custom-encoded,limited-chars" good-value-regex="^(ESCAPED.*)" startsWithTaint="true" />
           </params>
         </event>
       </pattern>
@@ -70,6 +70,8 @@ Trigger rules specify methods whose incoming data should be checked for security
       
 **Method:**
   * method signature="SIGNATURE" [enabled=ENABLED]
+    * ASSEMBLY: Assembly of the method to instrument
+    
     * SIGNATURE: Signature of the method to instrument
     
     * ENABLED: *optional*, default is "true"
