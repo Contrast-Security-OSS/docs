@@ -24,7 +24,6 @@ Confirm the following:
 * You have administrative access to the web server and the server is supported by Contrast
 * There is a deployed application to be analyzed and the web application [technology](installation-net.html#net-supported) is supported by Contrast
 * The server meets the minimum system requirements (see above)
-* Contrast will be the only profiler present (unless using the Duplex mode added in version 3.3.5)
 * IIS can be restarted
 * The web server has network connectivity with TeamServer
 

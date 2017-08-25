@@ -35,7 +35,6 @@ More detailed levels of logging degrade performance but may generate useful info
 | Parameter                                                 | Description
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ShouldLogMethodSignatures    | <ul><li> Controls logging of method signatures during CLR JIT compilation.</li><li> The default value is ```false```. Set to ```true``` to enable method signature logging.</li><li> Note that this setting has a noticeable impact on startup time.</li></ul> |
-| ShouldLogModifiedIL    | <ul><li>Controls logging of the IL of instrumented methods during CLR JIT compilation.</li><li> The default value is ```false```. Set to ```true``` to enable instrumented method IL logging. </li><li> Note that this setting has a noticeable impact on startup time.</li></ul> |
 
 
 ## Performance
@@ -47,31 +46,6 @@ More detailed levels of logging degrade performance but may generate useful info
       
 
 ## Analysis
-
-| Parameter                                                 | Description                                                                             |
-|-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| *UseMonitor*                                         | <ul><li>Controls the instrumentation engine used by the .NET agent.</li><li> Enabling Duplex mode allows the .NET Agent to be used alongside other profiling tools. Protect features require the use of Duplex mode.</li><li> The default value is *false*. If set to *true*, the .NET Agent Service must be restarted by the user in order for changes to the noted configuration settings to take effect. </li><li> Note that Duplex mode only analyzes applications running on CLR4.</li></ul>|
-| *ProfilerBehavior*                                         | <ul><li>Controls the data flow engine used and the amount of instrumentation performed by the .NET agent.</li><li> Note that this setting is ignored by Duplex mode. </li></ul> |
-| *EnableInstrumentationOptimizations*                       | <ul><li>**Applies to Contrast Agent v.3.2.9 and above.** </li><li> Optionally disable code optimizations under instrumentation-based flow analysis when ProfilerBehavior=3 (Instrumentation mode). </li><li> The default is ```true```. Set to ```false``` to disable. </li></ul>
-
-
-**1. legacyCasModel Support**
-
-The agent uses profiling Enter-Leave events for data flow analysis and performs minimal instrumentation. This mode supports web applications with the ```<trust legacyCasModel="true">``` configuration. There are a few scenarios where a `reflected-xss` false negative can occur, depending upon the encoding method used.
-
-**2. Enter-Leave Data Flow** 
-
-The agent uses profiling Enter-Leave events for data flow analysis and instruments several encoding methods to return new objects. This mode is more accurate than **mode 1**. 
-
-**3. Instrumentation**
-
-This is the **default** value. The agent uses instrumentation for data flow analysis against web applications running on CLR4 (.NET 4+). For CLR4 applications, Vulnerability stack traces include line numbers if .PDB files are present in the application's bin directory. Instrumentation mode is more stable and has comparable performance. 
-
-**4. Instrumentation With Logging**
-
-This mode has the same behavior as **mode 3**, but also enables Enter-Leave events for .NET 4.0 applications for additional logging. You can specify this additional logging in the policy file's ```<logging>``` section. Note that this mode is much slower than **mode 3** and is intended only for debugging. 
-
-<br>
 
 | Parameter                                                 | Description                                                                             |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------|

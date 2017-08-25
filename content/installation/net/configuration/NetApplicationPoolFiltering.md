@@ -4,7 +4,7 @@ description: "Information on blacklisting/whitelisting application pools"
 tags: "microsoft IIS pooling whitelist blacklist configuration agent installation .Net"
 -->
 
-Some customers will find it necessary to disable Contrast.NET for specific applications on an instance of IIS. **Contrast 3.1.7** introduced a ```ProcessBlacklist``` that can be configured to remove the agent from specific application pools. If an application pool is blacklisted, the Contrast.NET agent will not attach to any applications using that application pool and there should be no performance impact for those applications.
+Some customers will find it necessary to disable Contrast.NET for specific application pools on an instance of IIS. **Contrast 3.1.7** introduced a ```ProcessBlacklist``` that can be configured to remove the agent from specific application pools. If an application pool is blacklisted, the Contrast.NET agent will not attach to any applications using that application pool and there should be no performance impact for those applications.
 
 To disable Contrast.NET for a specific application, populate ```ProcessBlacklist``` with the appropriate application pool in ***C:\Program Files\Contrast.NET\DotnetAgentService.exe.config***:
 
@@ -17,7 +17,7 @@ For more information, see the [Configuration Overview](installation-netconfig.ht
 
 Customers could find the need to only enable Contrast.NET for specific applications hosted by IIS. Contrast 3.2.3 introduced a ```ProcessWhitelist``` that can be configured to only analyze certain application pools. If an application pool is whitelisted, the Contrast.NET agent will analyze the matching pools and there should be no performance impact for any other applications.
 
-To enable Contrast.NET for only specific applications, populate ```ProcessWhitelist``` with the appropriate application pool in ***C:\Program Files\Contrast.NET\DotnetAgentService.exe.config***:
+To enable Contrast.NET for only specific application pools, populate ```ProcessWhitelist``` with the appropriate application pool in ***C:\Program Files\Contrast.NET\DotnetAgentService.exe.config***:
 
 ```
 <!--Comma-separated list of application pools that will exclusively be profiled by Contrast-->
