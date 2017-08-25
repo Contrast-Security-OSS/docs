@@ -19,8 +19,9 @@ Contrast.NET will mark all user-provided data (such as FORMS posts, web service 
   <sources>
       ...
     <!-- HttpRequest Sources -->
-    <method name="HTTP Request QueryString" signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_QueryString()" tags="cross-site" />
-    <method name="HTTP Request Form" signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_Form()" tags="cross-site" />
+    <method name="HTTP Request QueryString" assembly="System.Web"  signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_QueryString()" tags="cross-site" sourceType="parameter" />
+    <method name="HTTP Request Form" assembly="System.Web"  signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_Form()" tags="cross-site" sourceType="parameter" target="R" />
+    <method name="HTTP Request Method" assembly="System.Web" signature="System.String System.Web.HttpRequest.get_RequestType()" tags="limited-chars" sourceType="uri" />
   </sources>  
 ```
 
@@ -32,6 +33,10 @@ Contrast.NET will mark all user-provided data (such as FORMS posts, web service 
  method name="Name" signature="SIGNATURE" tags="TAGS" [enabled="ENABLED"]
  ```
 
+* **ASSEMBLY:** *required*
+
+   Assemblt of the method to instrument
+
 * **SIGNATURE:** *required*
 
    Signature of the method to instrument.
@@ -40,6 +45,19 @@ Contrast.NET will mark all user-provided data (such as FORMS posts, web service 
   
   All data that is the return of a method specified here will be tagged as "tainted".  All tainted data will trigger a warning if it makes it to a *rule* method, unless it has other tags added to it by a *tag-list* method, which invalidate a rule.
   Besides the "tainted" tag, you can list additional tags in the ```tags``` attribute to automatically attach them to the data.
+
+* **TARGET:** *optional*, default is "R"
+  Specify which part of the signature returns untrusted data.  By default this is "R" for "return object".  You can also say "O" for "this object", and "P0", "P1", "P2" for first, second, or third parameter argument and so on.
+
+* **SOURCETYPE:** *optional*, default is "other"
+  
+  For better display in TeamServer, list the origin of the untrusted data.  Possible values are:
+     * parameter
+     * header
+     * cookie
+     * querystring
+     * uri
+     * body
 
 * **ENABLED:** *optional*, default is "true"
   
