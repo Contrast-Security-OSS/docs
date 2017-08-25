@@ -38,6 +38,6 @@ Don't see your application's framework here? There's a good chance that Contrast
 
 >**Note:** 
 * The **Mono** runtime isn't supported.  
-* The **.NET Core** runtime isn't supported.  We are working on supporting in the future.
+* The **.NET Core** runtime isn't supported.  We are working on supporting it in the future.
 * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime. 
-* All relevant data flow methods are instrumented by and analyzed by Contrast for applications running on .NET CLR.
+* All relevant data flow methods are instrumented by and analyzed by Contrast for applications running on the .NET CLR.
