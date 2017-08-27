@@ -8,19 +8,19 @@ Need even more control over your organization? Use the overhauled the Security p
 
 ## Fixes
 
-* CONTRAST-16619 - No more SAML issues during authentication set up 
+* No more SAML issues during authentication set up 
 * Launch API documentation from Contrast interface on Windows
-* CONTRAST-15477 - Login and check out compliance violations without errors
-* CONTRAST-16128 - (Fake) option to set Node security controls for specific rules is no more
+* Login and check out compliance violations without errors
+* (Fake) option to set Node security controls for specific rules is no more
 * Virtual patches display names in Attack Events and show up in the right applications
-* CONTRAST-15223 - Link to Ruby Agent configuration is active 
-* CONTRAST-16520 - Servers with no UUID value are gone from the Production database for SaaS
+* Link to Ruby Agent configuration is active 
+* Servers with no UUID value are gone from the Production database for SaaS
 * Menu options for Node applications are restored 
-* CONTRAST-16060 - Password validation works on the registration page
+* Password validation works on the registration page
 * XML errors are in the past
 * Trace processing accepts trace events  
 * IP Blacklist page is back  
-* CONTRAST-15994 - Protect events render again 
+* Protect events render again 
 
 ## Improvements 
  
@@ -40,7 +40,7 @@ Need even more control over your organization? Use the overhauled the Security p
 
 ## Agent Updates
 
-* **Java Agent Summary:** 
+* **Java Agent Summary:** We added several rule accuracy improvements for Assess and Protect along with the ability to more easily deploy custom rules and better support for library detection in GlassFish. We also fixed a bug in the data flow engine that would prevent vulnerabilities from being reported in certain conditions.
 
 * **.NET Agent Summary:** We now report potential security controls and provide more reliable initialization. We also improved stability of IIS-Express instrumentation as well as Assess and Protect accuracy.
 
