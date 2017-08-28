@@ -8,7 +8,6 @@ Set optimal standards for user accounts in the refreshed Security page, and crea
 
 ## Fixes
 
-* No more SAML issues during authentication set up 
 * Login and check out compliance violations without errors
 * Removed (fake) option to set Node security controls for specific rules 
 * Virtual patches display names in Attack Events and show up in the right applications
