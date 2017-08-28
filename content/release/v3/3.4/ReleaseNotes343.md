@@ -4,20 +4,20 @@ description: "Contrast 3.4.3 August 2017"
 tags: "3.4.3 August Release Notes"
 -->
 
-Need even more control over your organization? Use the overhauled the Security page and set up Protect policies before onboarding to any applications. You can also check out our newest supported technology, SignalR, an ASP.NET library. 
+Set optimal standards for user accounts in the refreshed Security page, and create Protect policies before onboarding to any applications. Once you do, we'll give you some complimentary guidance on using your applications so you see the results you want.  
 
 ## Fixes
 
 * No more SAML issues during authentication set up 
-* Launch API documentation from Contrast interface on Windows
+* API documentation is ready to go from Contrast on Windows
 * Login and check out compliance violations without errors
-* (Fake) option to set Node security controls for specific rules is no more
+* Removed (fake) option to set Node security controls for specific rules 
 * Virtual patches display names in Attack Events and show up in the right applications
 * Link to Ruby Agent configuration is active 
 * Servers with no UUID value are gone from the Production database for SaaS
 * Menu options for Node applications are restored 
 * Password validation works on the registration page
-* XML errors are in the past
+* XML errors are things of the past
 * Trace processing accepts trace events  
 * IP Blacklist page is back  
 * Protect events render again 
@@ -46,7 +46,7 @@ Need even more control over your organization? Use the overhauled the Security p
 
 * **Node.js Agent Summary:** We're supporting more useful logging for application clustering and automatically adding applications to existing groups. We fixed an issue that was preventing URLs from showing up in application activity - and, yes, it’s really fixed this time.
 
-* **Ruby Agent Summary:** We've added logic for reporting the application build number, the initial SSRF rule implementation, and the ability to set or override configuration values with command line options. As we enter the final month before our GA with Contrast version 3.4.4, our September work will be focused on increasing performance and preparing for advanced Protect rules and Assess features.
+* **Ruby Agent Summary:** We've added logic for reporting the application build number, the initial SSRF rule implementation, and the ability to set or override configuration values with command line options. As we enter the final month before our general availability with Contrast version 3.4.4, our September work will be focused on increasing performance and preparing for advanced Protect rules and Assess features.
 
 
 
