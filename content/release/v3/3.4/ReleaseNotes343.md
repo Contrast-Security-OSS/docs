@@ -26,13 +26,11 @@ Set optimal standards for user accounts in the refreshed Security page, and crea
  
 * Use the revamped Security page to manage password policy, session timeouts, two-step verification and IP restrictions. You can also access an audit log, where you can search for past activity in your organization by keyword and date.
 
-* We no longer support instrumentation through the Profiler API and only uses Duplex technology: a patented mechanism that allows us to coexist peacefully with your other favorite .NET agents.
+* We no longer support instrumentation through the .NET Profiling API and now only use Duplex technology: a patented mechanism that allows us to coexist peacefully with your other favorite .NET agents.
  
 * Admins can now set Protect policies before licensing and onboarding any application. Go to the Protect Rules page to quickly configure rules for any environment.
 
 * Specify the application language(s) when you're creating virtual patches and Log Enhancers. 
-
-* We added every pirate’s favorite ASP.NET library, SignalR, to our list of supported technologies, so you can rest assured that your application’s real-time web functionality is secure with Contrast.
 
 * We'll give you some guidance on using your applications so you see results and recognize them on your servers.
 
