@@ -6,7 +6,6 @@ tags: "installation policy customization rules level agent .Net instrumentation 
 
 ## Tag Rule Syntax
  
-
 ```xml
 <tags>
     ...
@@ -25,47 +24,45 @@ tags: "installation policy customization rules level agent .Net instrumentation 
 </tags>
 ```
 
-Tag methods are organized in tag-lists under a single tag (specified in tag-list's ```tags``` attribute).  This tag used here should be used on the disallowed tags on Trigger method.
-
-On the method node, specify the data source and target.
+Tag methods are organized in tag-lists under a single tag specified in tag-list's `tags` attribute. This tag should be used on the disallowed tags on Trigger method.
 
 ## Method
+
+On the method node, specify the data source and target.
 
  ```
  method target="TARGET" [source="SOURCE"] signature="SIGNATURE" [scope="TAG_SCOPE"] [enabled="ENABLED"]
  ```
 
-* **ASSEMBLY:** *required*
-
-   Assembly name of the method to instrument
+* **ASSEMBLY:** Assembly name of the method to instrument <br> (**Required**)
    
-* **SIGNATURE:** *required*
-
-   Signature of the method to instrument.
+* **SIGNATURE:** Signature of the method to instrument. <br> (**Required**)
    
-* **TARGET:** *required*
-   
-   R: return object  
-   P[Number]: parameter reference (0-based) 
-   *Ex: P0 for first parameter, P1 for second parameter, etc.*
-        
-* **SOURCE:** *optional, default is "P0"*
-
-   P[Number]: parameter reference (0-based)  
-   *Ex: P0 for first parameter, P1 for second parameter, etc.*
-
-* **ENABLED:** *optional*, default is "true"
+* **TARGET:** 
+ * R: Return object  
+ * P[Number]: Parameter reference (0-based). You can use `P0`for first parameter, `P1` for second parameter, etc.
   
-  Add the enabled attribute and set it to "false" to disable the rule.
+ (**Required**)
 
-* **TAG_SCOPE:** *optional, default is "lifetime"*
+* **SOURCE:** 
+
+ * P[Number]: Parameter reference (0-based)
+ * The default is `P0`. You can use `P0`for first parameter, `P1` for second parameter, etc.
+  (**Optional**)
+
+* **ENABLED:** Add the enabled attribute and set it to `"false"` to disable the rule. The default is `"true"`. <br> 
+ (**Optional**)
+
+* **TAG_SCOPE:** 
         
-  lifetime - The target object will be tagged for its lifetime  
-  method - The target will only be tagged during the tagger method, and will revert to its original state after the method exits
-
+ * `lifetime`: The target object is tagged for its lifetime. This is the **default**. 
+ * `method`: The target is only tagged during the tagger method, and reverts to its original state after the method exits.
+ (**Optional**)
 
 ### Method-Scope Tag Rules
-Tag scope by default is *lifetime*.  Method-scope is an advanced feature you may want to set for methods that can trigger a rule method in their internal code.  For example, some .NET methods will escape data and write in the same method.  
+
+Tag scope by default is `lifetime`. Method-scope is an advanced feature you may want to set for methods that can trigger a rule method in their internal code. For example, some .NET methods escape data and write in the same method:
+
 ```csharp
 
 // "normal" tagger: method source=P0, target=R, see full signature above
@@ -89,7 +86,9 @@ void HtmlEncode(string input, System.IO.Textwriter htmlOutput) {
     htmlOuput.Write(encodedInput);   
     
 }
-// However after the method exits the input string should no longer be tagged as html-encoded since it may have 
-// contained invalid characters and been replaced above.  We don't want the input object to be tagged because another method may
-// write it without encoding.
+
 ```
+After the method exits, the input string should no longer be tagged as `html-encoded` since it may have 
+contained invalid characters and been replaced, as shown in the example above.  You don't want the input object to be tagged because another method may
+write it without encoding.
+
