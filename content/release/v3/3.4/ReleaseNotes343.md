@@ -9,7 +9,6 @@ Set optimal standards for user accounts in the refreshed Security page, and crea
 ## Fixes
 
 * No more SAML issues during authentication set up 
-* API documentation is ready to go from Contrast on Windows
 * Login and check out compliance violations without errors
 * Removed (fake) option to set Node security controls for specific rules 
 * Virtual patches display names in Attack Events and show up in the right applications
@@ -23,10 +22,10 @@ Set optimal standards for user accounts in the refreshed Security page, and crea
 * Protect events render again 
 
 ## Improvements 
- 
-* Use the revamped Security page to manage password policy, session timeouts, two-step verification and IP restrictions. You can also access an audit log, where you can search for past activity in your organization by keyword and date.
 
 * We no longer support instrumentation through the .NET Profiling API and now only use Duplex technology: a patented mechanism that allows us to coexist peacefully with your other favorite .NET agents.
+ 
+* Use the revamped Security page to manage password policy, session timeouts, two-step verification and IP restrictions. You can also access an audit log, where you can search for past activity in your organization by keyword and date.
  
 * Admins can now set Protect policies before licensing and onboarding any application. Go to the Protect Rules page to quickly configure rules for any environment.
 
