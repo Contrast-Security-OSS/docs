@@ -4,21 +4,21 @@ description: "Contrast 3.4.3 August 2017"
 tags: "3.4.3 August Release Notes"
 -->
 
-Set optimal standards for user accounts in the refreshed Security page, and create Protect policies before onboarding to any applications. Once you do, we'll give you some complimentary guidance on using your applications so you see the results you want.  
+Set optimal standards for user accounts in the refreshed Security page, and create Protect policies before onboarding to any applications. Once you do, we'll give you complimentary guidance on using your applications so you see the results you want.  
 
 ## Fixes
 
-* Login and check out compliance violations without errors
-* Removed (fake) option to set Node security controls for specific rules 
-* Virtual patches display names in Attack Events and show up in the right applications
-* Link to Ruby Agent configuration is active 
-* Servers with no UUID value are gone from the Production database for SaaS
-* Menu options for Node applications are restored 
-* Password validation works on the registration page
-* XML errors are things of the past
-* Trace processing accepts trace events  
-* IP Blacklist page is back  
-* Protect events render again 
+* Login and check out compliance violations without errors.
+* Removed (fake) option to set Node security controls for specific rules. 
+* Virtual patches display names in Attack Events and show up in the right applications.
+* Link to Ruby Agent configuration is active. 
+* Servers with no UUID value are gone from the Production database for SaaS.
+* Menu options for Node applications are restored. 
+* Password validation works on the registration page.
+* XML errors are things of the past.
+* Trace processing accepts trace events.  
+* IP Blacklist page is back.  
+* Protect events render again. 
 
 ## Improvements 
 
