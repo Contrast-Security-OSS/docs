@@ -6,54 +6,62 @@ tags: "installation agent .Net"
 
 ## System Requirements
 
-### Minimum
+Minimum requirements: 
+
 * .NET Framework 4.5.1 present
 * 2 CPU
 * 4 GB memory
 
 > **Note:** Contrast 3.3.1 required .NET 4.5.2, but this requirement was reduced to 4.5.1 in Contrast 3.3.2.
 
-### Recommended
+Recommended requirements: 
+
 * .NET Framework 4.5.1 present
 * 4+ CPU
 * 8+ GB memory  
 
-## Before Beginning Installation
+## Get Started
 
-Confirm the following:
-* You have administrative access to the web server and the server is supported by Contrast
-* There is a deployed application to be analyzed and the web application [technology](installation-net.html#net-supported) is supported by Contrast
-* The server meets the minimum system requirements (see above)
-* IIS can be restarted
-* The web server has network connectivity with TeamServer
+Before beginning installation, confirm the following:
 
-You are now ready to install the Contrast .NET Agent.
+* You have administrative access to a web server, and the server is supported by Contrast.
+* There is a deployed application to be analyzed, and the web application [technology](installation-net.html#net-supported) is supported by Contrast.
+* The server meets the minimum **System Requirements** given in the previous section. 
+* IIS can be restarted.
+* The web server has network connectivity with Contrast. 
 
-
+Once these requirements are met, you're ready to install the Contrast .NET Agent.
 
 ## Installation
-To install the Contrast .NET Agent, follow these steps:
 
-1. Log in to the Contrast TeamServer and select **Add an Application**.
-2. Select the **.NET Agent** and click **Download Agent**. This will download a zip archive file (e.g. ***ContrastSetup_3.3.5.zip***). Note that you may need to specify proxy authentication information required by your network here before downloading the agent.
-3. Extract the archive on the web server and run ***ContrastSetup.exe***. This will install the .NET Agent. 
-4. To start analyzing an application, simply point your browser to the web application and use the web application as you normally would: click on links, submit forms using normal data, etc.  The .NET Contrast Agent’s sensors will gather information about the application’s security, architecture, and libraries. The results of the Agent’s analysis can be viewed on Contrast Team Server.
+To install the agent, complete the following steps:
 
-## Silent/Headless Installation
-The Contrast .NET Agent installer supports the command line options below. These options are "silent" and will not present the installer's user interface.
+* Log in to the Contrast interface. 
+* Click the button in the top navigation bar to **Add an Application**.
+* Select the **.NET Agent** in the dropdown menu, and click the button to **Download Agent**. This downloads a zip archive file (e.g., *ContrastSetup_3.3.5.zip*). 
 
-* Install: ```ContrastSetup.exe -s -norestart```
+> **Note:** You might need to specify proxy authentication information required by your network before downloading the agent.
 
-* Install and Do Not Start the Contrast.NET Tray Application: ```ContrastSetup.exe -s -norestart StartTray=0```
+* Extract the archive on the web server, and run *ContrastSetup.exe*. This installs the .NET agent. 
 
-* Uninstall: ```ContrastSetup.exe -uninstall -s -norestart```
+To start analyzing an application, use the web application as you normally would in your browser: click on links, submit forms using normal data, etc.  The .NET Contrast Agent’s sensors will gather information about the application’s security, architecture, and libraries. You can view the results of the agent’s analysis in the Contrast interface.
 
-* Repair: ```ContrastSetup.exe -s -repair```
+## Silent Installation
+
+The .NET agent installer supports the command line options below. These options are silent, which means that they don't require your interaction and don't present the installer's user interface.
+
+* Install: `ContrastSetup.exe -s -norestart`
+
+* Install and Do Not Start the Contrast.NET Tray Application: `ContrastSetup.exe -s -norestart StartTray=0`
+
+* Uninstall: `ContrastSetup.exe -uninstall -s -norestart`
+
+* Repair: `ContrastSetup.exe -s -repair`
 
 
 ## Customize Configuration
 
-You may wish to customize the behavior of the .NET Agent to better suit your needs.
+If you want to customize the agent's behavior to better suit your needs, follow the instructions in these articles: 
 
 * [Configure Proxy, Performance, Logging, and Analysis](installation-netconfig.html)
 
@@ -63,7 +71,7 @@ You may wish to customize the behavior of the .NET Agent to better suit your nee
 
 * [Customize Application Names](installation-netconfig.html#appname)
 
-If you encounter any difficulties using the .NET Agent you can check out our **Troubleshooting** resources.
+If you encounter any difficulties using the .NET agent, you can also go to [Troubleshooting](troubleshooting-netinstall.html) resources.
 
 
 
