@@ -44,8 +44,3 @@ Set optimal standards for user accounts in the refreshed Security page, and crea
 
 * **Ruby Agent Summary:** We've added logic for reporting the application build number, the initial SSRF rule implementation, and the ability to set or override configuration values with command line options. As we enter the final month before our general availability with Contrast version 3.4.4, our September work will be focused on increasing performance and preparing for advanced Protect rules and Assess features.
 
-
-
-
-
-
