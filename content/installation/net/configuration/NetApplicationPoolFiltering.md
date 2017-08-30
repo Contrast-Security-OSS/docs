@@ -4,68 +4,79 @@ description: "Information on blacklisting/whitelisting application pools"
 tags: "microsoft IIS pooling whitelist blacklist configuration agent installation .Net"
 -->
 
-Some customers will find it necessary to disable Contrast.NET for specific application pools on an instance of IIS. **Contrast 3.1.7** introduced a ```ProcessBlacklist``` that can be configured to remove the agent from specific application pools. If an application pool is blacklisted, the Contrast.NET agent will not attach to any applications using that application pool and there should be no performance impact for those applications.
+Web applications hosted on IIS run on application pools. If you need to disable the Contrast.NET agent for specific application pools on an instance of IIS, configure a `ProcessBlacklist`. When an application pool is blacklisted, the agent won't attach to any applications using that application pool, and there should be no performance impact for those applications.
 
-To disable Contrast.NET for a specific application, populate ```ProcessBlacklist``` with the appropriate application pool in ***C:\Program Files\Contrast.NET\DotnetAgentService.exe.config***:
 
-```
-<!--Comma-separtated list of application pools that will be ignored by Contrast-->
-<add key="ProcessBlacklist" value=""/>
-```
+## How it Works
 
-For more information, see the [Configuration Overview](installation-netconfig.html#overview).
+Whitelisting and blacklisting are based on the applicaton pool *name*. In versions prior to 3.2.7, application pool filtering was based on *process username* (i.e., using the **ApplicationPoolIdentity** setting), which is the same as the application pool's name by default.
 
-Customers could find the need to only enable Contrast.NET for specific applications hosted by IIS. Contrast 3.2.3 introduced a ```ProcessWhitelist``` that can be configured to only analyze certain application pools. If an application pool is whitelisted, the Contrast.NET agent will analyze the matching pools and there should be no performance impact for any other applications.
+>**Note:** Blacklisting an application takes precedence over whitelisting. Application pools that satisfy both lists won't be analyzed.
 
-To enable Contrast.NET for only specific application pools, populate ```ProcessWhitelist``` with the appropriate application pool in ***C:\Program Files\Contrast.NET\DotnetAgentService.exe.config***:
+As of 3.2.3, application pool blacklists and whitelists also accept `*` as a variable-length wildcard.  
 
-```
-<!--Comma-separated list of application pools that will exclusively be profiled by Contrast-->
-<add key="ProcessWhitelist" value=""/>
-```
+>**Example:** "AppPool*" will match "AppPool1", "AppPool_arb", etc.
 
-For more information, see the [Configuration Overview](installation-netconfig.html#overview).
 
->**Note:** Blacklisting an application takes precedence over whitelisting.  Application pools satisfying both lists will not be analyzed.
+## Find an Application Pool 
 
-As of 3.2.3, application pool blacklists and whitelists also accept ```*``` as a variable-length wildcard.  Example: "AppPool*" will match "AppPool1", "AppPool_arb", etc.
-
->**Note:** The application pool blacklist functionality is only available for applications hosted on IIS versions 7 and higher.
-
-Web applications hosted on IIS run on application pools. Starting with version 3.2.7, whitelisting and blacklisting are based on applicaton pool *name*.  In versions prior to 3.2.7, application pool filtering was based on *process username* which by default (i.e. using the **ApplicationPoolIdentity** setting) is the same as the application pool's name.
-
-**The application pool running an application can be discovered using the following:**
+You can find the application pool that's running an application using the following methods:
 
 * Internet Information Services (IIS) Manager
-* ***AppCmd.exe***
+* *AppCmd.exe*
 * Contrast.NET Logs
 
+Use **IIS Manager**: 
 
-## Internet Information Services (IIS) Manager
-
-1. Start IIS Manager (***%windir%\system32\inetsrv\InetMgr.exe***)
-2. Select a web application
-3. Click **Basic Settings**
-4. The application pool name will be displayed in a form field (see below)
+* Start IIS Manager: *%windir%\system32\inetsrv\InetMgr.exe*.
+* Select a web application.
+* Click **Basic Settings**.
+* The application pool name is displayed in a form field. (See the image below.)
 
 <a href="assets/images/KB3-e05_1.jpg" rel="lightbox" title="Application Pool Name"><img class="thumbnail" src="assets/images/KB3-e05_1.jpg"/></a>
 
 
-## ***AppCmd.exe***
+Use ***AppCmd.exe***: 
 
-1. Run ***cmd.exe*** as an **Administrator**
-2. Navigate to ***C:\Windows\System32\inetsrv***
-3. Enter the command ```appcmd list apps```
-4. A list of applications and their associated application pools will appear (see below)
+* Run *cmd.exe* as an Administrator.
+* Navigate to *C:\Windows\System32\inetsrv*.
+* Enter the command `appcmd list apps`.
+* A list of applications and their associated application pools appear. (See the image below.)
 
 <a href="assets/images/KB3-e05_2.jpg" rel="lightbox" title="Application List"><img class="thumbnail" src="assets/images/KB3-e05_2.jpg"/></a>
 
 
-## Contrast.NET Logs
+Use **Contrast.NET Logs**: 
 
-1. Start the Contrast.NET agent
-2. Browse to an application
-3. In Windows, navigate to ***C:\ProgramData\Contrast.NET\LOGS***
-4. Open the most recent **Profiler** or **Duplex** log (*Profiler_[AppPool]_XXXXXXXX_XX_XX_XX_XXX_XXXXX.log*)
-5. The application pool name will be on the line that starts with **ApplicationPool Name:** 
+* Start the Contrast.NET agent.
+* Browse to an application.
+* In Windows, navigate to *C:\ProgramData\Contrast.NET\LOGS*.
+* Open the most recent **Profiler** or **Duplex** log (*Profiler_[AppPool]_XXXXXXXX_XX_XX_XX_XXX_XXXXX.log*).
+* The application pool name is on the line that starts with **ApplicationPool Name:**.
+
+## Blacklist an Application Pool
+
+To disable the agent for a specific application, populate `ProcessBlacklist` with the appropriate application pool in *C:\Program Files\Contrast.NET\DotnetAgentService.exe.config*:
+
+```
+<!--Comma-separtated list of application pools ignored by Contrast-->
+<add key="ProcessBlacklist" value=""/>
+```
+
+>**Note:** The application pool blacklist functionality is only available for applications hosted on IIS versions 7 and higher.
+
+## Whitelist an Application Pool 
+
+If you need to only enable the agent for specific applications hosted by IIS, configure a `ProcessWhitelist` (introduced in Contrast 3.2.3) to only analyze certain application pools. If an application pool is whitelisted, the agent analyzes the matching pools. There should be no performance impact for any other applications.
+
+To enable the agent for only specific application pools, populate `ProcessWhitelist` with the appropriate application pool in *C:\Program Files\Contrast.NET\DotnetAgentService.exe.config*:
+
+```
+<!--Comma-separated list of application pools exclusively profiled by Contrast-->
+<add key="ProcessWhitelist" value=""/>
+```
+
+For more information on the standard configuration for the agent, see the [Configuration Overview](installation-netconfig.html#overview).
+
+
 
