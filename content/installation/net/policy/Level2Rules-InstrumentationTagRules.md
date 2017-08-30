@@ -38,57 +38,19 @@ On the method node, specify the data source and target.
    
 * **SIGNATURE:** Signature of the method to instrument. <br> (**Required**)
    
-* **TARGET:** 
- * R: Return object  
- * P[Number]: Parameter reference (0-based). You can use `P0`for first parameter, `P1` for second parameter, etc.
+* **TARGET:** (**Required**)
+ Use one of the following
+   * R: Return object  
+   * P[Number]: Parameter reference (0-based). You can use `P0`for first parameter, `P1` for second parameter, etc.
   
- (**Required**)
+* **SOURCE:** (**Optional**)
+  * P[Number]: Parameter reference (0-based)
+  * The default is `P0`. You can use `P0`for first parameter, `P1` for second parameter, etc.
+  
 
-* **SOURCE:** 
+* **ENABLED:** Add the enabled attribute and set it to `"false"` to disable the rule. The default is `"true"`. (**Optional**)
 
- * P[Number]: Parameter reference (0-based)
- * The default is `P0`. You can use `P0`for first parameter, `P1` for second parameter, etc.
-  (**Optional**)
-
-* **ENABLED:** Add the enabled attribute and set it to `"false"` to disable the rule. The default is `"true"`. <br> 
- (**Optional**)
-
-* **TAG_SCOPE:** 
+* **TAG_SCOPE:** (**Optional**)
         
- * `lifetime`: The target object is tagged for its lifetime. This is the **default**. 
- * `method`: The target is only tagged during the tagger method, and reverts to its original state after the method exits.
- (**Optional**)
-
-### Method-Scope Tag Rules
-
-Tag scope by default is `lifetime`. Method-scope is an advanced feature you may want to set for methods that can trigger a rule method in their internal code. For example, some .NET methods escape data and write in the same method:
-
-```csharp
-
-// "normal" tagger: method source=P0, target=R, see full signature above
-string htmlEncoded = HtmlEncode(input);
-Response.Out.Write(htmlEncoded);
-
-// tagger source=P0, target=N/A, scope=method, see full signature above
-HtmlEncode(input, Response.Out);
-
-// The method tag scope is useful for method like this where the potentially unsafe source can trigger a rule
-void HtmlEncode(string input, System.IO.Textwriter htmlOutput) {
-    
-    // if input was already safe, it will be written as-is
-    if(!MyUtility.ContainsHtmlEncodingCharacters(input)) {
-       htmlOutput.Write(input);
-       return; 
-    }
-    // encodedInput is a new object that be tagged as html-encoded and safe for xss
-    string encodedInput = MyUtility.ReplaceHtmlEncodingCharacters(input);   
-    // reflected-xss rule would be triggered here in a false-positive if input was not tagged as html-encoded
-    htmlOuput.Write(encodedInput);   
-    
-}
-
-```
-After the method exits, the input string should no longer be tagged as `html-encoded` since it may have 
-contained invalid characters and been replaced, as shown in the example above.  You don't want the input object to be tagged because another method may
-write it without encoding.
-
+  * `lifetime`: The target object is tagged for its lifetime. This is the **default**. 
+  * `method`: The target is only tagged during the tagger method, and reverts to its original state after the method exits.
