@@ -22,7 +22,7 @@ To add a single user, click the button to **Add User** above the grid, and compl
 
 * Enter the user's **First Name**, **Last Name** and **Email Address** in the provided fields. 
 * Check the box if you want to **Require email activation** instead of requiring a password.
-* Choose which of the **System Roles** shoud apply to the user in the dropdown menu. The default is **None**. 
+* Choose which of the **System Roles** should apply to the user in the dropdown menu. The default is **None**. 
 * Choose the **Organization** to which the user belongs. 
 * Once you decide on an organization, you can choose the default **Organization Role** in the dropdown menu as well as an **Application Access Group** in the multiselect field.
 * Choose the **Date Format**, **Time Format** and **Time Zone** in the dropdown fields. 
@@ -34,26 +34,26 @@ To add a single user, click the button to **Add User** above the grid, and compl
 
 ### Multiple users 
 
-To bulk add users, click the upload icon above the grid to import a spreadsheet with the users' information. The spreadsheet must be CSV or XLS format, and include the following field for each user: 
+To bulk add users, click the upload icon above the grid to import a spreadsheet with the users' information. The spreadsheet must be CSV format, and include the following fields for each user. **All field headings and values in the spreadsheet must be formatted as shown.** 
 
 * First name 
 * Last name 
 * Email 
 * Organization 
-* Organization role 
+* Organization role <br> (**View**, **Edit**, **Rules admin**, or **Admin**)
+
+> **Note:** The **Email** field must be changed to **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
 
 You may also include the following information for each user in the spreadsheet: 
 
-* Email Activation <br> (if "None", default is **Required Password**)
-* System Admin <br> (default is **None**)
-* Application access group <br> (default is **Unassigned**)
-* Protect <br> (default is **Off**)
-* Date Format <br> (default is **MM/dd/YYYY**)
-* Time Format <br> (default is **hh:mm a**)
-* Time zone <br> (default is your time zone)
-* Use Organization Settings <br> (default is **On**)
-* Access <br> (default is **On**)
-* API only <br> (default is **Off**)
+* Email Activation <br> (If "None", default is **Required Password**)
+* System Administration <br> (Default is **None**)
+* Application access group <br> (View, Edit, Rules Admin, Admin or custom group name(s); default is **Unassigned**)
+* Date Format <br> (Default is the organization setting, such as **MM/dd/YYYY**)
+* Time Format <br> (Default is the organization setting, such as **hh:mm a**)
+* Time zone <br> (Default is your time zone)
+* Access <br> (Default is **On**)
+* API only <br> (Default is **Off**)
 
 > **Note:** Hover over the upload icon for a reminder of required file formats and information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
 
@@ -78,22 +78,24 @@ To add a single user, click the button to **Add User** above the grid, and compl
 
 ### Multiple users
 
-To bulk add users, click the upload icon above the grid to import a spreadsheet with the users' information. The spreadsheet must be CSV or XLS format, and include the following field for each user: 
+To bulk add users, click the upload icon above the grid to import a spreadsheet with the users' information. The spreadsheet must be CSV format, and include the following fields for each user. **All field headings and values in the spreadsheet must be formatted as shown.** 
 
 * First name 
 * Last name 
 * Email 
-* Organization role 
+* Organization role <br> (**View**, **Edit**, **Rules admin** or **Admin**)
+
+> **Note:** The **Email** field must be changed to **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
 
 You may also include the following information for each user in the spreadsheet: 
 
-* Application access group <br> (default is **Unassigned**)
-* Protect <br> (default is **Off**)
-* Date Format <br> (default is **MM/dd/YYYY**)
-* Time Format <br> (default is **hh:mm a**)
-* Time zone <br> (default is your time zone)
-* Access <br> (default is **On**)
-* API only <br> (default is **Off**)
+* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names(s); default is **Unassigned**)
+* Protect <br> (Default is **Off**)
+* Date Format <br> (Default is the organization setting, such as **MM/dd/YYYY**)
+* Time Format <br> (Default is the organization setting, such as **hh:mm a**)
+* Time zone <br> (Default is your time zone)
+* Access <br> (Default is **On**)
+* API only <br> (Default is **Off**)
 
 > **Note:** Hover over the upload icon for a reminder of required file formats and information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
 
