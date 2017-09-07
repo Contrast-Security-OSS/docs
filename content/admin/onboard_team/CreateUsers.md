@@ -42,7 +42,7 @@ To bulk add users, click the upload icon above the grid to import a spreadsheet 
 * Organization 
 * Organization role <br> (**View**, **Edit**, **Rules admin**, or **Admin**)
 
-> **Note:** The **Email** field must be changed to **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
+> **Note:** The **Email** field appears as **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
 
 You may also include the following information for each user in the spreadsheet: 
 
@@ -85,7 +85,7 @@ To bulk add users, click the upload icon above the grid to import a spreadsheet 
 * Email 
 * Organization role <br> (**View**, **Edit**, **Rules admin** or **Admin**)
 
-> **Note:** The **Email** field must be changed to **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
+> **Note:** The **Email** field appears as **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
 
 You may also include the following information for each user in the spreadsheet: 
 
