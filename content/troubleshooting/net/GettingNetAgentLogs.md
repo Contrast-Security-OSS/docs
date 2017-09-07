@@ -4,35 +4,26 @@ description: "Instructions on using .NET agent logs"
 tags: "troubleshoot configuration logging agent .Net"
 -->
 
-The Contrast.NET Agent logs information to the ***Contrast.NET\LOGS*** directory within the Windows ***ProgramData*** directory:
+The Contrast.NET Agent logs information to the *Contrast.NET\LOGS* directory within the Windows 2008/2012 *ProgramData* directory: *C:\ProgramData\Contrast.NET\LOGS* 
 
-* Windows 2008/2012 
-    ***C:\ProgramData\Contrast.NET\LOGS*** <br>(There is no space in ***ProgramData***.)
-
-Depending on how the Windows profile is set up (folder view settings), the directories may be hidden so you can't browse directly to them. If so, paste the paths into the Windows Explorer location (replace the drive letter **C** with **D** if necessary).
+Depending on how the Windows profile and folder view settings are set up, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
 
 You can change what information is logged by changing the logging level in the [.NET Agent Configuration](installation-netconfig.html).
 
-There are several types of log files in the ***LOGS*** directory: ***DotnetAgentSvc_***,  ***Profiler_*** (or ***Monitor_***), and ***Module_*** (or ***Hooks_***) logs. ***DotnetAgentSvc_*** logs include details about ***DotnetAgentService.exe***'s work, including any details of errors communicating with the Contrast TeamServer. The other types of logs include details about data flow and control flow analysis peformed by the agent's sensors.
+## Types of Log Files
 
-For example, here is the start of a ***DotnetAgentSvc_*** log:
+There are several types of log files in the ***LOGS*** directory: *DotnetAgentSvc_*, *Monitor_* and *Hooks_*. The ***DotnetAgentSvc_*** logs include details about *DotnetAgentService.exe*'s work, including any details of errors communicating with Contrast. The other types of logs include details about data flow, and control flow analysis peformed by the agent's sensors.
 
-<a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="ContrastSvc_ Log"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
+<a href="assets/images/KB3-e04_1.jpg" rel="lightbox" title="The start of a DotnetAgentSvc_ log"><img class="thumbnail" src="assets/images/KB3-e04_1.jpg"/></a>
 
-Of course the goal is never to need this; however, if you do, feel free to use the output to [file a bug report](mailto:bugs@contrastsecurity.com).
+<!-- Of course the goal is never to need this; however, if you do, feel free to use the output to [file a bug report](mailto:bugs@contrastsecurity.com).-->
 
-The **Windows Event Log** can also be a useful source of information for debugging.
+The **Windows Event Log** can also be a useful source of information for debugging. Complete the following steps to access log events: 
 
-1. Launch the **Windows Event Viewer** (**Start > Event Viewer**)
-2. Expand the **Windows Logs** (in the left pane) and select **Application**
-3. Look for a recent event where the **Source** is **.NET Runtime**
+* Go to **Start > Event Viewer > Windows Event Viewer** and **launch** the viewer.
+* Expand the **Windows Logs** in the left pane, and select **Application**.
+* Look for a recent event where the **Source** is **.NET Runtime**, **ASP.NET** or **ContrastSvc**.
 
-If the Contrast.NET Agent was successfully loaded by IIS, you'll see a message similar to the following:
+## File a Bug Report 
 
-<a href="assets/images/KB3-e04_2.jpg" rel="lightbox" title="Success Message"><img class="thumbnail" src="assets/images/KB3-e04_2.jpg"/></a>
-
-If there was an error, then you will probably see something similar to this:
-
-<a href="assets/images/KB3-e04_3.jpg" rel="lightbox" title="Error Message"><img class="thumbnail" src="assets/images/KB3-e04_3.jpg"/></a>
-
-Starting with **Version 3.1.8**, the .NET agent will produce a minidump file (***.dmp***) when it encounters an error that would crash the worker process. These minidump files can be sent to Contrast as part of a [bug report](mailto:bugs@contrastsecurity.com). Dump files will help the Contrast team resolve the bug much more quickly than without the information in the dump file. Dump files are located in the same directory as other log files.
+In some rare scenarios, bad instrumentation can cause a web server process to crash. If you ever encounter a crash caused by Contrast,  please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, capture a process dump of the crashing process (e.g., *w3wp.exe*) by finding and right-clicking the process in the Windows Task Manager, and selecting **Create Dump File**. The combination of log files and this dump file will help our team reproduce and fix the bug. 
