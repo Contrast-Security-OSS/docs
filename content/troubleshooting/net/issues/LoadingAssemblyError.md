@@ -4,25 +4,25 @@ description: "Troubleshooting guide for .NET agent issues"
 tags: "microsoft troubleshoot assembly loading agent .Net"
 -->
 
-## The Issue
+## Issue
 
 **Error:** *Loading this assembly would produce a different grant set from other instances*.
 
 ## Symptoms
 
-* A page containing certain ASP.NET controls (such as the legacy ASP.NET **ReportViewer** control) throws an unhandled exception when Contrast.NET is running: 
+* A page containing certain ASP.NET controls, such as the legacy ASP.NET **ReportViewer** control, throws an unhandled exception when Contrast.NET is running: 
 
     > *Loading this assembly would produce a different grant set from other instances*
 
-* The application's ***web.config*** file specifies ```<trust legacyCasModel="true"```
+* The application's *web.config* file specifies `<trust legacyCasModel="true"`.
 
-## How to Solve
+## Solution
 
-Contrast.NET's instrumentation data flow engine cannot be used with applications using the ```legacyCasModel="true"``` setting. Use one of the following strategies to resolve this issue:
+You can't use the Contrast.NET's instrumentation data flow engine with applications using the `legacyCasModel="true"` setting. Use one of the following strategies to resolve this issue:
 
-* Set ```legacyCasModel="false"``` The **ReportViewer** control's performance will suffer but will still work. 
+* Set `legacyCasModel="false"`. The **ReportViewer** control's performance will suffer but will still work. 
 <br> **OR** </br>
-* Configure Contrast.NET *to not analyze* the application pool containing the application with the **ReportViewer** control using the ```ProcessBlacklist``` setting.
+* Configure Contrast.NET to **not analyze** the application pool containing the application with the **ReportViewer** control using the `ProcessBlacklist` setting.
 
 
 ## More Information
