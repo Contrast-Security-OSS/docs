@@ -67,6 +67,6 @@ For multiple vulnerabilities sent to JIRA in bulk as a single issue, the JIRA ti
 
 ### Automatically create tickets 
 
-Automatically create tickets in JIRA for newly discovered vulnerabilities by checking the designated box in the configuration form. In the multiselect field that appears, choose the severity level(s) of the vulnerabilities for which you want to generate tickets. The default selections are **Critical** and **High**.
+Automatically create tickets in JIRA for newly discovered vulnerabilities by checking the designated box in the configuration form. In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. The default selections are **Critical** and **High**.
 
 > **Note:** This selection doesn't generate tickets retroactively.
