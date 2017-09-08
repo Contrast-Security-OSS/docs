@@ -36,22 +36,22 @@ To add a single user, click the button to **Add User** above the grid, and compl
 
 To bulk add users, click the upload icon above the grid to import a spreadsheet with the users' information. The spreadsheet must be CSV format, and include the following fields for each user. **All field headings and values in the spreadsheet must be formatted as shown.** 
 
-* First name 
-* Last name 
+* First Name 
+* Last Name 
 * Email 
 * Organization 
-* Organization role <br> (**View**, **Edit**, **Rules admin**, or **Admin**)
+* Organization Role <br> (**View**, **Edit**, **Rules_admin**, or **Admin**)
 
-> **Note:** The **Email** field appears as **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
+> **Note:** The **Email** field appears as **Username** for users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured. 
 
 You may also include the following information for each user in the spreadsheet: 
 
 * Email Activation <br> (If "None", default is **Required Password**)
-* System Administration <br> (Default is **None**)
-* Application access group <br> (View, Edit, Rules Admin, Admin or custom group name(s); default is **Unassigned**)
+* System Administration <br> (Default is **Off**)
+* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as **GroupA&GroupB&GroupC**)
 * Date Format <br> (Default is the organization setting, such as **MM/dd/YYYY**)
 * Time Format <br> (Default is the organization setting, such as **hh:mm a**)
-* Time zone <br> (Default is your time zone)
+* Time zone <br> (Default is the organization time zone)
 * Access <br> (Default is **On**)
 * API only <br> (Default is **Off**)
 
@@ -71,8 +71,8 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * Choose the user's **Organization Role** in the dropdown menu. 
 * Select an **Application Access Group** to which to add the user in the dropdown menu, if desired. 
 * Choose **Date Format**, **Time Format** and **Time Zone** settings in the dropdown menus. 
-* If you want to disable the user's access to your organization in the Contrast interface, use the **Access** toggle. (The user has access by default.)
-* Check the box if you want the user to have **API Only** access. (The user will have access Contrast's REST API, but won't have access to the Contrast interface.)
+* If you want to disable the user's access to your organization in the Contrast interface, use the **Access** toggle. <br> (The user has access by default.)
+* Check the box if you want the user to have **API Only** access. <br> (The user will have access Contrast's REST API, but won't have access to the Contrast interface.)
 
 <a href="assets/images/Create_User.png" rel="lightbox" title="Add a user as an Organization Administrator"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
 
@@ -80,20 +80,20 @@ To add a single user, click the button to **Add User** above the grid, and compl
 
 To bulk add users, click the upload icon above the grid to import a spreadsheet with the users' information. The spreadsheet must be CSV format, and include the following fields for each user. **All field headings and values in the spreadsheet must be formatted as shown.** 
 
-* First name 
-* Last name 
+* First Name 
+* Last Name 
 * Email 
-* Organization role <br> (**View**, **Edit**, **Rules admin** or **Admin**)
+* Organization Role <br> (**View**, **Edit**, **Rules_admin** or **Admin**)
 
-> **Note:** The **Email** field appears as **Username** for users who have [LDAP authentication](installation-setupauth.html) configured. 
+> **Note:** The **Email** field appears as **Username** for users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured. 
 
 You may also include the following information for each user in the spreadsheet: 
 
-* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names(s); default is **Unassigned**)
+* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as **GroupA&GroupB&GroupC**)
 * Protect <br> (Default is **Off**)
 * Date Format <br> (Default is the organization setting, such as **MM/dd/YYYY**)
 * Time Format <br> (Default is the organization setting, such as **hh:mm a**)
-* Time zone <br> (Default is your time zone)
+* Time zone <br> (Default is the organization time zone)
 * Access <br> (Default is **On**)
 * API only <br> (Default is **Off**)
 
