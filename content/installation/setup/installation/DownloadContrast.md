@@ -6,11 +6,7 @@
 
 ## Set Up Contrast Hub
 
-Contrast Hub is the central distribution system for customers to obtain installation media, release notes and licenses for Enterprise-on-Premises (EOP) installations. EOP customers must request an account on Hub before installing Contrast. 
-
-To register for an account visit the [Contrast Hub Site](https://hub.contrastsecurity.com) and select **New User**. Make sure to fill out the required information to the fullest details. Our Support Team will be notified of the account request; and, in most cases, accounts are approved and provisioned within eight business hours. Once approved, you'll receive an email requesting activation of the new Hub account.
-
-<a href="assets/images/KB2-k03.png" rel="lightbox" title="Spam Notice"><img class="thumbnail" src="assets/images/KB2-k03.png"/></a>  
+Contrast Hub is the central distribution system for customers to obtain installation media, release notes and licenses for Enterprise-on-Premises (EOP) installations. EOP customers are provided with a [Hub](https://hub.contrastsecurity.com) account when their licenses are provisioned. If you're unsure about who holds access for your company, reach out to the [Contrast Support team](https://support.contrastsecurity.com/anonymous_requests/new).
 
 ## Download the Installer
 Once you activate your Contrast Hub account, you can to download the Contrast installer for your operating system. <!-- How? -->
