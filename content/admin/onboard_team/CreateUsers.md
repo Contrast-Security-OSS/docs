@@ -40,22 +40,22 @@ To bulk add users, click the upload icon above the grid to import a spreadsheet 
 * Last Name 
 * Email 
 * Organization 
-* Organization Role <br> (**View**, **Edit**, **Rules_admin**, or **Admin**)
+* Organization Role <br> (View, Edit, Rules_admin or Admin)
 
 > **Note:** The **Email** field appears as **Username** for users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured. 
 
-You may also include the following information for each user in the spreadsheet: 
+The following information is optional for each user. To include the fields in the spreadsheet, add a new column and value(s) for each as given below. 
 
-* Email Activation <br> (If "None", default is **Required Password**)
-* System Administration <br> (Default is **Off**)
-* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as **GroupA&GroupB&GroupC**)
-* Date Format <br> (Default is the organization setting, such as **MM/dd/YYYY**)
-* Time Format <br> (Default is the organization setting, such as **hh:mm a**)
+* Email Activation <br> (If "None", default is "Required Password")
+* System Administration <br> (Default is "Off")
+* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as "GroupA&GroupB&GroupC")
+* Date Format <br> (Default is the organization setting, such as "MM/dd/YYYY")
+* Time Format <br> (Default is the organization setting, such as "hh:mm a")
 * Time zone <br> (Default is the organization time zone)
-* Access <br> (Default is **On**)
-* API only <br> (Default is **Off**)
+* Access <br> (Default is "On")
+* API only <br> (Default is "Off")
 
-> **Note:** Hover over the upload icon for a reminder of required file formats and information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
+> **Note:** Hover over the upload icon for a reminder of the required information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
@@ -83,21 +83,21 @@ To bulk add users, click the upload icon above the grid to import a spreadsheet 
 * First Name 
 * Last Name 
 * Email 
-* Organization Role <br> (**View**, **Edit**, **Rules_admin** or **Admin**)
+* Organization Role <br> (View, Edit, Rules_admin or Admin)
 
 > **Note:** The **Email** field appears as **Username** for users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured. 
 
-You may also include the following information for each user in the spreadsheet: 
+The following information is optional for each user. To include the fields in the spreadsheet, add a new column and value(s) for each as given below. 
 
-* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as **GroupA&GroupB&GroupC**)
-* Protect <br> (Default is **Off**)
-* Date Format <br> (Default is the organization setting, such as **MM/dd/YYYY**)
-* Time Format <br> (Default is the organization setting, such as **hh:mm a**)
+* Application access group <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as "GroupA&GroupB&GroupC")
+* Protect <br> (Default is "Off")
+* Date Format <br> (Default is the organization setting, such as "MM/dd/YYYY")
+* Time Format <br> (Default is the organization setting, such as "hh:mm a")
 * Time zone <br> (Default is the organization time zone)
-* Access <br> (Default is **On**)
-* API only <br> (Default is **Off**)
+* Access <br> (Default is "On")
+* API only <br> (Default is "Off")
 
-> **Note:** Hover over the upload icon for a reminder of required file formats and information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
+> **Note:** Hover over the upload icon for a reminder of the required information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
