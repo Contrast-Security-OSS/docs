@@ -94,7 +94,7 @@ Several different groups options are available:
 
 ### Authorize Contrast users
 
-Once you enter the configuration values, select the groups that the application will use to access the Contrast interface. A user can't belong to both the User and SuperAdmin groups.
+Once you enter the configuration values, select the groups that the application will use to access the Contrast interface. **A user can't belong to both the User and Admin groups. If you add them to both groups in your LDAP instance, Contrast won't be able to find them during configuration.**
 
 * **Contrast User Group:** This group allows users to be added to an organization and log in to the standard interface. This group is appropriate for most users. 
 

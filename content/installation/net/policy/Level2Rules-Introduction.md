@@ -6,8 +6,4 @@ tags: "installation policy customization rules level agent .Net"
 
 ## Policy File Editing
 
-The behavior of the Contrast .NET Agent is largely driven by rules located in the *policy.xml* file in the agent's installation directory. The .NET Agent's behavior can be customized by adding your own rules to *customerPolicy.xml*.  Users can also override rules in *policy.xml* by adding a rule with the same method signature to *customerPolicy.xml*.  
-
-The *customerPolicy.xml* file is located in *C:\ProgramData\Contrast.NET\customerPolicy.xml*
-
-Please note that the agent's default *policy.xml* should not be directly modified because users' changes will be lost when a new version of Contrast.NET is installed.  The *customerPolicy.xml* file will not be overwritten during software updates.
+Customize the .NET Agent's behavior by adding your own rules to the *customerPolicy.xml* file, which is located in *C:\ProgramData\Contrast.NET\customerPolicy.xml*. You can also override rules in the agent's built-in policy by adding a rule with the same method signature to the *customerPolicy.xml* file. This file won't be overwritten during agent updates.

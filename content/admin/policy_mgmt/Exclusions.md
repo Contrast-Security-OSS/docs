@@ -30,14 +30,14 @@ In conjunction with the input type, you must choose how to apply URLs:
 
 * **These URLs** (allows regex): Specify a set of URLs to which to apply the exclusion. 
 
->**Note:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
+>**Note:** Slash followed by wildcard ```/.*``` is an acceptable substitute for listing all URLs.
 
 
 ### URL
 
 This type of exclusion allows you to focus on a list of specific URLs to be ignored using **These URLs**. In this field, you can list the specific URLs to exclude, resulting in any findings from these URLs being suppressed. 
 
->**Note:** Wildcard ```.*``` is an acceptable substitute for listing all URLs.
+>**Note:** Slash followed by wildcard ```/.*``` is an acceptable substitute for listing all URLs.
 
 
 ### Code

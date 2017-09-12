@@ -1,27 +1,35 @@
 <!--
 title: "Licensing An Application"
-description: "Instructions for applying an enterprise license to a trial application."
-tags: "user applications TeamServer licensing"
+description: "Apply a license to an application."
+tags: "user applications licensing"
 -->
 
 ## About Licenses
-Enterprise licenses are assigned to individual applications after an application is brought online and is reporting results. All applications by default start as a trial license. Enterprise licenses cannot be transferred between applications that are active or even archived. In order to free a license from one application and assign it to another, the licensed application would need to be reset and fully deleted. Once that work has been completed, the license returns to the organization pool.
 
-## Licensing from the Application Portfolio
-Organization administrators are the only organization role capable of assigning an enterprise license to an individual application. Follow the steps below to enable an enterprise license: 
+Once you bring an application online, and it's reporting results, you may assign a license to the application. Without a license, vulnerability findings, application activity and a view of how the application is being used in real time aren't available. All applications in Contrast start with a temporary license by default. You can't transfer licenses between applications that are active or archived. To free a license from one application and assign it to another, you must reset and fully delete the licensed application. Once the application is deleted, the license returns to the organization pool. 
 
-1. Log in to TeamServer as an organization administrator.
-2. Select **Applications** from the top navigation menu.
-3. Identify the application to license from the Application Portfolio page.
-4. Using the gear icon at the far right of the table, select **Apply License**.
-5. The application will subsequently switch from "Trial" to "Enterprise" and all findings will be visible.
+## License an Application
 
-## Licensing from within the Application
-The license can also be enabled from an application's Overview page by an organization administrator. Follow the steps below to enable an enterprise license:
+You must be an Organization Administrator to assign a license to an individual application. Follow the steps below to enable a license: 
 
-1. Log in to TeamServer as an organization administrator.
-2. Select **Applications** from the top navigation menu.
-3. Identify the application to license from the Application Portfolio page and navigate into the application.
-4. To the right of the application name, you will see the word **Trial**
-5. Click on the word **Trial** which will immediately prompt you to **Apply Enterprise**
-6. The application will subsequently switch from "Trial" to "Enterprise" and all findings will be visible.
+* Log in to the Contrast interface as an Organization Administrator.
+* Select **Applications** from the top navigation menu.
+* Identify the application to license in the Application page grid.
+
+> **Note:** Use the dropdown menu above the grid to filter applications by status.
+
+* In the dropdown menu, select **Apply License**. <br> You can also click the **Unlicensed** link beside the application name, and then click the button to **Apply License** in the dialog that appears.
+
+<a href="assets/images/License-application-grid.png" rel="lightbox" title="Apply license to an application"><img class="thumbnail" src="assets/images/License-application-grid.png"/></a>
+
+* The application is no longer marked as "Unlicensed" in the grid, and all findings are visible.
+
+
+### Apply a license in an application page
+
+You can also enable a license in an application's overview page. Follow these steps from the Applications page:
+
+* Identify the application to license in the Application grid, and click on the application name.
+* In the overview page, click on the **Unlicensed** link above the application name.
+* Click the button to **Apply License** in the dialog that appears.
+* The application is no longer marked as "Unlicensed" in the overview page or applications grid, and all findings are visible.

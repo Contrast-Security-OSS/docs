@@ -24,7 +24,7 @@ Header | Value
 ## Sample Request
 
 ```
-curl -HAccept:application/json -HAuthorization:test -HAPI-Key:test https://app.contrastsecurity.com/Contrast/api/applications
+curl -HAccept:application/json -HAuthorization:test -HAPI-Key:test https://app.contrastsecurity.com/Contrast/api/ng/applications
 ```
 
 ## Sample Response
