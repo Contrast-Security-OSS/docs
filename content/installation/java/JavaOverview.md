@@ -4,7 +4,7 @@ description: "Overview of the Java Agent"
 tags: "installation Java agent overview introduction"
 -->
 
-The Java Agent analyzes the behavior of Java applications running on J2EE containers, newer frameworks like netty, Play or Vert.X, fatjar/microservice applications like SpringBoot, or even regular old desktop Java applications. If there's a JVM, the Java Agent can get security insights into it.
+The Contrast Java agent analyzes the behavior of Java applications running on J2EE containers; newer frameworks like Netty, Play or Vert.X; FatJar/microservice applications like SpringBoot; or even regular desktop Java applications. If there's a JVM, the Java agent can get security insights.
 
-## Usage
-To start analyzing an application, install the Java Agent by adding it as ```-javaagent``` JVM parameter, and then simply use it as you normally would: if it's a web application, just click on links, submit forms using normal data, etc. The Java Agent's sensors will gather information about the application's security, architecture and libraries. The results of the agent's analysis can be viewed on Contrast TeamServer.
+## How it Works
+To start analyzing an application, install the Java agent by adding it as `-javaagent` JVM parameter. After installation, continue to use the application as you normally would. (If it's a web application, just click on links, submit forms using normal data, and so forth.) The Java agent's sensors gather information about the application's security, architecture and libraries. You can see the results of the agent's analysis in the Contrast interface.

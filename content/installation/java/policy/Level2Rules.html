@@ -1,0 +1,1304 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Level2Rules</title></head><body><article class="markdown-body"><!--
+title: "Level 2 Rules"
+description: "How to add a Level 2 rule to the Java Agent and TeamServer"
+tags: "java agent installation policy rules level 2"
+-->
+
+<h2 id="about-level-2-rules"><a name="user-content-about-level-2-rules" href="#about-level-2-rules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>About Level 2 Rules</h2>
+<p>Most of the rules included with Contrast are Level 2 rules, which are driven from the agent&rsquo;s policy file. Contrast can be overridden to use a custom policy file, allowing an organization to fully control all sensor instrumentation used by Contrast. With this capability, you can:</p>
+<ul>
+<li>Add new rules</li>
+<li>Alter the requirements for existing rules</li>
+<li>Disable or delete rules</li>
+<li>Control data propagation (not recommended)</li>
+<li>Add new sources of untrusted data</li>
+</ul>
+<p>The advantages of using a Level 2 rule include:</p>
+<ul>
+<li>Complete control of Contrast</li>
+<li>Fix bugs or enhance flaw-finding capabilities without a regularly scheduled software update</li>
+</ul>
+<p>The challenges with using a Level 2 rule, instead of a Level 1 rule, include:</p>
+<ul>
+<li>Requires expertise in the Contrast policy XML language</li>
+<li>Mistakes made using Level 2 rules can hurt performance and hide true positives</li>
+<li>Requires a centralized management of a policy file outside of the Contast interface</li>
+</ul>
+<h3 id="types-of-level-2-rules"><a name="user-content-types-of-level-2-rules" href="#types-of-level-2-rules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Types of Level 2 Rules</h3>
+<p>There are two types of Level 2 Rules: <strong>Regular Expression</strong> and <strong>Data Flow</strong>. </p>
+<p><strong>Regular Expression</strong> rules use pattern matching to evaluate the input to a given trigger and report if the pattern is violated, regardless of the input source. <strong>Data Flow</strong> rules, as their name implies, are used to track untrusted data throughout the application and report when that data gets to a trigger without being properly validated or sanitized. </p>
+<h2 id="add-a-rule"><a name="user-content-add-a-rule" href="#add-a-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add a Rule</h2>
+<p>Adding a new Level 2 Rule consists of two main parts: creating a new custom policy file for the agent to follow, and creating a corresponding Groovy script to teach Contrast how to process and render the custom rule results. The following instructions start with the creation of the policy file and ends with a template of the Groovy file.</p>
+<h3 id="add-a-regular-expression-rule"><a name="user-content-add-a-regular-expression-rule" href="#add-a-regular-expression-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add a regular expression rule</h3>
+<p>This portion of the instructions walk you through adding a new regular expression rule that detects when an illegal value is passed into the Request object, thereby disabling its security. </p>
+<h4 id="step-1-create-a-new-policy-file"><a name="user-content-step-1-create-a-new-policy-file" href="#step-1-create-a-new-policy-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 1: Create a new policy file</h4>
+<p>Contrast provides a <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml.zip">skeleton</a> for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location that can be reached by any application server monitored with this rule. </p>
+<p>Each steps of the instructions proceed in the context that you named the file <em>custom_rules.xml</em>; however, you can use any file name. (The file name is an important part of Step 6).</p>
+<h4 id="step-2-add-a-new-rule-to-the-policy"><a name="user-content-step-2-add-a-new-rule-to-the-policy" href="#step-2-add-a-new-rule-to-the-policy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 2: Add a new <code>&lt;rule&gt;</code> to the policy</h4>
+<p>Regular expression rules work by pattern matching one or more parameter values passed into a specified method. By supplying a pattern to the rule, you tell Contrast to report any time the pattern <em>is</em> matched and should <em>not</em> have been (<code>bad-value-regex</code>), or is <em>not</em> matched and <em>should</em> have been (<code>good-value-regex</code>). Go <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/rule_regex.xml.zip">here</a> for a regular expression rule template.</p>
+<p>For this example, you are creating a rule that detects when security is disabled on a custom request object. In the first event, the call to <code>setSecure</code> should <em>only</em> be made with the value <code>true</code>. In the second event, the call to <code>disableSecurity</code> should <em>never</em> be made with the value <code>true</code>.</p>
+<p><a href="assets/images/lvl_2_rule_regex_xml.png" rel="lightbox" title="Regex Rule XML"><img class="thumbnail" src="assets/images/lvl_2_rule_regex_xml.png"/></a></p>
+<p>The following attributes, highlighted in the image above in red, should be customized for your rules. </p>
+<ul>
+<li><code>level</code>: The severity of the rule - low, medium, or high.</li>
+<li><code>id</code>: The unique identifier by which the rule is referenced. (This must be unique across all policies.)</li>
+<li><code>signature</code>: The fully qualified method signature on which the agent is matched in order to determine rule violation.</li>
+<li><code>good-value-regex</code>: The regular expression of acceptable (safe) values for this rule. </li>
+<li><code>bad-value-regex</code>: The regular expression of unacceptable (dangerous) values for this rule.</li>
+<li><code>index</code>: The ordinal (1 based) of the parameter to which the regular expression applies.</li>
+</ul>
+<p>The following attributes, included in the image above, should be in your rules. </p>
+<ul>
+<li><code>enabled</code>: indicates if the rule is active. It should always be true.</li>
+<li><code>inherit</code>: indicates if the children of the class specified in the <code>signature</code> field also satisfy the rule. By default, this should be true.</li>
+<li><code>disallowed-tags</code>: For regular expression-based rules, this field should always be set to &ldquo;&rdquo;. Find more details in the Dataflow rule section below. </li>
+<li><code>required-tags</code>: For regular expression-based rules, this field should always be set to &ldquo;&rdquo;. It is covered more in depth in the section below to **. </li>
+<li><code>tracked</code>: For regular expression-based rules, this field should always be set to false. The <strong>Adding A Level 2 Data Flow Rule</strong> section later in this article covers this in more detail. </li>
+</ul>
+<h4 id="step-3-create-a-new-groovy-script-for-the-rule"><a name="user-content-step-3-create-a-new-groovy-script-for-the-rule" href="#step-3-create-a-new-groovy-script-for-the-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 3: Create A New Groovy Script For The Rule</h4>
+<p>Create a Groovy script based on one of the template files provided here: <br />
+- <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template.groovy">Basic template</a> <br />
+- <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/regex_template_comments.groovy">Template with comments</a></p>
+<p>Be sure to make the <code>getId()</code> method return the id value specified in your rule. For our example, this value must be <code>https-disabled</code>. If these ID&rsquo;s do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. </p>
+<p>Once you have the Groovy script written, you can import the <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip">Maven project</a> here to compile it before attempting to start TeamServer.</p>
+<pre><code class="xml">import org.springframework.stereotype.Component;
+
+import com.contrastsecurity.interfaces.application.IApplication
+import com.contrastsecurity.interfaces.babelfish.ISnippet
+import com.contrastsecurity.interfaces.rule.TriggerSecurityRule
+import com.contrastsecurity.interfaces.rule.SecurityRuleConstants
+import com.contrastsecurity.interfaces.trace.ITrace
+
+@Component
+class SecureRule extends TriggerSecurityRule {
+    String getId() { &quot;https-disabled&quot; }
+    String getName() { &quot;Https is explicitly disabled&quot; }
+    String getDescription() { &quot;Verifies that HTTPS mode has not been disabled for the current request.&quot; }
+    String getCategory() { SecurityRuleConstants.CATEGORY_SECURECOMMUNICATIONS }
+    String getConfidence() { SecurityRuleConstants.LEVEL_HIGH }
+    String getLikelihood() { SecurityRuleConstants.LEVEL_LOW }
+    String getImpact() { SecurityRuleConstants.LEVEL_MEDIUM }
+    String getCwe() { &quot;http://cwe.mitre.org/data/definitions/614.html&quot; }
+    String getOwasp() { &quot;http://www.owasp.org/index.php/SecureFlag&quot; }
+    String[] getReportReferences() { [] }
+    String getEvidenceIntro(){ &quot;...and disabled HTTPS of the Request here:&quot; }
+    int getParameterIndex(){ 1 }
+    public String buildRisk(ITrace trace){
+        '&lt;p&gt;Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify things they should not be able to.&lt;/p&gt;'
+    }
+    public ISnippet buildRiskSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet();
+        snippet.buildSnippet('{{#paragraph}}Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify' +
+                                'things they should not be able to.{{/paragraph}}')
+        snippet
+    }
+    public String getReportIntroduction(String lang) {
+        'Disabling HTTPS allows for insecure communication and can potentially grant attacks the ability to modify things they should not be able to.'
+    }
+    public String buildRecommendation(ITrace trace, String language) {
+        '&lt;p&gt;In order to prevent this, the security of the Request object should not be compromised. &lt;br/&gt;' +
+        'Specifically, the &lt;code&gt;com.acme.ticketbook.Request.setSecure(boolean)&lt;/code&gt; method should never be set to false and&lt;br/&gt;' + 
+        'the &lt;code&gt;com.acme.ticketbook.Request.disableSecurity(boolean)&lt;/code&gt; method should never be set to true. &lt;/p&gt;'
+    }
+    public ISnippet buildRecommendationSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet()
+        snippet.buildSnippet('{{#paragraph}}In order to prevent this, the security of the Request object should not be compromised. {{{nl}}}' +
+            'Specifically, the {{#code}}com.acme.ticketbook.Request.setSecure(boolean){{/code}} method should never be set to false and {{{nl}}}' + 
+            'the {{#code}}com.acme.ticketbook.Request.disableSecurity(boolean){{/code}} method should never be set to true. {{/paragraph}}')
+        snippet
+    }
+    public String getReportRecommendation(IApplication app) {
+        'In order to prevent this, the security of the Request object should not be compromised.' +
+        'Specifically, the com.acme.ticketbook.Request.setSecure(boolean) method should never be set to false and' + 
+        'the com.acme.ticketbook.Request.disableSecurity(boolean) method should never be set to true.'
+    }
+}
+</code></pre>
+
+<p>As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf">here</a>.</p>
+<h4 id="step-4-teach-contrast-about-the-rule"><a name="user-content-step-4-teach-contrast-about-the-rule" href="#step-4-teach-contrast-about-the-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 4: Teach Contrast about the rule</h4>
+<p>There are two steps to teaching the TeamServer about your new rule:</p>
+<p>First, on the TeamServer, you need to place the Groovy script built in Step #5 into the directory <em>$contrast.data.dir\data\rulepack</em>. Typically, the <em>contrast.data.dir</em> can be found at <em>C:/Program Files/Contrast</em> on Windows and <em>opt/Contrast</em> on Linux. If this is not the case, your administrator may have specified a custom directory for installation. Please contact them to determine where the TeamServer Contrast directory is located.</p>
+<p>Next, you need to update the configuration for TeamServer to know about the existence of this rule file. In the rulepack directory you just put your Groovy script, there should be a <em>contrast-rules.external.xml</em> file. Open this file and add an entry to point to your new Groovy script. </p>
+<p>Your <code>script-source</code> will be the same as the one shown below, with the exception of the file name, and the &lsquo;id&rsquo; MUST be the id of your rule followed by the String <code>-rule</code>.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; ...&gt;
+    ...
+    &lt;lang:groovy
+            id=&quot;https-disabled-rule&quot;
+            refresh-check-delay=&quot;30000&quot;
+            script-source=&quot;classpath:rulepack/secure.groovy&quot;/&gt;                
+&lt;/beans&gt;
+</code></pre>
+
+<h4 id="step-5-restart-contrast"><a name="user-content-step-5-restart-contrast" href="#step-5-restart-contrast" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 5: Restart Contrast</h4>
+<p>An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found <a href="installation-setupinstall.html#restart">here</a>.</p>
+<h4 id="step-6-configure-and-restart-the-application-server"><a name="user-content-step-6-configure-and-restart-the-application-server" href="#step-6-configure-and-restart-the-application-server" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 6: Configure and restart the application server</h4>
+<p>In order for the agent to use this custom policy, add the <code>-Dcontrast.policy.overrides</code> flag to the run configuration where the <code>-javaagent</code> flag is set. You will need to set the overrides value to the path to the new policy file (e.g., <em>custom_rules.xml</em>).</p>
+<blockquote>
+<p><strong>Note:</strong> You can also use HTTP URLs instead of file paths with the <code>-Dcontrast.policy</code> property</p>
+</blockquote>
+<p>Once the configuration is specified, restart your Application Server and test to verify your rule is functioning as expected.</p>
+<h3 id="add-a-level-2-data-flow-rule"><a name="user-content-add-a-level-2-data-flow-rule" href="#add-a-level-2-data-flow-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add a Level 2 Data Flow Rule</h3>
+<p>This portion of the tutorial will walk through adding a new Data Flow Rule that detects when unmasked credit cards are leaked to log files, and allow <br />
+us to create an API that marks credit card data as &ldquo;masked&rdquo;, in order to prevent false positives. Data Flow starts at a <code>source</code> and moves through <code>propagator</code> methods and <code>tag</code> methods before ultimately reaching a rule <code>event</code>. </p>
+<p>Out of the box, Contrast knows about most common <code>source</code> and <code>propagator</code> methods. That being said, it may be necessary to add a new <code>source</code> if a piece of your custom code is the beginning of a vulnerability you wish to report. </p>
+<p>Once the <code>source</code> is created, you will need to teach the Agent about methods in your code that sanitize or validate data and what that method does. To do this, you&rsquo;ll add a new <code>tag-list</code>. The list will apply a tag to any data that travels through a method in the list. </p>
+<p>Finally, for a vulnerability to be reported, the tracked data has to violate a rule. The rule consists of a list of <code>event</code> entries, a method signature, and list of required or disallowed tags. </p>
+<p>The format of each is explained in greater detail below. </p>
+<h4 id="step-1-create-a-new-policy-file_1"><a name="user-content-step-1-create-a-new-policy-file_1" href="#step-1-create-a-new-policy-file_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 1: Create a new policy file</h4>
+<p>We provide a <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/custom_rules.xml">skeleton</a> for the definition of the new code patterns you want Contrast to analyze. The file needs to be saved in a centralized location to which any Application Server you want monitored with this rule can reach. For the duration of this walkthrough, we will assume that you have named the file <em>custom_rules.xml</em>, although any file name can be used (The file name becomes important in Step #8 below).</p>
+<blockquote>
+<p><strong>Note:</strong> A single policy file can either have many rules in it, or just one at a time. It&rsquo;s up to you how you want to organize your custom rules. So if you already have a policy file for a custom Regular Expression rule or an existing DataFlow rule, you can add new Data Flow rules to that policy file, rather than creating a new one.</p>
+</blockquote>
+<h4 id="step-2-add-a-new-source-to-the-policy"><a name="user-content-step-2-add-a-new-source-to-the-policy" href="#step-2-add-a-new-source-to-the-policy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 2: Add a new <code>&lt;source&gt;</code> to the policy</h4>
+<p>This tells Contrast to tag and monitor objects coming out of this method. In this example, we create a source tag <code>ccn</code> on the target <code>P1</code> (Parameter #1) of the method <code>com.acme.ticketbook.Person.setCreditCard(java.lang.String)</code>. </p>
+<p>This means that the first parameter of this method will be tagged and tracked after this method is called for the duration of the data flow analysis. </p>
+<p>Note that the method must be enabled for source creation to occur and the &lsquo;id&rsquo; field must be unique. The specified tag for a source should indicate the concern. In this case, we are concerned that the parameter returned from this method might contain a credit card. </p>
+<p>In this example, if multiple sources could return data with credit card numbers in them, we could create multiple sources, each with unique &lsquo;id&rsquo; and &lsquo;name&rsquo; attributes, that all designate the same tags, in this case <code>ccn</code>.</p>
+<p><a href="assets/images/lvl_2_rule_dataflow_source_xml.png" rel="lightbox" title="DataFlow Rule - Source - XML"><img class="thumbnail" src="assets/images/lvl_2_rule_dataflow_source_xml.png"/></a></p>
+<p>The following attributes, highlighted in red above, should be customized for your rules. <br />
+- <code>id</code>: The unique identifier by which the source will be referenced (note that this must be unique across all policies)<br />
+- <code>name</code>: A human-readable name for this source<br />
+- <code>signature</code>: The fully qualified method signature on which the Agent will match in order to determine source event<br />
+- <code>tags</code>: A comma-separated list of values that the Agent will apply to the target of the source. Essentially, a marker associated with the object that tells what the method does.<br />
+- <code>target</code>: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied</p>
+<p>The following attributes, present above, should be in your rules. <br />
+- <code>enabled</code>: Indicates if the source is active. It should always be true.</p>
+<h4 id="step-3-add-a-new-tag-list-to-the-policy"><a name="user-content-step-3-add-a-new-tag-list-to-the-policy" href="#step-3-add-a-new-tag-list-to-the-policy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 3: Add a new <code>&lt;tag-list&gt;</code> to the policy</h4>
+<p>Tags are an integral part of the Contrast policy language. In this rule, they provide a means of marking credit cards as safe for logging. One can use tags to determine if an object is used in an unsafe manner and needs to be reported, or if sufficient controls were exercised to mitigate the risk implied by the source tag. In this example, we create a new tag <code>ccn-masked</code> to indicate that a credit card number has been sufficiently obscured by the methods in the list. In this case, the return value (target=&rdquo;R&rdquo;) of  <code>com.acme.ticketbook.Person.mask(java.lang.String)</code>. Again, it is worth noting that the method must be enabled for tagging to occur and both the &lsquo;id&rsquo; and &lsquo;name&rsquo; fields of the tag-list must be unique.</p>
+<p><a href="assets/images/lvl_2_rule_dataflow_tag_xml.png" rel="lightbox" title="DataFlow Rule - TagList - XML"><img class="thumbnail" src="assets/images/lvl_2_rule_dataflow_tag_xml.png"/></a></p>
+<p>The following fields, highlighted in red above, should be customized for your rules. <br />
+- <code>id</code>: The unique identifier by which the tag list will be referenced (note that this must be unique across all policies)<br />
+- <code>name</code>: A human-readable name for this tag list<br />
+- <code>tags</code>: A comma-separated list of values that the Agent will apply to the target of the tag list. Essentially, a marker associated with the object that tells what the method does.<br />
+- <code>signature</code>: The fully qualified method signature on which the Agent will match in order to determine tag application<br />
+- <code>target</code>: The object(O), return(R), or parameter(P) with ordinal (1 based) to which the tag should be applied</p>
+<p>The following fields, present above, should be in your rules. <br />
+- <code>enabled</code>: Indicates if the tag list is active. It should always be true.</p>
+<h4 id="step-4-add-a-new-rule-to-the-policy"><a name="user-content-step-4-add-a-new-rule-to-the-policy" href="#step-4-add-a-new-rule-to-the-policy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 4: Add a new <code>&lt;rule&gt;</code> to the policy</h4>
+<p>Now that we have data flow figured out, we need to provide a list of events that can trigger the decision making process as to whether or not a trace needs to be reported. The following is an example of an event that would trigger the credit-card-exposed rule. In the example, we will create a trigger event for <code>org.apache.log4j.Category.debug(java.lang.Object)</code> that will fire if the first parameter in the method has the tag <code>ccn</code> from the source in Step #2 and does <strong>not</strong> have the tag <code>ccn-masked</code> from the tag added in Step #3. It is again worth noting that the &lsquo;id&rsquo; of the rule must be unique and that &lsquo;enabled&rsquo; must be set to <code>true</code> in order for the rule to be active. Additionally, the id MUST match the string in the <code>getId()</code> method of the corresponding Groovy script on TeamServer (discussed later). </p>
+<p><a href="assets/images/lvl_2_rule_dataflow_rule_xml.png" rel="lightbox" title="DataFlow Rule - Rule - XML"><img class="thumbnail" src="assets/images/lvl_2_rule_dataflow_rule_xml.png"/></a></p>
+<p>The following fields, highlighted in red above, should be customized for your rules. <br />
+- <code>level</code>: The severity of the rule - low, medium, or high<br />
+- <code>id</code>: The unique identifier by which the rule will be referenced (note that this must be unique across all policies)<br />
+- <code>signature</code>: The fully qualified method signature on which the Agent will match in order to determine rule violation<br />
+- <code>disallowed-tags</code>: A comma-separated list of tags whose presence indicates the rule is not violated. If the target parameter specified by the index has any of these tags, a vulnerability will not be reported. <br />
+- <code>index</code>: The ordinal (1 based) of the parameter to which the tag check applies<br />
+- <code>required-tags</code>: A comma-separated list of tags whose presence indicates the rule is violated. If the target parameter specified by the index does not have any of these tags, a vulnerability will not be reported. </p>
+<p>The following fields, present above, should be in your rules. <br />
+- <code>enabled</code>: Indicates if the rule is active. It should always be true.<br />
+- <code>inherit</code>: Indicates if the children of the class specified in the <code>signature</code> field also satisfy the rule. By default, this should be true.<br />
+- <code>tracked</code>: The &lsquo;tracked&rsquo; field is omitted in this section of the rule because the check is implicit at this point. &lsquo;Tracked&rsquo; indicates that the Agent has taken action on an object and therefore is aware of its status. Having either a required or disallowed tag makes an object &lsquo;tracked&rsquo;.</p>
+<h4 id="step-5-create-a-new-groovy-script-for-the-rule"><a name="user-content-step-5-create-a-new-groovy-script-for-the-rule" href="#step-5-create-a-new-groovy-script-for-the-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 5: Create a new groovy script for the rule</h4>
+<p>Create a Groovy script based on one of the template files provided here: <br />
+- <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template.groovy">Basic template</a> <br />
+- <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/dataflow_template_comments.groovy">Template with comments</a></p>
+<p>Be sure to make the <code>getId()</code> method return the id value specified in your rule. For our example, this value must be <code>credit-card-exposed</code>. If these ID&rsquo;s do not match, the Agent and TeamServer will not be able to coordinate properly and no vulnerabilities will be recorded. </p>
+<p>Once you have the Groovy script written, you can import the <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/contrast_rule_writer.zip">Maven project</a> here to compile it before attempting to start TeamServer.</p>
+<pre><code class="xml">import org.springframework.stereotype.Component;
+
+import com.contrastsecurity.interfaces.application.IApplication
+import com.contrastsecurity.interfaces.babelfish.ISnippet
+import com.contrastsecurity.interfaces.rule.DataFlowSecurityRule
+import com.contrastsecurity.interfaces.rule.SecurityRuleConstants
+import com.contrastsecurity.interfaces.trace.ITrace
+
+
+@Component
+class CNNRule extends DataFlowSecurityRule {
+    String getId() { &quot;credit-card-exposed&quot; }
+    String getName() { &quot;Credit card number exposed&quot; }
+    String getDescription() { &quot;Verifies that no credit card numbers are exposed in the logs.&quot; }
+    String getCategory() { SecurityRuleConstants.CATEGORY_CONFIGURATION }
+    String getConfidence() { SecurityRuleConstants.LEVEL_HIGH }
+    String getLikelihood() { SecurityRuleConstants.LEVEL_LOW }
+    String getImpact() { SecurityRuleConstants.LEVEL_MEDIUM }
+    String getCwe() { &quot;https://cwe.mitre.org/data/definitions/532.html&quot; }
+    String getOwasp() { &quot;https://www.owasp.org/index.php/Handling_E-Commerce_Payments#Displaying_portions_of_the_credit_card&quot; }
+    String[] getReportReferences() { [] }
+    String getEvidenceIntro(){ &quot;...and ended up in this log statement:&quot; }
+    int getParameterIndex(){ 1 }
+    public String buildRisk(ITrace trace){
+        '&lt;p&gt;The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data.&lt;/p&gt;'
+    }
+    public ISnippet buildRiskSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet()
+        snippet.buildSnippet('{{#paragraph}}The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data. {{/paragraph}}')
+        snippet
+    }
+    public String getReportIntroduction(String lang) {
+        'The log statement here is placing a plain text credit card number into our log files. This violates several information privacy guidelines and poses a risk for the exposure of customer data.'
+    }
+    public String buildRecommendation(ITrace trace, String language) {
+        '&lt;p&gt;In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. &lt;br/&gt;' +
+        'Specifically, the &lt;code&gt;com.acme.ticketbook.Person.mask(java.lang.String)&lt;/code&gt; method needs to be invoked. For instance, &lt;br/&gt;' + 
+        '&lt;pre class=&quot;brush: java&quot;&gt;// LogCCN.java &lt;br/&gt;' +
+        'String MY_CREDIT_CARD = &quot;1234-1234-1234-1234&quot;; &lt;br/&gt;' +
+        'Person.setCreditCard(MY_CREDIT_CARD);&lt;br/&gt;' +
+        'String maskedCardNumber = Person.mask(MY_CREDIT_CARD);&lt;br/&gt;' +
+        'Log.debug(&quot;Hid the credit ard number&quot; + maskedCardNumber);&lt;br/&gt;' +
+        '&lt;/pre&gt;&lt;br/&gt;' +
+        'would prevent the rule from firing as, by our policy definition, this code path is not vulnerable.&lt;/p&gt;';
+    }
+    public ISnippet buildRecommendationSnippet(ITrace trace){
+        ISnippet snippet = ruleHelper.getNewSnippet();
+        snippet.buildSnippet('{{#paragraph}}In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. {{{nl}}}' +
+        'Specifically, the {{#code}}com.acme.ticketbook.Person.mask(java.lang.String){{/code}} method needs to be invoked. For instance,' + 
+        '{{#javaBlock}}// LogCCN.java {{{nl}}}' +
+        'String MY_CREDIT_CARD = &quot;1234-1234-1234-1234&quot;; {{{nl}}}' +
+        'Person.setCreditCard(MY_CREDIT_CARD);{{{nl}}}' +
+        'String maskedCardNumber = Person.mask(MY_CREDIT_CARD);{{{nl}}}' +
+        'Log.debug(&quot;Hid the credit ard number&quot; + maskedCardNumber);{{{nl}}}' +
+        '{{/javaBlock}}{{{nl}}}' +
+        'would prevent the rule from firing as, by our policy definition, this code path is not vulnerable.{{/paragraph}}')
+        snippet
+    }
+    public String getReportRecommendation(IApplication app) {
+        'In order to prevent this, the credit card number should be obfuscated prior to entering the log statement. Specifically, you need to call '+
+        'com.acme.ticketbook.Person.mask(java.lang.String) and log the result of that call rather than directly logging com.acme.ticketbook.Person.getCreditCard().'
+    }
+}
+</code></pre>
+
+<p>As part of the script generation, you will be asked to create two Mustache Strings. The most common tags are shown in the template itself, but a list of additional templates can be found <a href="https://docs.contrastsecurity.com/assets/attachments/level_2_rules/CONTRAST-HTML-TO-MUSTACHE.pdf">here</a>.</p>
+<h4 id="step-6-teach-contrast-about-the-rule"><a name="user-content-step-6-teach-contrast-about-the-rule" href="#step-6-teach-contrast-about-the-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 6: Teach Contrast about the rule</h4>
+<p>There are two steps to teaching the TeamServer about your new rule. </p>
+<p>First, you need to copy the Groovy script created in Step #5 to the directory <em>$contrast.data.dir\data\rulepack</em>. Typically, the <em>contrast.data.dir</em> can be found at <em>C:/Program Files/Contrast</em> on Windows and <em>opt/Contrast</em> on Linux. If this is not the case, your administrator may have specified a custom directory for installation of TeamServer. Please contact them to determine where the TeamServer Contrast directory is located.</p>
+<p>Next, you need to update the configuration of TeamServer to know about the existence of this rule file. In the rulepack directory to which you just copied your Groovy script, there should be a <em>contrast-rules.external.xml</em> file. Open this file and add an entry to point to your new Groovy script. </p>
+<p>Your <code>script-source</code> will be the same as the one shown below, with the exception of the file name and the &lsquo;id&rsquo; MUST be the id of your rule followed by the String <code>-rule</code>.</p>
+<pre><code>xml
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; ...&gt;
+    ...
+    &lt;lang:groovy
+            id=&quot;credit-card-exposed-rule&quot;
+            refresh-check-delay=&quot;30000&quot;
+            script-source=&quot;classpath:rulepack/cnn.groovy&quot;/&gt;                
+&lt;/beans&gt;
+</code></pre>
+
+<h4 id="step-7-restart-contrast"><a name="user-content-step-7-restart-contrast" href="#step-7-restart-contrast" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 7: Restart Contrast</h4>
+<p>An administrator is required to restart the TeamServer application. Detailed instructions for this process can be found <a href="installation-setupinstall.html#restart">here</a>.</p>
+<h4 id="step-8-configure-and-restart-the-application-server"><a name="user-content-step-8-configure-and-restart-the-application-server" href="#step-8-configure-and-restart-the-application-server" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 8: Configure and restart the application server</h4>
+<p>In order for the agent to use this custom policy, add the <code>-Dcontrast.policy.overrides</code> flag to the run configuration where the <code>-javaagent</code> flag is set. You will need to set the overrides value to the path to the new policy file (e.g., <em>custom_rules.xml</em>).</p>
+<blockquote>
+<p><strong>Note:</strong> You can also use HTTP URLs instead of file paths with the <code>-Dcontrast.policy</code> property.</p>
+</blockquote>
+<p>Once the configuration is specified, restart your Application Server and test to verify your rule is functioning as expected.</p></article></body></html>

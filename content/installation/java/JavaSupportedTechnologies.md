@@ -4,8 +4,6 @@ description: "List of supported technologies"
 tags: "Java agent installation containers JDKs frameworks libraries support troubleshooting"
 -->
 
-## Java
-
 
 Supported JDKS | Supported Containers | Supported Application Frameworks
 :-------------- |:-------------------- |:--------------------------------
@@ -33,6 +31,7 @@ JRockit 1.5, 1.6 (update 95+ or R28.3.6+) |Jetty 6, 7, 8, 9 | Struts, Struts 2
                  |                 | Apache POI, fileupload, HttpComponents
                  |                 | OWASP ESAPI, AntiSamy, Coverity 
 
-We only test WebSphere on Windows and Linux, and can only offer limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
+
+Contrast tests WebSphere on Windows and Linux, and offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
 
 
