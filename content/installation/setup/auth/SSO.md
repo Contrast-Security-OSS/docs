@@ -23,7 +23,7 @@ For Enterprise-On-Premises (EOP) customers, the SuperAdmin configures SSO at the
 Contrast doesn't provide keys for SAML authentication. If you enable SSO without providing private keys, you're only able to perform IdP-initiated logins. You need to generate your own self-signed key using the Java Keytool:
 
 ```
-keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
+keytool -genkeypair -alias some-alias -keypass changeit -keyalg RSA -keystore samlKeystore.jks
 ```
 
 Use the [Encrypted Editor](installation-setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
@@ -48,7 +48,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 <a href="assets/images/SSOWarning.png" rel="lightbox" title="Warning Dialog"><img class="thumbnail" src="assets/images/SSOWarning.png"/></a>
 
 * In Step 1 of the setup wizard, select **Single Sign-On**.
-* In Step 2, use the provided information to set up Contrast with your IdP.  
+* In Step 2, use the provided information to set up Contrast with your IdP. (You must also provide the Entity ID and Metadata URL in your IdP configuration.)
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
 * Test the configuration by clicking the **Test** button. If an error occurs, a Contrast provides a debug log for troubleshooting. This test only validates the metadata and Contrast's ability to connect to the IdP.  
 * Once the test is successfull, click **Finish**.
