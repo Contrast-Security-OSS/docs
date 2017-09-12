@@ -4,7 +4,7 @@ description: "An LDAP Directory is a collection of Users and Group. LDAP (Lightw
 tags: "installation setup LDAP directory authentication configuration member"
 -->
 
-##About Contrast and LDAP
+## About Contrast and LDAP
 
 Contrast provides integration with many types of Lightweight Directory Access Protocol (LDAP) servers. LDAP is an Internet protocol which web applications can use to look up users or groups listed on an LDAP directory server. Supported LDAP server types include:
 
@@ -92,9 +92,9 @@ Several different groups options are available:
 
 >**Note:** The difference between Static and Dynamic groups is the way group membership is managed. In a Static group, the group tracks its members through an attribute on the object, such as *uniqueMember*. In a Dynamic group, the user object is responsible for tracking its own membership, and groups are added dynamically to the user object when the user becomes a member of a group.
 
-### Authorize Contrast users
+### Authorize users
 
-Once you enter the configuration values, select the groups that the application will use to access the Contrast interface. A user can't belong to both the User and SuperAdmin groups.
+Once you enter the configuration values, select the groups that the application will use to access the Contrast UI. **A user can't belong to both the User and Admin groups. If you add them to both groups in your LDAP instance, Contrast won't be able to find them during configuration.**
 
 * **Contrast User Group:** This group allows users to be added to an organization and log in to the standard interface. This group is appropriate for most users. 
 
