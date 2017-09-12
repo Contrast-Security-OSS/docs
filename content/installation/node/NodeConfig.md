@@ -38,7 +38,9 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 --httpProxy &lt;url&gt;          | HTTP proxy url for the agent
 --appVersion &lt;number&gt;      | Version of the application being instrumented, as you would like it reported to TeamServer (if different from 'version' field in the application's *package.json*
 --skipAutoUpdate                 | Skip the automatic agent update process performed on agent startup
---serverEnvironment              | Environment in which the server is running (QA, Production or Development)
+--serverEnvironment              | Specify the environment in which the server is running (QA, Production or Development)
+--appGroup groupName             | Add an application to an access group
+
 
 ## Logging
 To prevent crowding *stdout*, INFO level statements are not logged to the console unless the environment variable ```DEBUG``` is set to include the Contrast namespace, as follows:

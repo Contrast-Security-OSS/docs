@@ -4,7 +4,7 @@ description: "TeamServer can be configured to utilize Single Sign On Authenticat
 tags: "installation setup SSO Single Sign-On configuration authentication"
 -->
 
-## Get Started
+## About Contrast and SSO
 
 Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. You can configure Contrast to use this service with a SAML 2.0 supported provider. 
 
@@ -14,22 +14,16 @@ Authentication happens through an **identity provider (IdP)**. You may use your 
 
 To get started, set up an IdP (if you don't use one already), and then provide your metadata to connect to Contrast via an XML file or a **Metadata URL**.
 
-
----
-
 ## EOP
 
-For Enterprise-On-Premises (EOP) customers, SSO is configured at the System level by the SuperAdmin.
+For Enterprise-On-Premises (EOP) customers, the SuperAdmin configures SSO at the System level. If a System Admin decides to set up SSO, it's important to note that Contrast doesn't support user provisioning; therefore, users must have an existing account in Contrast before authenticating with SSO. Also, if users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. 
 
-If a System Admin decides to set up SSO, it's important to note that Contrast doesn't support user provisioning; therefore, users must have an existing account in Contrast before authenticating with SSO. Also, if users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. 
+### Get started
 
-### Before you start
-Contrast doesn't provide keys for SAML authentication. If you enable SSO without providing private keys, you're only able to perform IdP-initiated logins.
-
-You need to generate your own self-signed key using the Java Keytool:
+Contrast doesn't provide keys for SAML authentication. If you enable SSO without providing private keys, you're only able to perform IdP-initiated logins. You need to generate your own self-signed key using the Java Keytool:
 
 ```
-keytool -genkeypair -alias some-alias -keypass changeit -keystore samlKeystore.jks
+keytool -genkeypair -alias some-alias -keypass changeit -keyalg RSA -keystore samlKeystore.jks
 ```
 
 Use the [Encrypted Editor](installation-setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
@@ -43,9 +37,9 @@ Use the [Encrypted Editor](installation-setupconfig.html#encrypt) to modify *sam
  
 Once you make the changes, restart Contrast so that it picks up the new keystore. 
 
-### Set up 
+### Configuration 
 
-* From the **Authentication** tab in System Settings, select **Change Authentication Method**.
+* From the **Authentication** tab in **System Settings**, select **Change Authentication Method**.
 
 <a href="assets/images/SSOChangeAuth.png" rel="lightbox" title="Changing Authentication Method"><img class="thumbnail" src="assets/images/SSOChangeAuth.png"/></a>
 
@@ -54,7 +48,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 <a href="assets/images/SSOWarning.png" rel="lightbox" title="Warning Dialog"><img class="thumbnail" src="assets/images/SSOWarning.png"/></a>
 
 * In Step 1 of the setup wizard, select **Single Sign-On**.
-* In Step 2, use the provided information to set up Contrast with your IdP.  
+* In Step 2, use the provided information to set up Contrast with your IdP. (You must also provide the Entity ID and Metadata URL in your IdP configuration.)
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
 * Test the configuration by clicking the **Test** button. If an error occurs, a Contrast provides a debug log for troubleshooting. This test only validates the metadata and Contrast's ability to connect to the IdP.  
 * Once the test is successfull, click **Finish**.
@@ -66,23 +60,22 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 
 >**Note:** You can edit your configuration later within the Authentication tab; however, you must retest and restart Contrast to apply the changes.
 
-####Public and secret nodes
+#### Public and secret nodes
 
-If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during installation, you're provided with two sets of metadata: one for the public node and one for the secret node. You need to set up the configuration for both in the UI. 
+If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during installation, you're provided with two sets of metadata: one for the public node and one for the secret node. You need to set up the configuration for both in the Contrast interface. 
 
 <a href="assets/images/Configure-SAML-identity-provider.png" rel="lightbox" title="Configure your SAML Identity Provider"><img class="thumbnail" src="assets/images/Configure-SAML-identity-provider.png"/></a>
 
----
 
 ## SaaS 
 
-For SaaS customers, the Contrast System Administrator configures authentication; however, Organization Administrators may be granted the ability to override these settings. In this case, the override only allows an organization to switch to using SSO.
+For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings. In this case, the override only allows an organization to switch to using SSO.
 
-If an Org Admin decides to set up SSO, it's important to note that Contrast doesn't support user provisioning; therefore, all users must have an existing account in Contrast before authenticating with SSO. Also, if users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated.
+If an OrgAdmin decides to set up SSO, it's important to note that Contrast doesn't support user provisioning; therefore, all users must have an existing account in Contrast before authenticating with SSO. Also, if users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated.
 
-### Set up 
+### Configuration
 
-* From the ** Sign-On** tab in Org Settings, click **Get Started**.
+* From the ** Sign-On** tab in **Organization Settings**, click **Get Started**.
 
 <a href="assets/images/SSOOrgSettings.png" rel="lightbox" title="Single Sign-On Onboarding - Org Settings"><img class="thumbnail" src="assets/images/SSOOrgSettings.png"/></a>
 
@@ -101,16 +94,13 @@ To return the organization back to the default configuration, select **Revert to
 
 ## Use SSO
 
-From the user perspective, SSO is simple and only makes a slight change to the login process.
-
-If SSO is configured, a checkbox appears on the Contrast login page. Checking it disables the password input field because only an email address is required. 
+For a user, SSO makes only a slight change to the login process. If SSO is configured, a checkbox appears on the Contrast login page. Checking it disables the password input field; only an email address is required. 
 
 <a href="assets/images/SSOLogin.png" rel="lightbox" title="SSO Login"><img class="thumbnail" src="assets/images/SSOLogin.png"/></a>
 
-Next, Contrast verifies your email with the configured IdP and directs you to the IdP login page. Once you submit your full SSO credentials and are successfully authenticated, you're logged in and directed back to the Contrast dashboard. If you try to sign in using SSO but don't have an account in Contrast, an error message appears on the login screen, informing you that your administrator must create your account.
+Contrast then verifies your email with the configured IdP, and directs you to the IdP login page. Once you submit your full SSO credentials and are successfully authenticated, you're logged in and directed back to the Contrast dashboard. If you try to sign in using SSO but don't have an account in Contrast, an error message informing you that your administrator must create your account appears on the login screen.
 
->**Note:** If Two-Step Verification is active for a user, that login process occurs *after* successful SSO authentication. See the artcle on [Two-Step Verification](admin-systemsettings.html#twostep) for more information. 
-
+>**Note:** If Two-Step Verification is active for a user, that login process occurs **after** successful SSO authentication. See the artcle on [Two-Step Verification](admin-systemsettings.html#twostep) for more information. 
 
 For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting-auth.html#troubleshoot-sso). 
 

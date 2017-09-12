@@ -5,9 +5,11 @@ tags: "java agent installation rules customization policy introduction"
 -->
 
 ## The Contrast Policy
-Policies in Contrast tell the Agent how to behave. They indicate which methods the Agent needs to instrument and how to do so. Within this policy are sections that govern the sources, tag-lists, properties, and rules that the Agent builds in order to monitor an application. 
 
-The policies adhere to the following skeleton:
+Policies in Contrast tell the agent how to behave. They indicate which methods the agent needs to instrument and how to do it. Within each policy are sections that govern the sources, tag lists, properties and rules that the agent builds to monitor an application. 
+
+All Contrast policies adhere to the following skeleton:
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <policy>
@@ -32,33 +34,52 @@ The policies adhere to the following skeleton:
  
 <br> 
  
-## The Contrast Policy - Alterations
-The Contrast Agent provides a few ways in which users can change the loaded policy used by the Agent. 
+## Alterations to the Policy
 
-### Using `contrast.policy`
-The first method, using the ```contrast.policy``` system property, is the primary way in which users should alter the internal policy. It allows the end-user to apply custom rules in addition to the default Contrast rules without having to maintain & modify a copy of these default rules. This definition lets the user specify a list of files containing new pieces of polices to add to or overwrite the internal policy.
+There are a few ways that you can change the loaded policy used by the Contrast agent.
+
+### Use `contrast.policy`
+
+The primary way to alter the internal policy is using the `contrast.policy` system property. This method allows the end-user to apply custom rules in addition to the default Contrast rules without the task of maintaining and modifying a copy of the default rules. It also lets you specify a list of files containing new pieces of polices to add to or overwrite the internal policy.
 
 Example syntax:
+
 ```
 java -jar -javaagent:"/path/to/contrast.jar" -Dcontrast.policy="/path/to/file1;/path/to/file2;...;/path/to/fileN" ...
 ```
-This definition can also be added to the ```JAVA_OPTS``` export:
+
+You can also add this definition to the `JAVA_OPTS` export:
+
 ```
 export CONTRAST_AGENT_JAR="/path/to/contrast.jar"
 export CONTRAST_POLICY_OVERRIDES="/path/to/file1;/path/to/file2;...;/path/to/fileN"
 export JAVA_OPTS="$JAVA_OPTS -javaagent:$CONTRAST_AGENT_JAR –Dcontrast.policy=$CONTRAST_POLICY_OVERRIDES ..."
 ```
-The changes are applied in the order specified when the define is set, i.e.
+
+The changes are applied in the order specified when the definition is set: 
+
 ```
 -Dcontrast.policy="/path/to/file1;/path/to/file2;...;/path/to/fileN"
 ```
-indicates 'file1' will be applied first, then 'file2', all the way to 'fileN'. Note that this means 'file2' will overwrite 'file1', etc. 
-If a custom [rule, source method, or tag-list] element shares the same 'id' attribute as an existing element, then the custom element will replace the existing element.
 
-For example: if the default rules contains a source method with ```id="source1"``` and an overriding file contains a source method also with ```id="source1"```, then the Contrast Agent, at runtime, will use the overriding file's source method.
+The example above indicates that *file1* is applied first, then *file2*, all the way to *fileN*. (This means that *file2* overwrites *file1* and so forth.) 
 
-### Using `contrast.policy.overrides`
-The second method, using the ```contrast.policy.overrides``` system property works almost exactly the same as the ```contrast.policy``` property. The main difference in this approach is that anything in the ```contrast.policy.overrides``` field will take precedence over anything in ```contrast.policy```, similar to how ```contrast.policy``` takes precedence over anything in the internal policy files.
+#### Custom elements
 
-### Using `contrast.policy.standalone`
-The final method, using the ```contrast.policy.standalone``` system property is the most aggressive of the three options. Unlike the previous two, the presence of this property indicates to the system that the external policy is the only policy that is to be used. As a result, no internal Contrast policies will be loaded. This policy should only be used in the case where one desires solely to use custom sources and rules without any underlying propagation from Contrast methods. It should be noted that without this propagation, most likely the detection process will fail; therefore, it is unlikely that this approach should be employed without strict supervision from the Contrast team. 
+If a custom element - a rule, source method or tag list - shares the same `id` attribute as an existing element, the custom element  replaces the existing element. 
+
+> **Example:** If the default rules contains a source method with `id="source1"` and an overriding file contains a source method also with `id="source1"`, then the Contrast agent uses the overriding file's source method at runtime.
+
+### Use `contrast.policy.overrides`
+
+Using the ```contrast.policy.overrides``` system property to alter the policy follows a the same principles as the primary method. The main difference with this approach is that anything in the `contrast.policy.overrides` field takes precedence over anything in `contrast.policy`. (This is similar to the way that `contrast.policy` takes precedence over anything in the internal policy files.)
+
+### Use `contrast.policy.standalone`
+
+Using the ```contrast.policy.standalone``` system property is the most aggressive of the three options. Unlike the previous two, the presence of this property indicates to the system that the external policy is the only policy to use. As a result, no internal Contrast policies will be loaded. Only use this policy when you want to exclusively use custom sources and rules without any underlying propagation from Contrast methods. 
+
+> **Note:** Without propagation from Contrast methods, the detection process will probably fail; therefore, you should only employ this approach with strict supervision from the Contrast team. 
+
+
+
+

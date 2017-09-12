@@ -17,15 +17,17 @@ The Contrast.NET Agent supports analysis of web applications built on the follow
 * Azure Mobile Services
  
 ## .NET Version
-The server must have .NET Framework 4.5.1 installed; however, this requirement does not extend to applications that need to be analyzed. The .NET Contrast Agent can analyze web applications that run on CLR 4 (.NET 4.0+). 
 
-## Supported CLRs
-* 4.0 (.NET 4.0+)
+The server must have .NET Framework 4.5.1 installed; however, this requirement doesn't extend to applications that need to be analyzed. The .NET agent can analyze web applications that run on supported CLRs: CLR 2 (.NET 3.5) and CLR 4 (.NET 4.0+). 
 
 ## Architecture
-The .NET Contrast Agent can be installed on both 32-bit and 64-bit architectures and can be used to analyze both 32-bit and 64-bit web applications. 
+
+You can install the .NET agent on both 32-bit and 64-bit architectures, and use them to analyze both 32-bit and 64-bit web applications. 
 
 ## Web Application Frameworks
+
+While Contrast has built explicit tests against only the frameworks listed below, there's a good chance that Contrast can still analyze your application if its framework simply wraps the typical ASP.NET classes (e.g., `System.Web.HttpRequest`).
+
 * ASP.NET MVC 2-5
 * ASP.NET Web Forms
 * ASP.NET Web Pages
@@ -33,9 +35,7 @@ The .NET Contrast Agent can be installed on both 32-bit and 64-bit architectures
 * IIS-Hosted Web API
 * IIS-Hosted WCF Services
 
-Don't see your application's framework here? There's a good chance that Contrast can still analyze your application if its framework simply wraps the typical ASP.NET classes (e.g. ```System.Web.HttpRequest```). We just haven't built explicit tests against every framework yet. 
-
 >**Note:** 
-* The **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. The Profiler API is an interface based on a **Component Object Model (COM)** and isn't supported on Linux.
+* The **Mono** runtime isn't supported due to differences between the internals of the Microsoft CLR and Mono runtime.  
 * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime. 
-* All relevant data flow methods are instrumented by and analyzed by Contrast for applications running on CLR 4.0.
+* Contrast doesn't support analysis of .NET Core applications at this time because .NET Core applications run on a different runtime (CoreCLR.)

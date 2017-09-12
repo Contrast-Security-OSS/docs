@@ -60,18 +60,17 @@ Contrast recommendeds that you create a dedicated read-only user specifically fo
 After configuring your connection details and bind credentials, ensure connectivity to the server by using the **Test Connection** button located below the form. Once connectivity is verified, click **Next** to proceed to **Groups**. 
 
 ## Configure Groups
-It's important to note that Contrast doesn't perform Data Access Control using the integrated Active Directory Servers. In other words, roles and access to data within the application are handled by the application, and user roles are set by the Organization Administrators. However, there is an Access Control check when logging in (or creating new users) to ensure that the provided user belongs to the correct group in the Active Directory.
+Contrast doesn't perform Data Access Control using the integrated Active Directory Servers. In other words, roles and access to data within the application are handled by the application, and user roles are set by the Organization Administrators. However, there is an Access Control check when logging in or creating new users to ensure that the provided user belongs to the correct group in the Active Directory.
 
 **Contrast User Group:**: This group allows users to be added to an organization and log in to the standard user interface. Most users should be part of this group. 
 
 **Contrast SuperAdmin Group:** This group allows users to log in to the Super Administrator interface. This interface should only be accessible to Application and System Administrators.
 
-> **Note:** A user can't belong to both the User and Admin groups.
-
-You can use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
+**A user can't belong to both the User and Admin groups. If you add them to both groups in your AD instance, Contrast won't be able to find them during configuration.** 
 
 <a href="assets/images/KB4-c09_2.png" rel="lightbox" title="Configuring Groups"><img class="thumbnail" src="assets/images/KB4-c09_2.png"/></a>
 
+> **Note:** You can use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
 
 ## Advanced Settings
 
