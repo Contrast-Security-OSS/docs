@@ -4,9 +4,7 @@ description: "Explanation of the "unable to create new native thread" error"
 tags: "troubleshoot setup FAQ TeamServer native thread"
 -->
 
-## Issue
-
-If you are seeing something similar to the error below in your ***/opt/Contrast/contrast-error.log*** you may be bumping up against the thread limit set by your operating system.
+If you're seeing an error in your ***/opt/Contrast/contrast-error.log*** that's similar to the example below, you might be bumping up against the thread limit set by your operating system.
 
 ```
 SEVERE: Servlet.service() for servlet [spring] in context with path [/Contrast] threw exception 
@@ -17,11 +15,8 @@ java.lang.OutOfMemoryError: unable to create new native thread
  at java.lang.Thread.start(Thread.java:714)
 ```
 
+To address this issue, increase the number of threads that the Contrast user can start in your */etc/security/limits.d/90-nproc.conf* file.
 
-## Solution
+>**Note:** To modify a system configuration file, you must have root access or the ability to sudo. Consult your System Administrator for additional details.
 
-To address this issue, you will need to increase the number of threads that can be started by the Contrast user in your ***/etc/security/limits.d/90-nproc.conf*** file.
-
->**Note:** To modify a system configuration file, you must have root access or the ability to sudo. Consult your system administrator for additional details.
-
-You can add the line ```<contrast-username>     soft        nproc         unlimited``` to the end of the file and restart the contrast-server using the command ```sudo service contrast-server restart```
+You can add the line `<contrast-username>     soft        nproc         unlimited` to the end of the file and restart the contrast-server using the command `sudo service contrast-server restart`.

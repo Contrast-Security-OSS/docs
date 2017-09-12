@@ -143,7 +143,7 @@ As part of the script generation, you must create two mustache strings. The most
 
 There are two steps to teach Contrast about your new rule.
 
-In the Contrast interface, place the Groovy script (built in Step #3) into the directory *$contrast.data.dir\data\rulepack*. You can usually find the *contrast.data.dir* at *C:/Program Files/Contrast* on Windows and *opt/Contrast* on Linux. If not, your administrator may have specified a custom directory for installation. Contact them to determine where the Contrast directory is located.
+In the Contrast interface, place the Groovy script (built in Step #3) into the directory *$contrast.data.dir\data\data\rulepack*. You can usually find the *contrast.data.dir* at *C:/Program Files/Contrast* on Windows and *opt/Contrast* on Linux. If not, your administrator may have specified a custom directory for installation. Contact them to determine where the Contrast directory is located.
 
 Next, update the Contrast configuration so it knows about the existence of this rule file. In the rulepack directory (where you just put your Groovy script), there is a *contrast-rules.external.xml* file. Open this file and add an entry to point to your new Groovy script. 
 

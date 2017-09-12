@@ -6,9 +6,9 @@ tags: "installation setup SuperAdmin EOP disable permissions"
 
 The following steps lead you through the process of disabling SuperAdmin access from Enterprise-on-Premises (EOP) nodes that are accessible to general users.  
 
-## Disable Access for Specific EOP Nodes
+## Disable Access for EOP Nodes
 
-To disable SuperAdmin access from generally accessible nodes, begin by running Contrast in a [distributed setup](installation-setupinstall.html#dist) as a new installation. You'll only be prompted to disable SuperAdmin if you're installing as an *application-only installation*; a full installation won't have this option.
+To disable SuperAdmin access from generally accessible nodes, begin by running Contrast in a [distributed setup](installation-setupinstall.html#dist) as a new installation. You'll only be prompted to disable SuperAdmin if you're installing as an application-only installation; a full installation won't have this option.
 
 If you already have a distributed Contrast setup, add `-Dsuper.admin.disabled=(false or true)` to `$CONTRAST_HOME/bin/contrast-server.vmoptions`. If false, the node allows SuperAdmin logins. If true, the node doesn't allow SuperAdmin logins. 
 
