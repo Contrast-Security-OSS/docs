@@ -6,11 +6,11 @@ tags: "troubleshoot authentication crawler configuration API Base64 phantomJS"
 
 ## Connection Issues After Rotating Keys
 
-Enterprise-on-Premises (EOP) administrators who are responsible for installation, configuration and administration of both the Contrast interface and Crawler should read this article in the event of rotating the service key associated with the SuperAdmin account. The service key will only need to be modified within the Crawler configuration if the service key has been rotated by Contrast.
+Enterprise-on-Premises (EOP) administrators who are responsible for installation, configuration and administration of both the Contrast interface and Crawler may have connection issues when rotating the service key associated with the SuperAdmin account. The service key only needs to be modified within the Crawler configuration if the service key is rotated by Contrast.
 
-## How To Resolve This Issue
+## Restore Connection
 
-From time to time, customers go through the operation of rotating their API Service Key. When this happens, and one or more Crawlers have been configured, the configuration located in the *$CRAWLER_HOME/conf/application-main.properties* file must change. Specifically, the `apiAuthorization` (Service Key) and the `apiKey` (API Key) must change.
+When customers rotate their API Service Key, and one or more Crawlers have been configured, the configuration located in the *$CRAWLER_HOME/conf/application-main.properties* file must change. Specifically, the Service Key (`apiAuthorization`) and the API Key (`apiKey`) must change, as shown below. 
 
 ```bash
 logging.file=logs/crawler.log
@@ -24,7 +24,7 @@ crawler.phantomJsBinDir=/usr/local/contrast-crawler/lib/phantomjs-linux/bin/phan
 teamserver.host=
 ```
 
-The `apiAuthorization` is not stored in plain text. This value needs to be modified based on the operation of concatenating the username and the service key, then performing a `base64` encode operation.
+The `apiAuthorization` is not stored in plain text. This value must be modified by concatenating the username and the service key, then performing a `base64` encode operation:
 
 ```
 BASE64(<username>:<service_key>)
