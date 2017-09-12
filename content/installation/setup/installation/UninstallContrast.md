@@ -5,33 +5,37 @@ tags: "installation setup EOP Uninstall TeamSerer installer remove"
 -->
 
 ## About Uninstallation
-In the event that you ever need to remove TeamServer from one of your servers, we have provided basic instructions allowing you to safely and cleanly remove the installation.
+The following instructions will help you remove the Contrast application from one of your servers safely and cleanly.
 
-## Running The Uninstallation Script
-Each installation comes with a script for safely uninstalling the TeamServer, plus all embedded components such as Java, Tomcat and MySQL. The script is packaged within the root directory of the TeamServer installation. On Unix, the file is an executable script labeled *uninstall*. On Windows, a command file is packaged in the installation directory called *uninstall.cmd*. 
+## Run the Script
+Each installation comes with a script for safely uninstalling Contrast plus all embedded components such as Java, Tomcat and MySQL. The script is packaged within the root directory of the Contrast installation. On Unix, the file is an executable script labeled *uninstall*. On Windows, a command file is packaged in the installation directory called *uninstall.cmd*. 
 
-We recommend the following before performing the uninstallation process:
+Contrast recommends that you do the following before performing the uninstallation process:
 
-* Create a backup of MySQL using the database backup tool provided with TeamServer
-* Shut down TeamServer using either the Windows or Unix service script
+* Create a backup of MySQL using the database backup tool provided with Contrast.
+* Shut down Contrast using either the Windows or Unix service script.
 
-Running the uninstaller on **Windows**:
-* Open the Windows explorer
-* Navigate to the Contrast installation directory
-* Click on the file *uninstall.exe* and run either as an Administrator or simply run if not installed as an Administrator
-* Follow the prompts to perform uninstallation
+To run the uninstaller on **Windows**:
+
+* Open the Windows Explorer.
+* Navigate to the Contrast installation directory.
+* Click on the file *uninstall.exe* and run. If you ran the installation as an Administrator, run this in the same manner.
+* Follow the prompts to perform uninstallation.
 
 Running the uninstaller on **Linux**:
-* Open a Linux console
-* Change directory (cd) to the Contrast installation directory
-* Execute the command ```uninstall```
-* Follow the prompts to perform uninstallation
+* Open a Linux console.
+* Change directory (`cd`) to the Contrast installation directory.
+* Execute the command `uninstall`.
+* Follow the prompts to perform uninstallation.
 
 ## Some Files Will Remain
-The vast majority of files will be deleted when performing an uninstall. However, a few key files will be left on the system. These can be manually deleted by the administrator. 
 
->**Note:** The uninstaller will **not** delete the following:
+You'll delete the vast majority of files when performing an uninstallation. However, a few key files are left on the system.
+
+>**Note:** The uninstaller won't delete the following files:
 * The Contrast Home directory
 * The Contrast DATA directory
 * The Contrast LOGS directory
 * The Contrast MYSQL directory
+
+An Administrator can delete these files manually. 

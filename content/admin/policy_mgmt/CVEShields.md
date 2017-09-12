@@ -10,7 +10,7 @@ CVE shields are configured the same way as [Protect Rules](admin-policymgmt.html
 
 Here is the list of CVEs that we defend with built-in CVE Shields:
 
-* **CVE-2006-5750:** Jmx Console Path Traversal RCE Vulnerability CVE Shield
+* **CVE-2006-5750:** Jmx Console Path Traversal RCE Vulnerability
 * **CVE-2007-5614:** Jetty Cookie Injection Vulnerability 
 * **CVE-2010-2227:** Buffered Transfer Encoding DoS Vulnerability 
 * **CVE-2010-2103:** Axis 2 Admin XSS Vulnerability 
@@ -22,3 +22,8 @@ Here is the list of CVEs that we defend with built-in CVE Shields:
 * **CVE-2014-0112:** Struts 2 ParametersInterceptor OGNL RCE Vulnerability 
 * **CVE-2014-0114:** Struts 1 ClassLoader Property Overwrite Vulnerability  
 * **CVE-2014-0116:** Struts 2 CookieInterceptor OGNL RCE Vulnerability 
+* **CVE-2016-3081:** Struts 2 DefaultActionMapper OGNL RCE Vulnerability
+* **CVE-2016-3082:** Struts 2 XSLTResult RCE Vulnerability
+* **CVE-2017-4971:** Spring WebFlow DataBinding RCE Vulnerability 
+* **CVE-2017-5638:** Struts 2 + Strings 1 Plugin OGNL RCE Vulnerability
+* **CVE-2017-9791:** Struts 2 CookieInterceptor OGNL RCE Vulnerability 
