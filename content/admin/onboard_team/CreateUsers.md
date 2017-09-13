@@ -38,11 +38,17 @@ To bulk add users, click the upload icon above the grid to import a spreadsheet 
 
 * First Name 
 * Last Name 
-* Email 
-* Organization 
+* Email <br> (For users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured, the field should appear as **Username**.) 
+
+* Organization UUID
+
+> **Note:** Find the Organization UUID by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
+
 * Organization Role <br> (View, Edit, Rules_admin or Admin)
 
-> **Note:** The **Email** field appears as **Username** for users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured. 
+You can also download a **CSV template** for [users with the Email field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-email.csv) or [users with Username field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-username.csv) by clicking the link in the tooltip. 
+
+#### Optional information 
 
 The following information is optional for each user. To include the fields in the spreadsheet, add a new column and value(s) for each as given below. 
 
@@ -54,8 +60,6 @@ The following information is optional for each user. To include the fields in th
 * Time zone <br> (Default is the organization time zone)
 * Access <br> (Default is "On")
 * API only <br> (Default is "Off")
-
-> **Note:** Hover over the upload icon for a reminder of the required information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
@@ -82,10 +86,13 @@ To bulk add users, click the upload icon above the grid to import a spreadsheet 
 
 * First Name 
 * Last Name 
-* Email 
+* Email <br> (For users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured, the field should appear as **Username**.) 
+
 * Organization Role <br> (View, Edit, Rules_admin or Admin)
 
-> **Note:** The **Email** field appears as **Username** for users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured. 
+You can also download a **CSV template** for [users with the Email field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-email.csv) or [users with the Username field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-username.csv) by clicking the link in the tooltip. 
+
+#### Optional information 
 
 The following information is optional for each user. To include the fields in the spreadsheet, add a new column and value(s) for each as given below. 
 
@@ -96,8 +103,6 @@ The following information is optional for each user. To include the fields in th
 * Time zone <br> (Default is the organization time zone)
 * Access <br> (Default is "On")
 * API only <br> (Default is "Off")
-
-> **Note:** Hover over the upload icon for a reminder of the required information fields. You can also download a **CSV template** by clicking the link in the tooltip. 
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
