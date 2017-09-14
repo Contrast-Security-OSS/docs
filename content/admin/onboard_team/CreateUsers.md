@@ -38,28 +38,28 @@ To bulk add users, click the upload icon above the grid in the **Users** page to
 
 * **First Name** 
 * **Last Name**
-* **Email** <br> (For users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured, the field should appear as **Username**.) 
+* **Email** <br> For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP authentication](installation-setupauth.html) or [Microsoft Active Directory](installation-setupauth.html#ad) configured, the field should appear as **Username**.
 
 * **Organization UUID**
 
 > **Note:** Find the Organization UUID in the Contrast interface by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
 
-* **Organization Role** <br> ("View", "Edit", "Rules_admin" or "Admin")
+* **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
-Hover over the upload icon to see tooltip with a list of the required fields. You can also download **CSV templates** that include [the Email field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-email.csv) or [the Username field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-username.csv) by clicking the links in the tooltip. 
+Hover over the upload icon to see tooltip with a list of the required fields. You can also download **CSV templates** that include [the Email field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-email.csv) or [the Username field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-username.csv) by clicking the link in the tooltip. 
 
 #### Optional information 
 
 The following information is optional for each user. To include the fields in the spreadsheet, add a new column and value(s) for each as given below. 
 
-* **Email Activation** <br> (If "None", default is "Required Password")
-* **System Administration** <br> (Default is "Off")
-* **Application access group** <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as "GroupA&GroupB&GroupC")
-* **Date Format** <br> (Default is the organization setting, such as "MM/dd/YYYY")
-* **Time Format** <br> (Default is the organization setting, such as "hh:mm a")
-* **Time zone** <br> (Default is the organization time zone)
-* **Access** <br> (Default is "On")
-* **API only** <br> (Default is "Off")
+* **Email Activation** <br> If the value is "None", the default is "Required Password".
+* **System Administration** <br> The default value is "Off".
+* **Application access group** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&GroupB&GroupC".
+* **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
+* **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
+* **Time zone** <br> The default value is the organization time zone.
+* **Access** <br> The default value is "On".
+* **API only** <br> The default value is "Off".
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
@@ -86,23 +86,23 @@ To bulk add users, click the upload icon above the grid in the **Users** page to
 
 * **First Name**
 * **Last Name** 
-* **Email** <br> (For users who have [HTTP Header](installation-setupauth.html#http-proxy) or [LDAP authentication](installation-setupauth.html) configured, the field should appear as **Username**.) 
+* **Email** <br> For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP authentication](installation-setupauth.html) or [Microsoft Active Directory](installation-setupauth.html#ad) configured configured, the field should appear as **Username**. 
 
-* **Organization Role** <br> ("View", "Edit", "Rules_admin" or "Admin")
+* **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
-Hover over the upload icon to see a tooltip with a list of the required fields. You can also download **CSV templates** that include [the Email field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-email.csv) or [the Username field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-username.csv) by clicking the links in the tooltip. 
+Hover over the upload icon to see a tooltip with a list of the required fields. You can also download **CSV templates** that include [the Email field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-email.csv) or [the Username field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-username.csv) by clicking the link in the tooltip. 
 
 #### Optional information 
 
 The following information is optional for each user. To include the fields in the spreadsheet, add a new column and value(s) for each as given below. 
 
 * **Application access group** <br> (View, Edit, Rules Admin, Admin or custom group names; format multiple group names as "GroupA&GroupB&GroupC")
-* **Protect** <br> (Default is "Off")
-* **Date Format** <br> (Default is the organization setting, such as "MM/dd/YYYY")
-* **Time Format** <br> (Default is the organization setting, such as "hh:mm a")
-* **Time zone** <br> (Default is the organization time zone)
-* **Access** <br> (Default is "On")
-* **API only** <br> (Default is "Off")
+* **Protect** <br> The default value is "Off".
+* **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
+* **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
+* **Time zone** <br> The default value is the organization time zone.
+* **Access** <br> The default value is "On".
+* **API only** <br> The default value is "Off".
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
