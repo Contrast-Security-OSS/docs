@@ -44,13 +44,13 @@ To bulk add users, click the upload icon above the grid in the **Users** page to
 
 > **Note:** Find the Organization UUID in the Contrast interface by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
 
-##### Authentication 
+##### Authentication methods
 
-For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP authentication](installation-setupauth.html) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. The username values entered in the spreadsheet and the authentication configuration must match exactly. 
+For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. The username values entered in the spreadsheet and the authentication configuration must match exactly. 
 
 ##### Templates
 
-Download **CSV templates** by hovering over the upload icon and clicking on the link, or by clicking the links below. 
+Download **CSV templates** directly from the Contrast interface by hovering over the upload icon and clicking the link in the tooltip, or by clicking the links below. 
 
 * [Database or SSO authentication](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-email.csv)
 * [HTTP Header, LDAP or AD authentication](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-username.csv)
@@ -68,7 +68,7 @@ The following information is optional for each user. To include the fields in th
 * **Access** <br> The default value is "On".
 * **API only** <br> The default value is "Off".
 
-### Upload
+### Upload progress
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
@@ -98,13 +98,13 @@ To bulk add users, click the upload icon above the grid in the **Users** page to
 * **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
-##### Authentication 
+##### Authentication methods
 
-For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. The username values entered in the spreadsheet and the authentication configuration must match exactly.  
+For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. The username values entered in the spreadsheet and the authentication configuration must match exactly.  
 
 ##### Templates
 
-Download **CSV templates** by hovering over the upload icon and clicking on the link, or by clicking the links below. 
+Download **CSV templates** directly from the Contrast interface by hovering over the upload icon and clicking the link in the tooltip, or by clicking the links below. 
 
 * [Database or SSO authentication](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-email.csv)
 * [HTTP Header, LDAP or AD authentication](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-username.csv)
@@ -121,7 +121,7 @@ The following information is optional for each user. To include the fields in th
 * **Access** <br> The default value is "On".
 * **API only** <br> The default value is "Off".
 
-### Upload
+### Upload progress
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
