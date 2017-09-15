@@ -1,10 +1,10 @@
 <!--
 title: "Create Users"
-description: "Creating Users in Contrast TeamServer"
-tags: "Admin onboarding TeamServer user settings license defend protection create"
+description: "Creating Users in Contrast"
+tags: "Admin onboarding user settings license defend protection create"
 -->
 
-System and Organization Administrators can create users individually, in groups, or through [Active Directory](installation-setupauth.html#ad) or [LDAP](installation-setupauth.html#ldap) integrations. All users are required to have a default organization and a default role within that organization. 
+System and Organization Administrators can create users individually, in groups, or through [Microsoft Active Directory](installation-setupauth.html#ad) (AD) or [LDAP](installation-setupauth.html#ldap) integrations. All users are required to have a default organization and a default role within that organization. 
 
 >**Note:** Verify the [Roles](admin-manageorgsroleperm.html#roles) that you want to assign to users so that they have the appropriate level of functionality.
 
@@ -38,15 +38,22 @@ To bulk add users, click the upload icon above the grid in the **Users** page to
 
 * **First Name** 
 * **Last Name**
-* **Email** <br> For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP authentication](installation-setupauth.html) or [Microsoft Active Directory](installation-setupauth.html#ad) configured, the field should appear as **Username**.
-
-* **Organization UUID**
+* **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
+* **Organization UUID** 
+* **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
 > **Note:** Find the Organization UUID in the Contrast interface by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
 
-* **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
+##### Authentication 
 
-Hover over the upload icon to see tooltip with a list of the required fields. You can also download **CSV templates** that include [the Email field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-email.csv) or [the Username field](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-username.csv) by clicking the link in the tooltip. 
+For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP authentication](installation-setupauth.html) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. The username values entered in the spreadsheet and the authentication configuration must match exactly. 
+
+##### Templates
+
+Download **CSV templates** by hovering over the upload icon and clicking on the link, or by clicking the links below. 
+
+* [Database or SSO authentication](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-email.csv)
+* [HTTP Header, LDAP or AD authentication](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-username.csv)
 
 #### Optional information 
 
@@ -60,6 +67,8 @@ The following information is optional for each user. To include the fields in th
 * **Time zone** <br> The default value is the organization time zone.
 * **Access** <br> The default value is "On".
 * **API only** <br> The default value is "Off".
+
+### Upload
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
@@ -86,11 +95,19 @@ To bulk add users, click the upload icon above the grid in the **Users** page to
 
 * **First Name**
 * **Last Name** 
-* **Email** <br> For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP authentication](installation-setupauth.html) or [Microsoft Active Directory](installation-setupauth.html#ad) configured configured, the field should appear as **Username**. 
-
+* **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
-Hover over the upload icon to see a tooltip with a list of the required fields. You can also download **CSV templates** that include [the Email field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-email.csv) or [the Username field](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-username.csv) by clicking the link in the tooltip. 
+##### Authentication 
+
+For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. The username values entered in the spreadsheet and the authentication configuration must match exactly.  
+
+##### Templates
+
+Download **CSV templates** by hovering over the upload icon and clicking on the link, or by clicking the links below. 
+
+* [Database or SSO authentication](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-email.csv)
+* [HTTP Header, LDAP or AD authentication](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-username.csv)
 
 #### Optional information 
 
@@ -103,6 +120,8 @@ The following information is optional for each user. To include the fields in th
 * **Time zone** <br> The default value is the organization time zone.
 * **Access** <br> The default value is "On".
 * **API only** <br> The default value is "Off".
+
+### Upload
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
