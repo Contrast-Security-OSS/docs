@@ -18,7 +18,7 @@ Use the multiselect **Policy** field to choose which Remediation and Compliance 
 
 ### Licensing 
 
-Check the box to **automatically apply Assess licenses** to newly onboarded applications. The thermometer chart below the checkbox shows you the number of licenses used out of the total number of licenses available in the organization. Click on the total number of licenses to go to the Licenses view of the **Organization Statistics** report page. 
+Check the box to **automatically apply Assess licenses** to newly onboarded applications. The thermometer chart below the checkbox shows you the number of licenses used out of the total number of licenses available in the organization. Click on the total number of licenses to go to the Licenses view of the [Organization Statistics](user-reports.html#orgstats) page. 
 
 <a href="assets/images/Application-defaults.png" rel="lightbox" title="Configuration form for Application Defaults"><img class="thumbnail" src="assets/images/Application-defaults.png"/></a>
 
