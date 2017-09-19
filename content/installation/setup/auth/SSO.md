@@ -100,7 +100,7 @@ For a user, SSO makes only a slight change to the login process. If SSO is confi
 
 Contrast then verifies your email with the configured IdP, and directs you to the IdP login page. Once you submit your full SSO credentials and are successfully authenticated, you're logged in and directed back to the Contrast dashboard. If you try to sign in using SSO but don't have an account in Contrast, an error message informing you that your administrator must create your account appears on the login screen.
 
->**Note:** If Two-Step Verification is active for a user, that login process occurs **after** successful SSO authentication. See the artcle on [Two-Step Verification](admin-systemsettings.html#twostep) for more information. 
+>**Note:** If Two-Step Verification is active for a user, that login process occurs **after** successful SSO authentication. See the artcle on [Two-Step Verification](admin-orgsecurity.html#security-tsv) for more information. 
 
 For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting-auth.html#troubleshoot-sso). 
 
