@@ -70,8 +70,3 @@ If you want to customize the agent's behavior to better suit your needs, follow 
 * [Customize the Server Name](installation-netconfig.html#server)
 
 * [Customize Application Names](installation-netconfig.html#appname)
-
-If you encounter any difficulties using the .NET agent, you can also go to [Troubleshooting](troubleshooting-netinstall.html) resources.
-
-
-
