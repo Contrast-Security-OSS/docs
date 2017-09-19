@@ -6,8 +6,6 @@ tags: "Admin servers defaults organization settings sampling"
 
 Server Settings provide default configurations to new servers (agents) being brought on board. Organization administrators can customize these configurations and set specific defaults for each environment. 
 
-<a href="assets/images/Server-settings.png" rel="lightbox" title="Server settings"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
-
 ## How It Works
 
 ### Log levels
@@ -36,14 +34,36 @@ Ensure that new servers receive full, immediate coverage from Contrast by automa
 
 ## Set Up Defaults
 
-Go to the **User menu > Organization Settings > Servers tab** to get started.
+Go to the **User menu > Organization Settings > Servers tab** to start setting up defaults.
 
-### Autmatic server cleanup 
+<a href="assets/images/Server-settings.png" rel="lightbox" title="Server settings"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
 
-The Servers page includes a checkbox to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown.
+### Environment 
+
+* Use the dropdown menu to choose the environment in which you want to apply the default. Check the box if you want to set this as the **default environment**.  
+
+* Use the dropdown menu to choose the Log Level. The default selection is **Error**. 
+
+* Check the box if you want to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown.
 
 <a href="assets/images/Server_settings_automatic_cleanup.png" rel="lightbox" title="Automatic Server Cleanup"><img class="thumbnail" src="assets/images/Server_settings_automatic_cleanup.png"/></a>
 
+### Assess
+
+* Use the dropdown menu to choose the amount of stacktraces that Contrast captures. The default selection is **ALL**. 
+
+* Check the box if you want to **Enable sampling for higher performance**. Use the number control fields to enter the:  
+	* **Baseline**: The number of times that Contrast analyzes URLs to complete sampling. The default setting is **5**. 
+	* **Frequency**: The number of times that Contrast analyzes URLs after the Baseline is achieved. The default setting is **10**. 
+	* **Window**: The number of seconds that Contrast retains samples before reverting to the Baseline. The default setting is **180**. 
+
 ### Protect
+
+* Check the box if you want to **Enable bot blocking**. 
+
+* Check the box if you want to **Enable output of Protect events to syslog**. Enter the **IP Address** in the given field, use the number control field to choose the **Port**, and use the dropdown menu to chose the **Facility**. 
+
+* Use the dropdown menu to choose the **Severity** level of the...
+
 
 >**Note:** Turning Protect **on** by default requires that Protect licenses are automatically applied to servers.
