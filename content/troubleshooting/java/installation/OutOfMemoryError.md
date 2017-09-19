@@ -6,7 +6,7 @@ tags: "troubleshoot java agent memory"
 
 ## OutOfMemory "PermGen space" Errors
 
-Older versions of Java had separate area for permanent memory use called **PermGen**. Some of the memory Contrast uses will be kept in this space, but not a lot. If the JVM is already close to its PermGen limit, we may be putting it over. 
+Older versions of Java had separate area for permanent memory use called **PermGen**. Some of the memory Contrast uses will be kept in this space, but not a lot. If the JVM is already close to its PermGen limit, Contrast may be putting it over. 
 
 Adding another 32MB should be more than enough for Contrast. 
 
