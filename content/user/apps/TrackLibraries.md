@@ -38,18 +38,6 @@ In the Libraries grids, select individual libraries with the check boxes or use 
 
 The exported file contains the following for each library:
 
-* NAME
-* TECHNOLOGY
-* RELEASE_DATE
-* VERSION
-* LATEST_VERSION
-* HASH
-* CVE <br> A list of CVEs, separated by commas, found in this library.
-* NUMBER_APPS <br> The number of applications that use the library.
-* NUMBER_CLASSES <br> The number of classes that use this library.
-
-----
-
 * Library Name
 * Language
 * Version
@@ -63,7 +51,9 @@ The exported file contains the following for each library:
 * Number of Classes
 * Number of Used Classes
 
-Use the [Contrast API](tools-apiapps.html) to get additional information on a library. 
+Use the Contrast API documentation to get additional information on a library. 
+
+You can also use the command line...
 
 ```
 $ curl -H "Authorization: $(echo -n $username:$servicekey
