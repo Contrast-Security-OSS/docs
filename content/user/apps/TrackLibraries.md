@@ -4,7 +4,7 @@ description: "Overview of keeping track of libraries"
 tags: "user applications track libraries quick start guide"
 -->
 
-Contrast uses third-party and open-source library assessment to identify which libraries are used, the depth of their usage and the number of vulnerabilities that exist in them, including previously unidentified Common Vulnerabilities and Exposures (CVEs). This assessment makes you aware of libraries that may be vulnerable and impact the security of your application. 
+Contrast uses third-party, open-source library assessment to identify which libraries are used, the depth of their usage and the number of vulnerabilities that exist in them, including previously unidentified Common Vulnerabilities and Exposures (CVEs). This assessment makes you aware of libraries that may be vulnerable and impact the security of your application. 
 
 Go to the **Libraries** tab in the application's Overview page to see a list of all libraries being used within that application. You can also go to the main Libraries page to see an overview of all libraries across your portfolio and manage them in bulk. 
 
@@ -44,10 +44,34 @@ The exported file contains the following for each library:
 * VERSION
 * LATEST_VERSION
 * HASH
-* CVE <br> (A list of CVEs, separated by commas, found in this library.)
-* NUMBER_APPS <br> (The number of applications that use the library.)
-* NUMBER_CLASSES <br> (The number of classes that use this library.)
+* CVE <br> A list of CVEs, separated by commas, found in this library.
+* NUMBER_APPS <br> The number of applications that use the library.
+* NUMBER_CLASSES <br> The number of classes that use this library.
 
+----
 
+* Library Name
+* Language
+* Version
+* Release Date
+* Latest Version
+* Grade
+* SHA1
+* CVE Count
+* Application Count
+* Server Count
+* Number of Classes
+* Number of Used Classes
+
+Use the [Contrast API](tools-apiapps.html) to get additional information on a library. 
+
+```
+$ curl -H "Authorization: $(echo -n $username:$servicekey
+base64)" -H "API-Key: $apikey" https://app.contrastsecurity.com/Contrast/api/ng/4e55d28e-55e9-4b23-816b-cb4737733a47/libraries/filter?expand=apps 
+jq -r '.libraries[]
+{name: .file_name, app_name: .apps[].name}
+[.name, .app_name] 
+@csv'
+```
 
 
