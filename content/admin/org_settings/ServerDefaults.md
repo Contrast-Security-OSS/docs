@@ -66,8 +66,7 @@ Go to the **User menu > Organization Settings > Servers tab** to start setting u
 * Check the box to **Enable bot blocking**. 
 
 * Check the box to **Enable output of Protect events to Syslog**. 
-	* Enter the **IP Address** in the given field.  
-	* Use the number control field to choose the **Port** and the dropdown menu to chose the **Facility**. 
+	* Enter the **IP Address** and **Port** in the given fields. Use the dropdown menu to chose the **Facility**. 
 	* Click on the event severity badges, and use the dropdown menu to choose a message **Severity** level for each one. 
 
 <a href="assets/images/Server-default-syslog.png" rel="lightbox" title="Configure output to Syslog"><img class="thumbnail" src="assets/images/Server-default-syslog.png"/></a>
