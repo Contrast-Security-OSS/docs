@@ -4,9 +4,9 @@ description: "Overview of application settings"
 tags: "Admin Organization settings applications"
 -->
 
-## How it Works 
+## How It Works 
 
-Choose default settings for <!-- future --> applications in your organization based on levels of importance, existing policies and Assess licensing. Go to the **User menu > Organization Settings > Application defaults tab** to get started. 
+Choose default settings for applications in your organization based on levels of importance, existing policies and Assess licensing. Go to the **User menu > Organization Settings > Application defaults tab** to get started. 
 
 ## Set Up Defaults
 

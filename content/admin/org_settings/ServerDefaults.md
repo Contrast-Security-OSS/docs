@@ -24,7 +24,7 @@ For more information on sampling and stacktraces, go to the [Server Settings](us
 ### Protect options
 Protect mode provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protect on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. 
 
-Protect mode also allows you to output events to Syslog for one or multiple servers. Read the article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
+Protect mode also allows you to output events to Syslog for one or multiple servers. Contrast offers syslog message categories according to the [Syslog RFC 3164](https://www.ietf.org/rfc/rfc3164.txt) specification for severity. Read the article on [Output to Syslog](user-servers.html#syslog) to learn more about enabling this feature.
 
 #### Automatic licensing 
 
@@ -36,34 +36,43 @@ Ensure that new servers receive full, immediate coverage from Contrast by automa
 
 Go to the **User menu > Organization Settings > Servers tab** to start setting up defaults.
 
-<a href="assets/images/Server-settings.png" rel="lightbox" title="Server settings"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
+<a href="assets/images/Server-settings.png" rel="lightbox" title="Set up server defaults"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
 
 ### Environment 
 
-* Use the dropdown menu to choose the environment in which you want to apply the default. Check the box if you want to set this as the **default environment**.  
+* Use the dropdown menu to choose the environment in which you want to apply the default. Check the box if you want to set this as the **default environment** for servers.  
 
-* Use the dropdown menu to choose the Log Level. The default selection is **Error**. 
+* Use the dropdown menu to choose the **Log Level**. The default selection is **Error**. 
 
-* Check the box if you want to **Enable automatic server cleanup**. After selecting the box, default values are loaded into the fields as shown.
+* Check the box to **Enable automatic server cleanup**. 
+	* Use the multiselect field to choose the **Environment** in which to apply automatic cleanup. The default is **All environments**.
+	* Use the number control and dropdown fields to set the amount of time that Contrast must wait to disable servers **After Being Offline**. The defaults are **12** and **Hour(s)**. 
 
-<a href="assets/images/Server_settings_automatic_cleanup.png" rel="lightbox" title="Automatic Server Cleanup"><img class="thumbnail" src="assets/images/Server_settings_automatic_cleanup.png"/></a>
+<a href="assets/images/Server_settings_automatic_cleanup.png" rel="lightbox" title="Set up automatic server cleanup"><img class="thumbnail" src="assets/images/Server_settings_automatic_cleanup.png"/></a>
 
 ### Assess
 
-* Use the dropdown menu to choose the amount of stacktraces that Contrast captures. The default selection is **ALL**. 
+* Use the dropdown menu to choose which stacktraces Contrast captures. The default selection is **ALL**. 
 
-* Check the box if you want to **Enable sampling for higher performance**. Use the number control fields to enter the:  
+* Check the box to **Enable sampling for higher performance**. Choose the numerical values for the following fields: 
 	* **Baseline**: The number of times that Contrast analyzes URLs to complete sampling. The default setting is **5**. 
 	* **Frequency**: The number of times that Contrast analyzes URLs after the Baseline is achieved. The default setting is **10**. 
 	* **Window**: The number of seconds that Contrast retains samples before reverting to the Baseline. The default setting is **180**. 
 
+<a href="assets/images/Server-defaults-sampling.png" rel="lightbox" title="Enable sampling"><img class="thumbnail" src="assets/images/Server-defaults-sampling.png"/></a>
+
 ### Protect
 
-* Check the box if you want to **Enable bot blocking**. 
+* Check the box to **Enable bot blocking**. 
 
-* Check the box if you want to **Enable output of Protect events to syslog**. Enter the **IP Address** in the given field, use the number control field to choose the **Port**, and use the dropdown menu to chose the **Facility**. 
+* Check the box to **Enable output of Protect events to Syslog**. 
+	* Enter the **IP Address** in the given field.  
+	* Use the number control field to choose the **Port** and the dropdown menu to chose the **Facility**. 
+	* Click on the event severity badges, and use the dropdown menu to choose a message **Severity** level for each one. 
 
-* Use the dropdown menu to choose the **Severity** level of the...
+<a href="assets/images/Server-default-syslog.png" rel="lightbox" title="Configure output to Syslog"><img class="thumbnail" src="assets/images/Server-default-syslog.png"/></a>
 
+* Check the box to **Automatically apply Protect licenses to new servers**.
 
 >**Note:** Turning Protect **on** by default requires that Protect licenses are automatically applied to servers.
+
