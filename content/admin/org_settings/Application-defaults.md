@@ -18,10 +18,10 @@ Use the dropdown menu to choose an **Importance** level for applications. The de
 
 ### Policy 
 
-Use the multiselect **Policy** field to choose which [Remediation](admin-policymgmt.html#remediate) and [Compliance Policies](admin-policymgmt.html#compliance) to apply automatically to applications. (You can still add applications to policies that aren't included in your default settings.)
+Use the multiselect **Policy** field to choose which [Remediation](admin-policymgmt.html#remediate) and [Compliance Policies](admin-policymgmt.html#compliance) to apply automatically to applications. (You can still add applications to policies that aren't included in your default settings after you onboard them.)
 
 ### Licensing 
 
-Check the box if you want to **automatically apply Assess licenses** to newly onboarded applications. The thermometer chart below the checkbox shows you the number of licenses used out of the total number of licenses available in the organization. Click on the total number of licenses to go to the Licenses view of the [Organization Statistics](user-reports.html#orgstats) page. 
+Check the box if you want to **Automatically apply Assess licenses** to newly onboarded applications. The thermometer chart below the checkbox shows you the number of licenses used out of the total number of licenses available in the organization. Click on the total number of licenses to go to the Licenses view of the [Organization Statistics](user-reports.html#orgstats) page. 
 
 
