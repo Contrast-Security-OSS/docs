@@ -36,7 +36,7 @@ Ensure that new servers receive full, immediate coverage from Contrast by automa
 
 Go to the **User menu > Organization Settings > Servers tab** to start setting up defaults.
 
-<a href="assets/images/Server-settings.png" rel="lightbox" title="Set up server defaults"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
+<a href="assets/images/Server-defaults-tab.png" rel="lightbox" title="Set up server defaults"><img class="thumbnail" src="assets/images/Server-defaults-tab.png"/></a>
 
 ### Environment 
 
