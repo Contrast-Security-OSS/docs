@@ -32,11 +32,11 @@ Export details on findings from the Libraries page, a library's overview page, o
 
 <a href="assets/images/Library-export.png" rel="lightbox" title="Export library details"><img class="thumbnail" src="assets/images/Library-export.png"/></a>
 
-In the Libraries grids, select individual libraries with the check boxes or use the filters to focus on specific data sets. When you apply a selection, you can choose to export all or selected libraries. If you don't select any checkboxes or filters, you can export data for all libraries. 
+In the Libraries grids, select individual libraries or use the filters to focus on specific data sets. If you apply a selection, you can choose to export all or selected libraries; if not, you can export data for all libraries. 
 
 ### Data
 
-The exported file contains the following for each library:
+The exported file contains the following data fields for each library:
 
 * Library Name
 * Language
@@ -51,10 +51,9 @@ The exported file contains the following for each library:
 * Number of Classes
 * Number of Used Classes
 
-Use the Contrast API documentation to get additional information on a library. 
+You can access more details on your libraries by going to the [Contrast API documentation](https://api.contrastsecurity.com/#) **> Library > Libraries section**, or using the command line. 
 
-You can also use the command line...
-
+> **Example:** To find related application names and export the data to a CSV, use a cURL request to the API: 
 ```
 $ curl -H "Authorization: $(echo -n $username:$servicekey
 base64)" -H "API-Key: $apikey" https://app.contrastsecurity.com/Contrast/api/ng/4e55d28e-55e9-4b23-816b-cb4737733a47/libraries/filter?expand=apps 
@@ -64,4 +63,5 @@ jq -r '.libraries[]
 @csv'
 ```
 
+For more information, read [about the Contrast API](tools-api.html#api-about).
 
