@@ -5,15 +5,15 @@ tags: "Intro Open REST API v1 v2 v3 webhook"
 -->
 
 Contrast has a few API versions:
-* Engine APIs (v1) 
-* Application APIs (v2) 
-* HATEOS-compliant REST API (v3) **Recommended**
+* Engine APIs (version 1) 
+* Application APIs (version 2) 
+* HATEOS-compliant REST API (version 3) **Recommended**
 
->**Note:** Contrast hasen't officially deprecated v1 or v2, but strongly recommend using v3.
+>**Note:** Contrast hasn't officially deprecated version 1 or version 2, but strongly recommends using version 3.
 
 ## Overview
 
-The Contrast plugin allows you to collect nearly all the same information that is accessible through the Contrast interface - dowload agents, get vulnerability, application, server and library information, and much more. Contrast's goal is to make sure Contrast offers data to allow complete integration into your existing Continuous Integration (CI), SIEM software, or other business intelligence dashboards.
+The Contrast plugin allows you to collect nearly all the same information that is accessible through the Contrast interface - download agents, get vulnerability, application, server and library information, and much more. Contrast's goal is to give you the right data to allow complete integration into your existing Continuous Integration (CI), SIEM software, or other business intelligence dashboards.
 
 The API is available to both **SaaS** and **Enterprise-on-Premises** (EOP) users. The [endpoint for SaaS users](https://app.contrastsecurity.com/Contrast/api) is the same for everyone; for EOP users, it depends on where the Contrast application is installed on the client's network.
 
@@ -27,7 +27,7 @@ Contrast provides open API documentation that includes resources for understandi
 
 ### Use the Documentation
 
-Go to the **API** and **Objects** sections to see a list of endpoints and related objects used by the endpoints. The **Flow** section provides a list of sample use cases and information on their sequence of endpoints that must be called to accomplish them. The documentation also includes a playground to test your endpoint interactions with v1, v2 and v3 API endpoints. This is a handy tool to quickly learn how to use the endpoints through experience. 
+Go to the **API** and **Objects** sections to see a list of endpoints and related objects used by the endpoints. The **Flow** section provides a list of sample use cases and information on their sequence of endpoints that must be called to accomplish them. The documentation also includes a playground to test your endpoint interactions with version 1, version 2 and version 3 API endpoints. This is a handy tool to quickly learn how to use the endpoints through experience. 
 
 To access the API documentation in the Contrast interface, authenticate with an administrator account in Contrast, go to the ** User menu > Organization Settings > API tab**, and click the button to **Launch Documentation**. Unlike the static Contrast API page, this version allows you to use actual data from your Contrast application to exercise the documentation. 
 

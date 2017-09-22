@@ -32,7 +32,7 @@ Export details on findings from the Libraries page, a library's overview page, o
 
 <a href="assets/images/Library-export.png" rel="lightbox" title="Export library details"><img class="thumbnail" src="assets/images/Library-export.png"/></a>
 
-In the Libraries grids, select individual libraries or use the filters to focus on specific data sets. If you apply a selection, you can choose to export all or selected libraries; if not, you can export data for all libraries. 
+In the Libraries grid, select individual libraries or use the filters to focus on specific data sets. You can then choose to export data for all libraries or only the libraries you selected. 
 
 ### Data
 
@@ -51,17 +51,17 @@ The exported file contains the following data fields for each library:
 * Number of Classes
 * Number of Used Classes
 
-You can access more details on your libraries by going to the [Contrast API documentation](https://api.contrastsecurity.com/#) **> Library > Libraries section**, or using the command line. 
+For users looking to craft custom software composition analysis reports about their applications, the library export feature might not provide sufficient information; however, Contrast offers a rich Libraries API for accessing Contrast library data. Reference the [Contrast RESTful API documentation](https://api.contrastsecurity.com/#) **> Library > Libraries section** for instructions on using the Libraries API. You may also explore additional details on your libraries using a manual method. 
 
-> **Example:** To find related application names and export the data to a CSV, use a cURL request to the API: 
+> **Example:** This cURL request retrieves a list of libraries in which each library includes a list of applications that use the library. The jq tool formats the data as CSV for use in a custom report.
 ```
 $ curl -H "Authorization: $(echo -n $username:$servicekey
-base64)" -H "API-Key: $apikey" https://app.contrastsecurity.com/Contrast/api/ng/4e55d28e-55e9-4b23-816b-cb4737733a47/libraries/filter?expand=apps 
+base64)" -H "API-Key: $apikey" https://app.contrastsecurity.com/Contrast/api/ng/$org_id/libraries/filter?expand=apps 
 jq -r '.libraries[]
 {name: .file_name, app_name: .apps[].name}
 [.name, .app_name] 
 @csv'
 ```
 
-For more information, read [about the Contrast API](tools-api.html#api-about).
+For more information, read [About the Contrast API](tools-api.html#api-about).
 
