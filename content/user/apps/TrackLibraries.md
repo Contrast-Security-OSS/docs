@@ -32,7 +32,7 @@ Export details on findings from the Libraries page, a library's overview page, o
 
 <a href="assets/images/Library-export.png" rel="lightbox" title="Export library details"><img class="thumbnail" src="assets/images/Library-export.png"/></a>
 
-In the Libraries grids, select individual libraries with the check boxes or use your filters to focus on specific data sets. When you apply a selection, you can choose to export all or selected libraries. If you don't select any checkboxes or filters, you can export data for all libraries. 
+In the Libraries grids, select individual libraries with the check boxes or use the filters to focus on specific data sets. When you apply a selection, you can choose to export all or selected libraries. If you don't select any checkboxes or filters, you can export data for all libraries. 
 
 ### Data
 
