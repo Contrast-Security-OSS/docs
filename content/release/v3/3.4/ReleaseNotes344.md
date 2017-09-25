@@ -28,7 +28,7 @@ Congratulations, Ruby! Version 1.0.0 has arrived along with new bugtracker integ
 
 * Our response to Struts2 vulnerabilities: An update to Contrast on September 9 that adds CVE 2017-9805 to our library inventory data as well as an update to our Protect deserialization rule to stop attackers from exploiting this particular vulnerability.
 
-* Contrast now supports user authentication using Active Directory Federation Services! To set up the feature, download the *pem* file from your SAML provider, and upload it your **Single Sign-On** page in Contrast. 
+* Contrast now supports user authentication using Active Directory Federation Services! To set up the feature, download the *pem* file from your Identity Provider, and upload it your **Single Sign-On** page in Contrast. 
 
 * We revamped your views of vulnerabilities: redundant trace details - like string operations - are now collapsed, formatting is enhanced and traces are presented more accurately. 
 
