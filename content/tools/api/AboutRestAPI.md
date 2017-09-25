@@ -29,7 +29,7 @@ Contrast provides open API documentation that includes resources for understandi
 
 Go to the **API** and **Objects** sections to see a list of endpoints and related objects used by the endpoints. The **Flow** section provides a list of sample use cases and information on their sequence of endpoints that must be called to accomplish them. The documentation also includes a playground to test your endpoint interactions with version 1, version 2 and version 3 API endpoints. This is a handy tool to quickly learn how to use the endpoints through experience. 
 
-To access the API documentation in the Contrast interface, authenticate with an administrator account in Contrast, go to the ** User menu > Organization Settings > API tab**, and click the button to **Launch Documentation**. Unlike the static Contrast API page, this version allows you to use actual data from your Contrast application to exercise the documentation. 
+To access the API documentation in the Contrast interface, authenticate with an administrator account in Contrast, go to the ** User menu > Organization Settings > API tab**, and click the button to **Launch Documentation**. Unlike the static Contrast API page, this version executes API requests against a real server. 
 
 
 
