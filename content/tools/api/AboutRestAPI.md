@@ -7,7 +7,7 @@ tags: "Intro Open REST API v1 v2 v3 webhook"
 Contrast has a few API versions:
 * Engine APIs (version 1) 
 * Application APIs (version 2) 
-* HATEOS-compliant REST API (version 3) **Recommended**
+* HATEOS-compliant REST API (version 3)(**Recommended**)
 
 >**Note:** Contrast hasn't officially deprecated version 1 or version 2, but strongly recommends using version 3.
 
