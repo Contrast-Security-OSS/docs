@@ -14,7 +14,6 @@ Eclipse versions:
 
 * Oxygen (4.7)
 * Neon (4.6)
-* Mars (4.5)
 
 Operating systems:
 
