@@ -22,13 +22,12 @@ Assessment is applied to each application. Once your application has been assess
 * Activity of the URLs being hit
 * Application usage metrics
 * Insight into the architecture of the running application 
-* Third Party & Open Source library assessment results
+* Third-part and open-source library assessment results
 * Compliance reporting via PDF
 
 ## Contrast Assessment Policies
 There are two types of policies available in Contrast Assess. They are as follows:
 
-* **Assess Rules** which can detect specific types of vulnerabilities, such as SQL Injection or Cross-Site Scripting
-* **Security Controls** which are methods in your code that make sure data is safe to use
+* [Assess Rules](admin-policymgmt.html#assess) which can detect specific types of vulnerabilities, such as SQL Injection or Cross-Site Scripting.
+* [Security Controls](admin-policymgmt.html#security) which are methods in your code that make sure data is safe to use.
 
-Read more about these policies in our [Assessment Policy](assess-managevulns.html#assess-policy) article.
