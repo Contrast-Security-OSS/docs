@@ -1,7 +1,7 @@
 <!--
-title: "Continuous Protection"
-description: "Overview of continuous protection"
-tags: "protection how it works continuous"
+title: "How It Works"
+description: "Overview of Protect"
+tags: "protect how it works continuous"
 -->
 
 Contrast enables applications to defend themselves through instrumentation by using our Protect feature.

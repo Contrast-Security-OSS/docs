@@ -1,7 +1,7 @@
 <!--
-title: "Continuous Visibility"
-description: "Overview of continuous visibility"
-tags: "assessment how it works continuous visibility"
+title: "How It Works"
+description: "Overview of Assess"
+tags: "assess how it works continuous visibility"
 -->
 
 Contrast Assess is a revolutionary application security testing tool that combines Static, Dynamic, and Interactive Application Security Testing (SAST, DAST and IAST), to provide highly accurate and continuous information on security vulnerabilities in your applications.
