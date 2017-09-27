@@ -22,10 +22,9 @@ Read more about [Server Defaults](admin-orgsettings.html#org-server).
 ## Contrast Protection Policies
 There are five types of policies available in Contrast Protect. They are as follows:
 
-* **Protect Rules** which allow you to set applications to monitor for attacks 
-* **CVE Shields** which provide a standardized identifier for a given vulnerability or exposure
-* **Virtual Patches** which are custom defenses you define to defend against specific vulnerabilities
-* **Log Enhancers** which provide additional instrumentation instructions 
-* **IP Management** where you can manage a blacklist and whitelist (trusted hosts)
+* [Protect Rules](admin-policymgmt.html#protect) which allow you to set applications to monitor for attacks 
+* [CVE Shields](admin-policymgmt.html#cve) which provide a standardized identifier for a given vulnerability or exposure
+* [Virtual Patches](admin-policymgmt.html#patch) which are custom defenses you define to defend against specific vulnerabilities
+* [Log Enhancers](admin-policymgmt.html#log) which provide additional instrumentation instructions 
+* [IP Management](admin-policymgmt.html#ip) where you can manage a blacklist and whitelist (trusted hosts)
 
-Read more about these policies in our [Protection Policy](protect-manageattacks.html#protect-policy) article.
