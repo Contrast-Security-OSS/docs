@@ -113,7 +113,7 @@ User training:
 * How to explore a finding
 * Other tasks relevant to a security professional or a technical user performing security analysis
 
-To prepare for the meeting, attendees should review the steps in the [Quick Start Guide](user-starthere.html#quickstart) for new users.
+To prepare for the meeting, attendees should review the steps in the [Contrast UI Introduction](user-starthere.html#ui-intro) for new users.
 
 ## Products
 There are many ways to start using Assess, Protect or both. To get value quickly, use Assess in your continuous integration (CI) pipeline as part of the functional test environment. Also use Protect in Monitor mode in your penetration testing environment before adding it to your Production environments. Consider the following scenarios before discussing what works best for you with your CSCP.
@@ -153,7 +153,7 @@ Protect:
 * Licenses Used
 
 ## Go Live
-You’re ready to start with your first tranche of applications to Assess and Protect. (Review the [Quick Start Guide](user-starthere.html#quickstart) one more time, just for good measure.) 
+You’re ready to start with your first tranche of applications to Assess and Protect. (Review the [UI Introduction](user-starthere.html#ui-intro) one more time, just for good measure.) 
 
 ## Review
 After each application is onboarded, your CSCP will hold the following meetings to ask a few questions.
