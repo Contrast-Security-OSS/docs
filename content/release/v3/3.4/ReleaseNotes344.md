@@ -44,7 +44,7 @@ Congratulations, Ruby! Version 1.0.0 has arrived along with new bugtracker integ
 
 * **.NET Agent Summary:** We improved agent performance and accuracy, and added support for analysis of SignalR-based applications. We also fixed a bug where certain special characters could prevent the agent from sending vulnerability details to Contrast.
 
-* **Node.js Agent Summary:** While we were getting ready to support node 8, we did a ton of housekeeping. Among our repairs are issues with our method for bundling dependencies, using lazy routers in Express and Syslog client usage on Windows. 
+* **Node.js Agent Summary:** While we were getting ready to support hapi and node 8, we did a ton of housekeeping. Among our repairs are issues with our method for bundling dependencies, using lazy routers in Express and Syslog client usage on Windows. 
 
 * **Ruby Agent Summary:** We're proud to announce that the [Ruby agent](installation-ruby.html#ruby-overview) has left beta and version 1.0.0 is now available in Contrast 3.4.4! We’ve been working on performance and fine tuning the pattern recognition for the XSS, SQLi and CMDi rules. We closed a bug where the Oga XML library wasn't being checked for the XXE vulnerability. We also refined some of our unit tests and added screener testing for RailsGoat, and built a dedicated screener for Sinatra applications.
 
