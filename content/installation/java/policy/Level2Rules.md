@@ -198,7 +198,8 @@ Add a new `<source>` to the policy to tell Contrast to tag and monitor objects c
 
 >**Note:** This method must be enabled for source creation to occur and the `id` field must be unique. The specified tag for a source should indicate the concern. 
 
-For these instructions, you're concerned that the parameter returned from this method might contain a credit card. If multiple sources can return data with credit card numbers in them, you can create multiple sources with unique `id` and `name` attributes that all designate the same tags - in this case, `ccn`.
+For these instructions, you're concerned that the parameter returned from this method might contain a credit card. If multiple sources can return data with credit card numbers in them, you can create multiple sources with unique `id` and `name` attributes that all designate the same tags - in this case, `
+`.
 
 <a href="assets/images/lvl_2_rule_dataflow_source_xml.png" rel="lightbox" title="DataFlow Rule - Source - XML"><img class="thumbnail" src="assets/images/lvl_2_rule_dataflow_source_xml.png"/></a>
 
@@ -282,7 +283,7 @@ import com.contrastsecurity.interfaces.trace.ITrace
 
 
 @Component
-class CNNRule extends DataFlowSecurityRule {
+class CCNRule extends DataFlowSecurityRule {
     String getId() { "credit-card-exposed" }
     String getName() { "Credit card number exposed" }
     String getDescription() { "Verifies that no credit card numbers are exposed in the logs." }
@@ -357,7 +358,7 @@ xml
     <lang:groovy
             id="credit-card-exposed-rule"
             refresh-check-delay="30000"
-            script-source="classpath:rulepack/cnn.groovy"/>                
+            script-source="classpath:rulepack/ccn.groovy"/>                
 </beans>
 ```
 
