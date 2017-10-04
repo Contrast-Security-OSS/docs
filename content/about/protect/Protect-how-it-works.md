@@ -14,4 +14,19 @@ Instrumentation is a technique that Contrast uses to add defenses into an applic
 
 The largest benefit to Contrast’s instrumentation approach (over a perimeter-based approach, for example) is the quantum leap in accuracy when detecting attacks. By observing how an application responds when it's free from attacks, Contrast can collect as much information as possible before deciding to block an attack. This additional information makes all the difference when it comes to accurately identifying attacks and the danger they pose to your applications.
 
+## Protect an Application
+
+Protect is applied for each agent. To fully protect an application, you must make sure that all agents that host the application are licensed and have Protect enabled. This is most vital in production environments, since you want to make sure that all application instances are protected when they initially come online without any human intervention. The easiest way to accomplish this is to set the organizational defaults to automatically license all production agents and enable Protect for Production environments.
+
+Read more about [Server Defaults](admin-orgsettings.html#org-server).
+
+## Protect Policies
+
+There are five types of policies available in Contrast Protect. 
+
+* [Protect Rules](admin-policymgmt.html#protect) which allow you to set applications to monitor for attacks 
+* [CVE Shields](admin-policymgmt.html#cve) which provide a standardized identifier for a given vulnerability or exposure
+* [Virtual Patches](admin-policymgmt.html#patch) which are custom defenses you define to defend against specific vulnerabilities
+* [Log Enhancers](admin-policymgmt.html#log) which provide additional instrumentation instructions 
+* [IP Management](admin-policymgmt.html#ip) where you can manage a blacklist and whitelist (trusted hosts)
 

@@ -1,8 +1,10 @@
 <!--
-title: "Enabling Assess"
-description: "Overview of how to enable Assess"
-tags: "assessment how it works instrumentation enable assess"
+title: "Enable Assess & Protect"
+description: "Enable Assess and Protect in Contrast"
+tags: "Admin manage organization assess protect"
 -->
+
+## Enable Assess
 
 To get started with Assess, the first thing you need to do is enable the Assess functionality on the agents that have instrumented the application you want to analyze. This is done within the Contrast UI on the **Servers** page. Find the server(s) you want to begin analyzing and turn the **Assess** toggle ON. 
 
@@ -14,20 +16,16 @@ When Assess is enabled, you will need to restart the application in order for th
 
 >**Note:** Organization administrators can skip this manual step of applying licenses for their users by enabling "Automatically apply licenses to new applications" from the **Organization Settings** page in the **Licensing** section. 
 
-## Application Assessment
-Assessment is applied to each application. Once your application has been assessed, Contrast presents a multitude of information, including:
+## Enable Protect
 
-* Accurate vulnerability identification that comes with details on the code and solutions to fix it
-* Overall score to let you know how the application is performing in general - read about [Score Settings](admin-orgsettings.html#score-settings)
-* Activity of the URLs being hit
-* Application usage metrics
-* Insight into the architecture of the running application 
-* Third-part and open-source library assessment results
-* Compliance reporting via PDF
+To get started with Protect, the first thing you need to do is enable the Protect functionality on the agents that have instrumented the application you want to protect. This is done within the Contrast UI on the **Servers** page.  
 
-## Contrast Assessment Policies
-There are two types of policies available in Contrast Assess. They are as follows:
+Find the server(s) you want to begin protecting and turn the **Protect** toggle ON. Enabling protection requires a Protect license, so you'll be prompted to upgrade if it isn't already licensed. Alternatively, you can manually apply a license to a single server via the row menu or in bulk by selecting which agents to upgrade, then clicking the shield icon in the action bar and selecting **Apply Protection License**. 
 
-* [Assess Rules](admin-policymgmt.html#assess) which can detect specific types of vulnerabilities, such as SQL Injection or Cross-Site Scripting.
-* [Security Controls](admin-policymgmt.html#security) which are methods in your code that make sure data is safe to use.
+<a href="assets/images/Apply_License_Protect.png" rel="lightbox" title="Apply Protection License"><img class="thumbnail" src="assets/images/Apply_License_Protect.png"/></a>
+
+When Protect is enabled, you will need to restart the application in order for the Contrast agent to properly instrument the application with Protect capabilities. Once that is completed, Contrast will begin monitoring and blocking attacks. The server will now have a shield icon appear next to the name, indicating it has a Protection license assigned to it.
+
+>**Note:** Organization administrators can skip this manual step of applying licenses for their users by turning Protection ON by default for new servers by going to the **Organization Settings** page in the **Servers** section. This can be enabled for specific server environments.
+
 
