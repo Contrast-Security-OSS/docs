@@ -74,6 +74,7 @@ jq -r '.traces[
 
 ## More Information 
 
+* [About the Contrast API](tools-api.html#api-about)
 * [Analyze Findings](user-vulns.html#analyze)
 * [Manage Vulnerabilities](user-vulns.html#manage-vuln)
 * [How to Fix Them](user-vulns.html#remediate)
