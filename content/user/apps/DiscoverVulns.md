@@ -55,9 +55,22 @@ The exported file contains the following data fields for each vulnerability:
 * Request Qs
 * Request Body
 
-### Alternative methods
+### Custom reports
 
-For users looking to craft custom software composition analysis reports about their applications, the vulnerability export feature might not provide sufficient information; however, Contrast offers a rich Application API which gives you access to Contrast vulnerability data. Reference the **Contrast RESTful API documentation > Application Trace Filtering > /ng/{orgUuid}/traces/{appId}/filter** section for instructions on using the Application API. You may also explore additional details on your vulnerabilities using a manual method.
+For users looking to craft custom software composition analysis reports about their applications, the vulnerability export feature might not provide sufficient information; however, Contrast offers a rich Application API which gives you access to Contrast vulnerability data. Reference the **Contrast RESTful API documentation > Application Trace Filtering > /ng/{orgUuid}/traces/{appId}/filter** section for instructions on using the Application API. 
+
+You may also explore additional details on your vulnerabilities using a manual method.
+
+> **Example:** This cURL request retrieves a list of vulnerabilities in which each vulnerability includes a list of the applications in which it was found. The jq tool formats the data as CSV for use in a custom report.
+```
+curl -H "Authorization: $(echo -n $username:$servicekey
+base64)" -H "API-Key: $apikey" https://app.contrastsecurity.com/Contrast/api/ng/$orgid/orgtraces/filter?expand=request
+jq -r '.traces[
+] 
+{uuid: .uuid, protocol: .request.protocol}
+[.uuid, .protocol]
+@csv'
+```
 
 ## More Information 
 
