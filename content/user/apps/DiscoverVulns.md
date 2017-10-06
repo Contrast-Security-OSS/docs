@@ -16,7 +16,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 Contrast shows you all the vulnerabilities it's discovered including SQL Injection, Cross-Site Scripting (XSS), Command Injection, Path Traversal, XML External Entity Processing (XXE), Cross-Site Request Forgery (CSRF), Java Deserialization and many more. Go to the **Vulnerabilities** tab from the application's **Overview** to see a list of all vulnerabilities found in that application, or go to the main **Vulnerabilities** page to see all vulnerabilities across your portfolio. 
 
-> **Note::** For Contrast to find weaknesses and present findings, you must also exercise your application. You can then track, share and get remediation guidance for each vulnerability that Contrast reports. 
+> **Note:** For Contrast to find weaknesses and present findings, you must also exercise your application. You can then track, share and get remediation guidance for each vulnerability that Contrast reports. 
 
 The grid of discovered vulnerabilities provides extremely detailed information on each one, including: 
 
@@ -27,7 +27,7 @@ The grid of discovered vulnerabilities provides extremely detailed information o
 
 ## Export Findings
 
-Export details on vulnerability findings from the **Vulnerabilities** page, a vulnerability's overview page, or the **Vulnerabilities** tab from an application or server's overview page. Click the **Export** icon to choose either CSV or XML formats for the grouping of vulnerabilities that you want to include in the report.
+Export details on vulnerability findings from the **Vulnerabilities** page, a vulnerability's **Overview** tab, or an application or server's **Vulnerabilities** tab. Click the **Export** icon to choose either CSV or XML formats for the grouping of vulnerabilities that you want to include in the report.
 
 <a href="assets/images/Vuln-export-options.png" rel="lightbox" title="Vulnerability export options"><img class="thumbnail" src="assets/images/Vuln-export-options.png"/></a>
 
