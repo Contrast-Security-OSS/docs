@@ -1,7 +1,7 @@
 <!--
-title: "Overview"
-description: "Overview of agent setup with Contrast"
-tags: "EOP overview Contrast agents installation setup"
+title: "Quick Start Guide"
+description: "Overview of installing Contrast"
+tags: "quick start guide EOP overview Contrast agents installation setup"
 -->
 
 Before you begin the process of setting up Contrast, explore the requirements, processes and benefits to including it in your current workflows. 

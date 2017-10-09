@@ -18,4 +18,4 @@ For more information, read the article on [Integrations](admin-orgintegrations.h
 ## Custom Processing
 Vulnerability data can also be dumped to CSV or XML for custom processing. From the **Vulnerabiities** page, you can select all or any number of vulnerabilities to export via the paper airplane icon.  
 
-If you want to gather this data outside of the Contrast UI, we also provide robust APIs to do so. See our article on [Vulnerabilities API](tools-apivulns.html).
+If you want to gather this data outside of the interface, Contrast also provide robust APIs to do so. See our article on [About the Contrast APIs](tools-api.html#api-about) for more details.

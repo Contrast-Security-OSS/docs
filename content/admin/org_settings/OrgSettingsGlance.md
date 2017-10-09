@@ -20,6 +20,10 @@ Manage users for an organization, by [adding](admin-onboardteam.html#create-user
 ## Security
 Manage [password policy](admin-systemsettings.html#pwd) and session timeouts, [two-step verification](admin-orgsecurity.html#security-tsv) and [IP restrictions](admin-orgsecurity.html#security-ip). You can also access an [audit log](admin-orgsecurity.html#audit-log), where you can search for past activity in your organization by keyword and date.
 
+## SSO
+
+Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. As a Super or Organization Administrator, you can [configure Contrast to use this service](installation-setupauth.html#sso-setup) for your organization.
+
 ## API
 Contrast [APIs](tools-api.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
 
