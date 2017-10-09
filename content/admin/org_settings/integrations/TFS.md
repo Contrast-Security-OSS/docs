@@ -31,6 +31,24 @@ Once a connection is made, select the applications that you want to be available
 
 > **Note:** Contrast uses API v.2 to support VSTS and TFS 2015/2017.
 
+### Two-way integration
+
+Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in VSTS/TFS.
+
+<!-- (Image here)  -->
+
+In the configuration page, begin setup by checking the box to **Enable two-way integration**. This generates a URL that appears below the checkbox, which your administrator must use to register a webhook in VSTS/TFS. Clicking the link opens a new tab that takes you to [instructions for registering webhooks]<!-- (https://developer.atlassian.com/jiradev/jira-apis/webhooks#Webhooks-rest -->).
+
+> **Note:** When you delete a configuration with two-way integration enabled, you must delete the webhook configuration from your VSTS/TFS administrator console to completely remove the integration.
+
+
+
+Once the two-way integration is saved, Contrast will automatically generate comments in the **Discussion** tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
+
+#### Multiple vulnerabilities
+
+For multiple vulnerabilities sent to VSTS/TFS in bulk as a single issue, the TFS ticket status applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be closed when all the TFS tickets are closed.
+
 ### Automatically create tickets 
 
 Automatically create tickets for newly discovered vulnerabilities by checking the designated box in the configuration form. In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. The default selections are "Critical" and "High".
