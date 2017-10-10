@@ -10,6 +10,6 @@ You might run into an issue connecting to your identity provider, if you're usin
 
 ## Solution
 
-To resolve the issue, [configure SSO](admin-orgsettings.html#sso-org) by unchecking **I have access to the metadata URL** and pasting the metadata XML for the IDP into the text box. 
+To resolve the issue, [configure SSO](installation-setupauth.html#sso-setup) by unchecking **I have access to the metadata URL** and pasting the metadata XML for the IDP into the text box. 
 
 

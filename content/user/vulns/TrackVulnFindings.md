@@ -21,4 +21,4 @@ For more information, read the article on [Integrations](admin-orgintegrations.h
 
 Vulnerability data can also be dumped to CSV or XML file for custom processing. From the **Vulnerabilities** page, you can select all or any number of vulnerabilities and click the paper airplane icon to export them into a spreadsheet.  
 
-If you want to gather this data outside of the interface, Contrast also provides robust [APIs](https://api.contrastsecurity.com/) where you can explore even more information. Read the [Vulnerabilities API](tools-apivulns.html) article to learn more about how this works.
+If you want to gather this data outside of the interface, Contrast also provides robust [APIs](https://api.contrastsecurity.com/) where you can explore even more information. Read the [Vulnerabilities API](tools-api.html#api-about) for more details.

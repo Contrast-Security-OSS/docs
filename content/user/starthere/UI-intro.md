@@ -81,7 +81,7 @@ What’s better than assigning a vulnerability to a user? Creating tags for each
  
 > **Example:** You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
 
-These tags can be created for applications and servers as well. To learn more about filters, please read the [Using Contrast Overview](user-starthere.html#ui-overview).  
+These tags can be created for applications and servers as well. To learn more about filters, please read about [Contrast Navigation](user-starthere.html#ui-navigate).  
  
 ## Reports
 
