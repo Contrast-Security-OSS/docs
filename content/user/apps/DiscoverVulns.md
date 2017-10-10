@@ -63,13 +63,11 @@ You may also explore additional details on your vulnerabilities using a manual m
 
 > **Example:** This cURL request retrieves a list of vulnerabilities that also shows a list of the applications in which each vulnerability was found. The jq tool formats the data as CSV for use in a custom report.
 ```
-curl -H "Authorization: $(echo -n $username:$servicekey
-base64)" -H "API-Key: $apikey" https://app.contrastsecurity.com/Contrast/api/ng/$orgid/orgtraces/filter?expand=request
-jq -r '.traces[
-] 
-{uuid: .uuid, protocol: .request.protocol}
-[.uuid, .protocol]
-@csv'
+curl \
+    -H "Authorization: $(echo -n $username:$servicekey | base64)" \
+    -H "API-Key: $apikey" \
+    https://app.contrastsecurity.com/Contrast/api/ng/$orgid/orgtraces/filter?expand=request | \
+    jq -r '.traces[] | {uuid: .uuid, protocol: .request.protocol} | [.uuid, .protocol] | @csv'
 ```
 
 ## More Information 
