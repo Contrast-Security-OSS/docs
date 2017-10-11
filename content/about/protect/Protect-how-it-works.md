@@ -6,9 +6,11 @@ tags: "protect how it works continuous"
 
 Contrast Protect is a runtime application protection (RASP) solution that can identify and block application attacks from within a running application. Instead of attempting to build a perimeter around an application, like most legacy application protections (WAFs) do today, Protect uses instrumentation to build defenses directly into the application. Once instrumented, Contrast Protect analyzes all application requests, including APIs, and identifies, reports and blocks any attacks it sees.
 
-## Instrumentation
+<!-- 
+## Instrumentation (Protect)
 
-Instrumentation is a technique that Contrast uses to add defenses into an application. These defenses are comprised of two types of objects. The first type is **sensors**, which observe attack payloads and corresponding application behavior. This enables Contrast to identify and report on application attacks and application behaviors. The second type is **actuators**, which enable applications to block malicious activity from within the application. Just like the approach used by application performance monitoring (APM) tools, like New Relic or AppDynamics, Contrast uses safe, proven approaches to adding protection capabilities to an application.
+Instrumentation is a technique that Contrast uses to add defenses into an application. These defenses are comprised of two types of objects. The first type is **sensors**, which observe attack payloads and corresponding application behavior. This enables Contrast to identify and report on application attacks and application behaviors. The second type is **actuators**, which enable applications to block malicious activity from within the application. Just like the approach used by application performance monitoring (APM) tools, Contrast uses safe, proven approaches to adding protection capabilities to an application.
+-->
 
 ### Application threat intelligence
 
