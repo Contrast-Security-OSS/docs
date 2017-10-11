@@ -10,21 +10,21 @@ Use the Contrast .NET Agent to analyze ASP.NET applications running on Azure Vir
 
 Follow these steps to install the .NET agent on an Azure VM:
 
-* Set up the Azure VM normally, and deploy the ASP.NET applications to be analyzed. </li>
-* Log in to Contrast and download the .NET agent zip file. </li>
+* Set up the Azure VM as you would normally, and deploy the ASP.NET applications to be analyzed. 
+* Log in to Contrast, and download the .NET agent zip file. 
 * Access the Azure VM by Remote Desktop. (See [Log on to a Windows virtual machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-log-on-windows-server).)
 
 <a href="assets/images/KB3-e15_1.png" rel="lightbox" title="Azure Virtual Machine"><img class="thumbnail" src="assets/images/KB3-e15_1.png"/></a>
 
 * Copy the .NET agent zip file to the Azure VM, and extract the archive. 
 * Run the .NET agent installer (*ContrastSetup.exe*).
-* Browse to and use the application normally so that Contrast can analyze it. 
+* Browse to and use the application so that Contrast can analyze it. 
 
 <a href="assets/images/KB3-e15_2.png" rel="lightbox" title="Virtual Machine RDP"><img class="thumbnail" src="assets/images/KB3-e15_2.png"/></a>
 
 ## Azure Cloud Services or Mobile Services
 
-* Set up the Azure Cloud Service normally, and deploy the ASP.NET applications to be analyzed. 
+* Set up the Azure Cloud Service as you would normally, and deploy the ASP.NET applications to be analyzed. 
 * Log in to Contrast, and download the .NET agent zip file.
 * Access the Cloud Service instance by Remote Desktop. (See [Using Remote Desktop with Azure Roles](https://msdn.microsoft.com/en-us/library/azure/gg443832.aspx).) 
 
