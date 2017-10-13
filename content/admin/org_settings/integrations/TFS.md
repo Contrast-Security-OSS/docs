@@ -45,7 +45,9 @@ Once the two-way integration is saved, Contrast will automatically generate comm
 
 #### Multiple vulnerabilities
 
-For multiple vulnerabilities sent to VSTS or TFS in bulk as a single issue, the ticket state applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be updated when all the tickets are closed.
+For multiple vulnerabilities sent to VSTS or TFS in bulk as a single issue, the ticket state applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be updated when all the tickets are updated as well.
+
+> **Example:** If you change a ticket state from "New" to "Active", Contrast updates the vulnerability status only if all the tickets related to that vulnerability are in "Active" state. 
 
 ### Automatically create tickets 
 
