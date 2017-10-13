@@ -16,7 +16,7 @@ Third-Party Module Support                                       | Web Framework
 
 ## OS Support
 
-The agent runs entirely in Node.js-"land" with no *C* dependencies, and therefore works **on all of the same operating systems as Node.js itself**. This includes Linux, Windows, macOS, and Unix.
+The agent runs entirely in the Node.js application layer with no *C* dependencies. As a result, it works on **all of the same operating systems as Node.js**, including Linux, Windows, macOS and Unix.
 
 ## Testing Environments
 
