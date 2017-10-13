@@ -17,6 +17,8 @@ Integrating Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) w
 
 In the **Integrations** page, click **Connect** in the VSTS row. This takes you to the **Connect with Visual Studio** page, where you must complete the following fields.
 
+<a href="assets/images/VSTS-TFS-integration.png" rel="lightbox" title="VSTS Integration"><img class="thumbnail" src="assets/images/VSTS-TFS-integration.png"/></a>
+
 Field | Description
 ------ | -----------
 **Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers.
@@ -25,29 +27,36 @@ Field | Description
 
 Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in.
 
-<a href="assets/images/VSTS-TFS-integration.png" rel="lightbox" title="VSTS Integration"><img class="thumbnail" src="assets/images/VSTS-TFS-integration.png"/></a>
-
 Once a connection is made, select the applications that you want to be available to this bugtracker. Customize the values for the Project, Assignee and Default Work Issue Type fields as well as the Default Severity or Priority levels depending on the work issue type.
 
 > **Note:** Contrast uses API v.2 to support VSTS and TFS 2015/2017.
 
 ### Two-way integration
 
-Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in VSTS/TFS.
+Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in VSTS or TFS.
 
-<!-- (Image here)  -->
+<a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration with VSTS or TFS"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
 
-In the configuration page, begin setup by checking the box to **Enable two-way integration**. This generates a URL that appears below the checkbox, which your administrator must use to register a webhook in VSTS/TFS. Clicking the link opens a new tab that takes you to [instructions for registering webhooks]<!-- (https://developer.atlassian.com/jiradev/jira-apis/webhooks#Webhooks-rest -->).
+In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown fields to to set a vulnerability status based on each VSTS/TFS ticket status. The table below shows the default options in **bold**. 
 
-> **Note:** When you delete a configuration with two-way integration enabled, you must delete the webhook configuration from your VSTS/TFS administrator console to completely remove the integration.
+| Vulnerability Status                                       |Ticket Status                                       |
+|------------------------------------------------------------|-----------------------------------------------------------|
+| **Confirmed** <br> Suspicious <br>  Reported               | OPEN |
+| **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed | IN PROGRESS |
+| **Not a Problem** <br> Remediated <br> Fixed  | RESOLVED |
+| **Confirmed** <br> Suspicious <br> Reported   | REOPENED |
+| **Not a Problem** <br> Remediated <br> Fixed  | CLOSED |
+| **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed | BLOCKED |
+| **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed | NEEDS CLARIFICATION |
+| **Not a Problem** <br> Remediated <br> Fixed  | READY TO DEPLOY |
 
-
+If you choose **Not a Problem** as a ticket status, Contrast requires you to enter a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection is **Other**. 
 
 Once the two-way integration is saved, Contrast will automatically generate comments in the **Discussion** tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
 
 #### Multiple vulnerabilities
 
-For multiple vulnerabilities sent to VSTS/TFS in bulk as a single issue, the TFS ticket status applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be closed when all the TFS tickets are closed.
+For multiple vulnerabilities sent to VSTS or TFS in bulk as a single issue, the ticket status applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be closed when all the tickets are closed.
 
 ### Automatically create tickets 
 
