@@ -37,15 +37,15 @@ Use two-way integration to automatically update the status of a linked vulnerabi
 
 <a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration with VSTS or TFS"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
 
-In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket status. If you choose **Not a Problem** as a ticket status, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection is "Other". 
+In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket state. If you choose **Not a Problem** as a ticket state, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection is "Other". 
 
-> **Note:** After you fill in the the **Work Item Type** and the **Project** fields in the configuration page, Contrast does an API call that returns a list of your VSTS/TFS ticket statuses. The **Vulnerability Status** dropdown menus are populated accordingly. 
+> **Note:** After you fill in the the **Work Item Type** and the **Project** fields in the configuration page, Contrast does an API call that returns a list of your VSTS/TFS ticket states. The **Vulnerability Status** dropdown menus are populated accordingly. 
 
-Once the two-way integration is saved, Contrast will automatically generate comments in the **Discussion** tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
+Once the two-way integration is saved, Contrast will automatically generate comments in the **Discussion** tab on each vulnerability page when the state of a ticket is updated. Each comment includes the name of the bugtracker and a link to the ticket. 
 
 #### Multiple vulnerabilities
 
-For multiple vulnerabilities sent to VSTS or TFS in bulk as a single issue, the ticket status applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be closed when all the tickets are closed.
+For multiple vulnerabilities sent to VSTS or TFS in bulk as a single issue, the ticket state applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be updated when all the tickets are closed.
 
 ### Automatically create tickets 
 
