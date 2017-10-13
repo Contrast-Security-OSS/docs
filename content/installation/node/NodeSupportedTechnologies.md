@@ -16,7 +16,7 @@ Third-Party Module Support                                       | Web Framework
 
 ## OS Support
 
-Agent testing is carried out on **64-bit OSX** and **64-bit Linux**. The agent runs entirely in Node.js-"land" with no *C* dependencies, and can also work on other operating systems.
+The agent runs entirely in the Node.js application layer with no *C* dependencies. As a result, it works on **all of the same operating systems as Node.js**, including Linux, Windows, macOS and Unix.
 
 ## Testing Environments
 
