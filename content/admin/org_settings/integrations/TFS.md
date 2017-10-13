@@ -37,20 +37,9 @@ Use two-way integration to automatically update the status of a linked vulnerabi
 
 <a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration with VSTS or TFS"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
 
-In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown fields to to set a vulnerability status based on each VSTS/TFS ticket status. The table below shows the default options in **bold**. 
+In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket status. If you choose **Not a Problem** as a ticket status, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection is "Other". 
 
-| Vulnerability Status                                       |Ticket Status                                       |
-|------------------------------------------------------------|-----------------------------------------------------------|
-| **Confirmed** <br> Suspicious <br>  Reported               | OPEN |
-| **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed | IN PROGRESS |
-| **Not a Problem** <br> Remediated <br> Fixed  | RESOLVED |
-| **Confirmed** <br> Suspicious <br> Reported   | REOPENED |
-| **Not a Problem** <br> Remediated <br> Fixed  | CLOSED |
-| **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed | BLOCKED |
-| **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed | NEEDS CLARIFICATION |
-| **Not a Problem** <br> Remediated <br> Fixed  | READY TO DEPLOY |
-
-If you choose **Not a Problem** as a ticket status, Contrast requires you to enter a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection is **Other**. 
+> **Note:** After you fill in the the **Work Item Type** and the **Project** fields in the configuration page, Contrast does an API call that returns a list of your VSTS/TFS ticket statuses. The **Vulnerability Status** dropdown menus are populated accordingly. 
 
 Once the two-way integration is saved, Contrast will automatically generate comments in the **Discussion** tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
 
