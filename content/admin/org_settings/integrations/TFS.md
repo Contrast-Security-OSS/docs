@@ -19,11 +19,10 @@ In the **Integrations** page, click **Connect** in the VSTS row. This takes you 
 
 <a href="assets/images/VSTS-TFS-integration.png" rel="lightbox" title="VSTS Integration"><img class="thumbnail" src="assets/images/VSTS-TFS-integration.png"/></a>
 
-Field | Description
------- | -----------
-**Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers.
-**Personal Access Token** | The token associated with your user to [authenticate to your host](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate).
-**Host** | The VSTS or TFS URL; must be accessible from the Contrast interface instance being configured.
+
+* **Name:** The name for the bugtracker entry; displayed when sending findings to bugtrackers.
+* **Personal Access Token:** The token associated with your user to [authenticate to your host](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate).
+* **Host:** The VSTS or TFS URL; must be accessible from the Contrast interface instance being configured.
 
 Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in.
 
@@ -37,9 +36,9 @@ Use two-way integration to automatically update the status of a linked vulnerabi
 
 <a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration with VSTS or TFS"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
 
-In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket state. If you choose **Not a Problem** as a ticket state, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection is "Other". 
+In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket state. If you choose **Not a Problem** as a ticket state, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid; the default selection is "Other". 
 
-> **Note:** After you fill in the the **Work Item Type** and the **Project** fields in the configuration page, Contrast does an API call that returns a list of your VSTS/TFS ticket states. The **Vulnerability Status** dropdown menus are populated accordingly. 
+> **Note:** After you fill in the the **Work Item Type** and the **Project** fields in the configuration page, as outlined in the previous section, Contrast does an API call that returns a list of your VSTS/TFS ticket states. The **Vulnerability Status** dropdown menus are populated accordingly. For more information about VSTS and TFS work item types and ticket states, read [Microsoft's documentation](https://docs.microsoft.com/en-us/vsts/work/work-items/guidance/agile-process-workflow#track-progress).
 
 Once the two-way integration is saved, Contrast will automatically generate comments in the **Discussion** tab on each vulnerability page when the state of a ticket is updated. Each comment includes the name of the bugtracker and a link to the ticket. 
 
