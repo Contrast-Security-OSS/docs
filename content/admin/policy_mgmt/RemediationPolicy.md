@@ -9,7 +9,7 @@ As Contrast assesses your applications, it can flag vulnerabilities that don't m
 
 ## How It Works 
 
-Administrators can define requirements for vulnerability remediation based on any vulnerability type or severity as well as any application(s) which should comply. Contrast then marks any vulnerabilities in violation of this policy with a warning in the interface or changes the vulnerability's status in the Vulnerability page grid when auto-remediated. (Administrators are also notified of violations or auto-remediations both in the product and by email.)
+Administrators can define requirements for vulnerability remediation based on any vulnerability type, severity and application(s) which should comply. Contrast then marks any vulnerabilities that are in violation or auto-remediated based on this policy with a notification in the interface. (Administrators are also notified of violations and auto-remediations in the product and by email.)
 
 ## Set Up Policies
 
@@ -25,19 +25,21 @@ To create a new policy, click the **Add Policy** button. In the **Add Remediatio
 
 #### Automatic actions
 
-In the **Action** section, use the radio buttons and corresponding number control fields to either **flag vulnerabilities as a violation** or **automatically remediate** them within a given number of days. If multiple policies or actions apply to the same vulnerability, the following rules apply: 
+In the **Action** section, use the radio buttons and corresponding number control fields to either **flag vulnerabilities as a violation** or **automatically remediate** them after a given number of days. If multiple policies or actions affect the same vulnerability, the following rules determine the course of action.
 
 * The most severe action (i.e. the action with the closest deadline) applies first. 
 * If a violation deadline applies first, the vulnerability is flagged then auto-remediated when the later deadline applies. 
 * If an auto-remediation deadline applies first, the vulnerability is closed and never flagged. 
 
-If Contrast rediscovers a legitimate vulnerability that was automatically remediated, Contrast will report the vulnerability as usual. 
+> **Note:** If Contrast rediscovers a legitimate vulnerability that was automatically remediated, Contrast will [report the vulnerability](user-vulns.html#analyze) as usual. 
 
 ### Edit policies 
 
 Click the name of an existing policy in the grid to see more details and update your selections in the **Edit Remediation Policy** form. Click the trashcan icon below the form or in the grid to permanently delete the policy. Once deleted, Contrast won't notify you of vulnerabilities that were within the scope of this policy. You can also use the toggles in the grid to enable or disable individual policies. 
 
-## Policy Violations
+## Policy Violations and Remediations 
 
-If a vulnerability isn't remediated within the given number of days, Contrast adds a warning note to the Vulnerabilities thermometer in the dashboard and flags the vulnerabilities in the Vulnerabilities grid. Hover over the warning icon for each vulnerability in the grid or go to the vulnerability details page for more information about the violation.
+If a vulnerability isn't remediated within the given number of days, Contrast adds a warning note to the Vulnerabilities thermometer in the dashboard and flags the vulnerabilities in the Vulnerabilities grid. Hover over the warning icon for each vulnerability in the grid, or go to the vulnerability details page for more information about the violation.
+
+If a vulnerability has been auto-remediated, its status is updated to "Auto-Remediated" in the Vulnerabilities grids. Hover over the status text or go the auto-generated comment in the vulnerability's **Discussion** tab for more information about the applicable policy. 
 
