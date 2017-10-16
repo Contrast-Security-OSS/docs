@@ -17,7 +17,7 @@ For each reported vulnerability, you can mark a status and create tags as needed
 | Confirmed     | Stays Open                      | No Change            |
 | Suspicious    | Stays Open                      | No Change            |
 | Not a Problem | Closed - Requires Justification | Stays Closed         |
-| Remediated    | Closed                          | Reopened as **Reported** |
+| Remediated    | Closed                          | Reopened as "Reported" |
 | Reported      | Default                         | No Change            |
 | Fixed         | Closed                          | Stays Closed         |
 | Auto-remediated | Closed 						  | Reopened			 |
@@ -54,7 +54,7 @@ The **trigger** is the last event in the vulnerability. The trigger is the call 
 
 Contrast only detects the actual behavior of an application. If a vulnerability doesn't really represent a problem, there should be a policy change that will prevent this issue from occurring again. The most commonly reported false alarm is that the application has a custom control that Contrast doesn't know about. 
 
-Customers with **Enterprise** license can add a custom method call to the appropriate tag list in the Contrast policy. 
+Customers with **Enterprise** licenses can add a custom method call to the appropriate tag list in the Contrast policy. 
 
 > **Example:** Your custom HTML-encoder method that takes a string and returns an HTML-encoded string should add the **html-encoded** tag to the data.
 
