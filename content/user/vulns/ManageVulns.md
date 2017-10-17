@@ -4,7 +4,7 @@ description: "Overview of vulnerability management"
 tags: "user vulnerability management"
 -->
 
-Users of Contrast, depending on either their organization or application role, can manage vulnerabilities. Certain functions can be found either inline or in bulk by selecting any number of vulnerabilities and performing an action from the action bar. Go to the **Vulnerabilities** tab within a specific application to see a list of findings for that application or the main Vulnerabilities page to see a list of vulnerabilities across your portfolio. Delve in to view details on each one and get rid of weaknesses so your application isn't compromised. 
+Contrast users can manage vulnerabilities depending on either their organization or application role. Certain functions can be found either inline or in bulk by selecting any number of vulnerabilities and performing an action from the action bar. Go to the **Vulnerabilities** tab within a specific application to see a grid view of findings for that application or the main **Vulnerabilities** page to see a grid view of  vulnerabilities across your portfolio. Click on each vulnerability to see more details and learn how to get rid of weaknesses that compromise your applications' security. 
 
 ## Filter Vulnerabilities 
 
@@ -16,7 +16,7 @@ Advanced filtering help you find vulnerabilities discovered on a particular serv
 
 ## Mark Vulnerabilities
 
-Contrast has five statuses for vulnerabilities to help you prioritize and manage findings. You may add comments to logged status changes to provide more context.
+Contrast has five statuses for vulnerabilities to help you prioritize and manage findings. 
 
 * **Reported:** The default for all discovered vulnerabilities.
 * **Confirmed:** A user triaged the vulnerability and flagged it as a definitive risk.
@@ -26,8 +26,10 @@ Contrast has five statuses for vulnerabilities to help you prioritize and manage
 * **Fixed:** The vulnerability remains closed even if rediscovered, and will never be reported again.
 * **Auto-remediated:** Contrast automatically remediated a vulnerability based on a [Remediation Policy](admin-policymgmt.html#remediate) set up by an administrator. 
 
-<!-- <a href="assets/images/Vulnerability_Filters.png" rel="lightbox" title="Vulnerability Filters"><img class="thumbnail" src="assets/images/Vulnerability_Filters.png"/></a>
- -->
+To change the status of one or more vulnerabilities, select the checkboxes in the grid rows, click the **Mark as** button and choose a new status from the dropdown menu. You may add comments to logged status changes to provide more context.
+
+<a href="assets/images/Vulnerability-mark-as.png" rel="lightbox" title="Change vulnerability status"><img class="thumbnail" src="assets/images/Vulnerability-mark-as.png"/></a>
+
 See [Analyze Findings](user-vulns.html#analyze) to understand the behaviors when a vulnerability is marked and found again.
 
 ## Vulnerability Severity
@@ -54,7 +56,7 @@ Contrast allows you to merge vulnerabilities of the same type to consolidate fin
 
 ## Delete Vulnerabilities
 
-To delete one or more vulnerabilities, select the checkbox(s) in the grid row(s), and click the trash can icon in the action bar above the grid. You can also delete a single vulnerability by clicking the arrow in the grid row, and then selecting the trashcan icon in the dropdown menu. 
+To delete one or more vulnerabilities, select the checkboxes in the grid rows, and click the trash can icon in the action bar above the grid. You can also delete a single vulnerability by clicking the arrow in the grid row, and then selecting the trashcan icon in the dropdown menu. 
 
 <a href="assets/images/Vulnerability-delete.png" rel="lightbox" title="Delete vulnerabilities"><img class="thumbnail" src="assets/images/Vulnerability-delete.png"/></a>
 
