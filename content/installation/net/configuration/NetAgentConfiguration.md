@@ -12,12 +12,20 @@ The Contrast configuration file *DotnetAgentService.exe.config* contains several
 | Parameter                                             | Description                                                                                                                             |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | TeamServerUrl                                         | Overrides the Contrast URL that's packaged with the agent. This can be useful for networks that proxy the information. |
-| *ProxyAuth*, *ProxyUser*, *ProxyPass*, *ProxyAddress* | Controls the proxy (if any) used by the agent to connect to the Contrast interface. |
+| *ProxyAuth*, *ProxyAddress*            | Controls the proxy (if any) used by the agent to connect to the Contrast interface.  Proxy credentials, if any, are stored in a separate **DotnetAgent.Protected** section as described below |
+| EncryptProtectedSettings                              | Controls whether *ProxyUser* and *ProxyPass* settings are encrypted.  See *Proxy Credentials* below. |
 | TlsVersion                                            | <ul><li>Controls the version of TLS that the agent uses to communicate with the Contrast interface.</li><li>Valid TlsVersion values include *Tls*, *Tls11* and *Tls12*.</li><li> Agent default behavior is *SecurityProtocolType.Tls* &#124; *SecurityProtocolType.Tls11* &#124; *SecurityProtocolType.Tls12*</li></ul> |
 | RestartIISOnConfigChange                              | <ul><li>Restarts IIS in the background if any of the following configuration settings are changed: *ProcessBlacklist*, *ProcessWhitelist*, *ProfilerBehavior* or *ResponseUrlWhiteListRegex*.</li><li>The default value is *true*. If set to *false*, you must restart IIS for changes to the noted configuration settings to take effect.</li></ul> | 
 | AutoUpdateEnabled                                     | <ul><li> Determines if the agent automatically updates to a newer version when a newer version is available on Contrast.</li><li> The default value is *true*. If set to *false*, the agent doesn't automatically update.</li></ul>  | 
 | Contrast.AppVersion                                   | <ul><li>** Applies to Contrast Agent v.3.3.6 and above.** </li><li> Controls the application version tag sent to Contrast.</li><li>Setting *Contrast.AppVersion* in the agent's configuration file uses the same version tag for all applications that do **not** have *Contrast.AppVersion* set in their *web.config* file. See the article on [Application settings](installation-netconfig.html#appname) for more details.</li></ul> |
 
+## Proxy Credentials
+To avoid storing sensitive proxy credentials in plain text, the agent stores them in the **DotnetAgent.Protected** section which is encrypted on startup.  To change existing credentials, delete the contents of the section and manually add the keys.  They will be re-encrypted on the next agent service startup.  To turn off this encryption use the set *EncryptProtectedSettings* setting above.
+
+| Parameter                                             | Description                                                                                                                             |
+|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| ProxyUser                                             | Username for the proxy  |
+| ProxyPass                                             | Password for the proxy |
 
 ## Diagnostics
 
