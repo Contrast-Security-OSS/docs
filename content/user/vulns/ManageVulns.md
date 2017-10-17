@@ -4,17 +4,11 @@ description: "Overview of vulnerability management"
 tags: "user vulnerability management"
 -->
 
-Contrast users can manage vulnerabilities depending on either their organization or application role. Certain functions can be found either inline or in bulk by selecting any number of vulnerabilities and performing an action from the action bar. Go to the **Vulnerabilities** tab within a specific application to see a grid view of findings for that application or the main **Vulnerabilities** page to see a grid view of  vulnerabilities across your portfolio. Click on each vulnerability to see more details and learn how to get rid of weaknesses that compromise your applications' security. 
+Contrast users have the functionality to manage vulnerabilities based on their organization or application role. Certain functions can be found either inline or in bulk by selecting any number of vulnerabilities and performing an action from the action bar. 
 
-## Filter Vulnerabilities 
+Go to the **Vulnerabilities** tab within a specific application to see a grid view of findings for that application or the main **Vulnerabilities** page to see a grid view of  vulnerabilities across your portfolio. Click on each vulnerability to see more details and learn how to get rid of weaknesses that compromise your applications' security. 
 
-Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. You can use basic column sorting and searching to arrange vulnerabilities by severity or quickly find one by vulnerability ID. Get to certain vulnerabilities based on date range as well as those in violation of a policy set by an Organization Administrator. 
-
-Advanced filtering help you find vulnerabilities discovered on a particular server and environment, vulnerabilities that have been tagged by you or your team, and much more. 
-
-<a href="assets/images/Vulnerability_Filters.png" rel="lightbox" title="Vulnerability Filters"><img class="thumbnail" src="assets/images/Vulnerability_Filters.png"/></a>
-
-## Mark Vulnerabilities
+## Vulnerability Status
 
 Contrast has five statuses for vulnerabilities to help you prioritize and manage findings. 
 
@@ -45,6 +39,12 @@ Vulnerabilities in an application are classified into five severity levels in Co
 Hover over a vulnerability's Severity level in the grid row to see the Likelihood and Impact calculations. To change the level, click on the colored badge and choose the new selection from the dropdown menu.
 
 <a href="assets/images/Vulnerability-severity.png" rel="lightbox" title="Likelihood and Impact ratings of a vulnerability severity level"><img class="thumbnail" src="assets/images/Vulnerability-severity.png"/></a>
+
+## Filter Vulnerabilities 
+
+Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. Use basic column sorting to arrange vulnerabilities, or use the fields above the grid to quickly find one by its vulnerability ID, date range in which it was found or other categories. Click the **Advanced** link for access to more filters including tags, servers and environments. 
+
+<a href="assets/images/Vulnerability_Filters.png" rel="lightbox" title="Vulnerability Filters"><img class="thumbnail" src="assets/images/Vulnerability_Filters.png"/></a>
 
 ## Merge Vulnerabilities
 
