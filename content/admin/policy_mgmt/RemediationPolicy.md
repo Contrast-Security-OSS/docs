@@ -25,10 +25,10 @@ To create a new policy, click the **Add Policy** button. In the **Add Remediatio
 
 #### Automatic actions
 
-In the **Action** section, use the radio buttons and corresponding number control fields to either **flag vulnerabilities as a violation** or **automatically remediate** them after a given number of days. If multiple policies or actions affect the same vulnerability, the following rules determine the course of action.
+In the **Action** section, use the radio buttons and corresponding number control fields to either **flag vulnerabilities as a violation** or **automatically remediate** them after a given number of days. If multiple policies affect the same vulnerability, the following rules determine Contrast's course of action:
 
 * The most severe action (i.e. the action with the closest deadline) applies first. 
-* If a violation deadline applies first, the vulnerability is flagged then auto-remediated when the later deadline applies. 
+* If a violation deadline applies first, the vulnerability is flagged and then auto-remediated when the later deadline applies. 
 * If an auto-remediation deadline applies first, the vulnerability is closed and never flagged. 
 
 > **Note:** If Contrast rediscovers a legitimate vulnerability that was automatically remediated, Contrast will [report the vulnerability](user-vulns.html#analyze) as usual. 
@@ -41,5 +41,5 @@ Click the name of an existing policy in the grid to see more details and update 
 
 If a vulnerability isn't remediated within the given number of days, Contrast adds a warning note to the Vulnerabilities thermometer in the dashboard and flags the vulnerabilities in the Vulnerabilities grid. Hover over the warning icon for each vulnerability in the grid, or go to the vulnerability details page for more information about the violation.
 
-If a vulnerability has been auto-remediated, its status is updated to "Auto-Remediated" in the Vulnerabilities grids. Hover over the status text or go the auto-generated comment in the vulnerability's **Discussion** tab for more information about the applicable policy. 
+If a vulnerability has been auto-remediated, its status is updated to "Auto-Remediated" in the Vulnerabilities grids. Hover over the status text, or go the auto-generated comment in the vulnerability's **Discussion** tab for more information about the applicable policy. 
 
