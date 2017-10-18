@@ -4,34 +4,32 @@ description: "Overview of Licensing visibility"
 tags: "Admin manage SuperAdmin EOP SaaS RASP IAST Licensing"
 -->
 
-## Granting Licenses
-A SuperAdmin may grant separate Assessment (IAST) and Protection (RASP) licenses to an organization via the **Organizations** page. Assessment licenses apply to applications while Protection licenses apply to servers. The **Licenses** column will list the number of used and unused licenses that have been granted for both types and a red warning icon will be displayed if licenses are nearing expiration.  
 
-<a href="assets/images/Licensing_Grid.png" rel="lightbox" title="SuperAdmin Organizations Page"><img class="thumbnail" src="assets/images/Licensing_Grid.png"/></a>
+A SuperAdmin may grant separate Assess and Protect licenses to an organization in the **Organizations** page. Assess licenses apply to applications and Protect licenses apply to servers. The **Licenses** column in the organizations grid lists the number of used and unused licenses that have been granted. If licenses is nearing expiration, a red warning icon appears in the grid row. 
 
-Select **Grant Licenses** from the organization's row menu dropdown.  The dialog that follows will allow you to choose the number of licenses as well as the desired expiration date if you are using Contrast's SaaS product.
+<a href="assets/images/Org-grid.png" rel="lightbox" title="Organizations page"><img class="thumbnail" src="assets/images/Org-grid.png"/></a>
+
+## Allocate Licenses
+
+To grant licenses to an organization, click the arrow in the grid row and select **Allocate Licenses** from the dropdown menu. In the dialog that appears...
+
+The dialog that follows will allow you to choose the number of licenses as well as the desired expiration date if you are using Contrast's SaaS product.
 
 In the case of EOP, expiration dates will already be set, as will the total number of licenses available to grant.  These counts will show in the dialog.
 
-<a href="assets/images/Licensing_Grant.png" rel="lightbox" title="Granting A License (SaaS)"><img class="thumbnail" src="assets/images/Licensing_Grant.png"/></a>
+<a href="assets/images/Licenses-allocate.png" rel="lightbox" title="Allocate licenses dialog for SaaS"><img class="thumbnail" src="assets/images/Licenses-allocate.png"/></a>
 
-
-## Managing Granted Licenses
+## Manage Licenses
 
 SuperAdmins can manage the licenses granted to an organization by choosing **License Summary** in the row menu dropdown, or by clicking on the license counts in the grid.
 
 The **License Summary** dialog provides additional visibility and control of license information.  Expiration dates can be revised (if using SaaS) and unused granted licenses may be revoked from the organization if necessary.  When revoking licenses, note that the breakdown will update in real time.
 
-<a href="assets/images/Licensing_Summary.png" rel="lightbox" title="License Summary (SaaS)"><img class="thumbnail" src="assets/images/Licensing_Summary.png"/></a>
-
-<a href="assets/images/Licensing_SummaryEdit.png" rel="lightbox" title="Editing Licenses (SaaS)"><img class="thumbnail" src="assets/images/Licensing_SummaryEdit.png"/></a>
-
+<a href="assets/images/License-summary.png" rel="lightbox" title="License Summary dialog for SaaS"><img class="thumbnail" src="assets/images/License-summary.png"/></a>
 
 ## Organization Settings
 
-An organization's administrator will have visibility into their licenses via the **Organization Settings** page.  Thermometer charts for Assessment and Protection will break down used vs. unused licenses and a tooltip will reveal expiration dates for each.  They will also be able to see how licenses are being applied to their applications and servers.  If licenses are nearing expiration, the affected applications or servers will be listed and linked to on the right.
-
-<a href="assets/images/Licensing_OrgSettings.png" rel="lightbox" title="Organization Settings License Summary"><img class="thumbnail" src="assets/images/Licensing_OrgSettings.png"/></a>
+An organization's administrator will have visibility into their licenses...
 
 
 ## Applying And Removing Protection Licenses
