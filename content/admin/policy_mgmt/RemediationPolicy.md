@@ -4,12 +4,11 @@ description: "Overview of remediation policy"
 tags: "Admin remediation policy management"
 -->
 
-
-As Contrast assesses your applications, it can flag vulnerabilities that don't meet your organization's criteria to ensure that your applications are secure.  
+Create policies for vulnerabilities in your organization, and Contrast will clean up your view of security risks. As Contrast assesses your applications, it can either flag vulnerabilities that are in violation of the policy or automatically remediate them.   
 
 ## How It Works 
 
-Administrators can define requirements for vulnerability remediation based on any vulnerability type, severity and application(s) which should comply. Contrast then marks any vulnerabilities that are in violation or auto-remediated based on this policy with a notification in the interface. (Administrators are also notified of violations and auto-remediations in the product and by email.)
+Administrators can define requirements for vulnerability remediation based on any vulnerability type, severity and application(s) which should comply. Contrast then marks any vulnerabilities that are in violation or auto-remediated based on this policy with a notification in the interface. (Administrators are also notified of violations in the product and by email.)
 
 ## Set Up Policies
 
