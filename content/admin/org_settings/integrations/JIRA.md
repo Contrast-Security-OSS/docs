@@ -59,7 +59,7 @@ Continue to the fields below to set a vulnerability status based on each JIRA ti
 
 If you choose **Not a Problem**, Contrast requires you to enter a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection in the dropdown menu is **Other**. 
 
-Once the two-way integration is saved, Contrast will automatically generate comments in the Discussion tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
+Once the two-way integration is saved, Contrast will automatically generate comments in the Discussion tab on each vulnerability page when the status of a ticket is updated. Each comment includes the name of the bugtracker and a link to the ticket. 
 
 #### Multiple vulnerabilities
 
