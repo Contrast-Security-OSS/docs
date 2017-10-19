@@ -6,7 +6,7 @@ tags: "Admin manage SuperAdmin EOP SaaS RASP IAST Licensing"
 
 A SuperAdmin may allocate, revoke and manage Assess and Protect licenses for individual organizations. An Organization Admin may apply and remove Protect licenses for servers in their organization. 
 
-## ???
+## Supervise Licenses
 
 A SuperAdmin may grant separate Assess and Protect licenses to an organization in the **Organizations** page. (Assess licenses apply to applications and Protect licenses apply to servers.) The **Licenses** column in the organizations grid lists the number of used and unused licenses that have been granted. If licenses is nearing expiration, a red warning icon appears in the grid row. 
 
@@ -42,7 +42,7 @@ Once a license is applied, the Protect toggle is enabled in the grid row(s).
 
 If your organization has consumed all allocated licenses, or if the organization doesn't have enough licenses available for the number of servers selected, the option to apply a license is disabled. Hover over the disabled selection to **Apply Protect Licenses** for more information. 
 
-> **Note:** You must remove a license from a server if you want to return it to the pool of available licenses for the organization. 
+> **Note:** To return a license to the pool of available licenses for the organization, you must remove it from a server. 
 
 ### Remove licenses 
 
