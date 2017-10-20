@@ -4,7 +4,7 @@ description: "Overview of Licensing visibility"
 tags: "Admin manage SuperAdmin EOP SaaS RASP IAST Licensing"
 -->
 
-A SuperAdmin may allocate, revoke and manage Assess and Protect licenses for individual organizations. An Organization Admin may apply and remove Protect licenses for servers in their organization. 
+Allocate, revoke and manage Assess and Protect licenses for individual organizations as a SuperAdmin. An Organization Admin may then apply and remove Protect licenses for servers in their organization. 
 
 ## Supervise Licenses
 
