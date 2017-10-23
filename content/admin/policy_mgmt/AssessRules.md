@@ -8,11 +8,9 @@ Assess Rules can detect specific types of vulnerabilities, such as SQL Injection
 
 ## How It Works
 
-Contrast provides out-of-the-box rules that can be applied to your applications. Each rule is categorized with a severity as well as a description to provide more information.
+Contrast provides out-of-the-box rules that can be applied to your applications. Organization or Rules Admins can configure Assess Rules and also see the rules applied across your portfolio from the **Policy Management** page or an application's details page. Each rule is categorized with a Severity and Description to provide more information in the Asses Rules grid. 
 
-Enabling an Assess Rule is as simple as flipping a switch from the application overview page. Organization or Rules Admins can configure Assess Rules from the **Policy Management** page, where you can see how the rules are being applied across your portfolio. 
-
-## Set Up Assess Rules
+## Set Up Rules
 
 ### Policy Management 
 
