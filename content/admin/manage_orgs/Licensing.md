@@ -8,13 +8,13 @@ Allocate, revoke and manage Assess and Protect licenses for individual organizat
 
 ## Supervise Licenses
 
-A SuperAdmin may grant separate Assess and Protect licenses to an organization in the **Organizations** page. (Assess licenses apply to applications and Protect licenses apply to servers.) The **Licenses** column in the organizations grid lists the number of used and unused licenses that have been granted. If licenses is nearing expiration, a red warning icon appears in the grid row. 
+A SuperAdmin may grant separate Assess and Protect licenses to an organization in the **Organizations** page. (Assess licenses apply to applications and Protect licenses apply to servers.) The **Licenses** column in the organizations grid lists the number of used and unused licenses that have been granted. If licenses are nearing expiration, a red warning icon appears in the grid row. 
 
 <a href="assets/images/Org-grid.png" rel="lightbox" title="Organizations page"><img class="thumbnail" src="assets/images/Org-grid.png"/></a>
 
 ### Allocate Licenses
 
-To grant licenses to an organization, click the arrow in the grid row and select **Allocate Licenses** from the dropdown menu. In the dialog that appears, SaaS users can enter the number of Assess and/or Protect licenses to allocate to that organization in the given fields. Click in the corresponding **Expiration Date** fields to make your selections on the calendars. EOP users can choose to allocate licenses from the total number available, which is shown in dialog along with the predetermined expiration dates. 
+To grant licenses to an organization, click the caret in the grid row and select **Allocate Licenses** from the dropdown menu. In the dialog that appears, SaaS users can enter the number of Assess and/or Protect licenses in the given fields to allocate to that organization. Click in the corresponding **Expiration Date** fields to make your selections on the calendars. EOP users can choose to allocate licenses from the total number available, which is shown in dialog along with the predetermined expiration dates. 
 
 <a href="assets/images/Licenses-allocate.png" rel="lightbox" title="Allocate licenses dialog for SaaS"><img class="thumbnail" src="assets/images/Licenses-allocate.png"/></a>
 
@@ -30,9 +30,9 @@ An organization's administrator can apply, remove and view details on their Prot
 
 ### Apply licenses
 
-To apply a Protect license to an an individual server, click the **UNLICENSED** beside the server name, or click the arrow in the grid row and choose **Apply Protect License** from the dropdown menu. To apply Protect licenses to multiple servers, select the checkboxes in the appropriate grid rows, click the badge icon in the batch actions menu above the grid, and choose **Apply Protect License** from the menu. Click the **Apply License** button in the confirmation dialog. 
+To apply a Protect license to an an individual server, click the **UNLICENSED** link beside the server name, or click the caret in the grid row and choose **Apply Protect License** from the dropdown menu. To apply Protect licenses to multiple servers, select the checkboxes in the appropriate grid rows, click the shield icon in the batch actions menu above the grid, and choose **Apply Protect License** from the menu. Click the **Apply License** button in the confirmation dialog. 
 
-Once a license is applied, the Protect toggle is enabled in the grid row(s).
+Once a license is applied, the Protect toggle is enabled in the grid rows for the applicable servers.
 
 <a href="assets/images/Servers-unlicensed.png" rel="lightbox" title="Apply a Protect license"><img class="thumbnail" src="assets/images/Servers-unlicensed.png"/></a>
 
@@ -46,7 +46,7 @@ If your organization has consumed all allocated licenses, or if the organization
 
 ### Remove licenses 
 
-To remove licenses from an individual server, click the arrow in the grid row and choose **Remove Protect License** from the dropdown menu. To remove Protect licenses to multiple servers, select the checkboxes in the appropriate grid rows, click the badge icon in the batch actions menu above the grid, and choose **Remove Protect License** from the menu. Click the **Remove** button in the confirmation dialog. 
+To remove licenses from an individual server, click the caret in the grid row and choose **Remove Protect License** from the dropdown menu. To remove Protect licenses from multiple servers, select the checkboxes in the appropriate grid rows, click the badge icon in the batch action menu above the grid, and choose **Remove Protect License** from the menu. Click the **Remove** button in the confirmation dialog. 
 
 <a href="assets/images/Servers-remove-license.png" rel="lightbox" title="Remove Protect license"><img class="thumbnail" src="assets/images/Servers-remove-license.png"/></a>
 
