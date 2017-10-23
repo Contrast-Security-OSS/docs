@@ -12,10 +12,23 @@ Contrast provides out-of-the-box rules that can be applied to your applications.
 
 Enabling an Assess Rule is as simple as flipping a switch from the application overview page. Organization or Rules Admins can configure Assess Rules from the **Policy Management** page, where you can see how the rules are being applied across your portfolio. 
 
-<a href="assets/images/Assess_Rules.png" rel="lightbox" title="Assess Rules"><img class="thumbnail" src="assets/images/Assess_Rules.png"/></a>
+## Set Up Assess Rules
 
-## Enabling an Assess Rule
+### Policy Management 
 
-To view Assess Rules specific to an application language, Contrast provides a quick view alongside the rule search. Once you find the rule you want to edit, each rule can be configured per server environment. Modify the toggle switch in the environment you want to set. The agents will then apply the correct behavior. 
+View Assess Rules by going to the **User menu > Policy Management > Assess Rules tab**. 
+
+<a href="assets/images/Assess-rules-defaults.png" rel="lightbox" title="Manage Assess Rules Defaults from the Policy Manage page"><img class="thumbnail" src="assets/images/Assess-rules-defaults.png"/></a>
+
+### Application page
+
+View Assess Rules by going to the **Applications page grid > Rules tab > Assess toggle**. Use the search field to find a rule by name.
+
+<a href="assets/images/App-assess-rules.png" rel="lightbox" title="Manage Assess Rules from the application page "><img class="thumbnail" src="assets/images/App-assess-rules.png"/></a>
+
+
+<!-- To view Assess Rules specific to an application language, Contrast provides a quick view alongside the rule search. Once you find the rule you want to edit, each rule can be configured per server environment. Modify the toggle switch in the environment you want to set. The agents will then apply the correct behavior. 
+ -->
 
 >**Note:** For cases where more advanced rules are required, Contrast's Customer Support team can help set those up for you. 
+
