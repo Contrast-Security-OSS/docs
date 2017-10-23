@@ -45,7 +45,6 @@ The exported file contains the following data fields for each vulnerability:
 * Application Name
 * Application ID
 * Application Code
-* Application Version
 * CWE ID
 * Request Method
 * Request Port
