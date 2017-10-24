@@ -42,6 +42,18 @@ Finally, run an update:
 bundle update
 ```
 
+If you are using the Sinatra framework you need to configure your application to use the Contrast agent, a simple application configured to work with the Contrast agent would look like the following:
+
+``` ruby
+require 'sinatra'
+require 'contrast-agent'
+
+class App < Sinatra::Base
+  use Contrast::Agent::Middleware, true
+end
+```
+
+
 ### Manual installation
 
 To install the Contrast agent manually, download the <i>contrast-agent-*.gem</i> file to a local directory, and add the gem to the project Gemfile:

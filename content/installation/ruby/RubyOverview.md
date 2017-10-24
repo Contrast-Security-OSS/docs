@@ -8,7 +8,7 @@ The Contrast Ruby agent provides runtime protection of Ruby on Rails web applica
 
 ## About Ruby 
 
-The Ruby agent is a Rack middleware that's compatible with Ruby on Rails installation from version 3.0 and above. It may also be compatible with other Rack-based web frameworks like Sinatra. 
+The Ruby agent is a Rack middleware that's compatible with Ruby on Rails installation from version 3.0 and above and Sintra version 2.0 and above. It may also be compatible with other Rack-based web frameworks like Grape. 
 
 From it's position within the Rack middleware stack, the Ruby agent inspects HTTP requests to identify potentially harmful input vectors. During the request, the agent inspects database queries, file writes and other potentially damaging actions resulting from the request. At the end of the request, the agent inspects the rendered output for successful attacks, and can block a successful attack from being forwarded to the application user. The service sends the details of the attack to the Contrast application, which then sends you an alert and displays attack details in the interface. 
 
