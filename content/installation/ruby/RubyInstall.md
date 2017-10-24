@@ -6,7 +6,7 @@ tags: "Ruby on Rails agent installation"
 
 ## Installation
 
-To install the Contrast agent into your Ruby on Rails application, you must complete the following steps.  
+To install the Contrast agent into your Ruby application, you must complete the following steps.  
 
 1. Add the <i>contrast-agent-*.gem</i> to the application Gemfile. (This is outlined in the **Setup** section below.) 
 2. Add the *contrast_security.yaml* file to the application's *config* directory. (This is outlined in the **Configuration** section below.)
@@ -31,6 +31,8 @@ source 'https://app.contrastsecurity.com/Contrast/api/repo/rvm'
 ```
 
 After editing the Gemfile, you must bundle the `contrast-agent` gem by adding authorization to your Bundler:
+
+*Note*: Make sure your username is CGI escaped
 
 ``` bash
 bundle config https://app.contrastsecurity.com/Contrast/api/repo/rvm ${username}:${service_key}
