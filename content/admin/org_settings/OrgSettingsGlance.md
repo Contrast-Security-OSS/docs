@@ -8,8 +8,8 @@ Organization Administrators have access to a variety of configuration settings f
 
 <!-- <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a> --> 
 
-## General Information and Licensing
-View basic information about your organization and configure high-level preferences including date and time formats in the **Organization** tab. You can also see a breakdown of your organization's Assess and Protect licenses. 
+## General Information
+View basic information about your organization and configure high-level preferences including date and time formats in the **Organization** tab. 
 
 ## Groups
 Use [Organization groups](admin-manageorgs.html#access) to designate a user's organization and application role, which determines what users can see and do in Contrast. You can create, view, edit and delete groups at any time. 
