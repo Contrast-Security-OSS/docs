@@ -8,7 +8,7 @@ tags: "Ruby on Rails agent installation"
 
 To install the Contrast agent into your Ruby application, you must complete the following steps.  
 
-1. Add the <i>contrast-agent-*.gem</i> to the application Gemfile. (This is outlined in the **Setup** section below.) 
+1. Add the <i>contrast-agent-*.gem</i> to the application Gemfile. (This is outlined in the <b>Setup</b> section below.) 
 2. Add the *contrast_security.yaml* file to the application's *config* directory. (This is outlined in the **Configuration** section below.)
 3. Run the `contrast-service-*.gem` as a standalone service on the same server as the application. (This is outlined in the section below to **Run the Service**.)
 
@@ -30,9 +30,9 @@ Add this line to the top of your application's Gemfile:
 source 'https://app.contrastsecurity.com/Contrast/api/repo/rvm'
 ```
 
-After editing the Gemfile, you must bundle the `contrast-agent` gem by adding authorization to your Bundler:
+After editing the Gemfile, you must bundle the *contrast-agent* gem by adding authorization to your Bundler:
 
-*Note*: Make sure your username is CGI escaped
+> **Note:** Make sure that your username is CGI escaped.
 
 ``` bash
 bundle config https://app.contrastsecurity.com/Contrast/api/repo/rvm ${username}:${service_key}
@@ -44,7 +44,7 @@ Finally, run an update:
 bundle update
 ```
 
-If you are using the Sinatra framework you need to configure your application to use the Contrast agent, a simple application configured to work with the Contrast agent would look like the following:
+If you're using the Sinatra framework, you must configure your application to use the Contrast agent. A simple application configured to work with the Contrast agent looks like the following:
 
 ``` ruby
 require 'sinatra'
@@ -54,7 +54,6 @@ class App < Sinatra::Base
   use Contrast::Agent::Middleware, true
 end
 ```
-
 
 ### Manual installation
 
@@ -88,7 +87,7 @@ application:
 
 ## Run the Service
 
-The `contrast-service-*.gem` is an executable that you must run on the same server as the web application. Begin by downloading the `contrast-service-*.gem` from the Contrast application. It must be the same version as the `contrast-agent-*.gem`.
+The `contrast-service-*.gem` is an executable that you must run on the same server as the web application. Begin by downloading the `contrast-service-*.gem` from the Contrast application. It must be the same version as the <i>contrast-agent-*.gem</i>.
 
 The service, like the agent, reads its configuration from one of the following locations in the following order: 
 

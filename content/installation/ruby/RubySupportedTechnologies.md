@@ -4,8 +4,7 @@ description: "List of supported technologies"
 tags: "installation Ruby on Rails agent frameworks support troubleshooting gem"
 -->
 
-The Ruby agent supports Ruby language version 2.1.x and above. Framework support is currently for Ruby on Rails versions 3.x and above, and Sinatra 2.x and above.
-The Ruby agent is a standard Rack middleware, and may work in other Rack-based web frameworks like Sinatra. 
+The Ruby agent supports Ruby language version 2.1.x and above. Framework support is currently for Ruby on Rails versions 3.x and above and Sinatra 2.x and above. The Ruby agent is a standard Rack middleware; it may work in other Rack-based web frameworks like Sinatra. 
 
 ## Database Support
 
