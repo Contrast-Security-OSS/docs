@@ -10,7 +10,26 @@ Words here...
 
 * Improved data accuracy for Attack Events CONTRAST-17114
 * Role permissions honored for Application Exclusions CONTRAST-16131
-* Tuned up JIRA integration fields to keep... 
+* Synced Assess Rules with vulnerability details CONTRAST-18129
+* Fixed integration testing for Serena Business Management CONTRAST-18559
+* Adjusted number of trace events showing in vulnerability Details CONTRAST-18445
+* Update paging in vulnerability views CONTRAST-17783
+* Better timing for tooltips in Vulnerability Trend chart CONTRAST-18404
+* Correct work item description for Visual Studio Team Servers two-way integration CONTRAST-18022
+* License Ruby applications from the Applications page CONTRAST-18174
+* Correctly apply feature guard to Node CONTRAST-17130
+* Consistently labeled source events CONTRAST-18042
+* Display vulnerabilities without errors for Super and System Admins CONTRAST-17980
+* Made FixLibrariesData Task a success again CONTRAST-17949
+* Fixed string replacement errors CONTRAST-17831
+* Restored Cold Fusion support CONTRAST-17726
+* Corrected Attack Trend CONTRAST-16935
+* Cancel a severity change, and we'll listen CONTRAST-17066
+
+* CONTRAST-17740 ? 
+
+* Straightened out email notifications for server updates and Remediation Policy CONTRAST-18310,CONTRAST-18219
+* Eliminated errors when SaaS users navigate to Contrast or access API documentation CONTRAST-18120, CONTRAST-18205
 
 
 ## Improvements 
