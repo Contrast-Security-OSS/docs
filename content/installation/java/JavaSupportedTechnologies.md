@@ -16,7 +16,7 @@ JRockit 1.5, 1.6 (update 95+ or R28.3.6+) |Jetty 6, 7, 8, 9 | Struts, Struts 2
                  | WebLogic 9, 10, 11g, 12c | JSF (MyFaces, RichFaces, Sun)
                  | JRun 4 | ColdFusion 9, 10 (limited)
                  | Netty 3.x, 4.x | Seam
-                 | Play 2.2x  | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
+                 | Play 2.2,2.3,2.4  | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
                  | Grizzly 2.3.20+ | Direct Web Remoting (DWR)
                  | Vert.X 3.0+     | DropWizard
                  |                 | Google Web Toolkit (GWT)
