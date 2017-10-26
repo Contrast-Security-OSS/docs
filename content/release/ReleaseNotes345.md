@@ -8,7 +8,9 @@ Words here...
 
 ## Fixes
 
-*  
+* Improved data accuracy for Attack Events CONTRAST-17114
+* Role permissions honored for Application Exclusions CONTRAST-16131
+* Tuned up JIRA integration fields to keep... 
 
 
 ## Improvements 
@@ -16,6 +18,8 @@ Words here...
 * Remediation Policies have a new outcome: [automatically remediate a vulnerability](admin-policymgmt.html#remediate). After you select this option, Contrast will change the vulnerability status to “Auto-Remediated”, if it hasn’t rediscovered the vulnerability by your given deadline. 
 
 * Tag vulnerabilities, applications, servers or libraries automatically from any agent - just like you wanted. (Hint: This practice is especially helpful when multiple groups are working within Contrast and want to quickly filter without taking the time for manual tagging.)
+
+* Manage [Assess Rules](admin-policymgmt.html#assess) per application to customize your security requirements. You can also set a default policy that will apply to newly onboarded applications. 
 
 * Set our .NET agents to a pending update state when a new agent is available. In this state, .NET agents will wait for users to restart their IIS servers before installing an update.
 
