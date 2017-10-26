@@ -46,7 +46,7 @@ Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new 
 
 * Choose which [vulnerability](user-apps.html#vulns) and [library](user-apps.html#libraries) data fields to export. The power is yours.
 
-* Just like JIRA, but for our VSTS users: vulnerabilities status are updated in Contrast when you change the status of a VSTS ticket.
+* Just like JIRA, but for our VSTS users: vulnerabilities status are updated in Contrast when you [change the status of a VSTS work item](admin-orgintegrations.html#vsts-tfs).
 
 
 ## Agent Updates
