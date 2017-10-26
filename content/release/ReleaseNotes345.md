@@ -4,32 +4,32 @@ description: "Contrast 3.4.5 October 2017"
 tags: "3.4.5 October Release Notes"
 -->
 
-Words here...
+Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new applications - it's automatic. 
 
 ## Fixes
 
-* Improved data accuracy for Attack Events CONTRAST-17114
-* Role permissions honored for Application Exclusions CONTRAST-16131
-* Synced Assess Rules with vulnerability details CONTRAST-18129
-* Fixed integration testing for Serena Business Management CONTRAST-18559
-* Adjusted number of trace events showing in vulnerability Details CONTRAST-18445
-* Update paging in vulnerability views CONTRAST-17783
+* Data in for Attack Events is more accurate CONTRAST-17114
+* Retain role permissions when managing Application Exclusions CONTRAST-16131
+* Assess Rules are consistent with vulnerability details CONTRAST-18129
+* Integration testing for Serena Business Management is successful CONTRAST-18559
+* Paging in vulnerability views CONTRAST-17783
 * Better timing for tooltips in Vulnerability Trend chart CONTRAST-18404
 * Correct work item description for Visual Studio Team Servers two-way integration CONTRAST-18022
 * License Ruby applications from the Applications page CONTRAST-18174
-* Correctly apply feature guard to Node CONTRAST-17130
-* Consistently labeled source events CONTRAST-18042
-* Display vulnerabilities without errors for Super and System Admins CONTRAST-17980
-* Made FixLibrariesData Task a success again CONTRAST-17949
-* Fixed string replacement errors CONTRAST-17831
+* Feature guard applies correctly to Node CONTRAST-17130
+* Labels for source events are complete CONTRAST-18042
+* Super and System Admins can view vulnerabilities without errors CONTRAST-17980
+* FixLibrariesData Task is successful again CONTRAST-17949
+* String replacement errors are gone CONTRAST-17831
 * Restored Cold Fusion support CONTRAST-17726
 * Corrected Attack Trend CONTRAST-16935
-* Cancel a severity change, and we'll listen CONTRAST-17066
+
+* Cancel a vulnerability severity change, and we'll listen now CONTRAST-17066
 
 * CONTRAST-17740 ? 
 
-* Straightened out email notifications for server updates and Remediation Policy CONTRAST-18310,CONTRAST-18219
-* Eliminated errors when SaaS users navigate to Contrast or access API documentation CONTRAST-18120, CONTRAST-18205
+* The deluge of email notifications for server updates and Remediation Policy is over CONTRAST-18310,CONTRAST-18219
+* SaaS users can navigate to Contrast in another tab or access API documentation without any errors CONTRAST-18120, CONTRAST-18205
 
 
 ## Improvements 
@@ -55,7 +55,7 @@ Words here...
 
 * **.NET Agent Summary:** 
 
-* **Node.js Agent Summary:** 
+* **Node.js Agent Summary:** We fixed propagation through template strings as well as issues that prevented some findings from being rendered, caused false positives in crypto-bad-mac and crypto-bad-ciphers rules, and also caused very large library reports to time out and go unreported. We also added Assess rules to detect missing HttpOnly and Secure flags in session cookies in Hapi.
 
 * **Ruby Agent Summary:** 
 
