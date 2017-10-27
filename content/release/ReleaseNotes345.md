@@ -4,7 +4,7 @@ description: "Contrast 3.4.5 October 2017"
 tags: "3.4.5 October Release Notes"
 -->
 
-Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new applications - it's automatic. 
+Remediate old vulnerabilities, tag from any agent, and apply and Assess Rules to new applications - it's automatic. 
 
 ## Fixes
 
@@ -26,6 +26,8 @@ Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new 
 * SaaS users can navigate to Contrast in browser tabs and access API documentation CONTRAST-18120, CONTRAST-18205
 
 ## Improvements 
+
+* Do yourself a favor, and create default settings for new applications in your organization. Just go to the new **Application** tab in Organization Settings, and set up [Application Defaults](admin-orgsettings.html#app-defaults) based on levels of importance, existing policies and Assess licensing.
 
 * Remediation Policies have a new outcome: [automatically remediate a vulnerability](admin-policymgmt.html#remediate). After you select this option, Contrast will change the vulnerability status to “Auto-Remediated”, if it hasn’t rediscovered the vulnerability by your given deadline. 
 
