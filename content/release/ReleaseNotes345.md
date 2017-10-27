@@ -42,8 +42,6 @@ Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new 
 
 * Set our .NET agents to a pending update state when a new agent is available. In this state, .NET agents will wait for users to restart their IIS servers before installing an update.
 
-* We added CVE Shields for the following vulnerabilities in Ruby Gems: CVE-2017-0898, CVE-2017-14033, CVE-2017-14064.
-
 * Choose which [vulnerability](user-apps.html#vulns) and [library](user-apps.html#libraries) data fields to export. The power is yours.
 
 * Just like JIRA, but for our VSTS users: vulnerabilities status are updated in Contrast when you [change the status of a VSTS work item](admin-orgintegrations.html#vsts-tfs).
@@ -57,7 +55,12 @@ Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new 
 
 * **Node.js Agent Summary:** We fixed propagation through template strings as well as issues that prevented some findings from being rendered, caused false positives in crypto-bad-mac and crypto-bad-ciphers rules, and also caused very large library reports to time out and go unreported. We also added Assess rules to detect missing HttpOnly and Secure flags in session cookies in Hapi.
 
-* **Ruby Agent Summary:** 
+We spent this month adding Hapi framework support as well as ensuring compatibility with Node 8.0. We’ve made substantial updates to provide more accurate trace handling for Assess, and continue to move towards the beta release of Protect features in the Node agent with Server-side JavaScript injection handling and CSRF support.
+
+* **Ruby Agent Summary:** We added CVE shields – dedicated rules for blocking reported vulnerabilities – for CVE-2017-0890, CVE-2017-14033 and CVE-2017-14064. We also added added additional refinements to the NoSQL injection rule for MongoDB. The agent now reports to Contrast metadata tags for application, server and libraries, while new agents also support the Contrast Security standard configuration format.
+
+* **Python Agent Summary:** We're continuing to move towards our alpha release with most of the Protect rules fleshed out and reporting to Contrast. Recent accomplishments include the initial log enhancer implementation and virtual patch functionality.
+
 
 
 
