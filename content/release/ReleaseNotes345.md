@@ -8,22 +8,22 @@ Remediate old vulnerabilities, tag from any agent, and apply and Assess Rules to
 
 ## Fixes
 
-* Admins retain role permissions when managing Application Exclusions CONTRAST-16131
-* Assess Rules are consistent with vulnerability details CONTRAST-18129
-* Views of the Attack Trend and Attack Events are more accurate CONTRAST-17114, CONTRAST-16935
-* Integration testing for Serena Business Management is successful CONTRAST-18559
-* Tooltips in Vulnerability Trend chart show up at the right time CONTRAST-18404
-* Correct work item description for Visual Studio Team Servers two-way integration CONTRAST-18022
-* License Ruby applications from the Applications page CONTRAST-18174
-* Feature guard applies correctly to Node CONTRAST-17130
-* Labels for source events are complete CONTRAST-18042
-* Super and System Admins can view vulnerabilities without errors CONTRAST-17980
-* FixLibrariesData Task is successful again CONTRAST-17949
-* Cold Fusion support is restored CONTRAST-17726
-* Vulnerability severity changes stop when you cancel them CONTRAST-17066
-* Parameters in vulnerability overview display correctly CONTRAST-17740 
-* Unwanted email notifications for server updates and Remediation Policy are done CONTRAST-18310,CONTRAST-18219
-* SaaS users can navigate to Contrast in browser tabs and access API documentation CONTRAST-18120, CONTRAST-18205
+* Admins retain role permissions when managing Application Exclusions. 
+* Assess Rules are consistent with vulnerability details. 
+* Views of the Attack Trend and Attack Events are more accurate. 
+* Integration testing for Serena Business Management is successful. 
+* Tooltips in Vulnerability Trend chart show up at the right time. 
+* Work item descriptions are correct for Visual Studio Team Servers two-way integration.
+* License Ruby applications from the Applications page.
+* Feature guarding applies correctly to Node.
+* Labels for source events are complete.
+* Super and System Admins can view vulnerabilities without errors.
+* FixLibrariesData Task is successful again.
+* Cold Fusion support is restored.
+* Vulnerability severity changes stop when you cancel them.
+* Parameters in vulnerability overviews display correctly. 
+* Unwanted email notifications for server updates and Remediation Policy are over. 
+* SaaS users can navigate to Contrast in additional browser tabs and access API documentation. 
 
 ## Improvements 
 
