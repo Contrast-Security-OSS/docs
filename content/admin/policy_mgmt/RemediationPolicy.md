@@ -30,7 +30,7 @@ In the **Action** section, use the radio buttons and corresponding number contro
 * If a violation deadline applies first, the vulnerability is flagged and then auto-remediated when the later deadline applies. 
 * If an auto-remediation deadline applies first, the vulnerability is closed and never flagged. 
 
-> **Note:** If Contrast rediscovers a legitimate vulnerability that was automatically remediated, Contrast will [report the vulnerability](user-vulns.html#analyze) as usual. 
+> **Note:** If Contrast rediscovers a legitimate vulnerability that was auto-remediated, Contrast will [report the vulnerability](user-vulns.html#analyze) as usual. 
 
 ### Edit policies 
 
