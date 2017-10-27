@@ -8,29 +8,22 @@ Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new 
 
 ## Fixes
 
-* Data in for Attack Events is more accurate CONTRAST-17114
-* Retain role permissions when managing Application Exclusions CONTRAST-16131
+* Admins retain role permissions when managing Application Exclusions CONTRAST-16131
 * Assess Rules are consistent with vulnerability details CONTRAST-18129
+* Views of the Attack Trend and Attack Events are more accurate CONTRAST-17114, CONTRAST-16935
 * Integration testing for Serena Business Management is successful CONTRAST-18559
-* Paging in vulnerability views CONTRAST-17783
-* Better timing for tooltips in Vulnerability Trend chart CONTRAST-18404
+* Tooltips in Vulnerability Trend chart show up at the right time CONTRAST-18404
 * Correct work item description for Visual Studio Team Servers two-way integration CONTRAST-18022
 * License Ruby applications from the Applications page CONTRAST-18174
 * Feature guard applies correctly to Node CONTRAST-17130
 * Labels for source events are complete CONTRAST-18042
 * Super and System Admins can view vulnerabilities without errors CONTRAST-17980
 * FixLibrariesData Task is successful again CONTRAST-17949
-* String replacement errors are gone CONTRAST-17831
-* Restored Cold Fusion support CONTRAST-17726
-* Corrected Attack Trend CONTRAST-16935
-
-* Cancel a vulnerability severity change, and we'll listen now CONTRAST-17066
-
-* CONTRAST-17740 ? 
-
-* The deluge of email notifications for server updates and Remediation Policy is over CONTRAST-18310,CONTRAST-18219
-* SaaS users can navigate to Contrast in another tab or access API documentation without any errors CONTRAST-18120, CONTRAST-18205
-
+* Cold Fusion support is restored CONTRAST-17726
+* Vulnerability severity changes stop when you cancel them CONTRAST-17066
+* Parameters in vulnerability overview display correctly CONTRAST-17740 
+* Unwanted email notifications for server updates and Remediation Policy are done CONTRAST-18310,CONTRAST-18219
+* SaaS users can navigate to Contrast in browser tabs and access API documentation CONTRAST-18120, CONTRAST-18205
 
 ## Improvements 
 
@@ -46,20 +39,18 @@ Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new 
 
 * Just like JIRA, but for our VSTS users: vulnerabilities status are updated in Contrast when you [change the status of a VSTS work item](admin-orgintegrations.html#vsts-tfs).
 
-
 ## Agent Updates
 
 * **Java Agent Summary:** 
 
-* **.NET Agent Summary:** 
+* **.NET Agent Summary:** We added support for .NET 4.7.1, captured additional information to improve our display and comprehension of several vulnerability types, and fixed an error in which the agent read POST data originating from an ASP.NET UpdatePanel too early. We improved reliability of instrumentation by fixing issues in which the Windows registry reported an incorrect version of the .NET framework and instrumentation conflicted with certain CLR compiler optimizations. We also improved the accuracy of potential security control detection and agent performance (especially against WCF applications). 
 
-* **Node.js Agent Summary:** We fixed propagation through template strings as well as issues that prevented some findings from being rendered, caused false positives in crypto-bad-mac and crypto-bad-ciphers rules, and also caused very large library reports to time out and go unreported. We also added Assess rules to detect missing HttpOnly and Secure flags in session cookies in Hapi.
+* **Node.js Agent Summary:** We spent this month adding Hapi framework support as well as ensuring compatibility with Node 8.0. We’ve made substantial updates to provide more accurate trace handling for Assess, and continue to move towards the beta release of Protect features in the Node agent with Server-side JavaScript injection handling and CSRF support. We also fixed propagation through template strings along with issues that prevented some findings from being rendered, caused false positives in crypto-bad-mac and crypto-bad-ciphers rules, and led to very large library reports to time out and go unreported. 
 
-We spent this month adding Hapi framework support as well as ensuring compatibility with Node 8.0. We’ve made substantial updates to provide more accurate trace handling for Assess, and continue to move towards the beta release of Protect features in the Node agent with Server-side JavaScript injection handling and CSRF support.
+* **Python Agent Summary:** We're continuing to move towards our alpha release with most of the Protect rules fleshed out and reporting to Contrast. Recent accomplishments include the initial log enhancer implementation and virtual patch functionality.
 
 * **Ruby Agent Summary:** We added CVE shields – dedicated rules for blocking reported vulnerabilities – for CVE-2017-0890, CVE-2017-14033 and CVE-2017-14064. We also added added additional refinements to the NoSQL injection rule for MongoDB. The agent now reports to Contrast metadata tags for application, server and libraries, while new agents also support the Contrast Security standard configuration format.
 
-* **Python Agent Summary:** We're continuing to move towards our alpha release with most of the Protect rules fleshed out and reporting to Contrast. Recent accomplishments include the initial log enhancer implementation and virtual patch functionality.
 
 
 
