@@ -47,8 +47,6 @@ Remediate old vulnerabilities, tag from any agent and apply Assess Rules to new 
 
 * **Node.js Agent Summary:** We spent this month adding Hapi framework support as well as ensuring compatibility with Node 8.0. We’ve made substantial updates to provide more accurate trace handling for Assess, and continue to move towards the beta release of Protect features in the Node agent with Server-side JavaScript injection handling and CSRF support. We also fixed propagation through template strings along with issues that prevented some findings from being rendered, caused false positives in crypto-bad-mac and crypto-bad-ciphers rules, and led to very large library reports to time out and go unreported. 
 
-* **Python Agent Summary:** We're continuing to move towards our alpha release with most of the Protect rules fleshed out and reporting to Contrast. Recent accomplishments include the initial log enhancer implementation and virtual patch functionality.
-
 * **Ruby Agent Summary:** We added CVE shields – dedicated rules for blocking reported vulnerabilities – for CVE-2017-0890, CVE-2017-14033 and CVE-2017-14064. We also added added additional refinements to the NoSQL injection rule for MongoDB. The agent now reports to Contrast metadata tags for application, server and libraries, while new agents also support the Contrast Security standard configuration format.
 
 
