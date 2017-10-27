@@ -27,7 +27,7 @@ Remediate old vulnerabilities, tag from any agent, and apply and Assess Rules to
 
 ## Improvements 
 
-* Do yourself a favor, and create default settings for new applications in your organization. Just go to the new **Application** tab in Organization Settings, and set up [Application Defaults](admin-orgsettings.html#app-defaults) based on levels of importance, existing policies and Assess licensing.
+* Do yourself a favor, and create default settings for new applications in your organization. Just go to the new **Applications** tab in Organization Settings, and set up [Application Defaults](admin-orgsettings.html#app-defaults) based on levels of importance, existing policies and Assess licensing.
 
 * Remediation Policies have a new outcome: [automatically remediate a vulnerability](admin-policymgmt.html#remediate). After you select this option, Contrast will change the vulnerability status to “Auto-Remediated”, if it hasn’t rediscovered the vulnerability by your given deadline. 
 
@@ -43,13 +43,13 @@ Remediate old vulnerabilities, tag from any agent, and apply and Assess Rules to
 
 ## Agent Updates
 
-* **Java Agent Summary:** We improved a Protect SQL-injection rule and captured additional information to improve our display and comprehension of several vulnerability types. We also fixed an issue in which some limited traces produced by the agent couldn't be processed by Contrast, a header-injection false positive under JBoss/netty and a bug in which libraries under Vert.X and Netty weren't reported.
+* **Java Agent Summary:** We improved a Protect SQL-injection rule, and captured additional information to improve our display and comprehension of several vulnerability types. We also fixed an issue in which some limited traces produced by the agent couldn't be processed by Contrast, a header-injection false positive under JBoss/netty, and a bug in which libraries under Vert.X and Netty weren't reported.
 
 * **.NET Agent Summary:** We added support for .NET 4.7.1, captured additional information to improve our display and comprehension of several vulnerability types, and fixed an error in which the agent read POST data originating from an ASP.NET UpdatePanel too early. We improved reliability of instrumentation by fixing issues in which the Windows registry reported an incorrect version of the .NET framework and instrumentation conflicted with certain CLR compiler optimizations. We also improved the accuracy of potential security control detection and agent performance (especially against WCF applications). 
 
-* **Node.js Agent Summary:** We spent this month adding Hapi framework support as well as ensuring compatibility with Node 8.0. We’ve made substantial updates to provide more accurate trace handling for Assess, and continue to move towards the beta release of Protect features in the Node agent with Server-side JavaScript injection handling and CSRF support. We also fixed propagation through template strings along with issues that prevented some findings from being rendered, caused false positives in crypto-bad-mac and crypto-bad-ciphers rules, and led to very large library reports to time out and go unreported. 
+* **Node.js Agent Summary:** We spent this month adding Hapi framework support as well as ensuring compatibility with Node 8.0. We’ve made substantial updates to provide more accurate trace handling for Assess, and continue to move towards the beta release of Protect features in the Node agent with Server-side JavaScript injection handling and CSRF support. We fixed propagation through template strings; we also fixed  a few issues that prevented some findings from being rendered, caused false positives in crypto-bad-mac and crypto-bad-ciphers rules, and led to very large library reports to time out and go unreported. 
 
-* **Ruby Agent Summary:** We added CVE shields – dedicated rules for blocking reported vulnerabilities – for CVE-2017-0890, CVE-2017-14033 and CVE-2017-14064. We also added added additional refinements to the NoSQL injection rule for MongoDB. The agent now reports to Contrast metadata tags for application, server and libraries, while new agents also support the Contrast Security standard configuration format.
+* **Ruby Agent Summary:** We added CVE shields – dedicated rules for blocking reported vulnerabilities – for CVE-2017-0890, CVE-2017-14033 and CVE-2017-14064. We also added added additional refinements to the NoSQL injection rule for MongoDB. The agent now reports to Contrast metadata tags for application, server and libraries; new agents also support the Contrast Security standard configuration format.
 
 
 
