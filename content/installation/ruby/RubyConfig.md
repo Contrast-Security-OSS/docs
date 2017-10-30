@@ -14,6 +14,10 @@ The configuration file is called *contrast_security.yaml* wherever it's located.
 2. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)
 3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
+## Ruby Service and Ruby Agent
+
+Normally, configuration files for Ruby on Rails applications are stored in the *./config* directory of the application.  The ruby-service can share the application's configuration file if the service's working directory is also the base directory of the Rails application. Both the agent and the service will use the *./config/contrast_security.yaml* path. However, this is not required. The ruby-service can run from any other directory on the server in which case it should have it's own copy of the configuration file.  
+
 ## General Configuration Options
 
 The configuration YAML consists of four sections. The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
