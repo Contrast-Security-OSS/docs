@@ -43,7 +43,7 @@ Remediate old vulnerabilities, tag from any agent, and apply and Assess Rules to
 
 ## Agent Updates
 
-* **Java Agent Summary:** We improved a Protect SQL-injection rule, and captured additional information to improve our display and comprehension of several vulnerability types. We also fixed an issue in which some limited traces produced by the agent couldn't be processed by Contrast, a header-injection false positive under JBoss/netty, and a bug in which libraries under Vert.X and Netty weren't reported.
+* **Java Agent Summary:** We improved a Protect SQL-injection rule, and captured additional information to improve our display and comprehension of several vulnerability types. We also fixed an issue in which some limited vulnerabilities found by the agent couldn't be processed by Contrast, a header-injection false positive under JBoss/netty, and a bug in which libraries under Vert.X and Netty weren't reported.
 
 * **.NET Agent Summary:** We added support for .NET 4.7.1, captured additional information to improve our display and comprehension of several vulnerability types, and fixed an error in which the agent read POST data originating from an ASP.NET UpdatePanel too early. We improved reliability of instrumentation by fixing issues in which the Windows registry reported an incorrect version of the .NET framework and instrumentation conflicted with certain CLR compiler optimizations. We also improved the accuracy of potential security control detection and agent performance (especially against WCF applications). 
 
