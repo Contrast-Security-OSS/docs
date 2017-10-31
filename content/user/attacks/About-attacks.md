@@ -36,17 +36,15 @@ Go to the **Attacks** tab in the **Attacks** page to view all attacks that have 
 
 * **Events:** The number of attack events that comprise the attack.
 
-Contrast displays the number of **Active Attacks** in the tab above the grid. 
-
 ### Attack details 
  
-Click on the Source IP to view more details on the attack. In the **Overview** tab, view each attack event in the grid. 
+Click on the Source IP to view more details on the attack. In the **Overview** tab, view each attack event in the grid; click on each row to expand your view for more details. Under **Attack Duration**, click the **See Timeline** link to see the exact time of each event. Use the dropdown menus and search field to find specific events. 
 
 <a href="assets/images/Attack-overview.png" rel="lightbox" title="Attack Overview"><img class="thumbnail" src="assets/images/Attack-overview.png"/></a>
 
-Click on each row to expand your view for more details. 
+In the **Notes** tab, view more details including the **Rate of Events**, **Severity** and **Attacker**. 
 
-
+<a href="assets/images/Attack-notes.png" rel="lightbox" title="Attack Notes"><img class="thumbnail" src="assets/images/Attack-notes.png"/></a>
 
 
 ## Manage Attacks 
