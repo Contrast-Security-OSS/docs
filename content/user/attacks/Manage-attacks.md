@@ -51,7 +51,7 @@ In the **Attacks** page, use the row dropdown menu to [blacklist an IP address](
 
 In an attack **Overview** tab, use the row dropdown menu to [add an exclusion](admin-policymgmt.html#exclude), [create a virtual patch](admin-policymgmt.html#patch), [blacklist an IP address](admin-policymgmt.html#ip), [add a Protect Rule](admin-policymgmt.html#protect) or suppress the event. Tag or suppress multiple attack events by checking the boxes in the grid rows and selecting the appropriate icons in the batch action menu above the grid. 
 
-You can also perform each of these actions by clicking on the event and selecting the appropriate icon. 
+You can also perform each of these actions by clicking on the event and selecting the appropriate icon in the expanded description. 
 
 <a href="assets/images/Attack-event-details.png" rel="lightbox" title="View attack event details"><img class="thumbnail" src="assets/images/Attack-event-details.png"/></a>
 
