@@ -40,14 +40,14 @@ Customize the behavior of the Contrast application installer by providing argume
 
 ## Log In to Contrast
 
-You can find the login page to the Contrast application located at ***/Contrast***.  The first time the Contrast application starts after installation, there are two users that are able to log into the user interface with password `default1!`. 
+You can find the login page to the Contrast application at ***/Contrast***. The first time the Contrast application starts after installation, there are two users that can log into the user interface: 
 
 * **Default Username:** Your Hub Username
 * **Your SuperAdmin username:** contrast_superadmin@your-email-domain.com
 
-* **Default User and SuperAdmin password:** default1!
+The default password for both users is **default1!**. 
 
-***Contrast recommends that you change both passwords after you've installed and configured the application.***
+> **Note:** Contrast recommends that you change both passwords after you install and configure the application.
 
 
 ## More Information
