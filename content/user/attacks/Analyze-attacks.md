@@ -9,7 +9,7 @@ The **Attacks** page contains the record of all attacks seen by applications tha
 
 ## Attack Composition
 
-Attacks are groups of [attack events](user-attacks.html#monitor) coming from a single IP address over a sustained period of time. An attack can be comprised of events that target multiple applications, multiple servers as well as multiple attack types, such as SQL Injection, Command Injection or specific CVEs. An attack ends once Contrast agents no longer see any attempted attacks traffic for a period of time. If Contrast sees new attack traffic from the same IP address after an attack is closed, a new attack is created to track this attack. 
+Attacks are groups of [attack events](user-attacks.html#monitor) coming from a single IP address over a sustained period of time. An attack can be comprised of events that target multiple applications and servers as well as multiple attack types, such as SQL Injection, Command Injection or specific CVEs. An attack ends once Contrast agents no longer see attack events for a period of time. If Contrast sees new attack events from the same IP address after an attack is closed, a new attack is created. 
 
 ## View Attacks
 
@@ -21,11 +21,11 @@ Go to the **Attacks** tab in the **Attacks** page to view all attacks that have 
 
 * **Status:** The current status of the attack. 
 
- An attack status is determined by the status of the attack events within the attack. The status is as "Probed" if all events have a "Probed" status, "Blocked" if all events have either a "Blocked" or "Probed" status, and "Exploited" if any events have an "Exploited" status.
+ An attack status is determined by the status of the attack events within the attack. The status is as "Probed" if all events have a "Probed" status, "Blocked" if all events have either a "Blocked" or "Probed" status, and "Exploited" if any event has an "Exploited" status.
 
-* **Application:** Any applications that saw attack traffic from the IP address while the attack was active.
+* **Application:** Any applications that saw attack events from the IP address while the attack was active.
 
-* **Server:** Any server that saw attack traffic from the IP address while the attack was active.
+* **Server:** Any server that saw attack events from the IP address while the attack was active.
 
 * **Rule:** Any attack type identified from the IP address while the attack was active.
 
@@ -49,7 +49,7 @@ In the **Notes** tab, view more details including the **Rate of Events**, **Seve
 
 In the **Attacks** page, use the row dropdown menu to [blacklist an IP address](admin-policymgmt.html#ip), suppress the attack, or export the attack details into a CSV or XML-formatted spreadsheet. Tag or suppress multiple attacks by checking the boxes in the grid rows, and selecting the appropriate icons in the batch action menu above the grid. 
 
-> **Note:** If you choose to add an blacklist an IP address, you must enter a name for the new policy and choose a timeframe for expiration in the dialog that appears.  
+> **Note:** If you choose to blacklist an IP address, you must enter a name for the new policy and select a timeframe for expiration in the dialog that appears.  
 
 ### Manage attack events
 
