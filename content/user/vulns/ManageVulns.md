@@ -6,7 +6,7 @@ tags: "user vulnerability management"
 
 Contrast users have the functionality to manage vulnerabilities based on their organization or application role. Certain functions can be found either inline or in bulk by selecting any number of vulnerabilities and performing an action from the action bar. 
 
-Go to the **Vulnerabilities** tab within a specific application to see a grid view of findings for that application or the main **Vulnerabilities** page to see a grid view of  vulnerabilities across your portfolio. Click on each vulnerability to see more details and learn how to get rid of weaknesses that compromise your applications' security. 
+Go to the **Vulnerabilities** tab within a specific application to see a grid view of findings for that application, or go to the main **Vulnerabilities** page to see a grid view of  vulnerabilities across your portfolio. Click on each vulnerability to see more details and learn how to get rid of weaknesses that compromise your applications' security. 
 
 ## Vulnerability Status
 
@@ -50,8 +50,6 @@ Contrast provides multiple ways to narrow findings and focus on the vulnerabilit
 
 Contrast allows you to merge vulnerabilities of the same type to consolidate findings. From the **Vulnerabilities** page, select two or more vulnerabilities you'd like to merge, and click the merge icon in the action bar. In the confirmation dialog that appears, select the vulnerability that you want to represent the merge. 
 
->**Note:** This action can't be undone. Merged vulnerabilities are not recoverable. 
-
 <a href="assets/images/Merge_Vulnerabilities.png" rel="lightbox" title="Merge Vulnerabilities"><img class="thumbnail" src="assets/images/Merge_Vulnerabilities.png"/></a>
 
 ## Delete Vulnerabilities
@@ -61,5 +59,53 @@ To delete one or more vulnerabilities, select the checkboxes in the grid rows, a
 <a href="assets/images/Vulnerability-delete.png" rel="lightbox" title="Delete vulnerabilities"><img class="thumbnail" src="assets/images/Vulnerability-delete.png"/></a>
 
 Once this action is confirmed, the vulnerability is removed and no longer appears in your list unless Contrast discovers it again. 
+
+## Export Findings
+
+Export details on vulnerability findings from the **Vulnerabilities** page, a vulnerability's **Overview** tab, or an application or server's **Vulnerabilities** tab. Click the **Export** icon to choose either CSV or XML formats for the grouping of vulnerabilities that you want to include in the report.
+
+<a href="assets/images/Vuln-export-options.png" rel="lightbox" title="Vulnerability export options"><img class="thumbnail" src="assets/images/Vuln-export-options.png"/></a>
+
+The exported file contains the following data fields for each vulnerability:
+
+* Vulnerability Name
+* Vulnerability ID
+* Category
+* Rule Name
+* Severity
+* Status
+* Number of Events
+* First Seen
+* Last Seen
+* Application Name
+* Application ID
+* Application Code
+* CWE ID
+* Request Method
+* Request Port
+* Request Protocol
+* Request Version
+* Request URI
+* Request Qs
+* Request Body
+
+### Custom reports
+
+For users looking to craft custom software composition analysis reports about their applications, the vulnerability export feature might not provide sufficient information; however, Contrast offers a rich Application API which gives you access to Contrast vulnerability data. Reference the **Contrast RESTful API documentation > Application Trace Filtering > /ng/{orgUuid}/traces/{appId}/filter** section for instructions on using the Application API. 
+
+You may also explore additional details on your vulnerabilities using a manual method.
+
+> **Example:** This cURL request retrieves a list of vulnerabilities that also shows a list of the applications in which each vulnerability was found. The jq tool formats the data as CSV for use in a custom report.
+
+```
+curl \
+    -H "Authorization: $(echo -n $username:$servicekey | base64)" \
+    -H "API-Key: $apikey" \
+    https://app.contrastsecurity.com/Contrast/api/ng/$orgid/orgtraces/filter?expand=request | \
+    jq -r '.traces[] | {uuid: .uuid, protocol: .request.protocol} | [.uuid, .protocol] | @csv'
+```
+
+For more information, read [About the Contrast API](tools-api.html#api-about). 
+
 
 

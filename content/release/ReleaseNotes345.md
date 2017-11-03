@@ -37,7 +37,7 @@ Remediate old vulnerabilities, tag from any agent, and apply and Assess Rules to
 
 * Set our .NET agents to a pending update state when a new agent is available. In this state, .NET agents will wait for users to restart their IIS servers before installing an update.
 
-* Choose which [vulnerability](user-apps.html#vulns) and [library](user-apps.html#libraries) data fields to export. The power is yours.
+* Choose which [vulnerability](user-vulns.html#manage-vuln) and [library](user-apps.html#libraries) data fields to export. The power is yours.
 
 * Just like JIRA, but for our VSTS users: vulnerabilities status are updated in Contrast when you [change the status of a VSTS work item](admin-orgintegrations.html#vsts-tfs).
 
