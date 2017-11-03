@@ -13,8 +13,6 @@ Attacks are groups of [attack events](user-attacks.html#monitor) coming from a s
 
 ## View Attacks
 
-<a href="assets/images/Attacks-page.png" rel="lightbox" title="View attacks"><img class="thumbnail" src="assets/images/Attacks-page.png"/></a>
-
 Go to the **Attacks** tab in the **Attacks** page to view all attacks that have occurred in your organization. Contrast organizes the components of each attack into the following columns. 
 
 * **Source IP:** The IP address from which the attack is originating. 
@@ -34,6 +32,8 @@ Go to the **Attacks** tab in the **Attacks** page to view all attacks that have 
 * **End:** The timestamp of the last attack event seen from the IP address during the attack timeframe.
 
 * **Events:** The number of attack events that comprise the attack.
+
+<a href="assets/images/Attacks-page.png" rel="lightbox" title="View attacks"><img class="thumbnail" src="assets/images/Attacks-page.png"/></a>
 
 ### Attack details 
  
