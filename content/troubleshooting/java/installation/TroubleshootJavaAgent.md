@@ -58,7 +58,7 @@ $ java -jar contrast.jar diagnostic
 [!] Attempting to connect to the Contrast TeamServer at http://localhost:19080/Contrast (No proxy). 
 [+] Looking up http://localhost:19080/Contrast 
         Couldn't resolve host 
-[-] Client cannot resolve the Contarst TeamServer. A proxy or DNS change may be needed. 
+[-] Client cannot resolve the Contrast TeamServer. A proxy or DNS change may be needed. 
 [+] Issuing HTTP request to Contrast... 
         Executing request... 
         Reading response [200] 
