@@ -37,7 +37,7 @@ Go to the **Attacks** tab in the **Attacks** page to view all attacks that have 
 
 ### Attack details 
  
-Click on the Source IP to view more details on the attack. In the **Overview** tab, view each attack event in the grid; click on each row to expand your view for more details. Under **Attack Duration**, click the **See Timeline** link to see the exact time of each event. Use the dropdown menus and search field to find specific events. 
+Click on the Source IP to view more details on the attack. In the **Overview** tab, view each attack event in the grid; click on each row to expand your view for more details. Under **Attack Duration**, click the **See Timeline** link to view the exact time sequence of each event. Use the dropdown menus and search field to find specific events. 
 
 <a href="assets/images/Attack-overview.png" rel="lightbox" title="View the Attack Overview"><img class="thumbnail" src="assets/images/Attack-overview.png"/></a>
 
@@ -53,9 +53,9 @@ In the **Attacks** page, use the row dropdown menu to [blacklist an IP address](
 
 ### Manage attack events
 
-In an attack **Overview** tab, use the row dropdown menu to [add an exclusion](admin-policymgmt.html#exclude), [create a virtual patch](admin-policymgmt.html#patch), [blacklist an IP address](admin-policymgmt.html#ip), [add a Protect Rule](admin-policymgmt.html#protect) or suppress the event. Tag or suppress multiple attack events by checking the boxes in the grid rows and selecting the appropriate icons in the batch action menu above the grid. 
+In an attack **Overview** tab, use the row dropdown menu to [add an exclusion](admin-policymgmt.html#exclude), [create a virtual patch](admin-policymgmt.html#patch), [blacklist an IP address](admin-policymgmt.html#ip), [add a Protect Rule](admin-policymgmt.html#protect) or suppress the event. Tag or suppress multiple attack events by checking the boxes in the grid rows, and selecting the appropriate icons in the batch action menu above the grid. 
 
-You can also perform each of these actions by clicking on the event and selecting the appropriate icon in the expanded description. 
+You can also perform each of these actions by clicking on the event, and selecting the appropriate icon in the expanded description. 
 
 <a href="assets/images/Attack-event-details.png" rel="lightbox" title="View attack event details"><img class="thumbnail" src="assets/images/Attack-event-details.png"/></a>
 
