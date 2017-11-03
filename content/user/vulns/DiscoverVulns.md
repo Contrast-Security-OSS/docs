@@ -6,7 +6,7 @@ tags: "user applications discover vulnerabilities quick start guide"
 
 ## How It Works
 
-If a vulnerability is reported and Contrast has never seen it before, Contrast creates a new entry for that vulnerability. However, if that vulnerability already exists, Contrast updates the existing entry, issue count and number of days since it was last detected.
+If a vulnerability is reported and Contrast has never seen it before, Contrast creates a new entry for that vulnerability. However, if that vulnerability already exists, Contrast updates the existing entry, issue count and number of days since it was last detected. 
 
 <a href="assets/images/Vulnerability-overview.png" rel="lightbox" title="Vulnerability Overview"><img class="thumbnail" src="assets/images/Vulnerability-overview.png"/></a>
 
@@ -14,7 +14,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
 
 ### View findings 
 
-Contrast shows you all the vulnerabilities it's discovered including SQL Injection, Cross-Site Scripting (XSS), Command Injection, Path Traversal, XML External Entity Processing (XXE), Cross-Site Request Forgery (CSRF), Java Deserialization and many more. Go to the **Vulnerabilities** tab from the application's **Overview** to see a list of all vulnerabilities found in that application, or go to the main **Vulnerabilities** page to see all vulnerabilities across your portfolio. 
+Contrast shows you all the vulnerabilities it's discovered including SQL Injection, Cross-Site Scripting (XSS), Command Injection, Path Traversal, XML External Entity Processing (XXE), Cross-Site Request Forgery (CSRF), Java Deserialization and many more. Go to the main **Vulnerabilities** page to see all vulnerabilities across your portfolio, or go to the **Vulnerabilities** tab from the application's overview page to see a list of all vulnerabilities found in that application. 
 
 > **Note:** For Contrast to find weaknesses and present findings, you must also exercise your application. You can then track, share and get remediation guidance for each vulnerability that Contrast reports. 
 
@@ -61,6 +61,7 @@ For users looking to craft custom software composition analysis reports about th
 You may also explore additional details on your vulnerabilities using a manual method.
 
 > **Example:** This cURL request retrieves a list of vulnerabilities that also shows a list of the applications in which each vulnerability was found. The jq tool formats the data as CSV for use in a custom report.
+
 ```
 curl \
     -H "Authorization: $(echo -n $username:$servicekey | base64)" \
@@ -69,9 +70,5 @@ curl \
     jq -r '.traces[] | {uuid: .uuid, protocol: .request.protocol} | [.uuid, .protocol] | @csv'
 ```
 
-## More Information 
+For more information, read [About the Contrast API](tools-api.html#api-about). 
 
-* [About the Contrast API](tools-api.html#api-about)
-* [Analyze Findings](user-vulns.html#analyze)
-* [Manage Vulnerabilities](user-vulns.html#manage-vuln)
-* [How to Fix Them](user-vulns.html#remediate)
