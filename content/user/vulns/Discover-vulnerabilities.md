@@ -20,6 +20,8 @@ Contrast shows you all the vulnerabilities it's discovered including SQL Injecti
 
 > **Note:** For Contrast to find weaknesses and present findings, you must also exercise your application. You can then track, share and get remediation guidance for each vulnerability that Contrast reports. 
 
+<a href="assets/images/Vulnerabilities-grid.png" rel="lightbox" title="View the Vulnerabilities grid"><img class="thumbnail" src="assets/images/Vulnerabilities-grid.png"/></a>
+
 The grid of discovered vulnerabilities provides extremely detailed information on each one, including: 
 
 * Type of vulnerability
