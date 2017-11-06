@@ -20,22 +20,24 @@ View Assess Rules by going to the **User menu > Policy Management > Assess Rules
 
 #### Rule configuration 
 
-Click on a rule for a grid view of the applications to which the rule applies. Use the toggles to turn each environment on or off for each application. To update multiple environments at once, use the checkboxes to select the appropriate rows, and click the button to **Change Mode**; in the dialog that appears, use the dropdown menus to set a new mode for each environment. Click the **Done** button to save your changes. 
+Click on a rule for a grid view of the applications to which the rule can apply. Use the toggles to turn each environment on or off for each application. To update multiple environments at once, use the checkboxes to select the appropriate rows, and click the button to **Change Mode**; in the dialog that appears, use the dropdown menus to set a new mode for each environment. Click the **Done** button to save your changes. 
 
 <a href="assets/images/Assess-rule-details.png" rel="lightbox" title="View rule details"><img class="thumbnail" src="assets/images/Assess-rule-details.png"/></a>
 
-To update a rule configuration, select the checkbox in the grid row, and click the settings icon. Complete the following steps in the dialog that appears. 
+To update rule settings, click the settings icon, and complete the following steps in the dialog that appears. 
 
 * Use the dropdown menus to choose the **Likelihood**, **Impact** and **Confidence Level** of the vulnerabilities for which this rule is intended. 
-* Select the checkbox to **Override** to enable to option to update these fields after the configuration is saved. 
-* Enter the **Risk Description** and **Recommendation** in the designated fields. 
+	* Select the checkbox to **Override** to enable to option to update these fields after the configuration is saved. 
+
+* In the **Risk Description** field, enter additional information regarding potential consequences of exposure to this vulnerability. You can also provide a **Recommendation**. 
+
 * In the **References** field, enter a link to an external issue - such as a bugtracker ticket - to provide more context for the rule requirements.  
 
 <a href="assets/images/Assess-rules-dialog.png" rel="lightbox" title="Update Assess Rules Settings in the dialog"><img class="thumbnail" src="assets/images/Assess-rules-dialog.png"/></a>
 
-#### Default policies
+#### Default policy
 
-If you want to change how policies are applied to new applications by default, click the link above the grid. Use the toggles to turn each environment on and off for each policy. **Contrast will automatically apply all enabled environments for each policy to each application in your organization when it's onboarded.**  
+If you want to change how rules are applied to new applications by default, click the link above the grid. Use the toggles to turn each environment on and off for each policy. **Contrast will automatically apply all enabled environments for each policy to each application in your organization when it's onboarded.**  
 
 <a href="assets/images/Assess-rules-defaults.png" rel="lightbox" title="Manage Assess Rules Defaults from the Policy Management page"><img class="thumbnail" src="assets/images/Assess-rules-defaults.png"/></a>
 
