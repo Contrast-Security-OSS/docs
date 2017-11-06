@@ -24,8 +24,38 @@ Contrast shows you all the vulnerabilities it's discovered including SQL Injecti
 
 The grid of discovered vulnerabilities provides extremely detailed information on each one, including: 
 
-* Type of vulnerability
+* Type, status and severity of the vulnerability
 * Tutorial on how to fix it
 * Line of code
 * Ability to replay the attack
+
+### Vulnerability status 
+
+Contrast uses the following statuses for vulnerabilities to help you prioritize and manage findings. 
+
+* **Reported:** The default for all discovered vulnerabilities.
+* **Confirmed:** A user triaged the vulnerability and flagged it as a definitive risk.
+* **Suspicious:** A user found a vulnerability that requires more investigation to determine its validity. 
+* **Not a Problem:** Contrast requires a justification for this status. For example, the vulnerability is found to be a false positive or goes through an internal security control. 
+* **Remediated:** The vulnerability is considered closed, but could be reopened (and returned to **Reported**) if rediscovered.
+* **Fixed:** The vulnerability remains closed even if rediscovered, and will never be reported again.
+* **Auto-remediated:** Contrast automatically remediated a vulnerability based on a [Remediation Policy](admin-policymgmt.html#remediate) set up by an administrator. 
+
+### Vulnerability severity 
+
+Contrast classifies vulnerabilities in an application into five severity levels. The classifications are based on the likelihood and impact of a vulnerability in the application, from most to least severe:
+
+* Critical
+* High
+* Medium
+* Low
+* Note
+
+### Vulnerability Notes
+
+* Build numbers
+* Reporting servers
+* Security standards
+
+To learn about changing vulnerability status, severity and other features, read how to [Manage Vulnerabilities](user-vulns.html#manage-vuln).
 
