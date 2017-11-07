@@ -22,7 +22,7 @@ Contrast shows you all the vulnerabilities it's discovered including SQL Injecti
 
 <a href="assets/images/Vulnerabilities-grid.png" rel="lightbox" title="View the Vulnerabilities grid"><img class="thumbnail" src="assets/images/Vulnerabilities-grid.png"/></a>
 
-The grid of discovered vulnerabilities provides extremely detailed information on each one, including: 
+The grid of discovered vulnerabilities provides basic information on each one, including: 
 
 * Type, status and severity of the vulnerability
 * Tutorial on how to fix it
@@ -53,8 +53,11 @@ Contrast classifies vulnerabilities in an application into five severity levels.
 
 ### Vulnerability Notes
 
+In each vulnerabilities' **Notes** tab, Contrast provides further details about the identity, timing and location of the vulnerability, such as: 
+
 * Build numbers
 * Reporting servers
+* Category 
 * Security standards
 
 To learn about changing vulnerability status, severity and other features, read how to [Manage Vulnerabilities](user-vulns.html#manage-vuln).
