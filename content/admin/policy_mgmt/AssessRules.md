@@ -20,7 +20,7 @@ View Assess Rules by going to the **User menu > Policy Management > Assess Rules
 
 #### Rule configuration 
 
-Click on a rule for a grid view of the applications to which the rule can apply. Use the toggles to turn each rule on or off for each application per environment. <!-- To update multiple environments at once, use the checkboxes to select the appropriate applications, and click the button to **Change Mode**; in the dialog that appears, use the dropdown menus to set a new mode for each environment. --> Click the **Done** button to save your changes. 
+Click on a rule for a grid view of the applications to which the rule can apply. Use the toggles to turn each rule on or off for each application per environment. To update multiple environments at once, use the checkboxes to select the appropriate applications, and click the button to **Change Mode**; in the dialog that appears, use the toggles to turn the rule on or off for each environment. Click the **Done** button to save your changes. 
 
 <a href="assets/images/Assess-rule-details.png" rel="lightbox" title="View rule details"><img class="thumbnail" src="assets/images/Assess-rule-details.png"/></a>
 
@@ -43,7 +43,7 @@ Click the link above the grid to **configure the default policy**, if you want s
 
 ### Application page
 
-View Assess Rules by going to the **Applications page grid > Policy tab > Assess button**. Use the toggles to turn each rules on or off per environment. To update multiple environments at once, use the checkboxes to select the appropriate rules, and click the button to **Change Mode**; <!-- in the dialog that appears, use the dropdown menus to set a new mode for each environment. -->
+View Assess Rules by going to the **Applications page grid > Policy tab > Assess button**. Use the toggles to turn each rules on or off per environment. To update multiple environments at once, use the checkboxes to select the appropriate rules, and click the button to **Change Mode**; in the dialog that appears, use the toggles to turn the rule on or off for each environment.
 
 <a href="assets/images/App-assess-rules.png" rel="lightbox" title="Manage Assess Rules from the application page "><img class="thumbnail" src="assets/images/App-assess-rules.png"/></a>
 
