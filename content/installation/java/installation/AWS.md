@@ -6,7 +6,7 @@ tags: "java agent installation AWS"
 
 ## Prerequisites
 
-* Download the Contrast plugin (*contrast.jar*) from Contrast.
+* [Download and install](installation-setup.html#onboard) the Java agent from Contrast.
 * Create an [AWS Elastic Beanstalk account](https://aws.amazon.com/elasticbeanstalk/). 
 
 ## Installation 
@@ -40,6 +40,7 @@ Your Elastic Beanstalk then updates your environment.
 
 
 
-To learn more about Contrast and AWS, read ...
+To learn more about Contrast and AWS, read ... [Contrast doc] 
 
-http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-getstarted.html
+For more information about AWS and Java, go to the [AWS documentation](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-getstarted.html). 
+
