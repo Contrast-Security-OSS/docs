@@ -1,7 +1,7 @@
 <!--
 title: "License Management"
-description: "Overview of Licensing visibility"
-tags: "Admin manage SuperAdmin EOP SaaS RASP IAST Licensing"
+description: "Overview of allocating and managing licenses"
+tags: "Admin manage SuperAdmin EOP SaaS Assess Protect Licensing"
 -->
 
 Allocate, revoke and manage Assess and Protect licenses for individual organizations as a SuperAdmin. An Organization Admin may then apply and remove Protect licenses for servers in their organization. 
@@ -17,6 +17,10 @@ A SuperAdmin may grant separate Assess and Protect licenses to an organization i
 To grant licenses to an organization, click the caret in the grid row and select **Allocate Licenses** from the row action dropdown menu. In the dialog that appears, SaaS users can enter the number of Assess and/or Protect licenses in the given fields to allocate to that organization. Click in the corresponding **Expiration Date** fields to make your selections on the calendars. EOP users can choose to allocate licenses from the total number available, which is shown in dialog along with the predetermined expiration dates. 
 
 <a href="assets/images/Licenses-allocate.png" rel="lightbox" title="Allocate licenses dialog for SaaS"><img class="thumbnail" src="assets/images/Licenses-allocate.png"/></a>
+
+### Automatically apply licenses
+
+<a href="assets/images/System-settings-licensing.png" rel="lightbox" title="View Licensing in System Settings"><img class="thumbnail" src="assets/images/System-settings-licensing.png"/></a>
 
 ### License Summary
 
