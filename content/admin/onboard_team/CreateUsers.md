@@ -61,7 +61,7 @@ The following information is optional for each user. To include the fields in th
 
 * **Email Activation** <br> If the value is "None", the default is "Required Password".
 * **System Administration** <br> The default value is "Off".
-* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&GroupB&GroupC".
+* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
 * **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
 * **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
 * **Timezone** <br> The default value is the organization time zone.
@@ -113,7 +113,7 @@ Download **CSV templates** directly from the Contrast interface by hovering over
 
 The following information is optional for each user. To include the fields in the spreadsheet, add a new column and value(s) for each as given below. 
 
-* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&GroupB&GroupC".
+* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
 * **Protect** <br> The default value is "Off".
 * **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
 * **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
