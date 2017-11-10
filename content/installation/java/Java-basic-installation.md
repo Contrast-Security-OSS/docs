@@ -10,6 +10,8 @@ To install the Java agent, complete the following steps:
 * Click the button in the top navigation bar to **Add an Application**.
 * Select the **Java Agent** in the dropdown menu, and click the button to **Download Agent**. This downloads a zip archive file (e.g., *ContrastSetup_3.3.5.zip*). 
 
+<a href="assets/images/Download-java-agent.png" rel="lightbox" title="Download the Java agent"><img class="thumbnail" src="assets/images/Download-java-agent.png"/></a>
+
 > **Note:** You may need to specify proxy authentication information required by your network before downloading the agent.
 
 * Extract the archive on the web server, and run *ContrastSetup.exe*. This installs the Java agent. 
