@@ -5,9 +5,9 @@ tags: "java agent installation AWS ebs elasticbeanstalk"
 -->
 ## Introduction
 
-Amazon Web Services (AWS) delivers a set of services that form a reliable, scalable, and inexpensive computing platform solution. Contrast Security helps AWS users improve the security applications.
+Amazon Web Services (AWS) delivers a set of services that form a reliable, scalable and inexpensive computing platform solution. Contrast Security helps AWS users improve the security of applications.
 
-Contrast Security work with the following AWS systems:
+Contrast Security works with the following AWS systems:
 
 * AWS Elastic Beanstalk
 * Amazon EC2
@@ -15,7 +15,7 @@ Contrast Security work with the following AWS systems:
 
 ## Prerequisites
 
-* [Download and install](installation-setup.html#onboard) the Java agent from Contrast.
+* [Download and install](installation-java.html#java-standard) the Java agent from Contrast.
 * Create an [AWS Elastic Beanstalk account](https://aws.amazon.com/elasticbeanstalk/).
 
 ## Installation
@@ -46,9 +46,5 @@ Pass the `-javaagent` flag to JVM in AWS Elastic Beanstalk by completing the fol
 
 Your Elastic Beanstalk then updates your environment.
 
-
-
-
-To learn more about Contrast and AWS, read ... [Contrast doc]
 
 For more information about AWS and Java, go to the [AWS documentation](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-getstarted.html).
