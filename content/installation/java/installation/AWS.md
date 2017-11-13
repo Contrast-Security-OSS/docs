@@ -3,19 +3,18 @@ title: "Installing on AWS"
 description: "AWS installation process"
 tags: "java agent installation AWS ebs elasticbeanstalk"
 -->
-## Introduction
 
-Amazon Web Services (AWS) delivers a set of services that form a reliable, scalable and inexpensive computing platform solution. Contrast Security helps AWS users improve the security of applications.
+Amazon Web Services (AWS) is a secure cloud services platform that provides a reliable, scalable and affordable computing platform solution. By using AWS, Contrast users can maximize the security of their applications.
 
-Contrast Security works with the following AWS systems:
+Contrast works with the following AWS systems:
 
 * AWS Elastic Beanstalk
 * Amazon EC2
 * Amazon RDS
 
-## Prerequisites
+## Before You Start 
 
-* [Download and install](installation-java.html#java-standard) the Java agent from Contrast.
+* [Download and install the Java agent](installation-java.html#java-standard) from Contrast.
 * Create an [AWS Elastic Beanstalk account](https://aws.amazon.com/elasticbeanstalk/).
 
 ## Installation
@@ -26,7 +25,7 @@ Contrast Security works with the following AWS systems:
 
 * Repackage and deploy your new WAR file as a new application, or an update to a previous application.
 
-* Locate and connect to the underlaying EC2 instance. Once connected, use the following command to find the path to *contrast.jar* file. (Substitute either `/var` or `/usr` as appropriate.)
+* Locate and connect to the underlying EC2 instance. Once connected, use the following command to find the path to *contrast.jar* file. (Substitute either `/var` or `/usr` as appropriate.)
 
 ```
 sudo find </var | /usr> -name "contrast.jar"
@@ -34,17 +33,15 @@ sudo find </var | /usr> -name "contrast.jar"
 
 ### Step two
 
-Pass the `-javaagent` flag to JVM in AWS Elastic Beanstalk by completing the following steps.
+Pass the `-javaagent` flag to JVM in Elastic Beanstalk by completing the following steps.
 
 * In the AWS console, open Elastic Beanstalk.
-* Select the relevant region.
-* Select your application.
+* Choose a region.
+* Choose your application.
 * In the left navigation, select **Configurations**.
 * Open **Software Configuration**.
 * In the **JVM command line options:** field, enter `-javaagent:/full/path/to/contrast.jar`.
 * Select **Apply** to save.
-
-Your Elastic Beanstalk then updates your environment.
-
+* Elastic Beanstalk updates your environment.
 
 For more information about AWS and Java, go to the [AWS documentation](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-getstarted.html).
