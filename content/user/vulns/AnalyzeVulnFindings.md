@@ -4,9 +4,8 @@ description: "Explanation of vulnerability findings"
 tags: "user vulnerabilities analyze findings quick start guide"
 -->
 
-Contrast discovers any code flaws that are in your applications. These vulnerabilities are presented and classified with a severity level to help you prioritize and mark the vulnerabilities as needed. The **Vulnerabilities** page allows you to browse, search and filter through all an application's vulnerabilities. Click on each vulnerability for more details, including guidelines for determining how to resolve them to prevent an attack.
 
-Triaging findings can depend on several factors such as your specific security concerns, assessing the risk to the application and  eliminating false positives. Contrast also provides ways to modify attributes of findings like changing severity levels or merging, when appropriate. 
+Triaging vulnerability findings can depend on several factors, such as your specific security concerns, assessing the risk to the application and  eliminating false positives. Contrast also provides ways to modify attributes of findings like changing severity levels or merging, when appropriate. 
 
 ## Vulnerability Behaviors
 
