@@ -12,7 +12,7 @@ Contrast works with the following AWS systems:
 * Amazon EC2
 * Amazon RDS
 
-## Before You Start 
+## Before You Start
 
 * [Download and install the Java agent](installation-java.html#java-standard) from Contrast.
 * Create an [AWS Elastic Beanstalk account](https://aws.amazon.com/elasticbeanstalk/).
@@ -21,14 +21,14 @@ Contrast works with the following AWS systems:
 
 ### Step one
 
-* In your WAR file, add the *contrast.jar* and *contrast.yml* files to *WEB-INF/lib/*.
+* In your WAR file, add the *contrast.jar* files to *WEB-INF/lib/*.
 
 * Repackage and deploy your new WAR file as a new application, or an update to a previous application.
 
-* Locate and connect to the underlying EC2 instance. Once connected, use the following command to find the path to *contrast.jar* file. (Substitute either `/var` or `/usr` as appropriate.)
+* Locate and connect to the underlying EC2 instance. Once connected, use the following command to find the path to *contrast.jar* file. (Substitute either `/opt` as appropriate.)
 
 ```
-sudo find </var | /usr> -name "contrast.jar"
+sudo find /opt -name "contrast.jar"
 ```
 
 ### Step two
