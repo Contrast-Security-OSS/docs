@@ -21,11 +21,11 @@ Contrast works with the following AWS systems:
 
 ### Step one
 
-* In your WAR file, add the *contrast.jar* files to *WEB-INF/lib/*.
+* In your WAR file, add the *contrast.jar* file to *WEB-INF/lib/*.
 
 * Repackage and deploy your new WAR file as a new application, or an update to a previous application.
 
-* Locate and connect to the underlying EC2 instance. Once connected, use the following command to find the path to *contrast.jar* file. (Substitute either `/opt` as appropriate.)
+* Locate and connect to the underlying EC2 instance. Once connected, use the following command to find the path to *contrast.jar* file. (Substitute `/opt` as appropriate.)
 
 ```
 sudo find /opt -name "contrast.jar"
