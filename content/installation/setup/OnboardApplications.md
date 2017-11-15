@@ -19,7 +19,7 @@ Start using Contrast by identifying an application server that you want Contrast
 ## Download the Contrast Agent
 Log into the Contrast interface using your Organization Admin (not SuperAdmin) account. Your username and password are the same as the Contrast Hub credentials that you used to download the installer and license.
 
-Click on the **Applications** tab and then the **Add Application** button to start the agent download and installation wizard.  Follow the on-screen instructions to configure and download the appropriate agent for the application server that you're enabling.
+Click on the **Applications** tab and then the **Add Agent** button to start the agent download and installation wizard.  Follow the on-screen instructions to configure and download the appropriate agent for the application server that you're enabling.
 
 ## Install the Agent
 Follow the on-screen instructions to add the agent to your application server. Once you restart the application server, the Contrast agent should start and immediately connect to the Contrast application. If this doesn't happen, something may be preventing the agent from communicating with the application. The most common causes and solutions are:
