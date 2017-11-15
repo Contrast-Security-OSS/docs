@@ -4,7 +4,6 @@ description: "Overview of the core operations for an application from the action
 tags: "user TeamServer application manage archiving restoring resetting deleting"
 -->
 
-## Managing Applications
 Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid or use the Action Bar to make changes in bulk. 
 
 <a href="assets/images/Applications-page.png" rel="lightbox" title="Applications page"><img class="thumbnail" src="assets/images/Applications-page.png"/></a>
