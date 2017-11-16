@@ -10,7 +10,7 @@ Once you bring an application online, and it's reporting results, you may assign
 
 ## Apply a License 
 
-You must be an Organization Administrator to assign a license to an individual application. Complete the following steps to enable a license from the **Applications** page or an application's **Overview** tab: 
+You must be an Organization Admin to assign a license to an individual application. Complete the following steps to enable a license from the **Applications** page or an application's **Overview** tab: 
 
 * Identify the application to license in the Application page grid.
 * In the dropdown menu, select **Apply License**. <br> You can also click the **Unlicensed** link beside the application name in the grid or the application's **Overview** tab, and then click the button to **Apply License** in the dialog that appears.
@@ -19,4 +19,4 @@ You must be an Organization Administrator to assign a license to an individual a
 
 * The application is no longer marked as "Unlicensed", and all findings are visible.
 
-For more information about applying and managing licenses, read [Manage Licenses](admin-manageorgs.html#manage-license). 
+Organization and Super Admins can also automatically apply licenses to new applications in the Organization Settings and System Settings pages, respectively. For more information about applying and managing licenses, read [Manage Licenses](admin-manageorgs.html#manage-license). 
