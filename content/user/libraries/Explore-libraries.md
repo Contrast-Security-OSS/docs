@@ -35,6 +35,13 @@ Manage libraries in your organization by tagging, filtering and exporting detail
 
 ### Tag libraries 
 
+Tag libraries from the Libraries page, a library's overview page, or the application or server's Libraries tabs. Use the row action menu in a libraries grid to tag an individual library; or, use the checkboxes to select multiple libraries, and click the **Tag Libraries** icon in the batch action menu above the grid. In the dialog that appears, enter a new tag name or choose from the existing tags that are listed. You may add one or more tags to any library. 
+
+<a href="assets/images/Tag-libraries-dialog.png" rel="lightbox" title="Choose library tags"><img class="thumbnail" src="assets/images/Tag-libraries-dialog.png"/></a>
+
+You can find tagged libraries by clicking the **Advanced** above any libraries grid, and use the given dropdown menu to select labels. All tags are also displayed beside the library name in the library's details page. 
+
+To remove tags, follow the steps to add tags in any libraries grid or batch action menu; in the dialog that appears, click the "x" on the existing labels that you want to remove. You can also remove tags in a library's details page. 
 
 ### Delete libraries 
 
