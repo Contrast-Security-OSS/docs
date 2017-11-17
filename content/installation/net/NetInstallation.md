@@ -37,14 +37,14 @@ Once these requirements are met, you're ready to install the Contrast .NET Agent
 To install the agent, complete the following steps:
 
 * Log in to the Contrast interface. 
-* Click the button in the top navigation bar to **Add an Application**.
+* Click the button in the top navigation bar to **Add Agent**.
 * Select the **.NET Agent** in the dropdown menu, and click the button to **Download Agent**. This downloads a zip archive file (e.g., *ContrastSetup_3.3.5.zip*). 
 
 > **Note:** You might need to specify proxy authentication information required by your network before downloading the agent.
 
 * Extract the archive on the web server, and run *ContrastSetup.exe*. This installs the .NET agent. 
 
-To start analyzing an application, use the web application as you normally would in your browser: click on links, submit forms using normal data, etc.  The .NET Contrast Agent’s sensors will gather information about the application’s security, architecture, and libraries. You can view the results of the agent’s analysis in the Contrast interface.
+To start analyzing an application, use the web application as you normally would in your browser: click on links, submit forms using normal data, etc. The .NET Contrast agent’s sensors will gather information about the application’s security, architecture, and libraries. You can view the results of the agent’s analysis in the Contrast interface.
 
 ## Silent Installation
 

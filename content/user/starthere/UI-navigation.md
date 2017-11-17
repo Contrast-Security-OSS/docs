@@ -15,7 +15,7 @@ The top navigation bar is persistent as you move through Contrast - giving easy 
 
 ### Organization View
 
-<a href="assets/images/TopNav_Org.png" rel="lightbox" title="Navigation for an Organization"><img class="thumbnail" src="assets/images/TopNav_Org.png"/></a>
+<a href="assets/images/Dashboard-org-view.png" rel="lightbox" title="View the dashboard as an Organization Administrator"><img class="thumbnail" src="assets/images/Dashboard-org-view.png"/></a>
 
 | Component 		     | Description                                                                                                                                                                                  |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,14 +26,14 @@ The top navigation bar is persistent as you move through Contrast - giving easy 
 | Vulnerabilities        | Searchable list of vulnerabilities discovered by all the applications in an organization. Perform various functions including marking status, merging, sharing, tagging, exporting, and deleting. Take a deep dive into any vulnerability for more information and guidance for fixing it.                                                                    |
 | Attacks 			     | Searchable list of attacks that are occurring/have occurred on all the applications in an organization. View attacks at the highest level or delve into the individual attack events. Perform various functions including blacklisting IPs, generating reports and creating exclusions or virtual patches.                                                                                                  |
 | Search | Search any asset in Contrast by name or vulnerability ID to quickly jump to details.                                                                                                         |
-| Add Application 	     | Provides universal access to onboard an application at any time to begin monitoring.                                                                                                    |
+| Add Agent     | Download an agent to begin monitoring your applications.                                                               |
 | Notifications 	     | Provides real-time feedback when key events happen through this in-application notification channel. Get notified about new vulnerabilities, active attacks, or offline servers and be able to react immediately.                                                                                                    |
 | User Menu 	   	     | Provides access to subsidiary pages of Contrast such as personal account information, Organization Settings, Policy Management (if permissions allow), Reports, Release Notes and Help. If part of multiple organizations, toggle between them here as well.                                                                                                    |
 
 ### System Administration View
 If you have system administration capabilities, you will be able to switch from the organization view to the system administration view via the User menu. When doing so, the top navigation bar changes. This is only available on an Enterprise On-Premises (EOP) installation.
 
-<a href="assets/images/TopNav_Admin.png" rel="lightbox" title="Navigation for a System Administrator"><img class="thumbnail" src="assets/images/TopNav_Admin.png"/></a>
+<a href="assets/images/Dashboard-super-view.png" rel="lightbox" title="View the dashboard as a System Administrator"><img class="thumbnail" src="assets/images/Dashboard-super-view.png"/></a>
 
 | Administration Page     | Description                                                                                                |
 |-------------------------|------------------------------------------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ For example, you could apply a filter to a list of Vulnerabilities to view only 
 
 <a href="assets/images/TraceFilter.png" rel="lightbox" title="Advanced Filtering"><img class="thumbnail" src="assets/images/TraceFilter.png"/></a>
 
-## Delving Into the Details 
+## Delve into the Details 
 From any main page, you can drill into an asset or finding by clicking on its name within the table row. Contrast highlights metrics on the asset or finding for a quick snapshot of core data. Navigate the sub-pages to get more details on related pieces, view activity more closely, access review policy, or capture comments and collaborate with team members. 
 
 <a href="assets/images/Details.png" rel="lightbox" title="Details View"><img class="thumbnail" src="assets/images/Details.png"/></a>

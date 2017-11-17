@@ -8,39 +8,21 @@ Welcome to Contrast! This is your guide to everything you need to know to get st
 
 ## Onboard Your Application
 
-Once you've logged onto Contrast, click the **Add Applications** button on the top right, which brings you to an agent download page. A wizard walks you through what needs to be done. What language is your application primarily in – Java, .NET or Node.js? If you're using Java, you'll notice that there are two options: Java and Java 1.5. The only difference is that Java includes the functionality to do automatic updates, which isn’t available in Java 1.5.
+Once you've logged onto Contrast, click the **Add Agent** button on the top right, which brings you to an agent download page. A wizard walks you through what needs to be done. What language is your application primarily in – Java, .NET or Node.js? If you're using Java, you'll notice that there are two options: Java and Java 1.5. The only difference is that Java includes the functionality to do automatic updates, which isn’t available in Java 1.5.
  
-When you download an agent, the file should be called *contrast.jar*. This file needs to stay in its current form and shouldn’t be renamed. Once you download the *contrast.jar* file, regardless of your application server, Contrast needs to pass in **-javaagent:/path/to/server/contrast.jar** to your application server's JVM. Once complete, restart your application server. 
+When you download an agent, the file should be called *contrast.jar*. This file needs to stay in its current form and shouldn’t be renamed. Once you download the *contrast.jar* file, regardless of your application server, Contrast needs to pass in `-javaagent:/path/to/server/contrast.jar` to your application server's JVM. Once complete, restart your application server. 
 
-For more information on adding an application, please read the article on [Adding an Application](user-apps.html#addapp).
+For more information on adding an application, please read the article on [Add Applications](user-apps.html#addapp).
  
-## Use The Application
+## Use the Application
 
 The application server shows up right away in Contrast under the Servers tab. However, the application won’t appear in Contrast until you browse through it and generate some traffic. When an application first appears in Contrast, it’s listed as a trial application. As a trial application, the interesting information is blurred out under the application's Vulnerabilities tab. (Note that the same vulnerabilities appear on the Vulnerabilities page.) 
 
-To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [Licensing an Application](user-apps.html#license).
+To  see all the information, these applications must be licensed. For more information on licensing your application, read the article on [License Applications](user-apps.html#license).
  
 ## Manage Applications
 
 Go to the Applications page to get detailed information, see findings, scores, manage licenses, settings and more. Read the [Manage Applications article](user-appsmanage.html) for more details.
- 
-## Set Up Environments
-
-In the Servers page, you can set the environment for each server to Development, QA or Production. Select your application in the grid to compare the differences across environments as code travels and track vulnerabilities in the Overview page. Contrast sets up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
-
-For more information, including screenshots, go to the [Set Up Environments article](user-apps.html#environ). 
- 
-## Discover Vulnerabilities
-
-Go to the Vulnerabilities tab in the application's Overview page to get a list of all vulnerabilities discovered. Then track, share and get remediation guidance for each one.
-
-### How vulnerabilities work
-
-If a vulnerability is reported and Contrast has never seen it before, Contrast creates a new vulnerability. However, if that vulnerability already exists, Contrast updates the existing entry, issue count and number of days since it was last detected. 
-
-<a href="assets/images/Application-vulnerabilities-tab.png" rel="lightbox" title="Vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Application-vulnerabilities-tab.png"/></a>
-
-> **Example:** This vulnerability was reported to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
  
 ## Improve Your Application Score
 
@@ -53,16 +35,47 @@ Be aware of libraries that may be vulnerable and bring them up to date by going 
 Contrast provides you with a grade for the library, known Common Vulnerabilities and Exposures (CVEs), latest version and release date, used and total classes in the library, and the application that's using the library. Contrast calculates this grade based on three things: the age of the library, how many versions behind the library is, and the number of known CVEs that affect the library.
 
 For more information, read the article on [Library Analysis](user-libraries.html#analysis).
+
+## Set Up Environments
+
+In the Servers page, you can set the environment for each server to Development, QA or Production. Select your application in the grid to compare the differences across environments as code travels and track vulnerabilities in the Overview page. Contrast sets up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
+
+For more information, including screenshots, go to the [Set Up Environments article](user-apps.html#environ). 
+
+## Reports
+
+Go to the application's **Overview** page to generate reports of security issues that Contrast identifies while monitoring your application. To learn more, see the [Vulnerability Trend](user-reports.html#vulntrend) report.
+ 
+## Discover Vulnerabilities
+
+Go to the Vulnerabilities tab in the application's Overview page to get a list of all vulnerabilities discovered. Then track, share and get remediation guidance for each one.
+
+### How vulnerabilities work
+
+If a vulnerability is reported and Contrast has never seen it before, Contrast creates a new vulnerability. However, if that vulnerability already exists, Contrast updates the existing entry, issue count and number of days since it was last detected. 
+
+<a href="assets/images/Application-vulns-tab.png" rel="lightbox" title="Vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Application-vulns-tab.png"/></a>
+
+> **Example:** This vulnerability was reported to Contrast five times for one server. Instead of showing up as five vulnerabilities, Contrast updates this entry and increments the count. As Contrast continues to see the same findings, the count goes up. If you dive into the Notes tab within this vulnerability, you notice a list of the servers in which this vulnerability was found.
  
 ## Manage Vulnerabilities
 
 Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised. Read the [Manage Vulnerabilities article](user-vulns.html#manage-vuln) to understand them even better. 
+
+### Tag vulnerabilities 
+
+What’s better than assigning a vulnerability to a user? Creating tags for each vulnerability. These tags can be names of users, groups or just about anything. They are very useful when trying to navigate through vulnerabilities. To create a tag, go to the application's Overview page and select the Vulnerabilities tab. The **Tag Vulnerabilities** option is grayed out until you select the vulnerability you want to tag. 
+
+<a href="assets/images/Tag-vulnerability.png" rel="lightbox" title="Tag vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Tag-vulnerability.png"/></a>
+ 
+> **Example:** You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
+
+These tags can be created for applications and servers as well. To learn more about filters, please read about [Contrast Navigation](user-starthere.html#ui-navigate). 
  
 ## Analyze Findings
 
 Contrast discovers any code flaws, which are presented with a severity level to help you prioritize your tasks. For each reported vulnerability, you can mark a status and create tags as needed. The following chart shows available statuses and behaviors when a vulnerability is marked and found again.
 
----
 
 | Status        | Marked                          | Found Again          |
 |---------------|---------------------------------|----------------------|
@@ -72,22 +85,9 @@ Contrast discovers any code flaws, which are presented with a severity level to 
 | Remediated    | Closed                          | Reopened as **Reported** |
 | Reported      | Default                         | No Change            |
 | Fixed         | Closed                          | Stays Closed         |
-
----
-
-What’s better than assigning a vulnerability to a user? Creating tags for each vulnerability. These tags can be names of users, groups or just about anything. They are very useful when trying to navigate through vulnerabilities. To create a tag, go to the application's Overview page and select the Vulnerabilities tab. The **Tag Vulnerabilities** option is grayed out until you select the vulnerability you want to tag. 
-
-<a href="assets/images/Tag-vulnerability.png" rel="lightbox" title="Tag vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Tag-vulnerability.png"/></a>
+ 
  
-> **Example:** You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
-
-These tags can be created for applications and servers as well. To learn more about filters, please read about [Contrast Navigation](user-starthere.html#ui-navigate).  
- 
-## Reports
-
-Go to the application's **Overview** page to generate reports of security issues that Contrast identifies while monitoring your application. To learn more, see the [Vulnerability Trend](user-reports.html#vulntrend) report.
- 
-##Track Findings
+## Track Findings
 
 Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email for users who don't have access to Contrast. You can set up these and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by selecting **Organization Settings** in the User menu and then **Integrations** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
 
