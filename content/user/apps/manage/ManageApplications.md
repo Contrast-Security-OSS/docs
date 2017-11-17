@@ -4,9 +4,15 @@ description: "Overview of the core operations for an application from the action
 tags: "user TeamServer application manage archiving restoring resetting deleting"
 -->
 
-Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid or use the Action Bar to make changes in bulk. 
+Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid, or use the Action Bar to make changes in bulk. 
 
 <a href="assets/images/Applications-page.png" rel="lightbox" title="Applications page"><img class="thumbnail" src="assets/images/Applications-page.png"/></a>
+
+## Change Application Name 
+
+Change an application name by going to the application's details page. Click on the name at the top of the page to update the text, or click on the Settings icon and update the name in the **Application Defaults** dialog. **All applications within an organization must have unique names.** 
+
+<!-- Should this address System Settings? -->
 
 ## Archive Applications
 

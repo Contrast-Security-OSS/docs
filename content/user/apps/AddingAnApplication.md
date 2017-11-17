@@ -93,4 +93,9 @@ To confirm that your agent was correctly installed, Contrast displays reported i
 
 <a href="assets/images/KB3-f03_5.png" rel="lightbox" title="Browse Application"><img class="thumbnail" src="assets/images/KB3-f03_5.png"/></a>
 
+### Application name error
+
+All applications in the same organization must have unique names. If each name is not unique, Contrast notifies you of the conflict in the installation wizard, and allows you to rename the application or merge the applications with duplicate names. 
+
+<a href="assets/images/Browse-app-error.png" rel="lightbox" title="Merge or rename applications"><img class="thumbnail" src="assets/images/Browse-app-error.png"/></a>
 
