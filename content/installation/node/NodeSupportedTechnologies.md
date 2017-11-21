@@ -13,7 +13,7 @@ Third-Party Module Support                                     | Web Framework S
 [mysql](https://www.npmjs.com/package/mysql)                   | [hapi](https://www.npmjs.com/package/hapi) (version 16.x) |
 [postgres](https://www.npmjs.com/package/pg)                   |                                                           |
 
-Contrast does not guarantee support for old or deprecated versions of 3rd party modules.
+Contrast doesn't guarantee support for old or deprecated versions of third-party modules.
 
 ## OS Support
 
