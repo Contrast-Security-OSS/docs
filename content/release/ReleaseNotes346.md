@@ -35,7 +35,7 @@ In Progress:
 
 * Don’t be confused by different applications with the same display name. Contrast now requires [unique display names](user-apps.html#addapp), and will update your old ones for you. 
  
-* If you have Node applications using Protect, say hello to three new rules: Server-side Javascript, Path Traversal and Command Injection. Head over to the Policy Management page to flip them on or off. 
+* If you have Node applications using Protect, say hello to a new rule: Server-side Javascript. Head over to the Policy Management page to flip it on or off. 
 
 
 ## Agent Updates
