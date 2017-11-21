@@ -4,15 +4,16 @@ description: "List of supported technologies"
 tags: "installation Node agent frameworks support troubleshooting nodejs javascript modules"
 -->
 
-Contrast supports Node versions 4 and 6 Long-Term Support (LTS). Contrast shifts support for Node versions as the Node project shifts its LTS windows. For a schedule, see the [Node.js Long-Term Support Release Schedule](https://github.com/nodejs/LTS).
+Contrast supports Node versions 4, 6, and 8 Long-Term Support (LTS). Contrast shifts support for Node versions as the Node project shifts its LTS windows. For a schedule, see the [Node.js Long-Term Support Release Schedule](https://github.com/nodejs/LTS).
 
-Third-Party Module Support                                       | Web Framework Support<sup>[1](#footnote1)</sup> | Coming Soon
-:-----                                                         | :----                                           | :-------
-[express-session](https://github.com/expressjs/session)        | [express](http://expressjs.com)                 | [hapi](https://www.npmjs.com/package/hapi)
-[mongodb](https://docs.mongodb.org/ecosystem/drivers/node-js/) | [sails](http://sailsjs.org/)                    | [koa](https://www.npmjs.com/package/koa)
-[mysql](https://www.npmjs.com/package/mysql)                   |                                                 |
-[postgres](https://www.npmjs.com/package/pg)                   |                                                 |
+Third-Party Module Support                                     | Web Framework Support<sup>[1](#footnote1)</sup>           | Coming Soon
+:-----                                                         | :----                                                     | :-------
+[express-session](https://github.com/expressjs/session)        | [express](http://expressjs.com)                           | [koa](https://www.npmjs.com/package/koa)
+[mongodb](https://docs.mongodb.org/ecosystem/drivers/node-js/) | [sails](http://sailsjs.org/)                              |
+[mysql](https://www.npmjs.com/package/mysql)                   | [hapi](https://www.npmjs.com/package/hapi) (version 16.x) |
+[postgres](https://www.npmjs.com/package/pg)                   |                                                           |
 
+Contrast doesn't guarantee support for old or deprecated versions of third-party modules.
 
 ## OS Support
 
