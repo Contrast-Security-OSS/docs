@@ -22,6 +22,7 @@ A few words here...
 * Security Settings are smoothed out. CONTRAST-16916
 * Clarified details for vulnerability events. CONTRAST-18571
 * Removed irrelevant info from Organization Statistics and Attacks > Monitor page. CONTRAST-15668
+* Cleanly delete properties from vulnerabilities. CONTRAST-17981
 
 In Progress: 
 * https://contrast.atlassian.net/browse/CONTRAST-19055
