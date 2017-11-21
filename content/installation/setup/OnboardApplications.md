@@ -28,6 +28,8 @@ Follow the on-screen instructions to add the agent to your application server. O
 * Web gateways and proxies that require authentication: You can configure this in the agent configuration by returning to the **Agent Download** page, setting the proper configurations and getting a new agent.
 * Contrast application server URL is misconfigured, so the agent is attempting to communicate with the wrong address. You can change this in the agent configuration, if necessary.
 
+> **Note:** Each application in the same organization must have an unique name. If multiple applications have the same name, Contrast increments each instance of the display name [e.g., App1, App1 (1), App1 (2)]. 
+
 ## Test the Configuration
 Browse the applications on the application server with Contrast enabled - just click through a few pages and forms - to generate enough activity for good information on your application inventory and dashboard. You can check that Contrast is working by returning to the Dashboard of your Contrast interface to review results. From this point forward, you have an up-to-date application security dashboard for all the applications on that application server. 
 
