@@ -4,30 +4,26 @@ description: "Contrast 3.4.6 November 2017"
 tags: "3.4.6 November Release Notes"
 -->
 
-A few words here...
+Tame unruly applications with improved Assess Rules, unique display names and a new Protect rule for Node.js. 
 
 ## Fixes
 
 * Use the build number and server filters to find the right vulnerabilities in the grid. CONTRAST-18332, CONTRAST-17857
 * Assess Rules edits are only for admins. CONTRAST-18432
 * The Security Settings page is error free. CONTRAST-16916
-* Create Virtual Patches from Attack Events CONTRAST-19187
+* Create Virtual Patches from Attack Events. CONTRAST-19187
 * Default values for required fields and your complete list of potential assignees are there when you need them. CONTRAST-17649, CONTRAST-18907
 * Use time and date filters in Attack Events and Vulnerabilities pages. CONTRAST-18937, CONTRAST-19019
 * Filter Assess Rules by language. CONTRAST-18930
 * Save changes in Password Settings without any confusing confirmation dialog. CONTRAST-18353
 * Errors in the Server statistics dropdown are gone. CONTRAST-18961
-* Use the spreadsheet to add users to an application access group during bulk import. CONTRAST-18836
+* Add users to an application access group during bulk import. CONTRAST-18836
 * Set up two-way integration with JIRA, even if you change projects or issues types in the configuration. CONTRAST-18041
 * Security Settings are smoothed out. CONTRAST-16916
 * Clarified details for vulnerability events. CONTRAST-18571
-* Removed irrelevant info from Organization Statistics and Attacks > Monitor page. CONTRAST-15668
+* Get the most-relevant info from Organization Statistics and Attacks pages. CONTRAST-15668
 * Cleanly delete properties from vulnerabilities. CONTRAST-17981
 
-In Progress: 
-* https://contrast.atlassian.net/browse/CONTRAST-19055
-* https://contrast.atlassian.net/browse/CONTRAST-15558
-* https://contrast.atlassian.net/browse/CONTRAST-19005
 
 ## Improvements 
 
