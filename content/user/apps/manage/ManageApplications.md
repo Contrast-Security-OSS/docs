@@ -12,7 +12,7 @@ Contrast users can manage applications based on their [organization or applicati
 
 Change an application name by going to the application's details page. Click on the name at the top of the page to update the text, or click on the Settings icon and update the name in the **Application Defaults** dialog. **Each application within an organization must have an unique name.** 
 
-<!-- Should this address System Settings? -->
+> **Note:** SuperAdmins can also edit application names by clicking on the name in the **Applications** page grid. 
 
 ## Archive Applications
 
