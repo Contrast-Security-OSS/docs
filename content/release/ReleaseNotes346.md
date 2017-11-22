@@ -4,7 +4,7 @@ description: "Contrast 3.4.6 November 2017"
 tags: "3.4.6 November Release Notes"
 -->
 
-Tame unruly applications with improved Assess Rules, unique display names and a new Protect rule for Node.js. 
+Tame unruly applications with improved Assess Rules, unique display names and a new Protect rule for Node.js. (For your in-laws, we recommend a nice Pinot.)
 
 ## Fixes
 
