@@ -91,7 +91,7 @@ To confirm that your agent was correctly installed, Contrast displays reported i
 
 <a href="assets/images/KB3-f03_5.png" rel="lightbox" title="Browse Application"><img class="thumbnail" src="assets/images/KB3-f03_5.png"/></a>
 
-> **Note:** Each application in the same organization must have an unique name. If multiple applications have the same name, Contrast increments each instance of the display name [e.g., App1, App1 (1), App1 (2)]. 
+> **Note:** Each application in the same organization must have an unique name. If multiple applications have the same name, Contrast incrementally appends each instance of the display name [e.g., App1, App1 (1), App1 (2)]. 
 
 
 
