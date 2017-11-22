@@ -40,12 +40,13 @@ In Progress:
 
 ## Agent Updates
 
-* **Java Agent Summary:**
+### Java 
 
-* **.NET Agent Summary:** 
+### .NET 
 
-**Node.js Agent Summary:** 
-* We officially support node 8 (and for real this time because the [docs](installation-node.html#node-supported) say so). 
+### Node.js 
+
+* We officially support node 8 (again, and for real this time because the [docs](installation-node.html#node-supported) say so). 
 * We allow agent autoupdates in Windows. 
 * We have a few more tricks up our sleeves when it comes to instrumenting non-configurable functions that don't want to be instrumented. 
 * We fixed some busted propagation logic for substrings; a bug that'd cause ugly errors when we tried to report findings with circular objects in the values in any of their events; and a case where Promises in Node 4 and 6 caused us to lose context and not report findings. 
@@ -53,7 +54,7 @@ In Progress:
 * We improved accuracy in propagation.
 * Last - but not least - the hardcoded-key and hardcoded-password are much less spammy.
 
-**Ruby Agent Summary:** 
+### Ruby 
 * We spent this month focusing on code quality. 
 * We've added several new tests and refactored to remove some dead code paths. 
 * We also tuned some detection methods in the SQLI and XSS rules, expanding coverage to include injectable parameter names and reducing the number of duplicate attack reports.
