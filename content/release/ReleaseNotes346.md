@@ -12,7 +12,7 @@ Tame unruly applications with improved Assess Rules, unique display names and a 
 * Assess Rules can only be edited by admins, but anyone can filter by language. 
 * Security Settings are sorted out. 
 * Create Virtual Patches from Attack Events. 
-* Tuned up JIRA configuration fields, so you can use default values for required fields, add assignees and update issue types without any worries. 
+* Tuned up JIRA configuration fields so you can use default values for required fields, add assignees and update issue types without any problems. 
 * Use time filters to find Attack Events. 
 * Save changes in Password Settings without a confusing confirmation dialog. 
 * No more errors in server statistics.
@@ -41,7 +41,7 @@ We brought back the Profiler-based mode for instrumentation, which now supports 
 
 ### Node.js summary 
 
-* We officially support node 8 again (and for real this time because the [docs](installation-node.html#node-supported) say so). We allow agent autoupdates in Windows, improved accuracy in propagation, and have a few more tricks up our sleeves when it comes to instrumenting non-configurable functions that don't want to be instrumented. We also fixed some busted propagation logic for substrings; a bug that'd cause ugly errors when we tried to report findings with circular objects in the values in any of their events; and a case where Promises in Node 4 and 6 caused us to lose context and not report findings. Last, but not least: the hardcoded-key and hardcoded-password are much less spammy, and we're saying no to doing anything inside webpack or zlib functions. 
+We officially support node 8 again (and for real this time because the [docs](installation-node.html#node-supported) say so). We allow agent autoupdates in Windows, improved accuracy in propagation, and have a few more tricks up our sleeves when it comes to instrumenting non-configurable functions that don't want to be instrumented. We also fixed some busted propagation logic for substrings; a bug that'd cause ugly errors when we tried to report findings with circular objects in the values in any of their events; and a case where Promises in Node 4 and 6 caused us to lose context and not report findings. Last, but not least: the hardcoded-key and hardcoded-password are much less spammy, and we're saying no to doing anything inside `webpack` or `zlib` functions. 
 
 ### Ruby summary 
 
