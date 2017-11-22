@@ -4,7 +4,7 @@ description: "Contrast 3.4.6 November 2017"
 tags: "3.4.6 November Release Notes"
 -->
 
-Tame unruly applications with improved Assess Rules, unique display names and a new Protect rule for Node.js. (For your in-laws, we recommend a nice Pinot.)
+Tame unruly applications with improved Assess Rules, unique display names and a new Protect rule for Node.js. 
 
 ## Fixes
 
@@ -33,7 +33,7 @@ Tame unruly applications with improved Assess Rules, unique display names and a 
 
 ### Java summary 
 
-We improved rendering for vulnerabilities from applications using Struts, Spring and JAX as well as rendering of Assess findings involving the response body. We also added CVE Shields for CVE-2017-12615, CVE-2017-12616 and CVE-2017-12617. 
+We improved rendering for vulnerabilities from applications using Struts, Spring and JAX as well as rendering of Assess findings involving the response body. We also added CVE Shields for CVE-2017-12615, CVE-2017-12616 and CVE-2017-12617. For Assess, we're recognizing new command-injection sinks and additional ESAPI encoders as sanitizers. We also fixed traces involving `StringBuilder.insert`, messages to Contrast and a few minor issues with library findings. For Protect, we can handle vulnerabilities found outside of a request context, and implemented additional patterns to cut out false positives. 
 
 ### .NET summary 
 
