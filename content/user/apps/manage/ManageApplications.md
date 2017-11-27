@@ -4,9 +4,15 @@ description: "Overview of the core operations for an application from the action
 tags: "user TeamServer application manage archiving restoring resetting deleting"
 -->
 
-Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid or use the Action Bar to make changes in bulk. 
+Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid, or use the Action Bar to make changes in bulk. 
 
 <a href="assets/images/Applications-page.png" rel="lightbox" title="Applications page"><img class="thumbnail" src="assets/images/Applications-page.png"/></a>
+
+## Change Application Name 
+
+Change an application name by going to the application's details page. Click on the name at the top of the page to update the text, or click on the Settings icon and update the name in the **Application Defaults** dialog. **Each application within an organization must have an unique name.** 
+
+> **Note:** SuperAdmins can also edit application names by clicking on the name in the **Applications** page grid. 
 
 ## Archive Applications
 
@@ -20,7 +26,7 @@ When an application is archived, a small grey box will reside to the right of th
 
 Archiving an application does not free up a license within TeamServer. The only way to return a license back to the pool of available licenses is to archive and reset an application, then perform a full delete option to the application (see below).
 
-## Restore Applications (Unarchive)
+## Restore (Unarchive) Applications 
 Once an application is archived, a user with an Administrator role may choose to restore the application. Restoring an application is the inverse of archiving an application. The application becomes visible by default. All vulnerabilities and issues immediately impact the portfolio score.
 
 If an application has been reset and all of the data is purged, there is no concept of restoring purged data. In this case the data is completely lost.

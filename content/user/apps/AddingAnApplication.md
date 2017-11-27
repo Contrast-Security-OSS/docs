@@ -6,8 +6,6 @@ tags: "TeamServer user application adding"
 
 Add an application to your organization by completing the following steps. 
 
-## Set Up
-
 ## Step 1: Download the agent
 
 You can access the **Add Agent** wizard from any page by clicking the button in the top navigation.
@@ -92,5 +90,8 @@ Before you begin browsing an application, it's important to restart your server.
 To confirm that your agent was correctly installed, Contrast displays reported information from the server. Once you see these updates, you can complete the wizard, and begin browsing directly from the **Application Overview** page. 
 
 <a href="assets/images/KB3-f03_5.png" rel="lightbox" title="Browse Application"><img class="thumbnail" src="assets/images/KB3-f03_5.png"/></a>
+
+> **Note:** Each application in the same organization must have an unique name. If multiple applications have the same name, Contrast incrementally appends each instance of the display name [e.g., App1, App1 (1), App1 (2)]. 
+
 
 
