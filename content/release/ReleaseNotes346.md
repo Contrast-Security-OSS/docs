@@ -4,7 +4,7 @@ description: "Contrast 3.4.6 November 2017"
 tags: "3.4.6 November Release Notes"
 -->
 
-Tame unruly applications with improved Assess Rules, unique display names and a new Protect rule for Node.js. 
+Brighten up your organization with unique display names for applications and newly polished vulnerability features. 
 
 ## Fixes
 
@@ -14,7 +14,6 @@ Tame unruly applications with improved Assess Rules, unique display names and a 
 * Create Virtual Patches from Attack Events. 
 * Tuned up JIRA configuration fields so you can use default values for required fields, add assignees and update issue types without any problems. 
 * Use time filters to find Attack Events. 
-* Save changes in Password Settings without a confusing confirmation dialog. 
 * No more errors in server statistics.
 * Add users to an application access group during bulk import. 
 * View vulnerability event details more clearly. 
@@ -23,12 +22,8 @@ Tame unruly applications with improved Assess Rules, unique display names and a 
  
 ## Improvements 
 
-* Ever wondered if you could apply different [Assess Rules](admin-policymgmt.html#assess) to different applications? What if you want to track SQLi vulnerabilities on one application but not on another? With Assess Rules by application, your dreams for Java, Node and Ruby can come true. (And .NET will be coming soon!)
-
-* Don’t be confused by different applications with the same name. Contrast now requires [unique display names](user-apps.html#addapp), and will update your old ones for you. 
+Don’t be confused by different applications with the same name. Contrast now requires [unique display names](user-apps.html#addapp), and will update your old ones for you. 
  
-* If you have Node applications using Protect, say hello to a new rule: Server-side Javascript. Head over to the Policy Management page to flip it on or off. 
-
 ## Agent Updates
 
 ### Java summary 
@@ -41,7 +36,7 @@ We brought back the Profiler-based mode for instrumentation, which now supports 
 
 ### Node.js summary 
 
-We officially support node 8 again (and for real this time because the [docs](installation-node.html#node-supported) say so). We allow agent autoupdates in Windows, improved accuracy in propagation, and have a few more tricks up our sleeves when it comes to instrumenting non-configurable functions that don't want to be instrumented. We also fixed some busted propagation logic for substrings; a bug that'd cause ugly errors when we tried to report findings with circular objects in the values in any of their events; and a case where Promises in Node 4 and 6 caused us to lose context and not report findings. Last, but not least: the hardcoded-key and hardcoded-password are much less spammy, and we're saying no to doing anything inside `webpack` or `zlib` functions. 
+We officially support node 8 again (and for real this time because the [docs](installation-node.html#node-supported) say so). We allow agent autoupdates in Windows, improved accuracy in propagation, and have a few more tricks up our sleeves when it comes to instrumenting non-configurable functions that don't want to be instrumented. We also fixed some busted propagation logic for substrings; a bug that'd cause ugly errors when we tried to report findings with circular objects in the values in any of their events; and a case in which Promises in Node 4 and 6 caused us to lose context and not report findings. Last, but not least: the hardcoded-key and hardcoded-password are much less spammy, and we're saying no to doing anything inside `webpack` or `zlib` functions. 
 
 ### Ruby summary 
 
