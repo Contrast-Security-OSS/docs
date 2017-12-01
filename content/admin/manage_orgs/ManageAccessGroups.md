@@ -4,7 +4,7 @@ description: "Overview of managing access groups"
 tags: "Admin manage organizations access groups"
 -->
 
-Contrast provides role-based access control (RBAC) capabilities through groups. Administrators can create these groups to provide or restrict system, organization and application access and privileges to users within Contrast. Contrast has two types of access control groups: **System** and **Organization**. System groups, which are only available to on-premises customers, allow for delegated system administration. Organization groups allow for cross-organization access and application access/restriction.
+Contrast provides role-based access control (RBAC) capabilities through groups. Administrators can create these groups to provide or restrict system, organization, and application access and privileges to users within Contrast. Contrast has two types of access control groups: **System** and **Organization**. System groups, which are only available to on-premises customers, allow for delegated system administration. Organization groups allow for cross-organization access and application access/restriction.
 
 ## System Administration Groups
 
@@ -12,7 +12,7 @@ A system group is a convenient way to manage administrative tasks across users a
 
 ### Manage System Groups
 
-When you add a user to a system administration group that contains one or more organizations outside their default organization, the user has access to the System Administration interface. A new **SuperAdmin** option in the user menu is be available, which allows them to managing the organization(s), applications, users and groups associated with the defined organization(s). 
+When you add a user to a system administration group that contains one or more organizations outside their default organization, the user has access to the System Administration interface. When this is done, a new **SuperAdmin** option in the user menu is made available to that user, which allows them to manage the organization(s), applications, users and groups associated with the defined organization(s). 
 
 Go to the **Groups** page in the System Administration interface. From there:
 
@@ -23,20 +23,20 @@ Go to the **Groups** page in the System Administration interface. From there:
 
 ## Organization Groups
 
-Use an organization group to assign authorized users access to organizations and applications. An Organization Admin can create, edit and delete groups from the Organization Settings page. System administrators (EOP only) can also create [Cross-Organization Groups](admin-manageorgs.html#crossorg) to allow users access to more than one organization.
+Use an organization group to assign authorized users access to organizations and applications. An Organization Admin can create, edit, and delete groups from the Organization Settings page. System administrators (EOP only) can also create [Cross-Organization Groups](admin-manageorgs.html#crossorg) to allow users access to more than one organization.
 
-Contrast provides four default groups within each organization. These groups provide access to all applications in the organization with the associated role. That role grants or restricts what the user can do with the application. Those roles are:
+Contrast provides four default groups within each organization. These groups provide access to all applications in the organization with the associated role. That role grants or restricts what the user can do with each application. Those roles are:
 
-* **View:** Allows users to see an application's score, libraries and vulnerabilities, and add comments.
+* **View:** Allows users to see an application's score, libraries, and vulnerabilities, and add comments.
 * **Edit:** Allows users to manage an application's vulnerabilities as well as basic application management functions.
-* **Rules Admin:** Allows users all the capability of the Edit role plus the ability to manage security rules for an application. 
-* **Admin:** Provides full access to configure an application.
+* **Rules Admin:** Grants users all the rights of the Edit role plus the ability to manage security rules for an application. 
+* **Admin:** Provides full access to all aspects an application.
 
 ### Manage Organization Groups
 
 Organization administrators can create custom groups within an organization for the purpose of providing granular control and/or access at the application level. This supports the most common deployments of Contrast, in which an organization contains multiple applications with many users.
 
-A user assigned to an organization can have various roles across applications within that organization; each role grants or restricts what the user can do with the given application. However, the users associated with the organization may only require awareness of one or few of the many applications within the organization. This allows users to focus directly on what matters to them rather than sorting through information that has no bearing on their work. 
+A user assigned to an organization can have various roles across applications within that organization. Each role grants or restricts what the user can do with the given application. However, the users associated with the organization may only require awareness of one or a few of the many applications within the organization. This allows users to focus directly on what matters to them rather than sorting through information that has no bearing on their work.
 
 Go to the **Groups** section of the Organization Settings page. From there:
 
@@ -58,7 +58,7 @@ An Organization Admin can add a guest user to their organization by clicking on 
 
 If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. The roles, from most to least restrictive, are: No Access, View, Edit, Rules Admin and Admin. If the user has no role assigned to an application, the user won't be able to access it. For more information on each role, see the [Manage Users](admin-manageorgs.html#manage-user) article.
 
-Contrast handles collisions by the rule of least privileges: the role that provides the most restrictive access applies.
+Contrast handles collisions by the rule of least privilege: the role that provides the most restrictive access applies.
 
 > **Example:** If you assign a user to the Admin group and then assign that same user to the Edit group, the user has the Edit role for all applications because Edit is more restrictive than Admin.
 
@@ -70,5 +70,5 @@ If a user is assigned to two custom groups that provide roles for the same appli
 
 > **Example:** If you assign a user to a custom group that provides the Rules Admin role for App1, and then assign them to another group that provides the No Access role for App1, the user has No Access to App1 because both roles are specific and No Access is more restrictive than Rules Admin.
 
-An administrator can see the level of access assigned to a user and which groups provide that access by going to the **Edit User** page. Hover over the access indicators for information about the group that provides the existing level of access. For more information, go the the [Manage Users](admin-manageorgs.html#manage-user) article.
+An administrator can see the level of access assigned to a user and which groups provide that access by going to the **Edit User** page. Hover over the access indicators for information about the group that provides the existing level of access. For more information, go to the [Manage Users](admin-manageorgs.html#manage-user) article.
 
