@@ -1,7 +1,7 @@
 <!--
 title: "Library Scoring Guide"
 description: "Explanation of library scoring"
-tags: "TeamServer application user library scoring guide"
+tags: "application user library scoring guide"
 -->
 
 Contrast provides letter grades for the security of your application's libraries so that you can use them as a reference point during  analysis. Each grade is a composite score based on three factors: 
@@ -46,6 +46,6 @@ The final score of the library is calculated by subtracting each of the three pe
 * **A:**  90 - 100
 * **B:**  80 - 89
 * **C:**  70 - 79
-* **D:**  60 -69
+* **D:**  60 - 69
 * **F:**  35 - 59
 

@@ -10,20 +10,21 @@ View and manage libraries in the **Libraries** page, a library's details page, o
 
 The libraries grid provides basic information about each library, such as: 
 
-* Letter grade
+* Letter grades
 * Applications using the library 
 * CVEs found in the library  
 * Current and latest versions 
+* [Used classes](user-libraries.html#analysis)
 
 <a href="assets/images/Libraries-grid.png" rel="lightbox" title="View libraries in your organization"><img class="thumbnail" src="assets/images/Libraries-grid.png"/></a>
 
-Click on a library in the grid to go to its details page, and view lists of the applications and servers in which the library appears as well as any vulnerabilities that Contrast has found within the library itself. 
+Click on a library in the grid to go to its details page, which provides lists of the applications and servers in which the library appears as well as any vulnerabilities that Contrast has found within the library. 
 
 <a href="assets/images/Library-details.png" rel="lightbox" title="View library details"><img class="thumbnail" src="assets/images/Library-details.png"/></a>
 
 ### Library statistics
 
-Click the link above any libraries grid to **Show Library Stats** to analyze library data for your organization. Each graphic displays the statistical average as well as breakdowns for each category, including lines of code, grade and years out of date. 
+Click the link above any libraries grid to **Show Library Stats** to analyze library data for your organization. Each graphic displays the statistical average as well as breakdowns for each category, including library grades and the number of years by which they're out of date. 
 
 <a href="assets/images/Library-stats.png" rel="lightbox" title="View Library Stats"><img class="thumbnail" src="assets/images/Library-stats.png"/></a>
 
@@ -35,7 +36,7 @@ Manage libraries in your organization by tagging, filtering and exporting detail
 
 ### Tag libraries 
 
-Tag libraries from the Libraries page, a library's overview page, or the application or server's Libraries tabs. Use the row action menu in a libraries grid to tag an individual library; or, use the checkboxes to select multiple libraries, and click the **Tag Libraries** icon in the batch action menu above the grid. In the dialog that appears, enter a new tag name or choose from the existing tags that are listed. You may add one or more tags to any library. 
+Tag libraries from the Libraries page, a library's overview page, or the application or server's Libraries tabs. Use the row action menu in any libraries grid to tag an individual library; or, use the checkboxes to select multiple libraries, and click the **Tag Libraries** icon in the batch action menu above the grid. In the dialog that appears, enter a new tag name or choose from the existing tags that are listed. You may add one or more tags to any library. 
 
 <a href="assets/images/Tag-libraries-dialog.png" rel="lightbox" title="Choose library tags"><img class="thumbnail" src="assets/images/Tag-libraries-dialog.png"/></a>
 
@@ -45,7 +46,7 @@ To remove tags, follow the steps to add tags in any libraries grid or batch acti
 
 ### Delete libraries 
 
-To delete one or more vulnerabilities, select the checkboxes for the appropriate libraries, and click the trash can icon in the action bar above the grid. You can also delete a single library by selecting the trashcan icon in the row dropdown menu or in the library's details page.
+To delete one or more libraries, select the checkboxes for the appropriate libraries, and click the trashcan icon in the action bar above the grid. You can also delete an individual library by selecting the trashcan icon in the row dropdown menu or in the library's details page.
 
 ### Export findings
 

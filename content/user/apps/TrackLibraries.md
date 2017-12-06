@@ -24,6 +24,6 @@ Contrast calculates this grade based on three things:
 * number of versions that postdate the library
 * number of known CVEs that affect the library
 
-For more information, read the article on [Library Analysis](user-libraries.html#analysis).
+For more information, read about [library analysis](user-libraries.html#analysis) and [management](user-libraries.html#explore-lib).
 
 
