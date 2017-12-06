@@ -47,9 +47,6 @@ To remove tags, follow the steps to add tags in any libraries grid or batch acti
 
 To delete one or more vulnerabilities, select the checkboxes for the appropriate libraries, and click the trash can icon in the action bar above the grid. You can also delete a single library by selecting the trashcan icon in the row dropdown menu or in the library's details page.
 
-### Package details 
-
-
 ### Export findings
 
 Export details on findings from the Libraries page, a library's overview page, or the application or server's Libraries tabs. Click the **Export** icon to choose either CSV or XML formats for the grouping of libraries that you want to include in the report. 
