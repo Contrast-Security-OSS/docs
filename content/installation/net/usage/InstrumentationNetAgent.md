@@ -4,9 +4,7 @@ description: "Source Code Information for .NET Applications"
 tags: "configuration microsoft source code agent installation .Net"
 -->
 
-## Source Code Information 
-
-In the .NET framework, an application's compiled code is generally contained in *.DLL* files, while debug information is contained in *.PDB* files. These .PDB files contain symbol information that Contrast can use to tie stack trace frames to specific lines of code. 
+A .NET framework application's compiled code is generally contained in *.DLL* files, while debug information is contained in *.PDB* files. These .PDB files contain symbol information that Contrast can use to tie stack trace frames to specific lines of code. 
 
 By default, the Debug build of web applications includes *.PDB* files, but the Release build doesn't. However, most deployments of web applications use the Release build because deploying the Debug build can introduce some unnecessary risks. It's possible to include *.PDB* files in the Release build of a web application by changing a project setting. 
 
