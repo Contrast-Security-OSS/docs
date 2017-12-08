@@ -10,6 +10,8 @@ Contrast provides letter grades for the security of your application's libraries
 * **Status:** the number of versions that post-date the library
 * **Security:** the number of known CVEs that affect the library
 
+> **Note:** Organization administrators can adjust Contrast's scoring method to include only security criteria. See the article on [Score Settings](admin-orgsettings.html#score-settings) for more details. 
+
 ## Time Penalty
 
 The age of the library is calculated based on the number of years between the release of the latest version and the version used in the application multiplied by **2.5**. 
@@ -27,7 +29,7 @@ The status is calculated based on the number of versions that have been released
  If you're using Version 1.1.1, but Versions 1.1.2 and 1.1.3 have been released, your penalty would be: <br> 
  2 x 10 = **20**
 
-## Vulnerability Penalty
+## Security Penalty
 
 The CVE penalty of the library is the highest severity of all known CVEs for this library multiplied by **10**. 
 
@@ -48,4 +50,5 @@ The final score of the library is calculated by subtracting each of the three pe
 * **C:**  70 - 79
 * **D:**  60 - 69
 * **F:**  35 - 59
+
 
