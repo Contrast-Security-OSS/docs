@@ -12,8 +12,11 @@ The Contrast Tray will initially show a button "Set Environment Variables" to en
 
 > **Note:** IIS-Express process instances are commonly launched by other programs such as Visual Studio or a command window. These programs should be restarted after setting these user environment variables. Any programs (such as Visual Studio) that were running *before* user environment variables are set will consequently launch IIS-Express *without* the environment variables and that IIS-Express-hosted application will *not* be instrumented and analyzed. 
 
+> **Note:: Setting user environment variables will also cause the Contrast Profiler to be loaded by any .NET applications launched by the user. The Contrast Profiler will safely detach from any non-IIS/non-IIS-Express process but Windows treats detachment of a profiler DLL as an error message in the Windows Event Log. These errors can be safely ignored.
+
 Once environment variables have been set, the Contrast Tray will display a "Remove Environment Variables" that can be used to disable Contrast analysis of IIS-Express-hosted applications. 
 
 Any instrumented applications currently running on IIS Express will be shown in the **IIS Express** tab along with a count of the number of URLs (without the querystring) observed.
 
 <a href="assets/images/IIS-Express-App.png" rel="lightbox" title="Healthy Agent"><img class="thumbnail" src="assets/images/IIS-Express-App.png"/></a>
+
