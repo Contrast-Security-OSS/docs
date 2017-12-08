@@ -4,11 +4,11 @@ description: "Instructions on using the .NET agent with a TeamServer and self-si
 tags: "configuration SSL certifications agent installation .Net"
 -->
 
-By default, the .NET framework doesn't allow SSL connections that can't be validated. If the **Contrast.NET Agent** is attempting to connect to a TeamServer with a self-signed SSL certificate, it could give the following error message:
+By default, the .NET framework doesn't allow SSL connections that can't be validated. If the .NET agent is attempting to connect to Contrast with a self-signed SSL certificate, it could give the following error message:
 
 >"The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel."
 
-There are two configuration changes that will allow the .NET agent to connect to TeamServer with a self-signed SSL certificate:
+There are two configuration changes that will allow the .NET agent to connect to Contrast with a self-signed SSL certificate: installing the self-signed certificate as a trusted certificate or configuring the agent to ignore certificate errors. We only recommend these solutions to be used for testing purposes in a trusted environment as these changes could allow for man-in-the-middle attacks to intercept or modify data sent from the agent to Contrast. 
 
 ## Install The Self-Signed Certificate As A Trusted Root CA
 
@@ -34,7 +34,7 @@ There are two configuration changes that will allow the .NET agent to connect to
 
 Alternatively, the agent can be configured to trust **any** certificate. This configuration should only be used for testing purposes or in trusted environments.
 
-1. In a text editor, open ***-%SYSTEMDRIVE%\Program Files\Contrast.NET\ContrastService.exe.config***
+1. In a text editor, open ***-%SYSTEMDRIVE%\Program Files\Contrast.NET\DotnetAgentService.exe.config***
 2. In the **appSettings** section, add the ```TeamServerValidateCert``` tag
 
 Example:
@@ -47,4 +47,4 @@ Example:
  <add key="TeamServerApiKey" value="**************"/>
  <add key="TeamServerServiceKey" value="************"/>
  <add key="TeamServerValidateCert" value="false"/>
- ```
+```
