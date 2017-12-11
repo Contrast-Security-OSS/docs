@@ -4,11 +4,11 @@ description: "About article for the TeamServer API Keys"
 tags: "Admin system settings security API keys configuration"
 -->
 
-When you download the Contrast JVM plugin (also called the Engine), it comes pre-fitted with a set of randomly generated credentials for your user that don't involve your password. When the plugin communicates with the Contrast site, it authenticates using these credentials. 
+When you download the Contrast JVM plugin (also called the Engine), it comes pre-fitted with a set of randomly generated credentials for your user that don't involve your password. When the plugin communicates with the Contrast application, it authenticates using these credentials. 
  
 <a href="assets/images/KB4-a04_1.png" rel="lightbox" title="Default Authentication"><img class="thumbnail" src="assets/images/KB4-a04_1.png"/></a>
 
-## How it Works 
+## How It Works 
 
 Contrast added another layer of security through an organization API key that you can enable and manage on your own. In the case of a security breach, an unauthorized user can't submit forged or malicious data to your organization because their organization API key is wrong. With the API key enabled, authentication follows the process shown in the image below.
 
@@ -16,16 +16,12 @@ Contrast added another layer of security through an organization API key that yo
 
 ## Manage Keys
 
-### Enable and change an API key
+Manage organization API keys as an Organization Administrator by going to the **User Menu > Organization Settings > API tab**. A System Administrator can also select an organization and manage API keys by going to the **User Menu > System Settings > API tab**. 
 
-Go to the **User menu > Settings > API tab** for details on your current API key. You can also enable your key or update it to a new value.
+<a href="assets/images/Org-settings-api-keys.png" rel="lightbox" title="Manage API keys in Organization Settings"><img class="thumbnail" src="assets/images/Org-settings-api-keys.png"/></a>
 
-### Set up policies 
+In the REST API section, view the **Organization UUID** and **Agent Username** as well as the **API** and **Agent Service** keys. Rotate the keys by clicking the links provided for each. 
 
-Set policies for Organization API and application keys as a System Administrator by going to the **User Menu > System Settings > Security > Key Management** section. 
+<!-- In the **Organization API Key** section, use the number control fields to enter the number of characters required as well as the minimum number of numerals, upper case characters and lower case characters required in the key. Repeat these steps in the **Application Key** section. Check the box at the top of the form if you want to **Mask invalid IPs on login**. 
 
-<a href="assets/images/Security-key-management.png" rel="lightbox" title="Key Management configuration"><img class="thumbnail" src="assets/images/Security-key-management.png"/></a>
-
-In the **Organization API Key** section, use the number control fields to enter the number of characters required as well as the minimum number of numerals, upper case characters and lower case characters required in the key. Repeat these steps in the **Application Key** section. Check the box at the top of the form if you want to **Mask invalid IPs on login**. 
-
-Click the button to **Save** your selections. 
+Click the button to **Save** your selections.  -->
