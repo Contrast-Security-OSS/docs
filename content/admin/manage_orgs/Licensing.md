@@ -1,7 +1,7 @@
 <!--
 title: "License Management"
-description: "Overview of Licensing visibility"
-tags: "Admin manage SuperAdmin EOP SaaS RASP IAST Licensing"
+description: "Overview of allocating and managing licenses"
+tags: "Admin manage SuperAdmin EOP SaaS Assess Protect Licensing"
 -->
 
 Allocate, revoke and manage Assess and Protect licenses for individual organizations as a SuperAdmin. An Organization Admin may then apply and remove Protect licenses for servers in their organization. 
@@ -11,6 +11,10 @@ Allocate, revoke and manage Assess and Protect licenses for individual organizat
 A SuperAdmin may grant separate Assess and Protect licenses to an organization in the **Organizations** page. (Assess licenses apply to applications and Protect licenses apply to servers.) The **Licenses** column in the organizations grid lists the number of used and unused licenses that have been granted. If licenses are nearing expiration, a red warning icon appears in the grid row. 
 
 <a href="assets/images/Org-grid.png" rel="lightbox" title="Organizations page"><img class="thumbnail" src="assets/images/Org-grid.png"/></a>
+
+SuperAdmins can also view current license usage, update an EOP license, and manage impending expirations in the **User menu > System Settings > Licensing tab**. 
+
+<a href="assets/images/System-settings-licensing.png" rel="lightbox" title="View Licensing in System Settings"><img class="thumbnail" src="assets/images/System-settings-licensing.png"/></a>
 
 ### Allocate Licenses
 
@@ -24,9 +28,25 @@ You can manage the licenses granted to an organization by choosing **License Sum
 
 <a href="assets/images/License-summary.png" rel="lightbox" title="License Summary dialog for SaaS"><img class="thumbnail" src="assets/images/License-summary.png"/></a>
 
+### Automatically apply licenses
+
+Automatically apply licenses to newly onboarded applications in the **Licensing** tab in System Settings. Use the toggle to **Automatically apply licenses to new applications** in the Assess section and the toggle to **Automatically apply licenses to new servers** in the Protect section. In the dialog that appears, select the button to cancel the action, apply licenses to new organizations only, or apply licenses to all current organizations. 
+
+<a href="assets/images/Auto-license-confirmation.png" rel="lightbox" title="Confirm auto-licensing options"><img class="thumbnail" src="assets/images/Auto-license-confirmation.png"/></a>
+
+Once the option is turned on for Protect, use the multiselect field to choose the environments in which automatic licensing applies; the default selection is "Production". 
+
+> **Note:** The checkbox to **Allow organization override** gives Organization Admins the option to reconfigure your selections in their organization; it's selected by default. 
+
+#### Organization dialog 
+
+You may also automatically apply licenses when adding an organization in the **Organizations** page using the radio button in the dialog that appears. (The default selection requires users to manually allocate licenses.) Enabling Protect using the toggle in the dialog also enables the check box to **Automatically apply allocated licenses** to servers. 
+
+<a href="assets/images/Add-organization-dialog.png" rel="lightbox" title="Configure auto-licensing in the Add Organization dialog"><img class="thumbnail" src="assets/images/Add-organization-dialog.png"/></a>
+
 ## Apply and Remove Licenses
 
-An organization's administrator can apply, remove and view details on their Protect licenses in the **Servers** page grid.
+An Organization Administrator can apply, remove and view details on their Protect licenses in the **Servers** page grid, their Assess licenses in the **Applications** page grid, or all licenses in the **Organization Settings > Organization tab > Licensing panel**.
 
 ### Apply licenses
 
@@ -40,9 +60,15 @@ Once a license is applied, the Protect toggle is enabled in the grid rows for th
 
 #### Available licenses
 
-If your organization has consumed all allocated licenses, or if the organization doesn't have enough licenses available for the number of servers selected, the option to apply a license is disabled. Hover over the disabled selection to **Apply Protect Licenses** for more information. 
+If your organization has consumed all allocated licenses, or if the organization doesn't have enough licenses available for the number of servers selected, the option to apply a license is disabled. Hover over the disabled selection to **Apply Protect Licenses** for more information. To return a license to the pool of available licenses for the organization, you must remove it from a server. 
 
-> **Note:** To return a license to the pool of available licenses for the organization, you must remove it from a server. 
+#### Automatically apply licenses
+
+If a SuperAdmin chose to apply automatic licensing to all organizations, you can use the toggles to disable and re-enable automatic Assess licensing for new applications as well as automatic Protect licensing for new servers. Once Protect is enabled, you can also use the multiselect field to choose the environments in which automatic licensing applies. 
+
+<a href="assets/images/Org-settings-licensing.png" rel="lightbox" title="Configure auto-licensing in the Licensing panel"><img class="thumbnail" src="assets/images/Org-settings-licensing.png"/></a>
+
+> **Note:** If a SuperAdmin disabled organization override, the toggles are not available; however, you can still view details on current licenses. 
 
 ### Remove licenses 
 
