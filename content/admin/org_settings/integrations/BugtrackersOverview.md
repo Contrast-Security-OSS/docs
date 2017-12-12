@@ -12,6 +12,7 @@ Contrast supports integrations with:
 
 * Mozilla Bugzilla
 * Atlassian JIRA
+* Visual Studio Team Services/Team Foundation Services (VSTS/TFS)
 * Serena Business Manager
 
 ## Exporting findings
