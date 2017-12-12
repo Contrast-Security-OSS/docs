@@ -14,14 +14,10 @@ Contrast added another layer of security through an organization API key that yo
 
 <a href="assets/images/KB4-a04_2.png" rel="lightbox" title="Organizational API Key"><img class="thumbnail" src="assets/images/KB4-a04_2.png"/></a>
 
-## Manage Keys
+## Organization Keys
 
 Manage organization API keys as an Organization Administrator by going to the **User Menu > Organization Settings > API tab**. A System Administrator can also select an organization and manage API keys by going to the **User Menu > System Settings > API tab**. 
 
 <a href="assets/images/Org-settings-api-keys.png" rel="lightbox" title="Manage API keys in Organization Settings"><img class="thumbnail" src="assets/images/Org-settings-api-keys.png"/></a>
 
 In the REST API section, view the **Organization UUID** and **Agent Username** as well as the **API** and **Agent Service** keys. Rotate the keys by clicking the links provided for each. 
-
-<!-- In the **Organization API Key** section, use the number control fields to enter the number of characters required as well as the minimum number of numerals, upper case characters and lower case characters required in the key. Repeat these steps in the **Application Key** section. Check the box at the top of the form if you want to **Mask invalid IPs on login**. 
-
-Click the button to **Save** your selections.  -->
