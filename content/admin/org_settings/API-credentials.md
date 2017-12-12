@@ -1,6 +1,6 @@
 <!--
 title: "Security API Keys"
-description: "About article for the TeamServer API Keys"
+description: "About article for the API Keys"
 tags: "Admin system settings security API keys configuration"
 -->
 
