@@ -4,7 +4,7 @@ description: "About article for the API Keys"
 tags: "Admin system settings security API keys configuration"
 -->
 
-When you download the Contrast JVM plugin (also called the Engine), it comes pre-fitted with a set of randomly generated credentials for your user that don't involve your password. When the plugin communicates with the Contrast application, it authenticates using these credentials. 
+When you download the Contrast JVM plugin (also called the Engine), it comes pre-fitted with a set of randomly generated credentials for your organization that don't involve the passwords of any users in the organization. When the plugin communicates with the Contrast application, it authenticates using these credentials. 
  
 <a href="assets/images/KB4-a04_1.png" rel="lightbox" title="Default Authentication"><img class="thumbnail" src="assets/images/KB4-a04_1.png"/></a>
 

@@ -8,8 +8,7 @@ Set policies for the keys in your organizations to ensure that they consistently
 
 ## Set Up Policies 
 
-In the **Organization API Key** section, use the number control fields to enter the number of characters required as well as the minimum number of numerals, upper case characters and lower case characters required in the key. Repeat these steps in the **Application Key** section. Check the box at the top of the form if you want to **Mask invalid IPs on login**. 
+In the **Organization API Key** section, use the number control fields to enter the number of characters required as well as the minimum number of numerals, upper case characters and lower case characters required in the key. Repeat these steps in the **Application Key** section. Check the box at the top of the form if you want to **Mask invalid IPs on login**. Click the button to **Save** your selections.
 
 <a href="assets/images/Security-key-management.png" rel="lightbox" title="Set policies for API keys in your organizations"><img class="thumbnail" src="assets/images/Security-key-management.png"/></a>
 
-Click the button to **Save** your selections.
