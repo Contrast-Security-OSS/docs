@@ -4,7 +4,7 @@ description: "Overview of a user's profile settings"
 tags: "user profile settings manage account"
 -->
 
-Contrast is set up with the basics of your profile from when you created your account, but Contrast also provides some additional custom profile fields. Fill out your Contrast profile to help other members learn more about you and also help Contrast tailor the data presentation. To change your profile settings, log in to Contrast, click on the caret beside your username to go to the dropdown **User menu**, and select **Your Account**.
+View your Contrast profile settings to verify or update the information that you provided when you created an account. Contrast also offers a few additional, optional fields that you can fill out to help other organization members learn more about you and also help Contrast tailor your experience in the application. To visit your **Profile** page, click on the caret beside your username, and select **Your Account** in the dropdown **User menu**.
 
 ## General Information 
 
@@ -18,7 +18,7 @@ In the **General Information** section, use the form fields to modify your basic
 
 Contrast offers guidance on new improvements in the latest release as you navigate the application. The **What's New** tab on your dashboard notifies you of new or updated features, while **Quick Tips** provide guidance for new functionality as you use a feature.  
 
-> **Note:** You can also navigate to the latest [Release News](https://docs.contrastsecurity.com/release.html) from the User menu in the application.
+> **Note:** You can also navigate to the latest [Release News](https://docs.contrastsecurity.com/release.html) from the **User menu** in the application.
 
 ## Keys
 
