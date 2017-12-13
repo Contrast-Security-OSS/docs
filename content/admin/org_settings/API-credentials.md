@@ -6,13 +6,13 @@ tags: "Admin system settings security API keys configuration"
 
 When you download the Contrast JVM plugin (also called the Engine), it comes pre-fitted with a set of randomly generated credentials for your organization that don't involve the passwords of any users in the organization. When the plugin communicates with the Contrast application, it authenticates using these credentials. 
  
-<a href="assets/images/KB4-a04_1.png" rel="lightbox" title="Default Authentication"><img class="thumbnail" src="assets/images/KB4-a04_1.png"/></a>
+<a href="assets/images/API-credentials-1.png" rel="lightbox" title="Default authentication"><img class="thumbnail" src="assets/images/API-credentials-1.png"/></a>
 
 ## How It Works 
 
 Contrast added another layer of security through an organization API key that you can enable and manage on your own. In the case of a security breach, an unauthorized user can't submit forged or malicious data to your organization because their organization API key is wrong. With the API key enabled, authentication follows the process shown in the image below.
 
-<a href="assets/images/KB4-a04_2.png" rel="lightbox" title="Organizational API Key"><img class="thumbnail" src="assets/images/KB4-a04_2.png"/></a>
+<a href="assets/images/API-credentials-2.png" rel="lightbox" title="Organizational API key"><img class="thumbnail" src="assets/images/API-credentials-2.png"/></a>
 
 For more information, read the article [About the Contrast API](tools-api.html#api-about). 
 
