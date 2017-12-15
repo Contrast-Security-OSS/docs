@@ -31,7 +31,7 @@ Get a glimpse into license allocation, see if any licenses are nearing expiratio
 Manage the library compliance policy for your organization(s). Setup restrictions or version requirements for library usage which will flag violations that break compliance settings.
 
 ## Security
-Manage [password policies](admin-systemsecurity.html#pwd), [two-step verification](admin-orgsecurity.html#security-tsv), and [API and application key management](admin-systemsecurity.html#manage-api). Any change to this setting will require a system restart. 
+Manage [password policies](admin-systemsecurity.html#pwd), [two-step verification](admin-orgsecurity.html#security-tsv), and [API and application key management](admin-systemsecurity.html#manage-api). You must restart the Contrast application after any change to these settings. 
 
 ## Authentication 
 Contrast supports a variety of [authentications providers](installation-setupauth.html#overview):
