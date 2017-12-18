@@ -17,7 +17,7 @@ To change your account password, complete the following steps:
 * Select the **Change Password** tab in the left navigation.
 * In the form fields, enter your current password and new password. Retype your new password in the next field to confirm it. 
 
-> **Note:** Your new password which must adhere to the [Password Policy](admin-systemsettings.html#pwd) set by your Administrator. Contrast notifies you of their requirements as you type it in the New Password field. 
+> **Note:** Your new password which must adhere to the [Password Policy](admin-systemsecurity.html#pwd) set by your Administrator. Contrast notifies you of their requirements as you type it in the New Password field. 
 
 * Check the box to agree to the [Terms and Conditions](https://app.contrastsecurity.com/Contrast/static/html/tac.htm).
 * Click the button to **Save** your changes.
@@ -48,7 +48,7 @@ Before completing TSV setup, you can download a set of backup codes in the form 
 
 ### Reconfigure notification methods
 
-If you want to change the way you receive verification codes, you can reconfigure notification settings in the **Two-Step Verification**tab. Once you change your selection, Contrast automatically issies a new set of backup codes. It's not necessary to save your changes. 
+If you want to change the way you receive verification codes, you can reconfigure notification settings in the **Two-Step Verification**tab. Once you change your selection, Contrast automatically issues a new set of backup codes. It's not necessary to save your changes. 
 
 <a href="assets/images/TSVUserSettings.png" rel="lightbox" title="User Settings"><img class="thumbnail" src="assets/images/TSVUserSettings.png"/></a>
 
