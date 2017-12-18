@@ -28,11 +28,11 @@ You must use this password the next time that you log in to Contrast.
 
 ## Two-Step Verification
 
-If your administrator has enabled two-step verification (TSV), you can add an extra layer of protection beyond your username and password by using TSV. Complete the following steps to enable the feature:
+If your administrator has enabled two-step verification, you can add an extra layer of protection beyond your username and password. Complete the following steps to enable the feature:
 
 * From the **Your Account** page, select the **Two-Step Verification** tab in the left navigation.
-* Use the toggle to enable TSV. 
-* Use the radio buttons to select your preferred notification method. You can access TSV codes through your Contrast-associated email address or the Google Authenticator mobile application, which is available on the following devices:
+* Use the toggle to enable two-step verification. 
+* Use the radio buttons to select your preferred notification method. You can access verification codes through your Contrast-associated email address or the Google Authenticator mobile application, which is available on the following devices:
 	* [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
 	* [iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8)
 	* [Blackberry](https://appworld.blackberry.com/webstore/content/29401059/?lang=en&countrycode=US) 
@@ -44,7 +44,7 @@ If you choose to receive your verification codes by email, Contrast sends you a 
 
 If you select Google Authenticator, Contrast provides QR code with further instructions. You can scan the QR code, enter the code manually or use the provided dropdown to select the device type. Use the Google Authenticator application to obtain a verification code and validate your device.
 
-Before completing TSV setup, you can download a set of backup codes in the form of a *.txt* file, which allows you to login if you encounter an error or get locked out of your account. You must download and save these codes in a secure location. 
+Before completing two-step verification setup, you can download a set of backup codes in the form of a *.txt* file, which allows you to login if you encounter an error or get locked out of your account. You must download and save these codes in a secure location. 
 
 ### Reconfigure notification methods
 
