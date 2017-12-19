@@ -4,9 +4,9 @@ description: "Overview of how libraries are analyzed"
 tags: "ui application user library analysis"
 -->
 
-The security of the libraries used by your application has a direct impact on how secure your application can be. Contrast analyzes these library files in your application to assess their potential security risks.
+The security of the libraries used by your application has a direct impact on how secure your application can be. Contrast analyzes library files - Java *JARs*, .NET *DLL*s, Node packages and Ruby *GEMs* - in your application to assess their potential security risks.
 
-## Library Files
+## Library File
 
 Contrast creates a hash of the library file, which is used to compare the file's content (not its name) to a database of known library files. If your library is a custom file, this hash isn't in the database, and the library is reported as "unknown" to the Contrast application. If your library was created since Contrast last updated its library definitions, it may also be unrecognized when the agent reports it.  
 
@@ -20,7 +20,7 @@ If the hash is in the database, Contrast assign the library file a grade. Contra
 
 ## Used Classes
 
-The **Classes Used** section indicates the number of classes used in the application out of the number of classes declared in the JAR file.
+The **Classes Used** section indicates the number of classes used in the application out of the number of classes declared in the library file. This applies to **Java** and **.NET** clients only. 
 
-When your application loads a class, Contrast analyzes it to determine from where it's being called. If this location matches a JAR file that Contrast has analyzed, that JAR file's count of **Classes Used** increases.
+When your application loads a class, Contrast analyzes it to determine from where it's being called. If this location matches a library file that Contrast has analyzed, that file's count of **Classes Used** increases.
 
