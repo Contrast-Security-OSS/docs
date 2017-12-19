@@ -14,7 +14,7 @@ The libraries grid provides basic information about each library, such as:
 * Applications using the library 
 * CVEs found in the library  
 * Current and latest versions 
-* [Used classes](user-libraries.html#analysis)
+* [Used classes](user-libraries.html#analysis) (Java only)
 
 <a href="assets/images/Libraries-grid.png" rel="lightbox" title="View libraries in your organization"><img class="thumbnail" src="assets/images/Libraries-grid.png"/></a>
 
