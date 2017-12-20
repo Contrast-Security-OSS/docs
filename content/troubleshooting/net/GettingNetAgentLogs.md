@@ -1,101 +1,103 @@
 <!--
-title: "Getting .NET Agent Logs"
+title: "Get .NET Agent Logs"
 description: "Instructions on using .NET agent logs"
 tags: "troubleshoot configuration logging agent .Net"
 -->
 
-## File a Bug Report
+In some rare scenarios, bad instrumentation can cause a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast, please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of bugs. 
 
-In some rare scenarios, bad instrumentation can cause a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast,  please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of bugs. Of course, the goal is for our customers to never need to file a bug but if you do run into an issue, please let us know so we can fix it. 
+## Agent Logs Directory
 
-### Agent Logs Directory
+The Contrast.NET agent logs information to the *Contrast.NET\LOGS* directory within the Windows 2008/2012 *ProgramData* directory, *C:\ProgramData\Contrast.NET\LOGS* 
 
-The Contrast.NET Agent logs information to the *Contrast.NET\LOGS* directory within the Windows 2008/2012 *ProgramData* directory: *C:\ProgramData\Contrast.NET\LOGS* 
+Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
 
-Depending on how the Windows profile and folder view settings are set up, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
+You can change which information is logged by changing the logging level in the [.NET Agent Configuration](installation-netconfig.html).
 
-You can change what information is logged by changing the logging level in the [.NET Agent Configuration](installation-netconfig.html).
+## Types of Bugs
 
-### Types of Bugs
+There are two primary types of agent bugs for which Contrast needs to gather logs and other information.    
 
-There are primarily two types of agent bugs where we need to gather logs and other information.    
+* Process Crash
+* Unhandled Managed Exception / Page Error / 500
 
-1. Process Crash
-2. Unhandled Managed Exception / Page Error / 500
+## Process Crash Bugs
 
-### Process Crash Bugs
+### Verify that the web server process crashed 
 
-#### How Do We Know if the Web Server Process Crashed?
+Check your scenario against the following indicators to confirm that the web server process crashed. 
 
-1. The web application is unresponsive after installing the Contrast .NET Agent.
+* The web application is unresponsive after installing the Contrast .NET agent.
 
-2. The Windows Event Log (Event Viewer > Windows Logs > Application) has Error entries for the "**.NET Runtime**" and "**Application Error**" 
+* The Windows Event Log (**Event Viewer > Windows Logs > Application**) has Error entries for the "**.NET Runtime**" and "**Application Error**". 
 
-   1. The ".NET Runtime" error has details such as: 
+ * The ".NET Runtime" error has details such as: 
 
-      ```
-      Application: w3wp.exe
-      Framework Version: v4.0.30319
-      Description: The process was terminated due to an internal error in the .NET Runtime at IP XXXXXXXXX with exit code YYYYYYY
-      ```
+  ```
+   Application: w3wp.exe
+   Framework Version: v4.0.30319
+   Description: The process was terminated due to an internal error in the .NET Runtime at IP XXXXXXXXX with exit code YYYYYYY
+  ```
 
-      ​
+ * The "Application Error" entry has details similar to:
 
-   2. The "Application Error" entry has details similar to:
+   ```
+    Faulting application name: w3wp.exe, version: 8.5.9600.16384, time stamp: 0x5215df96
+    Faulting module name: clr.dll, version: 4.7.2114.0, time stamp: 0x59a63e48
+    Exception code: 0xc0000005
+    Fault offset: 0x00000000002ff61c
+    Faulting process id: 0x3724
+    Faulting application start time: 0x01d337d711f21e68
+    Faulting application path: c:\windows\system32\inetsrv\w3wp.exe
+    Faulting module path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll
+    Report Id: 4fc99650-a3ca-11e7-80e8-005056bd4248
+   ```
 
-      ```
-      Faulting application name: w3wp.exe, version: 8.5.9600.16384, time stamp: 0x5215df96
-      Faulting module name: clr.dll, version: 4.7.2114.0, time stamp: 0x59a63e48
-      Exception code: 0xc0000005
-      Fault offset: 0x00000000002ff61c
-      Faulting process id: 0x3724
-      Faulting application start time: 0x01d337d711f21e68
-      Faulting application path: c:\windows\system32\inetsrv\w3wp.exe
-      Faulting module path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll
-      Report Id: 4fc99650-a3ca-11e7-80e8-005056bd4248
-      ```
+Once you confirm that the observed bug is a process crash, you're ready to gather information to file a bug. 
 
-Once we've confirmed that the observed bug is indeed a process crash we're now ready to gather information to file a bug. 
+### Gather information on the process crash 
 
-#### Process Crash Information Gathering 
-1. Setup the procdump utility to capture crash dump. 
-  1. Download current version of procdump from https://docs.microsoft.com/en-us/sysinternals/downloads/procdump to the Windows server with the agent.
-  2. From an administrator command prompt: 
+Complete the following steps to gather information to send to Contrast. 
+
+* Set up the ProcDump utility to capture crash dump. 
+  * Download current version of ProcDump from the [Microsoft documentation site](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) to the Windows server with the agent.
+  * From an administrator command prompt: 
+    ```
      md c:\dumps 
      procdump.exe -ma -i c:\dumps
-  3. Install the latest Contrast .NET agent
-  4. [Stop the .NET Agent service](http://127.0.0.1:9000/installation-netusage.html#usage)
-  5. Enable additional logging 
-     1. Start > Notepad > Right click and run as administrator
-     2. File > Open > "C:\Program Files\Contrast.NET\DotnetAgentService.exe.config"
-     3. Change "ShouldLogMethodSignatures" to true 
-     4. Uncomment the entry for "LogLevel" 
-     5. Check that the specified LogLevel value is "trace"
-  6. Start the .NET agent service
-  7. Exercise the application to reproduce the crash.
+    ```
+  * Install the latest Contrast .NET agent.
+  * [Stop the .NET Agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
+  * Enable additional logging. 
+     * ** Start > Notepad > Right click > run as administrator**
+     * ** File > Open >** *"C:\Program Files\Contrast.NET\DotnetAgentService.exe.config"*
+     * Change `ShouldLogMethodSignatures` to `true`.
+     * Uncomment the entry for `LogLevel`. 
+     * Check that the specified `LogLevel` value is `trace`.
+  * Start the .NET agent service.
+  * Exercise the application to reproduce the crash.
 
+Once you've reproduced the crash, gather the following items and include them in your bug report:
 
-Once the crash has been reproduced, please gather the following items and include them in your bug report:
+* Agent Logs: All files in the agent log directory (*C:\ProgramData\Contrast.NET\LOGS*); right click on the **LOGS folder > Send To > Compressed (zip) folder**.
+* Windows Event Log: **Event Viewer > Windows Logs > Application > Save All Events As > "MyEvents.evtx"**
+* Crash Dumps: Create a zip file of each w3wp process dump file in *C:\dumps* (e.g., "w3wp.exe_171002_151601.dmp"). Dump files can be quite large.
 
-1. **Agent Logs**: All files in the agent log directory (C:\ProgramData\Contrast.NET\LOGS). Right click on the LOGS folder > Send To > Compressed (zip) folder.
-2. **Windows Event Log**: Event Viewer > Windows Logs > Application > Save All Events As > "MyEvents.evtx"
-3. **Crash Dumps:** Create a zip file of each w3wp process dump file in C:\dumps (e.g. "w3wp.exe_171002_151601.dmp") because dump files can be quite large.
+You can then uninstall ProcDump with `C:>procdump.exe -u`. 
 
-We can then uninstall procdump with: C:>procdump.exe -u
+## Unhandled Managed Exception or Page Error Bugs 
 
-### Unhandled Managed Exception/Page Error Bugs 
+### Verify an unhandled exception
 
-#### How Do We Know if this is a Unhandled Exception?
+The above process also helps the .NET engineering team resolve issues such as application errors caused by the Contrast .NET agent. Use the following indicator to determine if the Contrast .NET agent is causing an application error. 
 
-The above process will also help the .NET engineering team resolve issues such as application errors caused by the Contrast .NET Agent. How do we know if the Contrast .NET Agent is causing an application error? 
+* You've observed the application working normally without the agent. 
 
-1. We've observed the application working normally without the agent. 
+* You've observed a page of the application "crashing" (returning a 500 error) under the agent. 
 
-2. We've observed a page of the application "crashing" (returning a 500 error) under the agent. 
+* There are no errors for ."NET Runtime" and "Application Error" in the Windows Event Log.
 
-3. There are no errors for ."NET Runtime" and "Application Error" in the Windows Event Log.
-
-4. There *may *be **warnings** for "**ASP.NET**" in the Windows Event Log. These would appear similar to the following:
+* There **may be warnings** for "**ASP.NET**" in the Windows Event Log. The warning should look similar to the following:
 
    ```
    Source: ASP.NET 4.0.30319.0
@@ -159,24 +161,20 @@ The above process will also help the .NET engineering team resolve issues such a
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
    ```
 
-   ​
+As the process hasn't crashed, ProcDump won't capture process dumps. Instead, you must gather the process dump "manually". 
 
-We follow the same process as crashes but there will be no process dumps captured by procdump because the process has not crashed. Instead we gather the process dump "manually". 
+* Find the Process ID of the worker process that you need. 
+  * IIS Manager > Worker Processes: find the "Application Pool Name" you need, and take note of the value in the "Process Id". 
 
-1. Find the Process ID of the worker process we are interested in. IIS Manager > Worker Processes: find the "Application Pool Name" we are interested in and take note of the value in the "Process Id" 
+* From an administrator command prompt, replace NNNNN with the process ID from the previous step.
 
-2. From an administrator command prompt, replacing NNNNN with the process ID from step 1.
+  ```
+  C:\>procdump -ma NNNNN
+  ```
 
-   ```
-   C:\>procdump -ma NNNNN
-   ```
+Follow a similar process to gather agent logs, windows events and process dumps to include with your bug report. 
 
+## Other Bugs
 
+If you encountered a bug other than a process crash or unhandled exception - maybe the .NET Tray has an inaccurate state, or the agent found a false positive - please [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need process dumps, but trace-level logs and a detailed description of the problem are very helpful when it comes time to fix these bugs.  
 
-Then follow a similar process as above to gather agent logs, windows events, and process dumps to include with your bug report. 
-
-
-
-## Other Kinds of Bugs
-
-If you've encountered a bug other than a process crash or unhandled exception then we would like to know about those as well, please [file a bug report](mailto:bugs@contrastsecurity.com). Perhaps the .NET Tray has an inaccurate state or maybe the agent has found a false positive. In cases like those examples, we commonly don't need process dumps but trace level logs and a detailed description of the problem are still a great help when it comes time to fix those bugs.  

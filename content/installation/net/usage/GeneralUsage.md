@@ -26,26 +26,29 @@ Contrast automatically restarts IIS when you install the agent as well as any ti
 
 ### Start the agent 
 
-To start the agent, and consequently enable analysis, complete either of the the following steps: 
+To start the agent, and consequently enable analysis, complete either of the the following sets of instructions. 
+
+#### Option one
 
 * Go to **Windows Start**, and select **Services**.
 * Right click on **Contrast.NET Main Service**, and select **Stop**
 
-**OR** 
+#### Option two 
 
 * From an administrator command prompt, use `net stop DotnetAgentSvc`.
 
 >**Note:** By default, the Contrast.NET Main Service starts automatically when Windows starts as well as when the agent is first installed.
 
-
 ### Stop the agent 
 
-To stop the agent, and consequently disable Contrast instrumentation and analysis, complete either of the the following steps: 
+To stop the agent, and consequently disable Contrast instrumentation and analysis, complete either of the the following sets of instructions. 
+
+#### Option one
 
 * Go to **Start** and select **Services**.  
 * Right click on **Contrast.NET Main Service** and select **Start**. 
 
-**OR** 
+#### Option two
 
 * From an administrator command prompt, use `net start DotnetAgentSvc`.
 
@@ -57,7 +60,7 @@ The **.NET Contrast Tray** is a Windows system tray application (*ContrastTray.e
 
 >**Note:** The Contrast Tray isn't required to be running to analyze applications with Contrast; the Contrast Tray exists only to provide status information about the agent. This information is useful when verifying that the agent is behaving as expected, particularly when the agent is first installed.
 
-**Status Indicators:** 
+### Status indicators 
 
 * **Agent Windows Service** displays a green light when the Contrast Service has been installed correctly and is running
 
@@ -67,7 +70,7 @@ The **.NET Contrast Tray** is a Windows system tray application (*ContrastTray.e
 
 * **IIS Express Sensors** displays a green light when an application hosted on IIS-Express has been loaded and instrumented. A yellow light is displayed when the agent has set up instrumentation but IIS-Express hasn't loaded an application yet. A red light is displayed when environment variables have not been set for IIS-Express. See [IIS-Express usage](installation-netusage.html#iisexpress).
 
-**Tabs:** 
+### Tabs
 
 * The **Action** tab provides high-level instructions for using the Contrast.NET Agent; these instructions change based on the agent's state. For example, if the agent can't connect to Contrast, the Action tab provides details on the error and suggestions on how to resolve the problem. 
 

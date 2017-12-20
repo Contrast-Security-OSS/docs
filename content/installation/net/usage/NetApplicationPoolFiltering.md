@@ -4,22 +4,21 @@ description: "Information on blacklisting/whitelisting application pools"
 tags: "microsoft IIS pooling whitelist blacklist configuration agent installation .Net"
 -->
 
-The .NET agent will automatically instrument all ASP.NET applications deployed to IIS by default. There is no action required to setup instrumentation of IIS-hosted applications beyond installing the .NET agent and ensuring the agent's background Windows is running. 
+The .NET agent automatically instruments all ASP.NET applications deployed to IIS by default. There is no action required to setup instrumentation of IIS-hosted applications beyond installing the .NET agent and ensuring the agent's background Windows is running. 
 
-Users may wish to exclude some applications from instrumentation if: 
-1. Security, architecture, and library information does not need to be gathered for excluded applications 
-2. Or, those applications need to avoid Contrast's performance overhead (this is especially important for resource-constrained servers)
+Users might want to exclude some applications from instrumentation for either of the following reasons: 
+* You don't need to gather security, architecture and library information for excluded applications. 
+* The applications need to avoid Contrast's performance overhead. (This is especially important for resource-constrained servers.)
 
-In either case, the Contrast .NET agent's application pool filtering feature can be used. 
+In either case, you can use the Contrast .NET agent's application pool filtering feature. 
 
 ## Application Pool Filtering 
 
 Web applications hosted on IIS run on application pools. If you need to disable the Contrast.NET agent for specific application pools on an instance of IIS, configure a `ProcessBlacklist`. When an application pool is blacklisted, the agent won't attach to any applications using that application pool, and there should be no performance impact for those applications.
 
-Whitelisting and blacklisting are based on the applicaton pool *name*. Application pool blacklists and whitelists also accept `*` as a variable-length wildcard (AppPool*" will match "AppPool1", "AppPool_arb", etc.)
+Whitelisting and blacklisting are based on the application pool *name*. Application pool blacklists and whitelists also accept `*` as a variable-length wildcard. ("AppPool*" will match "AppPool1", "AppPool_arb", etc.)
 
 >**Note:** Blacklisting an application takes precedence over whitelisting. Application pools that satisfy both lists won't be analyzed.
-
 
 ### Find an Application Pool 
 
@@ -65,8 +64,6 @@ To disable the agent for a specific application, populate `ProcessBlacklist` wit
 <!--Comma-separtated list of application pools ignored by Contrast-->
 <add key="ProcessBlacklist" value=""/>
 ```
-
-
 
 ## Whitelist an Application Pool 
 

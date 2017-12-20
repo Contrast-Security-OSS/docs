@@ -4,9 +4,9 @@ description: "Information on .NET File-Based Rules"
 tags: "installation policy customization rules level agent .Net files"
 -->
 
-Contrast.NET will detect vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. Users can disable rules they no longer wish to be detected by the .NET Agent. 
+Contrast.NET detects vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. You can disable rules that you no longer want the .NET agent to detect. 
 
-The file-based rules are configured by changing the *file-based-rules* xml element.  See below for explanations of these rules.
+The file-based rules are configured by changing the *file-based-rules xml* element. See the following sections for explanations of these rules.
 
 ```xml
   <file-based-rules>
@@ -52,51 +52,51 @@ The file-based rules are configured by changing the *file-based-rules* xml eleme
 ```
 
 
-### Client-Side Technology Detection 
+### Client-side technology detection 
 
-Contrast.NET will scan the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash, and Silverlight.  Set *client-side-technology-detection* to ```enabled="false"``` in order to remove these checks.
+Contrast.NET scans the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash and Silverlight. Set `client-side-technology-detection` to `enabled="false"` to remove these checks.
 
-### ASPX File Security Checks
+### ASPX file security checks
 
 Setting | Explanation
 :------ |:-----------
-debug-compilation | Ensure page debug is not set to "true"
-event-validation | Ensure postback event validation is not disabled for the page
-request-validation | Ensure request validation is not disabled for the page
-request-validation-controls | Ensure request validation is not disabled for individual controls
-viewstate-encryption | Ensure viewstate encryption is not disabled for the page
-viewstate-encryption-mac | Ensure viewstate mac is not disabled for the page
+debug-compilation | Ensure page debug is not set to `true"`
+event-validation | Ensure postback event validation isn't disabled for the page
+request-validation | Ensure request validation isn't disabled for the page
+request-validation-controls | Ensure request validation isn't disabled for individual controls
+viewstate-encryption | Ensure viewstate encryption isn't disabled for the page
+viewstate-encryption-mac | Ensure viewstate mac isn't disabled for the page
 trace | Ensure tracing is turned off for the page
 
-### Config File Security Checks 
+### *Config* file security checks 
 
-Contrast.NET will scan your application's *web.config* or *app.config* files for various security issues.  Set *web-config-checks* ```enabled``` to "false" to disable all checks.  You can also disable specific rules by changing one or more of the options below.
+Contrast.NET scans your application's *web.config* or *app.config* files for various security issues. Set `web-config-checks` `enabled` to `false` to disable all checks. You can also disable specific rules by changing one or more of the options below.
 
 Setting | Description
 :------ |:-----------
-authorization-deny | If ASP.NET file-based authorization is used, ensure rules are not missing a deny-all rule and do not allow all before a deny rule is present
+authorization-deny | If ASP.NET file-based authorization is used, ensure rules are not missing a deny-all rule, and don't allow all before a deny rule is present
 custom-errors | Check that a custom error page is defined
-debug-compilation | Ensure that the application is not running in debug mode
+debug-compilation | Ensure that the application isn't running in `debug` mode
 event-validation | Ensure that ASP.NET postbacks are validated
 forms-auth-protected | Ensure forms authentication cookies are validated and encrypted
 forms-auth-redirect | Ensure authenticated users cannot be redirected to other applications
 forms-auth-ssl | Ensure that forms authentication cookies use SSL
-httponly-cookies | Ensure cookies are HttpOnly
+httponly-cookies | Ensure cookies are `HttpOnly`
 http-runtime-version-header | Ensure ASP.NET does not send its version number to the client
 http-runtime-header-checking | Ensures that end-of-line characters in HTTP response are encoded to prevent header injection attacks
-http-runtime-max-request-length | Ensure HTTP Request size is not too large (greater than 4096 bytes)
+http-runtime-max-request-length | Ensure HTTP Request size isn't too large (greater than 4096 bytes)
 http-runtime-cache-control | Ensure that Cache-Control:private header is sent on HTTP response
 membership-password-settings |  Ensure that ASP.NET membership provider's password policy is secure
-plain-text-connection-strings | Ensure that database connection strings are not stored unencrypted/in plain text
+plain-text-connection-strings | Ensure that database connection strings aren't stored unencrypted/in plain text
 request-validation | Ensure HTTP requests are validated
 role-cookie-protected | Ensure that role cookies are validated and encrypted
 role-cookie-ssl | Ensure that role cookies use SSL
-session-rewriting | Ensure session cannot be rewritten
-session-timeout | Ensure session timeout is not too long (> 30 minutes)
-session-regen | Ensure client cannot regenerate expired sessions
+session-rewriting | Ensure session can't be rewritten
+session-timeout | Ensure session timeout isn't too long (> 30 minutes)
+session-regen | Ensure client can't regenerate expired sessions
 trace | Ensure ASP.NET tracing is disabled
 viewstate-validation | Ensure ASP.NET Viewstate validation is enabled
 viewstate-encryption | Ensure ASP.NET Viewstate is encrypted
 wcf-replay-detection | Ensure WCF replays are detected
-wcf-metadata | Ensure WCF service metadata cannot be sent to the client
-wcf-exception-detail | Ensure WCF faults do not send detailed exception stack traces to the client
+wcf-metadata | Ensure WCF service metadata can't be sent to the client
+wcf-exception-detail | Ensure WCF faults don't send detailed exception stack traces to the client
