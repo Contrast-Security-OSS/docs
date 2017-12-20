@@ -15,7 +15,7 @@ Contrast identifies libraries by their SHA-1 digest, and updates library definit
 
 ## Why doesn't Contrast recognize my library as the most-recent version?
 
-Issues with library version recognition result from the way that Contrast data sources store information about a library's version. Some of the versions are formatted to include the year at the beginning, and so the sort method reads them as a more recent version. The problem should phase itself out as the industry is moving to a more normalized version convention.
+For **Java** clients, issues with library version recognition result from the way that Contrast data sources store information about a library's version. Some of the versions are formatted to include the year at the beginning, and so the sort method reads them as a more recent version. The problem should phase itself out as the industry is moving to a more normalized version convention.
 
 ## How can I get my library file added to the known list of files?
 
