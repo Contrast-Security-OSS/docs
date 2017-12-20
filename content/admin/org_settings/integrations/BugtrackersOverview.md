@@ -42,7 +42,7 @@ You can send the details of vulnerable libraries to a bugtracker from any librar
 
 If you need to integrate your data from Contrast with an unsupported system, you can use one of the following options. 
 
-* **Integrate With The Contrast REST API:** You can find complete documentation here: [REST API](tools-api.html#api-about)
-* **Export Findings To CSV:** Findings can be exported to **Comma-Separated Values (CSV)** and imported into a bugtracker of your choice.
-* **Export Findings To XML:** Individual or groups of findings can be exported to **XML** format and imported into a bugtracker of your choice.
+* The Contrast REST API: Read the complete [REST API documentation](tools-api.html#api-about). 
+* CSV spreadsheet: Export findings to a Comma-Separated Values (CSV)-formatted spreadsheet, and import them into the bugtracker of your choice.
+* XML spreadsheet: Export findings for individual or groups of vulnerabilities to a XML-formatted spreadsheet, and import them into a bugtracker of your choice.
 
