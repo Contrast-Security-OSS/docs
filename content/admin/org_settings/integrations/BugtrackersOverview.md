@@ -17,15 +17,13 @@ Contrast supports integrations with:
 
 ## Exporting findings
 
-Sending vulnerabilities to the bugtracker can be done from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. 
+### Vulnerabilities 
 
-In the dialog that follows, choose which information should be included when exporting the findings.
+You can send vulnerabilities to a bugtracker from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
 
 <a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
 
 >**Note:** Bugtrackers must be configured before vulnerabilities can be sent.
-
-<a href="assets/images/NoBugTracker.png" rel="lightbox" title="No Bugtrackers Available"><img class="thumbnail" src="assets/images/NoBugTracker.png"/></a>
 
 When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of the **Application Overview** page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hovering over this icon produces a tooltip that includes the bugtracker name(s) and corresponding ticket number(s). 
 
@@ -35,15 +33,16 @@ To quickly see which vulnerabilities are being tracked, select **Advanced** and 
 
 <a href="assets/images/Integrations-bugtracker-advanced-filter.png" rel="lightbox" title="Advanced filter"><img class="thumbnail" src="assets/images/Integrations-bugtracker-advanced-filter.png"/></a>
 
+### Library details 
+
+You can send the details of vulnerable libraries to a bugtracker from any libraries grid or a library's overview page. 
+
+
 ## Integrating with unsupported systems
 
-If integration with an unsupported system is needed, this can be accomplished in several ways:
+If you need to integrate your data from Contrast with an unsupported system, you can use one of the following options. 
 
-<a href="assets/images/KB3-f04_2.png" rel="lightbox" title="Export Format"><img class="thumbnail" src="assets/images/KB3-f04_2.png"/></a>
-
-Method | Description
------- | -----------
-**Integrate With The Contrast REST API** | You can find complete documentation here: [REST API](tools-api.html#api-about)
-**Export Findings To CSV** | Findings can be exported to **Comma-Separated Values (CSV)** and imported into a bugtracker of your choice.
-**Export Findings To XML** | Individual or groups of findings can be exported to **XML** format and imported into a bugtracker of your choice.
+* **Integrate With The Contrast REST API:** You can find complete documentation here: [REST API](tools-api.html#api-about)
+* **Export Findings To CSV:** Findings can be exported to **Comma-Separated Values (CSV)** and imported into a bugtracker of your choice.
+* **Export Findings To XML:** Individual or groups of findings can be exported to **XML** format and imported into a bugtracker of your choice.
 
