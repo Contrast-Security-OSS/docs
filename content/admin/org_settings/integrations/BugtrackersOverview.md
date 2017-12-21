@@ -4,18 +4,16 @@ description: "Overview of Using Bugtrackers with Contrast"
 tags: "Admin organization settings integrations bugtracker overview"
 -->
 
-Contrast can connect to bugtrackers in order to streamline the remediation process. Individual or groups of discovered vulnerabilities can be sent directly to a configured bugtracker so that development groups may implement a fix.
-
-## Support
-
-Contrast supports integrations with:
+Streamline the remediation process for vulnerabilities by sending details directly from Contrast to a configured bugtracker. Contrast supports integrations with the following services. 
 
 * Mozilla Bugzilla
 * Atlassian JIRA
 * Visual Studio Team Services/Team Foundation Services (VSTS/TFS)
 * Serena Business Manager
 
-## Exporting findings
+For more information about the configuration process for each bugtracker, use the quicklinks to go to the appropriate [articles](admin-orgintegrations.html).  
+
+## Export findings
 
 ### Vulnerabilities 
 
@@ -35,10 +33,9 @@ To quickly see which vulnerabilities are being tracked, select **Advanced** and 
 
 ### Library details 
 
-You can send the details of vulnerable libraries to a bugtracker from any libraries grid or a library's overview page. 
+You can send the details of vulnerable libraries to a bugtracker from the Libraries page, and application's Libraries tab or a library's overview page. For more information, go to the [Manage Libraries](user-libraries.html#manage-lib) article.
 
-
-## Integrating with unsupported systems
+## Integrate with unsupported systems
 
 If you need to integrate your data from Contrast with an unsupported system, you can use one of the following options. 
 
