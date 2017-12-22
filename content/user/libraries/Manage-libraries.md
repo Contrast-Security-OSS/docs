@@ -4,7 +4,7 @@ description: "Overview of library management"
 tags: "user library management"
 -->
 
-Manage libraries in the **Libraries** page, a library's details page, or the **Libraries** tabs in an application or server's details page. 
+Manage libraries in the **Libraries** page, a **library's details** page, or the **Libraries** tabs in an application or server's details page. 
 
 ## Tag Libraries 
 
@@ -52,7 +52,7 @@ To learn more about using bugtrackers with Contrast, read the (Introduction to B
 
 ### Email 
 
-To send library details directly from Contrast to your email address, go to the row action menu in the Libraries grid, and select the option to **Send to Email**. You can also go to a library's overview page or an application's Libraries tab, click the the **Send Libraries** icon, and select **Send to Email**. 
+To send library details directly from Contrast to your email address, go to the row action menu in the Libraries grid, and select **Send to Email**. You can also go to a library's overview page or an application's Libraries tab, click the the **Send Libraries** icon, and select **Send to Email**. 
 
 To create a bugtracker ticket with the details of multiple libraries, use the checkboxes to select libraries in the grid, click the **Send Libraries** icon in the batch action menu, and select **Send to Email**. 
 

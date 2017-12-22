@@ -40,6 +40,24 @@ To delete one or more vulnerabilities, select the checkboxes in the grid rows, a
 
 Once this action is confirmed, the vulnerability is removed and no longer appears in your list unless Contrast discovers it again. 
 
+## Track Vulnerabilities 
+
+You can send vulnerabilities to a bugtracker from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
+
+<a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
+
+>**Note:** Bugtrackers must be configured before vulnerabilities can be sent.
+
+When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of the **Application Overview** page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
+
+<a href="assets/images/Integrations-sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Integrations-sent-to-bugtracker.png"/></a>
+
+To quickly see which vulnerabilities are being tracked, click the **Advanced** link, select **Status** in the sidebar, and filter for "Being Tracked". 
+
+<a href="assets/images/Integrations-bugtracker-advanced-filter.png" rel="lightbox" title="Advanced filter"><img class="thumbnail" src="assets/images/Integrations-bugtracker-advanced-filter.png"/></a>
+
+To learn more about using bugtrackers with Contrast, read the (Introduction to Bugtrackers)](admin-orgintegrations.html#bugtracker). 
+
 ## Export Findings
 
 Export details on vulnerability findings by selecting the grouping of vulnerabilities that you want to include in the report, and clicking the **Export** icon to choose either CSV or XML format.
