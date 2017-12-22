@@ -4,46 +4,36 @@ description: "Overview of Using Bugtrackers with Contrast"
 tags: "Admin organization settings integrations bugtracker overview"
 -->
 
-Contrast can connect to bugtrackers in order to streamline the remediation process. Individual or groups of discovered vulnerabilities can be sent directly to a configured bugtracker so that development groups may implement a fix.
-
-## Support
-
-Contrast supports integrations with:
+Streamline the remediation process for vulnerabilities by sending details directly from Contrast to a configured bugtracker. Contrast supports integrations with the following services. 
 
 * Mozilla Bugzilla
 * Atlassian JIRA
 * Visual Studio Team Services/Team Foundation Services (VSTS/TFS)
 * Serena Business Manager
 
-## Exporting findings
+For more information about the configuration process for each bugtracker, use the quicklinks to go to the appropriate [articles](admin-orgintegrations.html).  
 
-Sending vulnerabilities to the bugtracker can be done from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. 
+>**Note:** You must configure a bugtracker integration in your organization before sending vulnerabilities to it.  
 
-In the dialog that follows, choose which information should be included when exporting the findings.
+## Export findings
+
+### Vulnerabilities 
+
+You can send vulnerabilities to a bugtracker from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
 
 <a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
 
->**Note:** Bugtrackers must be configured before vulnerabilities can be sent.
+For more information, go to the [Manage Vulnerabilities](user-vulns.html#manage-vuln) article.
 
-<a href="assets/images/NoBugTracker.png" rel="lightbox" title="No Bugtrackers Available"><img class="thumbnail" src="assets/images/NoBugTracker.png"/></a>
+### Library details 
 
-When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of the **Application Overview** page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hovering over this icon produces a tooltip that includes the bugtracker name(s) and corresponding ticket number(s). 
+You can send the details of vulnerable libraries to a bugtracker from the Libraries page, and application's Libraries tab or a library's overview page. For more information, go to the [Manage Libraries](user-libraries.html#manage-lib) article.
 
-<a href="assets/images/Integrations-sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Integrations-sent-to-bugtracker.png"/></a>
+## Integrate with unsupported systems
 
-To quickly see which vulnerabilities are being tracked, select **Advanced** and **Status** in the sidebar. Hovering over the **Being Tracked** and **Untracked** options also produces a tooltip.
+If you need to integrate your data from Contrast with an unsupported system, you can use one of the following options. 
 
-<a href="assets/images/Integrations-bugtracker-advanced-filter.png" rel="lightbox" title="Advanced filter"><img class="thumbnail" src="assets/images/Integrations-bugtracker-advanced-filter.png"/></a>
-
-## Integrating with unsupported systems
-
-If integration with an unsupported system is needed, this can be accomplished in several ways:
-
-<a href="assets/images/KB3-f04_2.png" rel="lightbox" title="Export Format"><img class="thumbnail" src="assets/images/KB3-f04_2.png"/></a>
-
-Method | Description
------- | -----------
-**Integrate With The Contrast REST API** | You can find complete documentation here: [REST API](tools-api.html#api-about)
-**Export Findings To CSV** | Findings can be exported to **Comma-Separated Values (CSV)** and imported into a bugtracker of your choice.
-**Export Findings To XML** | Individual or groups of findings can be exported to **XML** format and imported into a bugtracker of your choice.
+* The Contrast REST API: Read the complete [REST API documentation](tools-api.html#api-about). 
+* CSV spreadsheet: Export findings to a Comma-Separated Values (CSV)-formatted spreadsheet, and import them into the bugtracker of your choice.
+* XML spreadsheet: Export findings for individual or groups of vulnerabilities to a XML-formatted spreadsheet, and import them into a bugtracker of your choice.
 
