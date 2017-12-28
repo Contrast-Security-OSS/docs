@@ -44,10 +44,11 @@ We made some improvements for attack detection in Protect mode, and reduced the 
 
 ### .NET summary 
 
+We support CLR2 and CLR for Protect and Assess in the default Profiler mode as well as disabled rules for specific applications. We're including application names in Protect events, but decided to remove start/stop from the Contrast.NET tray. During this time, we also improved handling of application pools in Whitelist, and fixed application activity reporting in Inventory mode. 
 
 ### Node.js summary 
 
-We implemented multiple improvements to the reporting of traces in Assess rules by adding code snippets to the “+”, template concat and property access source events. We’ve also updated the formatting of event objects without constructor names, added propagation through the util.format function, and reduced the number of false positives in the static analysis rules. Finally, the Node agent now supports a configuration option to specify the location to download the agent when auto-update is enabled.
+We implemented multiple improvements to the reporting of traces in Assess rules by adding code snippets to the “+”, template concat and property access source events. We’ve also updated the formatting of event objects without constructor names, added propagation through the util.format function, and reduced the number of false positives in the static analysis rules. Last, but not least, the Node agent now supports a configuration option to specify the location to download the agent when auto-update is enabled.
 
 ### Ruby summary 
 
