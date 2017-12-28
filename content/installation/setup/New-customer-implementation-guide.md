@@ -63,12 +63,12 @@ To install the Contrast agent into an application web server, we’ll do the fol
  
 1. Verify that your configuration complies with those that are supported and suggested, which is documented in the following articles for each agent:
 
-	* [.Net](installation-net.html#net-supported)
+	* [.Net](installation-netinstall.html#net-tech)
 	* [Java](installation-java.html#java-supported)
 	* [Node.js](installation-node.html#node-supported)
 
 2. Complete the installation process for the agent.
-	* [.Net](installation-net.html#net-install)
+	* [.Net](installation-netinstall.html#net-install)
 	* [Java](installation-javainstall.html)
 	* [Node.js](installation-node.html#node-install)
  

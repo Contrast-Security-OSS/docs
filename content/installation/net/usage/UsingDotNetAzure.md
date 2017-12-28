@@ -4,14 +4,14 @@ description: "Using Contrast .NET on Microsoft Azure"
 tags: "configuration microsoft azure cloud agent installation .Net"
 -->
 
-Use the Contrast .NET Agent to analyze ASP.NET applications running on Azure Virtual Machines (VMs), Cloud Services or Mobile Services. (Unfortunately, you can't use Contrast on Azure Web Apps.) Follow the instructions below to set up the Contrast .NET Agent in your environment. 
+Use the Contrast .NET agent to analyze ASP.NET applications running on Azure Virtual Machines (VMs), Cloud Services or Mobile Services. (Unfortunately, you can't use Contrast on Azure Web Apps.) Follow the instructions below to set up the Contrast .NET agent in your environment. 
 
 ## Azure Virtual Machines
 
-Follow these steps to install the .NET agent on an Azure VM:
+Complete the following steps to install the .NET agent on an Azure VM:
 
 * Set up the Azure VM as you would normally, and deploy the ASP.NET applications to be analyzed. 
-* Log in to Contrast, and download the .NET agent zip file. 
+* Log in to Contrast, and [download the .NET agent zip file](installation-netinstall.html#net-install). 
 * Access the Azure VM by Remote Desktop. (See [Log on to a Windows virtual machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-log-on-windows-server).)
 
 <a href="assets/images/KB3-e15_1.png" rel="lightbox" title="Azure Virtual Machine"><img class="thumbnail" src="assets/images/KB3-e15_1.png"/></a>
@@ -25,7 +25,7 @@ Follow these steps to install the .NET agent on an Azure VM:
 ## Azure Cloud Services or Mobile Services
 
 * Set up the Azure Cloud Service as you would normally, and deploy the ASP.NET applications to be analyzed. 
-* Log in to Contrast, and download the .NET agent zip file.
+* Log in to Contrast, and [download the .NET agent zip file](installation-netinstall.html#net-install).
 * Access the Cloud Service instance by Remote Desktop. (See [Using Remote Desktop with Azure Roles](https://msdn.microsoft.com/en-us/library/azure/gg443832.aspx).) 
 
 <a href="assets/images/KB3-e15_3.png" rel="lightbox" title="Cloud Remote Desktop Services"><img class="thumbnail" src="assets/images/KB3-e15_3.png"/></a>

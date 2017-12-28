@@ -24,29 +24,26 @@ Contrast.NET instruments your application code and follows user-provided data to
   </sources>  
 ```
 
----
-
 ## Method
 
- ```
- method name="Name" assembly="ASSEMBLY" signature="SIGNATURE" tags="TAGS" [enabled="ENABLED"] [sourceType="SOURCETYPE"]
- ```
 
-
+```
+method name="Name" assembly="ASSEMBLY" signature="SIGNATURE" tags="TAGS" [enabled="ENABLED"] [sourceType="SOURCETYPE"]
+```
 
 * **ASSEMBLY:** Assembly of the method to instrument. <br> (**Required**)
 
 * **SIGNATURE:** Signature of the method to instrument. <br> (**Required**)
    
-* **TAGS:** All data that is the return of a method specified here is tagged as `"tainted"`.  All tainted data triggers a warning if it makes it to a `rule` method, unless it has other tags added to it by a taglist method, which invalidate a rule. Besides the `"tainted"` tag, you can list additional tags in the `tags` attribute to automatically attach them to the data. (**Required**)
+* **TAGS:** All data that is the return of a method specified here is tagged as `"tainted"`.  All tainted data triggers a warning if it makes it to a `rule` method, unless it has other tags added to it by a taglist method, which invalidate a rule. Besides the `"tainted"` tag, you can list additional tags in the `tags` attribute to automatically attach them to the data. <br> (**Required**)
 
-* **TARGET:** Specify which part of the signature returns untrusted data. By default, this is `R` for "return object". You can also say `O` for "this object", and `P0`, `P1`, or `P2` for first, second, or third parameter argument and so on.  (**Optional**)
+* **TARGET:** Specify which part of the signature returns untrusted data. By default, this is `R` for "return object". You can also say `O` for "this object", and `P0`, `P1`, or `P2` for first, second, or third parameter argument and so on. <br> (**Optional**)
 
 * **NAME**: Unique name for this source (**Optional**)
 
-* **SOURCETYPE:** For better display in Contrast, list the origin of the untrusted data. The default is `"other"`.  (**Optional**)
+* **SOURCETYPE:** For better display in Contrast, list the origin of the untrusted data. The default is `"other"`. <br> (**Optional**)
 
-Possible values are:
+ Possible values are:
   * `parameter`
   * `header`
   * `cookie`
@@ -54,9 +51,7 @@ Possible values are:
   * `uri`
   * `body`
 
-
-
-* **ENABLED:** Add the enabled attribute and set it to `"false"` to disable the rule. The default is `"true"`. (**Optional**)
+* **ENABLED:** Add the enabled attribute and set it to `"false"` to disable the rule. The default is `"true"`. <br> (**Optional**)
 
 
 
