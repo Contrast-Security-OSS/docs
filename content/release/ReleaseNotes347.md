@@ -40,6 +40,7 @@ Keep your issues strong with new integration features and customized Assess Rule
 
 ### Java summary 
 
+We made some improvements for attack detection in Protect mode, and reduced the frequency of check-in messages from the agent to the Contrast application. We also fixed a few bugs around the format of findings we send to Contrast.  
 
 ### .NET summary 
 
