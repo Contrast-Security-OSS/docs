@@ -26,7 +26,7 @@ Before installing the .NET agent, confirm that you can meet the following requir
 * 4+ CPU
 * 8+ GB memory  
 
-> **Note:** 
+> **Notes:** 
 > * The server must have .NET Framework 4.5.1 installed; however, this requirement doesn't extend to applications that need to be analyzed. The .NET agent can analyze web applications that run on supported Common Language Runtimes (CLRs): CLR 2 (.NET 3.5) and CLR 4 (.NET 4.0+). 
 >
 > * The Contrast .NET Agent roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the Contrast .NET Agent is not installed. 
