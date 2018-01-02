@@ -26,6 +26,6 @@ Use the toggles in the **In Contrast** and **Email** rows to enable or disable t
 * **Server Offline:** Contrast can't reach a server. 
 * **New Comment:** A team member commented on a finding. 
 * **New Asset:** A new asset to which you have [access](user-account.html#user-permissions) has been onboarded. Click in the field to set this notification for "Application" or "Server"; the default selection is "All".
-* **Email Digest:** A daily summary of Contrast activities (Email row only). 
+* **Email Digest:** A daily summary of Contrast activities. (Email row only)
 
 > **Note:** Click on the link at the top of the configuration form to **Restore Defaults**. 
