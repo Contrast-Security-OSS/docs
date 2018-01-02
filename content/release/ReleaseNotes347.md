@@ -28,7 +28,7 @@ Keep your issues strong with new integration features and customized Assess Rule
 
 * Apply different [Assess Rules](admin-policymgmt.html#assess) to different applications to customize your vulnerability detection requirements for each of your applications. 
 
-* Send [details of vulnerable libraries](user-libraries.html#manage-lib) as tickets to your [integrated bugtracking system](admin-orgintegrations.html#bugtracker), you can see your work in one place.
+* Send [details of vulnerable libraries](user-libraries.html#manage-lib) as tickets to your [integrated bugtracking system](admin-orgintegrations.html#bugtracker), so you can see your work in one place.
  
 * Just like our Slack or HipChat integrations, you can send your notifications to your [VictorOps](admin-orgintegrations.html#victorops) channels and get them into the right hands at the right time.
 

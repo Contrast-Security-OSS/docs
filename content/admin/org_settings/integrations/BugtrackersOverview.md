@@ -35,5 +35,5 @@ If you need to integrate your data from Contrast with an unsupported system, you
 
 * The Contrast REST API: Read the complete [REST API documentation](tools-api.html#api-about). 
 * CSV spreadsheet: Export findings to a Comma-Separated Values (CSV)-formatted spreadsheet, and import them into the bugtracker of your choice.
-* XML spreadsheet: Export findings for individual or groups of vulnerabilities to a XML-formatted spreadsheet, and import them into a bugtracker of your choice.
+* XML spreadsheet: Export findings for individual or groups of vulnerabilities to an Extensible Markup Language(XML)-formatted spreadsheet, and import them into a bugtracker of your choice.
 
