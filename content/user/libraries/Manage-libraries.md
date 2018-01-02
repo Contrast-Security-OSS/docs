@@ -48,7 +48,7 @@ In the dialog that appears, use the dropdown menus to choose which **Bugtracker*
 
 <a href="assets/images/Library-bugtracker-dialog.png" rel="lightbox" title="Create a bugtracker ticket from libary details"><img class="thumbnail" src="assets/images/Library-bugtracker-dialog.png"/></a>
 
-To learn more about using bugtrackers with Contrast, read the (Introduction to Bugtrackers)](admin-orgintegrations.html#bugtracker). 
+To learn more about using bugtrackers with Contrast, read the [Introduction to Bugtrackers](admin-orgintegrations.html#bugtracker). 
 
 ### Email 
 
