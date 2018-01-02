@@ -4,30 +4,28 @@ description: "Overview of user notifications"
 tags: "user notifications manage account"
 -->
 
-Notifications provide a mechanism for Contrast users to be alerted in specific cases, such as the discovery of a vulnerability or an application being attacked. Contrast offers several out-of-the-box notifications which we believe to be essential to you. You can tailor those notification settings as needed. 
+## How It Works
 
-There are two primary channels available for notifications: E-mail and In-Application. 
+Notifications provide a mechanism for Contrast users to be alerted to specific situations, such as the discovery of a vulnerability or an attack on an application. Contrast offers several out-of-the-box notifications with settings that you can tailor as needed. 
 
-* **E-mail notifications:** Available if mail has been set up by your organization administrator 
-* **In-Application notifications:** Made available directly in the product and are visible by selecting the notification bell in the top menu bar.
+There are two primary channels available for notifications: Email and In Contrast. 
 
-To change your notification settings, do the following:
+* **In Contrast:** Notifications are available directly in the Contrast application. (See your list of notifications by clicking the bell icon in the top menu bar.)
+* **Email:** Notifications are available if mail has been set up by your Organization Administrator. 
 
-1. Log in to Contrast
-2. Select **Your Account** from the user menu in the upper right
-3. Select **Notifications** in the left navigation
-4. Change one or more values
+## Update Settings 
 
-Below is a list of available subscription options:
+To change your notification settings, log in to Contrast, and go to the **User menu > Your Account > Notifications tab**. 
 
-* New Vulnerability: All or by severity (Low, Medium, High, Critical, Note, Library)
-* Server Goes Offline
-* New Comment
-* New Asset Onboarded: All, Application or Server
-* Email Digest: Daily summary of Contrast activities 
+Click in the **Subscriptions** field to choose the application(s) for which you want to receive notifications; the default selection is "All Applications".
 
-Organizations that are utilizing our Protect feature will also see:
+Use the toggles in the **In Contrast** and **Email** rows to enable or disable the following subscriptions. 
 
-* New Attacks: All or by attack status (Probed, Exploited or Protected)
+* **Active Attack:** There is an active attack on an application with **Protect** enabled. 
+* **New Vulnerability:** Contrast has detected a new vulnerability. Click in the field to receive notifications for specific severity levels or "Library"; the default selection is "All".
+* **Server Offline:** Contrast can't reach a server. 
+* **New Comment:** A team member commented on a finding. 
+* **New Asset:** A new asset to which you have [access](user-account.html#user-permissions) has been onboarded. Click in the field to set this notification for "Application" or "Server"; the default selection is "All".
+* **Email Digest:** A daily summary of Contrast activities (Email row only). 
 
->**Note:** You can narrow or expand the notifications you receive by adjusting which applications your subscriptions apply to. 
+> **Note:** Click on the link at the top of the configuration form to **Restore Defaults**. 
