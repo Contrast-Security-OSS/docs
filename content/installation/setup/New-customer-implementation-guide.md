@@ -9,7 +9,7 @@ tags: "Contrast installation setup onboarding customer"
  
 This guide is a reference for the technical and non-technical parties involved in integrating Contrast to automatically Assess and Protect software and improve performance of existing workflows at your company. As you follow these steps, Contrast’s Customer Success representatives will continue to shepherd you through the setup and onboarding process. Overviews of features and workflows in Contrast include links to documentation and resources with additional details.
 
-## Roles and Responsbilities
+## Roles and Responsibilities
 
 Designate people for each of the following roles. Your Contrast Security Certified Professional (CSCP) representative needs to be in touch with each of them.
 
@@ -82,7 +82,7 @@ You may also have situations in which you don't want to hear about events for on
 
 ## Integrations
 
-Contrast has an ecosystem of optional [integrations](admin-orgintegrations.html) - and, of all the bugtrackers that we support, [JIRA](admin-orgintegrations.html#jira) is the most popular.
+Contrast has an ecosystem of optional [integrations](admin-orgintegrations.html) - and, of all the bug trackers that we support, [JIRA](admin-orgintegrations.html#jira) is the most popular.
  
 > **Note:** You can set up these configurations after including Contrast in your processes.
 
@@ -124,7 +124,7 @@ Start by turning on Assess licenses for all applications in a QA environment. Wh
 
 ### Protect
 
-Start by turning on Protect for an application being attacked as part of a security assessment. By default, all Protect rules are in Monitor mode. Notice which attacks Protect is able to rebuff and log. Based on your environment and requirements, teach Protect about any IPs that should be implicitly trusted and added to the Trusted Hosts list, or automatically blocked and added to the Blacklist. Begin to switch any appropriate rules to Block mode in order to make your applications self protecting. Once you’re comfortable with this workflow, include Protect in deployment web servers.
+Start by turning on Protect for an application being attacked as part of a security assessment. By default, all Protect rules are in Monitor mode. Notice which attacks Protect is able to rebuff and log. Based on your environment and requirements, teach Protect about any IPs that should be implicitly trusted and added to the Trusted Hosts list, or automatically blocked and added to the Blacklist. Begin to switch any appropriate rules to Block mode in order to make your applications self-protecting. Once you’re comfortable with this workflow, include Protect in deployment web servers.
 
 ## APIs
 Contrast includes APIs to give programmatic access to a myriad of features and functions. The APIs, return objects and flows for using APIs and objects are available on the [Contrast RESTful API page](https://api.contrastsecurity.com). 
