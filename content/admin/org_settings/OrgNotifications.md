@@ -29,7 +29,7 @@ Administrators automatically receive the following notifications for high-level 
 
 Organizational notifications alert users when key events occur with their Contrast deployment. Organization administrators can define default notification settings for all users in their organization by going to the **User menu > Organization Settings > Notifications tab**. 
 
-> **Note:** Individual users can modify the default subscriptions that you set. For more information, go to the [account Notifications](user-account.html#user-notify) article.
+> **Note:** Individual users can modify the default subscriptions that you set; however, integration notification settings are managed at the organizational level only. For more information, go to the [account Notifications](user-account.html#user-notify) article.
 
 ### Default user settings 
 
