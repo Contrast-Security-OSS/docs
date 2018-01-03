@@ -23,7 +23,7 @@ Administrators automatically receive the following notifications for high-level 
 * **Remediation Policy Violation:** A vulnerability is in violation of an existing [remediation policy](admin-policymgmt.html#remediate).
 * **Library Policy Violation:** A library is in violation of an existing [library policy](admin-policymgmt.html#library).
 
-<a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Admin Email Notification"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
+<a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Email notification for administrators"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
 
 ## Organizational Notifications
 
@@ -33,7 +33,7 @@ Organizational notifications alert users when key events occur with their Contra
 
 ### Default user settings 
 
-Use the toggles in the **Integrations**, **In Contrast** and **Email** rows to enable or disable the following subscriptions. (Use the dropdown menu to see the [integrations](admin-orgintegrations.html) that are configured in your organization.)
+Use the toggles in the **Integrations**, **In Contrast** and **Email** rows to enable or disable the following subscriptions. Use the dropdown menu to choose an [integration](admin-orgintegrations.html) that's configured in your organization, and adjust the default notification settings for each one.
 
 * **Active Attack:** There is an active attack on an application with **Protect** enabled. 
 * **New Vulnerability:** Contrast has detected a new vulnerability. Click in the field to enable notifications for specific severity levels or "Library"; the default selection is "All".
@@ -56,18 +56,20 @@ To create a custom notification, click the **Create Notification** button above 
 * Click in the multiselect field to choose the **Applications** for which this notification applies. 
 * Choose the **Application Tags** for which this notification applies. 
 * Choose which organization **Users** should receive the notifications. 
-* Use the dropdown menus to choose **Conditions**. Click the **Add Conditions** link to add rows. 
+* Use the dropdown menus to choose your **Conditions**, and complete the following fields in the row. Click the **Add Condition** link to add a row. 
 
-<a href="assets/images/CreateNotification.png" rel="lightbox" title="Creating A Custom Notification"><img class="thumbnail" src="assets/images/CreateNotification.png"/></a>
+<a href="assets/images/Custom-notification-dialog.png" rel="lightbox" title="Create a custom notification"><img class="thumbnail" src="assets/images/Custom-notification-dialog.png"/></a>
+
+#### About conditions
 
 Contrast supports six conditions for custom notifications: Category, Impact, Likelihood, URL, Class and Method.
 
-| Notification Types | Description       | Condition      |
-|-----------------|-------------------|--------------|
-| Category        | Categories are high-level groupings of rule types such as Authentication, Injection, Cryptography, etc. There are 11 categories within TeamServer Rule types.| Is or Is Not |
-| Impact          | Impact is measured in High, Medium and Low ratings based on how a rule type affects a given business or organization. Every rule type has a default impact configuration setting which can be customized. | Is, Is Lower Than, Is Higher Than |
-| Likelihood      | Likelihood is measured in High, Medium and Low ratings based on how frequent a rule type may occur. Every rule type has a default likelihood configuration setting which can be customized. | Is, Is Lower Than, Is Higher Than |
-| URL             | A specific URL from an application. | Is, Contains, Starts With |
-| Class           | A specific Java or .Net class. | Is, Contains, Starts With |
-| Method          | A specific Java or .Net method. | Is, Contains, Starts With |
+| Notification Types | Condition         | Description  |
+|--------------------|-------------------|--------------|
+| Category           | Is or Is Not      | Categories are high-level groupings of rule types such as Authentication, Injection, Cryptography, etc. There are 11 categories within Contrast rule types.| 
+| Impact             | Is, Is Lower Than, Is Higher Than | Impact is measured in High, Medium and Low ratings based on how a rule type affects a given organization. Every rule type has a default impact configuration setting which can be customized. |
+| Likelihood         | Is, Is Lower Than, Is Higher Than | Likelihood is measured in High, Medium and Low ratings based on how frequent a rule type may occur. Every rule type has a default likelihood configuration setting that can be customized. | 
+| URL                | Is, Contains, Starts With | A specific URL from an application. | 
+| Class              | Is, Contains, Starts With | A specific Java or .NET class. | 
+| Method             | Is, Contains, Starts With | A specific Java or .NET method. | 
 
