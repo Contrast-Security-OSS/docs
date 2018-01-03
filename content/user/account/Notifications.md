@@ -13,7 +13,7 @@ There are two primary channels available for notifications: Email and In Contras
 * **In Contrast:** Notifications are available directly in the Contrast application. (See your list of notifications by clicking the bell icon in the top menu bar.)
 * **Email:** Notifications are available if mail has been set up by your Organization Administrator. 
 
-> **Note:** Organization Administrators can set default notification settings for [integrations](admin-orgintegrations.html#integration-start) in your organization. For more information, go to the [Notifications management](admin-orgsettings.html#org-notify) article. 
+> **Note:** Organization Administrators can adjust notification settings for [integrations](admin-orgintegrations.html#integration-start) in your organization. For more information, go to the [Notifications management](admin-orgsettings.html#org-notify) article. 
 
 ## Update Settings 
 
