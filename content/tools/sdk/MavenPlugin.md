@@ -27,9 +27,9 @@ The table below shows all the parameters for the plugin. These settings are for 
 | TeamServer API Key           | API Key found in Organization Settings                 |
 | TeamServer API Url           | API URL to your Contrast instance  <BR> (Use *app.contrastsecurity.com/Contrast/api* if you're a SaaS customer.)                    |
 | TeamServer Organization Uuid | Organization UUID of the configured user found in Organization Settings |
-| Application Name             | Name of application you set with `-Dcontrast.appname` <BR> (See **Using the agent** section below.) |
+| Application Name             | Name of application you set with `-Dcontrast.appname` <BR> (See the **Use the agent** section below.) |
 | Minimum Severity Level       | Minimum severity level for which to filter (Note, Low, Medium, High, or Critical). <br> (This property is inclusive.) |
-| Server Name                  | Name of server you set with `-Dcontrast.server` <BR> (See **Using the agent** section below.) |
+| Server Name                  | Name of server you set with `-Dcontrast.server` <BR> (See the **Use the agent** section below.) |
 | Jar Path                     | Path of a local *jar* file if you don't want to download the agent again                  |
 
 
@@ -70,14 +70,16 @@ An example configuration for the Contrast Maven Plugin:
 </plugin>
 ```
 
-## Using the agent
+## Use the agent
 
-The final step is to add the agent to the JVM arguments used when the application is run. The following properties must be specified:
+The final step is to add the agent to the JVM arguments used when the application is run. You must specify the following properties:
+
 ```
 -javaagent:/target/contrast.jar -Dcontrast.appname=MyAppName -Dcontrast.server=MyServerName
 ```
->**Note**: While `contrast.appname` and `contrast.server` can take any value, they _must_ match the `<appName>` and `<serverName>` specified in your Maven Plugin configuration.
+>**Note**: While `contrast.appname` and `contrast.server` can take any value, they **must** match the `<appName>` and `<serverName>` specified in your Maven Plugin configuration.
     
-Please see the following articles for specific installation steps:
-* [Agent install on Maven Apache Tomcat](installation-javainstall.html#apache)
-* [Agent install on Maven Cargo Plugin](installation-javainstall.html#cargo)
+Please see the following articles for specific installation instructions:
+
+* [Install the agent on Maven Apache Tomcat](installation-javainstall.html#apache)
+* [Install the agent on Maven Cargo Plugin](installation-javainstall.html#cargo)
