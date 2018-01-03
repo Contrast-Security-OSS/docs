@@ -4,22 +4,20 @@ description: "Instructions on using .NET agent logs"
 tags: "troubleshoot configuration logging agent .Net"
 -->
 
-In some rare scenarios, bad instrumentation can cause a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast, please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of bugs. 
+In rare scenarios, bad instrumentation causes a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast, please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of bugs. 
 
 ## Agent Logs Directory
 
-The Contrast.NET agent logs information to the *Contrast.NET\LOGS* directory within the Windows 2008/2012 *ProgramData* directory, *C:\ProgramData\Contrast.NET\LOGS* 
+The Contrast .NET agent logs information to the *Contrast.NET\LOGS* directory within *C:\ProgramData\Contrast.NET\LOGS*, the Windows 2008/2012 *ProgramData* directory. Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
 
-Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
-
-You can change which information is logged by changing the logging level in the [.NET Agent Configuration](installation-netconfig.html).
+You can change which information is logged by changing the logging level in the [.NET agent configuration](installation-netconfig.html).
 
 ## Types of Bugs
 
-There are two primary types of agent bugs for which Contrast needs to gather logs and other information.    
+There are two primary types of agent bugs for which Contrast needs to gather logs and other information:    
 
 * Process Crash
-* Unhandled Managed Exception / Page Error / 500
+* Unhandled Managed Exception/Page Error/500
 
 ## Process Crash Bugs
 
@@ -29,7 +27,7 @@ Check your scenario against the following indicators to confirm that the web ser
 
 * The web application is unresponsive after installing the Contrast .NET agent.
 
-* The Windows Event Log (**Event Viewer > Windows Logs > Application**) has Error entries for the "**.NET Runtime**" and "**Application Error**". 
+* The Windows Event Log (**Event Viewer > Windows Logs > Application**) has Error entries for the ".NET Runtime" and "Application Error". 
 
  * The ".NET Runtime" error has details such as: 
 
@@ -67,10 +65,10 @@ Complete the following steps to gather information to send to Contrast.
      procdump.exe -ma -i c:\dumps
     ```
   * Install the latest Contrast .NET agent.
-  * [Stop the .NET Agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
+  * [Stop the .NET agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
   * Enable additional logging. 
-     * ** Start > Notepad > Right click > run as administrator**
-     * ** File > Open >** *"C:\Program Files\Contrast.NET\DotnetAgentService.exe.config"*
+     * ** Start > Notepad > Right click > Run as Administrator**
+     * ** File > Open >** *C:\Program Files\Contrast.NET\DotnetAgentService.exe.config*
      * Change `ShouldLogMethodSignatures` to `true`.
      * Uncomment the entry for `LogLevel`. 
      * Check that the specified `LogLevel` value is `trace`.
@@ -79,9 +77,9 @@ Complete the following steps to gather information to send to Contrast.
 
 Once you've reproduced the crash, gather the following items and include them in your bug report:
 
-* Agent Logs: All files in the agent log directory (*C:\ProgramData\Contrast.NET\LOGS*); right click on the **LOGS folder > Send To > Compressed (zip) folder**.
+* Agent Logs: All files in the agent log directory, *C:\ProgramData\Contrast.NET\LOGS*; right click on the **LOGS folder > Send To > Compressed (zip) folder**.
 * Windows Event Log: **Event Viewer > Windows Logs > Application > Save All Events As > "MyEvents.evtx"**
-* Crash Dumps: Create a zip file of each w3wp process dump file in *C:\dumps* (e.g., "w3wp.exe_171002_151601.dmp"). Dump files can be quite large.
+* Crash Dumps: Create a zip file of each w3wp process dump file in *C:\dumps* (e.g., *w3wp.exe_171002_151601.dmp*). Dump files can be quite large.
 
 You can then uninstall ProcDump with `C:>procdump.exe -u`. 
 
@@ -89,7 +87,7 @@ You can then uninstall ProcDump with `C:>procdump.exe -u`.
 
 ### Verify an unhandled exception
 
-The above process also helps the .NET engineering team resolve issues such as application errors caused by the Contrast .NET agent. Use the following indicator to determine if the Contrast .NET agent is causing an application error. 
+The above process also helps the .NET engineering team resolve issues such as application errors caused by the Contrast .NET agent. Use the following indicators to determine if the Contrast .NET agent is causing an application error. 
 
 * You've observed the application working normally without the agent. 
 
@@ -97,7 +95,7 @@ The above process also helps the .NET engineering team resolve issues such as ap
 
 * There are no errors for ."NET Runtime" and "Application Error" in the Windows Event Log.
 
-* There **may be warnings** for "**ASP.NET**" in the Windows Event Log. The warning should look similar to the following:
+* There **may be warnings** for "ASP.NET" in the Windows Event Log. The warning should look similar to the following:
 
    ```
    Source: ASP.NET 4.0.30319.0
@@ -161,12 +159,12 @@ The above process also helps the .NET engineering team resolve issues such as ap
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
    ```
 
-As the process hasn't crashed, ProcDump won't capture process dumps. Instead, you must gather the process dump "manually". 
+As the process hasn't crashed, ProcDump won't capture process dumps. Instead, you must gather the process dump manually by completing the following steps. 
 
 * Find the Process ID of the worker process that you need. 
-  * IIS Manager > Worker Processes: find the "Application Pool Name" you need, and take note of the value in the "Process Id". 
+  * IIS Manager > Worker Processes: Find the "Application Pool Name" you need, and take note of the value in the "Process Id". 
 
-* From an administrator command prompt, replace NNNNN with the process ID from the previous step.
+* From an administrator command prompt, replace `NNNNN` with the process ID from the previous step.
 
   ```
   C:\>procdump -ma NNNNN
@@ -176,5 +174,5 @@ Follow a similar process to gather agent logs, windows events and process dumps 
 
 ## Other Bugs
 
-If you encountered a bug other than a process crash or unhandled exception - maybe the .NET Tray has an inaccurate state, or the agent found a false positive - please [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need process dumps, but trace-level logs and a detailed description of the problem are very helpful when it comes time to fix these bugs.  
+If you encountered a bug other than a process crash or unhandled exception - maybe the .NET Tray has an inaccurate state, or the agent found a false positive - please [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need process dumps, but trace-level logs and a detailed description of the problem are very helpful when it's time to fix these bugs.  
 

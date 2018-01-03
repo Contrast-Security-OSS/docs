@@ -1,7 +1,7 @@
 <!--
 title: "Use the .NET Agent with Contrast and a Self-Signed SSL Certificate"
 description: "Use the .NET agent with a Contrast and self-signed SSL certificate"
-tags: "configuration SSL certifications agent installation .Net"
+tags: "configuration SSL certifications agent installation .NET"
 -->
 
 By default, the .NET framework doesn't allow SSL connections that can't be validated. If the .NET agent is attempting to connect to Contrast with a self-signed SSL certificate, it could give the following error message:
@@ -31,7 +31,7 @@ Contrast only recommends that you use these solutions for testing purposes in a 
 * In the console tree, double-click **Certificates**
 * Right-click the **Trusted Root Certification Authorities** store.
 * Click **Import** to import the certificates. 
-* Follow the steps in the **Certificate Import Wizard** using the certificate created in step 7. 
+* Follow the steps in the **Certificate Import Wizard** using the certificate created in the previous steps. 
 
 
 ## Option Two 
