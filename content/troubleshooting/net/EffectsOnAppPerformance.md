@@ -4,7 +4,7 @@ description: "Tips on improving application performance with the .NET agent"
 tags: "troubleshoot configuration performance application impact agent .NET"
 -->
 
-As you might expect, Contrast's analysis *does* make your application run a little slower. *But*, the difference isn't usually significant enough to affect your work, and the results are definitely worth it.
+As you might expect, Contrast's analysis makes your application run a little slower. But, the time difference is usually minimal, and the results are definitely worth it.
 
 ## Request Processing Time
 

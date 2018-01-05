@@ -4,16 +4,16 @@ description: "Troubleshooting guide for .NET agent issues"
 tags: "troubleshoot Contrast interface agent installation .NET"
 -->
 
-## Symptoms
+## Issue
 
 * The .NET agent doesn't start successfully.
-* The Contrast Tray and/or .NET agent *logs* report errors when connecting to the Contrast application: 
+* The Contrast Tray and/or .NET agent logs report errors when connecting to the Contrast application: 
 
     >*Contrast.NET service failed to start. Contrast.NET cannot connect to TeamServer at: [https://app.contrastsecurity.com](https://app.contrastsecurity.com). The remote name could not be resolved:* ***app.contrastsecurity.com***
 
 * Data from a server with the installed agent doesn't appear in the Contrast interface.
 
-## Solutions
+## Solution
 
 * Open the .NET agent's configuration file, *DotnetAgentService.exe.config*, which is located in the agent's installation directory (i.e., *C:/Program Files/Contrast.NET*).
 

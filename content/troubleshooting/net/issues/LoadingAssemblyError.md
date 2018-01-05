@@ -4,7 +4,7 @@ description: "Troubleshooting guide for .NET agent issues"
 tags: "microsoft troubleshoot assembly loading agent .NET"
 -->
 
-## Symptoms
+## Issue
 
 * A page containing certain ASP.NET controls, such as the legacy ASP.NET **ReportViewer** control, throws an unhandled exception when the .NET agent is running: 
 
@@ -12,7 +12,7 @@ tags: "microsoft troubleshoot assembly loading agent .NET"
 
 * The application's *web.config* file specifies `<trust legacyCasModel="true"`.
 
-## Solutions
+## Solution
 
 You can't use the Contrast.NET's instrumentation data flow engine with applications using the `legacyCasModel="true"` setting. Use one of the following strategies to resolve this issue:
 

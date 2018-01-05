@@ -8,7 +8,7 @@ tags: "libraries troubleshoot agent .NET"
 
 You see certain third-party libraries marked as **Unknown** or gray in Contrast.
 
-## Solutions
+## Solution
 
 There is no action to take at this time. 
 

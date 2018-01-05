@@ -3,7 +3,7 @@ title: "InvalidProgramException Using .NET Agent and Ninject"
 description: "Troubleshoot guide for .NET agent issues"
 -->
 
-## Symptoms
+## Issue
 
 An application using a Ninject version prior to 3.2.3 throws an unhandled `InvalidProgramException` when the .NET agent is running: 
 
@@ -13,7 +13,7 @@ An application using a Ninject version prior to 3.2.3 throws an unhandled `Inval
 
 This bug is a known issue with Ninject vs. instrumenting profilers: https://github.com/ninject/Ninject/issues/175. This bug was fixed and the PR included newer versions of Ninject: https://github.com/ninject/Ninject/pull/179. 
 
-## Solutions
+## Solution
 
 Use one of the following strategies to resolve the issue. 
 

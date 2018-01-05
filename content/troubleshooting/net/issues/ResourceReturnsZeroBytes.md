@@ -4,13 +4,13 @@ description: "Troubleshooting guide for .NET agent issues"
 tags: "troubleshoot zero bytes agent installation .NET"
 -->
 
-## Symptoms
+## Issue
 
 * A particular resource (page, image, etc.) works normally when the .NET agent isn't running, but stops working when the agent is running.
 
 * When using browser developer tools - or something similar to view network traffic - and the .NET agent is running, the resource returns **0 bytes**.
 
-## Solutions 
+## Solution
 
 The .NET aget uses a filter in a `System.Web.IHttpModule` to gather HTTP response data. There is a known Microsoft bug in the .NET framework: `HttpModules` with filters can cause resources such as *WebResource.axd* to return **0 bytes** (which can result in 500 status responses for embedded resources such as images). Use one of the following strategies to resolve this issue:
 

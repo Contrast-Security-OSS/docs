@@ -3,7 +3,7 @@ title: "Contrast.NET Service Can't Start with Another Profiler Attached to IIS"
 description: "Troubleshoot guide for .NET agent issues"
 -->
 
-## Symptoms
+## Issue
 
 * The .NET agent doesn't start, and the following error message is displayed in the Tray application: 
 
@@ -15,7 +15,7 @@ The .NET agent is [required](installation-netinstall.html) to be the only .NET P
 
 You can often identify the conflicting profiler by searching for the GUID in the Tray's error message (show as `BX7CFC47-3E35-2c2e-B495-534F93B28123` in the example above.)
 
-## Solutions
+## Solution
 
 To resolve the issue, complete the following steps to disable or uninstall the other software that has a profiler registered with or attached to IIS, restart IIS and then start the Contrast .NET agent. 
 
