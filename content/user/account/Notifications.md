@@ -17,11 +17,7 @@ There are two primary channels available for notifications: Email and In Contras
 
 ## Update Settings 
 
-To change your notification settings, log in to Contrast, and go to the **User menu > Your Account > Notifications tab**. 
-
-Click in the **Subscriptions** field to choose the application(s) for which you want to receive notifications; the default selection is "All Applications".
-
-Use the toggles in the **In Contrast** and **Email** rows to enable or disable the following subscriptions. 
+To change your notification settings, log in to Contrast, and go to the **User menu > Your Account > Notifications tab**. Click in the **Subscriptions** field to choose the application(s) for which you want to receive notifications; the default selection is "All Applications". Use the toggles in the **In Contrast** and **Email** rows to enable or disable the following subscriptions. 
 
 * **Active Attack:** There is an active attack on an application with **Protect** enabled. 
 * **New Vulnerability:** Contrast has detected a new vulnerability. Click in the field to receive notifications for specific severity levels or "Library"; the default selection is "All".
