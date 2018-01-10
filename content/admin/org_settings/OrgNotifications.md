@@ -15,9 +15,7 @@ There are two primary channels available for notifications: Email and In Contras
 
 ## User Notifications
 
-Organization administrators can define default notification settings for all users in their organization by going to the **User menu > Organization Settings > Notifications tab**. 
-
-> **Note:** Individual users can modify the default subscriptions that you set; however, integration notification settings are managed at the organizational level only. For more information on user settings, go to the [account Notifications](user-account.html#user-notify) article.
+Organization administrators can define default notification settings for all users in their organization by going to the **User menu > Organization Settings > Notifications tab**. Individual users can modify the default subscriptions that you set. However, integration notification settings affect which messages users receive from integrations that are set up in your organization, and are managed by Organization Administrators only. For more information on user settings, go to the [account Notifications](user-account.html#user-notify) article.
 
 ### Default user settings 
 
@@ -30,7 +28,7 @@ Use the toggles in the **Integrations**, **In Contrast** and **Email** columns t
 * **New Asset:** A new asset to which the user has [access](user-account.html#user-permissions) has been onboarded. Click in the field to set this notification for "Application" or "Server"; the default selection is "All".
 * **Email Digest:** A daily summary of Contrast activities. (Email only)
 
-## Custom Notifications
+### Custom notifications
 
 Custom notifications allow users with Admin, Edit and Rules Admin [roles](admin-manageorgsroleperm.html#roles) in an organization to enable notifications for one or more users when a specific condition is observed in Contrast. These notifications execute and alert users by email at the time of the event, daily or weekly.  
 
