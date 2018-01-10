@@ -10,12 +10,12 @@ Notifications allow Contrast users to receive alerts in specific situations, suc
 
 There are two primary channels available for notifications: Email and In Contrast. 
 
-* **Email:** You must configure Contrast to communicate with an appropriate [SMTP system](admin-systemsettings.html#glance) to receive notifications by email. 
 * **In Contrast:** Notifications are available directly in the Contrast application. View your notifications by clicking the bell icon in the top menu bar.
+* **Email:** You must configure Contrast to communicate with an appropriate [SMTP system](admin-systemsettings.html#system-glance) to receive notifications by email. 
 
-## Organizational Notifications
+## User Notifications
 
-Organizational notifications alert users when key events occur with their Contrast deployment. Organization administrators can define default notification settings for all users in their organization by going to the **User menu > Organization Settings > Notifications tab**. 
+Organization administrators can define default notification settings for all users in their organization by going to the **User menu > Organization Settings > Notifications tab**. 
 
 > **Note:** Individual users can modify the default subscriptions that you set; however, integration notification settings are managed at the organizational level only. For more information on user settings, go to the [account Notifications](user-account.html#user-notify) article.
 
