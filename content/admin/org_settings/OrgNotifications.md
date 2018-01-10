@@ -6,41 +6,29 @@ tags: "Admin organization settings application alerts notifications custom"
 
 ## How It Works
 
-Notifications allow Contrast users to receive alerts in specific situations, such as the discovery of a vulnerability or an an attack on an application. Organization Administrators can set default settings for Contrast notifications for all users in their organization. Individual users can then tailor these settings as needed. 
+Notifications allow Contrast users to receive alerts in specific situations, such as the discovery of a vulnerability or an attack on an application. Organization Administrators can set default settings for Contrast notifications for all users in their organization. Individual users can then tailor these settings as needed. 
 
 There are two primary channels available for notifications: Email and In Contrast. 
 
 * **Email:** You must configure Contrast to communicate with an appropriate [SMTP system](admin-systemsettings.html#glance) to receive notifications by email. 
 * **In Contrast:** Notifications are available directly in the Contrast application. View your notifications by clicking the bell icon in the top menu bar.
 
-## Administrative Notifications
-
-Administrators automatically receive the following notifications for high-level events in their organization in the Contrast application and by email.
-
-* **Application Licensed:** A new application was licensed in Contrast.
-* **Application License Expiring:** The license for an active application is expiring. (Contrast sends this notification two months, one month and one week prior to the expiration date).
-* **Licenses Expiring:** Existing license(s) with no associated applications is expiring. (Contrast sends this notification two months, one month and one week prior to the expiration date).
-* **Remediation Policy Violation:** A vulnerability is in violation of an existing [remediation policy](admin-policymgmt.html#remediate).
-* **Library Policy Violation:** A library is in violation of an existing [library policy](admin-policymgmt.html#library).
-
-<a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Email notification for administrators"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
-
 ## Organizational Notifications
 
 Organizational notifications alert users when key events occur with their Contrast deployment. Organization administrators can define default notification settings for all users in their organization by going to the **User menu > Organization Settings > Notifications tab**. 
 
-> **Note:** Individual users can modify the default subscriptions that you set; however, integration notification settings are managed at the organizational level only. For more information, go to the [account Notifications](user-account.html#user-notify) article.
+> **Note:** Individual users can modify the default subscriptions that you set; however, integration notification settings are managed at the organizational level only. For more information on user settings, go to the [account Notifications](user-account.html#user-notify) article.
 
 ### Default user settings 
 
-Use the toggles in the **Integrations**, **In Contrast** and **Email** rows to enable or disable the following subscriptions. Use the dropdown menu to choose an [integration](admin-orgintegrations.html) that's configured in your organization, and adjust the default notification settings for each one.
+Use the toggles in the **Integrations**, **In Contrast** and **Email** columns to enable or disable the following subscriptions. Use the dropdown menu to choose an [integration](admin-orgintegrations.html) that's configured in your organization, and adjust the default notification settings for each one.
 
 * **Active Attack:** There is an active attack on an application with **Protect** enabled. 
 * **New Vulnerability:** Contrast has detected a new vulnerability. Click in the field to enable notifications for specific severity levels or "Library"; the default selection is "All".
 * **Server Offline:** Contrast can't reach a server. 
 * **New Comment:** A team member commented on a finding. 
 * **New Asset:** A new asset to which the user has [access](user-account.html#user-permissions) has been onboarded. Click in the field to set this notification for "Application" or "Server"; the default selection is "All".
-* **Email Digest:** A daily summary of Contrast activities. (Email row only)
+* **Email Digest:** A daily summary of Contrast activities. (Email only)
 
 ## Custom Notifications
 
@@ -50,6 +38,7 @@ Custom notifications allow users with Admin, Edit and Rules Admin [roles](admin-
 
 To create a custom notification, click the **Create Notification** button above the grid in the Custom Notifications panel. In the dialog that appears, fill out the following form fields. 
 
+* Use the radio buttons to choose **Vulnerability** or **Attack**. 
 * Choose a **Name** for the notification. 
 * Use the dropdown menu to set the notification **Interval** as "Daily", "Weekly" or "On Event".
 * Enter a **Description** for the notification's purpose. 
@@ -72,4 +61,17 @@ Contrast supports six conditions for custom notifications: Category, Impact, Lik
 | URL                | Is, Contains, Starts With | A specific URL from an application. | 
 | Class              | Is, Contains, Starts With | A specific Java or .NET class. | 
 | Method             | Is, Contains, Starts With | A specific Java or .NET method. | 
+
+
+## Administrative Notifications
+
+Administrators automatically receive the following notifications for high-level events in their organization in the Contrast application and by email.
+
+* **Application Licensed:** A new application was licensed in Contrast.
+* **Application License Expiring:** The license for an active application is expiring. (Contrast sends this notification two months, one month and one week prior to the expiration date).
+* **Licenses Expiring:** Existing license(s) with no associated applications is expiring. (Contrast sends this notification two months, one month and one week prior to the expiration date).
+* **Remediation Policy Violation:** A vulnerability is in violation of an existing [remediation policy](admin-policymgmt.html#remediate).
+* **Library Policy Violation:** A library is in violation of an existing [library policy](admin-policymgmt.html#library).
+
+<a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Email notification for administrators"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
 
