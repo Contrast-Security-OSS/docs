@@ -20,4 +20,4 @@ Notifications:
 * VictorOps
 * Generic Webhook
 
-> **Note:** Updating notification settings in your organization affects which messages you receive from your existing integrations. Read the article on [Notifications](admin-orgsettings.html#org-notify) for more information. 
+> **Note:** Notification settings in your organization affects which messages you receive from your existing integrations. Read the article on [Notifications](admin-orgsettings.html#org-notify) for more information. 
