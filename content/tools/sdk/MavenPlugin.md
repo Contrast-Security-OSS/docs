@@ -25,11 +25,11 @@ The table below shows all the parameters for the plugin. These settings are for 
 | TeamServer Username          | Username/email for your user in Contrast |
 | TeamServer Service Key       | Service Key found in Organization Settings             |
 | TeamServer API Key           | API Key found in Organization Settings                 |
-| TeamServer API Url           | API URL to your Contrast instance                    |
+| TeamServer API Url           | API URL to your Contrast instance  <BR> (Use *app.contrastsecurity.com/Contrast/api* if you're a SaaS customer.)                    |
 | TeamServer Organization Uuid | Organization UUID of the configured user found in Organization Settings |
-| Application Name             | Name of application you set with `-Dcontrast.appname` <BR> (This is used to filter for your application.) |
+| Application Name             | Name of application you set with `-Dcontrast.appname` <BR> (See the **Use the agent** section below.) |
 | Minimum Severity Level       | Minimum severity level for which to filter (Note, Low, Medium, High, or Critical). <br> (This property is inclusive.) |
-| Server Name                  | Name of server you set with `-Dcontrast.server` <BR> (Use *app.contrastsecurity.com/Contrast/api* if you're a SaaS customer.) |
+| Server Name                  | Name of server you set with `-Dcontrast.server` <BR> (See the **Use the agent** section below.) |
 | Jar Path                     | Path of a local *jar* file if you don't want to download the agent again                  |
 
 
@@ -42,7 +42,6 @@ An example configuration for the Contrast Maven Plugin:
 <plugin>
     <groupId>com.contrastsecurity</groupId>
     <artifactId>contrast-maven-plugin</artifactId>
-    <version>1.3</version>
     <executions>
         <execution>
             <id>install-contrast-jar</id>
@@ -61,12 +60,26 @@ An example configuration for the Contrast Maven Plugin:
     <configuration>
         <username>test_user</username>
         <apiKey>testApiKey</apiKey>
-        <serviceKey>testServiceKEy</serviceKey>
-        <apiUrl>http://app.contrastsecurity.com/Contrast/api</apiUrl>
+        <serviceKey>testServiceKey</serviceKey>
+        <apiUrl>https://app.contrastsecurity.com/Contrast/api</apiUrl>
         <orgUuid>QWER-ASDF-ZXCV-ERTY</orgUuid>
-        <appName>VehicleMPG-Master</appName>
-        <serverName>jenkins.slave1</serverName>
+        <appName>MyAppName</appName>
+        <serverName>MyServerName</serverName>
         <minSeverity>High</minSeverity>
     </configuration>
 </plugin>
 ```
+
+## Use the agent
+
+The final step is to add the agent to the JVM arguments used when the application is run. You must specify the following properties:
+
+```
+-javaagent:/target/contrast.jar -Dcontrast.appname=MyAppName -Dcontrast.server=MyServerName
+```
+>**Note**: While `contrast.appname` and `contrast.server` can take any value, they **must** match the `<appName>` and `<serverName>` specified in your Maven Plugin configuration.
+    
+Please see the following articles for specific installation instructions:
+
+* [Install the agent on Maven Apache Tomcat](installation-javainstall.html#apache)
+* [Install the agent on Maven Cargo Plugin](installation-javainstall.html#cargo)
