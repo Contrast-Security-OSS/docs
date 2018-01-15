@@ -61,7 +61,7 @@ An example configuration for the Contrast Maven Plugin:
         <username>test_user</username>
         <apiKey>testApiKey</apiKey>
         <serviceKey>testServiceKey</serviceKey>
-        <apiUrl>http://app.contrastsecurity.com/Contrast/api</apiUrl>
+        <apiUrl>https://app.contrastsecurity.com/Contrast/api</apiUrl>
         <orgUuid>QWER-ASDF-ZXCV-ERTY</orgUuid>
         <appName>MyAppName</appName>
         <serverName>MyServerName</serverName>
