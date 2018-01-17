@@ -49,13 +49,13 @@ With a few changes, you can utilize an external MySQL database - an open-source 
 
 Contrast recommends running the application with MySQL 5.6.28; however, it works with other versions of MySQL 5.6.x on Windows and Linux as well. Contrast also recommend working with your Operations and/or Database team to ensure a secure and durable installation.  
 
-Go to the [Github repository](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml) for a snippet of Ansible that you can use to install the latest MySQL 5.6 on Ubuntu 14.04.   
+> **Note:** Go to the [Github repository](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml) for a snippet of Ansible that you can use to install the latest MySQL 5.6 on Ubuntu 14.04.   
 
 You can download the *gpg* keyfile and additional information from the [MySQL documentation](http://dev.mysql.com/doc/refman/5.6/en/checking-gpg-signature.html). Contrast changes the bind address to "*" above for illustration, but recommends binding your MySQL server to the IP of your application server. Contrast recommend creating a user and grants that offer access to only the Contrast schema and limited to the host IP address or subnet. 
 
 ### Take a backup of MySQL
 
-To back up your database, you can use the embedded tool with your EOP installation.  
+To back up your database, you can use the embedded tool with your EOP installation: 
 
 ```
 $CONTRAST_HOME/bin/backup_db.sh
@@ -80,8 +80,8 @@ You can edit your database configuration through the SuperAdmin portal or the pr
 
 * Log in to the Contrast application.
 * Assume SuperAdmin role.
-* Click "System Settings" from the top right drop down menu.
-* Select "Database" from left hand menu.
+* Choose **System Settings** in the user menu. 
+* Select the **Database** tab.
 * Fill in the property values for your external database host. **Make sure to adjust the port to match your external database. For new installations, MySQL runs on 3306.**
 
 #### Encrypted Property Editor
@@ -151,9 +151,7 @@ If Contrast starts successfully, you will see this message in the *server.log*:
 
 ## Step 2: The Application Server
 
-Before you begin, it's important that you work with the Contrast Support team and have access to the Contrast *WAR* file before beginning this process.  
-
-If the DNS name of your installation is going to change, you must update `teamserver.url` in the *general.properties* file to reflect the new hostname. This also impacts agents that have already been deployed.
+Before you begin, it's important that you work with the Contrast Support team and have access to the Contrast *WAR* file before beginning this process. If the DNS name of your installation is going to change, you must update `teamserver.url` in the *general.properties* file to reflect the new hostname. This also impacts agents that have already been deployed.
 
 The following steps outline the process to migrate Contrast to your own Tomcat instance:
 
@@ -162,9 +160,10 @@ The following steps outline the process to migrate Contrast to your own Tomcat i
 * Prepare and configure the application server.
 * Restart Tomcat.
 
-Visit Contrast's [Github repository](https://github.com/Contrast-Security-OSS/ctdc/blob/master/appserver.yml) for a snippet of Ansible that you can use to install the latest versions of Tomcat 7 and Java 7 on Ubuntu 14.04. 
-
-> **Note:** Contrast uses Ubuntu and Ansible here as examples only. This software also runs on supported versions of Windows and Linux.
+> **Notes:** 
+ * Contrast uses Ubuntu and Ansible here as examples only. This software also runs on supported versions of Windows and Linux.
+ * Visit Contrast's [Github repository](https://github.com/Contrast-Security-OSS/ctdc/blob/master/appserver.yml) for a snippet of Ansible that you can use to install the latest versions of Tomcat 7 and Java 7 on Ubuntu 14.04. 
+ 
 
 ### Collect configuration from Contrast
 
@@ -187,7 +186,7 @@ $ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/cache/ da
 
 ### Install Tomcat and Java
 
-This process varies based on your operating system. You'll need to install:
+This process varies based on your operating system. You must install:
 
 * Tomcat 7 (Contrast recommends Tomcat 7.0.61)
 * Java 7 (Contrast recommends Java 1.7.0_80)
@@ -214,9 +213,7 @@ As a test, run a command.
 $ ls /opt/contrast-data/conf  
 ```
 
-There should be files named *general.properties* and *database.properties* among several others.  
-
-To be sure that you don't have any issues, adjust the permissions on the *contrast-data* directory.
+There should be files named *general.properties* and *database.properties* among several others. To be sure that you don't have any issues, adjust the permissions on the *contrast-data* directory.
 
 ```
 $ chown -R tomcat7:tomcat7 /opt/contrast-data
@@ -224,7 +221,8 @@ $ chown -R tomcat7:tomcat7 /opt/contrast-data
 
 #### JAVA_OPTS
 
-Now, it's time to set your JAVA_OPTS. Here are the options you should set:
+Now, it's time to set your JAVA_OPTS. You must set the `contrast.home` and `contrast.data.dir` to the location where you have unzipped the archive.  
+
 
 ```
 -XX:+UseTLAB
@@ -244,8 +242,6 @@ Now, it's time to set your JAVA_OPTS. Here are the options you should set:
 -XX:+HeapDumpOnOutOfMemoryError
 -Xloggc:/opt/contrast-data/gc.out
 ```
-
-Notice above that you need to set the `contrast.home` and `contrast.data.dir` to the location where you have unzipped the archive above.  
 
 Every distribution is different for setting `JAVA_OPTS`. Please refer to the documentation for your distributions for best practices.
 
