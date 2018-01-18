@@ -18,7 +18,7 @@ The following steps introduce Contrast to an organization, integrate it into the
 3. Project Plan: Agree on details and timing.
 4. TeamServer Preparation: Get ready to add applications.
 5. Application Baseline: Initial analysis of applications.
-6. Vulnerability Management: How alerts navigate your ecosystem.
+6. Vulnerability Management: How vulnerabilities are analyzed, communicated and tracked
 7. Contrast Business Review: Quantify the gained value.
 
 Contrast’s Customer Success team will continue to work with you to help your organization increasingly gain value from the time and money you’ve invested.
@@ -46,13 +46,13 @@ The focus of the Kickoff meeting is to introduce all the parties, and get everyo
 * Familiarize customers with Contrast’s Quick Value deployment methodology.
 * Ensure that all the key project roles are filled.
 * Review the the Intake document for the Solution Architecture meeting.
-* Help customers step through the Contrast maturity model.
+* Review the Contrast Security Maturity Model.
 
 ### Preparation
 
 In advance of this meeting:
 
-* Pre-meeting with the primary stakeholder to become aligned with our deployment methodology; Kickoff participants; and initial phase scope, success factors and project risks.
+* Pre-meeting with the primary stakeholder, who will participate in each role in this deployment, to become aligned with our deployment methodology and initial phase scope, success factors and project risks.
 * Each attendee should have [a high-level understanding of Contrast Security](https://www.youtube.com/watch?v=Gviz-SiJGWk).
 * Each attendee should read this document.
 

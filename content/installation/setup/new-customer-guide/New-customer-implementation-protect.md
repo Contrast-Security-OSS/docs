@@ -49,7 +49,7 @@ The focus of the Kickoff meeting is to introduce all the parties, and get everyo
 
 In advance of this meeting:
 
-* Pre-meeting with the primary stakeholder to become aligned on our deployment methodology, Kickoff participants, and initial phase scope, success factors and project risks.
+* Pre-meeting with the primary stakeholder, who will participate in each role in this deployment, to become aligned on our deployment methodology and initial phase scope, success factors and project risks.
 * Each attendee should have [a high-level understanding of Contrast Security](https://www.youtube.com/watch?v=Gviz-SiJGWk).
 * Each attendee should read this document.
 
@@ -193,8 +193,6 @@ At the beginning of the onboarding process, we worked with you to define your de
 
 * A presentation with business outcome attainment, initial wins, challenges and opportunities.
 * Contrast Business Review meeting follow up typically includes plans for application/server adoption, increasing value, and addressing key challenges and issues.
-
-
 
 
 
