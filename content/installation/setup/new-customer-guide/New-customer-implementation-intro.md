@@ -27,6 +27,6 @@ Once introduced to Contrast in phase 1, an organization can easily move to phase
 
 In the Continuous phase, Contrast is seamlessly integrated into the ecosystem of automated processes and tools. The following graphic is a theoretical example.
 
-<a href="assets/images/__.png" rel="Continuous phase of the Contrast Security Maturity Model" title="Contrast Security Maturity Model"><img class="thumbnail" src="assets/images/__.png"/></a>
+<a href="assets/images/Continuous-phase-infographic.png" rel="lightbox" title="Continuous phase of the Contrast Security Maturity Model"><img class="thumbnail" src="assets/images/Continuous-phase-infographic.png"/></a>
 
 
