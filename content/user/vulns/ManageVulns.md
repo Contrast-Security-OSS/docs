@@ -56,7 +56,7 @@ To quickly see which vulnerabilities are being tracked, click the **Advanced** l
 
 <a href="assets/images/Integrations-bugtracker-advanced-filter.png" rel="lightbox" title="Advanced filter"><img class="thumbnail" src="assets/images/Integrations-bugtracker-advanced-filter.png"/></a>
 
-To learn more about using bugtrackers with Contrast, read the (Introduction to Bugtrackers)](admin-orgintegrations.html#bugtracker). 
+To learn more about using bugtrackers with Contrast, read the [Introduction to Bugtrackers](admin-orgintegrations.html#bugtracker). 
 
 ## Export Findings
 
