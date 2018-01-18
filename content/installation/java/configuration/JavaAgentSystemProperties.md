@@ -45,7 +45,7 @@ To tell an agent to send its environment to Contrast, add this JVM option: `-Dco
 | contrast.poll.features | Boolean to enable/disable features polling thread <br> **DEFAULT VALUE:** true</br> |
 | contrast.properties | Location of file containing Java properties style key and value pairs. <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.redos.characcess.limit | The number of character accesses that can occur when processing a regular expression before blocking occurs. <br>**DEFAULT VALUE:** 3000000</br> |
-| contrast.reporting.period | Polling period for spooling reports, like traces and application updates (in milliseconds)<br> **DEFAULT VALUE:** 3000 (3 seconds, in milliseconds)</br> |
+| contrast.reporting.period | Polling period for spooling reports, like traces and application updates (in milliseconds)<br> **DEFAULT VALUE:** 5000 (5 seconds, in milliseconds)</br> |
 | contrast.rootapp | This value can override - or provide, if none exist - a display name for the application running at the root context. This may be necessary for Contrast to collect analytics on the application. <br> **DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.scanresponses | Boolean to enable/disable scanning of HTTP responses. <br>**DEFAULT VALUE:** true</br> |
 | contrast.server | Overrides name of the server displayed in the Contrast interface. Includes any valid path characters, e.g. *myserver-1/myapp* or *john_dev*. <br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
