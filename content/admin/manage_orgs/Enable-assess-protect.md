@@ -29,6 +29,8 @@ Find the server(s) you want to begin protecting and turn the **Protect** toggle 
 
 When Protect is enabled, you must restart the application for the Contrast agent to properly instrument the application with Protect capabilities. Once that's complete, Contrast begins monitoring and blocking attacks. The server now has a shield icon next to the name, indicating it has a Protect license assigned to it.
 
->**Note:** Organization administrators can skip the step to manually apply licenses for their users by going to the **Organization Settings** page and the **Servers** section and turning Protect on by default. This can be enabled for specific server environments.
+>**Note:** Organization Administrators can skip the step to manually apply licenses for their users by going to the **User Menu > Organization Settings > Servers tab**, turning the Protect toggle "on". This default can be enabled for specific server environments.
+
+For more information about providing Protect access to users, read the [Create Users](admin-onboardteam.html#create-user) article. 
 
 
