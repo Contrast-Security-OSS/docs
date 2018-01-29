@@ -16,7 +16,7 @@ To get started, set up an IdP (if you don't use one already), and then provide y
 
 ## EOP
 
-For Enterprise-On-Premises (EOP) customers, the SuperAdmin configures SSO at the System level. If a System Admin decides to set up SSO, it's important to note that Contrast doesn't support user provisioning; therefore, users must have an existing account in Contrast before authenticating with SSO. Also, if users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. 
+For Enterprise-on-Premises (EOP) customers, the SuperAdmin configures SSO at the System level. <!-- If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. --> 
 
 ### Get started
 
@@ -51,14 +51,14 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 * In Step 2, use the provided information to set up Contrast with your IdP. (You must also provide the Entity ID and Metadata URL in your IdP configuration.)
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
 * Test the configuration by clicking the **Test** button. If an error occurs, a Contrast provides a debug log for troubleshooting. This test only validates the metadata and Contrast's ability to connect to the IdP.  
-* Once the test is successfull, click **Finish**.
+* Once the test is successful, click **Finish**.
 * Restart Contrast to apply the changes.
 
 <a href="assets/images/SSOConfig.png" rel="lightbox" title="Single Sign-On Configuration"><img class="thumbnail" src="assets/images/SSOConfig.png"/></a>
 
 <a href="assets/images/SSOConfigRestart.png" rel="lightbox" title="Restart TeamServer to Apply Authentication Changes"><img class="thumbnail" src="assets/images/SSOConfigRestart.png"/></a>
 
->**Note:** You can edit your configuration later within the Authentication tab; however, you must retest and restart Contrast to apply the changes.
+>**Note:** If you edit your saved configuration, you must retest and restart Contrast to apply the changes.
 
 #### Public and secret nodes
 
@@ -71,7 +71,7 @@ If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during i
 
 For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings. In this case, the override only allows an organization to switch to using SSO.
 
-If an OrgAdmin decides to set up SSO, it's important to note that Contrast doesn't support user provisioning; therefore, all users must have an existing account in Contrast before authenticating with SSO. Also, if users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated.
+<!-- If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. -->
 
 ### Configuration
 
@@ -83,14 +83,12 @@ If an OrgAdmin decides to set up SSO, it's important to note that Contrast doesn
 * Use the provided information to set up Contrast with your IdP.
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
 * Test the configuration by clicking the **Test** button. If an error occurs, Contrast provides a debug log for troubleshooting. This test only validates the metadata and Contrast's ability to connect to the IdP.  
-* Once the test is successfull, click **Finish**.
+* Once the test is successful, click **Finish**.
 * Open a **new** browser window, private browsing session or Incognito window and attempt the SSO login with your account. If you're unsuccessful, go back to the browser in which you're still logged in, disable SSO for the Organization and then contact Support. 
 
 >**Note:** You can edit your SSO configuration later within the SSO tab.
 
-To return the organization back to the default configuration, select **Revert to Contrast-Managed Authentication** and confirm the change. The Contrast SuperAdmin controls these settings and no configuration is necessary.
-
----
+To return the organization back to the default configuration, select **Revert to Contrast-Managed Authentication** and confirm the change. The Contrast SuperAdmin controls these settings, and no configuration is necessary.
 
 ## Use SSO
 
@@ -100,7 +98,7 @@ For a user, SSO makes only a slight change to the login process. If SSO is confi
 
 Contrast then verifies your email with the configured IdP, and directs you to the IdP login page. Once you submit your full SSO credentials and are successfully authenticated, you're logged in and directed back to the Contrast dashboard. If you try to sign in using SSO but don't have an account in Contrast, an error message informing you that your administrator must create your account appears on the login screen.
 
->**Note:** If Two-Step Verification is active for a user, that login process occurs **after** successful SSO authentication. See the artcle on [Two-Step Verification](admin-orgsecurity.html#security-tsv) for more information. 
+>**Note:** If Two-Step Verification is active for a user, that login process occurs **after** successful SSO authentication. See the article on [Two-Step Verification](admin-orgsecurity.html#security-tsv) for more information. 
 
 For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting-auth.html#troubleshoot-sso). 
 
