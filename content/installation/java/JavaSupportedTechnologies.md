@@ -18,7 +18,7 @@ JRockit 1.5, 1.6 (update 95+ or R28.3.6+) |Jetty 6, 7, 8, 9 | Struts, Struts 2
                  | Play 2.2,2.3,2.4 | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
                  | Grizzly 2.3.20+ | Direct Web Remoting (DWR)
                  | Vert.X 3.0+     | DropWizard
-                 | JRun 4          | Google Web Toolkit (GWT)
+                 |                 | Google Web Toolkit (GWT)
                  |                 | Freemarker, Velocity
                  |                 | Hibernate
                  |                 | JDBC, JDBI, MongoDB                 
