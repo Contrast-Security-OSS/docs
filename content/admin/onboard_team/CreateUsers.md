@@ -68,7 +68,7 @@ The following information is optional for each user. To include the fields in th
 * **Timezone** <br> The default value is the organization time zone.
 * **Access** <br> The default value is "On".
 * **API only** <br> The default value is "Off".
-<!-- * **Protect** <br> The default value is "Off". -->
+* **Protect** <br> The default value is "Off".
 
 ### Upload progress
 
@@ -124,7 +124,7 @@ The following information is optional for each user. To include the fields in th
 * **Timezone** <br> The default value is the organization time zone.
 * **API only** <br> The default value is "Off".
 * **Access** <br> The default value is "On".
-<!-- * **Protect** <br> The default value is "Off". -->
+* **Protect** <br> The default value is "Off". 
 
 ### Upload progress
 
