@@ -21,11 +21,18 @@ To take a closer look at this information, select the **View** link under each h
 
 ## Licenses
 
-The Licenses tab features an Activity trend chart of data on license consumption over the past 12 months. Hover over a data point on the Assessment or Protection trend lines to see how many licenses were used that month. The thermometer chart below shows the total number of licenses purchased compared to the number being used. The timeline shows how many licenses are about to expire on given dates. For a different view of the data, take a look at the circular charts with breakdowns by fraction and percentage for Assessment and Protection. 
+The Licenses tab features an activity trend chart of data on license consumption over the past year. Hover over a data point on the Assess or Protect trend lines to see how many licenses were used each month. The thermometer chart below shows the total number of licenses purchased compared to the number being used. The timeline shows how many licenses are about to expire on given dates. For a different view of the data, the circular charts show breakdowns by fraction and percentage for Assess and Protect. 
 
-If your organization doesn't own any licenses for either Protection or Assessment, Contrast alerts you to the count of unlicensed assets in that mode.
+>**Note:** If your organization doesn't own any Protect or Assess licenses, Contrast alerts you to the count of unlicensed assets in that mode.
 
 <a href="assets/images/Org-stats-licenses.png" rel="lightbox" title="Organization statistics for licenses"><img class="thumbnail" src="assets/images/Org-stats-licenses.png"/></a>
+
+### Protect view 
+
+Click on a data point...
+
+<a href="assets/images/Protect-license-usage.png" rel="lightbox" title="Organization statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-usage.png"/></a>
+
 
 ## Applications
 
