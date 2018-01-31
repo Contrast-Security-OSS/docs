@@ -6,11 +6,9 @@ tags: "tools Jenkins SDK Integration Java"
 
 [Jenkins](https://jenkins.io/) is a continuous integration (CI) application that can be used to build, deploy and run applications. The Contrast Jenkins Plugin is a tool for integrating Contrast with your Jenkins CI instance. You can use it to test your connection to Contrast and verify your build with threshold conditions.
 
-## Use The Plugin
+## Use the Plugin
 
-You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-jenkins-plugin). In the Jenkins dashboard, go to **Manage Jenkins** in the left sidebar and select the **Configure System** page to find a new Contrast TeamServer profiles section.
-
-<!-- The plugin can be found here on the Jenkins repository. -->
+You can view the plugin code in Jenkins' [Github repository](https://github.com/jenkinsci/contrast-continuous-application-security-plugin). In the Jenkins dashboard, go to **Manage Jenkins** in the left sidebar, and select the **Configure System** page to find a new Contrast TeamServer profiles section.
 
 ## Contrast API Settings
 Contrast API settings enable the plugin to connect to Contrast and query for results. The plugin leverages these result to authenticate to Contrast and make API calls in post-build actions. Among the following requirements, you'll need a unique profile name to identify your configuration and use it in a specific job.
