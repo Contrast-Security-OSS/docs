@@ -76,13 +76,10 @@ bundle install ./path/to/contrast-agent-*.gem
 Download a standard configuration file from the Contrast application. You must place the file in the web application's *config* directory, and define the following fields, at a minimum:
 
 ``` yaml
-service:
-  host:
-  port:
-application:
-  logger:
-    path:
-    level:
+agent:
+  service:
+    host: 
+    port:
 ```
 
 ## Run the Service
@@ -98,14 +95,18 @@ The service, like the agent, reads its configuration from one of the following l
 Define the following sections, at minimum, in the configuration file:
 
 ```yaml
-teamserver:
-  user_name:
-  service_key:
-  api_key:
+contrast:
   url:
-service:
-  host:
-  port:
+  user_name:
+  api_key:
+  service_key:
+agent:
+  service:
+    host: 
+    port: 
+    logger:
+      path: 
+      level:
 ```
 
 
