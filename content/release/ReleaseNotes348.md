@@ -43,10 +43,11 @@ tags: "3.4.8 January Release Notes"
 
 ### Node.js summary 
 
+The Node Protect agent enters beta in February including instrumentation of the Passport authentication library, PostgreSQL support, and improvements to the SQLi and NoSQLi Protect rules. In the Node Assess agent, we’ve improved the reporting on eval vulnerabilities, and enhanced compatibility with the Winston logging framework and the core-js third-party library.
 
 ### Ruby summary 
 
-
+The Ruby team added a few performance and bug fixes. We now periodically query TeamServer for updates to configuration. We’ve expanded coverage of the authentication methods to cover more Warden strategies. We’ve also implemented improvements in the SQLi, XSS (reflected), CRLF and Path Traversal rules to catch additional potentially malicious vectors.
 
 
 
