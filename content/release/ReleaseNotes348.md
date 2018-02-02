@@ -35,13 +35,15 @@ Instant Protect access for new users and conveniently located API credentials wi
 
 ### Java summary 
 
+The Java team improved the display of vulnerabilities involving a web service call as a source as well as the accuracy of XXE rules. We also added detection of HTTP parameters under CXF and the option to omit the HTTP Request body from attacks reported by Protect. 
 
 ### .NET summary 
 
+The .NET team improved performance - especially on servers with many concurrent users across many instrumented applications - as well as accuracy of Protect rules. We fixed a crash bug in Contrast sensors during a specific async method call, a bug in which tray showed activity for the wrong application, and a bug in which references to Contrast sensors could cause the wrong version of a library to be loaded when a newer version of that library had been referenced by an application. 
 
 ### Node.js summary 
 
-The Node Protect agent enters beta in February including instrumentation of the Passport authentication library, PostgreSQL support, and improvements to the SQLi and NoSQLi Protect rules. In the Node Assess agent, we’ve improved the reporting on eval vulnerabilities, and enhanced compatibility with the Winston logging framework and the core-js third-party library.
+The Node Protect agent enters beta in February, including instrumentation of the Passport authentication library, PostgreSQL support, and improvements to the SQLi and NoSQLi Protect rules. In the Node Assess agent, we’ve improved the reporting on eval vulnerabilities, and enhanced compatibility with the Winston logging framework and the core-js third-party library.
 
 ### Ruby summary 
 
