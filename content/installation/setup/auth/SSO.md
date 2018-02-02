@@ -26,7 +26,7 @@ Contrast doesn't provide keys for SAML authentication. If you enable SSO without
 keytool -genkeypair -alias some-alias -keypass changeit -keyalg RSA -keystore samlKeystore.jks
 ```
 
-Use the [Encrypted Editor](installation-setupconfig.html#encrypt) to modify *saml.properties* and update the values to the keystore you created in the previous step. 
+Use the [Encrypted Editor](installation-setupconfig.html#encrypt) to modify *saml.properties*, and update the values to the keystore you created in the previous step. 
 
 ```
  authenticator.saml.keystore.path                  : /path/to/samlKeystore.jks
@@ -39,10 +39,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 
 ### Configuration 
 
-* From the **Authentication** tab in **System Settings**, select **Change Authentication Method**.
-
-<a href="assets/images/SSOChangeAuth.png" rel="lightbox" title="Changing Authentication Method"><img class="thumbnail" src="assets/images/SSOChangeAuth.png"/></a>
-
+* In the Contrast application, go to the **user menu > System Settings > Authentication tab**, and select the link to **Change Authentication Method**.
 * You may receive a warning regarding the implications of changing authentication. Please read it carefully before proceeding.
 
 <a href="assets/images/SSOWarning.png" rel="lightbox" title="Warning Dialog"><img class="thumbnail" src="assets/images/SSOWarning.png"/></a>
@@ -50,15 +47,17 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 * In Step 1 of the setup wizard, select **Single Sign-On**.
 * In Step 2, use the provided information to set up Contrast with your IdP. (You must also provide the Entity ID and Metadata URL in your IdP configuration.)
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
-* Test the configuration by clicking the **Test** button. If an error occurs, a Contrast provides a debug log for troubleshooting. This test only validates the metadata and Contrast's ability to connect to the IdP.  
+* Test the configuration by clicking the **Test** button. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
 * Once the test is successful, click **Finish**.
-* Restart Contrast to apply the changes.
 
 <a href="assets/images/SSOConfig.png" rel="lightbox" title="Single Sign-On Configuration"><img class="thumbnail" src="assets/images/SSOConfig.png"/></a>
 
-<a href="assets/images/SSOConfigRestart.png" rel="lightbox" title="Restart TeamServer to Apply Authentication Changes"><img class="thumbnail" src="assets/images/SSOConfigRestart.png"/></a>
+* Restart Contrast to apply the changes.
 
 >**Note:** If you edit your saved configuration, you must retest and restart Contrast to apply the changes.
+
+<a href="assets/images/SSOConfigRestart.png" rel="lightbox" title="Restart TeamServer to Apply Authentication Changes"><img class="thumbnail" src="assets/images/SSOConfigRestart.png"/></a>
+
 
 #### Public and secret nodes
 
@@ -69,24 +68,26 @@ If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during i
 
 ## SaaS 
 
-For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings. In this case, the override only allows an organization to switch to using SSO.
+For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings. In this case, the override only allows an organization to begin using SSO.
 
 <!-- If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. -->
 
 ### Configuration
 
-* From the ** Sign-On** tab in **Organization Settings**, click **Get Started**.
-
-<a href="assets/images/SSOOrgSettings.png" rel="lightbox" title="Single Sign-On Onboarding - Org Settings"><img class="thumbnail" src="assets/images/SSOOrgSettings.png"/></a>
-
+* In the Contrast application, go to the **user menu > Organization Settings > Single Sign-On tab**, and click the link to **Get Started**.
 * You may receive a warning dialog regarding the implications of changing authentication. Please read it carefully before proceeding.
 * Use the provided information to set up Contrast with your IdP.
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
-* Test the configuration by clicking the **Test** button. If an error occurs, Contrast provides a debug log for troubleshooting. This test only validates the metadata and Contrast's ability to connect to the IdP.  
-* Once the test is successful, click **Finish**.
-* Open a **new** browser window, private browsing session or Incognito window and attempt the SSO login with your account. If you're unsuccessful, go back to the browser in which you're still logged in, disable SSO for the Organization and then contact Support. 
+* Check the box to **Enable user provisioning**, if you want Contrast to automatically create new user accounts for individuals who are authenticated...
+Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
+* Click **Test Connection** button to test the configuration. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
+* Once the test is successful, click **Save**.
 
->**Note:** You can edit your SSO configuration later within the SSO tab.
+<a href="assets/images/Sso-setup-org-settings.png" rel="lightbox" title="Configure SSO in Organization Settings"><img class="thumbnail" src="assets/images/Sso-setup-org-settings.png"/></a>
+
+* Open a **new** browser window, private browsing session or incognito window, and attempt the SSO login with your account. If you're unsuccessful, go back to the browser in which you're still logged in, disable SSO for the organization and then contact Customer Support. 
+
+>**Note:** You can return to this configuration form to edit your SSO configuration.
 
 To return the organization back to the default configuration, select **Revert to Contrast-Managed Authentication** and confirm the change. The Contrast SuperAdmin controls these settings, and no configuration is necessary.
 
