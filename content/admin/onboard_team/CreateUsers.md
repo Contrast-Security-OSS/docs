@@ -26,10 +26,11 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * Choose the **Organization** to which the user belongs. 
 * Once you decide on an organization, you can choose the default **Organization Role** in the dropdown menu as well as an **Application Access Group** in the multiselect field.
 * Choose the **Date Format**, **Time Format** and **Time Zone** in the dropdown fields. 
-* The box to **Use Organization Settings** is checked by default. You can uncheck the box to create your own settings using the **Access** toggle or the box to **make user API only**. 
-* Click the **Add** button to save the user's information. 
+* The box to **Use Organization Settings** is checked by default. Uncheck the box to create your own settings using the **Access** toggle, or check the box to **make user API only**. 
+* Use the toggle to enable **Protect** access for the user. The toggle is **off** by default. 
+* Click the **Add** button to save the information and create the user.  
 
-<a href="assets/images/User-system-admin.png" rel="lightbox" title="Add a user as a Super Administrator"><img class="thumbnail" src="assets/images/User-system-admin.png"/></a>
+<a href="assets/images/Add-user-system-settings.png" rel="lightbox" title="Add a user as a SuperAdmin"><img class="thumbnail" src="assets/images/Add-user-system-settings.png"/></a>
 
 
 ### Multiple users 
@@ -67,6 +68,7 @@ The following information is optional for each user. To include the fields in th
 * **Timezone** <br> The default value is the organization time zone.
 * **Access** <br> The default value is "On".
 * **API only** <br> The default value is "Off".
+* **Protect** <br> The default value is "Off".
 
 ### Upload progress
 
@@ -84,10 +86,12 @@ To add a single user, click the button to **Add User** above the grid, and compl
 * Choose the user's **Organization Role** in the dropdown menu. 
 * Select an **Application Access Group** to which to add the user in the dropdown menu, if desired. 
 * Choose **Date Format**, **Time Format** and **Time Zone** settings in the dropdown menus. 
-* If you want to disable the user's access to your organization in the Contrast interface, use the **Access** toggle. <br> (The user has access by default.)
+* If you want to disable the user's access to your organization in the Contrast interface, use the **Access** toggle. (The user has access by default.)
 * Check the box if you want the user to have **API Only** access. <br> (The user will have access Contrast's REST API, but won't have access to the Contrast interface.)
+* Use the toggle to enable **Protect** access for the user. The toggle is **off** by default. 
+* Click the **Add** button to save the information and create the user.  
 
-<a href="assets/images/Create_User.png" rel="lightbox" title="Add a user as an Organization Administrator"><img class="thumbnail" src="assets/images/Create_User.png"/></a>
+<a href="assets/images/Add-user-org-settings.png" rel="lightbox" title="Add a user as an OrgAdmin"><img class="thumbnail" src="assets/images/Add-user-org-settings.png"/></a>
 
 ### Multiple users
 
@@ -118,8 +122,9 @@ The following information is optional for each user. To include the fields in th
 * **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
 * **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
 * **Timezone** <br> The default value is the organization time zone.
-* **Access** <br> The default value is "On".
 * **API only** <br> The default value is "Off".
+* **Access** <br> The default value is "On".
+* **Protect** <br> The default value is "Off". 
 
 ### Upload progress
 
