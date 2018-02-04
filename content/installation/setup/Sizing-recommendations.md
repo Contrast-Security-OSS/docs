@@ -25,7 +25,7 @@ TS1 configurations provide a baseline level of CPU performance, but are flexible
 
 | vCPUs | Clock Speed      | RAM | Storage |
 |:-----:|:----------------:|:---:|:-------:|
-| ~2    | 2.5GHz to 3.3GHz | 4GB |  30GB   |
+| ~4    | 2.5GHz to 3.3GHz | 8GB |  30GB   |
 
 
 ### TS2 configuration
