@@ -10,7 +10,7 @@ The Python agent supports Python languages 2.7+ and 3.4+. Framework support is c
 * Flask 0.10.*
 * Pyramid 1.9 (Beta)
 
->**Note:** The Python agent is meant to be WSGI compatible. It may be compatible to other WSGI application's as long as the guidelines are followed.
+>**Note:** The Python agent is meant to be WSGI compatible. It may be compatible to other WSGI applications as long as the guidelines are followed.
 
 
 ## Database Support
