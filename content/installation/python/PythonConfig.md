@@ -8,7 +8,7 @@ The Python agent and Go service use a YAML file to alter the agent behavior.
 
 ## Load Path
 
-The configuration file is called *contrast_security.yaml* wherever it's located. The Python agent loada the configuration YAML from the following paths in order of precedence:
+The configuration file is called *contrast_security.yaml* wherever it's located. The Python agent loads the configuration YAML from the following paths in order of precedence:
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
 2. A subdirectory called *config*, (e.g., *./config/contrast_security.yaml*)

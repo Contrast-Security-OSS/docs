@@ -8,7 +8,7 @@ The Contrast Python agent provides runtime protection of Django, Flask, and Pyra
 
 ## About Python 
 
-The Python agent is a WSGI and framework specific middleware that's compatible with the most popular web application frameworks. It's goal is to be fully WSGI compatible along with other web framewroks. 
+The Python agent is a WSGI and framework specific middleware that's compatible with the most popular web application frameworks. It's goal is to be fully WSGI compatible along with other web frameworks. 
 
 From it's position within the middleware stack, the Python agent inspects HTTP requests to identify potentially harmful input vectors. During the request, the agent inspects database queries, file writes and other potentially damaging actions resulting from the request. At the end of the request, the agent inspects the rendered output for successful attacks, and can block a successful attack from being forwarded to the application user. The service sends the details of the attack to the Contrast application, which then sends you an alert and displays attack details in the interface. 
 
