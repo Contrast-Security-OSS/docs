@@ -4,7 +4,7 @@ description: "Overview of how libraries are analyzed"
 tags: "ui application user library analysis"
 -->
 
-The security of the libraries used by your application has a direct impact on how secure your application can be. Contrast analyzes library files - Java *JARs*, .NET *DLL*s, Node packages and Ruby *GEMs* - in your application to assess their potential security risks.
+The security of the libraries used by your application has a direct impact on how secure your application can be. Contrast analyzes library files - Java *JARs*, .NET *DLL*s, Node and Python packages and Ruby *GEMs* - in your application to assess their potential security risks.
 
 ## Library File
 

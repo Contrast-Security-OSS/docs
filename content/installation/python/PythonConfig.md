@@ -1,22 +1,19 @@
 <!-- 
-title: "Ruby Agent Configuration"
-description: "Configuring the Ruby Agent and Service"
-tags: "installation ruby on rails agent service configuration"
+title: "Python Agent Configuration"
+description: "Configuring the Python Agent and Service"
+tags: "installation python django flask pyramid agent service configuration"
 -->
 
-The Ruby agent and service use a YAML file to alter the agent behavior. 
+The Python agent and Go service use a YAML file to alter the agent behavior. 
 
 ## Load Path
 
-The configuration file is called *contrast_security.yaml* wherever it's located. The Ruby agent and service load the configuration YAML from the following paths in order of precedence:
+The configuration file is called *contrast_security.yaml* wherever it's located. The Python agent loada the configuration YAML from the following paths in order of precedence:
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
-2. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)
+2. A subdirectory called *config*, (e.g., *./config/contrast_security.yaml*)
 3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
-## Ruby Service and Ruby Agent
-
-Configuration files for Ruby on Rails applications are usually stored in the *./config* directory of the application. The Ruby service can share the application's configuration file if the service's working directory is also the base directory of the Rails application. Both the agent and the service use the *./config/contrast_security.yaml* path; however, this isn't required. The Ruby service can run from any other directory on the server - in which case, it should have its own copy of the configuration file.  
 
 ## General Configuration Options
 
@@ -37,7 +34,7 @@ The configuration YAML consists of four sections. The agent and service may shar
 * `server`: Information about the server on which the web application is hosted
   * `name`: Name under which to register the server in the Contrast application 
   * `environment`: Environment as which applications on this server should register themselves on the Contrast application (Development)
-* `application`: Information about the application that is being protected by the Ruby agent
+* `application`: Information about the application that is being protected by the Python agent
   * `name`: Name under which to register the application in the Contrast application. If not provided, the Rails application name is used instead.
   * `logger`:
     * `path`: Filename of the Contrast Security log file for the agent (*contrast_agent.log*)
