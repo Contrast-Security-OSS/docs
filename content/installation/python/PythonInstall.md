@@ -8,7 +8,7 @@ tags: "python agent installation"
 
 To install the Contrast agent into your Python application, you must complete the following steps.  
 
-1. Add the <i>contrast-agent-*.tar.gz</i> to the application's `requirement.txt`. (This is outlined in the <b>Setup</b> section below.) 
+1. Add the <i>contrast-agent-*.tar.gz</i> to the application's `requirements.txt`. (This is outlined in the <b>Setup</b> section below.) 
 2. Add the *contrast_security.yaml* file to the application's *config* directory. (This is outlined in the **Configuration** section below.)
 3. Run the Go Speedracer service as a standalone service on the same server as the application. (This is outlined in the section below to **Run the Service**.)
 
@@ -21,7 +21,7 @@ The <i>contrast-agent-*.tar.gz</i> is a standard packaged Python library that yo
 To use Contrast, add this line to your application's requirements.txt after downloading the agent:
 
 ``` python
--e contrast-agent-<version>.tar.gz
+-e ./path/to/contrast-agent-<version>.tar.gz
 ```
 
 After editing the requirements.txt you can install normally with:
@@ -29,6 +29,14 @@ After editing the requirements.txt you can install normally with:
 ``` bash
 pip install -r requirements.txt
 ```
+
+### Manual installation
+
+To install the Contrast agent manually, download the <i>contrast-agent-<version>.tar.gz</i> file to a local directory and run:
+
+``` bash
+pip install ./path/to/contrast-agent-<version>.tar.gz
+``` 
 
 ### Middleware Inclusion
 
@@ -79,14 +87,6 @@ app = get_wsgi_application()
 
 app = ContrastMiddleware(app)
 ```
-
-### Manual installation
-
-To install the Contrast agent manually, download the <i>contrast-agent-<version>.tar.gz</i> file to a local directory and run:
-
-``` bash
-pip install ./path/to/contrast-agent-<version>.tar.gz
-``` 
 
 ## Configuration
 
