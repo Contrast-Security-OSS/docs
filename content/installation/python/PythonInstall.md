@@ -10,7 +10,7 @@ To install the Contrast agent into your Python application, you must complete th
 
 1. Add the <i>contrast-agent-*.tar.gz</i> to the application's `requirements.txt`. (This is outlined in the <b>Setup</b> section below.) 
 2. Add the *contrast_security.yaml* file to the application's *config* directory. (This is outlined in the **Configuration** section below.)
-3. Run the Go Speedracer service as a standalone service on the same server as the application. (This is outlined in the section below to **Run the Service**.)
+3. Run the Contrast Service as a standalone service on the same server as the application. (This is outlined in the section below to **Run the Service**.)
 
 ## Setup
 

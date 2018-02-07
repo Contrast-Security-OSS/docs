@@ -4,7 +4,7 @@ description: "Configuring the Python Agent and Service"
 tags: "installation python django flask pyramid agent service configuration"
 -->
 
-The Python agent and Go service use a YAML file to alter the agent behavior. 
+The Python agent and Contrast Service use a YAML file to alter the agent behavior. 
 
 ## Load Path
 

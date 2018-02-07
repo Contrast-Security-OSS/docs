@@ -14,4 +14,4 @@ From it's position within the middleware stack, the Python agent inspects HTTP r
 
 ## Use the Agent 
 
-To start protecting your application, download the Python agent and service, and create a configuration file as described in [Python Agent Installation](installation-python.html#python-install). The Python agent is installed as a standard Python package, and communicates with a standalone Go service that runs outside your application.
+To start protecting your application, download the Python agent and service, and create a configuration file as described in [Python Agent Installation](installation-python.html#python-install). The Python agent is installed as a standard Python package, and communicates with a standalone Contrast Service that runs outside your application.
