@@ -4,7 +4,6 @@ description: "Installing the Python Agent"
 tags: "python agent installation"
 -->
 
-## Installation
 
 To install the Contrast agent into your Python application, you must complete the following steps.  
 
