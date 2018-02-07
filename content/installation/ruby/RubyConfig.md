@@ -18,6 +18,30 @@ The configuration file is called *contrast_security.yaml* wherever it's located.
 
 Configuration files for Ruby on Rails applications are usually stored in the *./config* directory of the application. The Ruby service can share the application's configuration file if the service's working directory is also the base directory of the Rails application. Both the agent and the service use the *./config/contrast_security.yaml* path; however, this isn't required. The Ruby service can run from any other directory on the server - in which case, it should have its own copy of the configuration file.  
 
+### Tagging
+
+The Ruby agent and service support the full array for tagging messages to the Contrast server. To apply these tags, you must update your configuration files in either the agent or the service. Tags in the configuration are comma-separated alphanumeric strings. Each tag will be attached to a corresponding message from the agent or service, depending which field is set.
+
+For **server** tags, update the configuration of the service. If there isn’t one, add a top-level `server` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string.
+
+For **application** tags, update the configuration of the agent. If there isn’t one, add a top-level `application` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string. 
+ 
+For **library** tags, update the configuration of the agent. If there isn’t one, add a top-level `inventory` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string. 
+
+<!-- omit until assess is released 
+For Trace tags, update the configuration of the agent. If there isn’t one, add a top-level `assess` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string.  
+-->
+
+* `server`
+  * `tags`: some,string
+* `application`
+  * `tags`: some,application,tags
+* `inventory`
+  * `tags`: these,go,on,libraries
+* `assess`
+  * `tags`: vulnerabilities,get,these,tags
+
+
 ## General Configuration Options
 
 The configuration YAML consists of four sections. The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
