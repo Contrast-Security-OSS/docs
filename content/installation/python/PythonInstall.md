@@ -4,7 +4,6 @@ description: "Installing the Python Agent"
 tags: "python agent installation"
 -->
 
-## Installation
 
 To install the Contrast agent into your Python application, you must complete the following steps.  
 
@@ -18,13 +17,13 @@ The <i>contrast-agent-*.tar.gz</i> is a standard packaged Python library that yo
 
 ### Contrast as a Python Package
 
-To use Contrast, add this line to your application's requirements.txt after downloading the agent:
+To use Contrast, add this line to your application's `requirements.txt` after downloading the agent:
 
 ``` python
 -e ./path/to/contrast-agent-<version>.tar.gz
 ```
 
-After editing the requirements.txt you can install normally with:
+After editing the `requirements.txt` you can install normally with:
 
 ``` bash
 pip install -r requirements.txt
@@ -38,12 +37,12 @@ To install the Contrast agent manually, download the <i>contrast-agent-<version>
 pip install ./path/to/contrast-agent-<version>.tar.gz
 ``` 
 
-### Middleware Inclusion
+### Middleware inclusion
 
-To hook into incoming requests and outbound responses, a middleware needs to be added to your application. To add the middleware to your application, see the following guide:
+To hook into incoming requests and outbound responses, a middleware needs to be added to your application. To add the middleware to your application, see the following guidance:
 
 
-Django; in your settings.py file:
+**Django; in your *settings.py* file:**
 
 ``` python
 MIDDLEWARE = [
@@ -52,7 +51,7 @@ MIDDLEWARE = [
 ]
 ```
 
-Flask:
+**Flask:**
 
 ``` python
 from contrast.agent.middlewares.flask_middleware import FlaskMiddleware as ContrastMiddleware
@@ -64,7 +63,7 @@ app = Flask(__name__)
 app.wsgi_app = ContrastMiddleware(app.wsgi_app)
 ```
 
-Pyramid:
+**Pyramid:**
 
 ``` python
 from contrast.agent.middlewares.wsgi_middleware import WSGIMiddleware as ContrastMiddleware
@@ -76,7 +75,7 @@ app = config.make_wsgi_app()
 app = ContrastMiddleware(app)
 ```
 
-WSGI:
+**WSGI:**
 
 ``` python
 from contrast.agent.middlewares.wsgi_middleware import WSGIMiddleware as ContrastMiddleware

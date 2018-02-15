@@ -37,6 +37,6 @@ The Python Agent has ORM support for:
 
 ## OS Support
 
-Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has no *C* dependencies currently, and may work in other operating system environments.
+Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has no *C* dependencies, and may work in other operating system environments.
 
 
