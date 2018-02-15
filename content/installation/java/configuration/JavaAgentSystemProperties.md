@@ -10,7 +10,7 @@ Generate a list of general properties directly from the command line using the C
 > **Example:**
 `java -jar path/to/contrast.jar properties | grep -A5 "proxy"` would yield a list of proxy-related properties.
 
-To tell an agent to send its environment to Contrast, add this JVM option: `-Dcontrast.env=<environment>`. 
+To tell an agent to send its environment to Contrast, add this JVM option: `-Dcontrast.env=<environment>`. Valid values are `development`, `qa` and `production` (case insensitive). 
 
 > **Example:** If you want to tell Contrast that an agent is part of the QA environment, add `-Dcontrast.env=qa`.
 
