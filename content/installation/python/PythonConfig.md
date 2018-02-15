@@ -39,8 +39,8 @@ The configuration YAML consists of four sections. The agent and service may shar
       * `progname`: Name to identify the process with the service log (Contrast Service)
     * `host`: Location the agent uses to communicate with the service (e.g., localhost)
     * `port`: Port the agent uses to communicate with the service (e.g., 30555)
-* `application`: Information about the application that is being protected by the Ruby agent
-  * `name`: Name under which to register the application in the Contrast application. If not provided, the Rails application name is used instead.
+* `application`: Information about the application that is being protected by the Python agent
+  * `name`: Name under which to register the application in the Contrast application. If not provided, the agent finds an appropriate application name.
   * `tags`: Comma-delimited list of tags for this application
   * `group`: Group name for this application
 * `server`: Information about the server on which the web application is hosted
