@@ -22,8 +22,8 @@ The configuration YAML consists of four sections. The agent and service may shar
 * `contrast`: Options for locating and communicating with the Contrast interface Dashboard
   * `url`: URL to connect to the Contrast application
   * `api_key`: Organization's API key
-  * `service_key`: 
-  * `user_name`: 
+  * `service_key`: Service Key of Organization
+  * `user_name`: Username of user in TeamServer
 * `agent`: Options for communicating between the agent and the service
   * `logger`:
     * `path`: Filename of the Contrast Security log file for the agent (*contrast_agent.log*)

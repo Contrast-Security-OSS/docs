@@ -23,8 +23,8 @@ Configuration files for Ruby on Rails applications are usually stored in the *./
 The configuration YAML consists of four sections. The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
 
 * `teamserver`: Options for locating and communicating with the Contrast interface Dashboard
-  * `user_name`: 
-  * `service_key`: 
+  * `user_name`: Username of user in TeamServer
+  * `service_key`: Service Key of Organization
   * `api_key`: Organization's API key
   * `url`: URL to connect to the Contrast application
 * `service`: Options for the running service, including how the agent can locate it
