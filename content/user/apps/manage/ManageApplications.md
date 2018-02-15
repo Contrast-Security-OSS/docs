@@ -26,7 +26,7 @@ A small grey box appear to the right of the application name when it's in an arc
 
 > **Note:** Archiving an application doesn't free up a license in Contrast. The only way to return a license back to the pool of available licenses is to archive, reset and then fully delete the application. (See the sections below to **Reset** and **Delete Applications**.)
 
-## Restore (Unarchive) Applications 
+### Restore (unarchive) applications 
 
 Once an application is archived, an administrator can restore the application. (Restoring an application is the inverse of archiving an application.) The application becomes visible by default, and all vulnerabilities and issues immediately impact the portfolio score.
 
@@ -36,7 +36,7 @@ If an application was reset, there is no way to restore the purged data.
 
 Resetting an application purges all of the data associated with it, but doesn't remove the application. (Users often reset applications to clear all history and findings associated with a specific application.)
 
-## Fully Delete Applications 
+## Delete Applications 
 
 You must archive an application before you can fully deleted it. You aren't required to reset the application, as the deletion process truncates any associated data; however, Contrast recommends that you review the data and reset the application before you delete it. For more information, see the article on [Deleting An Application](user-appsmanage.html#delete). 
 
