@@ -4,7 +4,7 @@ description: "Overview of the core operations for an application from the action
 tags: "user ui application manage archiving restoring resetting deleting"
 -->
 
-Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid, or use the Action Bar to make changes in bulk. 
+Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid, or use the Action Bar to make changes in bulk. To archive, restore, rest or delete applications, see the step-by-step instructions in the [Delete Applications](user-appsmanage.html#delete) article.  
 
 <a href="assets/images/Applications-page.png" rel="lightbox" title="Applications page"><img class="thumbnail" src="assets/images/Applications-page.png"/></a>
 
@@ -16,11 +16,11 @@ To change an application name, go to the application's details page. Click on th
 
 ## Archive Applications
 
-Applications that should no longer collect traces, but are wanted for historical purposes, can be archived. Archiving an application maintains the integrity of application data, such as traces and libraries, but essentially turn the application to an "off" status.
+Applications that should no longer collect traces, but are wanted for historical purposes, can be archived. Archiving an application maintains the integrity of application data, such as traces and libraries, but essentially turns the application "off".
 
-When an application is archived, the agent is informed of the application status. It no longer sends traces to the Contrast application. Archived applications also improve your overall portfolio score, as they don't count against the total score. 
+When an application is archived, the agent is informed of the application status and no longer sends traces to the Contrast application. Archived applications also improve your overall portfolio score, as they don't count against the total score. 
 
-A small grey box appear to the right of the application name when it's in an archived state. By default, these applications don't show up in the **Applications** grid. However, you can check the **Show Archived** option to view and interact with an archived application.
+A small gray box appears to the right of the application name when it's in an archived state. By default, these applications don't show up in the **Applications** grid. However, you can check the **Show Archived** option in **Advanced Settings** to view and interact with an archived application.
 
 <a href="assets/images/Archived_App.png" rel="lightbox" title="Example Archived Application"><img class="thumbnail" src="assets/images/Archived_App.png"/></a>
 
@@ -38,7 +38,7 @@ Resetting an application purges all of the data associated with it, but doesn't 
 
 ## Delete Applications 
 
-You must archive an application before you can fully deleted it. You aren't required to reset the application, as the deletion process truncates any associated data; however, Contrast recommends that you review the data and reset the application before you delete it. For more information, see the article on [Deleting An Application](user-appsmanage.html#delete). 
+You must archive an application before you can fully deleted it. You aren't required to reset the application, as the deletion process truncates any associated data; however, Contrast recommends that you review the data and reset the application before you delete it. 
 
 ## Group Applications
 
