@@ -13,13 +13,13 @@ To merge an application, complete the following steps in the Contrast UI:
 * In the grid, find the applications that you want to merge, and use the checkboxes to select them. 
 * Select the **Merge** icon from the batch action menu at the top right of the grid. 
 
-<a href="assets/images/Merge-apps.png" rel="lightbox" title="Merge applications"><img class="thumbnail" src="assets/images/Merge-apps.png"/></a>
+<a href="assets/images/Merge-apps.png" rel="lightbox" title="Use the batch action menu to merge applications"><img class="thumbnail" src="assets/images/Merge-apps.png"/></a>
 
 * Choose one of the merged applications should represent the **Master Application**. 
 
 Once your applications are merged, you'll see the **Master Application** accompanied by a crown icon. To see the application modules represented by the master, click the icon, or choose **Show child applications** from the **Advanced** filter options. To quickly get to any merged applications, use the **Merged** filter available from the search bar.
 
-<a href="assets/images/Master-app-tooltip.png" rel="lightbox" title="Example of a Merged Application"><img class="thumbnail" src="assets/images/Master-app-tooltip.png"/></a>
+<a href="assets/images/Master-app-tooltip.png" rel="lightbox" title="A master (merged) application"><img class="thumbnail" src="assets/images/Master-app-tooltip.png"/></a>
 
 ## Unmerge Applications
 
@@ -29,4 +29,4 @@ From the **Applications** page, click the **Unmerge** action in the row menu of 
 
 Click the crown icon in the application row or **Details** page to view each module in the **Application Modules** dialog. Select one, many or all modules, and click the button to **Unmerge Selected** applications. 
 
-<a href="assets/images/App_Mappings.png" rel="lightbox" title="Unmerging A Master Application"><img class="thumbnail" src="assets/images/App_Mappings.png"/></a>
+<a href="assets/images/App_Mappings.png" rel="lightbox" title="Unmerge application modules"><img class="thumbnail" src="assets/images/App_Mappings.png"/></a>
