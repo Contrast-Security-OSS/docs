@@ -4,7 +4,7 @@ description: "Guide to Contrast scoring"
 tags: "user TeamServer application scoring guide grade"
 -->
 
-Contrast gives letter grades to your applications so that you can gauge their general performance. The grade represents an aggregate score that comprises how much of the application has been exercised as well as the amount and seriousness of the vulnerabilities that have been detected during the analysis process.
+Contrast gives letter grades to your applications so that you can gauge their general performance. The grade represents an aggregate score based on the amount of the application that's been exercised as well as the amount and seriousness of the vulnerabilities that have been detected during the analysis process.
 
 ## Overall Score
 

@@ -4,13 +4,14 @@ description: "Overview of application merging and unmerging"
 tags: "user ui application manage merging"
 -->
 
+Merging two or more applications into a single application is a common operation performed by Organization Administrators responsible for bringing applications online. The main purpose of merging is to present a single application view for scoring, discovered vulnerabilities and remediation purposes. Applications can be made up of components, which may show up individually in the application list. Merging also allows you to logically organize all of an application's components into one entity within Contrast.
 
-Merging two or more applications into a single application is a common operation performed by Organization Administrators responsible for bringing applications online. The main purpose of merging is to present a single application view in terms of scoring, discovered vulnerabilities and remediation purposes. Applications can be made up of components, which may show up individually in the application list. Merging allows you to logically organize all of an application's components into one entity within Contrast.
+## Create a Master Application 
 
-To merge an application, complete the following steps in the Contrast UI:
+To merge applications, complete the following steps in the Contrast UI:
 
 * Go to the **Applications** page. 
-* In the grid, find the applications that you want to merge, and use the checkboxes to select them. 
+* Find the applications that you want to merge, and use the checkboxes in the grid to select them. 
 * Select the **Merge** icon from the batch action menu at the top right of the grid. 
 
 <a href="assets/images/Merge-apps.png" rel="lightbox" title="Use the batch action menu to merge applications"><img class="thumbnail" src="assets/images/Merge-apps.png"/></a>
