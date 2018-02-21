@@ -6,6 +6,10 @@ tags: "quick start guide EOP overview Contrast agents installation setup"
 
 Before you begin the process of setting up Contrast, explore the requirements, processes and benefits to including it in your current workflows. 
 
+## How It Works
+
+...
+
 ## Installation
 
 Using Assess, Protect or both requires two installations:
