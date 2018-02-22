@@ -38,9 +38,9 @@ To connect to Contrast agents, install an agent into your web application server
 
 * The [Node agent](installation-node.html#node-overview) analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution. 
 
-* The [Ruby agent](installation-ruby.html#ruby-overview) analyzes the behavior of Ruby on Rails web applications...
+* The [Ruby agent](installation-ruby.html#ruby-overview) provides runtime protection of Ruby on Rails web applications.
 
-* The [Python agent](installation-python.html#python-overview) analyzes the behavior of Django, Flask and Pyramid web applications...
+* The [Python agent](installation-python.html#python-overview) provides runtime protection of Django, Flask and Pyramid web applications.
 
 
 
