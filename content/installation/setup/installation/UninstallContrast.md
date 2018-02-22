@@ -28,11 +28,11 @@ Running the uninstaller on **Linux**:
 * Execute the command `uninstall`.
 * Follow the prompts to perform uninstallation.
 
-## Some Files Will Remain
+## Some Files May Remain
 
-You'll delete the vast majority of files when performing an uninstallation. However, a few key files are left on the system.
+You'll delete the vast majority of files when performing an uninstallation. However, a few key files may be left on the system.
 
->**Note:** The uninstaller won't delete the following files:
+>**Note:** The uninstaller may not delete the following files:
 * The Contrast Home directory
 * The Contrast DATA directory
 * The Contrast LOGS directory
