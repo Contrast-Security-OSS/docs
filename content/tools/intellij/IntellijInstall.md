@@ -1,49 +1,41 @@
 <!--
-title: "Downloading Contrast for Eclipse"
-description: "Instructions for Downloading and Installing Contrast for Eclipse"
-tags: "tools Eclipse Download Installation Ubuntu"
+title: "Downloading Contrast for IntelliJ"
+description: "Instructions for Downloading and Installing Contrast for IntelliJ"
+tags: "tools IntelliJ Download Installation"
 -->
 
 ## Setup and Configuration
 
 ### Step one
 
-* Download the Contrast plugin from the Eclipse Marketplace by clicking on **Help** and then **Eclipse Marketplace**. 
+* Download the Contrast plugin by clicking on **File**, **Settings**, **Plugins**, **Browse Repositories...**. 
 * Search for “Contrast Security”.
 * Click **Install**. 
 
-<a href="assets/images/Eclipse-plugin-install.png" rel="lightbox" title="Install Contrast for Eclipse"><img class="thumbnail" src="assets/images/Eclipse-plugin-install.png"/></a>
+<a href="assets/images/IntelliJ-plugin-install.png" rel="lightbox" title="Install Contrast for IntelliJ"><img class="thumbnail" src="assets/images/IntelliJ-plugin-install.png"/></a>
 
 ### Step two
 
-* Open the **Contrast View** to configure communication to Contrast application. 
-* To open and configure the plugin, navigate to **Window** > **Show View** > **Other**. 
-* Search for “Contrast” and add the view that appears in the search. 
-* You can also add the Vulnerabilities view to find more details from Contrast. 
+* Once you install the Contrast plugin for IntelliJ IDEA, configure it by going to **File**, **Settings**, **Contrast**. To find the keys in the Contrast application, go to the "Your Account" page.
+* Add teamserver url, username, and service key.
+* Click on "Test Connection" button.
+* Add a new organization by clicking on "Add" button.
+* Enter the API key and click on "Retrieve organizations" button.
+* Choose an organization.
+* Once the plugin is configured, click on refresh button in Contrast tool window to update the list of vulnerabilities.
 
-### Step three
+<a href="assets/images/IntelliJ-plugin-preferences.png" rel="lightbox" title="Configure Contrast for IntelliJ"><img class="thumbnail" src="assets/images/IntelliJ-plugin-preferences.png"/></a>
 
-* Once you add the Contrast View, enter your Username, API Key and Service Key in the configuration screen. You can also navigate to the configuration screen by going to **Eclipse Preferences** and searching for "Contrast". 
-
-<a href="assets/images/Eclipse-plugin-preferences.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-preferences.png"/></a>
-
-* To find the keys in the Contrast application, go to the API page in Organization Settings.
-
-### Step four 
-
-* Check the connectivity to Contrast by clicking **Test Connection** and then **OK**. 
-
-Well done! Eclipse is configured to get vulnerability information from Contrast. 
+Well done! IntelliJ is configured to get vulnerability information from Contrast. 
 
 ## Find Vulnerabilities
 
-The Vulnerabilities view in Eclipse shows a list of all the vulnerabilities from Contrast. You can sort and filter them by servers or applications.  
+The Vulnerabilities view in IntelliJ shows a list of all the vulnerabilities from Contrast. You can sort and filter them.
 
-<a href="assets/images/Eclipse-plugin-vulnerabilities.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerabilities.png"/></a>
+<a href="assets/images/IntelliJ-plugin-filter.png" rel="lightbox" title="Filter Vulnerabilities"><img class="thumbnail" src="assets/images/IntelliJ-plugin-filter.png"/></a>
 
-For more information, click the **View Details** link, or click on the **Go to page** button in the Contrast Vulnerabilities tab to go to Contrast.
+To sort vulnerabilities, click on the column header.
 
-<a href="assets/images/Eclipse-plugin-vulnerability-details.png" rel="lightbox" title="View vulnerability details"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerability-details.png"/></a>
+For more information, double-click on vulnerability.
 
-
-
+<a href="assets/images/IntelliJ-plugin-details-view.png" rel="lightbox" title="View vulnerability details"><img class="thumbnail" src="assets/images/IntelliJ-plugin-details-view.png"/></a>
