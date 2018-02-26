@@ -28,18 +28,11 @@ For **application** tags, update the configuration of the agent. If there isn’
  
 For **library** tags, update the configuration of the agent. If there isn’t one, add a top-level `inventory` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string. 
 
+See the **General Configuration Options** section for more information. 
+
 <!-- omit until assess is released 
 For Trace tags, update the configuration of the agent. If there isn’t one, add a top-level `assess` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string.  
 -->
-
-* `server`
-  * `tags`: some,string
-* `application`
-  * `tags`: some,application,tags
-* `inventory`
-  * `tags`: these,go,on,libraries
-* `assess`
-  * `tags`: vulnerabilities,get,these,tags
 
 
 ## General Configuration Options
@@ -74,4 +67,5 @@ The configuration YAML consists of four sections. The agent and service may shar
   * `name`: Name under which to register the server in the Contrast application 
   * `environment`: Environment as which applications on this server should register themselves on the Contrast application (Development)
   * `tags`: Comma-delimited list of tags for this server
-
+* `inventory`
+  * `tags`: Comma-delimited list of tags for this library
