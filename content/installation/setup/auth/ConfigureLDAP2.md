@@ -37,8 +37,6 @@ In Step 1 of the Authentication Wizard, choosing **LDAP**. Step 2 provides requi
 | Port        | The port to which to connect when communicating with the LDAP server.                                                  | 389 (LDAP), 636 (LDAPS)    |
 | Search Base | The Base distinguished name (DN) to use when communicating with the LDAP server.                     | dc=contrastsecurity,dc=com |
 
----
-
 
 ### BIND to server
 
@@ -48,7 +46,6 @@ In Step 1 of the Authentication Wizard, choosing **LDAP**. Step 2 provides requi
 | Username | The full DN of the user that should bind to the directory to perform queries and check authentication. | N/A | 
 | Password | The password for the BIND user specified in the Username field. | N/A |
 
----
 
 There are four supported types of BIND that can be used by Contrast. Each of the types has different required fields:
 
@@ -84,17 +81,12 @@ Several different groups options are available:
 | Object Class | If left blank, the application uses the default value of *group, groupOfUsers, groupOfUniqueUsers*. This isn't a  required field, as it's somewhat standard across LDAP deployments. This field is only applicable to Static groups. | N/A |
 | Group Member Attribute | The attribute within a group object in the directory that contains the members of that group. This may differ for your LDAP deployment, so ensure that you are using the correct attribute with your LDAP administrator. This field is only applicable to Static groups. | uniqueMember |
 
----
 
 >**Note:** The difference between Static and Dynamic groups is the way group membership is managed. In a Static group, the group tracks its members through an attribute on the object, such as *uniqueMember*. In a Dynamic group, the user object is responsible for tracking its own membership, and groups are added dynamically to the user object when the user becomes a member of a group.
 
 ### Authorize users
 
-<<<<<<< HEAD
-Once you enter the configuration values, select the groups that the application will use to access the Contrast UI. **A user can't belong to both the User and Admin groups. If you add them to both groups in your LDAP instance, Contrast won't be able to find them during configuration.**
-=======
 Once you enter the configuration values, select the groups that the application will use to access the Contrast interface. **A user can't belong to both the User and Admin groups. If you add them to both groups in your LDAP instance, Contrast won't be able to find them during configuration.**
->>>>>>> 0d4619e18d115c8f726058ea8d991716accae1ab
 
 * **Contrast User Group:** This group allows users to be added to an organization and log in to the standard interface. This group is appropriate for most users. 
 
