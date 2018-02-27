@@ -17,15 +17,6 @@ tags: "tools Visual-Studio Download Installation"
 
 <a href="assets/images/VS_ext_extensions_window.png" rel="lightbox" title="Install Contrast for Eclipse"><img class="thumbnail" src="assets/images/VS_ext_extensions_window.png"/></a>
 
-#### Download .vsix file from Marketplace
-
-* Go to **Visual Studio Marketplace**.
-* Search for "Contrast".
-* Download the extension. You can either save it or just open it. For this operation you must have the IDE
-closed.
-* A VSIX Installer dialog will open. Click on Install.
-* Once done, you can now open the IDE.
-
 <a href="assets/images/VS_ext_extension_page.png" rel="lightbox" title="Install Contrast for Eclipse"><img class="thumbnail" src="assets/images/VS_ext_extension_page.png"/></a>
 
 ### Step two
