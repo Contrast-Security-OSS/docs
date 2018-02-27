@@ -59,7 +59,6 @@ There are four supported types of BIND that can be used by Contrast. Each of the
 | DIGEST-MD5 | A username and password are provided and hashed using MD5 prior to sending to the server to be authenticated. | Username, Password | SASL Realm | 
 | CRAM-MD5 | LDAP server issus a pre-authentication challege, which is sent with the MD5 hashed username and password to be authenticated. | Username, Password | SASL Realm | 
 
----
 
 ### Implement a service user
 
@@ -68,14 +67,11 @@ Contrast recommends that you implement a dedicated user for binding to the LDAP 
 ### Test the LDAP connection
 Once you configure the connection to the LDAP server, click the **Test Connection** button. Testing the connection ensures that the application can connect to the LDAP server and perform queries. 
 
----
-
 ## Configure Groups
 
 Organization Administrators set the roles for users, and each application handles roles and access to data within that application. Contrast doesn't perform data access control using the integrated LDAP servers. However, the Access Control check when you log in or create new users to ensure that the provided user belongs to the correct group within the LDAP directory.
 
 <a href="assets/images/KB4-c10_2.png" rel="lightbox" title="Configuring Groups"><img class="thumbnail" src="assets/images/KB4-c10_2.png"/></a>
-
 
 Several different groups options are available:
 
