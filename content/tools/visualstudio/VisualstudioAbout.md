@@ -1,23 +1,21 @@
 <!--
-title: "What is Contrast for Eclipse?"
-description: "What is Contrast for Eclipse?"
-tags: "tools eclipse integration"
+title: "What is Contrast for Visual Studio?"
+description: "What is Contrast for Visual Studio?"
+tags: "tools visual-studio integration"
 -->
 
-## Use Contrast for Eclipse
+## Use Contrast for Visual Studio
 
-Contrast provides visibility to vulnerabilities in your applications and protects them against attacks. For applications deployed with the Contrast agent, access vulnerability information directly within your Eclipse IDE. You're directed to the line of code inside Eclipse and can view more details in the Contrast console, allowing you to provide application security feedback to developers right at the time of development for faster remediation.
+Contrast provides visibility to vulnerabilities in your applications and protects them against attacks. 
+For applications deployed with the Contrast agent, access vulnerability information directly within 
+your Visual Studio IDE. You're directed to the line of code inside Visual Studio and can view more details in 
+the Contrast console, allowing you to provide application security feedback to developers right at 
+the time of development for faster remediation.
 
 ### Supported systems 
 
-Eclipse versions:
+Visual Studio versions:
 
-* Oxygen (4.7)
-* Neon (4.6)
-
-Operating systems:
-
-* Mac/OS
-* Windows
+* 2017 (15.0+)
 
 
