@@ -15,9 +15,7 @@ tags: "tools Visual-Studio Download Installation"
 * Search for "Contrast" and click on Download.
 * Once done, restart the IDE.
 
-<a href="assets/images/VS_ext_extensions_window.png" rel="lightbox" title="Install Contrast for Eclipse"><img class="thumbnail" src="assets/images/VS_ext_extensions_window.png"/></a>
-
-<a href="assets/images/VS_ext_extension_page.png" rel="lightbox" title="Install Contrast for Eclipse"><img class="thumbnail" src="assets/images/VS_ext_extension_page.png"/></a>
+<a href="assets/images/VS_ext_extensions_window.png" rel="lightbox" title="Install Contrast for Visual Studio"><img class="thumbnail" src="assets/images/VS_ext_extensions_window.png"/></a>
 
 ### Step two
 
