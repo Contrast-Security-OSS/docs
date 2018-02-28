@@ -13,7 +13,7 @@ The score show below is the result of running Contrast on the [WebGoat](https://
 <br/>
 <a href="assets/images/KB1-d10_1.png" rel="lightbox" title="Contrast Score"><img class="thumbnail" src="assets/images/KB1-d10_1.png"/></a>
 <br/>
-The overall application score is the average of your application's **Library Score** and **Custom Code Score**. In this example, the **Library Score** is **85** and the **Custom Code Score** is **68**. Therefore, the overall **Contrast Score** is **77**. Scores are calculated as follows:
+The overall application score is the average of your application's **Library Score** and **Custom Code Score**. In this example, the **Library Score** is **85** and the **Custom Code Score** is **68**. Therefore, the overall **Contrast Score** is **77**. Scores are calculated as shown below.
 
 >**Library Score**<br/>
 > *(Base Library Score)* + *(bonus for active CVE shields)* = *(final Library Score)* <br/>

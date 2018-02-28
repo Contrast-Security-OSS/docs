@@ -12,7 +12,7 @@ You can access the **Add Agent** wizard from any page by clicking the button in 
 
 <a href="assets/images/Add-agent-button.png" rel="lightbox" title="Click the button to Add Agent"><img class="thumbnail" src="assets/images/Add-agent-button.png"/></a>
 
-After choosing a language, you can customize your settings by checking the box for **Custom Agent Profile** before downloading the agent. Choose a name for your profile and, if desired, configure HTTP Proxy settings by checking **Use HTTP Proxy**. Once one or more custom profiles are created, you can select them from the dropdown or click **Manage Profiles** to copy, rename and delete saved profiles. 
+After choosing a language, you can customize your settings by checking the box for **Custom Agent Profile** before downloading the agent. Choose a name for your profile; check **Use HTTP Proxy** to configure HTTP Proxy settings, if desired. Once one or more custom profiles are created, you can select them from the dropdown or click **Manage Profiles** to copy, rename and delete saved profiles. 
 
 <a href="assets/images/KB3-f03_2.png" rel="lightbox" title="Custom Profile"><img class="thumbnail" src="assets/images/KB3-f03_2.png"/></a>
 
@@ -31,15 +31,16 @@ To determine users' access to an application, you can specify the access control
 
 When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an Admin to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
 
-Learn more by reading how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
+For more details, read how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
 
 #### Agent configurations 
 
-For **Java**, add the system property `contrast.group` to make your new startup command. Example:
+For **Java**, add the system property `contrast.group` to make your new startup command. 
 
-```
--Dcontrast.group="Contrast Testing" -javaagent:/path/to/contrast.jar
-```
+> **Example:**
+ ```
+ -Dcontrast.group="Contrast Testing" -javaagent:/path/to/contrast.jar
+ ```
 
 For **.Net**, you can configure group access at the application or server level. 
 
@@ -48,35 +49,38 @@ For **.Net**, you can configure group access at the application or server level.
 
 For **Node.js**, you can choose from two configuration methods. 
 
-* You can add `"appGroup":"groupname"` to the *contrast.json* file. Example:
+* You can add `"appGroup":"groupname"` to the *contrast.json* file. 
 
-```
-{
-	"apiKey": "foobar123",
-	"user": {
-		"id": "joe",
-		"serviceKey": "1234"
-	},
-	"uri": "http://app.contrastsecurity.com",
-	"appGroup": "insertGroupNameHere"
-}
-```
+> **Example:**
+ ```
+ {
+ 	 "apiKey": "foobar123",
+	 "user": {
+		 "id": "joe",
+		 "serviceKey": "1234"
+	 },
+	 "uri": "http://app.contrastsecurity.com",
+	 "appGroup": "insertGroupNameHere"
+ }
+ ```
 
-* You can also add `--appGroup "groupname"` to command line arguments or the `npm command` in your *package.json* file. Examples:
+* You can also add `--appGroup "groupname"` to command line arguments or the `npm command` in your *package.json* file. 
 
-```
-node-contrast index.js --appGroup groupName
-```
-```
-npm run contrast -- --appGroup groupName
-```
+> **Examples:**
+ ```
+ node-contrast index.js --appGroup groupName
+ ```
+ ```
+ npm run contrast -- --appGroup groupName
+ ```
 
-For **Ruby**, add the `group` field to the `application` section of the *contrast_security.yaml* file from Contrast. Example configuration for the group `Contrast Testing`: 
+For **Ruby**, add the `group` field to the `application` section of the *contrast_security.yaml* file from Contrast. 
 
-```
-application:
-   group: Contrast Testing
-```
+> **Example configuration for the group `Contrast Testing`:**
+ ```
+ application:
+    group: Contrast Testing
+ ```
 
 ## Step 3: Restart your server
 

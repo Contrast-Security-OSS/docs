@@ -11,7 +11,7 @@ The following instructions are written in the context that you've [installed](to
 Complete the following steps to crawl a web application.
 
 * Go to the **Applications** page in Contrast, and select your application. 
-* Select the **Activity** tab in the application page. 
+* Select the **Activity** tab in the application details page. 
 * Click on the **+** button next to **Add a new crawl configuration** in the **Crawler** widget.
 * Enter a name. (This is for the user to quickly identify configurations in the **Configuration** popup.)
 * Enter the site URL. (This is where the crawl begins.)
