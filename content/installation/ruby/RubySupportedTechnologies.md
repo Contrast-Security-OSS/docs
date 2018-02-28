@@ -8,7 +8,7 @@ The Ruby agent supports Ruby language version 2.1.x and above. Framework support
 
 ## Database Support
 
-The Ruby Agent has SQL Injection modules for MySQL (`mysql2` gem), SQLite3 and PostgreSQL (`pg` gem).
+The Ruby Agent has SQL Injection modules for MySQL (`mysql2` gem), SQLite3 and PostgreSQL (`pg` gem). The Ruby Agent also has NoSQL Injection modules for MongoDB (`mongoid` gem).
 
 ## OS Support
 
