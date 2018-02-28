@@ -6,15 +6,19 @@ tags: "quick start guide EOP overview Contrast agents installation setup"
 
 Before you begin the process of setting up Contrast, explore the requirements, processes and benefits to including it in your current workflows. 
 
-## Installation
+## About the Contrast Application 
 
-Using Assess, Protect or both requires two installations:
-* Central instance(s) of the Contrast application
+The Contrast application for Enterprise-on-Premises (EOP) is designed for ease of deployment and simplicity of configuration. EOP customers must only set up the central Contrast application once per organization. 
+
+Contrast strongly advises the use of Contrast's Software as a Service (SaaS) product. It’s SOC-2 Type II compliant, and gets security and feature updates as they become available. **To connect to SaaS mode, follow the instructions provided to your administrator.** These instructions also contain the credentials you need to log in to the Contrast application. SaaS customers can go the following section on **Agents** for the appropriate installation instructions. 
+
+## Installation for EOP 
+
+Using Assess, Protect or both as an EOP customer requires two installations:
+* Central instance of the Contrast application
 * Agent for each web application server
 
-We strongly advise the use of Contrast Software as a Service (SaaS). It’s SOC-2 Type II compliant, and gets security and feature updates as they become available. To connect to SaaS mode, follow the instructions provided to your administrator. These instructions also contain the credentials you need to log in to the Contrast application. 
-
-The Contrast application for Enterprise on Premises (EOP) is designed for ease of deployment and simplicity of configuration. The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, Cassandra NoSQL instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
+The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, Cassandra NoSQL instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
 
 As you prepare to [install Contrast](installation-setupinstall.html) in your own environment, verify that your configuration complies with Contrast's [system requirements](installation-setup.html#contrast-reqs) and [sizing requirements](installation-setup.html#size). You can also update Java options, and take advantage of Contrast logs and tools when you [run Contrast](installation-setup.html#run) on Windows or Linux. 
 
@@ -33,3 +37,10 @@ To connect to Contrast agents, install an agent into your web application server
 * The [.NET agent](installation-netinstall.html) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
 
 * The [Node agent](installation-node.html#node-overview) analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution. 
+
+* The [Ruby agent](installation-ruby.html#ruby-overview) provides runtime protection of Ruby on Rails web applications.
+
+* The [Python agent](installation-python.html#python-overview) provides runtime protection of Django, Flask and Pyramid web applications.
+
+
+
