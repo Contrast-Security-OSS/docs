@@ -9,11 +9,11 @@ Deleting an application returns the application's enterprise license back into t
 
 ## Step 1: Select an application
 
-In the **Applications** page, find the application you would like to delete, and click on its name. 
+In the **Applications** page, click on the application you would like to delete. 
 
 ## Step 2: Stop reporting agents
 
-From the **application Overview** page, verify that no servers are reporting to the application. If any servers are reporting, manually disable the servers in each environment by clicking the green **ON** button for Assess or Protect. In the dialog that appears, use the toggle to switch off the server, and click **Save**. Repeat this process for Assess and Protect in each environment, as needed. 
+From the application **Overview** page, verify that no servers are reporting to the application. If any servers are reporting, manually disable the servers in each environment by clicking the green **ON** button for Assess or Protect. In the dialog that appears, use the toggle to switch off the server, and click **Save**. Repeat this process for servers with Assess and/or Protect enabled in each environment, as needed. 
 
 <a href="assets/images/App-overview-enabled-servers.png" rel="lightbox" title="Disable servers in the application's Overview page"><img class="thumbnail" src="assets/images/App-overview-enabled-servers.png"/></a>
 
@@ -21,7 +21,7 @@ If you don't disable all agents reporting on behalf of the application, leftover
 
 ## Step 3: Reset the application
 
-It's best practice to reset the application to make sure that all associated vulnerabilities, URLs and components are properly cleared. Click the **Application Settings** (gear) icon in the top right of the **Application Overview** page. At the bottom of the dialog that appears, select the link to **Reset Application**.
+It's best practice to reset the application to make sure that all associated vulnerabilities, URLs and components are cleared properly. Click the **Application Settings** (gear) icon in the top right of the application **Overview** page. At the bottom of the dialog that appears, select the link to **Reset Application**.
 
 <a href="assets/images/Application-defaults-dialog.png" rel="lightbox" title="Reset an application in the Application Defaults dialog"><img class="thumbnail" src="assets/images/Application-defaults-dialog.png"/></a>
 
@@ -39,11 +39,14 @@ You can restore (unarchive) an application by selecting it in the grid, and choo
 
 <a href="assets/images/Unarchive-app-row-menu.png" rel="lightbox" title="Use the row menu to manage an archived application"><img class="thumbnail" src="assets/images/Unarchive-app-row-menu.png"/></a>
 
-You can also restore applications from the **Applications** page by selecting the appropriate applications in the grid, and clicking the **Unarchive Applications** batch action button.
+You can also restore one or more applications from the **Applications** page by selecting the appropriate applications in the grid, and clicking the **Unarchive Applications** batch action button.
 
 ## Step 5: Delete the application
 
-When you delete an application, all of its associated findings (vulnerabilities and libraries) are permanently removed. From the archived application's row menu, click **Fully Delete**.
+**When you delete an application, all of its associated findings - i.e., vulnerabilities and libraries - are removed permanently.** To complete the deletion process, close the **Advanced** filter panel, and select **Fully Delete** in the application's row menu. You can also select one or more archived applications in the grid, and click **Delete applications** in the batch action menu.
+
+<a href="assets/images/Delete-applications-batch-action.png" rel="lightbox" title="Delete applications in the batch action menu"><img class="thumbnail" src="assets/images/Delete-applications-batch-action.png"/></a>
+
 
 >**Note:** The application must be archived for this option to appear.  
 

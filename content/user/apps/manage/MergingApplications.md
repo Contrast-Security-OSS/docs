@@ -24,7 +24,7 @@ Once your applications are merged, you'll see the **master application** name ac
 
 ## Unmerge Applications
 
-There are a couple of ways to unmerge either all or specific application modules from the **Master Application**. 
+There are a couple of ways to unmerge either all or specific application modules from the master application. 
 
 From the **Applications** page, click the **Unmerge** action in the row menu of any master application. By default, this will unmerge all application modules represented; however, there is also an option to specifically define which modules are unmerged.
 
