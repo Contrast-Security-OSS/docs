@@ -6,7 +6,7 @@ tags: "quick start guide EOP overview Contrast agents installation setup"
 
 Before you begin the process of setting up Contrast, explore the requirements, processes and benefits to including it in your current workflows. 
 
-## Set Up the Contrast Application 
+## About the Contrast Application 
 
 The Contrast application for Enterprise-on-Premises (EOP) is designed for ease of deployment and simplicity of configuration. EOP customers must only set up the central Contrast application once per organization. 
 
