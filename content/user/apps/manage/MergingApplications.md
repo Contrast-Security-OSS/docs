@@ -4,11 +4,11 @@ description: "Overview of application merging and unmerging"
 tags: "user ui application manage merging"
 -->
 
-Merging two or more applications into a single application is a common operation performed by Organization Administrators responsible for bringing applications online. The main purpose of merging is to present a single application view for scoring, discovered vulnerabilities and remediation purposes. Applications can be made up of components, which may show up individually in the application list. Merging also allows you to logically organize all of an application's components into one entity within Contrast.
+Merging two or more applications into a single application is a common operation performed by Organization Administrators responsible for bringing applications online. The main purpose of merging is to present a single application view for the purposes of scoring, discovered vulnerabilities and remediation. Applications can be made up of components, which may show up individually in the application list. Merging also allows you to logically organize all of an application's components into one entity in Contrast.
 
 ## Create a Master Application 
 
-To merge applications, complete the following steps in the Contrast UI:
+To merge applications, complete the following steps in the Contrast interface:
 
 * Go to the **Applications** page. 
 * Find the applications that you want to merge, and use the checkboxes in the grid to select them. 
@@ -16,9 +16,9 @@ To merge applications, complete the following steps in the Contrast UI:
 
 <a href="assets/images/Merge-apps.png" rel="lightbox" title="Use the batch action menu to merge applications"><img class="thumbnail" src="assets/images/Merge-apps.png"/></a>
 
-* Choose one of the merged applications should represent the **Master Application**. 
+* Choose one of the merged applications to represent the **master application**. 
 
-Once your applications are merged, you'll see the **Master Application** accompanied by a crown icon. To see the application modules represented by the master, click the icon, or choose **Show child applications** from the **Advanced** filter options. To quickly get to any merged applications, use the **Merged** filter available from the search bar.
+Once your applications are merged, you'll see the **master application** name accompanied by a crown icon. To see the application modules represented by the master, click the icon, or choose **Show child applications** from the **Advanced** filter options. To quickly get to any merged applications, use the **Merged** filter available from the search bar.
 
 <a href="assets/images/Master-app-tooltip.png" rel="lightbox" title="A master (merged) application"><img class="thumbnail" src="assets/images/Master-app-tooltip.png"/></a>
 

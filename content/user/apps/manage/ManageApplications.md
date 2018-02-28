@@ -10,7 +10,7 @@ Contrast users can manage applications based on their [organization or applicati
 
 ## Change Application Names 
 
-To change an application name, go to the application's Overview page. Click on the name at the top of the page to update the text, or click on the **Settings** icon and update the name in the **Application Defaults** dialog. **Each application within an organization must have an unique name.** 
+To change an application name, go to the application's **Overview** page. Click on the name at the top of the page to update the text, or click on the **Settings** icon and update the name in the **Application Defaults** dialog. **Each application within an organization must have an unique name.** 
 
 > **Note:** Super Admins can also edit application names by clicking on the name in the **Applications** page grid. 
 
@@ -36,10 +36,10 @@ Resetting an application purges all of the data associated with it, but doesn't 
 
 ## Delete Applications 
 
-You must archive an application before you can fully deleted it. You aren't required to reset the application, as the deletion process truncates any associated data; however, Contrast recommends that you review the data and reset the application before you delete it. 
+You must archive an application before you can fully delete it. You aren't required to reset the application, as the deletion process truncates any associated data; however, Contrast recommends that you review the data and reset the application before you delete it. 
 
 ## Group Applications
 
-Grouping is a simple way to tag or label one or more applications for search purposes. (And very different from [merging applications](user-appsmanage.html#merge).) It allows you to use the the Group attribute to improve search functionality in the Contrast interface.
+Grouping is a simple way to tag or label one or more applications so that you can use the group attribute to improve search functionality in the Contrast interface. (It's also very different from [merging applications](user-appsmanage.html#merge).)
 
 
