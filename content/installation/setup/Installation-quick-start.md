@@ -15,7 +15,7 @@ Contrast strongly advises the use of Contrast's Software as a Service (SaaS) pro
 ## Installation for EOP 
 
 Using Assess, Protect or both as an EOP customer requires two installations:
-* Central instance(s) of the Contrast application
+* Central instance of the Contrast application
 * Agent for each web application server
 
 The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, Cassandra NoSQL instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
