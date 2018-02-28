@@ -4,12 +4,14 @@ description: "Overview of installing Contrast"
 tags: "quick start guide EOP overview Contrast agents installation setup"
 -->
 
+This section is the documentation to set up the central Contrast application for Enterprise on Premises (TeamServer), which only needs to be done once per organization when deploying on-premise. For documentation on installing agents please refer to the installation guide for each agent by language. Customers using Contrast Software as a Service (SaaS) can skip this section.
+
 Before you begin the process of setting up Contrast, explore the requirements, processes and benefits to including it in your current workflows. 
 
 ## Installation
 
-Using Assess, Protect or both requires two installations:
-* Central instance(s) of the Contrast application
+An on-premise deployment of Assess, Protect or both requires two installations:
+* One central instance of the Contrast application for Enterprise on Premises (TeamServer)
 * Agent for each web application server
 
 We strongly advise the use of Contrast Software as a Service (SaaS). It’s SOC-2 Type II compliant, and gets security and feature updates as they become available. To connect to SaaS mode, follow the instructions provided to your administrator. These instructions also contain the credentials you need to log in to the Contrast application. 
@@ -32,4 +34,6 @@ To connect to Contrast agents, install an agent into your web application server
 
 * The [.NET agent](installation-netinstall.html) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
 
-* The [Node agent](installation-node.html#node-overview) analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution. 
+* The [Node agent](installation-node.html#node-overview) analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution.
+
+* The [Ruby agent](installation-ruby.html#ruby-overview) analyzes the behavior or Ruby web applications.
