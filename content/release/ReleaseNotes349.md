@@ -8,8 +8,12 @@ tags: "3.4.9 February Release Notes"
 
 ## Fixes
 
-* 
-
+* Load your user lists, no matter how long they are. CONTRAST-21181
+* View vulnerability properties in Eval without fail. CONTRAST-20076 
+* https://contrast.atlassian.net/browse/CONTRAST-20729
+* Get one (and only one) notification of a new attack. CONTRAST-20883
+* Enable Protect for all users in your organization without any superfluous options. CONTRAST-10411 
+* Send vulnerabilities to your email account straight from the master application. CONTRAST-12894
 
 ## Improvements 
 
