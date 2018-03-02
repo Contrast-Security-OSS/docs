@@ -11,9 +11,24 @@ tags: "3.4.9 February Release Notes"
 * Load your user lists, no matter how long they are. CONTRAST-21181
 * View vulnerability properties in Eval without fail. CONTRAST-20076 
 * https://contrast.atlassian.net/browse/CONTRAST-20729
-* Get one (and only one) notification of a new attack. CONTRAST-20883
 * Enable Protect for all users in your organization without any superfluous options. CONTRAST-10411 
 * Send vulnerabilities to your email account straight from the master application. CONTRAST-12894
+* Get one (and only one) notification of a new attack. CONTRAST-20883
+* Receive new asset notifications from your integrations, but only when you want them. CONTRAST-20793
+* View notes for .NET servers. CONTRAST-20549
+* Use Affects Version(s) and multiselect fields when sending issues to JIRA. CONTRAST-20579, CONTRAST-20398
+* Keep track of your child applications with the right Slack notifications. CONTRAST-20574
+* Reload any step of the **Add Agent** wizard without losing your place. CONTRAST-12406
+* Protection Strength gives you the credit you deserve for protected Production servers. CONTRAST-19495
+* Unmapped CVEs in libraries are removed accordingly. CONTRAST-20720
+* Enable and disable policies in an application's page without any errors. CONTRAST-19537
+* No more misleading "Apply License" dialogs for Python and Ruby applications. CONTRAST-21105, CONTRAST-21194
+* Organization defaults respect agent capabilities. CONTRAST-20488
+* Edit integrations without errors in your browser console. CONTRAST-15306
+* Add or edit Remediation Policies without errors. CONTRAST-21103
+* View-level users can use the row action menu for vulnerabilities. CONTRAST-20716
+* See all the beautiful icons, even in Internet Explorer. CONTRAST-20938
+* 
 
 ## Improvements 
 
@@ -30,11 +45,11 @@ tags: "3.4.9 February Release Notes"
 
 ### Java summary 
 
-The Java team... 
+The Java team improved accuracy of Protect deserialization and agent startup time. We also fixed a bug that could prevent some agent information from reaching Contrast as well as a race condition that could cause an application to become unresponsive under certain conditions. Added bonus: We added support for the Xenon framework. 
 
 ### .NET summary 
 
-The .NET team...
+The .NET team improved performance of analysis of JSON-based deserialization, handling of proxy settings as well as Assess accuracy. We also fixed a crash bug when analyzing applications running on IIS Express. 
 
 ### Node.js summary 
 
