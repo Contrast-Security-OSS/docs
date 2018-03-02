@@ -17,7 +17,7 @@ tags: "3.4.9 February Release Notes"
 
 ## Improvements 
 
-* User onboarding got way simpler! Contrast now integrates with your Identity Provider (IDP) via SAML to create and authenticate users. Set default roles in Contrast for each user, let the IDP talk to Contrast directly, and voila! You can administer and scale Contrast while we do the work for you. (To set up an integration, go to the **user menu > Organization Settings > Single Sign On page**.) 
+* Contrast now integrates with your Identity Provider (IDP) via SAML to create and authenticate users. Set default roles in Contrast for each user, let the IDP talk to Contrast directly, and voila! (To set up an integration, go to the **user menu > Organization Settings > Single Sign On page**.) 
 
 * Developers, rejoice! We've brought vulnerabilities directly into your integrated development environments (IDEs). If you use Eclipse, IntelliJ or VisualStudio, download the plugin from the respective marketplaces and follow the installation instructions.
 
@@ -38,11 +38,10 @@ The .NET team...
 
 ### Node.js summary 
 
-The Node team...
+The Node team implemented major improvements in accuracy and stability as well as increased performance in Protect mode. We also added the CSRF rule for Protect, and closed out issues interacting MongoDB and React. We now have initial support for React server-side rendering and the Hapi h202 authentication library.
 
 ### Ruby summary 
 
-The Ruby team...
-
+The Ruby agent updated the CSRF token to reduce the risk of false positives introduced by the CSRF rule. We implemented a configuration option that allows the agent to be disabled from within the application without removing the gem from the application.  We’ve also been working on slimming down and standardizing the internal agent models.
 
 
