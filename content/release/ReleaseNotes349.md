@@ -4,29 +4,29 @@ description: "Contrast 3.4.9 February 2018"
 tags: "3.4.9 February Release Notes"
 -->
 
-...
+Manage and scale Contrast faster than ever before with new user creation via SAML and IDE plugins.  
 
 ## Fixes
 
-* Load your user lists, no matter how long they are. CONTRAST-21181
-* Get one (and only one) notification of a new attack. CONTRAST-20883
-* View vulnerability properties in Eval without fail. CONTRAST-20076 
-* Enable Protect for all users in your organization without any superfluous options. CONTRAST-10411 
-* View notes for .NET servers. CONTRAST-20549
-* Send vulnerabilities to your email account straight from the master application. CONTRAST-12894
-* Receive new asset notifications from your integrations, but only when you want them. CONTRAST-20793
-* Use Affects Version(s) and multiselect fields when sending issues to JIRA. CONTRAST-20579, CONTRAST-20398
-* Keep track of your child applications with the right Slack notifications. CONTRAST-20574
-* Reload any step of the Add Agent wizard without losing your place. CONTRAST-12406
-* Get the the credit you deserve for Protection Strength of Production servers. CONTRAST-19495
-* Unmapped CVEs in libraries will be removed accordingly. CONTRAST-20720
-* Enable and disable policies in an application's page without any errors. CONTRAST-19537
-* No more misleading "Apply License" dialogs for Python and Ruby applications. CONTRAST-21105, CONTRAST-21194
-* Organization defaults respect agent capabilities. CONTRAST-20488
-* Add or edit Remediation Policies without errors. CONTRAST-21103
-* View-level users can use the row action menu for vulnerabilities. CONTRAST-20716
-* See all the beautiful icons, even in Internet Explorer. CONTRAST-20938
-* The Organization Statistics report is back to normal. CONTRAST-19724
+* Load your user lists, no matter how long they are. 
+* Get one (and only one) notification of a new attack. 
+* View vulnerability properties in Eval without fail. 
+* Enable Protect for all users in your organization without any superfluous options. 
+* View notes for .NET servers. 
+* Send vulnerabilities to your email account straight from the master application. 
+* Receive new asset notifications from your integrations, but only when you want them. 
+* Use Affects Version(s) and multiselect fields when sending issues to JIRA. 
+* Keep track of your child applications with the right Slack notifications. 
+* Reload any step of the Add Agent wizard without losing your place. 
+* Get the the credit you deserve for Protection Strength of Production servers. 
+* Unmapped CVEs in libraries will be removed accordingly. 
+* Enable and disable policies in an application's page without any errors. 
+* No more misleading "Apply License" dialogs for Python and Ruby applications. 
+* Organization defaults respect agent capabilities. 
+* Add or edit Remediation Policies without errors. 
+* View-level users can use the row action menu for vulnerabilities. 
+* See all the beautiful icons, even in Internet Explorer. 
+* The Organization Statistics report is back to normal. 
 
 ## Improvements 
 
@@ -55,6 +55,6 @@ The Node team implemented major improvements in accuracy and stability as well a
 
 ### Ruby summary 
 
-The Ruby agent updated the CSRF token to reduce the risk of false positives introduced by the CSRF rule. We implemented a configuration option that allows the agent to be disabled from within the application without removing the gem from the application.  We’ve also been working on slimming down and standardizing the internal agent models.
+The Ruby agent updated the CSRF token to reduce the risk of false positives introduced by the CSRF rule. We implemented a configuration option that allows the agent to be disabled from within the application without removing the gem from the application. We’ve also been working on slimming down and standardizing the internal agent models.
 
 
