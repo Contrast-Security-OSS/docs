@@ -4,7 +4,7 @@ description: "Contrast 3.4.9 February 2018"
 tags: "3.4.9 February Release Notes"
 -->
 
-Manage and scale Contrast faster than ever before with new user creation via SAML and IDE plugins.  
+Customize your vulnerability management style with the newly supported Xenon framework and IDE plugins.  
 
 ## Fixes
 
@@ -17,7 +17,7 @@ Manage and scale Contrast faster than ever before with new user creation via SAM
 * Receive new asset notifications from your integrations, but only when you want them. 
 * Use Affects Version(s) and multiselect fields when sending issues to JIRA. 
 * Keep track of your child applications with the right Slack notifications. 
-* Reload any step of the Add Agent wizard without losing your place. 
+* Reload any step of the "Add Agent" wizard without losing your place. 
 * Get the the credit you deserve for Protection Strength of Production servers. 
 * Unmapped CVEs in libraries will be removed accordingly. 
 * Enable and disable policies in an application's page without any errors. 
@@ -30,9 +30,7 @@ Manage and scale Contrast faster than ever before with new user creation via SAM
 
 ## Improvements 
 
-* Contrast now integrates with your Identity Provider (IDP) via SAML to create and authenticate users. Set default roles in Contrast for each user, let the IDP talk to Contrast directly, and voila! (To set up an integration, go to the **user menu > Organization Settings > Single Sign On page**.) 
-
-* Developers, rejoice! We've brought vulnerabilities directly into your integrated development environments (IDEs). If you use Eclipse, IntelliJ or VisualStudio, download the plugin from the respective marketplaces and follow the installation instructions.
+* Developers, rejoice! We've brought vulnerabilities directly into your integrated development environments (IDEs). If you use [Eclipse](https://marketplace.eclipse.org/content/contrast-eclipse), [IntelliJ](https://plugins.jetbrains.com/plugin/10335-contrast) or [VisualStudio](https://marketplace.visualstudio.com/items?itemName=contrast-security.contrast-vs-ext), download the [plugins](https://contrast-security-oss.github.io/) from the respective marketplaces and follow the installation instructions.
 
 * Contrast can instrument and report on vulnerabilities in applications that use VMWare Xenon.
 
