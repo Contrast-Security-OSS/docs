@@ -1,16 +1,12 @@
 <!--
-title: "What is Contrast for Visual Studio?"
-description: "What is Contrast for Visual Studio?"
-tags: "tools visual-studio integration"
+title: "About Contrast for Visual Studio"
+description: "About Contrast for Visual Studio"
+tags: "tools ide plugins visual studio integration"
 -->
 
-## Use Contrast for Visual Studio
+## Contrast for Visual Studio
 
-Contrast provides visibility to vulnerabilities in your applications and protects them against attacks. 
-For applications deployed with the Contrast agent, access vulnerability information directly within 
-your Visual Studio IDE. You're directed to the line of code inside Visual Studio and can view more details in 
-the Contrast console, allowing you to provide application security feedback to developers right at 
-the time of development for faster remediation.
+Contrast provides visibility of vulnerabilities in your applications, and protects your applications against attacks. For applications deployed with the Contrast agent, you can access vulnerability information directly within your Visual Studio IDE. You're directed to the line of code inside Visual Studio, and can view more details in the Contrast application, which allows you to provide application security feedback to developers right at the time of development for faster remediation.
 
 ### Supported systems 
 
