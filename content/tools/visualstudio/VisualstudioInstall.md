@@ -33,7 +33,6 @@ choosing the **Contrast Security - Connection** option.
 > **Note:** The API key must belong to the organization you want to have access or you'll get Unauthorized errors. This will lock your account after many failed attempts!
 
 * Click the **Load** button, select the organization for this API key from the dropdown menu, and click **Save**.
-* If no option is selected after saving, select your previously saved organization.
 
 ### Step four 
 
