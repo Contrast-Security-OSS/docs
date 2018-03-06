@@ -4,9 +4,20 @@ description: "Instructions for downloading and installing Contrast for Visual St
 tags: "tools ide plugins visual studio download install"
 -->
 
+
+## About Contrast for Visual Studio
+
+Contrast provides visibility of vulnerabilities in your applications, and protects your applications against attacks. For applications deployed with the Contrast agent, you can access vulnerability information directly within your Visual Studio IDE. You're directed to the line of code inside Visual Studio, and can view more details in the Contrast application, which allows you to provide application security feedback to developers right at the time of development for faster remediation.
+
+### Supported systems 
+
+Visual Studio versions:
+
+* 2017 (15.0+)
+
 ## Setup and Configuration
 
-### Step one: Download from inside the IDE
+### Step one
 
 * Go to **Tools** and select **Extensions and Updates**. 
 * In the new window, select **Online** from the left navigation panel.

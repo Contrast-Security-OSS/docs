@@ -4,6 +4,17 @@ description: "Instructions for downloading and installing Contrast for IntelliJ"
 tags: "tools ide plugins IntelliJ download install"
 -->
 
+
+## About Contrast for IntelliJ
+
+Contrast provides visibility of vulnerabilities in your applications, and protects your applications against attacks. For applications deployed with the Contrast agent, you can access vulnerability information directly within your IntelliJ IDEA. You're directed to the line of code inside IntelliJ, and can view more details in the Contrast console, which allows you to provide application security feedback to developers right at the time of development for faster remediation.
+
+### Supported systems 
+
+IntelliJ versions:
+* 2017.1.5 +
+
+
 ## Setup and Configuration
 
 ### Step one
@@ -37,3 +48,5 @@ The Vulnerabilities view in IntelliJ shows a list of all the vulnerabilities fro
 For more information on a vulnerability, double-click on its entry in the list.
 
 <a href="assets/images/IntelliJ-plugin-details-view.png" rel="lightbox" title="View vulnerability details"><img class="thumbnail" src="assets/images/IntelliJ-plugin-details-view.png"/></a>
+
+
