@@ -78,8 +78,9 @@ For SaaS customers, the Contrast System Administrator configures authentication;
 * You may receive a warning dialog regarding the implications of changing authentication. Please read it carefully before proceeding.
 * Use the provided information to set up Contrast with your IdP.
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
-* Check the box to **Enable user provisioning**, if you want Contrast to automatically create new user accounts for individuals who are authenticated...
-Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
+* If you want Contrast to automatically create new user accounts for individuals who are authenticated with SAML when they log in to Contrast, check the box to **Enable user provisioning**.
+  * Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
+  * Add the **Accepted Domains** that must be used to trigger user provisioning (e.g., gmail.com). 
 * Click **Test Connection** button to test the configuration. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
 * Once the test is successful, click **Save**.
 
@@ -87,9 +88,9 @@ Use the dropdown menus to choose the **Default Organization Role** and **Default
 
 * Open a **new** browser window, private browsing session or incognito window, and attempt the SSO login with your account. If you're unsuccessful, go back to the browser in which you're still logged in, disable SSO for the organization and then contact Customer Support. 
 
->**Note:** You can return to this configuration form to edit your SSO configuration.
+Once connected, you can return to the **SSO** tab to view and edit your settings. To return the organization back to the default configuration, select the link to **Revert to Contrast-Managed Authentication** and confirm the change. The Contrast SuperAdmin controls the default settings, and no configuration is necessary.
 
-To return the organization back to the default configuration, select **Revert to Contrast-Managed Authentication** and confirm the change. The Contrast SuperAdmin controls these settings, and no configuration is necessary.
+<a href="assets/images/Sso-org-settings-connected.png" rel="lightbox" title="Edit or revert SSO settings in Organization Settings"><img class="thumbnail" src="assets/images/Sso-org-settings-connected.png"/></a>
 
 ## Use SSO
 
