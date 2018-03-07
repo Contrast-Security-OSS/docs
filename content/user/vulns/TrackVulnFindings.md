@@ -21,4 +21,4 @@ Organization administrators can set up any of these bugtrackers and other integr
 
 Vulnerability data can also be dumped to a CSV or XML file for custom processing. From the **Vulnerabilities** page, select all or any number of vulnerabilities, and click the paper airplane icon to export them into a spreadsheet.  
 
-If you want to gather this data outside of the interface, Contrast also provides robust [APIs](https://api.contrastsecurity.com/) where you can explore even more information. Read the [Vulnerabilities API](tools-api.html#api-about) for more details.
+If you want to gather this data outside of the interface, Contrast also provides robust [APIs](https://api.contrastsecurity.com/) where you can explore even more information. Read the [Vulnerabilities API](tools-about.html#api-about) for more details.
