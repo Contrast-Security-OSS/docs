@@ -68,7 +68,7 @@ If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during i
 
 ## SaaS 
 
-For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings. In this case, the override only allows an organization to begin using SSO.
+For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings, including SSO setup.
 
 <!-- If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. -->
 
@@ -78,7 +78,7 @@ For SaaS customers, the Contrast System Administrator configures authentication;
 * You may receive a warning dialog regarding the implications of changing authentication. Please read it carefully before proceeding.
 * Use the provided information to set up Contrast with your IdP.
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
-* If you want Contrast to automatically create new user accounts for individuals who are authenticated with SAML when they log in to Contrast, check the box to **Enable user provisioning**.
+* If you want to automatically create new user accounts when someone make a SAML request to log in to Contrast, check the box to **Enable user provisioning**.
   * Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
   * Add the **Accepted Domains** that must be used to trigger user provisioning (e.g., gmail.com). 
 * Click **Test Connection** button to test the configuration. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
