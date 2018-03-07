@@ -47,16 +47,19 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 * In Step 1 of the setup wizard, select **Single Sign-On**.
 * In Step 2, use the provided information to set up Contrast with your IdP. (You must also provide the Entity ID and Metadata URL in your IdP configuration.)
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
+* If you want to automatically create new user accounts when someone make a SAML request to log in to Contrast, check the box to **Enable user provisioning**.
+  * Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
+  * Add the **Accepted Domains** that must be used to trigger user provisioning (e.g., contrastsecurity.com).
 * Test the configuration by clicking the **Test** button. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
-* Once the test is successful, click **Finish**.
+* Once the test is successful, click **Save**.
 
-<a href="assets/images/SSOConfig.png" rel="lightbox" title="Single Sign-On Configuration"><img class="thumbnail" src="assets/images/SSOConfig.png"/></a>
+<a href="assets/images/Sso-setup-system-settings.png" rel="lightbox" title="Configure SSO in System Settings"><img class="thumbnail" src="assets/images/Sso-setup-system-settings.png"/></a>
 
 * Restart Contrast to apply the changes.
 
->**Note:** If you edit your saved configuration, you must retest and restart Contrast to apply the changes.
+Once connected, you can return to the **SSO** tab to view and edit your settings. (You must retest and restart Contrast to apply the changes.) To return the organization back to the default configuration, select the link to Revert to Contrast-Managed Authentication and confirm the change. 
 
-<a href="assets/images/SSOConfigRestart.png" rel="lightbox" title="Restart TeamServer to Apply Authentication Changes"><img class="thumbnail" src="assets/images/SSOConfigRestart.png"/></a>
+<a href="assets/images/Sso-system-settings-connected.png" rel="lightbox" title="Restart Contrast to apply changes to your SSO configuration"><img class="thumbnail" src="assets/images/Sso-system-settings-connected.png"/></a>
 
 
 #### Public and secret nodes
@@ -80,7 +83,7 @@ For SaaS customers, the Contrast System Administrator configures authentication;
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
 * If you want to automatically create new user accounts when someone make a SAML request to log in to Contrast, check the box to **Enable user provisioning**.
   * Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
-  * Add the **Accepted Domains** that must be used to trigger user provisioning (e.g., gmail.com). 
+  * Add the **Accepted Domains** that must be used to trigger user provisioning (e.g., contrastsecurity.com). 
 * Click **Test Connection** button to test the configuration. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
 * Once the test is successful, click **Save**.
 
