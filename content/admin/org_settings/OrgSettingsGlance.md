@@ -25,7 +25,7 @@ Manage [password policy](admin-systemsecurity.html#pwd) and session timeouts, [t
 Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. As a Super or Organization Administrator, you can [configure Contrast to use this service](installation-setupauth.html#sso-setup) for your organization.
 
 ## API
-Contrast [APIs](tools-api.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
+Contrast [APIs](tools-about.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
 
 ## Integrations
 Contrast offers basic [integrations](admin-orgintegrations.html) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
