@@ -41,7 +41,11 @@ Well done! IntelliJ is configured to get vulnerability information from Contrast
 
 ## Find Vulnerabilities
 
-The Vulnerabilities view in IntelliJ shows a list of all the vulnerabilities from Contrast. To sort vulnerabilities, click on the column header. You can also filter them in the **Set Filters** dialog. 
+The Vulnerabilities view in IntelliJ shows a list of all the vulnerabilities from Contrast. To sort vulnerabilities, click on the column header. 
+
+<a href="assets/images/IntelliJ-column-header.png" rel="lightbox" title="Filter vulnerabilities"><img class="thumbnail" src="assets/images/IntelliJ-column-header.png"/></a>
+
+You can also filter them in the **Set Filters** dialog. 
 
 <a href="assets/images/IntelliJ-plugin-filter.png" rel="lightbox" title="Filter vulnerabilities"><img class="thumbnail" src="assets/images/IntelliJ-plugin-filter.png"/></a>
 

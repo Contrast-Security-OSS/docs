@@ -68,4 +68,4 @@ If you can't see your vulnerabilities list, click the Refresh button. This also 
 
 Under the **Actions** column, you can use the left button (magnifier glass icon) to see more information about the vulnerability. You can use the button to the right (browser link icon) to go to the Vulnerability page in the Contrast application.
 
-<a href="assets/images/VS_ext_action_buttons.png" rel="lightbox" title="View vulnerability details"><img class="thumbnail" src="assets/images/VS_ext_action_buttons.png"/></a>
+<a href="assets/images/VS_ext_action_buttons.png" rel="lightbox" title="View vulnerability details"><img src="assets/images/VS_ext_action_buttons.png"/></a>
