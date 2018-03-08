@@ -13,10 +13,10 @@ Go to the **Vulnerabilities** tab from the application's **Overview** page to se
 
 ## More Information 
 
-For more information on analyzing, managing and exporting reports on vulnerabilities, go to the following articles: 
+For more information on analyzing, managing and exporting reports on vulnerabilities, read the following articles: 
 
 * [Discover Vulnerabilities](user-vulns.html#discover-vulns)
 * [Analyze Findings](user-vulns.html#analyze)
 * [Manage Vulnerabilities](user-vulns.html#manage-vuln)
 * [How to Fix Them](user-vulns.html#remediate)
-* [About the Contrast API](tools-api.html#api-about)
+* [About the Contrast API](tools-about.html#api-about)

@@ -14,7 +14,7 @@ Contrast added another layer of security through an organization API key that yo
 
 <a href="assets/images/API-credentials-2.png" rel="lightbox" title="Organizational API key"><img class="thumbnail" src="assets/images/API-credentials-2.png"/></a>
 
-For more information, read the article [About the Contrast API](tools-api.html#api-about). 
+For more information, read the article [About the Contrast API](tools-about.html#api-about). 
 
 ## Organization Keys
 

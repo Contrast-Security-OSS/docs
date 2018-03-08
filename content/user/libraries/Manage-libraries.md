@@ -97,4 +97,4 @@ jq -r '.libraries[]
 @csv'
 ```
 
-For more information, read [About the Contrast API](tools-api.html#api-about).
+For more information, read [About the Contrast API](tools-about.html#api-about).

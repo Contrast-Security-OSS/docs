@@ -103,7 +103,7 @@ curl \
     jq -r '.traces[] | {uuid: .uuid, protocol: .request.protocol} | [.uuid, .protocol] | @csv'
 ```
 
-For more information, read [About the Contrast API](tools-api.html#api-about). 
+For more information, read [About the Contrast API](tools-about.html#api-about). 
 
 
 

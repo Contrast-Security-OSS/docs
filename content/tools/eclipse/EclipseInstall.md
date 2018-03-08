@@ -4,6 +4,22 @@ description: "Instructions for Downloading and Installing Contrast for Eclipse"
 tags: "tools Eclipse Download Installation Ubuntu"
 -->
 
+## About Contrast for Eclipse
+
+Contrast provides visibility to vulnerabilities in your applications and protects them against attacks. For applications deployed with the Contrast agent, access vulnerability information directly within your Eclipse IDE. You're directed to the line of code inside Eclipse and can view more details in the Contrast console, allowing you to provide application security feedback to developers right at the time of development for faster remediation.
+
+### Supported systems 
+
+Eclipse versions:
+
+* Oxygen (4.7)
+* Neon (4.6)
+
+Operating systems:
+
+* Mac/OS
+* Windows
+
 ## Setup and Configuration
 
 ### Step one
