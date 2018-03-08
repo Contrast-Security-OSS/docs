@@ -83,7 +83,6 @@ Additionally, by default, the agent logs to *<app_root>/node-contrast.log*. For 
 
  Parameter                       				 | Description
 ------------------------------   				 | -------------
--c, --configFile <path>                          | Set config file location. defaults to <app_root>/contrast.yaml.
 --agent.logger.append [false]                    | If false, create a new log file on startup instead of appending and rolling daily. (default: true)
 --agent.logger.level <level>                     | Logging level (fatal, error, warn, info, debug, trace). overrides FeatureSet:logLevel. (default: error)
 --agent.logger.path <path>                       | Where contrast will put its debug log. (default: node-contrast.log)
