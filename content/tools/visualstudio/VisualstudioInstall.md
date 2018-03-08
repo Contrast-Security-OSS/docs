@@ -66,6 +66,6 @@ If you can't see your vulnerabilities list, click the Refresh button. This also 
 
 > **Note:** If you can't see your vulnerabilities even after refreshing the list, you must filter your vulnerabilities. You must repeat this  process after selecting a different organization in the Connection settings so that filters and vulnerabilities are refreshed correctly.
 
-Under the **Actions** column, you can use the left button (magnifier glass icon) to see more information about the vulnerability. You can use the button to the right (browser link icon) to go to the Vulnerability page in the Contrast application.
+Under the **Actions** column, you can use the button on the left (magnifier glass icon) to see more information about the vulnerability. You can use the button to the right (browser link icon) to go to the Vulnerability page in the Contrast application.
 
 <a href="assets/images/VS_ext_action_buttons.png" rel="lightbox" title="View vulnerability details"><img src="assets/images/VS_ext_action_buttons.png"/></a>
