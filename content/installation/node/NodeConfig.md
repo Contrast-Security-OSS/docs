@@ -4,7 +4,7 @@ description: "Configuring the Node.js Agent"
 tags: "installation NodeJS agent configuration"
 -->
 
-Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g: `npm run contrast -- --agent.loger.stdout false`, or `node-contrast server.js --agent.logger.stdout false`). With the exception of `--configFile`, they can all be added to your *contrast.json* file as well:
+Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g: `npm run contrast -- --agent.logger.stdout false`, or `node-contrast server.js --agent.logger.stdout false`). With the exception of `--configFile`, they can all be added to your *contrast.json* file as well:
 ``` javascript
 {
     "contrast.api_key":"api_key",
