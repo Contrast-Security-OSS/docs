@@ -1,7 +1,7 @@
 <!--
 title: "Diagnostics"
 description: "Information and guidance on diagnostics for your organization"
-tags: "Admin eop diagnostics super administration"
+tags: "Admin eop diagnostics SuperAdmin"
 -->
 
 Contrast Diagnostics measures customer usage of Contrast products to help Contrast provide faster, more proactive support and guide delivery of new functionality.	
