@@ -1,30 +1,33 @@
 <!--
   title: "Migrate External Rules from 3.2.6 to 3.2.7+",
-  description: "Guide for EOP administrators when migrating external rules from a 3.2.7 version to the post 3.2.7 version.",
+  description: "Guide for EOP administrators migrating external rules from a 3.2.7 version to the post 3.2.7 version.",
   tags: "Admin EOP maintenance migrate external rules 3.2.6 3.2.7 interface Custom Level"
 -->
 
+
+The following guidelines are written for any user with external rules for the 3.2.6 (or earlier) version of the Contrast application who intends to upgrade to a 3.2.7 (or later) version.
+
 ## About the Upgrade
 
-### Who
+With the release of Contrast 3.2.7, Contrast partitioned the models associated with Traces - Contrast's representation of a vulnerable code flow within your application. Rather than a shared model for both storage and rendering, Contrast converted the internal Trace object to be responsible solely for data storage, and then created a new project, *contrast-model*, with an ITrace object responsible for data rendering. This means that any external rule created with the 3.2.6 specifications must be updated to the new format, and any rules must be written to the 3.2.7 specification.  
 
-Any user with external rules for the 3.2.6 (or earlier) version of the Contrast application who intends to upgrade to a 3.2.7 (or later) version.
+### Ease of use 
 
-### What
+Contrast implemented this change to make rule writing easier and more efficient for both you and for Contrast in the following ways. 
 
-With the release of Contrast 3.2.7, Contrast partitioned the models associated with Traces - Contrast's representation of a vulnerable code flow within your application. Rather than a shared model for both storage and rendering, Contrast converted the internal Trace object to be responsible solely for data storage, and then created a new project, *contrast-model*, with an ITrace object responsible for data rendering. This means that any external rule created with the 3.2.6 specifications must be updated to the new format, and any rules must be written to the 3.2.7 specification. 
+* It's Contrast's goal to insulate external rules from future internal changes by switching to an interface rather than a concrete object. This allows us to advance our rule rendering and output, which provides the latest update to your custom rules without requiring future code changes. 
 
-### When
+* The change eliminates the need for Babelfish-specific versions of the data objects. This reduces code duplication and rule dependencies, which makes rules easier to write and debug. 
+
+* Contrast can expose the artifact - allowing for compilation testing and swifter rule development iterations - by making these dependencies an external project. 
+
+## Before You Start
 
 These changes must be in place between the 3.2.6 and 3.2.7+ versions of Contrast. This means that you must have the new rules ready to be released during the 3.2.7+ upgrade process but **before** actually running the 3.2.7+ installer. Once these rules are complete, shut down the Contrast application with the Contrast Server command. See [Restarting Contrast](installation-setupinstall.html#restart) for an example. 
 
 > **Note:** For Linux, use `stop` instead of `restart`. 
 
-After confirming that the application is down, replace the rules in your *${contrast.dir}/data/rulepack* directory with the new versions. Finally, run the 3.2.7+ installer to update the application and bring it back online. 
-
-### Why
-
-To make rule writing easier and more efficient for you and for Contrast. First, it's Contrast's goal to insulate external rules from future internal changes by switching to an interface rather than a concrete object. This allows us to advance our rule rendering and output, which provides the latest update to your custom rules without requiring future code changes. Second, the change eliminates the need for Babelfish-specific versions of the data objects. This reduces code duplication and rule dependencies, which makes rules easier to write and debug. Third, Contrast can expose the artifact - allowing for compilation testing and swifter rule development iterations - by making these dependencies an external project. 
+After confirming that the application is down, replace the rules in your *${contrast.dir}/data/rulepack* directory with the new versions. Finally, run the 3.2.7+ installer to update the application and bring it back online.
 
 ## Perform the Upgrade
 
