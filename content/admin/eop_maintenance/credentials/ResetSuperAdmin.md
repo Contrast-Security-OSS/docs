@@ -6,7 +6,7 @@ tags: "Admin EOP maintenance credentials SuperAdmin reset system"
 
 ## Windows
 
-Windows users should complete the following steps to reset the SuperAdmin password in the Contrast application. 
+Users on Windows should complete the following steps to reset the SuperAdmin password in the Contrast application. 
 
 * Stop the Contrast Server service.
 * Launch a command prompt (`cmd.exe`) as an Administrator by right-clicking on **cmd.exe** and selecting **Run As Administrator**.
@@ -17,7 +17,7 @@ Windows users should complete the following steps to reset the SuperAdmin passwo
 	notepad contrast-server.vmoptions
 	```
 
-* Add the following options to the file. (Replace `your.email.domain.com` with your email domain.)
+* Add the following options to the file. (Replace `your.email.domain.com` with your email domain.)<sup>* </sup>
 
 	```
 	-Dreset.superadmin=true
@@ -45,14 +45,14 @@ Windows users should complete the following steps to reset the SuperAdmin passwo
 	notepad contrast-server.vmoptions
 	```
 
-* Remove the options added in step five.
+* Remove the options added in the <sup>* </sup>fifth step.
 * Save the file and exit Notepad.
 * Exit the command prompt.
 * Start the Contrast Server service as normal (i.e., from the **Services** control panel applet).
 
 ## Linux
 
-Linux users should complete the following steps to reset the SuperAdmin password in the Contrast application. 
+Users on Linux should complete the following steps to reset the SuperAdmin password in the Contrast application. 
 
 * Shut down Contrast Server.
 * Open a command prompt as `root` (or open a normal terminal/shell and use `sudo` or `su` to become root).
