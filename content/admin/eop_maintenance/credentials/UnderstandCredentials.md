@@ -17,7 +17,8 @@ After installation the following login screen should be displayed.
 
 <a href="assets/images/KB4-c01_1.png" rel="lightbox" title="Login to the Contrast application"><img class="thumbnail" src="assets/images/KB4-c01_1.png"/></a>
 
-https://contrastserver/Contrast
+> https://contrastserver/Contrast
+
 
 >**Note:** The hostname `contrastserver` shown in the above URL should be either the IP address or hostname set up during Contrast installation.
 
@@ -25,7 +26,7 @@ At this login screen, the default administrator enters their Hub account credent
 
 ### SuperAdmin access 
 
-There is a separate credential for managing the application installation, called SuperAdmin.
+There is a separate credential for managing the application installation, called **SuperAdmin**.
 
 * Username: If the Hub user account is "john.doe@mycompany.com", the SuperAdmin convention is "contrast_superadmin@mycompany.com".
 

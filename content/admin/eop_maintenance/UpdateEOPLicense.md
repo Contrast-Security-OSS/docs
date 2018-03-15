@@ -6,7 +6,7 @@ tags: "Admin EOP maintenance system settings license debug update"
 
 Contrast Enterprise-on-Premise (EOP) customers may occasionally need a new license file. There are two possible approaches for updating this file: A SuperAdmin can log into the application and update the license in the UI, or you can replace the license file on the local file system. If the license is expired, you must use the file system method.
 
-## Option One: In the UI
+## Option One: The UI
 
 * Log in to the Contrast applications as a SuperAdmin. 
 
@@ -24,7 +24,7 @@ Contrast Enterprise-on-Premise (EOP) customers may occasionally need a new licen
 * Click **Update** to finish the process. 
 * Restart Contrast to apply the new license changes.
 
-## Option Two: From the Contrast File System
+## Option Two: The Contrast file system
 
 * Obtain a new license from [Hub](https://hub.contrastsecurity.com/h/), your account manager or the technical support team.
 
