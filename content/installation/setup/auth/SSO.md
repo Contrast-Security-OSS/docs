@@ -12,11 +12,15 @@ Single Sign-On (SSO) is an authentication service that allows access to multiple
 
 Authentication happens through an **identity provider (IdP)**. You may use your own generic IdP or one of many popular third-party providers, such as [Okta](https://www.okta.com/), [OneLogin](https://www.onelogin.com/) or [Ping Identity](https://www.pingidentity.com/en.html).
 
-To get started, set up an IdP (if you don't use one already), and then provide your metadata to connect to Contrast via an XML file or a **Metadata URL**.
+## Before You Start
+
+Set up an IdP (if you don't use one already), and then provide your metadata to connect to Contrast via an XML file or a **Metadata URL**.
 
 ## EOP
 
-For Enterprise-on-Premises (EOP) customers, the SuperAdmin configures SSO at the System level. <!-- If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. --> 
+For Enterprise-on-Premises (EOP) customers, the SuperAdmin configures SSO at the System level. 
+
+> **Note:** If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. 
 
 ### Get started
 
@@ -73,7 +77,7 @@ If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during i
 
 For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings, including SSO setup.
 
-<!-- If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. -->
+> **Note:** If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated.
 
 ### Configuration
 
