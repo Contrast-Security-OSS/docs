@@ -1,33 +1,37 @@
 <!--
-title: "Upgrading EOP TeamServer"
-description: "Instructions for updating an EOP TeamServer with a new version."
+title: "Upgrade the Contrast Application"
+description: "Instructions for upgrading the Contrast application for EOP."
 tags: "Admin EOP maintenance upgrade install installation backup"
 -->
 
-## About Upgrading An EOP TeamServer
-Contrast releases patches and upgrades as part of the embedded EOP installer file which customers can download from the [Contrast Hub](https://hub.contrastsecurity.com). The installer will intelligently determine that a previous version of Contrast exists on a given system. Customers can choose to run the updater portion of the process or alternatively, run an installation in a separate location. If a previous installation exists, customers will have to configure a parallel installation to run on separate ports.
+Contrast releases patches and upgrades as part of the embedded Enterprise-on-Premises (EOP) installer file, which customers can download from the [Contrast Hub](https://hub.contrastsecurity.com). The installer intelligently determines that a previous version of Contrast exists on a given system. Customers can choose to run the updater portion of the process, or run an installation in a separate location. If a previous installation exists, customers must configure a parallel installation to run on separate ports.
 
-## Before Running The Updater/Installer
-The updater/installer will attempt to create a database backup as part of the upgrade process. Customers can choose to create their own backups by following the instructions in [this detailed article](installation-setup.html#setup-mysql). We strongly recommend that customers **do** create a backup, and that the backup file be stored on a separate file system or drive to avoid any issues with restoration. We also recommend that customers consider backing up **all** configuration files located at *$CONTRAST_HOME/data/conf*.
+## Before You Start
 
-Customers should consider using the System Announcement feature to inform end-users that their system is being upgraded during a particular time. This feature can be found under **System Settings** as a SuperAdmin user. 
+The installer, or "updater", attempts to create a database backup as part of the upgrade process. Customers can choose to create their own backups by following the instructions in the detailed article to [Create a MySQL Backup](installation-setup.html#setup-mysql). Contrast strongly recommends that you create a backup, and that you store the backup file on a separate file system or drive to avoid any issues with restoration. Contrast also recommends that you consider backing up **all** configuration files located at *$CONTRAST_HOME/data/conf*.
 
-## Performing The Upgrade Operation
-TeamServer should be running when starting the updater/installation process. Agents will continue to send trace and library messages during this time. When TeamServer initiates a shutdown on its own, the agents will defer sending messages until TeamServer can be reached.
+You should also consider using Contrast's System Announcement feature to inform end-users that their system is being upgraded during a particular time. To start sending out announcements, log into the Contrast UI as a SuperAdmin user, and go to the **user menu > System Settings > System Messages tab**. 
 
-The upgrade process is identical to the [installation process](installation-setupinstall.html#install); however, the administrator performing the upgrade will be asked whether to update an existing installation or perform a new installation. Customers should choose to update an existing installation. 
+## Perform the Upgrade 
 
-The upgrade should perform a database backup initially. Depending on the size of the EOP database, this process can take anywhere from a few seconds to a few minutes. During this operation, the TeamServer should be accessible to agents and end users. 
+The Contrast application should be running when you start the installation process. Agents will continue to send trace and library messages during this time. When the application initiates a shutdown on its own, the agents defers sending messages until the application can be reached.
 
-Next, the update will deploy a new file system under the installation directory. This will primarily consist of deploying the *Contrast.war* file directory to the *$CONTRAST_HOME/webapps* directory. TeamServer will not be accessible while the file system is updated.
+The upgrade process is nearly identical to the original process to [install the Contrast application](installation-setupinstall.html#install); however, the administrator performing the upgrade is asked whether to update an existing installation or perform a new installation. You should choose to **update an existing installation**. 
 
-Once a successful file system update is complete, TeamServer will start up. It is important to note that the actual update of configuration files and database components does not happen until this initial startup. While TeamServer is starting up, administrators can follow along in the [log files](installation-setupconfig.html#log), specifically *migration.log* and *contrast.log*. Log entries are written for both file system and database updates in a sequential manner.
+The upgrade should perform a database backup initially. Depending on the size of the EOP database, this process can take a few seconds to a few minutes. During this operation, the application should be accessible to agents and end users. 
 
-## How To Verify The Upgrade
-The first indicator of a successful update is when TeamServer is accessible from either the User Interface or an API request. The version number will be listed in the UI under **Settings**, located in the drop-down menu below the user name. 
+The update then deploys a new file system under the installation directory. This primarily consists of deploying the *Contrast.war* file directory to the *$CONTRAST_HOME/webapps* directory. The application won't be accessible while the file system is updated.
 
-We recommend that customers review the contents of the *migration.log* immediately after the upgrade. This log will reveal any issues experienced as part of the update process.
+Once a successful file system update is complete, the application starts up. While the application is starting up, administrators can follow along in the [log files](installation-setupconfig.html#log) - *migration.log* and *contrast.log*, specifically. Log entries are written for both file system and database updates in a sequential manner.
 
-It's important to note that in the minutes after a TeamServer upgrade, deployed agents may attempt to update to the latest agent version. These agents will not reflect their own update until each has restarted and established contact with TeamServer.
+> **Note:** Configuration files and database components aren't updated until the initial startup step.
+
+## Verify the Upgrade
+
+The first indicator of a successful update is when the Contrast application is accessible by either logging into the UI or an API request. The version number is listed in the UI under the **user menu > Settings**. 
+
+Contrast recommends that you review the contents of the *migration.log* immediately after the upgrade. This log will reveal any issues experienced as part of the update process.
+
+> **Note:** In the minutes after the upgrade, deployed agents might attempt to update to the latest agent version. These agents won't reflect their own update until each has restarted and established contact with the Contrast application.
 
 
