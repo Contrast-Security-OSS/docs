@@ -29,10 +29,13 @@ The Licenses tab features an activity trend chart of data on license consumption
 
 ### Protect view 
 
-Take a closer look at your Protect license usage by clicking the chart beneath the Protect trend line. In the Protect Usage view, data for the current month is displayed in a trend chart as well as a quick view of usage statistics. Hover over data points in the trend chart to see the number of Protect servers used and the number of available licenses that remained for each day. Use the dropdown menu above the chart to view data from a different month within the past year. 
+Take a closer look at your Protect license usage by clicking the chart beneath the Protect trend line. In the Protect Usage view, data for the current month is displayed in a trend chart as well as a quick view of **Usage Statistics**. Hover over data points in the trend chart to see the number of Protect servers used and the number of available licenses that remained for each day. Use the dropdown menu above the chart to view data from a different month within the past year. 
 
 <a href="assets/images/Protect-license-usage.png" rel="lightbox" title="Organization statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-usage.png"/></a>
 
+Click on the vertical bars in the chart to view your hourly usage of Protect licenses for each day. Peak hourly usage is represented by bright green shading at the top of the bars. 
+
+<a href="assets/images/Protect-license-daily-usage.png" rel="lightbox" title="Daily usage statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-daily-usage.png"/></a>
 
 ## Applications
 
