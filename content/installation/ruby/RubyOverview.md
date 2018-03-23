@@ -17,3 +17,4 @@ From it's position within the Rack middleware stack, the Ruby agent inspects HTT
 ## Use the Agent 
 
 To start protecting your application, download the Ruby agent and service, and create a configuration file as described in [Ruby Agent Installation](installation-ruby.html#ruby-install). The Ruby agent is installed as a standard Ruby Gem, and communicates with a standalone service that runs outside your application.
+
