@@ -35,7 +35,7 @@ Take a closer look at your Protect license usage by clicking the chart beneath t
 
 Click on the vertical bars in the chart to view your hourly usage of Protect licenses for each day. Peak hourly usage is represented by bright green shading at the top of the bars. 
 
-<a href="assets/images/Protect-license-daily-usage.png" rel="lightbox" title="Daily usage statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-daily-usage.png"/></a>
+<a href="assets/images/Protect-license-usage-hours.png" rel="lightbox" title="Hourly usage statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-usage-hours.png"/></a>
 
 ## Applications
 
@@ -53,7 +53,7 @@ Switch to the Servers tab to view a thermometer chart that shows the breakdown o
 
 The circular Container Breakdown chart displays the number of deployed servers for each language in a given environment. Select a different environment in the dropdown menu to update the ring and total number of servers. Click on the server count to go to the Servers page with the relevant environment filter applied. Snapshots show servers being Assessed and Protected as well as all servers online compared to the total number of servers in the given environment. The right sidebar includes a list of newly onboarded, offline and deleted servers. 
 
-<a href="assets/images/org-stats-servers.png" rel="lightbox" title="Organization statistics for applications"><img class="thumbnail" src="assets/images/org-stats-servers.png"/></a>
+<a href="assets/images/Org-stats-servers.png" rel="lightbox" title="Organization statistics for applications"><img class="thumbnail" src="assets/images/Org-stats-servers.png"/></a>
 
 
 
