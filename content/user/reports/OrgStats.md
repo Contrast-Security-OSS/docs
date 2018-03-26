@@ -27,15 +27,19 @@ The Licenses tab features an activity trend chart of data on license consumption
 
 <a href="assets/images/Org-stats-licenses.png" rel="lightbox" title="Organization statistics for licenses"><img class="thumbnail" src="assets/images/Org-stats-licenses.png"/></a>
 
-### Protect view 
+### Protect usage 
 
-Take a closer look at your Protect license usage by clicking the chart beneath the Protect trend line. In the Protect Usage view, data for the current month is displayed in a trend chart as well as a quick view of **Usage Statistics**. Hover over data points in the trend chart to see the number of Protect servers used and the number of available licenses that remained for each day. Use the dropdown menu above the chart to view data from a different month within the past year. 
+Take a closer look at your Protect license usage by clicking beneath the Protect trend line in the chart. This switches you to the Protect Usage mode, which displays data for the current month in a trend chart as well as a quick view of **Usage Statistics**. 
+
+Hover over data points in the trend chart to see the number of Protect servers used and the number of available licenses that remained for each day. The y-axis marker shows the number of licenses that you had purchased. Use the dropdown menu above the chart to view data from a previous month within the past year. 
 
 <a href="assets/images/Protect-license-usage.png" rel="lightbox" title="Organization statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-usage.png"/></a>
 
 Click on the vertical bars in the chart to view your hourly usage of Protect licenses for each day. Peak hourly usage is represented by bright green shading at the top of the bars. 
 
 <a href="assets/images/Protect-license-usage-hours.png" rel="lightbox" title="Hourly usage statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-usage-hours.png"/></a>
+
+To return to the license activity data for Assess and Protect servers, click the link above the graph to go **Back to License Activity**. 
 
 ## Applications
 
