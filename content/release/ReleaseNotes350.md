@@ -18,7 +18,7 @@ tags: "3.5.0 March Release Notes"
 
 ## Improvements 
 
-* Wondering about the daily breakdown of your Protect license usage? Head over to the **Organization Statistics** page to find out. We’ll show you the number of servers protected, peak daily usage and much more. 
+* Wondering about the daily breakdown of your [Protect license usage](user-reports.html#orgstats)? Head over to the **Organization Statistics** page to find out. We’ll show you the number of servers protected, peak daily usage and much more. 
 
 * When you export a vulnerability, the Vulnerability Overview and Notes fields are sent over with all of the regular info for new JIRA or VSTS/TFS tickets.
 
