@@ -8,7 +8,8 @@ tags: "3.5.0 March Release Notes"
 
 ## Fixes
 
-* 
+* Attack notifications are being sent by your Slack integration. CONTRAST-18738
+* Attack grid honors application access levels. CONTRAST-21206
 
 ## Improvements 
 
