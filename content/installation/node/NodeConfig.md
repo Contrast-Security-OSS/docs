@@ -4,7 +4,7 @@ description: "Configuring the Node.js Agent"
 tags: "installation NodeJS agent configuration"
 -->
 
-Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g., `npm run contrast -- --agent.logger.stdout false` or `node-contrast server.js --agent.logger.stdout false`). With the exception of `--configFile`, they can all be added to your *contrast.json* file as well.
+Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g., `npm run contrast -- --agent.logger.stdout false` or `node-contrast server.js --agent.logger.stdout false`). They can also be set via environment variables of the form `SETTING__NAME` (for example: `--agent.logger.stdout false` becomes `AGENT__LOGGER__STDOUT=false`). `With the exception of `--configFile`, they can all be added to your *contrast.json* file as well.
 
 ``` javascript
 {
@@ -53,19 +53,21 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 --application.tags <tags>                        | Comma-separated list of tags to apply to each application reported by the agent.
 --application.version <version>                  | Override the reported application version, if different from 'version' field in the application's *package.json*.
 --application.vulnerability.tags <tags>          | Comma-separated list of tags to apply to each application vulnerability reported by the agent.
+--assess.enable [false]                          | If `false`, disable assess mode. Default is `true`.
 --assess.enable_preflight [false]                | If `false`, disable preflight spooling of traces. Default is `true`. (Not recommended.)
 --assess.enable_propagators [false]              | If `false`, disable dataflow propagation. Default is `true`. (Not recommended.)
 --assess.sampling.enable [false]                 | If `false`, disable sampling. Default is `true`.
 --assess.sampling.baseline <rule limit>          | Maximum number of times to report the same rule for a single. Default is **5**.
 --inventory.analyze_libraries [false]            | If `false`, don't read or report library data. Default is `true`.
 --inventory.tags <tags>                          | Comma-separated list of tags to apply to each application library reported by the agent.
+--protect.enable [false]                         | If `false`, disable protect mode. Default is `true`.
 --protect.auth.mode <mode>                       | Whether to report authentication framework login attempts. Options are `OFF` or `MONITOR`. Default is `OFF`.
 --protect.samples.blocked <count>                | Limit the reporting of "blocked" Protect events to this number (per report cycle). Default is **25**.
 --protect.samples.blocked_at_perimeter <count>   | Limit the reporting of "blocked-at-perim" Protect events to this number (per report cycle). Default is **25**.
 --protect.samples.exploited <count>              | Limit the reporting of "effective" Protect events to this number (per report cycle). Default is **100**.
 --protect.samples.ineffective <count>            | Limit the reporting of "ineffective" Protect events to this number (per report cycle). Default is **50**.
 --server.build <version>                         | Set reported server build option.
---server.environment <name>                      | Environment in which the server is running - `QA`, `PRODUCTION` or `DEVELOPMENT` - if not `NODE_ENV`.
+--server.environment <name>                      | Environment in which the server is running - `QA`, `PRODUCTION` or `DEVELOPMENT`.
 --server.name <name>                             | Override the reported server name. Default is `ip-192-168-1-50.ec2.internal`.
 --server.path <name>                             | Override the reported server path. Default is */*.
 --server.tags <tags>                             | Comma-separated list of tags to apply to each server reported by the agent.
