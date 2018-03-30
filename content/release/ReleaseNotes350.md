@@ -8,15 +8,15 @@ Welcome, Python!
 
 ## Fixes
 
-* Attack notifications are being sent by your Slack integration. CONTRAST-18738
-* Your view of **Attacks** honors application access levels and filters you've set. CONTRAST-21206, CONTRAST-21623, CONTRAST-21172, CONTRAST-21173
-* Retain your filters in the **Servers** page, even when you take action in the grid. CONTRAST-8142
-* Use the link to **Contact Support** in the user menu. CONTRAST-21885
-* Notifications for new vulnerable libraries stop if you disable them. CONTRAST-19605
-* Vulnerability trend chart is in sync with the **Vulnerability** page grid. CONTRAST-21405
-* **Applications** grid loads completely and consistently. CONTRAST-21301
-* Download the Ruby agent without any workarounds. CONTRAST-21262
-* Surplus trace details are gone from your vulnerabilities. CONTRAST-21342
+* Attack notifications are being sent by your Slack integration. 
+* Your view of **Attacks** honors application access levels and filters you've set. 
+* Retain your filters in the **Servers** page, even when you take action in the grid.
+* Use the link to **Contact Support** in the user menu. 
+* Notifications for new vulnerable libraries stop if you disable them. 
+* Vulnerability trend chart is in sync with the **Vulnerability** page grid. 
+* **Applications** grid loads completely and consistently. 
+* Download the Ruby agent without any workarounds. 
+* Surplus trace details are gone from your vulnerabilities. 
 
 ## Improvements 
 
@@ -26,18 +26,16 @@ Welcome, Python!
 
 * Ensure that your applications are compliant to the OWASP Top 10 2017 standard, and generate reports based on the compliance standard.
 
-<!-- * We protect your Java applications from a new remote code execution CVE discovered in the Spring Data REST library. (You can get rid of that custom virtual patch now.) -->
-
-<!-- * Spread the good news, .NET Protect people: We support XXE as a new rule! -->
-
 
 ## Agent Updates
 
 ### Java summary 
 
+The Java team improved blocking of Protect Path Traversal Rule and added protection against CVE-2017-8046. We also fixed a bug where the agent could fail to block at perimeter an attack embedded within JSON/XML. 
 
 ### .NET summary 
 
+The .NET team added an XXE Rule for Protect and improved agent accuracy (i.e., Protect Command Injection and Assess handling of ASP.NET server variables). We reduced the agent’s impact to performance of Web API applications by ~7% as well as the number of allocations used by the agent’s Assess analysis. We also fixed several safe errors in agent sensors that could lead to excessive logging and impact performance; clickjacking false positive when X-Frame-Options header was added at the native level by IIS; and an error where agent analysis could fail to initialize when an application pool is configured to use a low-privilege user. 
 
 ### Node.js summary 
 
