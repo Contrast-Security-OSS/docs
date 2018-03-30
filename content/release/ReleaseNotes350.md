@@ -4,7 +4,7 @@ description: "Contrast 3.5.0 March 2018"
 tags: "3.5.0 March Release Notes"
 -->
 
-Welcome, Python! 
+With the Python agent in beta and Protect features available for Node, it's a whole new world. (*A new fantastic point of view...*)
 
 ## Fixes
 
