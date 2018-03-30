@@ -41,14 +41,14 @@ Welcome, Python!
 
 ### Node.js summary 
 
-The Protect features of the Node agent officially entered GA this month with some final work on the CSRF rule, additional patterns for the CMD injection rule, a better matcher for the Bot Blocker rule, a fix for virtual patches, and better stack trace reporting. We've also updated our error reporting when the config file is not found, allowed for global environment variables to supersede configuration options, and added configuration flags for disabling protect and assess features. We've had a few updates for better Windows support and better technology reporting from the agent.
+The Protect features of the Node agent officially entered GA this month with some final work on the CSRF rule, additional patterns for the CMD injection rule, a better matcher for the Bot Blocker rule, a fix for virtual patches and better stack trace reporting. We've also updated our error reporting when the *config* file isn't found, allowed for global environment variables to supersede configuration options, and added configuration flags for disabling Protect and Assess features. Finally, we've had a few updates for better Windows support and better technology reporting from the agent.
 
 ### Ruby summary 
 
-The Ruby agent had an update to the SQL injection to resolve a false negative and simplified access to the configuration object in multi-process web server environments. We had a fix to limit the size of the pending message queue when the service is unavailable and provide better feedback if the logging directory is in a non-writable state. We've also made our gem dependencies less strict to reduce the possibility of gem conflicts for the service layer.
+The Ruby agent updated the SQL injection to resolve a false negative, and simplified access to the configuration object in multi-process web server environments. We added a fix to limit the size of the pending message queue when the service is unavailable and provide better feedback if the logging directory is in a non-writable state. We've also made our gem dependencies less strict to reduce the possibility of gem conflicts for the service layer.
 
 ### Python summary
 
-The Python Protect agent begins its beta phase with support of the full set of Protect rules and a new, high-speed service layer.
+The [Python](installation-python.html#python-overview) Protect agent begins its beta phase with support of the full set of Protect rules and a new, high-speed service layer.
 
 
