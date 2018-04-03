@@ -6,7 +6,7 @@ tags: "Contrast installation setup protect onboarding customer"
 
 Contrast Protect provides actionable and timely application layer threat intelligence across the entire application portfolio. Once instrumented with Protect, applications will self-report the following information about an attack, at a minimum: the attacker, method of attack, applications affected, frequency, volume and level of compromise. In addition, Protect provides specific guidance to engineering teams about where applications were attacked and how threats can be remediated.
 
-## Steps
+<!-- ## Steps
 
 The following steps will introduce Contrast to an organization, integrate it into their workflow and quantify the value it has brought to the initial adopters of the technology.
 
@@ -18,9 +18,9 @@ The following steps will introduce Contrast to an organization, integrate it int
 6. Production Monitor: Observe in monitor mode and validate workflow.
 7. Contrast Business Review: Quantify the gained value.
 
-Contrast’s Customer Success team will continue to work with you to help your organization gain increasingly more value from your investments of time and money.
+Contrast’s Customer Success team will continue to work with you to help your organization gain increasingly more value from your investments of time and money. -->
 
-## Roles and Responsibilities
+<!-- ## Roles and Responsibilities
 
 The following roles may represent one or more people though one person may play multiple roles.
 
@@ -30,7 +30,7 @@ The following roles may represent one or more people though one person may play 
 * QA Leads:	Performance and QA testing of Protect-enabled servers, and installation of agent in QA environments.
 * Operations: Pushes Protect-enabled servers into Production.
 * Exec Sponsor - Security: Executive from the security group who oversees Contrast deployment.
-* Exec Sponsor - Development: Executive from the development group who oversees Contrast deployment.
+* Exec Sponsor - Development: Executive from the development group who oversees Contrast deployment. -->
 
 ## Kickoff
 
@@ -44,7 +44,6 @@ The focus of the Kickoff meeting is to introduce all the parties, and get everyo
 * Ensure that all the key project roles are filled.
 * Review the the Intake document for the Solution Architecture meeting.
 
-
 ### Preparation
 
 In advance of this meeting:
@@ -53,12 +52,6 @@ In advance of this meeting:
 * Each attendee should have [a high-level understanding of Contrast Security](https://www.youtube.com/watch?v=Gviz-SiJGWk).
 * Each attendee should read this document.
 
-### Deliverables
-
-* A list of names assigned to the key project roles, along with their contact details and time zone.
-* A list of desired business outcomes and their KPIs.
-* High-level requirements for the initial state (e.g., security policy, vulnerability management processes, integrations).
-* A list of long-lead items and other project risks (e.g., Firewall proxy permissions, access management approval).
 
 ## Solution Architecture
 
@@ -77,11 +70,6 @@ In this critical stage of the project, we will gather information about your cur
 * A list of tools: SIEM, bug trackers, deployment and access management.
 
 
-### Deliverables
-
-* Finalize requirements for security policy and governance, threat management, metrics/dashboards, access control, integrations, training and server onboarding.
-* Architectural description of [how Contrast Security integrates with the tools](https://docs.contrastsecurity.com/admin-orgintegrations.html) and processes of the initial applications: SIEM, bug trackers, deployment and access management.
-
 ## Project Plan
 
 Once all the requirements and solution design are finalized in the Solution Architecture stage, it’s time to map out a project plan. Contrast will select one of its proven project plan templates, and collaborate with you to tailor it to your specific needs. 
@@ -96,11 +84,6 @@ Once all the requirements and solution design are finalized in the Solution Arch
 * List of important dates for candidate applications and their servers: load testing, planned configuration changes, deployment, etc.
 * List of owners of tools in your ecosystem: [continuous integration](github.com/Contrast-Security-OSS/), [alerting tools](https://docs.contrastsecurity.com/admin-orgintegrations.html).
 
-### Deliverables
-
-* A project plan is agreed upon by involved parties and emailed to stakeholders.
-* A scheduled meeting to implement the Contrast application and confirm the administrators have access.
-* A scheduled meeting to deliver [Administrator Training](https://contrast.knowledge-bytes.com/demo-using-teamserver#sthash.a4c4FiCH.dpbs).
 
 ## The Contrast Application 
 
@@ -116,12 +99,6 @@ Prepare the Contrast application, also known as “TeamServer”, for use by set
 
 * A list of names and email address of users who will be involved in the initial applications and their servers, and who need access to the Contrast application.
 * If on-premises, verify that [technical environmental requirements](https://docs.contrastsecurity.com/installation-setup.html#contrast-reqs) are being met before installing the Contrast application.
-
-### Deliverables
-* The Contrast application is set up and administrators have access.
-* [Administrator Training](https://contrast.knowledge-bytes.com/demo-using-teamserver#sthash.a4c4FiCH.dpbs) for the Contrast application has been delivered.
-* All involved parties have access to the [Contrast Security Training Portal](https://contrast.knowledge-bytes.com).
-* All involved parties have learned [how to get prizes and a newsletter of important information](contrastsecurity.com/goodies).
 
 ## Pre-production
 
@@ -147,11 +124,6 @@ Protecting an application’s servers with Protect involves deploying the Contra
 * An explanation of your vulnerability mitigation workflow for each application.
 * An explanation of your incident response system for each application.
 
-### Deliverables
-
-* Verified that application behavior is normal and performance is acceptable.
-* Verified that expected alerts are received and logged appropriately.
-* User training for the Contrast application has been delivered.
 
 ## Production Monitor
 
@@ -168,11 +140,6 @@ After we have verified that Protect is working as expected in the pre-production
 * Determine which Protect rules are to be changed from Monitor to Block.
 * Get approval for change to applications in Production
 
-### Deliverables
-
-* Verified that application behavior is normal and performance is acceptable.
-* Verified that expected alerts are received and logged appropriately.
-* Protect rules are set appropriately. 
 
 ## Contrast Business Review
 
@@ -188,11 +155,6 @@ At the beginning of the onboarding process, we worked with you to define your de
 * Provide results for KPIs where Contrast doesn’t have access to the data.
 * Have appropriate stakeholders preview the Contrast Business Review deck to ensure alignment.
 * Project Manager to coordinate scheduling of Contrast Business Review with Exec Sponsors.
-
-### Deliverables
-
-* A presentation with business outcome attainment, initial wins, challenges and opportunities.
-* Contrast Business Review meeting follow up typically includes plans for application/server adoption, increasing value, and addressing key challenges and issues.
 
 
 

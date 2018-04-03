@@ -1,39 +1,42 @@
 <!--
-title: "New Customer Implementation Guide: Assess"
-description: "Introduction to Contrast setup and onboarding"
-tags: "Contrast installation setup assess onboarding customer"
+title: "What to Expect When You're Deploying"
+description: "Introduction to Contrast customer deployment"
+tags: "Contrast about setup onboarding deployment assess protect"
 -->
 
 
 Contrast Assess produces accurate results without dependence on application security experts. Accuracy comes from Contrast's patented Deep Security Instrumentation technology, which integrates the most effective elements of Interactive (IAST), Static (SAST) and Dynamic (DAST) application security testing technology; software composition analysis (SCA); and configuration analysis; and delivers them directly into applications.
 
-Getting started with Assess can be as simple as [setting up the Contrast application  and installing an agent](https://docs.contrastsecurity.com/installation-setup.html#quick-start). Alternatively, the following steps prepare an organization to reap the full benefits of Assess and quantify the value they receive.
+Getting started with Assess can be as simple as [setting up the Contrast application and installing an agent](https://docs.contrastsecurity.com/installation-setup.html#quick-start). Alternatively, the following steps prepare an organization to reap the full benefits of Assess and quantify the value they receive.
 
 ## Steps
 
-The following steps introduce Contrast to an organization, integrate it into their workflow and quantify the value it has brought to the initial adopters of the technology.
+The following steps introduce Contrast to an organization, integrate it into their workflow and quantify the value it has brought to the initial adopters of the technology. (Steps dedicated specifically to Assess or Protect only are marked.)
 
-1. **Kickoff:** Introductions, align vision and quantify success metrics.
-2. **Solution Architecture:** Tailor implementation.
-3. **Project Plan:** Agree on details and timing.
-4. **Contrast UI Preparation:** Get ready to add applications.
-5. **Application Baseline:** Initial analysis of applications.
-6. **Vulnerability Management:** How vulnerabilities are analyzed, communicated and tracked
-7. **Contrast Business Review:** Quantify the gained value.
+* **Kickoff:** Introductions, align vision and quantify success metrics.
+* **Solution Architecture:** Tailor implementation.
+* **Project Plan:** Agree on details and timing.
+* **Contrast UI Preparation:** Get ready to add applications.
+* **Application Baseline:** Initial analysis of applications. (Assess)
+* **Vulnerability Management:** How vulnerabilities are analyzed, communicated and tracked.(Assess)
+* **Pre-production:** Integrate into ecosystem and perform Initial analysis. (Protect)
+* **Production Monitor:** Observe in monitor mode and validate workflow. (Protect)
+* **Contrast Business Review:** Quantify the gained value.
 
-Contrast’s Customer Success team will continue to work with you to help your organization increasingly gain value from the time and money you’ve invested.
+Contrast’s Customer Success team will continue working with you to help your organization increasingly gain value from the time and money you’ve invested.
 
 ## Roles and Responsibilities
 
-The following roles may represent one or more people. One person may also play multiple roles.
+The following roles may represent one or more people. One person may also play multiple roles. (Roles related specifically to Assess or Protect only are marked.)
 
 * Project Manager: Works with Contrast on deployment schedule, tracks internal milestones and task completion, and is responsible for internal communications.
 * Contrast UI Administrator: Prepares technical environment; manages users, access controls, reports, upgrades and communications; interfaces with Contrast Support.
 * Application Security Lead: Creates and governs policy, security controls and the vulnerability management process.
-* Development Leads: Manages vulnerability remediation and build integration.
+* Development Leads: Manages vulnerability remediation and build integration. (Assess)
+* QA Leads:	Oversees performance and QA testing of Protect-enabled servers as well as installation of agent(s) in QA environments. (Protect)
+* Operations: Pushes Protect-enabled servers into Production. (Protect)
 * Executive Sponsor - Security: Executive from the security group who oversees Contrast deployment.
 * Executive Sponsor - Development: Executive from the development group who oversees Contrast deployment.
-
 
 ## Kickoff
 
