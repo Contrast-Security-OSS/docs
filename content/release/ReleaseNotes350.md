@@ -4,19 +4,19 @@ description: "Contrast 3.5.0 March 2018"
 tags: "3.5.0 March Release Notes"
 -->
 
-With the Python agent in beta and Protect features available for Node, it's a whole new world. (*A new fantastic point of view...*)
+With the Python agent in beta and Protect features available for Node, it's like a whole new world. (*A new fantastic point of view...*)
 
 ## Fixes
 
-* Attack notifications are being sent by your Slack integration. 
-* Your view of **Attacks** honors application access levels and filters you've set. 
 * Retain your filters in the **Servers** page, even when you take action in the grid.
+* Attack notifications are being sent by your Slack integration. 
 * Use the link to **Contact Support** in the user menu. 
 * Notifications for new vulnerable libraries stop if you disable them. 
+* Your view of **Attacks** honors application access levels and filters you've set. 
 * Vulnerability trend chart is in sync with the **Vulnerability** page grid. 
 * **Applications** grid loads completely and consistently. 
 * Download the Ruby agent without any workarounds. 
-* Surplus trace details are gone from your vulnerabilities. 
+* Surplus trace details are gone from your vulnerability view. 
 
 ## Improvements 
 
