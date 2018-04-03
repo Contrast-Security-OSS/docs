@@ -35,7 +35,10 @@ The Java team improved blocking of Protect Path Traversal Rule and added protect
 
 ### .NET summary 
 
-The .NET team added an XXE Rule for Protect and improved agent accuracy (i.e., Protect Command Injection and Assess handling of ASP.NET server variables). We reduced the agent’s impact to performance of Web API applications by ~7% as well as the number of allocations used by the agent’s Assess analysis. We also fixed several safe errors in agent sensors that could lead to excessive logging and impact performance; clickjacking false positive when X-Frame-Options header was added at the native level by IIS; and an error where agent analysis could fail to initialize when an application pool is configured to use a low-privilege user. 
+The .NET team added an XXE Rule for Protect and improved agent accuracy (i.e., Protect Command Injection and Assess handling of ASP.NET server variables). We reduced the agent’s impact to performance of Web API applications by ~7% as well as the number of allocations used by the agent’s Assess analysis. We also fixed the following issues: 
+* Several safe errors in agent sensors that could lead to excessive logging and impact performance
+* Clickjacking false positive when X-Frame-Options header was added at the native level by IIS
+* An error where agent analysis could fail to initialize when an application pool is configured to use a low-privilege user
 
 ### Node.js summary 
 
