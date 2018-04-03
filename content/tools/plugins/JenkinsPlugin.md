@@ -16,10 +16,10 @@ Contrast API settings enable the plugin to connect to Contrast and query for res
 | Parameter                   | Description                                             |
 |-----------------------------|---------------------------------------------------------|
 | Contrast Username         | Username/email for your account in Contrast |
-| Contrast API Key          | Log in to your Teamserver account and go to **Your Account**. Look under **YOUR KEYS**.                |
-| Contrast Service Key      | Log in to your Teamserver account and go to **Your Account**. Look under **YOUR KEYS**.             |
-| Contrast URL          | API URL to your Contrast instance <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *https://contrastserver/Contrast/api*). |
-| Organization UUID | Organization UUID of the configured user found in **Organization Settings** <BR> You can also copy it from the URL when viewing the home page in Contrast. |
+| [Contrast API Key](user-account.html#profile) | Log in to the Contrast UI, and go to the **user menu > Your Account > Your Keys section**.                |
+| [Contrast Service Key](user-account.html#profile) | Log in to the Contrast UI, and go to the **user menu > Your Account > Your Keys section**..             |
+| Contrast URL          | API URL to your Contrast instance. <BR> Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *https://contrastserver/Contrast/api*). |
+| [Organization UUID](admin-orgsettings.html#apikey) | Organization UUID of the configured user found in the Contrast UI; go to the **user menu > Organization Settings > API tab**. <BR> You can also copy it from the URL when viewing the home page in Contrast. |
 
 ---
 
