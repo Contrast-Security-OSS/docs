@@ -5,7 +5,7 @@ tags: "Contrast about setup onboarding deployment assess protect"
 -->
 
 
-Getting started with Assess and Protect can be as simple as [setting up the Contrast application and installing an agent](https://docs.contrastsecurity.com/installation-setup.html#quick-start). Alternatively, the following steps prepare an organization to reap the full benefits of Assess and Protect, and quantify the value they receive.
+Getting started with Assess and Protect can be as simple as [setting up the Contrast application and installing an agent](installation-setup.html#quick-start). Alternatively, the following steps prepare an organization to reap the full benefits of Assess and Protect, and quantify the value they receive.
 
 ## Steps
 
@@ -55,10 +55,10 @@ To prepare for this meeting, you'll need verify the following information:
 
 * A list of candidate servers to be included in your initial onboarding. 
 * A list of candidate applications to be included in your initial baseline. 
-* Meet the technical requirements for [Java](https://docs.contrastsecurity.com/installation-java.html#java-supported), [.NET](https://docs.contrastsecurity.com/installation-net.html#net-supported), [Node](https://docs.contrastsecurity.com/installation-node.html#node-supported) or [Ruby](https://docs.contrastsecurity.com/installation-ruby.html#ruby-supported).
+* Meet the technical requirements for [Java](installation-java.html#java-supported), [.NET](installation-net.html#net-supported), [Node](installation-node.html#node-supported) or [Ruby](installation-ruby.html#ruby-supported).
 * A list of tools used by development teams: integrated development environments (IDEs), bug trackers, continuous integration and access management.
 * A workflow of how vulnerabilities are triaged, managed and communicated to developers.
-* Known [security controls](https://docs.contrastsecurity.com/admin-policymgmt.html#security).
+* Known [security controls](admin-policymgmt.html#security).
 
 
 ## Project Plan
@@ -71,7 +71,7 @@ project governance - status meetings, tracking of issues, etc. - and get buy-in 
 To prepare for this meeting, you'll need verify the following information: 
 
 * List of important dates for candidate applications and their servers (e.g., start of next sprint, code freezes and planned configuration changes).
-* List of owners of [continuous integration](github.com/Contrast-Security-OSS/) and [alerting tools](https://docs.contrastsecurity.com/admin-orgintegrations.html) in your ecosystem. (Protect)
+* List of owners of [continuous integration](github.com/Contrast-Security-OSS/) and [alerting tools](admin-orgintegrations.html) in your ecosystem. (Protect)
 
 
 ## The Contrast Application 
@@ -86,8 +86,61 @@ To prepare for this meeting, you'll need verify the following information:
 * Identify the first application to be onboarded, and invite the Agent Administrator to the meeting. (Assess)
 * Identify administrators to be trained. (Assess)
 * Finalize security policy. (Assess)
-* If **on-premises**, verify that you meet [technical environmental requirements](https://docs.contrastsecurity.com/installation-setup.html#contrast-reqs) before installing the Contrast application.
+* If **on-premises**, verify that you meet [technical environmental requirements](installation-setup.html#contrast-reqs) before installing the Contrast application.
 
+
+
+
+
+
+## Production
+
+The steps in this section walk **Protect** customers through deploying Protect in your Production environment. 
+
+### Pre-production
+
+Protecting an application’s servers with Protect involves deploying the Contrast agent into each applicable server in the pre-Production environment, integrating alerting tools and training users (e.g., SOC engineers) who may interact with the Contrast application.
+
+### Objectives
+
+* Install one of the agents: 
+ * [Java](installation-java.html#java-supported)
+ * [.NET](installation-net.html#net-supported)
+ * [Node](installation-node.html#node-supported) 
+ * [Ruby](installation-ruby.html#ruby-supported)
+* [Integrate alerting tools](admin-orgintegrations.html).
+* Apply any [exclusions](admin-policymgmt.html#exclude), [virtual patches](admin-policymgmt.html#patch), [IP management](admin-policymgmt.html#ip) and rules that are required.
+* Attack the application and discuss findings.
+
+### Before You Start
+
+To prepare for this step, you'll need verify the following information: 
+
+* Attack plan targeting known vulnerabilities found in prior penetration tests.
+* List of acceptable and unacceptable IP addresses to access each application.
+* Metrics from most recent load tests.
+* An explanation of your vulnerability mitigation workflow for each application.
+* An explanation of your incident response system for each application.
+
+
+### Production monitor
+
+After Contrast verifies that Protect is working as expected in the pre-Production environment, you can deploy Protect in Production in monitor mode for a limited period, and then enable blocking for ongoing protection. 
+
+### Before You Start
+
+To prepare for this step, you'll need verify the following information: 
+
+* Determine which Protect rules are to be changed from Monitor to Block.
+* Get approval for change to applications in Production.
+
+
+
+
+
+## Vulnerabilities 
+
+The steps in this section walk **Assess** customers through initial vulnerability discovery and management. 
 
 ## Baseline Initial Applications
 
@@ -96,56 +149,47 @@ Establish a baseline of true vulnerabilities for the initial applications, as we
 ### Objectives
 
 * Install one of the agents: 
- * [Java](https://docs.contrastsecurity.com/installation-java.html#java-supported)
- * [.NET](https://docs.contrastsecurity.com/installation-net.html#net-supported)
- * [Node](https://docs.contrastsecurity.com/installation-node.html#node-supported) 
- * [Ruby](https://docs.contrastsecurity.com/installation-ruby.html#ruby-supported)
+ * [Java](installation-java.html#java-supported)
+ * [.NET](installation-net.html#net-supported)
+ * [Node](installation-node.html#node-supported) 
+ * [Ruby](installation-ruby.html#ruby-supported)
 * Exercise the application and possibly run functional and/or regression tests.
 * Discuss found vulnerabilities.
-* Apply any [security controls](https://docs.contrastsecurity.com/admin-policymgmt.html#security) and [exclusions](https://docs.contrastsecurity.com/admin-policymgmt.html#exclude) that are needed.
+* Apply any [security controls](admin-policymgmt.html#security) and [exclusions](admin-policymgmt.html#exclude) that are needed.
 
-Preparation for this meeting: 
+### Before You Start
+
+To prepare for this step, you'll need verify the following information: 
 
 * A separate scheduled meeting with each application team to baseline the application.
-* A list of known [security controls](https://docs.contrastsecurity.com/admin-policymgmt.html#security) used by existing vulnerability detection tools.
+* A list of known [security controls](admin-policymgmt.html#security) used by existing vulnerability detection tools.
 * An introduction to owners of [continuous integration](https://github.com/Contrast-Security-OSS) tools in your ecosystem.
+
+
 
 
 ## Manage Vulnerabilities
 
-Your next focus is integrating your security management process and security policy governance.
+Your next focus is integrating your security management process and security policy governance, including defining routes for alerts, verifying reports and integrating tools in your organization.
 
-### Objectives
+### Before You Start
 
-* Define where alerts should be routed.
-* [Integrate with tools](https://docs.contrastsecurity.com/admin-orgintegrations.html) in your ecosystem: IDEs, Bug Trackers and continuous integration.
-* Generate and verify reports.
+To prepare for this step, you'll need verify the following information: 
 
-Preparation for this meeting: 
-
-* List of owners of tools in your ecosystem: IDEs, bug trackers, continuous integration and access management.
+* List of owners of tools in your ecosystem (i.e., IDEs, bugtrackers, continuous integration and access management).
 * An explanation of your vulnerability mitigation workflow for each application.
+
+
+
+
 
 
 ## Contrast Business Review
 
-At the beginning of the onboarding process, Contrast worked with you to define your desired business outcomes and associated KPIs for the initial deployment of Assess. It’s now time to verify and quantify the value you’re receiving from using Assess, and communicate the results to your executives and key stakeholders. 
+At the beginning of the onboarding process, Contrast worked with you to define your desired business outcomes and associated key performance indicators (KPIs) for the initial deployment. It’s now time to verify and quantify the value you’re receiving from using Assess, Protect, or both, and communicate the results to your executives and key stakeholders. You and Contrast representatives will also agree on a plan to increase adoption and value creation as you move forward.
 
-### Objectives
+## What Happens Next
 
-* Align on business outcome attainment and the value you’re receiving from Assess.
-* Agree on a plan to increase user/application adoption and value creation as you move forward.
-
-Preparation for this meeting: 
-
-* Provide results for KPIs where Contrast doesn’t have access to the data.
-* Have appropriate stakeholders preview the Contrast Business Review deck to ensure alignment.
-* Project Manager to coordinate scheduling of Contrast Business Review with Exec Sponsors.
-
-
-**Note:** Follow-up after the Contrast Business Review meeting typically includes plans for user/application adoption, increasing value, and addressing key challenges and issues.
-
-
-
+Follow-up by Contrast after the Contrast Business Review meeting typically includes plans for user and application/server adoption, increasing value, and addressing key challenges and issues. You're also encouraged to contact the [Customer Success](https://support.contrastsecurity.com) team with any issues you encounter as you continue to grow with Contrast. 
 
 

@@ -100,7 +100,7 @@ Prepare the Contrast application, also known as “TeamServer”, for use by set
 * A list of names and email address of users who will be involved in the initial applications and their servers, and who need access to the Contrast application.
 * If on-premises, verify that [technical environmental requirements](https://docs.contrastsecurity.com/installation-setup.html#contrast-reqs) are being met before installing the Contrast application.
  -->
-## Pre-production
+<!-- ## Pre-production
 
 Protecting an application’s servers with Protect involves deploying the Contrast agent into each applicable server in the pre-production environment, integrating alerting tools and training users (e.g., SOC engineers) who may interact with the Contrast application.
 
@@ -139,8 +139,8 @@ After we have verified that Protect is working as expected in the pre-production
 
 * Determine which Protect rules are to be changed from Monitor to Block.
 * Get approval for change to applications in Production
-
-
+ -->
+<!-- 
 ## Contrast Business Review
 
 At the beginning of the onboarding process, we worked with you to define your desired business outcomes and associated KPIs for the initial deployment of Protect. It’s now time to verify and quantify the value you’re receiving from using Protect, and communicate the results to your executives and key stakeholders.
@@ -154,7 +154,7 @@ At the beginning of the onboarding process, we worked with you to define your de
 
 * Provide results for KPIs where Contrast doesn’t have access to the data.
 * Have appropriate stakeholders preview the Contrast Business Review deck to ensure alignment.
-* Project Manager to coordinate scheduling of Contrast Business Review with Exec Sponsors.
+* Project Manager to coordinate scheduling of Contrast Business Review with Exec Sponsors. -->
 
 
 
