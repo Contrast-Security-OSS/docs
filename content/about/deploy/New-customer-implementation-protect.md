@@ -4,8 +4,8 @@ description: "Introduction to Contrast setup and onboarding"
 tags: "Contrast installation setup protect onboarding customer"
 -->
 
-Contrast Protect provides actionable and timely application layer threat intelligence across the entire application portfolio. Once instrumented with Protect, applications will self-report the following information about an attack, at a minimum: the attacker, method of attack, applications affected, frequency, volume and level of compromise. In addition, Protect provides specific guidance to engineering teams about where applications were attacked and how threats can be remediated.
-
+<!-- Contrast Protect provides actionable and timely application layer threat intelligence across the entire application portfolio. Once instrumented with Protect, applications will self-report the following information about an attack, at a minimum: the attacker, method of attack, applications affected, frequency, volume and level of compromise. In addition, Protect provides specific guidance to engineering teams about where applications were attacked and how threats can be remediated.
+ -->
 <!-- ## Steps
 
 The following steps will introduce Contrast to an organization, integrate it into their workflow and quantify the value it has brought to the initial adopters of the technology.
@@ -32,27 +32,27 @@ The following roles may represent one or more people though one person may play 
 * Exec Sponsor - Security: Executive from the security group who oversees Contrast deployment.
 * Exec Sponsor - Development: Executive from the development group who oversees Contrast deployment. -->
 
-## Kickoff
+<!-- ## Kickoff
 
 The focus of the Kickoff meeting is to introduce all the parties, and get everyone aligned on the current business issues, reasons for purchasing Contrast and strategic vision for Contrast as well as the scope and success metrics for the initial applications and servers to be onboarded. We will also review the Contrast’s Quick Value deployment methodology, roles and responsibilities, and plan for the next stage: Solution Architecture.
-
-### Objectives
+ -->
+<!-- ### Objectives
 
 * Verify the desired Business Outcomes as well as their KPIs.
 * Document the desired state for the initial phase.
 * Familiarize customers with Contrast’s Quick Value deployment methodology.
 * Ensure that all the key project roles are filled.
-* Review the the Intake document for the Solution Architecture meeting.
+* Review the the Intake document for the Solution Architecture meeting. -->
 
-### Preparation
+<!-- ### Preparation
 
 In advance of this meeting:
 
 * Pre-meeting with the primary stakeholder, who will participate in each role in this deployment, to become aligned on our deployment methodology and initial phase scope, success factors and project risks.
 * Each attendee should have [a high-level understanding of Contrast Security](https://www.youtube.com/watch?v=Gviz-SiJGWk).
-* Each attendee should read this document.
+* Each attendee should read this document. -->
 
-
+<!-- 
 ## Solution Architecture
 
 In this critical stage of the project, we will gather information about your current state, then recommend Contrast best practices that are best suited to address your specific process and technical needs for the initial phase (“First Win”).  This will require a detailed, technical conversation on requirements, process and system design.
@@ -67,7 +67,7 @@ In this critical stage of the project, we will gather information about your cur
 
 * A list of candidate servers to be included as part of your initial onboarding. 
 * They must meet the technical requirements for [Java](https://docs.contrastsecurity.com/installation-java.html#java-supported), [.NET](https://docs.contrastsecurity.com/installation-net.html#net-supported), [Node](https://docs.contrastsecurity.com/installation-node.html#node-supported) or [Ruby](https://docs.contrastsecurity.com/installation-ruby.html#ruby-supported).
-* A list of tools: SIEM, bug trackers, deployment and access management.
+* A list of tools: SIEM, bug trackers, deployment and access management. -->
 
 
 ## Project Plan
