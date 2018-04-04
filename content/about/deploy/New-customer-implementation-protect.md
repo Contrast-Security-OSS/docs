@@ -70,7 +70,7 @@ In this critical stage of the project, we will gather information about your cur
 * A list of tools: SIEM, bug trackers, deployment and access management. -->
 
 
-## Project Plan
+<!-- ## Project Plan
 
 Once all the requirements and solution design are finalized in the Solution Architecture stage, it’s time to map out a project plan. Contrast will select one of its proven project plan templates, and collaborate with you to tailor it to your specific needs. 
 
@@ -82,10 +82,10 @@ Once all the requirements and solution design are finalized in the Solution Arch
 ### Preparation
 
 * List of important dates for candidate applications and their servers: load testing, planned configuration changes, deployment, etc.
-* List of owners of tools in your ecosystem: [continuous integration](github.com/Contrast-Security-OSS/), [alerting tools](https://docs.contrastsecurity.com/admin-orgintegrations.html).
+* List of owners of tools in your ecosystem: [continuous integration](github.com/Contrast-Security-OSS/), [alerting tools](https://docs.contrastsecurity.com/admin-orgintegrations.html). -->
 
 
-## The Contrast Application 
+<!-- ## The Contrast Application 
 
 Prepare the Contrast application, also known as “TeamServer”, for use by setting configurations, enabling rules and whitelists/blacklists, teaching administrators about available features, and training users how it will find and deliver alerts.
 
@@ -94,12 +94,12 @@ Prepare the Contrast application, also known as “TeamServer”, for use by set
 * Prepare the Contrast application for use.
 * Deliver [Administrator Training](https://contrast.knowledge-bytes.com/demo-using-teamserver#sthash.a4c4FiCH.dpbs).
 * Deliver user training(s).
-
-### Preparation
+ -->
+<!-- ### Preparation
 
 * A list of names and email address of users who will be involved in the initial applications and their servers, and who need access to the Contrast application.
 * If on-premises, verify that [technical environmental requirements](https://docs.contrastsecurity.com/installation-setup.html#contrast-reqs) are being met before installing the Contrast application.
-
+ -->
 ## Pre-production
 
 Protecting an application’s servers with Protect involves deploying the Contrast agent into each applicable server in the pre-production environment, integrating alerting tools and training users (e.g., SOC engineers) who may interact with the Contrast application.

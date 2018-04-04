@@ -15,10 +15,10 @@ The following steps introduce Contrast to an organization, integrate it into the
 * **Solution Architecture:** Tailor implementation.
 * **Project Plan:** Agree on details and timing.
 * **Contrast UI Preparation:** Get ready to add applications.
-* **Application Baseline:** Initial analysis of applications. (**Assess**)
-* **Vulnerability Management:** How vulnerabilities are analyzed, communicated and tracked. (**Assess**)
-* **Pre-production:** Integrate into ecosystem and perform Initial analysis. (**Protect**)
-* **Production Monitor:** Observe in monitor mode and validate workflow. (**Protect**)
+* **Application Baseline:** Initial analysis of applications. (Assess)
+* **Vulnerability Management:** How vulnerabilities are analyzed, communicated and tracked. (Assess)
+* **Pre-production:** Integrate into ecosystem and perform Initial analysis. (Protect)
+* **Production Monitor:** Observe in monitor mode and validate workflow. (Protect)
 * **Contrast Business Review:** Quantify the gained value.
 
 Contrast’s Customer Success team will continue working with you to help your organization increasingly gain value from the time and money you’ve invested.
@@ -30,9 +30,9 @@ The following roles may represent one or more people. One person may also play m
 * **Project Manager:** Works with Contrast on deployment schedule, tracks internal milestones and task completion, and is responsible for internal communications.
 * **Contrast UI Administrator:** Prepares technical environment; manages users, access controls, reports, upgrades and communications; interfaces with Contrast Support.
 * **Application Security Lead:** Creates and governs policy, security controls and the vulnerability management process.
-* **Development Leads:** Manages vulnerability remediation and build integration. (**Assess**)
-* **QA Leads:**	Oversees performance and QA testing of Protect-enabled servers as well as installation of agent(s) in QA environments. (**Protect**)
-* **Operations:** Pushes Protect-enabled servers into Production. (**Protect**)
+* **Development Leads:** Manages vulnerability remediation and build integration. (Assess)
+* **QA Leads:**	Oversees performance and QA testing of Protect-enabled servers as well as installation of agent(s) in QA environments. (Protect)
+* **Operations:** Pushes Protect-enabled servers into Production. (Protect)
 * **Executive Sponsor - Security:** Executive from the security group who oversees Contrast deployment.
 * **Executive Sponsor - Development:** Executive from the development group who oversees Contrast deployment.
 
@@ -63,36 +63,30 @@ To prepare for this meeting, you'll need verify the following information:
 
 ## Project Plan
 
-Once all the requirements and solution design are finalized in the Solution Architecture stage, it’s time to map out a project plan. Contrast will select one of its proven project plan templates, and collaborate with you to tailor it to your specific needs.
+Once all the requirements and solution design are finalized in the Solution Architecture stage, it’s time to map out a project plan. Contrast will select one of its proven project plan templates, and collaborate with you to tailor it to your specific needs. You will also decide on 
+project governance - status meetings, tracking of issues, etc. - and get buy-in from key stakeholders.
 
-### Objectives
+### Before You Start
 
-Create a formal project plan that concludes with the Contrast Business Review.
-Decide on project governance - status meetings, tracking of issues, etc. - and get buy-in from key stakeholders.
+To prepare for this meeting, you'll need verify the following information: 
 
-Preparation for this meeting: 
-
-* List of important dates for candidate applications: start of next sprint, code freezes, planned configuration changes, etc.
-* Each project owner of each candidate application is welcomed by Customer Success.
+* List of important dates for candidate applications and their servers (e.g., start of next sprint, code freezes and planned configuration changes).
+* List of owners of [continuous integration](github.com/Contrast-Security-OSS/) and [alerting tools](https://docs.contrastsecurity.com/admin-orgintegrations.html) in your ecosystem. (Protect)
 
 
 ## The Contrast Application 
 
-Prepare the Contrast application, sometimes called “TeamServer”, for use by setting configurations, teaching administrators about applicable features, installing the first agent, implementing policy and demonstrating reporting.
+To prepare the Contrast application, sometimes called “TeamServer”, some training and configuration is in order. For Assess, you will set configurations, teach administrators about applicable features, install the first agent, implement security policy and demonstrate reporting. For Protect, you will set configurations, enable rules and whitelists/blacklists, teaching administrators about available features, and train users how the application finds and delivers alerts.
 
-### Objectives
+### Before You Start
 
-* Prepare the Contrast application for use.
-* Deliver Administrator Training.
-* Configure security policy.
+To prepare for this meeting, you'll need verify the following information: 
 
-Preparation for this meeting: 
-
-* A list of names and email address of users who will be involved in the initial applications and need access to the Contrast application.
-* Identify the first application to be onboarded and invite the Agent Administrator to meeting.
-* Identify administrators to be trained.
-* Finalize security policy.
-* If **on-premises**, verify that [technical environmental requirements](https://docs.contrastsecurity.com/installation-setup.html#contrast-reqs) are being met before installing the Contrast application.
+* A list of names and email address of users who will be involved in the initial applications and servers, and need access to the Contrast application.
+* Identify the first application to be onboarded, and invite the Agent Administrator to the meeting. (Assess)
+* Identify administrators to be trained. (Assess)
+* Finalize security policy. (Assess)
+* If **on-premises**, verify that you meet [technical environmental requirements](https://docs.contrastsecurity.com/installation-setup.html#contrast-reqs) before installing the Contrast application.
 
 
 ## Baseline Initial Applications
