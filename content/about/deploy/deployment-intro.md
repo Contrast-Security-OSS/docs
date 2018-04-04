@@ -4,17 +4,7 @@ description: "Introduction to Contrast deployment"
 tags: "Contrast about deployment onboarding customer"
 -->
 
-## About the Products
-
-Contrast [Assess](assess-howitworks.html) produces accurate results without dependence on application security experts. Accuracy comes from Contrast's patented Deep Security Instrumentation technology, which integrates the most effective elements of Interactive (IAST), Static (SAST) and Dynamic (DAST) application security testing technology; software composition analysis (SCA); and configuration analysis. Assess then infuses them directly into your applications.
-
-Contrast [Protect](protect-howitworks.html) provides actionable and timely application layer threat intelligence across the entire application portfolio. Once instrumented with Protect, applications will self-report information about an attack, including the attacker, method of attack, applications affected, frequency, volume and level of compromise. Protect also provides specific guidance to engineering teams about where applications were attacked and how threats can be remediated.
-
-While Contrast's products serve different purposes, they can be used together to create effective security for your organization. 
-
-## Quick Value Method
-
-Contrast Security’s Quick Value delivery methodology is designed to reduce the time to achieve your desired business outcomes as well as to create a great onboarding experience for your team. With each of the setup and onboarding steps outlined for Contrast's Assess and Protect products, Contrast’s Customer Success representatives will continue to shepherd you through [What to Expect When You're Deploying](about-deployment.html#deploy-map). 
+Contrast Security’s Quick Value delivery methodology is designed to reduce the time to achieve your desired business outcomes as well as to create a great onboarding experience for your team. With each of the setup and onboarding steps outlined for Contrast's [Assess](assess-howitworks.html) and [Protect](protect-howitworks.html) products, Contrast’s Customer Success representatives will continue to shepherd you through [What to Expect When You're Deploying](about-deployment.html#deploy-map). 
 
 To expedite the process, information learned in the sales stage (e.g., your goals and desired timelines) is shared with Contrast's onboarding team, and progress and learnings from the onboarding stage is communicated to Customer Support. Contrast also simplifies the initial deployment for your team by consolidating multiple activities into a handful of meetings.
 
