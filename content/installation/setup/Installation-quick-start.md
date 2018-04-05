@@ -42,5 +42,3 @@ To connect to Contrast agents, install an agent into your web application server
 
 * The [Python agent](installation-python.html#python-overview) provides runtime protection of Django, Flask and Pyramid web applications.
 
-
-
