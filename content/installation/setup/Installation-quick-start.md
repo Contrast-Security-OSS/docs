@@ -1,6 +1,6 @@
 <!--
 title: "Quick Start Guide"
-description: "Overview of installing Contrast"
+description: "Overview of Contrast installation and configuration"
 tags: "quick start guide EOP overview Contrast agents installation setup"
 -->
 
