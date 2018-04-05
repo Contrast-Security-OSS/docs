@@ -15,10 +15,10 @@ The following steps introduce Contrast to an organization, integrate it into the
 * **Solution Architecture:** Tailor implementation.
 * **Project Plan:** Agree on details and timing.
 * **Contrast UI Preparation:** Get ready to add applications.
-* **Application Baseline:** Initial analysis of applications. (Assess)
-* **Vulnerability Management:** How vulnerabilities are analyzed, communicated and tracked. (Assess)
-* **Pre-production:** Integrate into ecosystem and perform Initial analysis. (Protect)
-* **Production Monitor:** Observe in monitor mode and validate workflow. (Protect)
+* **Application Baseline:** Initial analysis of applications. (**Assess**)
+* **Vulnerability Management:** How vulnerabilities are analyzed, communicated and tracked. (**Assess**)
+* **Pre-production:** Integrate into ecosystem and perform Initial analysis. (**Protect**)
+* **Production Monitor:** Observe in monitor mode and validate workflow. (**Protect**)
 * **Contrast Business Review:** Quantify the gained value.
 
 Contrast’s Customer Success team will continue working with you to help your organization increasingly gain value from the time and money you’ve invested.
@@ -30,9 +30,9 @@ The following roles may represent one or more people. One person may also play m
 * **Project Manager:** Works with Contrast on deployment schedule, tracks internal milestones and task completion, and is responsible for internal communications.
 * **Contrast UI Administrator:** Prepares technical environment; manages users, access controls, reports, upgrades and communications; interfaces with Contrast Support.
 * **Application Security Lead:** Creates and governs policy, security controls and the vulnerability management process.
-* **Development Leads:** Manages vulnerability remediation and build integration. (Assess)
-* **QA Leads:**	Oversees performance and QA testing of Protect-enabled servers as well as installation of agent(s) in QA environments. (Protect)
-* **Operations:** Pushes Protect-enabled servers into Production. (Protect)
+* **Development Leads:** Manages vulnerability remediation and build integration. (**Assess**)
+* **QA Leads:**	Oversees performance and QA testing of Protect-enabled servers as well as installation of agent(s) in QA environments. (**Protect**)
+* **Operations:** Pushes Protect-enabled servers into Production. (**Protect**)
 * **Executive Sponsor - Security:** Executive from the security group who oversees Contrast deployment.
 * **Executive Sponsor - Development:** Executive from the development group who oversees Contrast deployment.
 
@@ -71,7 +71,7 @@ project governance - status meetings, tracking of issues, etc. - and get buy-in 
 To prepare for this meeting, you'll need to verify the following information: 
 
 * List of important dates for candidate applications and their servers (e.g., start of next sprint, code freezes and planned configuration changes).
-* List of administrators of [continuous integration](https://contrast-security-oss.github.io/) and [notification tools](admin-orgintegrations.html#integration-start) in your ecosystem. (Protect)
+* List of administrators of [continuous integration](https://contrast-security-oss.github.io/) and [notification tools](admin-orgintegrations.html#integration-start) in your ecosystem. (**Protect**)
 
 
 ## The Contrast Application 
@@ -83,13 +83,13 @@ To prepare the Contrast application, sometimes called “TeamServer”, some tra
 To prepare for this meeting, you'll need to finalize the following information: 
 
 * A list of names and email address of users who will be involved in the initial applications and servers, and need access to the Contrast application.
-* Identify the first application to be onboarded, and invite the Agent Administrator to the meeting. (Assess)
-* Identify administrators to be trained. (Assess)
-* Finalize security policy. (Assess)
+* Identify the first application to be onboarded, and invite the Agent Administrator to the meeting. (**Assess**)
+* Identify administrators to be trained. (**Assess**)
+* Finalize security policy. (**Assess**)
 * If you're using **Enterprise-on-Premises** (EOP), verify that you meet [technical environmental requirements](installation-setup.html#contrast-reqs) before installing the Contrast application.
 
 
-## Production
+## Protect in Production
 
 The steps in this section walk **Protect** customers through deploying the product in your Production environment. 
 
@@ -106,7 +106,7 @@ To apply Protect to an application’s servers, you must complete the following 
 * Apply any [exclusions](admin-policymgmt.html#exclude), [virtual patches](admin-policymgmt.html#patch), [IP management](admin-policymgmt.html#ip) and rules that are required.
 * Attack the application and discuss findings.
 
-### Before you start
+#### Before you start
 
 To prepare for these steps, you'll need to finalize the following information: 
 
@@ -120,7 +120,7 @@ To prepare for these steps, you'll need to finalize the following information:
 
 After Contrast verifies that Protect is working as expected in the pre-Production environment, you can deploy Protect in Production in monitor mode for a limited period of time, and then enable blocking for ongoing protection. 
 
-### Before you start
+#### Before you start
 
 To prepare for these steps, you'll need to complete the following tasks: 
 
@@ -128,7 +128,7 @@ To prepare for these steps, you'll need to complete the following tasks:
 * Get approval for change to applications in Production.
 
 
-## Vulnerabilities 
+## Assess Vulnerabilities 
 
 The steps in this section walk **Assess** customers through the initial vulnerability discovery and management process. 
 
@@ -171,6 +171,6 @@ At the beginning of the onboarding process, Contrast worked with you to define y
 
 ## What Happens Next
 
-Follow-up by Contrast after the Contrast Business Review meeting typically includes plans for user and application/server adoption, increasing value, and addressing key challenges and issues. You're also encouraged to contact the [Customer Success](https://support.contrastsecurity.com) team about any issues you encounter as you continue to grow with Contrast. 
+Follow-up by Contrast after the Contrast Business Review meeting typically includes plans for user and application/server adoption, increasing value, and addressing key challenges and issues. You're also encouraged to contact the [Customer Success](https://support.contrastsecurity.com) team about any issues you encounter as you grow with Contrast. 
 
 
