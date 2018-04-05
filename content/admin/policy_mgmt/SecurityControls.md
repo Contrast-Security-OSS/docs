@@ -28,7 +28,7 @@ To create a new security control, click the **Add Security Control** button.
 
 <a href="assets/images/Security-control-add.png" rel="lightbox" title="Add a security control"><img class="thumbnail" src="assets/images/Security-control-add.png"/></a>
 
-After choosing a Name, Type and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control. You can choose **All**, or select one or more individual vulnerabilities.
+After choosing a Name, Type and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control. You can choose **All**, or select one or more individual vulnerabilities. It is important to note that Security Controls are intended to target only java.lang.String parameters (not boolean, int, long, short double, float, etc).
 
 >**Note:** Servers may require restart. Contrast provides a list of servers affected by your selection.
 
