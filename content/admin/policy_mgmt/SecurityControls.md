@@ -28,13 +28,16 @@ To create a new security control, click the **Add Security Control** button.
 
 <a href="assets/images/Security-control-add.png" rel="lightbox" title="Add a security control"><img class="thumbnail" src="assets/images/Security-control-add.png"/></a>
 
-After choosing a Name, Type and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control. You can choose **All**, or select one or more individual vulnerabilities. It is important to note that Security Controls are intended to target only java.lang.String parameters (not boolean, int, long, short double, float, etc).
+After choosing a Name, Type and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control. You can choose **All**, or select one or more individual vulnerabilities.
 
->**Note:** Servers may require restart. Contrast provides a list of servers affected by your selection.
+>**Notes:** 
+ * Security Controls are intended to target only `java.lang.String` parameters (not boolean, int, long, short double, float, etc.). 
+ * Servers may require restart. Contrast provides a list of servers affected by your selection.
+
 
 ### Vulnerability Details
 
-The Details tab is available for specific vulnerabilities for which Contrast captured runtime data flow. If Contrast notices a potential security control or an interesting event, it's shown in the tab as a low severity (green) event. After expanding the details of this event, you can click a button to add a security control. 
+The **Details** tab is available for specific vulnerabilities for which Contrast captured runtime data flow. If Contrast notices a potential security control or an interesting event, it's shown in the tab as a low severity (green) event. After expanding the details of this event, you can click a button to add a security control. 
 
 <a href="assets/images/Security-control-details-tab.png" rel="lightbox" title="Create a security control from the vulnerability Details tab"><img class="thumbnail" src="assets/images/Security-control-details-tab.png"/></a>
 
