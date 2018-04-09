@@ -37,7 +37,6 @@ To avoid storing sensitive proxy credentials in plain text, the agent stores the
 | ------------------- | ---------------------------------------- | ------- |
 | ServerName          | Customizes the display name used by the Contrast interface for the server running the Contrast.NET agent. If the **ServerName** configuration setting is not present, the .NET agent will use the computer name for the server's display name. You can view the computer name by viewing the **System** properties in the Windows **Control Panel**. | 3.1.4+  |
 | Contrast.AppVersion | Controls the application version tag sent to Contrast. | 3.3.6+  |
-| Contrast.AppName    | Controls the application name sent to Contrast.        | 3.1.3+  |
 | Contrast.AppGroup   | Specifies the group to which this application will be added in the Contrast interface if this application is not already a member of a group. | 3.4.5+ |
 | ServerEnvironment   | Controls the environment value sent to Contrast. Valid `ServerEnvironment` values are `DEVELOPMENT`, `QA` or `PRODUCTION`. The default value is `QA`. | 3.4.2+  |
 | ServerTags          | Controls free-form tags sent to Contrast for servers; you can use tags to search for servers in the Contrast interface. See the article on [Application-Specific Settings](installation-netconfig.html#appname) for details on tagging applications, libraries and vulnerabilities. | 4.8.20+ |
