@@ -4,11 +4,13 @@ description: "Introduction to Contrast deployment"
 tags: "Contrast about deployment onboarding customer"
 -->
 
-Contrast Security’s <!-- Quick Value delivery --> deployment methodology is designed to reduce the time to achieve your desired business outcomes and to create a great onboarding experience for your team. With each of step of the process, Contrast’s Customer Success representatives will continue to shepherd you through setup and onboarding Contrast's [Assess](assess-howitworks.html) and [Protect](protect-howitworks.html) products. 
+Contrast Security’s <!-- Quick Value delivery --> deployment methodology is designed to reduce the time to achieve your desired business outcomes and to create an inspiring onboarding experience for your team. 
 
-To expedite deployment, information gathered in the sales stage (e.g., your goals and desired timelines) is shared with Contrast's onboarding team, who then passes discovery from the onboarding stage to Customer Success. Contrast also simplifies the initial process for your team by consolidating multiple activities into a handful of meetings. For summary of the things you'll accomplish, continue on to read [What to Expect When You're Deploying](about-deployment.html#deploy-map). 
+To expedite deployment, information gathered in the sales stage (e.g., your goals and desired timelines) is shared with Contrast's onboarding team, who then passes discovery from the onboarding stage to Customer Success representatives. Contrast also simplifies the initial process for your team by consolidating multiple activities into a handful of meetings. With each of step of the process, Contrast’s Customer Success representatives will continue to shepherd you through setup and onboarding Contrast's [Assess](assess-howitworks.html) and [Protect](protect-howitworks.html) products. 
 
-The Customer success team will also use the Contrast Security Maturity Model during the beginning stage of deployment so that you can position your organization to improve its processes. 
+> **Note:** For summary of the things you'll accomplish, continue on to read [What to Expect When You're Deploying](about-deployment.html#deploy-map). 
+
+During the beginning stage of deployment, the Customer Success team will use the Contrast Security Maturity Model to help you position your organization to improve its processes. 
 
 ## Contrast Security Maturity Model
 
