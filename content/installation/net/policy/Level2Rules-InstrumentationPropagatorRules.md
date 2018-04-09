@@ -11,7 +11,7 @@ You can disable individual propagator rules in the *customerPolicy.xml* file. Ad
 > Example:
  ```xml
    <propagators>
-     <method assembly="mscorlib" signature="void System.Text.StringBuilder..ctor(System.String)" enabled="false" />
+     <method signature="void System.Text.StringBuilder..ctor(System.String)" enabled="false" />
        ...
    </propagators>  
  ```

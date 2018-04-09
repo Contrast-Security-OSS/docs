@@ -18,9 +18,9 @@ Contrast.NET instruments your application code and follows user-provided data to
   <sources>
       ...
     <!-- HttpRequest Sources -->
-    <method name="HTTP Request QueryString" assembly="System.Web"  signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_QueryString()" tags="cross-site" sourceType="parameter" />
-    <method name="HTTP Request Form" assembly="System.Web"  signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_Form()" tags="cross-site" sourceType="parameter" target="R" />
-    <method name="HTTP Request Method" assembly="System.Web" signature="System.String System.Web.HttpRequest.get_RequestType()" tags="limited-chars" sourceType="uri" />
+    <method name="HTTP Request QueryString" signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_QueryString()" tags="cross-site" sourceType="parameter" />
+    <method name="HTTP Request Form" signature="System.Collections.Specialized.NameValueCollection System.Web.HttpRequest.get_Form()" tags="cross-site" sourceType="parameter" target="R" />
+    <method name="HTTP Request Method" signature="System.String System.Web.HttpRequest.get_RequestType()" tags="limited-chars" sourceType="uri" />
   </sources>  
 ```
 
@@ -28,10 +28,8 @@ Contrast.NET instruments your application code and follows user-provided data to
 
 
 ```
-method name="Name" assembly="ASSEMBLY" signature="SIGNATURE" tags="TAGS" [enabled="ENABLED"] [sourceType="SOURCETYPE"]
+method name="Name" signature="SIGNATURE" tags="TAGS" [enabled="ENABLED"] [sourceType="SOURCETYPE"]
 ```
-
-* **ASSEMBLY:** Assembly of the method to instrument. <br> (**Required**)
 
 * **SIGNATURE:** Signature of the method to instrument. <br> (**Required**)
    
