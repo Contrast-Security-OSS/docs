@@ -25,7 +25,7 @@ TS1 configurations provide a baseline level of CPU performance, but are flexible
 
 | vCPUs | Clock Speed      | RAM | Storage |
 |:-----:|:----------------:|:---:|:-------:|
-| ~2    | 2.5GHz to 3.3GHz | 4GB |  30GB   |
+| ~2    | 2.5GHz to 3.3GHz | 12GB |  30GB  |
 
 
 ### TS2 configuration
@@ -33,9 +33,9 @@ TS2 configurations are recommended for workloads of three to thirty agents commu
 
 TS2 configurations provide a suitable level of performance for most deployments fitting the workloads described above. They are designed for typical workloads and scenarios within Contrast. The greater the number of connected agents, the greater the memory requirements are for Contrast to handle inflight traces. Storage depends on the life of trace data and the preservation of log files by system administrators.
 
-| vCPUs | Clock Speed      | RAM | Storage |
+| vCPUs    | Clock Speed      | RAM | Storage |
 |:--------:|:----------------:|:---:|:-------:|
-| ~4 to ~8 | 2.5GHz to 3.3GHz | 8GB to 12GB |  50GB to 100GB   |
+| ~4 to ~8 | 2.5GHz to 3.3GHz | 12GB | 50GB to 100GB |
 
 
 ### TS3 configuration
