@@ -87,6 +87,43 @@ To prepare for this stage, you'll need to finalize the following information:
 * If you're using **Enterprise-on-Premises** (EOP), verify that you meet [technical environmental requirements](installation-setup.html#contrast-reqs) before installing the Contrast application.
 
 
+## Assess Vulnerabilities 
+
+The steps in this section walk **Assess** customers through the initial vulnerability discovery and management process. 
+
+### Application Baseline 
+
+To establish a baseline of true vulnerabilities for the initial applications, as well as a list of their third-party libraries, you must complete the following steps to install one of the agents and deal with any vulnerabilities that you find.
+
+* Install one of the agents: 
+ * [Java](installation-java.html#java-supported)
+ * [.NET](installation-net.html#net-supported)
+ * [Node](installation-node.html#node-supported) 
+ * [Ruby](installation-ruby.html#ruby-supported)
+* Exercise the application and possibly run functional and/or regression tests.
+* Discuss found vulnerabilities.
+* Apply any [security controls](admin-policymgmt.html#security) and [exclusions](admin-policymgmt.html#exclude) that are needed.
+
+#### Before you start
+
+To prepare for this stage, you'll need to verify the following information: 
+
+* A separate meeting scheduled with each application team to baseline the application.
+* A list of known [security controls](admin-policymgmt.html#security) used by existing vulnerability detection tools.
+* An introduction to owners of [continuous integration tools](https://contrast-security-oss.github.io/) in your ecosystem.
+
+### Vulnerability Management 
+
+Your next focus is integrating your security management process and security policy governance, including defining routes for alerts, verifying reports and integrating tools in your organization.
+
+#### Before you start
+
+To prepare for this stage, you'll need to verify the following information: 
+
+* List of the administrators for [tools](https://contrast-security-oss.github.io/) in your ecosystem (i.e., IDEs, [bugtrackers](admin-orgintegrations.html#bugtracker), continuous integration and access management).
+* An explanation of your vulnerability mitigation workflow for each application.
+
+
 ## Protect in Production
 
 The steps in this section walk **Protect** customers through deploying the product in your Production environment. (Assess customers can skip to the **Assess Vulnerabilities** section.)
@@ -124,43 +161,6 @@ To prepare for these steps, you'll need to complete the following tasks:
 
 * Determine which Protect rules will be changed from Monitor to Block.
 * Get approval for the change to applications in Production.
-
-
-## Assess Vulnerabilities 
-
-The steps in this section walk **Assess** customers through the initial vulnerability discovery and management process. 
-
-### Baseline Initial Applications
-
-To establish a baseline of true vulnerabilities for the initial applications, as well as a list of their third-party libraries, you must complete the following steps to install one of the agents and deal with any vulnerabilities that you find.
-
-* Install one of the agents: 
- * [Java](installation-java.html#java-supported)
- * [.NET](installation-net.html#net-supported)
- * [Node](installation-node.html#node-supported) 
- * [Ruby](installation-ruby.html#ruby-supported)
-* Exercise the application and possibly run functional and/or regression tests.
-* Discuss found vulnerabilities.
-* Apply any [security controls](admin-policymgmt.html#security) and [exclusions](admin-policymgmt.html#exclude) that are needed.
-
-#### Before you start
-
-To prepare for this stage, you'll need to verify the following information: 
-
-* A separate meeting scheduled with each application team to baseline the application.
-* A list of known [security controls](admin-policymgmt.html#security) used by existing vulnerability detection tools.
-* An introduction to owners of [continuous integration tools](https://contrast-security-oss.github.io/) in your ecosystem.
-
-### Manage Vulnerabilities
-
-Your next focus is integrating your security management process and security policy governance, including defining routes for alerts, verifying reports and integrating tools in your organization.
-
-#### Before you start
-
-To prepare for this stage, you'll need to verify the following information: 
-
-* List of the administrators for [tools](https://contrast-security-oss.github.io/) in your ecosystem (i.e., IDEs, [bugtrackers](admin-orgintegrations.html#bugtracker), continuous integration and access management).
-* An explanation of your vulnerability mitigation workflow for each application.
 
 
 ## Contrast Business Review
