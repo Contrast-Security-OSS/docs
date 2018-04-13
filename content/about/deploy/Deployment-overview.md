@@ -62,7 +62,7 @@ To prepare for this stage, you'll need to verify the following information:
 
 ## Project Plan
 
-Once all the requirements and the solution design are finalized in the Solution Architecture stage, it’s time to map out a project plan. Contrast will select one of its proven project plan templates and collaborate with you to tailor it to your specific needs. You will also decide on project governance - status meetings, tracking of issues, etc. - and get buy-in from key stakeholders.
+Once all the requirements and the solution design are finalized in the Solution Architecture stage, it’s time to map out a project plan. Contrast will select one of its proven project plan templates and collaborate with you to tailor it to your specific needs. You'll also decide on project governance - status meetings, tracking of issues, etc. - and get buy-in from key stakeholders.
 
 ### Before you start
 
@@ -74,7 +74,7 @@ To prepare for this meeting, you'll need to verify the following information:
 
 ## The Contrast Application 
 
-To prepare the Contrast application, sometimes called “TeamServer”, some training and configuration is in order. For Assess, you will set configurations, teach administrators about applicable features, install the first agent, implement security policy and demonstrate reporting. For Protect, you will set configurations, enable rules and whitelists/blacklists, teach administrators about available features, and train users how the application finds and delivers alerts.
+To prepare the Contrast application, sometimes called “TeamServer”, some training and configuration is in order. For Assess, you'll set configurations, teach administrators about applicable features, install the first agent, implement security policy and demonstrate reporting. For Protect, you'll set configurations, enable rules and whitelists/blacklists, teach administrators about available features, and train users how the application finds and delivers alerts.
 
 ### Before you start
 
