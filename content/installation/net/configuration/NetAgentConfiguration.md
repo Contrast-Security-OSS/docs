@@ -11,7 +11,7 @@ The Contrast configuration file *DotnetAgentService.exe.config* contains several
 | Parameter                | Description                              | Version |
 | ------------------------ | ---------------------------------------- | ------- |
 | AutoUpdateBehavior       | Determines if the agent automatically updates to a newer version when a newer version is available on Contrast. The default value is **Daily**.<li>**Daily**: The agent checks for a new version on service start and every 24 hours afterwards.</li><li>**Startup**: The agent only checks for and installs updates on service start</li><li>**Disabled**: The agent checks for, but doesn't install, any updates.</li> | 4.6+     |
-| RestartIISOnConfigChange | Restarts IIS in the background if any of the following configuration settings are changed: `ProcessBlacklist`, `ProcessWhitelist`, `ProfilerBehavior` or `ResponseUrlWhiteListRegex`. The default value is **true**. If set to **false**, you must restart IIS for changes to the noted configuration settings to take effect. | 3.2.7+  |
+| RestartIISOnConfigChange | Restarts IIS in the background if any of the following configuration settings are changed: `ProcessBlacklist`, `ProcessWhitelist`, or `ResponseUrlWhiteListRegex`. The default value is **true**. If set to **false**, you must restart IIS for changes to the noted configuration settings to take effect. | 3.2.7+  |
 
 ## Communication
 
