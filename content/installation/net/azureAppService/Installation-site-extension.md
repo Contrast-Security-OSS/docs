@@ -4,22 +4,25 @@ description: "Guide to installing Contrast .NET Agent on Azure App Service using
 tags: "installation configuration .Net Azure AppService site extension"
 -->
 
-I. Create an Application Hosted on Azure App Service
+### I. Create an Application Hosted on Azure App Service
 
 1. Create an Azure account if you don't have one already: https://portal.azure.com/ 
 2. Follow the instructions to create an ASP.NET web application and deploy it to Azure App Service: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework 
 3. Publish your application to Azure and confirm that it works as expected without Contrast
 
-II. Add Application Settings for Contrast (see section below on adding application settings)
+### II. Add Application Settings for Contrast (see section below on adding application settings)
 
-These are the Application Settings that the agent needs to connect to Contrast.  Go to My Account in top right corner in Team Server to get your keys.
+These are the Application Settings that the agent needs to connect to Contrast.  Go to My Account in top right corner in Contrast website to get your keys.
 
-* CONTRAST_TeamServerUrl: https://app.contrastsecurity.com
-* CONTRAST_TeamServerUserName: [REPLACE WITH YOUR AGENT USERNAME]
-* CONTRAST_TeamServerServiceKey: [REPLACE WITH YOUR AGENT SERVICE KEY]
-* CONTRAST_TeamServerApiKey: [REPLACE WITH YOUR AGENT API KEY]
 
-III. Add the Site Extension to the Hosted Application
+| Key                        | Value                       |
+| -------------------------- | ---------------------------------------- |
+| CONTRAST_TeamServerUserName             | [REPLACE WITH YOUR AGENT USERNAME]  |
+| CONTRAST_TeamServerServiceKey           | [REPLACE WITH YOUR AGENT SERVICE KEY]  |
+| CONTRAST_TeamServerApiKey               | [REPLACE WITH YOUR AGENT API KEY]  |
+| CONTRAST_TeamServerUrl                  | Optional - defaults to https://app.contrastsecurity.com.  Replace with another url if using a TeamServer hosted elsewhere  |
+
+### III. Add the Site Extension to the Hosted Application
 
 1. In the Azure Portal, select your hosted application
 2. Select "Extensions"
@@ -39,3 +42,6 @@ III. Add the Site Extension to the Hosted Application
 7. Go back to the application overview and "Restart" the application
 8. Navigate to the application
 9. Confirm the application is reporting to Teamserver
+
+> **NOTE:**
+The agent can also be installed from the _Site Extensions_ area of your application management SCM (Kudu) site. 

@@ -8,6 +8,6 @@ The Contrast .NET agent for Azure App Service analyzes the behavior of .NET web 
 
 There are two ways to install the agent:
 
-1. Use the Site Extension.  [More info](#site-extension-installation)
+1. Express installation via Azure Portal Extensions.  [More info](#site-extension-installation)
 
-2. Add Nuget package to your application project.  [More info](#nuget-installation)
+2. Manual installation via Nuget.  [More info](#nuget-installation)
