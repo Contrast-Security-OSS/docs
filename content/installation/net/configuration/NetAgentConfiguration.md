@@ -70,6 +70,7 @@ More detailed levels of logging degrade performance, but can generate useful inf
 | ---------------------------------------- | ---------------------------------------- |
 | SamplingBaseline, SamplingFrequency, SamplingWindow | Enable and configure sampling mode. Configured in [Server Settings](user-servers.html#settings) in the Contrast interface by default. See the article on [Sampling](admin-orgsettings.html#org-server) for more information. |
 | StackTraceConfig                         | Limits stack traces captured by the agent. Configured in [Server Settings](user-servers.html#settings) in the Contrast interface by default. The default is **Full**. <li>**Full**: Captures all stack traces with file and line number information. Deployments must include *.PDB* files for line number information.</li><li>**Limited**: Better performance; captures all stack traces but without file and line number information. Best used for builds without debugging symbols (*.PDB* files).</li><li>**Minimal**: Best performance; doesn't capture intermediate propagator stack traces, no file and line information. Best used for Release builds and Production environments.</li> |
+| ThreadAnalysis                           | Web (default) or Full.  Web follow data flow through normal web operations.  Full instruments all threading operations which adds overhead.  It can be used for more thorough analysis if your application manually creates background threads.
 
 
 
