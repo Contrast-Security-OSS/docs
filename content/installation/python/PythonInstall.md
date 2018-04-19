@@ -66,10 +66,11 @@ app.wsgi_app = ContrastMiddleware(app.wsgi_app)
 **Pyramid:**
 
 ``` python
-from pyramid.config import Configurator
+from contrast.agent.middlewares.wsgi_middleware import WSGIMiddleware as ContrastMiddleware
+# other app code		
+app = config.make_wsgi_app()
 
-config = Configurator()
-config.add_tween('contrast.agent.middlewares.pyramid_middleware.PyramidMiddleware')
+app = ContrastMiddleware(app)
 ```
 
 **WSGI:**
