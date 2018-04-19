@@ -34,3 +34,11 @@ JRockit 1.5, 1.6 (update 95+ or R28.3.6+) |Jetty 6, 7, 8, 9 | Struts, Struts 2
 Contrast tests WebSphere on Windows and Linux, and offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
 
 
+### Note for Proguard Users
+
+[Proguard](https://sourceforge.net/projects/proguard/files/) includes Java
+bytecode optimization features which break basic assumptions that runtime agents
+like Contrast rely on. Proguard users that wish to protect their applications
+with Contrast need to avoid these optimizations by using Proguard's
+[-dontoptimize](https://www.guardsquare.com/en/proguard/manual/usage#dontoptimize)
+configuration option.
