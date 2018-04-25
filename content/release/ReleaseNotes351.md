@@ -4,14 +4,14 @@ description: "Contrast 3.5.1 April 2018"
 tags: "3.5.1 April Release Notes"
 -->
 
-Improved integrations and enhanced Jenkins plugin features...
+Does dealing with issues feel like herding cats? Use new integration options and enhanced Jenkins plugin features to help yourself out! 
 
 ## Fixes
 
 * Erroneous info has been removed from your Audit Log. CONTRAST-22183
 * Send vulnerabilities to your bugtracker, even for Note severity. CONTRAST-21914, CONTRAST-22066
-* No more Organization Settings for View users. CONTRAST-22272
-* Save changes to fields in JIRA integration. CONTRAST-22063
+* View-level users can't view Organization Settings. CONTRAST-22272
+* Save changes to fields in your JIRA integration. CONTRAST-22063
 * Edits to your HipChat integration show up in the room immediately. CONTRAST-21323
 * EOP customers can complete login tests for LDAP authentication. CONTRAST-22486
 
