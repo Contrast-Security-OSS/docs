@@ -1,11 +1,12 @@
 <!--
 title: "Contrast .NET Agent Supported Technology"
 description: "Contrast .NET agent supported technology"
-tags: "installation agent .NET supported technology"
+tags: "installation agent .NET windows azure supported technology"
 -->
 
+## .NET for Windows
 
-The Contrast.NET agent supports analysis of web applications built on the following technologies:
+The Contrast.NET agent supports analysis of web applications built on the following technologies.
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
@@ -20,3 +21,20 @@ The Contrast.NET agent supports analysis of web applications built on the follow
 > * The **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. The Profiler API is an interface based on a **Component Object Model (COM)**, and isn't supported on Linux.
 > * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime. 
 > * Contrast doesn't support analysis of .NET Core applications at this time because .NET Core applications run on a different runtime (CoreCLR).
+
+##.NET for Azure
+
+The Contrast .NET Azure App Service agent supports analysis of web applications built on the following technologies.
+
+| Technology                 | Supported versions                       |
+| -------------------------- | ---------------------------------------- |
+| .NET Framework             | Your application must be set to use CLR4. (.NET 4.7.1 is deployed currently on Azure.)  Any application that can run on this version is supported. (.NET 3.5 isn't supported.)  |
+| CLR                        | CLR4                       |
+| Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
+| Web Application Frameworks | All of the frameworks supported by the Windows agent are analyzed on Azure. See [Supported Technologies](installation-netinstall.html#net-tech) for more information. |
+
+
+> **Note:** Only applications using the full .NET Framework are currently supported. Contrast plans to add support for .NET Core applications in the future.
+
+
+
