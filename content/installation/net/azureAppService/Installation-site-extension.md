@@ -4,13 +4,16 @@ description: "Guide to installing Contrast .NET Agent on Azure App Service using
 tags: "installation configuration .Net Azure AppService site extension"
 -->
 
-### I. Create an Application Hosted on Azure App Service
+Complete the following steps for Express Installation of the .NET agent via Azure Portal Extensions.
 
-1. Create an Azure account if you don't have one already: https://portal.azure.com/ 
-2. Follow the instructions to create an ASP.NET web application and deploy it to Azure App Service: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework 
-3. Publish your application to Azure and confirm that it works as expected without Contrast
+## Step One: Create an application hosted on Azure App Service
 
-### II. Add Application Settings for Contrast (see section below on adding application settings)
+* Create an Azure account if you don't have one already: https://portal.azure.com/ 
+* Follow the instructions to create an ASP.NET web application and deploy it to Azure App Service: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework 
+* Publish your application to Azure and confirm that it works as expected without Contrast
+
+## Step Two: Add application settings for Contrast 
+<!-- What does "(see section below on adding application settings)" mean? -->
 
 These are the Application Settings that the agent needs to connect to Contrast.  Go to My Account in top right corner in Contrast website to get your keys.
 
@@ -22,26 +25,27 @@ These are the Application Settings that the agent needs to connect to Contrast. 
 | CONTRAST_TeamServerApiKey               | [REPLACE WITH YOUR AGENT API KEY]  |
 | CONTRAST_TeamServerUrl                  | Optional - defaults to https://app.contrastsecurity.com.  Replace with another url if using a TeamServer hosted elsewhere  |
 
-### III. Add the Site Extension to the Hosted Application
+## Step Three: Add the site extension to the hosted application
 
-1. In the Azure Portal, select your hosted application
-2. Select "Extensions"
+* In the Azure Portal, select your hosted application
+* Select "Extensions"
 
     <a href="assets/images/AzureSite_SelectExtensionTab.png" rel="lightbox" title="Extension Tab of Azure App Service Web App"><img class="thumbnail" src="assets/images/AzureSite_SelectExtensionTab.png"/></a>
 
-3. Click "+ Add"
-4. Select the Contrast.NET Site Extension
+* Click "+ Add"
+* Select the Contrast.NET Site Extension
 
     <a href="assets/images/AzureSite_SelectContrastExtension.png" rel="lightbox" title="Select Contrast.NET Site Extension from Extension List"><img class="thumbnail" src="assets/images/AzureSite_SelectContrastExtension.png"/></a>
 
-5. Click "OK" and agree to the terms and conditions
-6. Wait a few seconds and confirm the site extension installed correctly
+* Click "OK" and agree to the terms and conditions
+* Wait a few seconds and confirm the site extension installed correctly
 
     <a href="assets/images/AzureSite_ContrastExtensionInstalled.png" rel="lightbox" title="Contrast.NET Site Extension Installed Popup"><img class="thumbnail" src="assets/images/AzureSite_ContrastExtensionInstalled.png"/></a>
 
-7. Go back to the application overview and "Restart" the application
-8. Navigate to the application
-9. Confirm the application is reporting to Teamserver
+* Go back to the application overview and "Restart" the application
+* Navigate to the application
+* Confirm the application is reporting to Teamserver
 
-> **NOTE:**
-The agent can also be installed from the _Site Extensions_ area of your application management SCM (Kudu) site. 
+> **Note:** The agent can also be installed from the _Site Extensions_ area of your application management SCM (Kudu) site. 
+
+
