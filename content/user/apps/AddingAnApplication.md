@@ -49,29 +49,27 @@ For **.Net**, you can configure group access at the application or server level.
 
 For **Node.js**, you can choose from two configuration methods. 
 
-* You can add `"appGroup":"groupname"` to the *contrast.json* file. 
+* You can add `"appGroup":"groupname"` to the *contrast_security.yaml* file. 
 
 > **Example:**
- ```
- {
- 	 "apiKey": "foobar123",
-	 "user": {
-		 "id": "joe",
-		 "serviceKey": "1234"
-	 },
-	 "uri": "http://app.contrastsecurity.com",
-	 "appGroup": "insertGroupNameHere"
- }
+ ``` yaml
+ contrast:
+   url: https://app.contrastsecurity.com
+   user_name: contrast_user
+   api_key: demo
+   service_key: demo
+ application:
+   group: insertGroupNameHere
  ```
 
-* You can also add `--appGroup "groupname"` to command line arguments or the `npm command` in your *package.json* file. 
+* You can also add `--application.group "groupname"` to command line arguments or the `npm command` in your *package.json* file. 
 
 > **Examples:**
  ```
- node-contrast index.js --appGroup groupName
+ node-contrast index.js --application.group "groupname"
  ```
  ```
- npm run contrast -- --appGroup groupName
+ npm run contrast -- --application.group "groupname"
  ```
 
 For **Ruby**, add the `group` field to the `application` section of the *contrast_security.yaml* file from Contrast. 
