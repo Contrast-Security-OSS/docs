@@ -9,9 +9,8 @@ tags: "troubleshoot java agent NoClassDefFoundError"
 ```java.lang.NoClassDefFoundError:com/.../EventController
 ```
 
-This error indicates you've renamed your agent jar from its original name, ***contrast.jar***. 
-
+This error usually indicates you've renamed your agent jar from its original name, ***contrast.jar***. It may also mean that you're using an OSGi container like Felix or Equinox that is having trouble working with our auto-updating agent.
 
 ## Solution
 
-The name of this file can't be changed.
+The name of the contrast agent file can't be changed, and OSGi applications should only use the non-auto updating agent (also called the "1.5 agent".
