@@ -4,7 +4,7 @@ description: "Configuring the Node.js Agent"
 tags: "installation NodeJS agent configuration"
 -->
 
-Configuration options may be used to alter Contrast's behavior. They can all be appended to your startup command (e.g., `npm run contrast -- --agent.logger.stdout false` or `node-contrast server.js --agent.logger.stdout false`). They can also be set via environment variables of the form `SETTING__NAME` (e.g., `--agent.logger.stdout false` becomes `AGENT__LOGGER__STDOUT=false`). With the exception of `--configFile`, they can all be added to your *contrast.json* file as well.
+You may use configuration options to alter Contrast's behavior. They can all be appended to your startup command (e.g., `npm run contrast -- --agent.logger.stdout false` or `node-contrast server.js --agent.logger.stdout false`). They can also be set via environment variables of the form `SETTING__NAME` (e.g., `--agent.logger.stdout false` becomes `AGENT__LOGGER__STDOUT=false`). With the exception of `--configFile`, they can all be added to your *contrast_security.yaml* file as well.
 
 ``` javascript
 {
@@ -19,7 +19,7 @@ Configuration options may be used to alter Contrast's behavior. They can all be 
 
 Parameter                                      | Environment Variable                     | Description
 ------------------------------                 | --------                                 | -------------
--c, --configFile <path>                        | CONTRAST_CONFIG                          | Set config file location. Defaults to *<app_root>/contrast.yaml*.
+-c, --configFile <path>                        | CONTRAST_CONFIG                          | Set *config* file location. Defaults to *<app_root>/contrast_security.yaml*.
 --contrast.enable [false]                      | CONTRAST__ENABLE                         | Set `false` to disable reporting. Default is `true`.
 --contrast.api_key <key>                       | CONTRAST__API_KEY                        | The organization API key.
 --contrast.service_key <key>                   | CONTRAST__SERVICE_KEY                    | Account service key.
