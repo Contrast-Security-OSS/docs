@@ -30,8 +30,10 @@ If better performance is really important to your environment, consider the foll
 
 Contrast also requires some memory to operate. If you're running close to your memory limits, using Contrast might put you over the limit. To account for Contrast, add the following memory:
 
-1. Add 32MB of PermGen space in HotSpot JVM's
+1. Add 32MB of PermGen space in HotSpot JVM that use PermGen
 2. Add another 128MB to the maximum heap size
+
+Our minimum requirements for memory are 1.8x maximum heap used during normal application usage. Most of the time, the above steps are more than enough.
 
 ## More Information
 
