@@ -26,6 +26,7 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
      server:
        name: BluemixNodeServer
     ```
+
 <br> 
 
 > **Note:** To find other options for customizing the Node agent, go to the [Configuration article](installation-node.html#node-config). 
