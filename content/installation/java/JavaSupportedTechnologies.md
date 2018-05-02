@@ -4,7 +4,7 @@ description: "List of supported technologies"
 tags: "Java agent installation containers JDKs frameworks libraries support troubleshooting"
 -->
 
-Contrast is tested to be compatible with the following technologies, but we're also compatible with many more.
+Contrast is tested and proven to be compatible with the following technologies; however, Contrast is also compatible with many more that aren't listed.
 
 |Supported JDKS                             | Supported Containers                 | Supported Application Frameworks
 |:-------------- |:-------------------- |:--------------------------------
