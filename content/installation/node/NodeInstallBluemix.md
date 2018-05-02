@@ -14,8 +14,9 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
 
 ## Setup
 
-* In the *contrast.json* file, you can configure the name of the server to which this application will report. (Contrast recommends that you complete this step to avoid creating duplicate servers in the application.) To configure the server name as "BluemixNodeServer" in Contrast, add `server.name: BluemixNodeServer`. For example:
+* In the *contrast.json* file, you can configure the name of the server to which this application will report. (Contrast recommends that you complete this step to avoid creating duplicate servers in the application.) To configure the server name as "BluemixNodeServer" in Contrast, add `server.name: BluemixNodeServer`. 
 
+> **Example:**
     ```yaml
      contrast:
        url: https://app.contrastsecurity.com
@@ -25,8 +26,9 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
      server:
        name: BluemixNodeServer
     ```
+<br> 
 
-> Note: To find other options for customizing the Node agent, go to the [Configuration article](installation-node.html#node-config). 
+> **Note:** To find other options for customizing the Node agent, go to the [Configuration article](installation-node.html#node-config). 
 
 * Create a folder named *contrast* in your application’s root directory.
 
@@ -41,7 +43,7 @@ x.y.z.tgz && node-contrast index.js -c /home/vcap/app/contrast/contrast_security
 
 ## Run the Agent
 
-* Since Bluemix runs the start script by default, you must change the start command to point to the ```bluemix-with-contrast``` line given in the previous step.
+* Since Bluemix runs the start script by default, you must change the start command to point to the `bluemix-with-contrast` line given in the previous step.
 
 ```
 "start":"npm run bluemix-with-contrast"
@@ -53,7 +55,7 @@ x.y.z.tgz && node-contrast index.js -c /home/vcap/app/contrast/contrast_security
 },
 ```
 
-* Push the application to Bluemix using ```cf push <application name> -t 180```.
+* Push the application to Bluemix using `cf push <application name> -t 180`.
 
 Once the the deploy is finished, you should see the application in Contrast.
 
