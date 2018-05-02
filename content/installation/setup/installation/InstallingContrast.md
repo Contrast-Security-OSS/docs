@@ -49,9 +49,9 @@ The default password for both users is **default1!**.
 
 > **Note:** Contrast recommends that you change both passwords after you install and configure the application.
 
-## Using Contrast Without Cache
+## Use Contrast without Cache
 
-If you downloaded and installed Contrast that does not contain cache, please enable Hub connectivity in System Settings -> General Settings so that you continue to get the latest library data. 
+If you downloaded and installed the version of Contrast that doesn't contain cache, enable [Hub](https://hub.contrastsecurity.com/h/) connectivity in [System Settings](admin-systemsettings.html#system-glance) so that you continue to get the latest library data. 
 
 ## More Information
 
