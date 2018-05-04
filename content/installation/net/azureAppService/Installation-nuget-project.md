@@ -1,6 +1,6 @@
 <!--
 title: "Installing Contrast via Nuget Azure App Service package"
-description: "Guide to installing Contrast .NET Agent on Azure App Service using the Nuget package"
+description: "Guide to installing .NET Agent on Azure App Service using the Nuget package"
 tags: "installation configuration .Net Azure AppService site nuget visualstudio"
 -->
 
@@ -8,28 +8,28 @@ Complete the following steps for Manual Installation of the .NET agent via Nuget
 
 ## Step One: Create an application hosted on Azure App Service
 
-* Create an Azure account if you don't have one already: https://portal.azure.com/ 
-* Follow the instructions to create an ASP.NET web application and deploy it to Azure App Service: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework 
-* Publish your application to Azure and confirm that it works as expected without Contrast. 
+* [Create an Azure account](https://portal.azure.com/) if you don't have one already. 
+* Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service.
+* Publish your application to Azure, and confirm that it works as expected without Contrast. 
 
 ## Step Two: Add the Contrast NuGet Package to your application 
 
 In Visual Studio:
 
-* In the Solution Explorer, under the application project, right click on References and select "Manage NuGet Packages" 
+* Under the application project in the Solution Explorer, right click on **References** and select **Manage NuGet Packages**.
 
-* Search for __Contrast.Net.Azure.AppService__ package.  Select it and add it to your project
+* Search for **Contrast.Net.Azure.AppService** package, select it and add it to your project.
 
-* Build your application.  Confirm that Contrast assemblies (e.g. `Contrast.Sensors.dll` and `ContrastProfiler-32.dll`) are in your application's bin directory. You can easily navigate to the bin directory by right clicking on the project in Visual Studio and selecting "Open Folder in File Explorer" and then navigating to the "bin" directory from there. 
+* Build your application. Confirm that Contrast assemblies (e.g., `Contrast.Sensors.dll` and `ContrastProfiler-32.dll`) are in your application's *bin* directory. You can easily navigate to the *bin* directory by right clicking on the project in Visual Studio, selecting **Open Folder in File Explorer** and going to the directory from there. 
 
 ## Step Three: Add application authentication settings for Contrast 
 
 There are two primary ways to add the authentication settings that Contrast needs.
 
-* The "App Service Settings" dialog in Visual Studio's Publish to Azure App Service 
+* The **App Service Settings** dialog in Visual Studio's Publish to Azure App Service 
 * The Azure App Service Portal
 
-You may have noticed the following text appear when you installed the Contrast .NET NuGet package:** 
+You might have noticed the following text appears when you installed the Contrast .NET NuGet package:
 
  ```
  Added package 'Contrast.NET.Azure.WebSites.18.X.X' to 'packages.config'  
@@ -53,14 +53,13 @@ You may have noticed the following text appear when you installed the Contrast .
  Go to https://docs.contrastsecurity.com/installation-netazureappservice.html for more configuration options.
 ```
 
+Go to the **Application Settings** area of your application in the Azure Portal. Set the Contrast applications that the agent needs to connect to Contrast, and click **Save**. (You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.)
 
-Go to "Application Settings" area of your application in the Azure Portal.  Set the Contrast TeamServer applications that the agent needs to connect to Contrast, and click Save.  You can get your authentication keys from "My Account" link in top right corner in Contrast website.
+## Step Four: Publish the application to Azure 
 
-## Step Four: Publish application to Azure 
+* Using Visual Studio, publish your application to Azure App Service once more (after you've installed the Contrast NuGet package and specified the Application Settings).
 
-* Using Visual Studio, publish your application to Azure App Service once more (after you've installed the Contrast NuGet package and specified the Application Settings above).
+* Once the application has loaded, use the application and then go to the Contrast UI. Verify that the server and application are active, and that any expected vulnerabilities appear.
 
-* Once the application has loaded, use the application and then go to the Contrast web site.  Verify that the server and application are active, and any expected vulnerabilities appear.
-
-> **Note:** You may run into a "Files in use" error on `ContrastProfiler-32.dll` or `ConrastProfiler-64.dll` when re-deploying a web app with our Nuget package.  To work around this issue, you can either stop the site or set _COR_ENABLE_PROFILING=0_ before deploying.  Restart the site or set _COR_ENABLE_PROFILING=1_ after the deploy is complete. This is not a problem when using the [Express Installation using  Site Extensions](#site-extension-installation).
+> **Note:** You may run into a "Files in use" error on `ContrastProfiler-32.dll` or `ConrastProfiler-64.dll` when re-deploying a web application with our Nuget package. To work around this issue, you can either stop the site or set `COR_ENABLE_PROFILING=0` before deploying. Restart the site or set `COR_ENABLE_PROFILING=1` after the deploy is complete. This isn't a problem when using the [Express Installation using  Site Extensions](installation-netinstall.html#site-extension-installation).
 
