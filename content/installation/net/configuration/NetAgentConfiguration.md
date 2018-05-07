@@ -4,7 +4,7 @@ description: "Guide to configuring .NET agent settings"
 tags: "installation microsoft agent configuration settings .Net"
 -->
 
-The Contrast configuration file *DotnetAgentService.exe.config* contains several settings that you can modify to change the .NET agent's behavior. In all cases, configuration values in the agent configuration file will override any configuration values that have the same name specified in the Contrast interface (e.g., logging level, sampling and stack trace configuration).
+The Contrast configuration file *DotnetAgentService.exe.config* contains several settings that you can modify to change the behavior of the .NET agent for Windows. In all cases, configuration values in the agent configuration file will override any configuration values that have the same name specified in the Contrast interface (e.g., logging level, sampling and stack trace configuration).
 
 ## General
 

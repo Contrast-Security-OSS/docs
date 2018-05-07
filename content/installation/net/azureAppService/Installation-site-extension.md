@@ -4,11 +4,11 @@ description: "Guide to installing .NET Agent on Azure App Service using Site Ext
 tags: "installation configuration .Net Azure AppService site extension"
 -->
 
-Complete the following steps for Express Installation of the .NET agent via Azure Portal Extensions.
+Complete the following steps for Express Installation of the .NET agent via Azure Portal Extensions. <!-- Should "Express Installation" be capitalized? -->
 
 ## Step One: Create an application hosted on Azure App Service
 
-* Create an [Azure account](https://portal.azure.com/) if you don't have one already. 
+* Create an [Azure account](https://portal.azure.com/), if you don't have one already. 
 * Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service. 
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
 

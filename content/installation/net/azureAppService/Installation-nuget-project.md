@@ -8,7 +8,7 @@ Complete the following steps for Manual Installation of the .NET agent via Nuget
 
 ## Step One: Create an application hosted on Azure App Service
 
-* [Create an Azure account](https://portal.azure.com/) if you don't have one already. 
+* [Create an Azure account](https://portal.azure.com/), if you don't have one already. 
 * Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service.
 * Publish your application to Azure, and confirm that it works as expected without Contrast. 
 
@@ -20,16 +20,17 @@ In Visual Studio:
 
 * Search for **Contrast.Net.Azure.AppService** package, select it and add it to your project.
 
-* Build your application. Confirm that Contrast assemblies (e.g., `Contrast.Sensors.dll` and `ContrastProfiler-32.dll`) are in your application's *bin* directory. You can easily navigate to the *bin* directory by right clicking on the project in Visual Studio, selecting **Open Folder in File Explorer** and going to the directory from there. 
+* Build your application. Confirm that Contrast assemblies (e.g., `Contrast.Sensors.dll` and `ContrastProfiler-32.dll`) are in your application's *bin* directory. 
+ * You can easily navigate to the *bin* directory by right clicking on the project in Visual Studio, selecting **Open Folder in File Explorer** and going to the directory from there. 
 
 ## Step Three: Add application authentication settings for Contrast 
 
-There are two primary ways to add the authentication settings that Contrast needs.
+There are two primary ways to add the authentication settings that Contrast needs:
 
 * The **App Service Settings** dialog in Visual Studio's Publish to Azure App Service 
 * The Azure App Service Portal
 
-You might have noticed the following text appears when you installed the Contrast .NET NuGet package:
+You might notice that the following text appears when you installed the Contrast .NET NuGet package:
 
  ```
  Added package 'Contrast.NET.Azure.WebSites.18.X.X' to 'packages.config'  

@@ -4,7 +4,7 @@ description: "Configurations and tweaks for customizing the Contrast .NET agent 
 tags: "configuration .Net Azure AppService tweaks "
 -->
 
-You can override the following configurations using Application Settings in the portal, or in your application's *web.config* file. You can also modify the following configurations.
+The following configurations are for the .NET agent for Azure App Service. You can override the following configurations using Application Settings in the portal, or in your application's *web.config* file. You can also modify the following configurations.
 
 > **Example:** To change a the default log level, change the configuration setting `LogLevel` by either adding `CONTRAST_LogLevel` in the Azure portal or adding a `Contrast.LogLevel` application setting in the *web.config* file.  
 
