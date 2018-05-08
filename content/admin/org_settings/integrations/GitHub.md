@@ -5,7 +5,7 @@ tags: "Admin organization settings integrations bugtracker github"
 -->
 
 
-Integrate GitHub with Contrast to automatically create GitHub issues when Contrast finds them in your applications.
+Set up an integration to automatically send issues to GitHub when Contrast finds them in your applications.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ Once you complete the fields, click **Test connection**. This process may take a
 
 <a href="assets/images/GitHub-integration-set-up.png" rel="lightbox" title="Customize your Github integration"><img class="thumbnail" src="assets/images/GitHub-integration-set-up.png"/></a>
 
-Once a connection is made, select the **Applications** that you want to be available to this bugtracker, and select the values for the **GitHub Organization** and **Repository** fields using the dropdown menus. You also have the option to add **Labels**, **Assignees** and a **Milestone** for Github issues using the given fields.
+Once a connection is made, select the **Applications** that you want to be available to this bugtracker, and select the values for the **GitHub Organization** and **Repository** fields using the dropdown menus. You also have the option to add **Labels**, **Assignees** and a **Milestone** for GitHub issues using the given fields.
 
 > **Note:** If you change the GitHub **Organization** or **Repository** values, you must re-enter the values for optional fields. 
 
