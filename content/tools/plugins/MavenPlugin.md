@@ -75,9 +75,9 @@ An example configuration for the Contrast Maven Plugin:
 The final step is to add the agent to the JVM arguments used when the application is run. You must specify the following properties:
 
 ```
--javaagent:/target/contrast.jar -Dcontrast.appname=MyAppName -Dcontrast.server=MyServerName
+-javaagent:/target/contrast.jar -Dcontrast.override.appname=MyAppName -Dcontrast.server=MyServerName
 ```
->**Note**: While `contrast.appname` and `contrast.server` can take any value, they **must** match the `<appName>` and `<serverName>` specified in your Maven Plugin configuration.
+>**Note**: While `contrast.override.appname` and `contrast.server` can take any value, they **must** match the `<appName>` and `<serverName>` specified in your Maven Plugin configuration.
     
 Please see the following articles for specific installation instructions:
 
