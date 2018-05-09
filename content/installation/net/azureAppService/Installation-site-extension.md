@@ -12,7 +12,7 @@ Complete the following steps for Express Installation of the .NET agent via Azur
 * Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service. 
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
 
-## Step Two: Add application settings for Contrast 
+## Step Two: Add application settings for Contrast  
 <!-- What does "(see section below on adding application settings)" mean? -->
 
 The following values are the Application Settings that the agent needs to connect to Contrast. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.

@@ -10,7 +10,7 @@ To start analyzing an application, download the .NET agent installer from the Co
 
 ## .NET for Azure 
 
-The Contrast .NET agent for [Azure App Service]((https://azure.microsoft.com/en-us/services/app-service/)) is a fully featured version of the .NET agent. It analyzes the behavior of .NET web applications as users interact with their Azure App Service applications.
+The Contrast .NET agent for [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/) is a fully featured version of the .NET agent. It analyzes the behavior of .NET web applications as users interact with their Azure App Service applications.
 
 There are two ways to install the .NET Azure agent:
 
