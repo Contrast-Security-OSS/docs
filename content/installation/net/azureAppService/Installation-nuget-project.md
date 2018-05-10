@@ -4,7 +4,7 @@ description: "Guide to installing .NET Agent on Azure App Service using the Nuge
 tags: "installation configuration .Net Azure AppService site nuget visualstudio"
 -->
 
-Complete the following steps for Manual Installation of the .NET agent via Nuget.
+Complete the following steps to manually install the .NET agent via Nuget.
 
 ## Step One: Create an application hosted on Azure App Service
 

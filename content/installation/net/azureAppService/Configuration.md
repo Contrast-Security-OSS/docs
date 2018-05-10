@@ -15,7 +15,7 @@ The following configurations are for the .NET agent for Azure App Service. You c
 | ServerName          | Customizes the display name used by the Contrast UI for the server running the Contrast.NET agent. If the **ServerName** configuration setting isn't present, the server name is the **Resource Group** - **Region** of your application (e.g.,`MyResourceGroup - US East`). 
 | ServerEnvironment   | Set the environment value sent to Contrast. Valid `ServerEnvironment` values are `DEVELOPMENT`, `QA` or `PRODUCTION`. The default value is `QA`. 
 | ServerTags          | Controls free-form tags sent to Contrast for servers; you can use tags to search for servers in the Contrast interface. See the article on [Application-Specific Settings](installation-netconfig.html#appname) for details on tagging applications, libraries and vulnerabilities.
-| AppName    | Change the application name sent to the Contrast interface for this application. The default is your Azure App Service application name as set on Azure Portal       
+| AppName    | Change the application name sent to the Contrast interface for this application. The default is your Azure App Service application name as set on Azure Portal.       
 | AppVersion | Controls the application version tag sent to Contrast.
 | AppGroup   | Specifies the to which group this application will be added in the Contrast interface, if this application isn't  already a member of a group.        
 | AppTags    | Controls free-form tags sent to Contrast for the application; you can use tags to search for specific applications in the Contrast UI.      

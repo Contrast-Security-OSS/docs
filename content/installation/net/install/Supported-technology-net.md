@@ -22,7 +22,7 @@ The Contrast.NET agent supports analysis of web applications built on the follow
 > * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime. 
 > * Contrast doesn't support analysis of .NET Core applications at this time because .NET Core applications run on a different runtime (CoreCLR).
 
-##.NET for Azure
+##.NET for Azure App Service 
 
 The Contrast .NET agent for Azure App Service supports analysis of web applications built on the following technologies.
 
@@ -31,7 +31,7 @@ The Contrast .NET agent for Azure App Service supports analysis of web applicati
 | .NET Framework             | Your application must be set to use CLR4. Any application that can run on this version is supported. (.NET 4.7.1 is deployed currently on Azure. Version 3.5 isn't supported.)  |
 | CLR                        | CLR4                       |
 | Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
-| Web Application Frameworks | All of the frameworks supported by the Windows agent are analyzed on Azure. <!-- See [Supported Technologies] for more information. --> |
+| Web Application Frameworks | All of the frameworks supported by the Windows agent are analyzed on Azure. |
 
 
 > **Note:** Only applications using the full .NET Framework are currently supported. Contrast plans to add support for .NET Core applications in the future.

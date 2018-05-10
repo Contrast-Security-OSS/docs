@@ -4,7 +4,7 @@ description: "Guide to installing .NET Agent on Azure App Service using Site Ext
 tags: "installation configuration .Net Azure AppService site extension"
 -->
 
-Complete the following steps for Express Installation of the .NET agent via Azure Portal Extensions. <!-- Should "Express Installation" be capitalized? -->
+Complete the following steps for express installation of the .NET agent via Azure Portal Extensions. 
 
 ## Step One: Create an application hosted on Azure App Service
 
@@ -13,7 +13,6 @@ Complete the following steps for Express Installation of the .NET agent via Azur
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
 
 ## Step Two: Add application settings for Contrast  
-<!-- What does "(see section below on adding application settings)" mean? -->
 
 The following values are the Application Settings that the agent needs to connect to Contrast. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
 
