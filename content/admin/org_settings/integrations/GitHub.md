@@ -18,7 +18,7 @@ Set up an integration to automatically send issues to GitHub when Contrast finds
 
 In the **Integrations** page, click **Connect** in the row for GitHub. 
 
-<a href="assets/images/GitHub-test-connection.png" rel="lightbox" title="Test your GitHub integration"><img class="thumbnail" src="assets/images/GitHub-test-connection.png"/></a>
+<a href="assets/images/GitHub-test.png" rel="lightbox" title="Test your GitHub integration"><img class="thumbnail" src="assets/images/GitHub-test.png"/></a>
 
 In the **Connect with GitHub** form, add the **name** for the bugtracker entry, the **username** for the account connected to GitHub and the **password** for the specified username in the appropriate fields. The GitHub **URL** must be accessible from the Contrast UI instance being configured. 
 
