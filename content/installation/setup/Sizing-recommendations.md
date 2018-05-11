@@ -19,7 +19,7 @@ Contrast is designed for a scale-up architecture with an emphasis on providing m
 Contrast supports a wide selection of configurations, which are comprised of varying combinations of CPU, memory and storage capacity to fit different deployment scenarios. These configurations give you the flexibility to choose the appropriate mix of resources for your applications, and allows you to scale resources to the requirements of your target workload.
 
 ### TS1 configuration
-TS1 configurations are designed for small workloads of one to three agents communicating to Contrast as part of the initial analysis of Contrast during a “Proof of Concept” exercise or a single application agent for a small team of end users. A small contingent of web traffic end users - about one to five - may use the system periodically, during specific training sessions with a sales engineer or for demonstration purposes with team members.
+TS1 configurations are designed for small workloads of one to three agents communicating to Contrast, or a single application agent for a small team of end users. A small contingent of web traffic end users - about one to five - may use the system periodically, during specific training sessions or for demonstration purposes with team members.
 
 TS1 configurations provide a baseline level of CPU performance, but are flexible enough to scale to increasing compute and memory requirements. They are designed for small workloads that don’t use the full CPU capacity to be handling in-bound traces constantly or sustain large web traffic. 
 
@@ -35,7 +35,7 @@ TS2 configurations provide a suitable level of performance for most deployments 
 
 | vCPUs    | Clock Speed      | RAM | Storage |
 |:--------:|:----------------:|:---:|:-------:|
-| ~4 to ~8 | 2.5GHz to 3.3GHz | 12GB | 50GB to 100GB |
+| ~4 to ~8 | 2.5GHz to 3.3GHz | 12GB to 16GB | 50GB to 100GB |
 
 
 ### TS3 configuration
