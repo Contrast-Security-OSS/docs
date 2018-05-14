@@ -31,7 +31,6 @@ To create a new security control, click the **Add Security Control** button.
 After choosing a Name, Type and Language, specify the API and choose the vulnerability rules to which you'd like to apply the control. You can choose **All**, or select one or more individual vulnerabilities.
 
 >**Notes:** 
- * Security Controls are intended to target only `java.lang.String` parameters (not boolean, int, long, short double, float, etc.). 
  * Servers may require restart. Contrast provides a list of servers affected by your selection.
 
 
@@ -51,9 +50,9 @@ In both vulnerability contexts, the **Add Security Control** dialog gives you th
 
 When specifying the API, it's important to consider the following conventions:
 
-* **Java** must include method name and parameters. Use fully qualified types.
+* **Java** must include method name and parameters. Use fully qualified types, intended to target only `java.lang.String` parameters (not boolean, int, long, short double, float, etc.). 
 
-* **.NET** must include return type (or void), method name and parameters. Use fully qualified types.
+* **.NET** must include return type (or void), method name and parameters. Use fully qualified types, intended to target only `System.String` parameters.
 
 * **Node** must include the function to be marked and the package module name. For individual files in a package, include the file path relative to the application's root directory.
 
