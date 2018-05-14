@@ -52,7 +52,12 @@ After configuring your connection details and bind credentials, ensure connectiv
 
 ### Step 3: Configure Groups
 
-Contrast doesn't perform Data Access Control using the integrated AD servers. In other words, roles and access to data within the application are handled by the application, and user roles are set by the Organization Administrators. However, there is an Access Control check when logging in or creating new users to ensure that the provided user belongs to the correct group in the Active Directory.
+Contrast doesn't perform Data Access Control using the integrated AD servers. In other words, roles and access to data within the application are handled by the application, and user roles are set by the Organization Administrators. However, there is an Access Control check when logging in or creating new users to ensure that the provided user belongs to the correct group in AD. 
+
+> **Note:** To create users with AD authentication in Contrast while bypassing the Access Control check, execute the following query in the database.
+ ```
+ UPDATE teamserver_preferences SET property_value='true' WHERE property_name='directory.skip.user_existence.validation'
+ ```
 
 <a href="assets/images/KB4-c09_2.png" rel="lightbox" title="Configuring Groups"><img class="thumbnail" src="assets/images/KB4-c09_2.png"/></a>
 
@@ -100,9 +105,9 @@ Contrast recommends that you create a dedicated [read-only user](admin-manageorg
 
 If you configure your AD integration to connect to your server using SSL, you may need to import your server's certificate into a new trust store to be used by the Contrast JRE. 
 
-First you will need to acquire the server's certificate from your administrators in PKCS#12 format. If you're using a self-signed certificate, this will be the actual AD Server's Certificate. If you have a private CA, you will want the CA certificate for that server.
+To start, acquire the server's certificate from your administrators in PKCS#12 format. If you're using a self-signed certificate, this will be the actual AD server's certificate. If you have a private CA, you will want the CA certificate for that server.
 
-After you have the certificate for the server, you will need to create a trust store that contains that certificate. Run the following commands from a command shell in the directory where Contrast is installed as Administrator.
+After you have the certificate for the server, create a trust store that contains that certificate. Run the following commands from a command shell in the directory where Contrast is installed as Administrator.
 
 ````
 $ mkdir data/conf/ssl
@@ -110,7 +115,7 @@ $ jre/bin/keytool -import -file <path to certificate> -alias <hostname> \
   -keystore data/conf/ssl/truststore.jks
 ````
 
-After you create your *truststore* containing either your server's or CA certificate, add the following lines into the *bin/contrast-server.vmoptions* file.
+After you create your trust store containing either your server's or CA certificate, add the following lines into the *bin/contrast-server.vmoptions* file.
 
 ````
 -Djavax.net.ssl.trustStore=<full path to truststore>
