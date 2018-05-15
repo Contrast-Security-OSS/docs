@@ -10,11 +10,11 @@ The Contrast Maven Plugin is used to integrate the Contrast *jar* with your buil
 
 > **Note:** [Maven](https://maven.apache.org/) is a build tool that utilizes *pom.xml* files to configure your applications. It's used to build, package and test Java applications.
 
-This documentation refers to version 2.0 if the Contrast Maven Plugin. For the 1.X version, please refer to the documentation [here](https://github.com/Contrast-Security-OSS/contrast-maven-plugin/blob/contrast-maven-plugin-1.4/README.md)
+This guidance refers to version 2.0 of the Contrast Maven Plugin. For information on version 1.X, refer to the documentation in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-maven-plugin/blob/contrast-maven-plugin-1.4/README.md).
 
 ## Access the Plugin
 
-You can view the plugin code in Contrast's Github [repository](https://github.com/Contrast-Security-OSS/contrast-maven-plugin). You can also review how our two goals, `install` and `verify`, work.
+You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-maven-plugin). You can also review how our two goals, `install` and `verify`, work.
 
 <!-- The plugin can be found here on the Maven repository. -->
 
@@ -36,10 +36,11 @@ The table below shows all the parameters for the plugin. These settings are for 
 | Skip Arg Line                | The Maven Plugin will modify jvm arguments depending on this value |
 
 
->**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability with adequate severity condition is found.
+>**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability with adequate severity is found.
 
 
-An example profile for the Contrast Maven Plugin:
+The following configuration is an example of a profile for the Contrast Maven Plugin. To run with this profile, use `mvn install -P run-with-contrast`.
+
 
 ```xml
 <profile>
@@ -81,11 +82,9 @@ An example profile for the Contrast Maven Plugin:
 </profile>
 ```
 
-To run with this profile, use `mvn install -P run-with-contrast`
-
 ## JVM arguments
 
-The Contrast Maven Plugin will configure your JVM arguments to use the Contrast Agent by appending to the `argLine` property from the Maven properties If you would like to prevent this so you can build your own jvm arguments, set `skipArgLine` to true in the plugin properties
+The Contrast Maven Plugin will configure your JVM arguments to use the Contrast agent by appending to the `argLine` property from the Maven properties. If you want to prevent this in order to build your own JVM arguments, set `skipArgLine` to `true` in the plugin properties.
 
 ## Containers
 
