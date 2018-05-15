@@ -1,19 +1,18 @@
 <!--
 title: "Configuring Active Directory"
 description: "Configure your Contrast application to connect to a Microsoft Active Directory."
-tags: "installation setup AD Microsoft Directory configuration authentication DN"
+tags: "installation setup AD Microsoft Active Directory configuration authentication DN"
 -->
 
 ## Get Started
 
-You can configure Contrast to connect to a Microsoft Active Directory (AD). Contrast recommends using the Active Directory connector to configure this integration; AD has a well-defined structure for directories, resulting in fewer possibilities and a more direct configuration. A System Administrator can perform the AD configuration. They must create two groups to be used by Contrast.
+You can configure Contrast to connect to a Microsoft Active Directory (AD). Contrast recommends using the AD connector to configure this integration; AD has a well-defined structure for directories, resulting in fewer possibilities and a more direct configuration. A System Administrator can perform the AD configuration, as well as create two groups to be used by Contrast.
 
 >**Note:** Switching to AD from a different authentication method such as a local database may result in issues if the user ID attribute is inconsistent.
 
-
 ## Configuration
 
-To set up the configuration, go to the **user menu > System Settings > Authentication page**. 
+To set up the configuration, go to the **user menu > System Settings > Authentication page**. The Authentication wizard will walk you through the steps to configure server, groups and advanced settings. 
 
 ### Step 1: Set Up Authentication
 
