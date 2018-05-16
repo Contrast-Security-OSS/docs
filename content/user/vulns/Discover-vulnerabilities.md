@@ -41,6 +41,8 @@ Contrast uses the following statuses for vulnerabilities to help you prioritize 
 * **Fixed:** The vulnerability remains closed even if rediscovered, and will never be reported again.
 * **Auto-remediated:** Contrast automatically remediated a vulnerability based on a [Remediation Policy](admin-policymgmt.html#remediate) set up by an administrator. 
 
+Read how to [Analyze Findings](user-vulns.html#analyze), and learn more about vulnerability statuses and workflows in the Contrast UI. 
+
 ### Vulnerability severity 
 
 Contrast classifies vulnerabilities in an application into five severity levels. The classifications are based on the likelihood and impact of a vulnerability in the application, from most to least severe:
