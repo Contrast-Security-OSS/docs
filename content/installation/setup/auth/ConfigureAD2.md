@@ -53,11 +53,11 @@ Contrast doesn't perform Data Access Control using the integrated AD servers. In
 
 <a href="assets/images/KB4-c09_2.png" rel="lightbox" title="Configuring Groups"><img class="thumbnail" src="assets/images/KB4-c09_2.png"/></a>
 
-* **Contrast User Group:**: This group allows users to be added to an organization and log in to the standard user interface. Most users should be part of this group. 
+* **Contrast User Group:** This group allows users to be added to an organization and log in to the standard user interface. Most users should be part of this group. 
 
 * **Contrast SuperAdmin Group:** This group allows users to log in to the Super Administrator interface. This interface should only be accessible to Application and System Administrators.
 
-> **Note:** A user can't belong to both the User and Admin groups. **If you add them to both groups in your AD instance, Contrast won't be able to find them during configuration.** 
+> **Note:** A user shouldn't belong to both the User and Admin groups. **If you add a user to both groups in your AD instance, Contrast will automatically add them to the SuperAdmin group during configuration.** 
 
 Use the **Query for Groups** button to enable a live search of existing groups as you begin to type within the input fields.
 
