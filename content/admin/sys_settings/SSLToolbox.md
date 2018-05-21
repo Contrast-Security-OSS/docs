@@ -4,19 +4,19 @@ description: "Common Keytool commands and workflows"
 tags: "Admin system settings configuration SSL EOP tools keytool openssl"
 -->
 
-## Who Should Read This Document
-This is an overview of useful commands and introductory principles for a person assuming system administration of Contrast TeamServer EOP, where SSL is part of your deployment.  The examples presented below are not intended to provide step-by-step instruction, but rather to assist in describing workflows where SSL could be used, as well as the commands possible for implementation and debugging.
+The following commands and introductory principles are useful for a user assuming the SystemAdmin role of the Contrast application, in which SSL is part of your Enterprise-on-Premises deployment. The following examples are intended to help describe workflows in which SSL could be used, as well as the possible commands for implementation and debugging.
 
-At Contrast, we typically see three workflows where SSL is added:
-* Setting up TeamServer UI HTTPS
-* Integrating with LDAP or Active Directory where you see `ldaps://`
-* Securing communication between agents and TeamServer
+There are three workflows in which Contrast users typically add SSL:
+
+* Setting up Contrast UI HTTPS
+* Integrating with [LDAP](installation-setupauth.html#ldap) or [Active Directory](installation-setupauth.html#ad) where you see `ldaps://`
+* Securing communication between agents and the Contrast application
 
 ## Keytool
 
-### Create A Keystore And Keypair
+### Create a Keystore And Keypair
 
-The command below will create a new keystore (if one does not exist), new keypair, and an alias called "teamserver".
+The command below will create a new keystore (if one does not exist), keypair and an alias called "teamserver".
 
 ```
 keytool -genkeypair \
@@ -25,7 +25,7 @@ keytool -genkeypair \
         -keystore contrast.jks
 ```
 
-When running this command, you will be prompted for information to identify yourself and your organization.  This command requires a password that you will need to remember for future integrations.
+When running this command, you will be prompted for information to identify yourself and your organization. This command requires a password that you will need to remember for future integrations.
 
 Sample Output:
 
@@ -48,15 +48,16 @@ Is CN=john smith, OU=devteam, O=Example, Inc, L=New York City, ST=NY, C=US corre
   [no]:  y
 ```
 
-Taking a look at the directory after this command would show:
+The directory after this command would show:
+
 ```
 $ ls
 contrast.jks
 ```
 
-### Create A CSR For Existing Keystore
+### Create a CSR 
 
-A certificate signing request (CSR) is what your Certificate Authority needs from you in order to create a SSL Certificate.
+A certificate signing request (CSR) is what your certificate authority (CA) needs from you in order to create a SSL Certificate.
 
 ```
 keytool -certreq \
@@ -72,13 +73,13 @@ $ ls
 contrast.jks	teamserver.csr
 ```
 
-The *teamserver.csr* can now be shared with your Certificate Authority. In response, they should send you a signed SSL certificate for use in your environment.  
+The *teamserver.csr* can now be shared with your CA. In response, they should send you a signed SSL certificate for use in your environment.  
 
-##  Import A Signed, Root, Or Intermediate CA Certificate Into Existing Keystore
+##  Import a CA Certificate 
 
 When importing root and intermediate certificates, you will need to be aware of a small change to the `-alias` and `-file` options.
 
-As a general rule, most purchased SSL certificates will be recognized as valid because their Root Certificate Authority is already part of the default keystore.  Keep in mind, this will change with your distribution and Java version.  The default keystore can be found at `$JAVA_HOME/jre/lib/security/cacerts`.  
+As a general rule, most purchased SSL certificates will be recognized as valid because their root CA is already part of the default keystore.  Keep in mind, this will change with your distribution and Java version.  The default keystore can be found at `$JAVA_HOME/jre/lib/security/cacerts`.  
 
 To view the contents of this keystore:
 ```
@@ -88,7 +89,7 @@ Enter keystore password:
 
 If you are using an internal CA, then you will need to obtain root and intermediate certificates to verify the chain of trust through the keystores on both sides of the connection.  
 
-### Root Certificate
+### Root certificate
 
 ```
 keytool -import \
@@ -109,6 +110,7 @@ keytool -import \
 ```
 
 ### Signed
+
 Notice here that the alias used is the same in all examples above, specifically the Certificate Signing Request example.  The *my-ca-signed-cert.crt* is what you should receive in response to a CSR.  
 
 It is very important that this Signed Certificate is imported to the alias that matches the private key used to create the CSR.
