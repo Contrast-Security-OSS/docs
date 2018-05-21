@@ -4,7 +4,7 @@ description: "Using Contrast .NET on Microsoft Azure"
 tags: "configuration microsoft azure cloud agent installation .Net"
 -->
 
-Use the Contrast .NET agent to analyze ASP.NET applications running on Azure Virtual Machines (VMs), Cloud Services or Mobile Services or Azure App Service (formerly Azure Web Sites).  Follow the instructions below to set up the Contrast .NET agent in your environment. 
+Use the Contrast .NET agent to analyze ASP.NET applications running on Azure Virtual Machines (VMs), Cloud Services, Mobile Services or Azure App Service (formerly Azure Web Sites). Follow the instructions below to set up the Contrast .NET agent in your environment. 
 
 ## Azure Virtual Machines
 
@@ -38,6 +38,6 @@ Complete the following steps to install the .NET agent on an Azure VM:
 
 ## Azure Web Apps
 
-Follow the Azure App Service instructions to install the agent there.  [Azure App Service Overview](install-azureAppService.html)
+Follow the instructions to install the agent for Azure App Service via [Nuget](installation-netinstall.html#net-manual) or [Azure Portal Extensions](installation-netinstall.html#net-express).  
 
 
