@@ -32,6 +32,7 @@ The table below shows all the parameters for the plugin. These settings are for 
 | Application Name             | Name of application you set with `-Dcontrast.appname` <BR> (See the **Use the agent** section below.) |
 | Minimum Severity Level       | Minimum severity level for which to filter (Note, Low, Medium, High, or Critical). <br> (This property is inclusive.) |
 | Server Name                  | Name of server you set with `-Dcontrast.server` <BR> (See the **Use the agent** section below.) |
+| serverPath  | False    |            | The server context path   |
 | Jar Path                     | Path of a local *jar* file if you don't want to download the agent again                  |
 | Skip Arg Line                | The Maven Plugin will modify jvm arguments depending on this value |
 
@@ -85,6 +86,10 @@ The following configuration is an example of a profile for the Contrast Maven Pl
 ## JVM arguments
 
 The Contrast Maven Plugin will configure your JVM arguments to use the Contrast agent by appending to the `argLine` property from the Maven properties. If you want to prevent this in order to build your own JVM arguments, set `skipArgLine` to `true` in the plugin properties.
+
+### serverPath
+
+Multi-module Maven builds can appear as different servers in TeamServer. If you would like to discourage this behavior and would rather see all modules appear under the same server in TeamServer, then please set the `serverPath` property.
 
 ## Containers
 
