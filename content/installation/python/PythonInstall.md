@@ -60,9 +60,12 @@ from contrast.agent.middlewares.flask_middleware import FlaskMiddleware as Contr
 
 app = Flask(__name__)
 
-# normal application setup
-
+app.config.from_pyfile('dev.cfg')
 app.wsgi_app = ContrastMiddleware(app.wsgi_app)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(...)
