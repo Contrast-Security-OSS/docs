@@ -54,13 +54,18 @@ MIDDLEWARE = [
 **Flask:**
 
 ``` python
+import Flask
+
 from contrast.agent.middlewares.flask_middleware import FlaskMiddleware as ContrastMiddleware
 
 app = Flask(__name__)
 
-# app setup
+# normal application setup
 
 app.wsgi_app = ContrastMiddleware(app.wsgi_app)
+
+if __name__ == '__main__':
+    app.run(...)
 ```
 
 **Pyramid:**

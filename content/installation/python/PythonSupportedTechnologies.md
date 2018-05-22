@@ -7,7 +7,7 @@ tags: "installation Python agent frameworks support troubleshooting package"
 The Python agent supports Python languages 2.7+ and 3.4+. Framework support is currently for:
 
 * Django:  1.10+ and 2.0+ <br> (Django 2 is Python 3 only)
-* Flask:   0.10 - 0.12. 1.0+ support should be considered experimental 
+* Flask:   0.10 - 0.12. 1.0+ is now supported.
 * Pyramid: 1.9 (Beta)
 
 >**Note:** The Python agent is meant to be WSGI compatible. It may be compatible to other WSGI applications as long as the guidelines are followed.
