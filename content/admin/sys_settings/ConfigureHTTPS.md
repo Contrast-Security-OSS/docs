@@ -28,7 +28,7 @@ After updating the *server.properties* file, restart the Contrast server service
 
 ### Configure the front-end server
 
-Refer to your server's documentation for instructions on how to configure it to use AJP. Additionally, refer to the following links for Apache and NGINX instructions. 
+Refer to your server's documentation for instructions on how to configure it to use AJP. Also refer to the following links for Apache and NGINX instructions. 
 
 * [Apache mod_proxy_ajp configuration](http://httpd.apache.org/docs/2.2/mod/mod_proxy_ajp.html)
 * [NGINX proxy AJP configuration](http://webapp.org.ua/sysadmin/setting-up-nginx-ssl-reverse-proxy-for-tomcat/)
@@ -37,7 +37,7 @@ Refer to your server's documentation for instructions on how to configure it to 
 
 Configuring Contrast to use a HTTPS connector is a straight-forward process. These instructions are written in the context that you have a certificate to use. The certificate can be CA signed or self signed. 
 
-To begin, import your certificate into a new Java KeyStore (JKS) for use by Contrast. If you already have a KeyStore, you can skip this step and place your KeyStore in the ***$CONTRAST_HOME/data/conf/ssl*** directory.
+To begin, import your certificate into a new Java KeyStore (JKS) for use by Contrast. If you already have a KeyStore, you can skip this step and place it in the *$CONTRAST_HOME/data/conf/ssl* directory.
 
 > **Note:** All commands used in this guide should be run in a command shell with administrative privileges from the directory in which Contrast was installed.
 
@@ -49,15 +49,17 @@ This is the quickest and easiest method for generating the proper certificate an
 $ jre/bin/keytool -genkey -keyalg RSA -alias contrast-server -keystore data/conf/ssl/contrast-server.jks -validity 365 -keysize 2048
 ````
 
-Contrast recommends using this method over generating certificates with OpenSSL. For more complicated SSL configurations, we recommend using a reverse proxy. The following section walks you through enabling SSL in the Contrast server. 
+Contrast recommends using this method over generating certificates with OpenSSL. For more complicated SSL configurations, Contrast recommends using a reverse proxy. The following section walks you through enabling SSL in the Contrast server. 
 
 ### Import SSL certificates verified by third-party providers
 
 To begin, generate a new KeyStore.
+
 ````
 $ jre/bin/keytool -genkey -alias contrast-server -keystore data/conf/ssl/contrast-server.jks
 ````
 Once it's created, import your server's certificate into the new KeyStore.
+
 ````
 $ jre/bin/keytool -import -keystore data/conf/ssl/contrast-server.jks -storepass <keystore password> \
   -file <path to certificate> -alias <server hostname>
@@ -73,7 +75,7 @@ $ jre/bin/keytool -import -trustcacerts -alias <ca-name> -storepass <keystore pa
 
 ### Enable and configure HTTPS in the Contrast server
 
-Once KeyStore setup is complete, open the ***$CONTRAST_HOME/data/conf/server.properties*** file in your text editor and update the following properties.
+Once KeyStore setup is complete, open the *$CONTRAST_HOME/data/conf/server.properties* file in your text editor, and update the following properties.
 
 ````
 https.enabled=true
@@ -83,9 +85,9 @@ https.keystore.pass=<password for the jks created above>
 https.keystore.alias=<hostname of the server>
 ````
 
-You may find it useful to set the `http.enabled` and `ajp.enabled` options to **false** to ensure that only connections made over HTTPS are allowed to the Contrast server.
+You may find it useful to set the `http.enabled` and `ajp.enabled` options to `false` to ensure that only connections made over HTTPS are allowed to the Contrast server.
 
-After updating the `server.properties`, restart the Contrast server service and ensure that it's now listening on the HTTPS port you configured.
+After updating the `server.properties`, restart the Contrast server service, and ensure that it's now listening on the HTTPS port you configured.
 
 ## Agent Configuration
 
@@ -94,3 +96,4 @@ If you switch from HTTP to HTTPS, update the server to tell future Contrast agen
 Open the *$CONTRAST_HOME/data/conf/general.properties* file, and change the value of the `teamserver.url` property to reflect your change. Agents must be updated manually the first time after you make this change. Future updates to the agent will be automatic.
 
 > **Note:** The Contrast .NET agent needs additional configuration to connect to a Contrast application using a self-signed certificate.
+
