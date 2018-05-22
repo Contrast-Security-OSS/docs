@@ -29,7 +29,7 @@ The table below shows all the parameters for the plugin. These settings are for 
 | apiKey      | True     |            | [API Key](admin-orgsettings.html#apikey)                                          |       |
 | orgUuid     | True     |            | [Organization UUID](admin-orgsettings.html#apikey)                                |       |
 | appName     | True     |            | Name of the application as seen in the Contrast UI                                |       |
-| appVersion  | False    | See below  | The `appversion` to report to the Contrast application. See explanation below.    |       |
+| appVersion  | False    | See **appVersion** section. | The `appversion` to report to the Contrast application. See the **appVersion** for more information.    |       |
 | apiUrl      | True     |            | API URL to your Contrast application                                              |       |
 | serverName  | True     |            | Name of the server you set with `-Dcontrast.server`                               |       |
 | serverPath  | False    |            | The server context path                                                           |    2.1|
@@ -95,14 +95,12 @@ Multi-module Maven builds can appear as different servers in Contrast. If you wa
 
 ### appVersion
 
-When your app's integration tests are run, the Contrast agent can add an app version to its metadata so that vulnerabilites can be compared between app versions, CI builds, etc...
+When your application's integration tests are run, the Contrast agent can add an `appVersion` property to its metadata. This allows you to compare vulnerabilities between applications versions, CI builds, etc. Contrast generates the `appVersion` in the following order:
 
-We generate this app version as follows and in this order:
-
-* If you specify an appVersion in the properties, we'll use that without modification
-* If your build is running in TravisCI, we'll use appName-$TRAVIS_BUILD_NUMBER
-* If your build is running in CircleCI, we'll use appName-$CIRCLE_BUILD_NUM
-* If no appVersion is specified, we'll generate one in the following format: appName-yyyyMMddHHmmss
+* If you specify an `appVersion` in the properties, Contrast will use it without modification.
+* If your build is running in TravisCI, Contrast will use `appName-$TRAVIS_BUILD_NUMBER`.
+* If your build is running in CircleCI, Contrast will use `appName-$CIRCLE_BUILD_NUM`.
+* If you don't specify an `appVersion`, Contrast will generate one in `appName-yyyyMMddHHmmss` format. 
 
 ## Containers
 
