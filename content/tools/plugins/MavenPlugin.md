@@ -24,18 +24,18 @@ The table below shows all the parameters for the plugin. These settings are for 
 
 | Parameter   | Required | Default    | Description                                                                       | Since |
 |-------------|----------|------------|-----------------------------------------------------------------------------------|-------|
-| username    | True     |            | Username in TeamServer                                                            |       |
-| serviceKey  | True     |            | Service Key found in Organization Settings page                                   |       |
-| apiKey      | True     |            | API Key found in Organization Settings page                                       |       |
-| orgUuid     | True     |            | Organization UUID found in Organization Settings page                             |       |
-| appName     | True     |            | Name of the application as seen in the Contrast site                              |       |
-| appVersion  | False    | See below  | The appversion to report to TeamServer. See explanation below.                    |       |
-| apiUrl      | True     |            | API URL to your TeamServer instance                                               |       |
-| serverName  | True     |            | Name of the server you set with -Dcontrast.server                                 |       |
+| username    | True     |            | Username in the Contrast application                                              |       |
+| serviceKey  | True     |            | [Service Key](admin-orgsettings.html#apikey)                                      |       |
+| apiKey      | True     |            | [API Key](admin-orgsettings.html#apikey)                                          |       |
+| orgUuid     | True     |            | [Organization UUID](admin-orgsettings.html#apikey)                                |       |
+| appName     | True     |            | Name of the application as seen in the Contrast UI                                |       |
+| appVersion  | False    | See below  | The `appversion` to report to the Contrast application. See explanation below.    |       |
+| apiUrl      | True     |            | API URL to your Contrast application                                              |       |
+| serverName  | True     |            | Name of the server you set with `-Dcontrast.server`                               |       |
 | serverPath  | False    |            | The server context path                                                           |    2.1|
-| minSeverity | False    | Medium     | Minimum severity level to verify (can be Note, Low, Medium, High or Critical)     |       |
-| jarPath     | False    |            | Path to contrast.jar if you already have one downloaded                           |       |
-| skipArgLine | False    | False      | If this is "true", the plugin will not alter the Maven argLine property in any way|    2.0|
+| minSeverity | False    | Medium     | Minimum severity level to verify; options are Note, Low, Medium, High or Critical |       |
+| jarPath     | False    |            | Path to *contrast.jar*, if you already have one downloaded                        |       |
+| skipArgLine | False    | False      | If this is "true", the plugin will not alter the Maven `argLine` property in any way |    2.0 |
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability with adequate severity is found.
 
@@ -89,7 +89,7 @@ The Contrast Maven Plugin will configure your JVM arguments to use the Contrast 
 
 ### serverPath
 
-Multi-module Maven builds can appear as different servers in TeamServer. If you would like to discourage this behavior and would rather see all modules appear under the same server in TeamServer, then please set the `serverPath` property.
+Multi-module Maven builds can appear as different servers in Contrast. If you want to discourage this behavior, and prefer to see all modules appear under the same server in Contrast, set the `serverPath` property.
 
 ## Containers
 
