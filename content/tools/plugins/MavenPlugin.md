@@ -22,20 +22,20 @@ You can view the plugin code in Contrast's [Github repository](https://github.co
 
 The table below shows all the parameters for the plugin. These settings are for connecting to Contrast and filtering your vulnerabilities.
 
-| Parameter                    | Description                                             |
-|------------------------------|---------------------------------------------------------|
-| TeamServer Username          | Username/email for your user in Contrast |
-| TeamServer Service Key       | Service Key found in Organization Settings             |
-| TeamServer API Key           | API Key found in Organization Settings                 |
-| TeamServer API Url           | API URL to your Contrast instance  <BR> (Use *app.contrastsecurity.com/Contrast/api* if you're a SaaS customer.)                    |
-| TeamServer Organization Uuid | Organization UUID of the configured user found in Organization Settings |
-| Application Name             | Name of application you set with `-Dcontrast.appname` <BR> (See the **Use the agent** section below.) |
-| Minimum Severity Level       | Minimum severity level for which to filter (Note, Low, Medium, High, or Critical). <br> (This property is inclusive.) |
-| Server Name                  | Name of server you set with `-Dcontrast.server` <BR> (See the **Use the agent** section below.) |
-| serverPath  | False    |            | The server context path   |
-| Jar Path                     | Path of a local *jar* file if you don't want to download the agent again                  |
-| Skip Arg Line                | The Maven Plugin will modify jvm arguments depending on this value |
-
+| Parameter   | Required | Default    | Description                                                                       | Since |
+|-------------|----------|------------|-----------------------------------------------------------------------------------|-------|
+| username    | True     |            | Username in TeamServer                                                            |       |
+| serviceKey  | True     |            | Service Key found in Organization Settings page                                   |       |
+| apiKey      | True     |            | API Key found in Organization Settings page                                       |       |
+| orgUuid     | True     |            | Organization UUID found in Organization Settings page                             |       |
+| appName     | True     |            | Name of the application as seen in the Contrast site                              |       |
+| appVersion  | False    | See below  | The appversion to report to TeamServer. See explanation below.                    |       |
+| apiUrl      | True     |            | API URL to your TeamServer instance                                               |       |
+| serverName  | True     |            | Name of the server you set with -Dcontrast.server                                 |       |
+| serverPath  | False    |            | The server context path                                                           |    2.1|
+| minSeverity | False    | Medium     | Minimum severity level to verify (can be Note, Low, Medium, High or Critical)     |       |
+| jarPath     | False    |            | Path to contrast.jar if you already have one downloaded                           |       |
+| skipArgLine | False    | False      | If this is "true", the plugin will not alter the Maven argLine property in any way|    2.0|
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability with adequate severity is found.
 
