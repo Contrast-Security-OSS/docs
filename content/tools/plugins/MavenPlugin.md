@@ -22,19 +22,20 @@ You can view the plugin code in Contrast's [Github repository](https://github.co
 
 The table below shows all the parameters for the plugin. These settings are for connecting to Contrast and filtering your vulnerabilities.
 
-| Parameter                    | Description                                             |
-|------------------------------|---------------------------------------------------------|
-| TeamServer Username          | Username/email for your user in Contrast |
-| TeamServer Service Key       | Service Key found in Organization Settings             |
-| TeamServer API Key           | API Key found in Organization Settings                 |
-| TeamServer API Url           | API URL to your Contrast instance  <BR> (Use *app.contrastsecurity.com/Contrast/api* if you're a SaaS customer.)                    |
-| TeamServer Organization Uuid | Organization UUID of the configured user found in Organization Settings |
-| Application Name             | Name of application you set with `-Dcontrast.appname` <BR> (See the **Use the agent** section below.) |
-| Minimum Severity Level       | Minimum severity level for which to filter (Note, Low, Medium, High, or Critical). <br> (This property is inclusive.) |
-| Server Name                  | Name of server you set with `-Dcontrast.server` <BR> (See the **Use the agent** section below.) |
-| Jar Path                     | Path of a local *jar* file if you don't want to download the agent again                  |
-| Skip Arg Line                | The Maven Plugin will modify jvm arguments depending on this value |
-
+| Parameter   | Required | Default    | Description                                                                       | Since |
+|-------------|----------|------------|-----------------------------------------------------------------------------------|-------|
+| username    | True     |            | Username in the Contrast application                                              |       |
+| serviceKey  | True     |            | [Service Key](admin-orgsettings.html#apikey)                                      |       |
+| apiKey      | True     |            | [API Key](admin-orgsettings.html#apikey)                                          |       |
+| orgUuid     | True     |            | [Organization UUID](admin-orgsettings.html#apikey)                                |       |
+| appName     | True     |            | Name of the application as seen in the Contrast UI                                |       |
+| appVersion  | False    | See **appVersion** section. | The `appversion` to report to the Contrast application. See the **appVersion** for more information.    |       |
+| apiUrl      | True     |            | API URL to your Contrast application                                              |       |
+| serverName  | True     |            | Name of the server you set with `-Dcontrast.server`                               |       |
+| serverPath  | False    |            | The server context path                                                           |    2.1|
+| minSeverity | False    | Medium     | Minimum severity level to verify; options are Note, Low, Medium, High or Critical |       |
+| jarPath     | False    |            | Path to *contrast.jar*, if you already have one downloaded                        |       |
+| skipArgLine | False    | False      | If this is "true", the plugin will not alter the Maven `argLine` property in any way |    2.0 |
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability with adequate severity is found.
 
@@ -82,9 +83,24 @@ The following configuration is an example of a profile for the Contrast Maven Pl
 </profile>
 ```
 
-## JVM arguments
+## Option Details
+
+### JVM arguments
 
 The Contrast Maven Plugin will configure your JVM arguments to use the Contrast agent by appending to the `argLine` property from the Maven properties. If you want to prevent this in order to build your own JVM arguments, set `skipArgLine` to `true` in the plugin properties.
+
+### serverPath
+
+Multi-module Maven builds can appear as different servers in Contrast. If you want to discourage this behavior, and prefer to see all modules appear under the same server in Contrast, set the `serverPath` property.
+
+### appVersion
+
+When your application's integration tests are run, the Contrast agent can add an `appVersion` property to its metadata. This allows you to compare vulnerabilities between applications versions, CI builds, etc. Contrast generates the `appVersion` in the following order:
+
+* If you specify an `appVersion` in the properties, Contrast will use it without modification.
+* If your build is running in TravisCI, Contrast will use `appName-$TRAVIS_BUILD_NUMBER`.
+* If your build is running in CircleCI, Contrast will use `appName-$CIRCLE_BUILD_NUM`.
+* If you don't specify an `appVersion`, Contrast will generate one in `appName-yyyyMMddHHmmss` format. 
 
 ## Containers
 
