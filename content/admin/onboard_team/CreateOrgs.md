@@ -32,13 +32,13 @@ Organizations are granted licenses by the SuperAdmin for Enterprise-on-Premises 
 
 If you're administering an EOP installation, you can allocate both Assess and Protect licenses to specific organizations. (This allows OrgAdmins and users with the proper role to license applications and servers within their organization.)
 
-In the **Organizations** grid, find the organization and click the carrot in the grid row. Choose **Allocate Licenses** in the row action menu. Define the the number of licenses as well as expiration dates in the dialog that appears. 
+In the **Organizations** grid, find the organization and choose **Allocate Licenses** in the row action menu. Define the the number of licenses as well as expiration dates in the dialog that appears. 
 
 <a href="assets/images/Allocate-licenses-system-settings.png" rel="lightbox" title="Allocate licenses in the Organizations grid"><img class="thumbnail" src="assets/images/Allocate-licenses-system-settings.png"/></a>
 
 ## Enable Protect
 
-Contrast Protect customers can enable one or more organizations to use Protect after the organization is created and/or licensed. Go to the **Organizations** page, and use the toggle in the grid enable or disable coverage. Once Protect is enabled, Contrast asks you to select which users within the organization will receive Protect permissions.
+Contrast Protect customers can enable organizations to use Protect after the organization is created and/or licensed. Go to the **Organizations** page, and use the toggle in the grid enable or disable coverage. Once Protect is enabled, Contrast asks you to select which users within the organization will receive Protect permissions.
 
 ## Organization Administration 
 
