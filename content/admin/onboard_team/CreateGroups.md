@@ -4,7 +4,7 @@ description: "Creating Access Control Groups within Contrast TeamServer"
 tags: "Admin onboarding TeamServer groups acls access create"
 -->
 
-Contrast provides role-based access control (RBAC) capabilities through groups. Administrators can create these groups to provide or restrict system, organization, and application access and privileges to users in Contrast. 
+Contrast provides [role](admin-manageorgsroleperm.html)-based access control (RBAC) capabilities through groups. Administrators can create these groups to provide or restrict system, organization, and application access and privileges to users in Contrast. 
 
 Contrast has two types of access control groups: **System** and **Organization**. System groups, which are only available to Enterprise-on-Premises (EOP) customers, allow for delegated system administration. Organization groups allow for cross-organization access and application access rules.
 
@@ -22,18 +22,16 @@ To add a new group, go to the **user menu > SuperAdmin > Groups page**. Choose t
 
 * Add an unique string naming the system **Group** (i.e., "My Company"). 
 * Select **System** from the **Type** menu. 
-* In the **System Access** field, select one or more organizations to associate with one or more roles.
-
-* In the **Role** field, choose from one of the following:
+* In the **System Access** fields, choose a pairing of one or more **organizations** and one of the following **roles**: 
  * **System:** Administrative privileges in the System Administration UI.
  * **Observer:** View-only privileges in the System Administration UI.
  * **No Access:** Restricts access to an organization.
 
 * To add another role and organization(s) pairing, select the link to **Add system access**. 
-* In the **Member(s)** field, select one or more Contrast users to assign to the group. 
+* In the **Members** field, select one or more Contrast users to assign to the group. 
 * Once the group information is complete, click the **Add** button. 
 
-The completed group will then appear in the **Groups** grid.
+The completed group will appear in the **Groups** grid.
 
 ## Default Organization Groups
 
@@ -46,48 +44,51 @@ Use an organization group to assign authorized users access to organizations and
 
 ## Custom Organization Groups 
 
-If you need more granular control, create organization groups in the System Administration interface (available only to EOP customers and System Administrators) for cross-organizational access control. As an Admin for the organization, you can also create a group in the Organization Settings page. Groups created from the Organization Settings page only impact the roles and permissions of the organization in which they are created. 
+If you need more granular control, create organization groups in the System Administration interface (available only to EOP customers and System Administrators) for cross-organizational access control. As an Admin for the organization (OrgAdmin), you can also create a group in the **Organization Settings** page. Groups created in **Organization Settings** only impact the roles and permissions of the organization in which they are created. 
+
+> **Note:** You can also choose to have **Applications onboarded to group**, which allows you to grant group access to individual applications during the onboarding process. 
 
 ### Add a new group
 
 #### System Administration 
 
-To add a new group as a **SuperAdmin**, go to the **user menu > SuperAdmin > Groups page**. Choose the button to **Add Group** and complete the following fields in the configuration dialog.  
+To add a new group as a SuperAdmin, go to the **user menu > SuperAdmin > Groups page**. Choose the button to **Add Group** and complete the following fields.  
 
 <a href="assets/images/Add-organization-group-superadmin.png" rel="lightbox" title="Add an Organization group in the System Administration UI"><img class="thumbnail" src="assets/images/Add-organization-group-superadmin.png"/></a>
 
-* Add a unique string for the **Group Name** (i.e., My Test Group).
-* Select **Organizational** from the **Type** menu. 
+* Add a unique string for the **Group Name** (i.e., "My Test Group").
+* From the **Type** menu, select **Organizational**. 
 
-* In the **Organization** menu (available only to SuperAdmins), select one or more organizations to associate with one or more roles.
+* In the **Organization** menu, select one or more organizations. These organizations will be associated with one or more roles.
 
-* In the **Organization Role** field (available only to SuperAdmins), choose from the following:
+* Choose an **Organization Role** from the dropdown menu. (The [Edit role](https://docs.contrastsecurity.com/admin-manageorgsroleperm.html) is appropriate for most Contrast users.)
+* In the **Application Access** fields, choose a pairing of one or more  **application(s)** and one  **role**. 
+ * Click **Add Access** link to define separate application and role assignment(s).
+* In the **Members** field, select one or more Contrast users to assign to the group.
 
- * **No Access:** No access to the organization.
- * **View:** Read-only access to an organization's findings in Contrast. 
- *  **Edit:** Interact with the full lifecycle of vulnerabilities as well as bring applications online and delete them. No administrative capabilities or functions. <br>
- (This role is appropriate for most Contrast users.)
- * **Rules Admin:** Privileges of an Edit user as well as the ability to edit policy and rules. 
- * **Admin:** Responsible for configuration of the organization with the ability to license applications, manage user accounts and perform other advanced configuration functions. 
+> **Example:** In the first line of the **Application Access** section, add access to App1 and App2 with the "Admin" role. Click the link to **Add access** to App3 and App4 with the role "Edit" on the next line. Therefore, the group provides the "Admin" role for App1 and App2, but the "Edit" role for App3 and App4, to the Contrast users that you designated in the **Members** field.
 
-* In the **Application Access** fields, define access as a pairing of application(s) and role. 
- * In the multiselect field, choose a single application, multiple applications or all applications. You can also choose to have **Applications onboarded to group**, which allows you to grant group access to individual applications during onboarding. 
- * In the dropdown menu, select the role you want to provide to those applications. 
- * Click **Add Access** to define separate application and role assignment(s) in a separate line.
+* Once the group information is complete, click the **Add** button.  
 
-* In the **Member(s)** field, select one or more Contrast users to assign to the group. 
+The completed group will appear in the **Groups** grid.
 
->**Example:** Add user access to App1 and App2 with the Admin role on one line. Click the link to **Add access** to App3 and App4 with the role Edit on the next line. Therefore, the group provides the Admin role for App1 and App2 but the Edit role for App3 and App4 to the selected users.
+#### Organization Settings
 
-### Organization Settings
-
-To add a new group as an OrgAdmin, go to the **user menu > SuperAdmin > Groups page**. Choose the button to **Add Group** and complete the following fields in the configuration dialog.
+To add a new group as an OrgAdmin, go to the **user menu > Organization Settings > Groups tab**. Select the button to **Add Group** and complete the following fields.
 
 <a href="assets/images/Add-organization-group-orgadmin.png" rel="lightbox" title="Add an Organization group in Organization Settings"><img class="thumbnail" src="assets/images/Add-organization-group-orgadmin.png"/></a>
 
+* Add a unique string for the Group Name (i.e., "My Org").
+* In the **Application Access** fields, choose a pairing of one or more  **application(s)** and a **role**. (See the **Example** above.)
+ * Click **Add Access** link to define separate application and role assignment(s) in a separate line.
+* In the **Members** field, select one or more Contrast users to assign to the group. 
+* Once the group information is complete, click the **Add** button. 
+
+The completed group will appear in the **Groups** grid.
 
 ## Learn More
 
-Read [Create Users](admin-onboardteam.html#create-user) and [Manage Groups](admin-manageorgs.html#access) to learn how to access and update your groups while using Contrast.
-
+* [Create Users](admin-onboardteam.html#create-user) 
+* [Manage Groups](admin-manageorgs.html#access) 
+* [User Roles & Permissions](admin-manageorgsroleperm.html)
 
