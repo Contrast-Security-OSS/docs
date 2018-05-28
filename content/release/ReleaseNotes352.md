@@ -4,14 +4,14 @@ description: "Contrast 3.5.2 May 2018"
 tags: "3.5.2 May Release Notes"
 -->
 
-Contrast .NET agent support for Azure App Service...
+Contrast .NET agent support for Azure App Service and upcoming availability of the Python Protect agent...
 
 ## Fixes
 
-* Sort attack events in the grid CONTRAST-22807
-* Automatic Jira ticket creation works for child apps. CONTRAST-23355 
-* Sort Assess Rules by severity in an application's Policy page, and see accurate results. CONTRAST-22538
-* Navigate to affected applications from attack **Notes** page. CONTRAST-22808
+* Sort attack events in the grid. 
+* Automatic Jira ticket creation works for child apps.
+* Sort Assess Rules by severity in an application's Policy page, and see accurate results. 
+* Navigate to affected applications from attack **Notes** page. 
 
 
 ## Improvements 
@@ -25,17 +25,11 @@ Contrast .NET agent support for Azure App Service...
 
 ### Java summary 
 
-Our team fixed over-reporting of Expression Language Injection, and improved accuracy of SQL-Injection and XSS rules - all for Protect. We also added protection against CVE-2018-1273. 
-
-Will now recognize several Assess sanitizers from Freemarker v2.3.2+, and improved performance of the agent's Assess analysis in scenarios when calling ToString on an object lead to multiple exceptions in that class’s implementation of ToString.
-
-We improved reliability of agent initialization, library discovery, and the Java agent launcher downloading the Java agent from Contrast. 
+The Java agent team fixed over-reporting of Expression Language Injection, and improved accuracy of SQL-Injection and XSS rules for Protect. We also added protection against CVE-2018-1273. We now recognize several Assess sanitizers from Freemarker v2.3.2+. We also improved performance of the agent's Assess analysis in scenarios when calling ToString on an object lead to multiple exceptions in that class’s implementation of ToString. We improved reliability of agent initialization, library discovery, and the Java agent launcher downloading the Java agent from Contrast. 
 
 ### .NET summary 
 
-Contrast now supports analysis of .NET applications hosted Azure App Service. See [Manual Installation](installation-netinstall.html#net-manual) and [Express Installation for Azure](installation-netinstall.html#net-express) for instructions on how to add the .NET agent to applications hosted by Azure App Service.
-
-While we were working on that, we also:  
+Contrast now supports analysis of .NET applications hosted Azure App Service. See [Manual Installation](installation-netinstall.html#net-manual) and [Express Installation for Azure](installation-netinstall.html#net-express) for instructions on how to add the .NET agent to applications hosted by Azure App Service. While .NET team was working on that, we also:  
 
 * Added a Protect rule for HTTP method tampering. 
 * Fixed a bug where the agent’s instrumentation could modify the value of encoded XML under CLR2.
@@ -47,9 +41,13 @@ Oh, and the agent will no longer falsely identify a weak hash algorithm in Micro
 
 ### Node.js summary 
 
+The Node agent team resolved issues related to an incorrect value being read from the PostgreSQL sensor when emitting event data. Additional sanitation methods for mustache templates are now supported. We've investigated and closed a string literal to string object transformation issue, a related issue where tag ranges after string concatenation were not being resolved as an integer value, and ensured that a propagation for strings handles as edge case where the length of the tag range is 0. The inventory mode now supports library versions in additional non-standard formats. Finally, the agent now supports code using the spread operator in additional contexts.
 
 ### Ruby summary 
 
+The Ruby agent team fixed a bug in class name resolution from the require library paths. We also fixed an issue with the used class count, and closed an issue where an internal context object was being called with an incorrect argument. In preparation for the Ruby Assess Beta coming this summer, we implemented the stored XSS rule, and updated the trace event reporting to the Contrast application.
 
 ### Python summary
+
+The Python agent team is preparing for general availability of the Python Protect agent at the end of the second quarter. We've fixed issues related to the used class count, and updated the library version reporting the Contrast application. We've also made updates in the stack frame reporting for attacks, and updated the [installation instructions](installation-python.html#python-install) for the Flask web framework.
 
