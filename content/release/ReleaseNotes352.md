@@ -4,21 +4,21 @@ description: "Contrast 3.5.2 May 2018"
 tags: "3.5.2 May Release Notes"
 -->
 
-Contrast .NET agent support for Azure App Service and upcoming availability of the Python Protect agent...
+With .NET agent support for Azure App Service, a new applications grid to try out, and the Beta release of the Ruby Assess agent on its way, Contrast just upgraded your summer plans. 
 
 ## Fixes
 
-* Sort attack events in the grid. 
-* Automatic Jira ticket creation works for child apps.
-* Sort Assess Rules by severity in an application's Policy page, and see accurate results. 
+* Sort **attack events** in the grid to find just what you're looking for. 
+* Use automatic Jira ticket creation for child **applications**.
+* Sort Assess Rules by severity in an application's **Policy** page and get accurate results. 
 * Navigate to affected applications from attack **Notes** page. 
 
 
 ## Improvements 
 
-* Use the new version of the [Contrast Maven Plugin](tools-build.html#maven)! There’s no need to manually configure JVM arguments, and the plugin is now automatically integrated with TravisCI and CircleCI build numbers.
+* Use the new version of the [Contrast Maven Plugin](tools-build.html#maven)! It's automatically integrated with TravisCI and CircleCI build numbers, and there’s no need to manually configure JVM arguments.
 
-* Our new applications grid is in Beta! We’ve given you more direct access to filters while retaining them as you work, provided more insight to your vulnerabilities, and cleaned up the UI for more simplicity. Go to the **Applications** page to give it a try, and then let us know what you think!
+* With our new applications grid in Beta, we’ve given you more direct access to filters while retaining them as you work, provided more insight to your vulnerabilities, and cleaned up the UI for more simplicity. Go to the **Applications** page to give it a try, and then let us know what you think!
 
 
 ## Agent Updates
