@@ -8,26 +8,26 @@ System and Organization Administrators can create users individually, in groups,
 
 >**Note:** Verify the [Roles](admin-manageorgsroleperm.html#roles) that you want to assign to users so that they have the appropriate level of functionality.
 
-You may decide to designate an [Application Access Group](admin-onboardteam.html#group), which provides more administrative functionality to the users for specific applications or restricts which applications the users in the group can view or modify.
+You may decide to designate an [Application Access Group](admin-onboardteam.html#group), which defines more administrative functionality or greater access restrictions for the users for specific applications.
 
 ## System Settings
 
-Enterprise-on-Premises (EOP) customers can delegate users to perform system administration functions across organizations such as managing users, groups, applications, licenses, API keys and security policies. This assumes that you created multiple organizations in Contrast as part of a multi-tenant deployment. See [Granting and Revoking SuperAdmin Permissions](admin-manageorgs.html#sa) to get started.
+As an Enterprise-on-Premises (EOP) customer, you can delegate users to perform system administration functions across organizations - such as managing users, groups, applications, licenses, API keys and security policies - if you created multiple organizations in Contrast as part of a multi-tenant deployment. See [Granting and Revoking SuperAdmin Permissions](admin-manageorgs.html#sa) to get started.
 
 To create users as a System Administrator, go to the **User menu** and choose **SuperAdmin** in the **Use Contrast Security as** section. Select the **Users** page in the top navigation. 
 
 ### Individual users
 
-To add a single user, complete the following steps: 
+To add a single user, complete the following steps. 
 
 * Click the button to **Add User** above the grid.
 * Enter the user's **First Name**, **Last Name** and **Email Address** in the provided fields. 
 * Check the box if you want to **Require email activation** instead of requiring a password.
 * Choose which of the **System Roles** should apply to the user in the dropdown menu. The default is **None**. 
 * Choose the **Organization** to which the user belongs. 
-* Once you decide on an organization, you can choose the default **Organization Role** in the dropdown menu as well as an **Application Access Group** in the multiselect field.
-* Choose the **Date Format**, **Time Format** and **Time Zone** in the dropdown fields. 
-* The box to **Use Organization Settings** is checked by default. Uncheck the box to create your own settings using the **Access** toggle, or check the box to **make user API only**. 
+* Choose the default **Organization Role** in the dropdown menu as well as an **Application Access Group** in the multiselect field.
+* Choose the **Date Format**, **Time Format** and **Time Zone** in the dropdown menus. 
+* The box to **Use Organization Settings** is checked by default. Uncheck the box to **Use Organization Settings** to create your own settings using the **Access** toggle, or to enable the checkbox to **make user API only**. 
 * Use the toggle to enable **Protect** access for the user. The toggle is **off** by default. 
 * Click the **Add** button to save the information and create the user.  
 
@@ -46,7 +46,7 @@ To bulk add users, click the upload icon above the grid in the **Users** page to
 * **Organization UUID** 
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
-> **Note:** Find the Organization UUID in the Contrast interface by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
+> **Note:** Find the Organization UUID in the Contrast UI by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
 
 #### Optional information 
 
@@ -68,7 +68,7 @@ For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP]
 
 #### Templates
 
-Download **CSV templates** directly from the Contrast interface by hovering over the upload icon and clicking the link in the tooltip, or by clicking the links below. 
+Download **CSV templates** directly from the Contrast UI by hovering over the upload icon and clicking the link in the tooltip, or by clicking the links below. 
 
 * [Database or SSO authentication](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-email.csv)
 * [HTTP Header, LDAP or AD authentication](assets/attachments/user_upload/Contrast-user-upload-template-superadmin-username.csv)
@@ -90,8 +90,8 @@ To add a single user, complete the following steps:
 * Choose the user's **Organization Role** in the dropdown menu. 
 * Select an **Application Access Group** to which to add the user in the dropdown menu, if desired. 
 * Choose **Date Format**, **Time Format** and **Time Zone** settings in the dropdown menus. 
-* If you want to disable the user's access to your organization in the Contrast interface, use the **Access** toggle. (The user has access by default.)
-* Check the box if you want the user to have **API Only** access. <br> (The user will have access Contrast's REST API, but won't have access to the Contrast interface.)
+* If you want to disable the user's access to your organization in the Contrast UI, use the **Access** toggle. (The user has access by default.)
+* Check the box if you want the user to have **API Only** access. <br> (The user will have access Contrast's REST API, but won't have access to the Contrast UI.)
 * Use the toggle to enable **Protect** access for the user. The toggle is **off** by default. 
 * Click the **Add** button to save the information and create the user.  
 
@@ -102,6 +102,8 @@ To add a single user, complete the following steps:
 To bulk add users, click the upload icon above the grid in the **Users** page to import a spreadsheet with the users' information. The spreadsheet must be CSV format, and include the following fields for each user. **All field headings and values in the spreadsheet must be formatted as shown.** 
 
 #### Required information 
+
+The following fields must be included in the spreadsheet. See the **Templates** section to download spreadsheets in CSV format. 
 
 * **First Name**
 * **Last Name** 
@@ -127,12 +129,11 @@ For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP]
 
 #### Templates
 
-Download **CSV templates** directly from the Contrast interface by hovering over the upload icon and clicking the link in the tooltip, or by clicking the links below. 
+Download CSV-formatted templates directly from the Contrast UI by hovering over the upload icon and clicking the link in the tooltip, or by clicking the links below. 
 
 * [Database or SSO authentication](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-email.csv)
 * [HTTP Header, LDAP or AD authentication](assets/attachments/user_upload/Contrast-user-upload-template-organizationadmin-username.csv)
  
-
 #### Upload progress
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
