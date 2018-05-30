@@ -20,7 +20,7 @@ To create users as a System Administrator, go to the **User menu** and choose **
 
 To add a single user, complete the following steps. 
 
-* Click the button to **Add User** above the grid.
+* Click the button above the grid to **Add User**.
 * Enter the user's **First Name**, **Last Name** and **Email Address** in the provided fields. 
 * Check the box if you want to **Require email activation** instead of requiring a password.
 * Choose which of the **System Roles** should apply to the user in the dropdown menu. The default is **None**. 
@@ -39,6 +39,8 @@ To add a single user, complete the following steps.
 To bulk add users, click the upload icon above the grid in the **Users** page to import a spreadsheet with the users' information. The spreadsheet must be CSV format, and include the following fields for each user. **All field headings and values in the spreadsheet must be formatted as shown.** 
 
 #### Required information 
+
+The following fields must be included in the spreadsheet. See the **Templates** section to download spreadsheets in CSV format. 
 
 * **First Name** 
 * **Last Name**
@@ -75,7 +77,7 @@ Download **CSV templates** directly from the Contrast UI by hovering over the up
 
 #### Upload progress
 
-Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
+Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, you'll see a confirmation message in the UI that includes the number of users uploaded. If the upload failed, you'll see an error message that includes the source of the error in the spreadsheet.
 
 ## Organization Settings
 
@@ -115,7 +117,6 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 To include the following fields in the spreadsheet, add a new column and value(s) for each as written below. 
 
 * **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
-* **Protect** <br> The default value is "Off".
 * **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
 * **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
 * **Timezone** <br> The default value is the organization time zone.
