@@ -85,7 +85,7 @@ To create users as an Organization Administrator, go to the **User menu > Organi
 
 ### Individual users
 
-To add a single user, complete the following steps: 
+To add a single user, complete the following steps. 
 
 * Click the button to **Add User** above the grid.
 * Enter the user's **First Name**, **Last Name** and **Email Address** in the provided fields. 
