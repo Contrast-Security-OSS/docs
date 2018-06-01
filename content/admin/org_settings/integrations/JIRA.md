@@ -16,15 +16,9 @@ Integrating JIRA with Contrast allows you to automatically generate tickets, syn
 
 ## Setup
 
-In **Integrations**, click **Connect** in the JIRA row. In the **Connect with JIRA** form, complete the following fields. 
+In **Integrations**, click **Connect** in the JIRA row. In the **Connect with JIRA** form, add the name for the bugtracker entry, the **username** and **password** for the account connected to JIRA in the appropriate fields. The JIRA URL must be accessible from the Contrast UI instance being configured.
 
-Field | Description
------- | -----------
-**Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers
-**Username** | The username for the account connected to JIRA
-**Password** | The password for the specified username
-**Host** | The JIRA URL; must be accessible from the Contrast interface instance being configured
-
+> **Note:** Contrast saves the username, password and JIRA URL entered in your configuration as a set of credentials. See the **Manage Credentials** section for more details.
 
 Once you complete the fields, click **Test connection**. This process may take a few moments depending on the number of your JIRA projects. The test verifies that the JIRA instance can be reached by Contrast and that the specified user is able to log in.
 
@@ -50,12 +44,12 @@ Continue to the fields below to set a vulnerability status based on each JIRA ti
 |---------------|--------------------|------------------------------------------------------------|
 | OPEN          | N/A                | **Confirmed** <br> Suspicious <br>  Reported               |
 | IN PROGRESS   | N/A                | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
-| RESOLVED      | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| RESOLVED      | Fixed <br> Won't Fix <br> Duplicate <br> Incomplete <br> Cannot Reproduce <br> Done <br> Won't Do | **Not a Problem** <br> Remediated <br> Fixed  |
 | REOPENED      | N/A                | **Confirmed** <br> Suspicious <br> Reported                |
-| CLOSED        | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| CLOSED        | Fixed <br> Won't Fix <br> Duplicate <br> Incomplete <br> Cannot Reproduce <br> Done <br> Won't Do | **Not a Problem** <br> Remediated <br> Fixed  |
 | BLOCKED       | N/A                | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
 | NEEDS CLARIFICATION | N/A          | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
-| READY TO DEPLOY | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| READY TO DEPLOY | Fixed <br> Won't Fix <br> Duplicate <br> Incomplete <br> Cannot Reproduce <br> Done <br> Won't Do | **Not a Problem** <br> Remediated <br> Fixed  |
 
 If you choose **Not a Problem**, Contrast requires you to enter a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection in the dropdown menu is **Other**. 
 
@@ -70,3 +64,7 @@ For multiple vulnerabilities sent to JIRA in bulk as a single issue, the JIRA ti
 Automatically create tickets in JIRA for newly discovered vulnerabilities by checking the designated box in the configuration form. In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. The default selections are **Critical** and **High**.
 
 > **Note:** This selection doesn't generate tickets retroactively.
+
+## Manage Credentials 
+
+
