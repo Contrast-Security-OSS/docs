@@ -69,8 +69,9 @@ Automatically create tickets in JIRA for newly discovered vulnerabilities by che
 
 Contrast will save each set of credentials that you enter in your JIRA configurations to help you make new connections even faster. The  username, password and JIRA URL values that you enter in your first configuration become the default credentials for your following configurations, unless you choose to modify the fields. 
 
-In subsequent configurations, Contrast will auto-populate the fields with the default credentials. If you want to use different information in a new configuration, update the values in the configuration form fields. Contrast will then give you the options to override the existing set of credentials, or save the new values as a new credential set under a different name.  
+In subsequent configurations, Contrast will auto-populate the fields with the default credentials. If you want to use different information in a new configuration, update the values in the configuration form fields. Contrast will then give you the options to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. Your choice will take effect once you save the new configuration. 
 
+<!-- What's the view when you click the Manage Credentials link? The dialog?-->
 <!-- How does this relate to the Project in the configuration? -->
 
 <a href="assets/images/Jira-credentials-dialog.png" rel="lightbox" title="Override default JIRA credentials in your configuration"><img class="thumbnail" src="assets/images/Jira-credentials-dialog.png"/></a>
