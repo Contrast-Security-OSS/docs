@@ -94,6 +94,8 @@ The Contrast Maven Plugin will configure your JVM arguments to use the Contrast 
 
 Multi-module Maven builds can appear as different servers in Contrast. If you want to discourage this behavior, and prefer to see all modules appear under the same server in Contrast, set the `serverPath` property.
 
+**You are strongly encouraged to add a serverPath if this build will be run in a CI environment such as Travis CI or Circle CI.** This will help with keeping your servers tidy in the Contrast UI. 
+
 ### appVersion
 
 When your application's integration tests are run, the Contrast agent can add an `appVersion` property to its metadata. This allows you to compare vulnerabilities between applications versions, CI builds, etc. Contrast generates the `appVersion` in the following order:
