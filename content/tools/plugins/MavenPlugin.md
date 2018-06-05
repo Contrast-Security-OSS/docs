@@ -29,6 +29,7 @@ The table below shows all the parameters for the plugin. These settings are for 
 | apiKey      | True     |            | [API Key](admin-orgsettings.html#apikey)                                          |       |
 | orgUuid     | True     |            | [Organization UUID](admin-orgsettings.html#apikey)                                |       |
 | appName     | True     |            | Name of the application as seen in the Contrast UI                                |       |
+| standalone  | False    | False      | Set this to true if this is a standalone app                                    |    2.2|
 | appVersion  | False    | See **appVersion** section. | The `appversion` to report to the Contrast application. See the **appVersion** for more information.    |       |
 | apiUrl      | True     |            | API URL to your Contrast application                                              |       |
 | serverName  | True     |            | Name of the server you set with `-Dcontrast.server`                               |       |
