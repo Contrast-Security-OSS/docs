@@ -11,8 +11,8 @@ The Contrast configuration file *DotnetAgentService.exe.config* contains several
 | Parameter                | Description                              | Version |
 | ------------------------ | ---------------------------------------- | ------- |
 | AutoUpdateBehavior       | Determines if the agent automatically updates to a newer version when a newer version is available on Contrast. The default value is **Daily**.<li>**Daily**: The agent checks for a new version on service start and every 24 hours afterwards.</li><li>**Startup**: The agent only checks for and installs updates on service start</li><li>**Disabled**: The agent checks for, but doesn't install, any updates.</li> | 4.6+     |
-| OverrideExistingProfiler |   Due to .NET Profiling API technology limitations, only one program can use it at a time. This API is commonly used by APM agents like NewRelic, AppDynamics or DynaTrace.  By default, this is set to **false**; the Contrast agent will fail to start if it detects another program using the .NET Profiling API so that the other program can continue working. If set to **true**, Contrast will attempt to force itself to start, which will break the other agent.   | 18.3.4+ |
-| RestartIISOnConfigChange | Contrast will automatically restart IIS in the background when any configuration settings that require IIS restart are changed. Changes that enable or disable Assess or Defend mode, add security controls, or change process whitelist or blacklist require restart. These changes can come from changing the application *config* file or from the Contrast website. The default value is **true**. If set to **false**, you must restart IIS for changes to the given configuration settings to take effect. | 3.2.7+  |
+| OverrideExistingProfiler |   Due to .NET Profiling API technology limitations, only one program can use it at a time. This API is commonly used by APM agents like NewRelic, AppDynamics or DynaTrace.  By default, this is set to "false"; the Contrast agent will fail to start if it detects another program using the .NET Profiling API so that the other program can continue working. If set to "true", Contrast will attempt to force itself to start, which will break the other agent.   | 18.3.4+ |
+| RestartIISOnConfigChange | Contrast will automatically restart IIS in the background when any configuration settings that require IIS restart are changed. Changes that enable or disable Assess or Defend mode, add security controls, or change process whitelist or blacklist require restart. These changes can come from changing the application *config* file or from the Contrast website. The default value is "true". If set to "false", you must restart IIS for changes to the given configuration settings to take effect. | 3.2.7+  |
 
 
 ## Communication
@@ -62,7 +62,7 @@ More detailed levels of logging degrade performance, but can generate useful inf
 
 | Parameter                 | Description                              | Version |
 | ------------------------- | ---------------------------------------- | ------- |
-| ShouldLogMethodSignatures | Controls logging of method signatures during CLR JIT compilation. The default value is `false`. Set to `true` to enable method signature logging. This setting has a noticeable impact on startup time but can help troubleshoot issues during application startup. | All     |
+| ShouldLogMethodSignatures | Controls logging of method signatures during CLR JIT compilation. The default value is "false". Set to "true" to enable method signature logging. This setting has a noticeable impact on startup time but can help troubleshoot issues during application startup. | All     |
 
 
 
@@ -72,8 +72,8 @@ More detailed levels of logging degrade performance, but can generate useful inf
 | ---------------------------------------- | ---------------------------------------- |
 | SamplingBaseline, SamplingFrequency, SamplingWindow | Enable and configure sampling mode. Configured in [Server Settings](user-servers.html#settings) in the Contrast interface by default. See the article on [Sampling](admin-orgsettings.html#org-server) for more information. |
 | StackTraceConfig                         | Limits stack traces captured by the agent. Configured in [Server Settings](user-servers.html#settings) in the Contrast interface by default. The default is **Full**. <li>**Full**: Captures all stack traces with file and line number information. Deployments must include *.PDB* files for line number information.</li><li>**Limited**: Better performance; captures all stack traces but without file and line number information. Best used for builds without debugging symbols (*.PDB* files).</li><li>**Minimal**: Best performance; doesn't capture intermediate propagator stack traces, no file and line information. Best used for Release builds and Production environments.</li> |
-| ThreadAnalysis                           | Web (default) or Full.  Web follow data flow through normal web operations.  Full instruments all threading operations which adds overhead.  It can be used for more thorough analysis if your application manually creates background threads.
-| DetectPotentialSecurityControls          | true (default) or false.  All signatures will be checked if they are a potential security validator or sanitizer as their code is JIT compiled.  Set it to "false" to slightly improve start-up performance or bypass issues with this feature.
+| ThreadAnalysis                           | Web (default) or Full.  Web follows data flow through normal web operations. Full instruments all threading operations which adds overhead. It can be used for more thorough analysis if your application manually creates background threads.
+| DetectPotentialSecurityControls          | Set to "true" (default) or "false". All signatures will be checked if they are a potential security validator or sanitizer, as their code is JIT compiled. Set it to "false" to slightly improve start-up performance or bypass issues with this feature.
 
 
 
