@@ -65,7 +65,7 @@ Automatically create tickets in JIRA for newly discovered vulnerabilities by che
 
 >**Note:** This selection doesn't generate tickets retroactively.
 
-## Credential Sets
+## Credentials
 
 Contrast will save each set of credentials that you enter in your JIRA configurations to help you make new connections even faster. The  username, password and JIRA URL values that you enter in your first configuration become the default credentials for your following configurations, unless you choose to modify the fields. 
 
