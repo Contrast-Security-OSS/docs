@@ -67,21 +67,25 @@ Automatically create tickets in JIRA for newly discovered vulnerabilities by che
 
 ## Credentials
 
-Contrast will save each set of credentials that you enter in your JIRA configurations to help you make new connections even faster. The  username, password and JIRA URL values that you enter in your first configuration become the default credentials for your following configurations, unless you choose to modify the fields. 
-
-In subsequent configurations, Contrast will auto-populate the fields with the default credentials. If you want to use different information in a new configuration, update the values in the configuration form fields. Contrast will then give you the options to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. Your choice will take effect once you save the new configuration. 
-
-<!-- What's the view when you click the Manage Credentials link? The dialog?-->
-<!-- How does this relate to the Project in the configuration? -->
-
-<a href="assets/images/Jira-credentials-dialog.png" rel="lightbox" title="Override default JIRA credentials in your configuration"><img class="thumbnail" src="assets/images/Jira-credentials-dialog.png"/></a>
+Contrast will save each set of credentials that you enter in your JIRA configurations to help you set up new connections even faster. The username, password and JIRA URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
 
 ### Manage credentials
 
-In the JIRA integrations row, click the **Manage Credentials** link to modify your existing sets of information. In the configuration form, use the dropdown menu to select a set of saved credentials, and modify the fields as needed. Click the link to **Rename** the set of credentials. 
+To create or edit a configuration, and use credentials that are different than your default set, select the **Manage credentials** link. In the **URL** field, choose a value in the dropdown menu to populate the fields with a saved set of credentials, or manually update the values in the configuration form fields. 
+
+<!-- Add image -->
+
+Once the fields are updated, click the button to **Test Connection**. 
+
+If you are using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. Your choice will take effect once you save the new configuration. 
+
+<a href="assets/images/Jira-credentials-dialog.png" rel="lightbox" title="Override default JIRA credentials in your configuration"><img class="thumbnail" src="assets/images/Jira-credentials-dialog.png"/></a>
+
+You can also select the **Manage Credentials** link in the JIRA integrations row to modify your existing sets of information without editing or adding a configuration. In the configuration form, use the dropdown menu to select a set of saved credentials, and modify the fields as needed. Click the link to **Rename** the set of credentials. 
+
+<!-- Add image -->
 
 >**Note:** Any updates to a set of credentials will affect all configurations using that set. 
 
 Click the button to **Test Connection**; once Contrast verifies the connection, click the button to **Save** your changes. 
-
 
