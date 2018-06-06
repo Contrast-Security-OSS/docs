@@ -29,14 +29,14 @@ The table below shows all the parameters for the plugin. These settings are for 
 | apiKey      | True     |            | [API Key](admin-orgsettings.html#apikey)                                          |       |
 | orgUuid     | True     |            | [Organization UUID](admin-orgsettings.html#apikey)                                |       |
 | appName     | True     |            | Name of the application as seen in the Contrast UI                                |       |
-| standalone  | False    | False      | Set this to true if this is a standalone app                                    |    2.2|
-| appVersion  | False    | See **appVersion** section. | The `appversion` to report to the Contrast application. See the **appVersion** for more information.    |       |
+| standalone  | False    | False      | Set this to "true" if this is a standalone application.                           |    2.2|
+| appVersion  | False    | See **appVersion** section. | The `appversion` to report to the Contrast application. See the **appVersion** section for more information.    |       |
 | apiUrl      | True     |            | API URL to your Contrast application                                              |       |
 | serverName  | True     |            | Name of the server you set with `-Dcontrast.server`                               |       |
 | serverPath  | False    |            | The server context path                                                           |    2.1|
 | minSeverity | False    | Medium     | Minimum severity level to verify; options are Note, Low, Medium, High or Critical |       |
 | jarPath     | False    |            | Path to *contrast.jar*, if you already have one downloaded                        |       |
-| skipArgLine | False    | False      | If this is "true", the plugin will not alter the Maven `argLine` property in any way |    2.0 |
+| skipArgLine | False    | False      | If this is "true", the plugin will not alter the Maven `argLine` property in any way. |    2.0 |
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability with adequate severity is found.
 
@@ -94,7 +94,7 @@ The Contrast Maven Plugin will configure your JVM arguments to use the Contrast 
 
 Multi-module Maven builds can appear as different servers in Contrast. If you want to discourage this behavior, and prefer to see all modules appear under the same server in Contrast, set the `serverPath` property.
 
-**You are strongly encouraged to add a serverPath if this build will be run in a CI environment such as Travis CI or Circle CI.** This will help with keeping your servers tidy in the Contrast UI. 
+**You are strongly encouraged to add a `serverPath`, if this build will be run in a continuous integration (CI) environment such as Travis CI or Circle CI.** This will help you keep your servers tidy in the Contrast UI. 
 
 ### appVersion
 
