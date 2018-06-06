@@ -6,15 +6,6 @@ tags: "installation NodeJS agent configuration"
 
 You may use configuration options to alter Contrast's behavior. They can all be appended to your startup command (e.g., `npm run contrast -- --agent.logger.stdout false` or `node-contrast server.js --agent.logger.stdout false`). They can also be set via environment variables of the form `SETTING__NAME` (e.g., `--agent.logger.stdout false` becomes `AGENT__LOGGER__STDOUT=false`). With the exception of `--configFile`, they can all be added to your *contrast_security.yaml* file as well.
 
-``` javascript
-{
-    "contrast.api_key":"api_key",
-    "contrast.api_key":"api_key",
-    "contrast.api_key":"api_key",
-    "contrast.api_key":"api_key",
-}
-```
-
 ## General Configuration Options
 
 Parameter                                      | Environment Variable                     | Description
