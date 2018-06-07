@@ -4,42 +4,57 @@ description: "Sample Gradle build plugin using the Contrast Java SDK"
 tags: "tools Gradle SDK Integration Java"
 -->
 
-## About The Contrast Gradle Plugin
+## About the Contrast Gradle Plugin
 
-The Contrast Gradle Plugin is used to integrate the *Contrast.jar* with your build. It is capable of authenticating to TeamServer, downloading the latest Java agent, and verifying your build.
+The Contrast Gradle Plugin is used to integrate the *Contrast.jar* with your build. It's capable of authenticating to the Contrast application, downloading the latest Java agent and verifying your build.
 
-[Gradle](https://gradle.org/) is a build tool that utilizes `build.gradle` files to configure your applications. It is used to build, package, and test various types of applications.
+> **Note:** [Gradle](https://gradle.org/) is a build tool that utilizes `build.gradle` files to configure your applications. It's used to build, package, and test various types of applications.
 
-## Access To The Plugin
+This documentation is for the version 2.X of the plugin. For version 1.X, please refer to the [documentation on Github](https://github.com/Contrast-Security-OSS/contrast-gradle-plugin/blob/1.3.0/README.md).
 
-The plugin code can be viewed in our Github [repository](https://github.com/Contrast-Security-OSS/contrast-gradle-plugin). Here you can review the two tasks added by the plugin, `contrastInstall` and `contrastVerify`, and how they work.
+## Access the Plugin
+
+The plugin code can be viewed in our [Github repository](https://github.com/Contrast-Security-OSS/contrast-gradle-plugin). Here you can review the two tasks added by the plugin, `contrastInstall` and `contrastVerify`, and how they work.
 
 The latest version of the plugin can be found on [Gradle's plugin webpage](https://plugins.gradle.org/plugin/com.contrastsecurity.contrastplugin).
 
-## How To Use The Plugin
+## Use the Plugin
 
 ### Configuration
-Below is a table showing all the different parameters for the plugin:
 
-These settings are for connecting to TeamServer and filtering your vulnerabilities.
+The table belows shows all the parameters for the plugin. These settings are for connecting to the Contrast application and filtering your vulnerabilities.
+
 
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
-| TeamServer Username          | This is the username/email for your user in TeamServer |
-| TeamServer Service Key       | Service Key found in Organization Settings             |
-| TeamServer API Key           | API Key found in Organization Settings                 |
-| TeamServer API Url           | API Url to your TeamServer instance                    |
-| TeamServer Organization Uuid | Organization Uuid of the configured user found in Organization Settings |
-| Application Name             | Name of application you set with ```-Dcontrast.appname``` <BR> This is used to filter for your application |
-| Minimum Severity Level       | Minimum Severity level to filter for (Note, Low, Medium, High, Critical). This property is inclusive. |
-| Server Name                  | Name of server you set with ```-Dcontrast.server``` <BR> Use *app.contrastsecurity.com/Contrast/api* if you are a SaaS customer |
-| Jar Path                     | Path of a local jar file if you don't want to download the agent again                  |
+| TeamServer Username          | Username/email for your user in the Contrast UI         |
+| TeamServer Service Key       | [Service Key](admin-orgsettings.html#apikey)            |
+| TeamServer API Key           | [API Key](admin-orgsettings.html#apikey)                |
+| TeamServer API Url           | API URL to the Contrast application                     |
+| TeamServer Organization Uuid | [Organization UUID](admin-orgsettings.html#apikey)                                      |
+| Application Name             | Name of application you set with `-Dcontrast.appname` <BR> This is used to filter for your application |
+| Minimum Severity Level       | Minimum severity level to filter for (Note, Low, Medium, High, Critical). This property is inclusive. |
+| Server Name                  | Name of server you set with `-Dcontrast.server` <BR> Use *app.contrastsecurity.com/Contrast/api* if you are a SaaS customer |
+| Jar Path                     | Path of a local *jar* file if you don't want to download the agent again                  |
 
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability is found at or above the severity level set in the configuration.
 
-### Guide To Onboarding A Sample Web Application
-The easiest way to set up a project is to clone our sample Gradle-based web application.  This application has been migrated from Maven to Gradle, and relies on MongoDB, so we will install that and set up the database path.
+### JVM arguments
+
+The plugin edits the `org.gradle.jvmargs` property in the *gradle.properties* file to launch the JVM with the Contrast agent. 
+
+### appVersion
+
+An application version is generated during the Gradle install task. The plugin generates the application version in the following order.
+
+* If your build is running in TravisCI, Contrast will use `appName-$TRAVIS_BUILD_NUMBER`.
+* If your build is running in CircleCI, Contrast will use `appName-$CIRCLE_BUILD_NUM`.
+* If your build is running neither in TravisCI nor in CircleCI, Contrast will generate one in the format `appName-yyyyMMddHHmm`.
+
+### Oboard a Sample Web Application
+
+The easiest way to set up a project is to clone our sample Gradle-based web application. This application has been migrated from Maven to Gradle, and relies on MongoDB; you will install that and set up the database path.
 
 ```
 git clone https://github.com/Contrast-Security-OSS/Contrast-Sample-Gradle-Application
@@ -48,7 +63,7 @@ sudo mkdir -p /data/db
 brew services start mongodb
 ```
 
-* Now we have an application that is ready to run.  Open up the *Contrast-Sample-Gradle-Application/build.gradle* file.  Scroll to the very bottom and you will find the following contrastConfiguration extension. All of these values can be found in TeamServer already *except* for appName and serverName.
+* Now we have an application that is ready to run. Open up the *Contrast-Sample-Gradle-Application/build.gradle* file. Scroll to the very bottom and you find the following `contrastConfiguration` extension. You can find all of these values in the Contrast UI **except** for `appName` and `serverName`.
 
 ```
 contrastConfiguration {
@@ -62,7 +77,7 @@ contrastConfiguration {
 }
 
 ```
-* Once username, apiKey, serviceKey, apiUrl, and orgUuid have been configured we can install the Contrast jar file by calling the `contrastInstall` task. This will install **contrast.jar** within the project's build directory.
+* Once username, apiKey, serviceKey, apiUrl, and orgUuid have been configured we can install the Contrast *jar* file by calling the `contrastInstall` task. This will install **contrast.jar** within the project's build directory.
 
 ```
 cd path/to/Contrast-Sample-Gradle-Application
@@ -101,6 +116,7 @@ gradle build contrastVerify -x test
 ### Example
 
 Below is a sample configuration for the Contrast Gradle Plugin:
+
 ``` groovy
 buildscript {
   repositories {
