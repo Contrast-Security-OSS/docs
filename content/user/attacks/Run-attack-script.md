@@ -36,6 +36,8 @@ The following guide is written for customers using Nikto Web Scanner, an open-so
 ```
 
 > **Notes:**
+ * Note here
+ * The `-T 9` option tunes the scan to only test for SQL Injection.
 
 * Observe the attack events in the terminal window. 
 * Once the script runs, Contrast will alert you of the new attack in the UI and by email. 
@@ -45,6 +47,7 @@ The following guide is written for customers using Nikto Web Scanner, an open-so
 
 ## Learn More 
 
-* [Analyze and manage attacks](user-attacks.html#analyze-attacks)
+* [Monitor Attacks](user-attacks.html#monitor)
+* [Analyze Attacks](user-attacks.html#analyze-attacks)
 
 
