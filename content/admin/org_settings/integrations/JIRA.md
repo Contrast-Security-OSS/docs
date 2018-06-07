@@ -71,17 +71,15 @@ Contrast will save each set of credentials that you enter in your JIRA configura
 
 ### Manage credentials
 
-To create or edit a configuration, and use credentials that are different than your default set, select the **Manage credentials** link. In the **URL** field, choose a value in the dropdown menu to populate the fields with a saved set of credentials, or manually update the values in the configuration form fields. 
+To create or edit a configuration with credentials that are different than your default set, select the **Manage credentials** link. In the **URL** field, use the dropdown menu to choose a set of saved credentials; or, manually update the values in the **URL**, **Username** and **Password** fields. Once you've updated the fields, click the button to **Test Connection**. 
 
-<!-- Add image -->
+<a href="assets/images/Jira-connect-credentials.png" rel="lightbox" title="Set up a new JIRA configuration with saved credentials"><img class="thumbnail" src="assets/images/Jira-connect-credentials.png"/></a>
 
-Once the fields are updated, click the button to **Test Connection**. 
-
-If you are using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. Your choice will take effect once you save the new configuration. 
+If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. Your choice will take effect once you save the new configuration. 
 
 <a href="assets/images/Jira-credentials-dialog.png" rel="lightbox" title="Override default JIRA credentials in your configuration"><img class="thumbnail" src="assets/images/Jira-credentials-dialog.png"/></a>
 
-You can also select the **Manage Credentials** link in the JIRA integrations row to modify your existing sets of information without editing or adding a configuration. In the configuration form, use the dropdown menu to select a set of saved credentials, and modify the fields as needed. Click the link to **Rename** the set of credentials. 
+You can also select the **Manage Credentials** link in the JIRA Integrations row to modify your existing sets of information. In the configuration form, use the dropdown menu to select a set of saved credentials, and modify the fields as needed. Click the link to **Rename** the set of credentials, if needed. 
 
 <!-- Add image -->
 
