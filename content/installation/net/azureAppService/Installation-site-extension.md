@@ -46,6 +46,6 @@ The following values are the Application Settings that the agent needs to connec
 
 > **Note:** The agent can also be installed from the **Site Extensions** area of your application management SCM (Kudu) site. 
 
-## Updating your installation
+## Update Your Installation
 
-If a new version of the agent is available, this will be indicated in the Azure Portal or Kudu dashboard.  Please stop the site before doing this update - otherwise the update may fail
+If a new version of the agent is available, it will be indicated in the Azure Portal or Kudu dashboard. You must stop the site before starting the update; otherwise, the update may fail.
