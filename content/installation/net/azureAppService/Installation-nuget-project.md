@@ -66,5 +66,5 @@ Go to the **Application Settings** area of your application in the Azure Portal.
 
 When redeploying a web application that has Contrast agent running, you may run into an error that says "Files in use" error on `ContrastProfiler-32.dll` or `ConrastProfiler-64.dll`. 
 
-This happens because the agent dll files are locked by .NET and cannot be overwritten while the application is still running.  To unload them you can either stop the site or change the `COR_ENABLE_PROFILING` setting to `0` in the portal and save.  Reset it back to `1` after redeploying the application.
+This happens because the agent dll files are locked by .NET and cannot be overwritten while the application is still running.  The dll files need to be unloaded before publishing.  To unload them, stop the site, publish and then start the site back up.  Alternately you can change the `COR_ENABLE_PROFILING` setting to `0` in the portal, publish and then change the setting back to `1`.
 
