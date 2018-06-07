@@ -10,6 +10,8 @@ The Contrast Gradle Plugin is used to integrate the *Contrast.jar* with your bui
 
 [Gradle](https://gradle.org/) is a build tool that utilizes `build.gradle` files to configure your applications. It is used to build, package, and test various types of applications.
 
+Please note that this documentation is for the version 2.X of the plugin. For version 1.X, please refer to this [document](https://github.com/Contrast-Security-OSS/contrast-gradle-plugin/blob/1.3.0/README.md).
+
 ## Access To The Plugin
 
 The plugin code can be viewed in our Github [repository](https://github.com/Contrast-Security-OSS/contrast-gradle-plugin). Here you can review the two tasks added by the plugin, `contrastInstall` and `contrastVerify`, and how they work.
@@ -37,6 +39,16 @@ These settings are for connecting to TeamServer and filtering your vulnerabiliti
 
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability is found at or above the severity level set in the configuration.
+
+### JVM arguments
+The plugin will edit org.gradle.jvmargs property in gradle.properties file to launch the JVM with the Contrast agent. 
+
+### appVersion
+An application version is generated during the gradle install task. The plugin generates the application version in the following order:
+
+* If your build is running in TravisCI, we'll use appName-$TRAVIS_BUILD_NUMBER
+* If your build is running in CircleCI, we'll use appName-$CIRCLE_BUILD_NUM
+* If your build is running neither in TravisCI nor in CircleCI, we'll generate one in the following format: appName-yyyyMMddHHmm
 
 ### Guide To Onboarding A Sample Web Application
 The easiest way to set up a project is to clone our sample Gradle-based web application.  This application has been migrated from Maven to Gradle, and relies on MongoDB, so we will install that and set up the database path.
