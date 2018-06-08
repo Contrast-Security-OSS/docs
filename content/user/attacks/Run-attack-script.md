@@ -25,21 +25,20 @@ The following guide is written for customers using Nikto Web Scanner, an open-so
 
 ## Run the Script
 
-* Log in to your Contrast application. 
+* Log in to your account in the Contrast UI. 
 
-> **Note:** Verify that the scanning IP address isn’t blacklisted. 
+> **Note:** Verify that the IP address of the machine that’s running Nikto isn’t blacklisted. 
 
-* In a terminal window, run the following command to initiate the scan: 
+* In a terminal window, navigate to the *program* directory under the Nikto folder, and run the following command to initiate the scan.
 
 ```
 ./nikto.pl -useragent “MyAgent (Demo/1.0)” -D V -T 9 -h http://www.your-site.com
 ```
 
 > **Notes:**
- * Note here
+ * If your web application has its files under a certain directory, use the `-r` option to prepend a directory.
  * The `-T 9` option tunes the scan to only test for SQL Injection.
 
-* Observe the attack events in the terminal window. 
 * Once the script runs, Contrast will alert you of the new attack in the UI and by email. 
 * Click on the alert or navigate to the **Attacks** tab in the Attacks page. 
 * Details of the incident will show up in the **Attacks** grid. Click on the **Source IP** link in the grid row to go to the attack’s details page, which displays more specific information on each attack event. 
