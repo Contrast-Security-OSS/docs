@@ -34,7 +34,7 @@ Use two-way integration to automatically update the status of a linked vulnerabi
 
 <a href="assets/images/Two-way-jira-integration.png" rel="lightbox" title="Enable two-way integration"><img class="thumbnail" src="assets/images/Two-way-jira-integration.png"/></a>
 
-In the Jira configuration page, check the box to **Enable two-way integration**. This generates a URL that appears below the checkbox, which your Jira administrator must use to register a webhook in JIRA. Clicking the link opens a new tab that takes you to [instructions for registering webhooks](https://developer.atlassian.com/jiradev/jira-apis/webhooks#Webhooks-rest).
+In the Jira configuration page, check the box to **Enable two-way integration**. This generates a URL that appears below the checkbox, which your Jira administrator must use to register a webhook in JIRA. Clicking the link opens a new tab that takes you to [instructions for registering webhooks](https://developer.atlassian.com/jiradev/jira-apis/webhooks#Webhooks-rest). In the webhook configuration, place a check for the **updated** event type under **Issue** column for **Issue related events**.
 
 > **Note:** When you delete a configuration with two-way integration enabled, you must delete the webhook configuration from your Jira administrator console to completely remove the integration.
 
