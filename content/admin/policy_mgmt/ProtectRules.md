@@ -8,12 +8,15 @@ Protect Rules allow you to set applications to monitor for attacks. Every rule c
 
 Contrast ships with the following built-in protection rules:
 
+* **Bean Classloader Overwriting:** Carefully crafted inputs can be used to abuse some bean libraries into loading malicious class loaders, which can then load evil arbitrary code.
 * **Command Injection:** Carefully crafted inputs can execute tainted commands.
 * **Cross Site Request Forgery:** A CSRF attack can be used to trick a legitimate user into making an illegitimate request.
 * **Cross-Site Scripting:** A web application vulnerability that allows users to run arbitrary JavaScript in other user's browsers.
-* **Glassfish Path Traversal:** A vulnerability in the Glassfish Admin portal that allows users to control which files get opened and read by application.
-* **Padding Oracle:** A padding attack that can be used to decrypt ciphertext.
-* **Path Traversal:** A vulnerability that allows users to control which files get opened and read by application.
+* **Expression Language Injection:** Many frameworks and custom code vulnerabilities around accidentally evaluating user inputs as expression languages like OGNL, SpEL, or JSP EL.
+* **Method Tampering:** An attack against authentication or authorization systems that have implicit "allow all" settings in their security configuration.
+* **Padding Oracle:** A high-volume attack that abuses the presence of error conditions when processing inputs with bad padding, which can be used to decrypt and encrypt ciphertext.
+* **Path Traversal / Local File Include:** A vulnerability that allows users to control which files are opened and read by application.
+* **Regular Expression DoS:** A DoS attack that allows carefully crafted inputs to trick innocent but regular expressions to run indefinitely.
 * **SQL and NoSQL Injection:** Carefully crafted inputs can alter the SQL or NoSQL queries the application uses, and steal data or execute code.
 * **Untrusted Deserialization:** A web application vulnerability that allows users to pass arbitrary objects to a deserializer, allowing for remote code execution.
 * **XML External Entity Processing:** A vulnerability in XML processing that can lead to file read/writes and remote code execution.

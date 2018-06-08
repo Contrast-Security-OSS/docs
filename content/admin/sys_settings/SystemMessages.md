@@ -1,22 +1,23 @@
 <!--
 title: "System Messages"
 description: "Overview of system messages"
-tags: "Admin system messages settings"
+tags: "Admin system settings messages"
 -->
 
-As Contrast becomes an integral part of your development lifecycle, it may become necessary to let users know when things like scheduled downtime will occur, or to let them know that an update has been applied and therefore agents should be updated to the latest version. System Messages provide this functionality to administrators. 
+As Contrast becomes an integral part of your development lifecycle, you might want to let users know about situations like scheduled downtime or that an update has been applied. System messages allow you to immediately alert all users in your organizations every time they log in to Contrast, and continue to send the alert until your chosen expiration date. 
 
-## Creating A New System Message
-To create a new System Message, navigate to **System Settings** from the User menu at the top right and then select the **System Messages** tab on the bottom left.
+## Create a Message
 
-The **Create a Message** button will generate a dialog allowing you to configure a system message to be broadcast to all users (either after login, or immediately if they are already logged in). This message will display until it is either deleted or reaches its expiration.
+To create a new system message, navigate to your [SuperAdmin view](admin-systemsettings.html#system-glance), and go to the **user menu > System Settings > System Messages tab**.
 
 <a href="assets/images/KB4-c03_1.png" rel="lightbox" title="Create System Message"><img class="thumbnail" src="assets/images/KB4-c03_1.png"/></a>
 
-When a system message has been set, a user must acknowledge it before they can continue.
+Click the button to **Create a Message**. In the dialog that appears, set an expiration date and time for the message, and add the text in the **Message** field. Contrast will display this message until you deleted or it reaches expiration.
 
+> **Note:** Users must manually acknowledge system messages before they can continue with their tasks in the Contrast UI. 
 
-## Deactivating System Messages
-Occasionally, you may expect something to take hours and instead it takes only a few minutes. In those cases you may wish to deactivate an active system message. To do so, simply check the box next to the message to select it and click the Delete button.
+## Delete a Message
+
+If you want to immediately deactivate an active system message, use the checkbox to select the message, and click the **Delete** button.
 
 <a href="assets/images/KB4-c03_2.png" rel="lightbox" title="Manage System Messages"><img class="thumbnail" src="assets/images/KB4-c03_2.png"/></a>

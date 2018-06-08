@@ -4,22 +4,20 @@ description: "Overview of vulnerability PDF reports"
 tags: "user reports compliance PDF"
 -->
 
-Contrast offers the ability to generate timestamped PDF reports of security issues identified during the monitoring of an application. These PDFs act as snapshots in time of your application's security status.
+Generate timestamped PDF reports of security issues that Contrast has identified while monitoring your application. Each report includes a summary of the application's security status as well as details on each vulnerability and remediation guidance. 
 
-## Generating A Report
+## Generate a Report
 
-Create a report by clicking the **Generate Report** icon located on the top right of the application's **Overview** page.
+To create a report, go to the Applications page and select an application. Click the **Generate Report** icon located at the top of the application's **Overview** page.
 
-<a href="assets/images/GenerateReport1.png" rel="lightbox" title="Application Overview Page"><img class="thumbnail" src="assets/images/GenerateReport1.png"/></a>
+<a href="assets/images/Compliance-report-generate.png" rel="lightbox" title="Generate a compliance report from the application Overview"><img class="thumbnail" src="assets/images/Compliance-report-generate.png"/></a>
 
-From the dialog that follows, configure the criteria best suited for the report and click **Generate**. Once generated, the report will download automatically.
+In the dialog that appears, choose the **Report Type**, **Vulnerability Status** and **Vulnerability Tag** that you want to include in the report, and click **Generate**. Once generated, the report will download automatically.
 
 <a href="assets/images/GenerateReport2.png" rel="lightbox" title="Generate Report Dialog"><img class="thumbnail" src="assets/images/GenerateReport2.png"/></a> 
 
 
-## What's In The Report?
+## Report Content
 
-The report offers detailed information on each vulnerability, including technical details, risk of an issue, security scores, remediation guidance and industry references.
+The report is comprised of information on each vulnerability that's been discovered in your application, including technical details, risk of an issue, remediation guidance and industry references. You can also find a breakdown of the application's known vulnerable libraries, architecture and security scorecard.
 
-
-<a href="assets/images/GenerateReport3.png" rel="lightbox" title="Sample Report Table Of Contents"><img class="thumbnail" src="assets/images/GenerateReport3.png"/></a>
