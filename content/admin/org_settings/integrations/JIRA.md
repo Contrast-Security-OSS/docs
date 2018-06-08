@@ -16,7 +16,7 @@ Integrate Jira with Contrast to automatically generate tickets, synchronize comm
 
 ## Add a Configuration 
 
-In the **Integrations** page, click **Connect** in the Jira row. In the **Connect with Jira** form, add the name for the bugtracker entry, the **username** and **password** for the account connected to JIRA in the appropriate fields. The JIRA URL must be accessible from the Contrast UI instance being configured.
+In the **Integrations** page, click **Connect** in the Jira row. In the **Connect with Jira** form, add the name for the bugtracker entry, the **username** and **password** for the account connected to Jira in the appropriate fields. The Jira URL must be accessible from the Contrast UI instance being configured.
 
 > **Note:** Contrast saves the username, password and Jira URL entered in your configuration as a set of credentials. See the ** Credential Sets** section for more details.
 
@@ -24,7 +24,7 @@ Once you complete the fields, click **Test connection**. This process may take a
 
 <a href="assets/images/Jira-connection-setup.png" rel="lightbox" title="Configure a new Jira integration"><img class="thumbnail" src="assets/images/Jira-connection-setup.png"/></a>
 
-Once a connected, select the **applications** that you want to be available to this integration, and customize the values for the **Project**, **Assignee** and **Default Issue Type** fields. You can also customize the **Default Priority** levels for vulnerability severity and values for **Additional JIRA** fields, such as environment or labels. 
+Once connected, select the **applications** that you want to be available to this integration, and customize the values for the **Project**, **Assignee** and **Default Issue Type** fields. You can also customize the **Default Priority** levels for vulnerability severity and values for **Additional JIRA** fields, such as environment or labels. 
 
 > **Note:** If you change the Project or Issue type, required and additional fields are updated. However, the UI keeps the selected values that apply to the new configuration.
 
@@ -67,7 +67,7 @@ Automatically create tickets in Jira for newly discovered vulnerabilities by che
 
 ## Credentials
 
-Contrast will save each set of credentials that you enter in your Jira configurations to help you set up new connections even faster. The username, password and Jira URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
+Contrast saves the latest set of credentials that you enter in your Jira configurations to help you set up new connections even faster. The username, password and Jira URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
 
 ### Manage credentials
 
@@ -75,11 +75,11 @@ To create or edit a configuration with credentials that are different than your 
 
 <a href="assets/images/Jira-connect-credentials.png" rel="lightbox" title="Set up a new JIRA configuration with saved credentials"><img class="thumbnail" src="assets/images/Jira-connect-credentials.png"/></a>
 
-If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. Your choice will take effect once you save the new configuration. 
+Click the button to **Save** your changes. If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. 
 
 <a href="assets/images/Jira-credentials-dialog.png" rel="lightbox" title="Override default JIRA credentials in your configuration"><img class="thumbnail" src="assets/images/Jira-credentials-dialog.png"/></a>
 
-You can also select the **Manage Credentials** link in the Jira Integrations row to modify your existing sets of information. In the configuration form, use the dropdown menu to select a set of saved credentials, and modify the fields as needed. Click the link to **Rename** the set of credentials, if needed. 
+You can also select the **Manage Credentials** link in the Jira Integrations row to modify your existing sets of information. In the configuration form, use the dropdown menu to select a set of saved credentials, and then modify the values in the given fields. Click the link to **Rename** the set of credentials, if needed. 
 
 <a href="assets/images/Manage-jira-credentials.png" rel="lightbox" title="Manage saved credentials"><img class="thumbnail" src="assets/images/Manage-jira-credentials.png"/></a>
 
