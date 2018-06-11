@@ -18,8 +18,7 @@ It's probably more important to think about how Contrast affects the round-trip 
 If better performance is really important to your environment, consider the following options:
 
 * Run Contrast in *sampling* mode (gain 33% performance boost)
-* Run Contrast with *bootstrap performance enhancements* (gain 30% performance boost)
-* Turn off *stack trace collection* (gain 30% performance boost, reduce memory footprint)
+* Run Contrast with *bootstrap performance enhancements* (gain 30% performance boost, not available in Java 9+)
 * Turn off *response scanning* (gain 5% performance boost, and somewhat reduce memory footprint)
 * Run Contrast during nightly integration tests
 * Turn off data flow rules (add ```-Dcontrast.propagators=false```, gain 50% performance boost)
