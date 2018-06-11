@@ -11,9 +11,11 @@ Run an attack script to see how Contrast captures attack data while protecting y
 
 The following guide is written for customers using Nikto Web Scanner, an open-source web server scanner. While the Nikto scan is running, your Contrast agent will identify the attack and alert you in the UI.
 
-> **Note:** The attack script will also work on an [out-of-the-box application](installation-apps.html#sample-app), such as WebGoat, which allows you to observe how Contrast works in your environment. 
+> **Note:** The attack script will also work on an out-of-the-box application, such as WebGoat, which allows you to observe how Contrast works in your environment. 
 
 ## Before You Start
+
+Complete all of the following steps to prepare to run the attack script. 
 
 * Onboard an application.
 * Download and [setup a Contrast agent](installation-setup.html#quick-start). 
@@ -24,6 +26,8 @@ The following guide is written for customers using Nikto Web Scanner, an open-so
   * If you think that you already have Perl installed, run `perl -v` to verify. 
 
 ## Run the Script
+
+With an application setup with Contrast Protect, and Nikto downloaded and verified, complete the following steps to run the attack script and observe the results. 
 
 * Log in to your account in the Contrast UI. 
 
@@ -46,5 +50,6 @@ The following guide is written for customers using Nikto Web Scanner, an open-so
 
 * [Monitor Attacks](user-attacks.html#monitor)
 * [Analyze Attacks](user-attacks.html#analyze-attacks)
+* [Notifications](admin-orgsettings.html#org-notify)
 
 
