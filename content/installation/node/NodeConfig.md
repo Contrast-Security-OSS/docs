@@ -66,7 +66,7 @@ Parameter                                      | Environment Variable           
 --protect.samples.exploited <count>            | PROTECT__SAMPLES__EXPLOITED              | Limit the reporting of "effective" Protect events to this number (per report cycle). Default is **100**.
 --protect.samples.ineffective <count>          | PROTECT__SAMPLES__INEFFECTIVE            | Limit the reporting of "ineffective" Protect events to this number (per report cycle). Default is **50**.
 --server.build <version>                       | SERVER__BUILD                            | Set reported server build option.
---server.environment <name>                    | SERVER__ENVIRONMENT                      | Environment in which the server is running - `QA`, `PRODUCTION` or `DEVELOPMENT` (case insenstive); does not affect servers that already exist in Contrast.
+--server.environment <name>                    | SERVER__ENVIRONMENT                      | Environment in which the server is running - `QA`, `PRODUCTION` or `DEVELOPMENT`.
 --server.name <name>                           | SERVER__NAME                             | Override the reported server name. Default is `ip-192-168-1-50.ec2.internal`.
 --server.path <name>                           | SERVER__PATH                             | Override the reported server path. Default is */*.
 --server.tags <tags>                           | SERVER__TAGS                             | Comma-separated list of tags to apply to each server reported by the agent.
