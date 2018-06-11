@@ -32,12 +32,10 @@ The following guide is written for customers using Nikto Web Scanner, an open-so
 * In a terminal window, navigate to the *program* directory under the Nikto folder, and run the following command to initiate the scan.
 
 ```
-./nikto.pl -useragent “MyAgent (Demo/1.0)” -D V -T 9 -h http://www.your-site.com
+./nikto.pl -useragent “MyAgent (Demo/1.0)” -h http://www.your-site.com
 ```
 
-> **Notes:**
- * If your web application has its files under a certain directory, use the `-r` option to prepend a directory.
- * The `-T 9` option tunes the scan to only test for SQL Injection.
+> **Note:** If your web application has its files under a certain directory, use the `-r` option to prepend a directory.
 
 * Once the script runs, Contrast will alert you of the new attack in the UI and by email. 
 * Click on the alert or navigate to the **Attacks** tab in the Attacks page. 
