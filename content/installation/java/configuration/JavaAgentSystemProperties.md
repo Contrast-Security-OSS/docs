@@ -10,11 +10,6 @@ Generate a list of general properties directly from the command line using the C
 > **Example:**
 `java -jar path/to/contrast.jar properties | grep -A5 "proxy"` would yield a list of proxy-related properties.
 
-To tell an agent to send the environment for a new application server to Contrast, add JVM option `-Dcontrast.env=<environment>`. Valid values are `development`, `qa` and `production` (case insensitive). 
-
-> **Example:** If you want to tell Contrast that an agent is part of the QA environment, add `-Dcontrast.env=qa`.
-
-> **Note:** To change the environment after the server has been created in Contrast, you must go to the **Servers** page in the Contrast UI. 
 
 |Property|Description|
 |-|-|
@@ -34,6 +29,7 @@ To tell an agent to send the environment for a new application server to Contras
 | contrast.duplicate.delay | The period for which duplicate traces, based on Contrast hashing methods, will be supressed (in milliseconds)<br>**DEFAULT VALUE:** 5000</br> |
 | contrast.enable.auto.update | If false, Contrast doesn't contact the interface to see if an updated version is available. This check occurs before `contrast.forceupdate`. <br>**DEFAULT VALUE:** true</br> |
 | contrast.enabled | Determines if Contrast monitors the JVM. You can use this feature to turn Contrast on or off quickly without removing the `-javaagent` flag. <br> **DEFAULT VALUE:** true</br> |
+| contrast.env | Send the environment for a new application server to Contrast. See the **Note** below for more information. <br> Valid values: `development`, `qa` and `production` (case insensitive). Example: `-Dcontrast.env=qa`. |
 | contrast.external.lib.dir | List of directories where external libraries are stored; used during library analysis. Takes a semicolon-delimited list on Windows and a colon-delimited list on Linux.<br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.forceupdate | If true, Contrast replaces itself with the latest version available on the interface without checking the version number. This check occurs after `contrast.enable.auto.update`. <br> **DEFAULT VALUE:** false </br> |
 | contrast.inject.browseragent | Manually override name of browser agent. <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
@@ -67,6 +63,8 @@ To tell an agent to send the environment for a new application server to Contras
 | csrf.allowed.urls | Sets the path to a file containing line-separated URLs patterns which don't require CSRF tokens. <br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | csrf.protected.urls | Sets the path to a file containing line-separated URLs patterns which require CSRF tokens. <br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | felix.bundles.path | Set to override default location of Felix bundles directory. <br>**DEFAULT VALUE:** ./sling/felix</br> |
+
+> **Note:** To change the environment after the server has been created in Contrast, you must go to the **Servers** page in the Contrast UI. 
 
 ## Logging
 
