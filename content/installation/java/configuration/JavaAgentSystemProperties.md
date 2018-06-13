@@ -32,6 +32,7 @@ To tell an agent to send its environment to Contrast, add this JVM option: `-Dco
 | contrast.duplicate.delay | The period for which duplicate traces, based on Contrast hashing methods, will be supressed (in milliseconds)<br>**DEFAULT VALUE:** 5000</br> |
 | contrast.enable.auto.update | If false, Contrast doesn't contact the interface to see if an updated version is available. This check occurs before `contrast.forceupdate`. <br>**DEFAULT VALUE:** true</br> |
 | contrast.enabled | Determines if Contrast monitors the JVM. You can use this feature to turn Contrast on or off quickly without removing the `-javaagent` flag. <br> **DEFAULT VALUE:** true</br> |
+| contrast.env | Specifies environment type for display in Contrast: development, qa or production. |
 | contrast.external.lib.dir | List of directories where external libraries are stored; used during library analysis. Takes a semicolon-delimited list on Windows and a colon-delimited list on Linux.<br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.forceupdate | If true, Contrast replaces itself with the latest version available on the interface without checking the version number. This check occurs after `contrast.enable.auto.update`. <br> **DEFAULT VALUE:** false </br> |
 | contrast.inject.browseragent | Manually override name of browser agent. <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
