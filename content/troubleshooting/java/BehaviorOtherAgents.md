@@ -6,7 +6,7 @@ tags: "troubleshoot java agent APM AppDynamics YourKit Dynatrace NewRelic Wily"
 
 ## Running APM Agents with Contrast Agents
 
-Many customers run multiple agent-based technologies, such as Application Performance Management (APM) technologies, in parallel with the Contrast Java and .NET agents. Contrast has performed testing of various, known APM agents in parallel with the Contrast agents. If a particular APM vendor or alternative agent vendor isn't included in the list, please let Contrast know by documenting an [issue](https://github.com/Contrast-Security-OSS/docs/issues). 
+Many customers run multiple agent-based technologies, such as Application Performance Management (APM) technologies, in parallel with the Contrast Java and .NET agents. Contrast has performed testing of various, known APM agents in parallel with the Contrast agents. If a particular APM vendor or alternative agent vendor isn't included in the list, please click the **Support** button on this page to send a message to Contrast's Customer Support team. 
 
 ### Compatible Java Agents
 
