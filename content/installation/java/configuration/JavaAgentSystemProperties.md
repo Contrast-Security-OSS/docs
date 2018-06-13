@@ -28,7 +28,7 @@ To tell an agent to send its environment to Contrast, add this JVM option: `-Dco
 | contrast.container | Manually override the web app container name/ID <br> **DEFAULT VALUE:** detected by the Java agent</br> |
 | contrast.dbinspection | Boolean to enable/disable database inspection when analyzing application architecture <br> **DEFAULT VALUE:** true</br> |
 | contrast.deepclone | Boolean to enable/disable cloning of leaf nodes in object graphs of deserialized objects <br> **DEFAULT VALUE:** false</br> |
-| contrast.dir | This value can override the default Contrast working directory <br> **DEFAULT VALUE:** ${HOME}/.contrast of the user account the application runs under.</br> |
+| contrast.dir | This value can override the default Contrast working directory. Creates the directory if it does not exist. <br> **DEFAULT VALUE:** ${HOME}/.contrast of the user account the application runs under.</br> |
 | contrast.duplicate.delay | The period for which duplicate traces, based on Contrast hashing methods, will be supressed (in milliseconds)<br>**DEFAULT VALUE:** 5000</br> |
 | contrast.enable.auto.update | If false, Contrast doesn't contact the interface to see if an updated version is available. This check occurs before `contrast.forceupdate`. <br>**DEFAULT VALUE:** true</br> |
 | contrast.enabled | Determines if Contrast monitors the JVM. You can use this feature to turn Contrast on or off quickly without removing the `-javaagent` flag. <br> **DEFAULT VALUE:** true</br> |
