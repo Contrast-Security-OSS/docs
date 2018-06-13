@@ -61,7 +61,7 @@ from contrast.agent.middlewares.flask_middleware import FlaskMiddleware as Contr
 app = Flask(__name__)
 
 app.config.from_pyfile('dev.cfg')
-app.wsgi_app = ContrastMiddleware(app.wsgi_app)
+app.wsgi_app = ContrastMiddleware(app)
 
 @app.route('/')
 def index():
