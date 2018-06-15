@@ -43,7 +43,7 @@ Operating systems:
 
 <a href="assets/images/Eclipse-plugin-preferences.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-preferences.png"/></a>
 
-* To find the keys in the Contrast application, go to the API page in Organization Settings.
+* To find your keys in the Contrast application, go to the Your Account section and scroll to the bottom.  The Organization ID is available on the API page in Organization Settings (with edit and higher access roles).
 
 ### Step four 
 
