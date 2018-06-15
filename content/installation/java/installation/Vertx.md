@@ -67,11 +67,11 @@ Once this is configured, launch the web application via the command **vertx run*
 vertx run /PATH/TO/YOUR/src/MainVerticle.java
 ```
 
-The Vert.x application is unlikely to have a ***/WEB-INF/web.xml*** file, from which the Contrast Java Agent can identify the application name. If this is the case, please define the application name via ```-Dcontrast.appname=AppName``` property when launching the Vert.x application with Contrast enabled. For example:
+The Vert.x application is unlikely to have a ***/WEB-INF/web.xml*** file, from which the Contrast Java Agent can identify the application name. If this is the case, please define the application name via ```-Dcontrast.override.appname=AppName``` property when launching the Vert.x application with Contrast enabled. For example:
 
 ```bash
 java -javaagent:/PATH/TO/YOUR/contrast.jar 
--Dcontrast.appname="<Name_to_show_on_TeamServer>" <other options> 
+-Dcontrast.override.appname="<Name_to_show_on_TeamServer>" <other options> 
 -jar /PATH/TO/YOUR/application.jar
 ```
  
