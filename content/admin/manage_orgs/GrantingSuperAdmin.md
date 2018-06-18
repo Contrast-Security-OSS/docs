@@ -4,34 +4,35 @@ description: "EOP guide for granting named SuperAdmin Accounts"
 tags: "Admin manage SuperAdmin EOP grant permissions"
 -->
 
+Enterprise-on-Premises (EOP) customers can grant one or more named user accounts with SuperAdmin permission. 
 
-## Grant/Revoke SuperAdmin Permissions To Named User Accounts (EOP Only)
-Enterprise On-Premise (EOP) customers have the ability to grant one or more named user accounts with SuperAdmin permission. In previous versions of TeamServer, only one user could be identified as a SuperAdmin. This user was often named "contrast_superadmin". Now individual named accounts can be identified and granted SuperAdmin capabilities. 
+## Manage SuperAdmin Permissions
 
-### Granting And Revoking SuperAdmin Permissions
 Permission is granted via the action bar on the User page. Simply search for the user by their email, name or organization. From this page, select the user name to grant or revoke SuperAdmin permissions. Users that are granted SuperAdmin will display a small key icon to the right of their email address.
 
 <a href="assets/images/ActionBar_AdminUser.png" rel="lightbox" title="Admin Action Bar"><img class="thumbnail" src="assets/images/ActionBar_AdminUser.png"/></a>
 
-### Why Grant SuperAdmin Permissions
-The number one reason for granting a named user account as SuperAdmin is for auditing purposes. Using a shared account across users is not a best practice and can create issues down the road. We suggest that named user accounts be granted SuperAdmin. Going forward all SuperAdmin activities should come from the named accounts.
+## Use SuperAdmin Permissions
 
-SuperAdmins' primary responsibilites include:
+The most common reason to grant a user SuperAdmin permission is auditing purposes. (Sharing an account with multiple users isn't a best practice, and can create issues down the road.) All SuperAdmin activities should come from individual accounts.
 
-* Managing API Keys (Rotating and Sending)
+SuperAdmins' primary responsibilities include:
+
+* Managing API Keys (rotating and sending)
 * General Settings
-* Configuring Authentication (DB, Active Directory or LDAP)
-* Security Policies
-* Mail Configuration
+* Configuring authentication (DB, Active Directory or LDAP)
+* Security policies
+* Mail configuration
 * Logging
-* License for TeamServer 
-* System Messages
+* License for the Contrast application  
+* System messages
 
-### Choosing Between SuperAdmin Vs. System Access Control Groups
-If your system administration needs are less about managing the TeamServer and more about managing end users and agent licenses, you may want to consider creating a System Access Control Group. Users that have been granted System Administrator via a System Access Control Group have the ability to perform System Administrator responsibilities which may be sufficient for most administrative users. The list of capabilities includes:
+## System Access Control Groups
 
-* Creating/Removing Organizations
-* Creating/Removing Users
-* Creating/Removing Access Control Groups
-* User Impersonation
-* Application Licensing
+If your administration needs are less about managing the Contrast application, and more about managing end users and agent licenses, you might want to consider creating a System Access Control Group. Users that have been granted the System Administrator role through a System Access Control Group can perform responsibilities including: 
+
+* Create or remove organizations
+* Create or remove users
+* Create or remove Access Control Groups
+* User impersonation
+* Application licensing

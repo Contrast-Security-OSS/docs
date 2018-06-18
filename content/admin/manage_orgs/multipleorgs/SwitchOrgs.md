@@ -1,21 +1,15 @@
 <!--
 title: "Toggling Across Organizations"
 description: "Moving from one organization to another from the user menu"
-tags: "Admin manage multiple TeamServer toggling"
+tags: "Admin manage multiple UI toggling"
 -->
 
-Once a user's account has been configured to gain access to multiple organizations via one or more organization groups, the user is presented with an option to move between organizations via the User Menu.
+Once a user's account has access to multiple organizations through one or more [organization groups](admin-onboardteam.html#group), the user can move between organizations in the user Menu.
 
-*Please Note*: Only EOP customers deploying in a multi-tenant deployment with two or more organizations are capable of manuevering across organizations.
+> **Note**: Only EOP customers deploying in a multi-tenant deployment with two or more organizations can move between organizations.
 
-Steps to toggle between organizations:
-
-1. Log in to TeamServer
-2. Navigate to the User menu at the top right of the screen
-3. If the user has multiple organizations available via an Access Control Group, he or she will see a list of organizations to select
-4. Select the organization of choice
+To toggle between organizations, log in to the Contrast UI and go to the **user menu**. Under the "Use Contrast Security as:" section of the menu, choose an organization from the names listed. 
 
 <a href="assets/images/Settings_MultiOrg.png" rel="lightbox" title="User Menu with Multiple Organizations"><img class="thumbnail" src="assets/images/Settings_MultiOrg.png"/></a>
 
-
-> **Note:** Each organization contains settings specific to that organization. If a user is an organization administrator for multiple organizations, that user needs to toggle between organizations in order to configure settings for a specific organization. 
+> **Note:** Each organization contains settings specific to that organization. If you're an Organization Administrator (OrgAdmin) for multiple organizations, you must use this process to switch to the organization for which you want to configure settings. 
