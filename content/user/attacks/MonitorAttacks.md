@@ -6,7 +6,7 @@ tags: "protection manage overview attacks monitor"
 
 The Attack Monitor features an operational dashboard where you can monitor and triage attacks that are currently happening or look back to see attacks within a specific timeframe. You can also configure which environment to display or eliminate ineffective attack events to help you focus on what needs attention right away. Contrast tells the story of all the attackers that attempted to exploit your applications, the type of attack events performed and which applications were involved. 
 
-The badge to the right of the Attacks section communicates the current attack status. This keeps you apprised of any changes that may occur as you delve into details of other attacks. Aany attacks that are currently happening also display a timeline on the left that shows the activity of all the attack events for the last five minutes. You can click into this activity for a larger view and additional information.
+The badge to the right of the Attacks section communicates the current attack status. This keeps you apprised of any changes that may occur as you delve into details of other attacks. Any attacks that are currently happening also display a timeline on the left that shows the activity of all the attack events for the last five minutes. You can click into this activity for a larger view and additional information.
 
 <a href="assets/images/Attack_Monitor.png" rel="lightbox" title="Attack Monitor"><img class="thumbnail" src="assets/images/Attack_Monitor.png"/></a>
 

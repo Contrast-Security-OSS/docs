@@ -1,7 +1,7 @@
 <!--
 title: "Manage Users"
 description: "Managing Users in Contrast"
-tags: "Admin manage organization configuration TeamServer Users roles permissions API"
+tags: "Admin manage organization configuration UI users roles permissions API"
 -->
 
 Administrators (EOP customers only) can add users to the system via the SuperAdmin interface or within an organization. Adding a user to a [system group](admin-manageorgs.html#access) provides them access to the System Administration interface or allows them to perform activities across organizations in [cross-organization groups](admin-manageorgs.html#crossorg). More often, you can also add users within a single organization with a defined role to determine their application access and privileges.
