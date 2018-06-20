@@ -4,7 +4,7 @@ description: "Understanding User Permissions"
 tags: "Admin manage TeamServer permissions"
 -->
 
-User permissions are dictated by access control groups. These groups provide the ability to define capabilities and restrictions to a set of users at either the System or Organization level. Permissions are defined within each access control group, and leverage predefined roles as the input for allowing or restricting capability within the system.
+User permissions are dictated by [access control groups](admin-manageorgs.html#access). These groups provide the ability to define capabilities and restrictions to a set of users at either the System or Organization level. Permissions are defined within each access control group, and leverage predefined roles as the input for allowing or restricting capability within the system.
 
 ## Viewing User Organization Permissions
 Users with System Administration and/or SuperAdmin privileges can review user permissions by going to **System Administration > Users > User Permissions**. If a user has access to more than one organization, they can view organizations individually by toggling between them. They can also filter applications from the list. Each application states the user's role for that application, taking into account any application exceptions that may have been defined in an organization group.
