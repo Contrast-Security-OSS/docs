@@ -38,7 +38,7 @@ Organization administrators can create custom groups within an organization for 
 
 A user assigned to an organization can have various roles across applications within that organization; each role grants or restricts what the user can do with the given application. However, the users associated with the organization may only require awareness of one or few of the many applications within the organization. This allows users to focus directly on what matters to them rather than sorting through information that has no bearing on their work. 
 
->**Note:** To give a user rights to individual application, you must create an access group for that application and add the user to that group. Likewise, if the user has no role assigned to an application, the user won't be able to access it.
+>**Note:** To give a user rights to an individual application, you must create an access group for that application and add the user to that group. Likewise, if the user has no role assigned to an application, the user won't be able to access it.
 
 To create or edit a group, go to the **Groups** tab in the **Organization Settings** page, and complete the following actions. 
 
