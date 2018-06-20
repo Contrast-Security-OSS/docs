@@ -23,13 +23,13 @@ Contrast ships with the following built-in protection rules:
 
 ## Configure a Protect Rule 
 
-You can enable a Protect Rule on an application within the application Details page or from the **Protect Rules** tab in the **Policy Management** page.
+You can enable a Protect Rule on an application within the application's details page or from the **Protect Rules** tab in the **Policy Management** page.
 
 ### Application page
 
-Click on an application name in the **Applications** page grid, and go to the **Protection Policy** tab to configure Protect Rules. Search for a rule by name or use the dropdown menu above the grid to filter for protect rules only. 
+Click on an application name in the **Applications** page grid, and go to the **Policy** tab to configure **Protect** Rules. Search for a rule by name or use the dropdown menu above the grid to filter for protect rules only. 
 
-<a href="assets/images/Protect-policies-applications-page.png" rel="lightbox" title="Protect policies grid in application page"><img class="thumbnail" src="assets/images/Protect-policies-applications-page.png"/></a>
+<a href="assets/images/App-protect-policy.png" rel="lightbox" title="View application policies"><img class="thumbnail" src="assets/images/App-protect-policy.png"/></a>
 
 For each rule, you can define one configuration per environment. Click the dropdown menu(s) in the grid row to set the status of the appropriate environment(s), and choose from the following options: 
 
