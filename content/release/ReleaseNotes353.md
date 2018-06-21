@@ -8,12 +8,16 @@ Python Protect...
 
 ## Fixes
 
+* Policies will take effect for child applications. CONTRAST-24004, CONTRAST-24033 
+* Tags render correctly for IE11 users. CONTRAST-23496
+* No more teasing View-level users with **Apply License** options. CONTRAST-23502
+* Click the link to clear Advanced filters in the Libraries page. CONTRAST-22944
+* Critical vulnerabilities disappear from your Dashboard as soon as you mark them "Not a Problem". CONTRAST-23588
 * 
-
 
 ## Improvements 
 
-*  CONTRAST-14868 ?
+* CONTRAST-14868 ?
 
 
 ## Agent Updates
