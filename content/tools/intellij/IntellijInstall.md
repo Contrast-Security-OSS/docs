@@ -32,7 +32,10 @@ IntelliJ versions:
 * Add a new organization by clicking the **Add** button.
 * Enter the API key and click the **Retrieve organizations** button.
 * Choose an organization.
-* Click the **Test Connection** button. _An organisation must have already been added for the connection to succeed._
+* Click the **Test Connection** button.
+
+>**Note:** An organization must have already been added for the connection to succeed.
+
 * Once the plugin is configured, click the refresh button in the Contrast tool window to update the list of vulnerabilities.
 
 <a href="assets/images/IntelliJ-plugin-preferences.png" rel="lightbox" title="Configure Contrast for IntelliJ"><img class="thumbnail" src="assets/images/IntelliJ-plugin-preferences.png"/></a>
