@@ -65,7 +65,7 @@ The configuration YAML consists of four sections. The agent and service may shar
   * `group`: Group name for this application
 * `server`: Information about the server on which the web application is hosted
   * `name`: Name under which to register the server in the Contrast application 
-  * `environment`: Environment as which applications on this server should register themselves on the Contrast application (Development)
+  * `environment`: Environment as which applications on this server should register themselves on the Contrast application (Development); this does not affect servers that already exist in Contrast
   * `tags`: Comma-delimited list of tags for this server
 * `inventory`
   * `tags`: Comma-delimited list of tags for this library

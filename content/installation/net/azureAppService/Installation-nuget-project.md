@@ -62,5 +62,9 @@ Go to the **Application Settings** area of your application in the Azure Portal.
 
 * Once the application has loaded, use the application and then go to the Contrast UI. Verify that the server and application are active, and that any expected vulnerabilities appear.
 
-> **Note:** You may run into a "Files in use" error on `ContrastProfiler-32.dll` or `ConrastProfiler-64.dll` when re-deploying a web application with our Nuget package. To work around this issue, you can either stop the site or set `COR_ENABLE_PROFILING=0` before deploying. Restart the site or set `COR_ENABLE_PROFILING=1` after the deploy is complete. This isn't a problem when using the [Express Installation using  Site Extensions](installation-netinstall.html#site-extension-installation).
+## Update Your Installation
+
+When redeploying a web application that has Contrast agent running, you may run into an error that says "Files in use" on `ContrastProfiler-32.dll` or `ConrastProfiler-64.dll`. 
+
+This happens because the agent `dll` files are locked by .NET, and can't be overwritten while the application is still running. The `dll` files need to be unloaded before publishing. To unload them, stop the site, publish and then start the site back up.  Alternately, you can change the `COR_ENABLE_PROFILING` setting to `0` in the portal, publish and then change the setting back to `1`.
 

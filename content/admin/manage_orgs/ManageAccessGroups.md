@@ -38,10 +38,12 @@ Organization administrators can create custom groups within an organization for 
 
 A user assigned to an organization can have various roles across applications within that organization; each role grants or restricts what the user can do with the given application. However, the users associated with the organization may only require awareness of one or few of the many applications within the organization. This allows users to focus directly on what matters to them rather than sorting through information that has no bearing on their work. 
 
-Go to the **Groups** section of the Organization Settings page. From there:
+>**Note:** To give a user rights to an individual application, you must create an access group for that application and add the user to that group. Likewise, if the user has no role assigned to an application, the user won't be able to access it.
+
+To create or edit a group, go to the **Groups** tab in the **Organization Settings** page, and complete the following actions. 
 
 * Configure a new group by clicking the **Add Group** button.
-* See all groups (both default and custom) and focus on specific details by using the group search field or quick views in the dropdown menu.  
+* See all groups (both default and custom), and focus on specific details by using the group search field or quick views in the dropdown menu.  
 * Click the Group name to go to the **Edit Group** configuration page, where you can view the details of the group and make any modifications. You may change the Group name, Application Access and members of the group. To allow applications to be added to a group during onboarding, choose **Applications onboarded to group** in the Application Access field. 
 
 * **Delete** any group by clicking the trash can icon in the grid row or on **Edit Group** configuration page. Once this action is confirmed, the group is removed and any access provided by that group is revoked from any of the users assigned to the group.
@@ -56,7 +58,7 @@ An Organization Admin can add a guest user to their organization by clicking on 
 
 #### Role collision
 
-If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. The roles, from most to least restrictive, are: No Access, View, Edit, Rules Admin and Admin. If the user has no role assigned to an application, the user won't be able to access it. For more information on each role, see the [Manage Users](admin-manageorgs.html#manage-user) article.
+If you place a user into multiple groups that assigns different roles to the same application, it creates role collision. The roles, from most to least restrictive, are: No Access, View, Edit, Rules Admin and Admin. For more information on each role, see the [Manage Users](admin-manageorgs.html#manage-user) article.
 
 Contrast handles collisions by the rule of least privileges: the role that provides the most restrictive access applies.
 
