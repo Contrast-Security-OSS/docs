@@ -13,11 +13,10 @@ Python Protect...
 * No more teasing View-level users with **Apply License** options. CONTRAST-23502
 * Click the link to clear Advanced filters in the Libraries page. CONTRAST-22944
 * Critical vulnerabilities disappear from your Dashboard as soon as you mark them "Not a Problem". CONTRAST-23588
-* 
 
 ## Improvements 
 
-* CONTRAST-14868 ?
+* EOP customers can setup a proxy in the Contrast application, and trust Contrast to filter all of their integration traffic through it as well. CONTRAST-14868 
 
 
 ## Agent Updates
