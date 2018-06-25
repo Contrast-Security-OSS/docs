@@ -4,28 +4,25 @@ description: "Contrast 3.5.3 June 2018"
 tags: "3.5.3 June Release Notes"
 -->
 
-Congrats, Python Protect! You made it to the big time. 
+Congrats, Python Protect! You made it to the big leagues. 
 
 ## Fixes
 
 * Assess rules take effect for child applications. 
 * Tags render correctly for IE11 users. 
-* Removed view of **Apply License** options for View-level users.
+* Removed appearance of **Apply License** options for View-level users.
 * Use the link to clear Advanced filters in the Libraries page. 
 * Critical vulnerabilities disappear from your Dashboard as soon as you mark them "Not a Problem". 
-
-## Improvements 
-
-EOP customers can setup a proxy in the Contrast application, and trust Contrast to filter all of their integration traffic through it as well. 
 
 ## Agent Updates
 
 ### Java summary 
 
+Contrast now allows users to set the Application Code attribute of an application using configuration arguments passed to the Java agent. The Java team also added property `contrast.stderr` for directing Contrast logs to STDERR instead of a log file, improved accuracy for XSS detection, and fixed a deadlock at start-up which affects WebLogic 12. When bot-blocking is enabled, the Java agent will always block the Mozilla bot even when the user hasn't included any bots to block in their Contrast application configuration
 
 ### .NET summary 
 
-The .NET team added an Assess rule for HSTS header missing as well as support for `Contrast.AppName` in DPAPI protected configs. We also fixed a concurrency issue that could cause an `InvalidOperationException` along with issues where headers set in *global.asax* were not analyzed by Assess sensors and incorrect sources were reported for some Assess vulnerabilities. 
+The .NET team added an Assess rule for HSTS header missing as well as support for `Contrast.AppName` in DPAPI protected configs. We also fixed a concurrency issue that could cause an `InvalidOperationException` along with issues where headers set in *global.asax* weren't analyzed by Assess sensors and incorrect sources were reported for some Assess vulnerabilities. 
 
 ### Node.js summary 
 
