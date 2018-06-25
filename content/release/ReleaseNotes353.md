@@ -26,6 +26,7 @@ Python Protect...
 
 ### .NET summary 
 
+The .NET team added an Assess rule for HSTS header missing as well as support for `Contrast.AppName` in DPAPI protected configs. We also fixed a concurrency issue that could cause an `InvalidOperationException` along with issues where headers set in *global.asax* were not analyzed by Assess sensors and incorrect sources were reported for some Assess vulnerabilities. 
 
 ### Node.js summary 
 
