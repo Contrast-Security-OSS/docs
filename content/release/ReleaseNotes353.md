@@ -4,20 +4,19 @@ description: "Contrast 3.5.3 June 2018"
 tags: "3.5.3 June Release Notes"
 -->
 
-Python Protect...
+Congrats, Python Protect! You made it to the big time. 
 
 ## Fixes
 
-* Policies will take effect for child applications. CONTRAST-24004, CONTRAST-24033 
-* Tags render correctly for IE11 users. CONTRAST-23496
-* No more teasing View-level users with **Apply License** options. CONTRAST-23502
-* Click the link to clear Advanced filters in the Libraries page. CONTRAST-22944
-* Critical vulnerabilities disappear from your Dashboard as soon as you mark them "Not a Problem". CONTRAST-23588
+* Assess rules take effect for child applications. 
+* Tags render correctly for IE11 users. 
+* Removed view of **Apply License** options for View-level users.
+* Use the link to clear Advanced filters in the Libraries page. 
+* Critical vulnerabilities disappear from your Dashboard as soon as you mark them "Not a Problem". 
 
 ## Improvements 
 
-* EOP customers can setup a proxy in the Contrast application, and trust Contrast to filter all of their integration traffic through it as well. CONTRAST-14868 
-
+EOP customers can setup a proxy in the Contrast application, and trust Contrast to filter all of their integration traffic through it as well. 
 
 ## Agent Updates
 
@@ -30,7 +29,7 @@ The .NET team added an Assess rule for HSTS header missing as well as support fo
 
 ### Node.js summary 
 
-The Node team made a variety of performance and compatibility improvements including: better compatibility with the New Relic APM agent, fixing an issue with PostgreSQL options, and compatibility with applications that run `uglify-js` in their deployment pipeline. The agent also handles the case where the *package.json* isn't included in a application. Finally, the team added some propagation enhancements for better assess accuracy in `String.split` and `Array.join`.
+The Node team made a variety of performance and compatibility improvements including: better compatibility with the New Relic APM agent, fixing an issue with PostgreSQL options, and compatibility with applications that run `uglify-js` in their deployment pipeline. The agent also handles the case where the *package.json* isn't included in a application. Finally, the team added some propagation enhancements for better Assess accuracy in `String.split` and `Array.join`.
 
 ### Ruby summary 
 
