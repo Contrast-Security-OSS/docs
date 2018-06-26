@@ -4,7 +4,7 @@ description: "Contrast 3.5.3 June 2018"
 tags: "3.5.3 June Release Notes"
 -->
 
-Congrats, Python Protect! You made it to the big leagues. 
+Good work, Python! The Protect agent is ready for the big time! 
 
 ## Fixes
 
@@ -18,7 +18,7 @@ Congrats, Python Protect! You made it to the big leagues.
 
 ### Java summary 
 
-Contrast now allows users to set the Application Code attribute of an application using configuration arguments passed to the Java agent. The Java team also added property `contrast.stderr` for directing Contrast logs to STDERR instead of a log file, improved accuracy for XSS detection, and fixed a deadlock at start-up which affects WebLogic 12. When bot-blocking is enabled, the Java agent will always block the Mozilla bot even when the user hasn't included any bots to block in their Contrast application configuration
+Contrast now allows users to set the Application Code attribute of an application by passing the `contrast.application.code` System property to the Java agent. The Java team also added System property `contrast.stderr` for directing Contrast logs to STDERR instead of a log file, improved accuracy for XSS detection, and fixed a deadlock at start-up which affects WebLogic 12. When bot-blocking is enabled, the Java agent will always block the Mozilla bot even when the user hasn't included any bots to block in their Contrast application configuration
 
 ### .NET summary 
 
