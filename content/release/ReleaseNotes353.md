@@ -30,7 +30,7 @@ The Node team made a variety of performance and compatibility improvements inclu
 
 ### Ruby summary 
 
-The Ruby team implemented coverage statistics for the Protect agent, and improved class name resolution from the code file paths.
+The Ruby team improved class name resolution from the code file paths.
 
 ### Python summary
 
