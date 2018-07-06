@@ -32,9 +32,11 @@ When you add a Contrast profile, use the validation button to test your connecti
 ### Threshold conditions in a post-build action
 
 * Select a profile from the dropdown.
+* Add an application name. Jenkins job name is used by default for this field. The field is required.
 * Add a count. The count is exclusive, so if you set a count for five, it fails on six or more vulnerabilities. This field is required.
 * Add a severity (Note, Low, Medium, High, or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field.
 * Add a vulnerability type (rule name). If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count.
+* Add vulnerability statuses. It is not required, but can be helpful if you want to exclude vulnerabilities with certain statuses, for example "Not a Problem", from the results. If no statuses are selected, the plugin will not filter vulnerabilities by statuses.
 
 Severity and vulnerability types aren't required, but suggested, to narrow down your results.
 
