@@ -11,9 +11,11 @@ Contrast provides visibility of vulnerabilities in your applications, and protec
 
 ### Supported systems 
 
-Visual Studio versions:
-
+Visual Studio versions: 
 * 2017 (15.0+)
+
+Operating systems: 
+* Windows
 
 ## Setup and Configuration
 
