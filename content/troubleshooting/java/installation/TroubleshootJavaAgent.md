@@ -90,5 +90,5 @@ If you have enough memory, are running a supported container, and aren't doing a
 
 This means that you don't have read/write access to the *cache* directory. 
 
-By default, the *cache* directory is located in *$home/.contrast* and has permissions **755**. If the *contrast* directory has been modified with the `contrast.dir `property, the **cache** directory has also changed consequently. You must update the permissions.
+The *cache* directory is located in the *contrast* directory, and has permissions **755** by default. If the location of the *contrast* directory has been modified with the `contrast.dir` property, the *cache* directory has also moved consequently. You must update the permissions to the *cache* directory.
 
