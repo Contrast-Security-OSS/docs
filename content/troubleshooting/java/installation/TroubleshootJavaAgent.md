@@ -88,5 +88,7 @@ If you have enough memory, are running a supported container, and aren't doing a
 
 ## Scenario: I see "java.io.IOException: Can't promise read/write on cache dir" error when starting up
 
-This means that you don't have read/write access to the cache directory. By default, this directory is located in *$home/.contrast* and has permissions **755**. If this directory has been modified with the `contrast.dir `property, you must update the permissions there.
+This means that you don't have read/write access to the *cache* directory. 
+
+By default, the *cache* directory is located in *$home/.contrast* and has permissions **755**. If the *contrast* directory has been modified with the `contrast.dir `property, the **cache** directory has also changed consequently. You must update the permissions.
 
