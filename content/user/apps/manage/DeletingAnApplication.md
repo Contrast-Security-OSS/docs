@@ -15,7 +15,7 @@ In the **Applications** page, click on the application you would like to delete.
 
 From the application **Overview** page, verify that no servers are reporting to the application. If any servers are reporting, manually disable the servers in each environment by clicking the green **ON** button for Assess or Protect. In the dialog that appears, use the toggle to switch off the server, and click **Save**. Repeat this process for servers with Assess and/or Protect enabled in each environment, as needed. 
 
-<a href="assets/images/App-overview-enabled-servers.png" rel="lightbox" title="Disable servers in the application's Overview page"><img class="thumbnail" src="assets/images/App-overview-enabled-servers.png"/></a>
+<a href="assets/images/App-overview.png" rel="lightbox" title="Disable servers in the application's Overview page"><img class="thumbnail" src="assets/images/App-overview.png"/></a>
 
 If you don't disable all agents reporting on behalf of the application, leftover agents may continue to report findings, even after the application is deleted. As a result, the application would be recreated and continue to consume the license. 
 
