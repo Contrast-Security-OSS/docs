@@ -41,7 +41,7 @@ Operating systems:
 
 * Once you add the Contrast View, enter your Username, API Key and Service Key in the configuration screen. You can also navigate to the configuration screen by going to **Eclipse Preferences** and searching for "Contrast". 
 
-<a href="assets/images/Eclipse-plugin-preferences.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-preferences.png"/></a>
+<a href="assets/images/Eclipse-plugin-preferences.png" rel="lightbox" title="Navigate to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-preferences.png"/></a>
 
 * To find your keys in the Contrast application, go to the Your Account section and scroll to the bottom.  The Organization ID is available on the API page in Organization Settings (with edit and higher access roles).
 
@@ -55,7 +55,7 @@ Well done! Eclipse is configured to get vulnerability information from Contrast.
 
 The Vulnerabilities view in Eclipse shows a list of all the vulnerabilities from Contrast. You can sort and filter them by servers or applications.  
 
-<a href="assets/images/Eclipse-plugin-vulnerabilities.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerabilities.png"/></a>
+<a href="assets/images/Eclipse-plugin-vulnerabilities.png" rel="lightbox" title="View a list of vulnerabilities found by Contrast"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerabilities.png"/></a>
 
 For more information, click the **View Details** link, or click on the **Go to page** button in the Contrast Vulnerabilities tab to go to Contrast.
 
