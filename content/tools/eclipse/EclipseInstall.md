@@ -41,7 +41,7 @@ Operating systems:
 
 * Once you add the Contrast View, enter your Username, API Key and Service Key in the configuration screen. You can also navigate to the configuration screen by going to **Eclipse Preferences** and searching for "Contrast". 
 
-<a href="assets/images/Eclipse-plugin-preferences.png" rel="lightbox" title="Navigate to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Eclipse-plugin-preferences.png"/></a>
+<a href="assets/images/Eclipse-plugin-preferences.png" rel="lightbox" title="Configure connection settings"><img class="thumbnail" src="assets/images/Eclipse-plugin-preferences.png"/></a>
 
 * To find your keys in the Contrast application, go to the Your Account section and scroll to the bottom.  The Organization ID is available on the API page in Organization Settings (with edit and higher access roles).
 
