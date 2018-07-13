@@ -29,10 +29,13 @@ IntelliJ versions:
 
 * Once you install the Contrast plugin for IntelliJ IDEA, configure it by going to **File > Settings > Contrast**. To find your [keys](user-account.html#profile) in the Contrast application, go to the **user menu > Your Account > Profile page**.
 * Add the **TeamServer URL**, **Username**, and **Service Key** in the given fields.
-* Click the **Test Connection** button.
 * Add a new organization by clicking the **Add** button.
 * Enter the API key and click the **Retrieve organizations** button.
 * Choose an organization.
+* Click the **Test Connection** button.
+
+>**Note:** An organization must have already been added for the connection to succeed.
+
 * Once the plugin is configured, click the refresh button in the Contrast tool window to update the list of vulnerabilities.
 
 <a href="assets/images/IntelliJ-plugin-preferences.png" rel="lightbox" title="Configure Contrast for IntelliJ"><img class="thumbnail" src="assets/images/IntelliJ-plugin-preferences.png"/></a>
