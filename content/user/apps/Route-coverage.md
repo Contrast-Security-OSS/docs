@@ -4,13 +4,15 @@ description: "Overview of setting up environments"
 tags: "user UI applications route coverage exercised vulnerabilities"
 -->
 
-View the amount of coverage Contrast is providing to your application with route coverage. The more you exercise different URLs, or "routes", the more Contrast can successfully Assess and Protect your application. 
+Learn more about Contrast's coverage of your application by viewing its findings for each route within it. 
+
+> **Hint:** The more you exercise different routes, the more Contrast can successfully Assess and Protect your application. 
 
 In application's **Overview** tab, view the number of **Routes Exercised** compared to the number of total routes in your application. 
 
 <a href="assets/images/App-overview.png" rel="lightbox" title="View routes in your application Overview"><img class="thumbnail" src="assets/images/App-overview.png"/></a>
 
-Click on the figure, or navigate to the **Route Coverage** tab to view details for each route that Contrast has identified in the application. Each layer of the line chart represents routes that have been **discovered** by Contrast (but never exercised), **exercised** with Contrast, and exercised but **vulnerable**. 
+Click on the figure, or select the **Route Coverage** tab to view details for each route that Contrast has identified in the application. Each layer of the line chart represents routes that have been **discovered** by Contrast (but never exercised), **exercised** with Contrast, and exercised but **vulnerable**. Click on each layer to see how Contrast's findings have been updated each day. 
 
 <a href="assets/images/App-route-coverage.png" rel="lightbox" title="View detailed coverage information for each route"><img class="thumbnail" src="assets/images/App-route-coverage.png"/></a>
 
