@@ -20,4 +20,6 @@ Notifications:
 * VictorOps
 * Generic Webhook
 
-> **Note:** Notification settings in your organization affects which messages you receive from your existing integrations. Read the article on [Notifications](admin-orgsettings.html#org-notify) for more information. 
+> **Notes:** 
+> * Notification settings in your organization affects which messages you receive from your existing integrations. Read the article on [Notifications](admin-orgsettings.html#org-notify) for more information. 
+> * If **EOP** customers set up a proxy in the Contrast application, Contrast will filter all integration traffic through that proxy. 
