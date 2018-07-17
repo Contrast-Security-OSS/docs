@@ -19,7 +19,8 @@ IntelliJ versions:
 
 ### Step one
 
-* Download the Contrast plugin by navigating to **File > Settings > Plugins > Browse Repositories**. 
+* On **Windows**, download the Contrast plugin by navigating to **File > Settings > Plugins > Browse Repositories**. 
+* On **OSX**, download the Contrast plugin by navigating to **Preferences > Plugins > Search in Repositories**. 
 * Search for “Contrast Security”.
 * Click **Install**. 
 
