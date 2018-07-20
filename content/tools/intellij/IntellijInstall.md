@@ -19,8 +19,9 @@ IntelliJ versions:
 
 ### Step one
 
-* On **Windows**, download the Contrast plugin by navigating to **File > Settings > Plugins > Browse Repositories**. 
-* On **OSX**, download the Contrast plugin by navigating to **Preferences > Plugins > Search in Repositories**. 
+* Download the Contrast plugin: 
+	* On Windows, go to **File > Settings > Plugins > Browse Repositories**. 
+	* On OSX, go to **Preferences > Plugins > Search in Repositories**. 
 * Search for “Contrast Security”.
 * Click **Install**. 
 
@@ -28,8 +29,13 @@ IntelliJ versions:
 
 ### Step two
 
-* Once you install the Contrast plugin for IntelliJ IDEA, configure it by going to **File > Settings > Contrast**. To find your [keys](user-account.html#profile) in the Contrast application, go to the **user menu > Your Account > Profile page**.
+* Configure the Contrast plugin for IntelliJ IDEA: 
+	* On OSX, go to **File > Settings > Contrast**. 
+	* On Windows, go to **Preferences > Contrast**. 
 * Add the **TeamServer URL**, **Username**, and **Service Key** in the given fields.
+
+> **Note:** To find your [keys](user-account.html#profile), go to the **user menu > Your Account > Profile page** in the Contrast application.
+
 * Add a new organization by clicking the **Add** button.
 * Enter the API key and click the **Retrieve organizations** button.
 * Choose an organization.
