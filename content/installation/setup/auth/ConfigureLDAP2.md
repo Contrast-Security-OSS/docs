@@ -12,7 +12,6 @@ Contrast provides integration with many types of Lightweight Directory Access Pr
 * OpenDS
 * ApacheDS
 * Fedora Directory Server
-* Sun Directory Server Enterprise Edition (DSEE)
 * Microsoft Active Directory 
 * Generic LDAP Servers
 
