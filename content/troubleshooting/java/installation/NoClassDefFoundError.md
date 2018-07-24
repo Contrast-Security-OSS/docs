@@ -6,7 +6,8 @@ tags: "troubleshoot java agent NoClassDefFoundError"
 
 ## Issue
 
-```java.lang.NoClassDefFoundError:com/.../EventController
+```
+java.lang.NoClassDefFoundError:com/contrastsecurity/
 ```
 
 ## Causes and Solutions 
