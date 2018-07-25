@@ -1,0 +1,16 @@
+<!--
+title: "Why Do I See The "AbstractMethodError" with WebSphere on IBM Java 8"
+description: "Explanation of the "AbstractMethodError""
+tags: "troubleshoot java agent AbstractMethodError"
+-->
+
+## Issue
+
+```
+java.lang.AbstractMethodError:
+```
+
+## Causes and Solutions
+
+### JVM does not include latest FixPack
+If you are experiencing this error on IBM Java 8, then it is recommended to confirm that your JVM includes FixPack17 which addresses several bugs including bugs related to JIT that may lead to this error. You may try downloading and installing FP17 or applying the following iFix: http://www-01.ibm.com/support/docview.wss?uid=ibm10713519
