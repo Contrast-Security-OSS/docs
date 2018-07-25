@@ -8,7 +8,10 @@ Words...
 
 ## Fixes
 
-* 
+* Filter Attack by IP address to find the right ones in the grid. CONTRAST-23199
+* Attack details honor permissions for the application involved. CONTRAST-21174
+* See only the right vulnerabilities in your server's Overview. CONTRAST-24756
+* Non-internet connected EOP users can see the complete list of their libraries. CONTRAST-23907
 
 ## Improvements
 
