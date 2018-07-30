@@ -4,8 +4,6 @@ description: "Contrast 3.5.4 July 2018"
 tags: "3.5.4 July Release Notes"
 -->
 
-We made a few of your favorite things even better: The Ruby agent 2.0 and saved credentials for your Jira integrations...
-
 ## Fixes
 
 * Filter Attacks by IP address to find the right ones in the grid. 
