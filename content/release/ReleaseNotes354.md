@@ -4,6 +4,8 @@ description: "Contrast 3.5.4 July 2018"
 tags: "3.5.4 July Release Notes"
 -->
 
+Now offering Ruby agent 2.0 and improvements for your integrations! 
+
 ## Fixes
 
 * Filter Attacks by IP address to find the right ones in the grid. 
