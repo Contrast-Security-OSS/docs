@@ -4,23 +4,23 @@ description: "Contrast 3.5.4 July 2018"
 tags: "3.5.4 July Release Notes"
 -->
 
-Words...
+We made a few of your favorite things even better: The Ruby agent 2.0 and saved credentials for your Jira integrations...
 
 ## Fixes
 
-* Filter Attacks by IP address to find the right ones in the grid. CONTRAST-23199
-* See only the right vulnerabilities in your server's Overview page. CONTRAST-24756
-* Non-internet connected EOP users can see the complete list of their libraries. CONTRAST-23907
-* No more Security Controls for invalid targets, like primitives. CONTRAST-21981
-* Contrast saves your auto-licensing configuration, even in Server Settings. CONTRAST-21901
-* Build Number and Untracked filters work exactly as expected for your vulnerabilities. CONTRAST-17857, CONTRAST-24137
-* Delete an organization with assigned licenses. CONTRAST-25469
+* Filter Attacks by IP address to find the right ones in the grid. 
+* See the right vulnerabilities in your server's Overview page.
+* Non-internet connected Enterprise-on-Premises (EOP) users can see the complete list of their libraries. 
+* Don't get tripped by Security Controls for invalid targets. 
+* Set up auto-licensing for servers, and see your saved selection across the UI. 
+* Build Number and Untracked filters work exactly as expected for your vulnerabilities. 
+* Delete an organization with assigned licenses. 
 
 ## Improvements
 
 * Contrast stores the credentials you entered in your last Jira configuration, and automatically applies them when you set up the next one. You can also manage your credentials by adding news ones or editing an existing set.
 
-* EOP customers can set proxy settings and rest assured that all integration traffic will flow through it.
+* EOP users can set proxy settings and rest assured that all integration traffic will flow through it.
 
 ## Agent Updates
 
@@ -34,11 +34,14 @@ The .NET team improved the performance of the agent’s communication with the C
 
 ### Node.js summary 
 
+The Node team added agent compatibility with the NewRelic APM agent. In the Protect feature, we improved the NoSQLi rule with support for classifier detection in MongoDB, and SQLi now has a new hook in the MySQL query interface. In the Assess feature, we can now track data propagation through user-defined input to the required statement, and we improved data flow on global constructors (e.g., String, Function).
 
 ### Ruby summary 
 
+The Ruby agent entered 2.0 with an embedded service that eliminates the need for a second gem. The embedded service starts on application launch, is compatible with multiple applications on the same server, and can be controlled via rake tasks. The 2.0 version of the agent includes improvements in how the application name is determined and better application version determination.
 
 ### Python summary
 
+The Python agent has safer common configuration loading, and can accept configuration items from command line and environment variables. The team also added additional tests for Django applications with MySQL. 
 
 
