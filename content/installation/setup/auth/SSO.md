@@ -10,7 +10,7 @@ Single Sign-On (SSO) is an authentication service that allows access to multiple
 
 > **Note:** For more information on the **SAML 2.0 specification**, [read this article](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf).
 
-Authentication happens through an **identity provider (IdP)**. You may use your own generic IdP or one of many popular third-party providers, such as [Okta](https://www.okta.com/), [OneLogin](https://www.onelogin.com/) or [Ping Identity](https://www.pingidentity.com/en.html).
+Authentication happens through an **identity provider (IdP)**. You may use your own generic IdP or one of many popular third-party providers, such as [Okta](https://www.okta.com/), [OneLogin](https://www.onelogin.com/), [Ping Identity](https://www.pingidentity.com/en.html) or [ADFS](https://msdn.microsoft.com/en-us/library/bb897402.aspx).
 
 ## Before You Start
 
