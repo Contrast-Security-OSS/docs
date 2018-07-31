@@ -12,15 +12,18 @@ The configuration file is called *contrast_security.yaml* wherever it's located.
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
 2. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)
+3. Within the server's *etc/contrast* directory (e.g. */etc/contrast/contrast_security.yaml*)
 3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
-## Ruby Service and Ruby Agent
+## Service Configuration
 
-Configuration files for Ruby on Rails applications are usually stored in the *./config* directory of the application. The Ruby service can share the application's configuration file if the service's working directory is also the base directory of the Rails application. Both the agent and the service use the *./config/contrast_security.yaml* path; however, this isn't required. The Ruby service can run from any other directory on the server - in which case, it should have its own copy of the configuration file.  
+The ruby agent launches an executable on startup that also needs access to the configuration files. Since the service is generally launched by the ruby agent process it has access to the same configuration file as the agent. However if the service is started independently it will attempt to use the same load path described above for its configuration file. 
+
+In other words, the service can share the application's configuration file if (as is usually the case) the service's working directory is also the base directory of the Rails application. Both the agent and the service use the *./config/contrast_security.yaml* path. 
 
 ### Tagging
 
-The Ruby agent and service support the full array for tagging messages to the Contrast server. To apply these tags, you must update your configuration files in either the agent or the service. Tags in the configuration are comma-separated alphanumeric strings. Each tag will be attached to a corresponding message from the agent or service, depending which field is set.
+The Ruby agent supports the full array of tagging messages to the Contrast server. To apply these tags, you must update your configuration files. Tags in the configuration are comma-separated alphanumeric strings. Each tag will be attached to a corresponding message from the agent or service, depending which field is set.
 
 For **server** tags, update the configuration of the service. If there isn’t one, add a top-level `server` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string.
 
@@ -69,3 +72,10 @@ The configuration YAML consists of four sections. The agent and service may shar
   * `tags`: Comma-delimited list of tags for this server
 * `inventory`
   * `tags`: Comma-delimited list of tags for this library
+
+## Ruby Specific Configuration Options
+
+The following configuration options allow for fine-tuning the ruby agent.
+
+* `ruby`: Options specific to the ruby agent
+  * `analyze_inventory_async`: If set to 'true', this wraps the initial inventory message in a thread which may speed up the response time on the first request after startup. 
