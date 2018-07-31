@@ -11,7 +11,7 @@ Now offering Ruby agent 2.0 and improvements for your integrations!
 * Filter Attacks by IP address to find the right ones in the grid. 
 * See the right vulnerabilities in your server's Overview page.
 * Non-internet connected Enterprise-on-Premises (EOP) users can see the complete list of their libraries. 
-* Don't get tripped by Security Controls for invalid targets. 
+* Don't get tripped up by Security Controls for invalid targets. 
 * Set up auto-licensing for servers, and see your saved selection across the UI. 
 * Build Number and Untracked filters work exactly as expected for your vulnerabilities. 
 * Delete an organization with assigned licenses. 
@@ -26,7 +26,7 @@ Now offering Ruby agent 2.0 and improvements for your integrations!
 
 ### Java summary 
 
-The Java team reduced the amount of memory used by agent’s Assess analysis, and fixed an issue where certain `java.lang.String` methods could cause application errors, if those methods were added as sanitizers or validators. We also added a new Malformed Header rule as well as protection against CVE-2018-1261. 
+The Java team reduced the amount of memory used by agent’s Assess analysis. We fixed an issue where certain `java.lang.String` methods, if added as sanitizers or validators, could cause application errors. We also added a new Malformed Header rule as well as protection against CVE-2018-1261. 
 
 ### .NET summary 
 
@@ -34,7 +34,7 @@ The .NET team improved the performance of the agent’s communication with the C
 
 ### Node.js summary 
 
-The Node team added agent compatibility with the NewRelic APM agent. In the Protect feature, we improved the NoSQLi rule with support for classifier detection in MongoDB, and SQLi now has a new hook in the MySQL query interface. In the Assess feature, we can now track data propagation through user-defined input to the required statement, and we improved data flow on global constructors (e.g., String, Function).
+The Node team added agent compatibility with the NewRelic APM agent. In the Protect feature, we improved the NoSQLi rule with support for classifier detection in MongoDB, and SQLi now has a new hook in the MySQL query interface. In the Assess feature, we can now track data propagation through user-defined input to the required statement, and we improved data flow on global constructors (e.g., `String`, `Function`).
 
 ### Ruby summary 
 
