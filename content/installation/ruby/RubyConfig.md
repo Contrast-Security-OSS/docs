@@ -17,9 +17,9 @@ The configuration file is called *contrast_security.yaml* wherever it's located.
 
 ## Service Configuration
 
-The ruby agent launches an executable on startup that also needs access to the configuration files. Since the service is generally launched by the ruby agent process it has access to the same configuration file as the agent. However if the service is started independently it will attempt to use the same load path described above for its configuration file. 
+The Ruby agent launches an executable on startup that also needs access to the configuration files. Since the service is generally launched by the Ruby agent process, it has access to the same configuration file as the agent. However, if the service is started independently, it will attempt to use the same load path described above for its configuration file. 
 
-In other words, the service can share the application's configuration file if (as is usually the case) the service's working directory is also the base directory of the Rails application. Both the agent and the service use the *./config/contrast_security.yaml* path. 
+In other words, the service can share the application's configuration file, if (as is usually the case) the service's working directory is also the base directory of the Rails application. Both the agent and the service use the *./config/contrast_security.yaml* path. 
 
 ### Tagging
 
@@ -42,14 +42,14 @@ For Trace tags, update the configuration of the agent. If there isn’t one, add
 
 The configuration YAML consists of four sections. The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
 
-* `contrast`: Options for locating and communicating with the Contrast interface Dashboard
+* `contrast`: Options for locating and communicating with the Contrast UI Dashboard
   * `url`: URL to connect to the Contrast application
-  * `api_key`: Organization's API key
-  * `service_key`:  Service Key of Organization
-  * `user_name`: Username of user in TeamServer
+  * `api_key`: API key of the organization
+  * `service_key`:  Service Key of the organization
+  * `user_name`: Username of user in the Contrast application
 * `agent`: Options for communicating between the agent and the service
   * `logger`:
-    * `path`: Filename of the Contrast Security log file for the agent (*contrast_agent.log*)
+    * `path`: Filename of the Contrast log file for the agent (*contrast_agent.log*)
     * `level`: Level of logging details (DEBUG, INFO, WARN, ERROR)
     * `progname`: Name used to identify the process within the log file (Contrast Agent)
   * `cef_logger`:
@@ -68,14 +68,14 @@ The configuration YAML consists of four sections. The agent and service may shar
   * `group`: Group name for this application
 * `server`: Information about the server on which the web application is hosted
   * `name`: Name under which to register the server in the Contrast application 
-  * `environment`: Environment as which applications on this server should register themselves on the Contrast application (Development); this does not affect servers that already exist in Contrast
+  * `environment`: Environment as which applications on this server should register themselves on the Contrast application (Development); this does not affect servers that already exist in Contrast.
   * `tags`: Comma-delimited list of tags for this server
 * `inventory`
   * `tags`: Comma-delimited list of tags for this library
 
-## Ruby Specific Configuration Options
+## Ruby-Specific Configuration Options
 
-The following configuration options allow for fine-tuning the ruby agent.
+The following configuration options allow you to fine-tune the Ruby agent.
 
-* `ruby`: Options specific to the ruby agent
-  * `analyze_inventory_async`: If set to 'true', this wraps the initial inventory message in a thread which may speed up the response time on the first request after startup. 
+* `ruby`: Options specific to the Ruby agent
+  * `analyze_inventory_async`: If set to `true`, this wraps the initial inventory message in a thread which may speed up the response time on the first request after startup. 
