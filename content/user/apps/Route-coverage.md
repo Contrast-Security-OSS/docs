@@ -4,13 +4,19 @@ description: "Overview of setting up environments"
 tags: "user UI applications route coverage exercised vulnerabilities"
 -->
 
-Learn more about Contrast's coverage of your application by viewing its findings for each route within it. 
+## About Route Coverage
 
-A “Route” is defined as a combination of three distinct data points: the Normalized URL of the route, HTTP verb associated with the request (e.g., Get or Post) and method signature of the controller action. The more you exercise different routes, the more Contrast can successfully Assess and Protect your application. 
+A “route” is a combination of three distinct data points: the Normalized URL of the route, HTTP verb associated with the request (e.g., Get or Post) and method signature of the controller action. By exercising each route in your application consistently, the Contrast agent can successfully assess the surface layer of your application and discover vulnerabilities. 
+
+### Agent configuration 
+
+Route coverage is available for Java Spring, .NET MVC and Webforms, and Node Express users. 
+
+Route Coverage is enabled automatically for .NET or Node applications. For Java applications, you must specify the application name, using the following command, when deploying the Java agent: `-Dcontrast.appname = <example name>`. 
 
 ## View Route Details 
 
-In application's **Overview** tab, view the number of **Routes Exercised** compared to the number of total routes in your application. Click on the figure, or select the **Route Coverage** tab to view details for each route that Contrast has identified in the application. 
+In your application's **Overview** tab, view the number of **Routes Exercised** compared to the number of total routes in your application. Click on the figure, or select the **Route Coverage** tab to view details for each route that Contrast has identified in the application. 
 
 <a href="assets/images/App-overview.png" rel="lightbox" title="View routes in your application Overview"><img class="thumbnail" src="assets/images/App-overview.png"/></a>
 
