@@ -20,8 +20,6 @@
   "scripts": {
     "build": "grunt build",
     "clean": "grunt clean",
-    "deploy": "NODE_ENV=production node ./deploy.js",
-    "deploy-staging": "node ./deploy.js",
     "start": "grunt server",
     "test": "grunt assemble",
     "test-dist": "node test.js"
