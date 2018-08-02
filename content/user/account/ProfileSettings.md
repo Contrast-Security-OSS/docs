@@ -12,8 +12,6 @@ In the **General Information** section, use the form fields to modify your basic
 
 <a href="assets/images/Profile_Settings.png" rel="lightbox" title="Profile Settings"><img class="thumbnail" src="assets/images/Profile_Settings.png"/></a>
 
-<a href="assets/images/Contrast_Cats.png" rel="lightbox" title="Contrast Cats"><img class="thumbnail" src="assets/images/Contrast_Cats.png"/></a>
-
 ## Keys
 
 Go to the **Your Keys** section to view your **Organization** keys - such as your API key and Organization ID - and your **Personal** keys - such as your Service key. Rotate your service key by clicking the link provided. You can also click the button to **Generate Sample API Request** to...
