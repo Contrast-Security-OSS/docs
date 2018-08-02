@@ -1,0 +1,39 @@
+<div id="nav" class="page-sidenav">
+    <div class="scroll">
+        <a class="navbar-brand2" href="{{navbarside.homePath}}"><img
+            src="{{navbarside.logoPath}}" width="155" height="50" data-toggle="tooltip"
+            data-placement="top" title="{{navbarside.logoTitle}}"></a>
+<!-- insert survey link below -->
+        <br/>
+        <span class="survey-prompt">Thoughts on our docs?</span>
+        <br/>
+        <a href="https://contrastsecurity.typeform.com/to/EZSMzQ" class="survey-link" data-toggle="tooltip" data-placement="top" title="Take our survey!">Let us know!</a>
+        <ul class="cd-accordion-menu animated">
+            {{#each navbarside.menu}}
+              {{#unless hidden}}
+                <li class="has-children level1-container">
+                  <input type="checkbox" name="{{id}}" id="sidenav-{{id}}">
+                  <label for="sidenav-{{id}}" class="level1">{{heading}}<i class="menu-caret fa fa-angle-right"></i></label>
+                  <ul>
+                    {{#each subgroups}}
+                      {{#unless hidden}}
+                        <li class="has-children level2-container">
+                          <input type="checkbox" name="{{id}}" id="sidenav-{{id}}">
+                        <label for="sidenav-{{id}}" class="level2">{{heading}}{{#if description}}<p class="level2-desc">Use Contrast Like a Pro</p></label>{{/if}}</label>
+                          <ul>
+                            {{#each items}}
+                              {{#unless hidden}}
+                                <li><a href="{{href}}">{{name}}</a></li>
+                              {{/unless}}
+                            {{/each}}
+                          </ul>
+                        </li>
+                      {{/unless}}
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/unless}}
+            {{/each}}
+        </ul> <!-- cd-accordion-menu -->
+    </div><!-- End scroll -->
+</div><!-- End nav -->

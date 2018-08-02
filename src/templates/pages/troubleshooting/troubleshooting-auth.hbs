@@ -1,0 +1,31 @@
+---
+title: Troubleshooting
+breadcrumb: ['Troubleshooting', 'Authentication']
+layout: src/templates/layouts/page.hbs
+sourcelinkArticleBase: content/troubleshooting/auth/
+articles:
+- heading: User Directory Debugging
+  sourcelink: DebuggingLDAP.md
+  anchor: debug
+  md: docs/content/troubleshooting/auth/DebuggingLDAP.md
+- heading: User Missing from Directory 
+  sourcelink: Add-user-ldap.md
+  anchor: ldap-user
+  md: docs/content/troubleshooting/auth/Add-user-ldap.md
+- heading: Single Sign-On Connectivity
+  sourcelink: TroubleshootingSSO.md
+  anchor: troubleshoot-sso
+  md: docs/content/troubleshooting/auth/TroubleshootingSSO.md
+- heading: Two-Step Verification
+  sourcelink: TSV-troubleshooting.md
+  anchor: tsv-trouble
+  md: docs/content/troubleshooting/auth/TSV-troubleshooting.md
+- heading: Rotate Service Keys
+  sourcelink: RotatingKeys.md
+  anchor: keys
+  md: docs/content/troubleshooting/auth/RotatingKeys.md
+---
+
+{{> articles}}
+
+

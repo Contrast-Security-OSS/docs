@@ -1,0 +1,37 @@
+---
+title: Security
+breadcrumb: ['Administration', 'Organization Settings']
+layout: src/templates/layouts/page.hbs
+sourcelinkArticleBase: content/admin/org_settings/security/
+quickLinks:
+- name: Two-Step Verification 
+  anchor: security-tsv
+- name: IP Restrictions
+  anchor: security-ip
+- name: Audit Log
+  anchor: audit-log
+- name: Password Policy
+  anchor: security-pwd
+articles:
+- heading: Two-Step Verification 
+  sourcelink: TwoStepVerification.md
+  anchor: security-tsv
+  md: docs/content/admin/org_settings/security/TwoStepVerification.md
+- heading: IP Restrictions
+  sourcelink: Security-ip-restrictions.md
+  anchor: security-ip
+  md: docs/content/admin/org_settings/security/Security-ip-restrictions.md
+- heading: Audit Log
+  sourcelink: Security-audit-log.md
+  anchor: audit-log
+  md: docs/content/admin/org_settings/security/Security-audit-log.md
+- heading: Password Policy
+  sourcelink: Security-password-policy.md
+  anchor: security-pwd
+  md: docs/content/admin/org_settings/security/Security-password-policy.md
+
+---
+
+{{> articles}}
+
+

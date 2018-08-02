@@ -1,0 +1,42 @@
+---
+title: FAQs
+breadcrumb: ['Troubleshooting', 'Contrast Setup']
+layout: src/templates/layouts/page.hbs
+sourcelinkArticleBase: content/troubleshooting/setup/faq/
+quickLinks:
+- name: Application Data
+  anchor: app
+- name: Captured Information
+  anchor: capture
+- name: URL Increase
+  anchor: url
+- name: Generate HAR
+  anchor: har
+- name: Libraries
+  anchor: libraries-faq
+articles:
+- heading: Does Contrast change application data?
+  sourcelink: ApplicationData.md
+  anchor: app
+  md: docs/content/troubleshooting/setup/faq/ApplicationData.md
+- heading: What information does Contrast capture?
+  sourcelink: CapturedInformation.md
+  anchor: capture
+  md: docs/content/troubleshooting/setup/faq/CapturedInformation.md
+- heading: Why does Contrast report an increasing number of URLs in an application?
+  sourcelink: IncreaseAppURLs.md
+  anchor: url
+  md: docs/content/troubleshooting/setup/faq/IncreaseAppURLs.md
+- heading: How do I generate a HAR file?
+  sourcelink: GenerateHAR.md
+  anchor: har
+  md: docs/content/troubleshooting/setup/faq/GenerateHAR.md
+- heading: Libraries
+  sourcelink: Libraries-FAQ.md
+  anchor: libraries-faq
+  md: docs/content/troubleshooting/setup/faq/Libraries-FAQ.md
+---
+
+{{> articles}}
+
+

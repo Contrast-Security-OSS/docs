@@ -1,0 +1,39 @@
+    <script>
+        var assets = '{{ assets }}';
+    </script>
+
+    <script src="{{assets}}/js/jquery-2.1.4.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{assets}}/js/bootstrap.min.js"></script>
+
+
+    <!--Lightbox -->
+    <script src="{{assets}}/lightbox/lightbox.js"></script>
+
+    <!--lunr.js-->
+    <script src="{{assets}}/js/lunr.min.js"></script>
+
+    <!--typeahead.js-->
+    <script src="{{assets}}/js/typeahead.jquery.min.js"></script>
+
+    <!--handlebars-->
+    <script src="{{assets}}/js/handlebars.min.js"></script>
+
+    <script id="result-template" type="text/x-handlebars-template">
+        <div class="result-group">
+            <div class="result-group-title">\{{{title}}}</div>
+            \{{#each articles}}
+                <a href="\{{url}}" class="result-article">
+                    <span class="result-title">\{{{title}}}</span>
+                </a>
+            \{{/each}}
+        </div>
+    </script>
+
+    <script src="{{assets}}/js/opendocs.js"></script>
+
+  </body>
+</html>

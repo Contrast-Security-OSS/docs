@@ -1,0 +1,30 @@
+---
+title: Installation 
+breadcrumb: ['Installation &amp; Setup', '.NET Agent']
+layout: src/templates/layouts/page.hbs
+sourcelinkArticleBase: content/installation/net/
+quickLinks:
+- name: Installation for Windows
+  anchor: net-windows
+- name: Express Installation for Azure
+  anchor: net-express
+- name: Manual Installation for Azure
+  anchor: net-manual
+articles:
+- heading: Installation for Windows
+  sourcelink: NetInstallation.md
+  anchor: net-windows
+  md: docs/content/installation/net/install/NetInstallation.md
+- heading: Express Installation for Azure App Service
+  sourcelink: Installation-site-extension.md
+  anchor: net-express
+  md: docs/content/installation/net/azureAppService/Installation-site-extension.md
+- heading: Manual Installation for Azure App Service
+  sourcelink: Installation-nuget-project.md
+  anchor: net-manual
+  md: docs/content/installation/net/azureAppService/Installation-nuget-project.md
+---
+
+{{> articles}}
+
+

@@ -1,0 +1,40 @@
+---
+title: Use the Agent 
+breadcrumb: ['Installation &amp; Setup', '.NET Agent']
+layout: src/templates/layouts/page.hbs
+sourcelinkArticleBase: content/installation/net/usage/
+quickLinks:
+- name: Basics
+  anchor: usage
+- name: Source Code Information
+  anchor: instrument
+- name: IIS
+  anchor: iis
+- name: IIS-Express
+  anchor: iisexpress
+- name: Microsoft Azure
+  anchor: azure
+articles:
+- heading: The Basics
+  sourcelink: GeneralUsage.md
+  anchor: usage
+  md: docs/content/installation/net/usage/GeneralUsage.md
+- heading: Source Code Information
+  sourcelink: InstrumentationNetAgent.md
+  anchor: instrument
+  md: docs/content/installation/net/usage/InstrumentationNetAgent.md
+- heading: IIS
+  sourcelink: NetApplicationPoolFiltering.md
+  anchor: iis
+  md: docs/content/installation/net/usage/NetApplicationPoolFiltering.md
+- heading: IIS Express
+  sourcelink: UsingWithIISExpress.md
+  anchor: iisexpress
+  md: docs/content/installation/net/usage/UsingWithIISExpress.md
+- heading: Azure
+  sourcelink: UsingDotNetAzure.md
+  anchor: azure
+  md: docs/content/installation/net/usage/UsingDotNetAzure.md
+---
+
+{{> articles}}

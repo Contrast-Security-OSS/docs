@@ -1,0 +1,34 @@
+---
+component: navbar
+---
+<!-- Fixed navbar -->
+
+<nav class="home-navbar-container">
+    <div class="home-navbar-container-inner">
+      <div class="home-navbar">
+        <div class="home-navbar-row">
+              <div class="home-navbar-col home-navbar-brand">
+                    <a href="{{relative page.dest "dist/index.html"}}"><img src="../../assets/presentation-images/OpenDocs_logoALT.png" height="35" data-toggle="tooltip" data-placement="top" title="Back to OpenDocs Home"></a>
+              </div>
+              <div class="home-navbar-col navlinks">
+                    <ul>
+                      {{#each site.navLinksBanner}}
+                          <li><a class="icon-link" href="{{href}}" target="_blank">{{text}}</a></li>
+                      {{/each}}                   
+ 					        <li>
+	                	<a class="icon-link2" href="{{site.repoLink}}" target="_blank"><i class="fa fa-github" data-toggle="tooltip" data-placement="top" title="Check out our GitHub repo"></i></a>
+	            	  </li>
+                    </ul>
+              </div>
+        </div>
+        <form class="home-navbar-row" role="search">
+            <input type="text" id="search" class="tt-hint" placeholder="Search for answers" name="search" >
+        </form>
+        <div class="home-navbar-row navbar-footer">
+            <div class="home-navbar-col navbar-note">
+              <span>Want to help us with OpenDocs?</span><a href="contribute.html#contribute"><strong>Contribute </strong></a><span>(Thanks!)</span>
+            </div>
+        </div>
+      </div>
+    </div>
+</nav>

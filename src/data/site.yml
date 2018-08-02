@@ -1,0 +1,20 @@
+title: Contrast Open Docs
+sourcelinkBase: https://github.com/Contrast-Security-OSS/docs/blob/master/
+issuesLink: https://github.com/Contrast-Security-OSS/docs/issues
+repoLink: https://github.com/Contrast-Security-OSS/docs
+navLinksBanner:
+ - href: https://api.contrastsecurity.com/
+   text: API Docs
+ - href: glossary.html#glossary
+   text: Glossary
+navLinksArticle:
+ - href: https://api.contrastsecurity.com/
+   text: API Docs
+ - href: release.html
+   text: Release News
+ - href: glossary.html#glossary
+   text: Glossary
+ - href: contribute.html#contribute
+   text: Contribute
+ 
+

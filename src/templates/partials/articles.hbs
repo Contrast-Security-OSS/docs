@@ -1,0 +1,49 @@
+<div class="article-container">
+  {{> breadcrumbs}}
+
+  {{#if selectMenu}}
+    <div class="article-toc-menu">
+      <select class="form-control" name="article-toc-menu">
+        {{#if selectMenu.placeholder}}
+          <option value="" selected disabled>{{selectMenu.placeholder}}</option>
+        {{/if}}
+        {{#each selectMenu.options}}
+          <option value="{{anchor}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+  {{/if}}
+
+  {{#if quickLinks}}
+    <h1 class="quick-links-heading" id="quick-links">{{title}}</h1>
+    <ul class="quick-links">
+      {{#each quickLinks}}
+        <li>
+          {{#if anchor}}
+            <a href="#{{anchor}}" class="quick-link">{{name}}</a>
+          {{/if}}
+          {{#if href}}
+            <a href="{{href}}" class="quick-link">{{name}}</a>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  {{#each articles}}
+    {{#unless hidden}}
+      <div class="content page-article" id="{{anchor}}">
+        <div class="page-article-heading cs-row">
+          <h1>{{heading}}</h1>
+          {{> sourcelink href=(concat ../site.sourcelinkBase ../sourcelinkArticleBase sourcelink) }}
+        </div>
+        {{md md}}
+        {{#if ../selectMenu}}<div class="backtop"><a href="#quick-links">Back to Top</a><hr></div>{{/if}}
+        {{#if ../quickLinks}}<div class="backtop"><a href="#quick-links">Back to Top</a><hr></div>{{/if}}
+      </div>
+    {{/unless}}
+  {{/each}}
+
+
+  {{> footer}}
+</div>

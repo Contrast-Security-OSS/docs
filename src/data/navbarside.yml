@@ -1,0 +1,495 @@
+component: navbar-fixed-side
+homePath: index.html
+logoPath: ../../assets/presentation-images/OpenDocs_logo.png
+logoTitle: Back to OpenDocs Home
+menu:
+- heading: About Contrast
+  id: about
+  subgroups:
+  - heading: What Is Contrast
+    id: what-is
+    items:
+    - name: Overview
+      href: about-whatis.html#about-overview
+    - name: Assess
+      href: assess-howitworks.html
+    - name: Protect
+      href: protect-howitworks.html
+  - heading: Deployment
+    id: deploy
+    items:
+    - name: Introduction
+      href: about-deployment.html#deploy-intro
+    - name: What to Expect
+      href: about-deployment.html#deploy-map
+- heading: Installation &amp; Setup
+  id: installation
+  subgroups:
+  - heading: Contrast Application
+    id: setup
+    items:
+    - name: Quick Start Guide
+      href: installation-setup.html#quick-start
+    - name: System Requirements
+      href: installation-setup.html#contrast-reqs
+    - name: Sizing Recommendations
+      href: installation-setup.html#size
+    - name: Installation
+      href: installation-setupinstall.html
+    - name: Running Contrast
+      href: installation-setup.html#run
+    - name: Configuration
+      href: installation-setupconfig.html
+    - name: Authentication
+      href: installation-setupauth.html
+    - name: Create a MySQL Backup
+      href: installation-setup.html#setup-mysql
+    - name: Onboard Applications
+      href: installation-setup.html#onboard
+  - heading: Java
+    id: java
+    items:
+    - name: Overview
+      href: installation-java.html#java-overview
+    - name: Supported Technologies
+      href: installation-java.html#java-supported
+    - name: Standard Installation
+      href: installation-java.html#java-standard
+    - name: Installation by Container
+      href: installation-javainstall.html
+    - name: Configuration
+      href: installation-javaconfig.html
+  - heading: .NET
+    id: net
+    items:
+    - name: Overview
+      href: installation-net.html#net-overview
+    - name: System Requirements
+      href: installation-net.html#net-system
+    - name: Supported Technologies
+      href: installation-net.html#net-supported
+    - name: Installation
+      href: installation-netinstall.html
+    - name: Usage
+      href: installation-netusage.html
+    - name: Configuration
+      href: installation-netconfig.html
+    - name: Agent Policy
+      href: installation-netpolicy.html
+  - heading: Node
+    id: node
+    items:
+    - name: Overview
+      href: installation-node.html#node-overview
+    - name: Supported Technologies
+      href: installation-node.html#node-supported
+    - name: Installation
+      href: installation-nodeinstall.html
+    - name: Configuration
+      href: installation-node.html#node-config
+    - name: Working with Transpilers
+      href: installation-node.html#transpiler
+  - heading: Ruby
+    id: ruby
+    items:
+    - name: Overview
+      href: installation-ruby.html#ruby-overview
+    - name: Supported Technologies
+      href: installation-ruby.html#ruby-supported
+    - name: Installation
+      href: installation-ruby.html#ruby-install
+    - name: Configuration
+      href: installation-ruby.html#ruby-config
+  - heading: Python
+    id: python
+    items:
+    - name: Overview
+      href: installation-python.html#python-overview
+    - name: Supported Technologies
+      href: installation-python.html#python-supported
+    - name: Installation
+      href: installation-python.html#python-install
+    - name: Configuration
+      href: installation-python.html#python-config
+- heading: Contrast UI
+  id: use-contrast
+  subgroups:
+  - heading: Getting Started
+    id: start
+    items:
+    - name: Supported Browsers
+      href: user-starthere.html#browser
+    - name: Navigation
+      href: user-starthere.html#ui-navigate
+    - name: Introduction
+      href: user-starthere.html#ui-intro
+  - heading: Manage Your Account
+    id: manage-account
+    items:
+    - name: Login and Password
+      href: user-account.html#loginpwd
+    - name: Profile Settings
+      href: user-account.html#profile
+    - name: Notifications
+      href: user-account.html#user-notify
+    - name: Permissions
+      href: user-account.html#user-permissions
+  - heading: Applications
+    id: apps
+    items:
+    - name: Add Applications
+      href: user-apps.html#addapp
+    - name: License Applications
+      href: user-apps.html#license
+    - name: Manage Applications
+      href: user-appsmanage.html
+    - name: Set Up Environments
+      href: user-apps.html#environ
+    - name: View Vulnerabilities
+      href: user-apps.html#view-vulns
+    - name: Keep Track of Libraries
+      href: user-apps.html#libraries
+    - name: Crawl Your App
+      href: user-apps.html#crawl
+    - name: Scoring Guide
+      href: user-apps.html#score-guide
+    - name: Application Policy
+      href: user-apps.html#policy
+      hidden: true
+  - heading: Servers
+    id: servers
+    items:
+    - name: Manage Servers
+      href: user-servers.html#manage-server
+      hidden: true
+    - name: Server Settings
+      href: user-servers.html#settings
+    - name: Output to Syslog
+      href: user-servers.html#syslog
+  - heading: Libraries
+    id: libraries
+    items:
+    - name: Explore Libraries
+      href: user-libraries.html#explore-lib
+    - name: Manage Libraries
+      href: user-libraries.html#manage-lib
+    - name: Library Analysis
+      href: user-libraries.html#analysis
+    - name: Scoring Guide
+      href: user-libraries.html#score-lib
+  - heading: Vulnerabilities
+    id: vulns
+    items:
+    - name: Discover Vulnerabilities
+      href: user-vulns.html#discover-vulns
+    - name: Analyze Findings
+      href: user-vulns.html#analyze
+    - name: Manage Vulnerabilities
+      href: user-vulns.html#manage-vuln
+    - name: Track Findings
+      href: user-vulns.html#track
+    - name: How to Fix Them
+      href: user-vulns.html#remediate
+    - name: Getting Notifications
+      href: user-vulns.html#notify
+      hidden: true
+  - heading: Attacks
+    id: attacks
+    items:
+    - name: About Attacks
+      href: user-attacks.html#about-attacks
+      hidden: true
+    - name: Run Attack Script
+      href: user-attacks.html#attack-script
+    - name: Analyze Attacks
+      href: user-attacks.html#analyze-attacks
+    - name: Monitor Attacks
+      href: user-attacks.html#monitor
+    - name: Blacklisting IPs
+      href: user-attacks.html#blacklist
+      hidden: true
+    - name: Getting Notifications
+      href: user-attacks.html#notify
+      hidden: true
+  - heading: Reports
+    id: reports
+    items:
+    - name: Compliance Reports
+      href: user-reports.html#compliance-report
+    - name: Time to Remediation
+      href: user-reports.html#ttr
+      hidden: true
+    - name: Vulnerability Trend
+      href: user-reports.html#vulntrend
+    - name: Organization Statistics
+      href: user-reports.html#orgstats
+    - name: User Statistics
+      href: user-reports.html#userstats
+      hidden: true
+  - heading: Tips &amp; Tricks
+    description: Use Contrast Like a Pro
+    id: tips-tricks
+    hidden: true
+    items:
+    - name: How can I restrict IPS for my organization?
+      href: user-tipstricks.html#ip
+    - name: How can I connect to the Contrast API to get vulnerability details?
+      href: user-tipstricks.html#api
+    - name: How do I create exclusions?
+      href: user-tipstricks.html#exclusions
+    - name: How can I export data from Contrast?
+      href: user-tipstricks.html#export
+    - name: How can I collaborate with my team?
+      href: user-tipstricks.html#team
+- heading: Administration
+  id: administration
+  subgroups:
+  - heading: System Settings
+    id: system
+    items:
+    - name: Overview
+      href: admin-systemsettings.html#system-glance
+    - name: Diagnostics
+      href: admin-systemsettings.html#diagnostics
+    - name: Security
+      href: admin-systemsecurity.html
+    - name: System Messages
+      href: admin-systemsettings.html#message
+    - name: Administrative Stats
+      href: admin-systemsettings.html#stats
+    - name: SSL Toolbox
+      href: admin-systemsettings.html#ssl
+    - name: HTTPS Configuration
+      href: admin-systemsettings.html#https
+  - heading: Onboard Your Team
+    id: onboard-team
+    items:
+    - name: Create Organizations
+      href: admin-onboardteam.html#org
+    - name: Create Access Groups
+      href: admin-onboardteam.html#group
+    - name: Create Users
+      href: admin-onboardteam.html#create-user
+  - heading: Manage Organizations
+    id: manage-org
+    items:
+    - name: Multiple Organizations
+      href: admin-manageorgsmultiple.html
+    - name: Manage Licenses
+      href: admin-manageorgs.html#manage-license
+    - name: Enable Assess & Protect
+      href: admin-manageorgs.html#assess-protect
+    - name: Manage Access Groups
+      href: admin-manageorgs.html#access
+    - name: Cross-Organization Groups
+      href: admin-manageorgs.html#crossorg
+    - name: Manage Users
+      href: admin-manageorgs.html#manage-user
+    - name: User Roles &amp; Permissions
+      href: admin-manageorgsroleperm.html
+    - name: Designate SuperAdmins
+      href: admin-manageorgs.html#sa
+  - heading: Organization Settings
+    id: org-set
+    items:
+    - name: Overview
+      href: admin-orgsettings.html#org-glance
+    - name: Security
+      href: admin-orgsecurity.html
+    - name: API Credentials
+      href: admin-orgsettings.html#apikey
+    - name: Integrations
+      href: admin-orgintegrations.html
+    - name: Server Defaults
+      href: admin-orgsettings.html#org-server
+    - name: Application Defaults
+      href: admin-orgsettings.html#app-defaults
+    - name: Notifications
+      href: admin-orgsettings.html#org-notify
+    - name: Report Settings
+      href: admin-orgsettings.html#org-report
+    - name: Score Settings
+      href: admin-orgsettings.html#score-settings
+  - heading: Policy Management
+    id: policy
+    items:
+    - name: Assess Rules
+      href: admin-policymgmt.html#assess
+    - name: Security Controls
+      href: admin-policymgmt.html#security
+    - name: Protect Rules
+      href: admin-policymgmt.html#protect
+    - name: CVE Shields
+      href: admin-policymgmt.html#cve
+    - name: Virtual Patches
+      href: admin-policymgmt.html#patch
+    - name: Log Enhancers
+      href: admin-policymgmt.html#log
+    - name: IP Management
+      href: admin-policymgmt.html#ip
+    - name: Application Exclusions
+      href: admin-policymgmt.html#exclude
+    - name: Compliance Policy
+      href: admin-policymgmt.html#compliance-policy
+    - name: Library Policy
+      href: admin-policymgmt.html#library
+    - name: Remediation Policy
+      href: admin-policymgmt.html#remediate
+  - heading: EOP Maintenance
+    id: eop
+    items:
+    - name: Manage Credentials
+      href: admin-eopcredentials.html
+    - name: Upgrade Contrast
+      href: admin-eopupgrade.html
+    - name: Upgrade Agents
+      href: admin-eop.html#agent
+    - name: Update EOP License
+      href: admin-eop.html#update-license
+    - name: Update IP Address
+      href: admin-eop.html#update-ip
+- heading: Contrast Tools
+  id: tools
+  subgroups:
+  - heading: Contrast API & SDKs
+    id: api
+    items:
+    - name: About the API
+      href: tools-about.html#api-about
+    - name: Access the API
+      href: tools-apiaccess.html
+    - name: About the SDKs
+      href: tools-about.html#sdk-about
+    - name: Access the SDKs
+      href: tools-sdkaccess.html
+  - heading: IDE Plugins
+    id: ide-plugins
+    items:
+    - name: Eclipse Plugin
+      href: tools-ide.html#eclipse
+    - name: IntelliJ Plugin
+      href: tools-ide.html#intellij
+    - name: Visual Studio Plugin
+      href: tools-ide.html#visualstudio
+  - heading: Build Plugins
+    id: build-plugins
+    items:
+    - name: Gradle Plugin
+      href: tools-build.html#gradle    
+    - name: Maven Plugin
+      href: tools-build.html#maven
+  - heading: CI Plugins
+    id: ci-plugins
+    items:
+    - name: Jenkins Plugin
+      href: tools-ci.html#jenkins
+    - name: Bamboo Plugin
+      href: tools-ci.html#bamboo
+  - heading: Crawler Micro-Service
+    id: crawler
+    items:
+    - name: About
+      href: tools-crawler.html#crawler-about
+    - name: System Requirements
+      href: tools-crawler.html#crawler-reqs
+    - name: Installation
+      href: tools-crawler.html#crawler-install
+    - name: Configuration
+      href: tools-crawler.html#crawler-config
+  - heading: Contrast Hub
+    id: hub
+    hidden: true
+    items:
+    - name: TBD
+      href: tools-hub.html#hub-about
+- heading: Troubleshooting
+  id: troubleshoot
+  subgroups:
+  - heading: Contrast Setup
+    id: troubleshoot-setup
+    items:
+    - name: Installation Issues
+      href: troubleshooting-setupinstallation.html
+    - name: FAQs
+      href: troubleshooting-setupfaq.html
+    - name: Missing Applications
+      href: troubleshooting-setup.html#missing
+    - name: MySQL Logging
+      href: troubleshooting-setup.html#troubleshoot-mysql
+    - name: Upgrade Agents
+      href: troubleshooting-setup.html#upgrade
+    - name: Uninstall Contrast
+      href: troubleshooting-setup.html#uninstall
+  - heading: Authentication
+    id: troubleshoot-auth
+    items:
+    - name: User Directory Debugging
+      href: troubleshooting-auth.html#debug
+    - name: Add User to Directory
+      href: troubleshooting-auth.html#ldap-user
+    - name: Single Sign-On Connectivity
+      href: troubleshooting-auth.html#troubleshoot-sso
+    - name: Two-Step Verification
+      href: troubleshooting-auth.html#tsv-trouble
+    - name: Rotate Service Keys
+      href: troubleshooting-auth.html#keys
+  - heading: Java Agent
+    id: troubleshoot-java
+    items:
+    - name: Installation Issues
+      href: troubleshooting-javainstall.html
+    - name: Application Performance
+      href: troubleshooting-javaapp.html
+    - name: Clear Agent Cache
+      href: troubleshooting-java.html#cache
+    - name: Get Agent Logs
+      href: troubleshooting-java.html#java-logs
+    - name: Behavior with Other Agents
+      href: troubleshooting-java.html#other
+    - name: Tomcat Security Policy
+      href: troubleshooting-java.html#tomcat
+  - heading: .NET Agent
+    id: troubleshoot-net
+    items:
+    - name: Application Performance
+      href: troubleshooting-net.html#performance
+    - name: Contrast Connectivity
+      href: troubleshooting-net.html#net-connect
+    - name: SSL Certificates
+      href: troubleshooting-net.html#net-ssl
+    - name: Agent Logs
+      href: troubleshooting-net.html#net-logs
+    - name: Other Known Issues
+      href: troubleshooting-netissues.html
+  - heading: Node Agent
+    id: troubleshoot-node
+    items:
+    - name: Installation Issues
+      href: troubleshooting-node.html#node-ts-install
+    - name: Application Performance
+      href: troubleshooting-node.html#perform
+    - name: Contrast Connectivity
+      href: troubleshooting-node.html#node-connect
+    - name: Behavior with Other Agents &amp; Tools
+      href: troubleshooting-nodeother.html
+  - heading: Ruby Agent
+    id: troubleshoot-ruby
+    items:
+    - name: Contrast Connectivity
+      href: troubleshooting-ruby.html#ruby-connect
+  - heading: Contrast SDK
+    id: troubleshoot-sdk
+    items:
+    - name: Connection Errors
+      href: troubleshooting-sdk.html#connection
+    - name: Report an Issue
+      href: troubleshooting-sdk.html#report-issue
+
+
+
+
+
+
+
+
+

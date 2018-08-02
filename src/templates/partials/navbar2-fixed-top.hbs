@@ -1,0 +1,27 @@
+---
+component: navbar
+---
+<!-- Fixed navbar -->
+<nav class="slim-navbar navbar-fixed-top2">
+    <div class="cs-row">
+        <div class="cs-col search">
+            <form role="search">
+                <input type="text" id="search" class="tt-hint" placeholder="Search for answers" name="search" >
+            </form>
+        </div>
+        <div class="cs-col links cs-row">
+            <ul class="links">
+                {{#each site.navLinksArticle}}
+                    <li><a class="icon-link2" href="{{href}}" target="_blank">{{text}}</a></li>
+                {{/each}}
+                <li>
+                    <a class="icon-link2" href="{{site.repoLink}}" target="_blank"><i class="fa fa-github" data-toggle="tooltip" data-placement="top" title="Check out our Github repo"></i></a>
+                </li>
+                <li>
+	                <a class="icon-link2" href="{{site.issuesLink}}" target="_blank"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report an issue"></i></a>
+	            </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+

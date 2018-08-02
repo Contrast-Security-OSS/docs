@@ -1,0 +1,73 @@
+---
+layout: src/templates/layouts/banner.hbs
+title: Open Docs
+search: false
+releaseNews:
+ headingPrefix: Release News -
+ version: 3.5.4
+ anchor: 354
+ date: JULY 2018
+tileSets:
+- tiles:
+  - heading: HOW IT WORKS
+    href: about-whatis.html#about-overview
+    iconClass: ion-information
+    tooltipTitle: About Contrast
+    subHeading: About Contrast
+    message: Learn how it works and about integrating your application security.
+  - heading: GET STARTED
+    href: installation-setup.html#quick-start
+    iconClass: octicon octicon-cloud-download
+    tooltipTitle: Installation &amp; Setup
+    subHeading: Installation &amp; Setup
+    message: Find easy-to-follow instructions for Java, .NET, Node, Ruby and Python.
+  - heading: GET HELP
+    href: troubleshooting-setupinstallation.html#common
+    iconClass: ion-help-circled
+    tooltipTitle: Troubleshooting
+    subHeading: Troubleshooting
+    message: Having issues? Find answers to problems if things get tricky.
+- tiles:
+  - heading: ADMINISTRATOR'S GUIDE
+    href: admin-systemsettings.html#system-glance
+    iconClass: fa fa-cog
+    tooltipTitle: Administration
+    subHeading: Administration
+    message: As an administrator, modify and manage system settings and policy.
+  - heading: USER'S GUIDE
+    href: user-starthere.html#ui-navigate
+    iconClass: fa fa-desktop
+    tooltipTitle: The Contrast UI
+    subHeading: The Contrast UI
+    message: Get step-by-step instructions on how to manage and analyze your apps.
+  - heading: EXTRAS
+    href: tools-about.html#api-about
+    iconClass: fi-wrench
+    tooltipTitle: Contrast Tools
+    subHeading: Contrast Tools
+    message: As a developer, check out tools and libraries we offer to access endpoints.
+---
+  <div class="cs-row dead-center release-news">
+    <div class="cs-col">
+        <p class="label2">{{releaseNews.headingPrefix}} <a href="release.html#{{releaseNews.anchor}}">{{releaseNews.version}}</a>&nbsp;&nbsp;<span class="label1">{{releaseNews.date}}</span></p>
+        <p> Just in: Ruby agent 2.0 and improvements for your integrations!</p>
+    </div>
+  </div>
+
+  {{#each tileSets}}
+    <div class="cs-row dead-center">
+      {{#each tiles}}
+        {{> tile}}
+      {{/each}}
+    </div>
+  {{/each}}
+
+   <div class="cs-row dead-center">
+    <div class="cs-col tile-responsive"></div>
+    <div class="cs-col tile-responsive"></div>
+    <div class="cs-col tile-responsive">
+      <div class="survey button">
+          <a href="https://contrastsecurity.typeform.com/to/EZSMzQ" class="btn-help" data-toggle="tooltip" data-placement="top" title="Take our survey!">Thoughts on our docs? Let us know!</a>
+      </div>
+    </div>
+  </div>
