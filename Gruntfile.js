@@ -11,7 +11,8 @@ module.exports = function (grunt) {
       src: 'src',
       dist: 'dist',
       distAssets: 'dist/assets',
-      docs: 'docs'
+      assets: 'assets',
+      content: 'content'
     },
 
     watch: {
@@ -28,7 +29,7 @@ module.exports = function (grunt) {
           '<%= config.dist %>/assets/{,*/}*.css',
           '<%= config.dist %>/assets/{,*/}*.js',
           '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= config.docs %>/assets/main.css'
+          '<%= config.assets %>/main.css'
         ]
       }
     },
@@ -59,7 +60,7 @@ module.exports = function (grunt) {
         flatten: true,
         assets: '<%= config.dist %>/assets',
         data: '<%= config.src %>/data/*.{json,yml}',
-        partials: ['<%= config.src %>/templates/partials/**/*.hbs', '<%= config.docs %>/**/*.md'],
+        partials: ['<%= config.src %>/templates/partials/**/*.hbs', '<%= config.content %>/**/*.md'],
         plugins: ['assemble-contrib-permalinks', 'grunt-assemble-sitemap', 'assemble-contrib-toc', './grunt-assemble-lunr.js'],
         helpers: ['handlebars-helper-md', './helpers/**/*.js'],
         lunr: {
@@ -114,7 +115,7 @@ module.exports = function (grunt) {
       },
       contentImages: {
         expand: true,
-        cwd: 'docs/assets/images/',
+        cwd: 'assets/images/',
         src: '**',
         dest: '<%= config.dist %>/assets/images/'
       },
@@ -126,7 +127,7 @@ module.exports = function (grunt) {
       },
       attachments: {
         expand: true,
-        cwd: 'docs/assets/attachments/',
+        cwd: 'assets/attachments/',
         src: '**',
         dest: '<%= config.dist %>/assets/attachments/'
       },

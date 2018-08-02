@@ -95,7 +95,7 @@ In the front matter of an article (\*.hbs) file:
     - heading: Contrast 3.3.8 - March 2017
       sourcelink: ReleaseNotes338.md
       anchor: 338
-      md: docs/content/release/v3/ReleaseNotes338.md
+      md: content/release/v3/ReleaseNotes338.md
       hidden: true
 
 ## Menu TOC "Quick Links"
