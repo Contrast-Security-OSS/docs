@@ -2,32 +2,27 @@
 
 > The best project ever..
 
-Open-Docs is a Contrast project based on the [Assemble Project](http://assemble.io/), which is a descendent of the [Yeoman Web Scaffolding Project](http://yeoman.io). The project has two components:
+Open Docs is a Contrast project based on the [Assemble Project](http://assemble.io/), which is a descendent of the [Yeoman Web Scaffolding Project](http://yeoman.io).
 
-- [docs](https://github.com/Contrast-Security-OSS/docs): Markdown and assets making up the Open-Docs project.
-- [source](https://bitbucket.org/contrastsecurity/open-docs): Handlebars, Node and JavaScript making up the core project.
+## Content
 
-## Getting Started
+* Docs content is located in the `docs/` subdirectory and is made up of Markdown files.
+* Site navigation is managed via `src/data/navbarside.yml`
+* Main site configuration is manged via `src/data/site.yml`
 
-These instructions assume you have [git, Node.js and yarn](https://bitbucket.org/contrastsecurity/contrast-developer-environment) installed and are connected to the the Internet.
+## Development
 
-- Clone the Open-Docs Project
+- Clone the git repository
 
 ```bash
-git clone git@bitbucket.org:contrastsecurity/open-docs.git
-cd open-docs
+git clone https://github.com/Contrast-Security-OSS/docs.git
+cd docs
 ```
 
 - Install project dependencies
 
 ```bash
 yarn install
-```
-
-- Initialize the Docs Sub-Module
-
-```bash
-git submodule update --init
 ```
 
 - Build Only: builds the site and places the resulting assets in the `dist` directory.
