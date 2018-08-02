@@ -13,7 +13,7 @@ read("./dist/index.html")
   })
   .then(() => {
     return Promise.all([
-      read("./docs/content/glossary/Glossary.md"),
+      read("./content/glossary/Glossary.md"),
       read("./dist/glossary.html")
     ]);
   })

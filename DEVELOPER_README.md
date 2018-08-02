@@ -6,9 +6,9 @@ Open Docs is a Contrast project based on the [Assemble Project](http://assemble.
 
 ## Content
 
-* Docs content is located in the `docs/` subdirectory and is made up of Markdown files.
-* Site navigation is managed via `src/data/navbarside.yml`
-* Main site configuration is manged via `src/data/site.yml`
+- Docs content is located in the `content/` subdirectory and is made up of Markdown files.
+- Site navigation is managed via `src/data/navbarside.yml`
+- Main site configuration is manged via `src/data/site.yml`
 
 ## Development
 
