@@ -58,14 +58,6 @@
       "url": "https://github.com/Contrast-Security-OSS/docs/blob/master/LICENSE-MIT"
     }
   ],
-  "keywords": [
-    "assemble",
-    "templates",
-    "handlebars",
-    "site generator",
-    "site builder",
-    "grunt"
-  ],
   "dependencies": {
     "bootstrap": "^3.2.0",
     "jquery": "^2.2.0",
