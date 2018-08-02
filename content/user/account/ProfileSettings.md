@@ -14,14 +14,15 @@ In the **General Information** section, use the form fields to modify your basic
 
 <a href="assets/images/Contrast_Cats.png" rel="lightbox" title="Contrast Cats"><img class="thumbnail" src="assets/images/Contrast_Cats.png"/></a>
 
+## Keys
+
+Go to the **Your Keys** section to view your **Organization** keys - such as your API key and Organization ID - and your **Personal** keys - such as your Service key. Rotate your service key by clicking the link provided. You can also click the button to **Generate Sample API Request** to...
+
+<a href="assets/images/User-account-keys.png" rel="lightbox" title="View your Organization and Personal keys"><img class="thumbnail" src="assets/images/User-account-keys.png"/></a>
+
 ## Preferences
 
 Contrast offers guidance on new improvements in the latest release as you navigate the application. The **What's New** tab on your dashboard notifies you of new or updated features, while **Quick Tips** provide guidance for new functionality as you use a feature.  
 
 > **Note:** You can also navigate to the latest [Release News](https://docs.contrastsecurity.com/release.html) from the **User menu** in the application.
 
-## Keys
-
-Go to the **Your Keys** section to view your API and service keys. Rotate your service key by clicking the link provided. 
-
-<a href="assets/images/User-keys.png" rel="lightbox" title="View API and service keys"><img class="thumbnail" src="assets/images/User-keys.png"/></a>
