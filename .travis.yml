@@ -12,7 +12,7 @@ build:
   - yarn build
 
 update_sitemap:
-  - cd dist && sed -i s'/dist\///g' sitemap.xml && cd ../
+  - yarn prepare-sitemap
 
 test:
   - yarn test-dist

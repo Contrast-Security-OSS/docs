@@ -22,7 +22,8 @@
     "clean": "grunt clean",
     "start": "grunt server",
     "test": "grunt assemble",
-    "test-dist": "node test.js"
+    "test-dist": "node test.js",
+    "prepare-sitemap": "cd dist && sed -i \"\" \"s|dist/||g\" sitemap.xml && cd ../"
   },
   "devDependencies": {
     "assemble": "^0.24.3",

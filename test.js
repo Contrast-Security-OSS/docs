@@ -116,7 +116,7 @@ function validateSitemap(data) {
         return url.indexOf("/dist/") >= 0;
       });
       if (found) {
-        console.log(`Sitemap validation failed on url: "${found}"`);
+        console.log(`Sitemap validation failed. "dist" was not removed from URL: "${found}"`);
         return reject();
       }
       return resolve();
