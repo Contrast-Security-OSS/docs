@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-  - "8"
+node_js: "8"
 cache: 
   yarn: true
   directories:
@@ -8,4 +7,12 @@ cache:
 
 install:
   - yarn install
+
+build:
   - yarn build
+
+update_sitemap:
+  - cd dist && sed -i s'/dist\///g' sitemap.xml && cd ../
+
+test:
+  - yarn test-dist
