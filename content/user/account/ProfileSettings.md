@@ -4,13 +4,13 @@ description: "Overview of a user's profile settings"
 tags: "user profile settings manage account"
 -->
 
-View your Contrast profile settings to verify or update the information that you provided when you created an account. Contrast also offers a few additional, optional fields that you can fill out to help other organization members learn more about you and also help Contrast tailor your experience in the application. To visit your **Profile** page, click on the caret beside your username, and select **Your Account** in the dropdown **User menu**.
+View your Contrast profile settings to verify or update the information that you provided when you created an account. Contrast also offers a few additional, optional fields that you can fill out to help other organization members learn more about you and also help Contrast tailor your experience in the application. To visit your **Profile** page, click on the caret beside your username, and select **Your Account** in the dropdown **user menu**.
 
 ## General Information 
 
-In the **General Information** section, use the form fields to modify your basic account information, such as your name or time zone. Click on the thumbnail to upload a new profile image. (You can use an image of your own or choose one of the Contrast cats.)
+In the **General Information** section, use the form fields to modify your basic account information, such as your name or time zone. Click on the thumbnail to upload a new profile image. (You can use an image of your own or choose one of the Contrast Cats.)
 
-<a href="assets/images/Profile_Settings.png" rel="lightbox" title="Profile Settings"><img class="thumbnail" src="assets/images/Profile_Settings.png"/></a>
+<a href="assets/images/Account-profile-general.png" rel="lightbox" title="Profile Settings"><img class="thumbnail" src="assets/images/Account-profile-general.png"/></a>
 
 ## Keys
 
