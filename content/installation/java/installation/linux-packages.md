@@ -1,3 +1,4 @@
+
 # Installing Contrast Java agent via package manager
 
 The Contrast Java agent may be installed using system package managers. Unlike
@@ -20,8 +21,8 @@ Then install the Contrast Java agent
     sudo apt-get update && sudo apt- get install `contrast-java-agent`
 
 Edit `/etc/contrast/contrast-java-config.yaml` to configure Contrast Java agent
-to connect to the Contrast server (see
-[Configuration](./installation-javaconfig.html)
+to connect to the Contrast server. <!-- (See the YAML
+[Configuration doc](./installation-javaconfig.html) for more info.) -->
 
 To remove the Contrast Java agent
 
@@ -91,8 +92,8 @@ Then install the Contrast Java agent
     yum install contrast-java-agent
 
 Edit `/etc/contrast/contrast-java-config.yaml` to configure Contrast Java agent
-to connect to the Contrast server (see
-[Configuration](./installation-javaconfig.html)
+to connect to the Contrast server. <!-- (see
+[Configuration](./installation-javaconfig.html) -->
 
 ### Optional: install `contrast-java-agent-exec-helper`
 
