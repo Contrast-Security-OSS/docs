@@ -43,7 +43,7 @@ For Trace tags, update the configuration of the agent. If there isn’t one, add
 The configuration YAML consists of four sections. The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
 
 * `contrast`: Options for locating and communicating with the Contrast UI Dashboard
-  * `enable`: This is assumed to be *true*. If set to *false* the agent will not apply agent rules to the client application.
+  * `enable`: This is assumed to be `true`. If set to `false`, the agent won't apply agent rules to the client application.
   * `url`: URL to connect to the Contrast application
   * `api_key`: API key of the organization
   * `service_key`:  Service Key of the organization
@@ -57,7 +57,7 @@ The configuration YAML consists of four sections. The agent and service may shar
     * `path`: Name of the log file to which the CEF events are written (*security.log*)
     * `level`: Level of the CEF logging details (DEBUG, INFO, WARN, ERROR)
   * `service`: Options for the running service, including how the agent can locate it
-    * `enable`: This is assumed to be *true*. If set to *false* the agent will not attempt to start or restart the Contrast Service. The service may be started using the rake task: `rake contrast:service:start`.
+    * `enable`: This is assumed to be `true`. If set to `false`, the agent won't attempt to start or restart the Contrast Service. The service may be started using the rake task: `rake contrast:service:start`.
     * `logger`:
       * `path`: Filename of the Contrast Security log file for the service (*contrast_service.log*)
       * `level`: Level of logging detail for the logger (DEBUG, INFO, WARN, ERROR) 
