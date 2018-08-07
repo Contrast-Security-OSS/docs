@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-cd dist && sed -i "" "s|dist/||g" sitemap.xml && cd ../
+sed -i "" "s|dist/||g" ./dist/sitemap.xml
