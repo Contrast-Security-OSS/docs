@@ -23,7 +23,7 @@
     "start": "grunt server",
     "test": "echo \"no test command\"",
     "test-dist": "node test.js",
-    "prepare-sitemap": "cd dist && sed -i \"\" \"s|dist/||g\" sitemap.xml && cd ../"
+    "prepare-sitemap": "sh prepare-sitemap.sh"
   },
   "devDependencies": {
     "assemble": "^0.24.3",
