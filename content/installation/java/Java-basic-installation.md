@@ -1,12 +1,12 @@
 <!--
-title: "Java Agent Installation"
-description: "Overview of the Java Agent installation"
-tags: "installation Java agent overview installation"
+title: "Java Agent Installation from the Contrast Application"
+description: "Overview of Java agent installation from the Contrast UI"
+tags: "installation Java agent overview UI"
 -->
 
-To install the Java agent, complete the following steps:
+To install the Java agent in the Contrast UI, complete the following steps:
 
-* Log in to the Contrast interface.
+* Log in to the Contrast UI.
 * Click the button in the top navigation bar to **Add Agent**.
 * Select the **Java** agent in the dropdown menu, and click the button to **Download Agent**. You may need to specify proxy authentication information required by your network before downloading the agent.
 
