@@ -8,4 +8,5 @@ cache:
 before_script:
   - yarn install
   - yarn build
+  - yarn prepare-sitemap
   - yarn test-dist
