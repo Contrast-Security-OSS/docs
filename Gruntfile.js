@@ -8,7 +8,6 @@ module.exports = function(grunt) {
     config: {
       src: "src",
       dist: "dist",
-      distAssets: "dist/assets",
       assets: "assets",
       content: "content"
     },
@@ -68,8 +67,8 @@ module.exports = function(grunt) {
         ],
         helpers: ["handlebars-helper-md", "./helpers/**/*.js"],
         lunr: {
-          dataPath: "<%= config.distAssets %>/index_data.json",
-          searchDataPath: "<%= config.distAssets %>/search_data.json"
+          dataPath: "<%= config.dist %>/assets/index_data.json",
+          searchDataPath: "<%= config.dist %>/assets/search_data.json"
         },
         noEscape: true
       },
