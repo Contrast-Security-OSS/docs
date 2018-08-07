@@ -5,14 +5,8 @@ cache:
   directories:
     - node_modules
 
-install:
-  - yarn install
-
 build:
+  - yarn install
   - yarn build
-
-update_sitemap:
   - yarn prepare-sitemap
-
-test:
   - yarn test-dist
