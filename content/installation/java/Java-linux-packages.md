@@ -93,7 +93,9 @@ yum install contrast-java-agent
 
 ### Add the Exec Helper package 
 
-Before you install the package, use the following command to verify that you have already installed the Contrast Java agent.
+Complete the following steps to install the Exec Helper package. 
+
+* Before you install the package, use the following command to verify that you have already installed the Contrast Java agent.
 
 ```
 yum list installed contrast-java-agent
