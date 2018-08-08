@@ -57,7 +57,7 @@ The configuration YAML consists of four sections. The agent and service may shar
     * `path`: Name of the log file to which the CEF events are written (*security.log*)
     * `level`: Level of the CEF logging details (DEBUG, INFO, WARN, ERROR)
   * `service`: Options for the running service, including how the agent can locate it
-    * `enable`: This is assumed to be `true`. If set to `false`, the agent won't attempt to start or restart the Contrast Service. The service may be started using the rake task: `rake contrast:service:start`.
+    * `enable`: This is assumed to be `true`. If set to `false`, the agent won't attempt to start or restart the Contrast Service. A service instance reading this configuration will shut itself down once this configuration item is read.
     * `logger`:
       * `path`: Filename of the Contrast Security log file for the service (*contrast_service.log*)
       * `level`: Level of logging detail for the logger (DEBUG, INFO, WARN, ERROR) 
