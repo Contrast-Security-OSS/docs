@@ -4,7 +4,7 @@ description: "Overview of Java agent installation with Host Installer"
 tags: "installation Java agent linux Host Installer"
 -->
 
-## About Installation via System Package Managers
+## About Installation with System Package Managers
 
 The Contrast Java agent may be installed using system package managers. Unlike the *jar* file you can download from the Contrast UI, the Contrast Java agent *jar* installed by system package managers isn't preconfigured with connection parameters; instead, you must configure the Java agent using a [configuration file](installation-javaconfig.html).
 
@@ -12,13 +12,13 @@ The Contrast Java agent may be installed using system package managers. Unlike t
 
 Some System Administrators may also want install the optional Exec Helper package for the Contrast Java agent, which configures the system to always enable Contrast whenever you execute `java`. Instead of a typical Contrast installation that requires users to configure their Java services to include the Contrast Java agent, the `contrast-java-agent-exec-helper` package intercepts all new `java` processes, and automatically configures the process to use Contrast. 
 
-This option is ideal for some scenarios in which Contrast must support legacy infrastructure, and your Java application server configuration isn't well understood. But, in most scenarios, administrators want more granular control over their Contrast configurations.
+This option is ideal for some scenarios in which Contrast must support legacy infrastructure but your Java application server configuration isn't well understood. However, in most scenarios, administrators want more granular control over their Contrast configurations.
 
 ## Installation for Ubuntu-Based Systems
 
-To install the Contrast Java agent with Ubuntu-based systems, complete the following steps. 
+To install the Contrast Java agent for Ubuntu-based systems, complete the following steps. 
 
-* Configure your system to Contrast's distribution-agnostic Debian repository.
+* Configure your system to Contrast's distribution-agnostic Debian repository. 
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
@@ -33,7 +33,7 @@ sudo apt-get update && sudo apt- get install `contrast-java-agent`
 
 * Edit the */etc/contrast/contrast-java-config.yaml* file to configure Contrast Java agent to connect to the Contrast application. <!-- (Go to the YAML [Configuration doc](_________) for more info.) -->
 
-> **Note:** To complete the agent configuration process, follow the instructions for the [container](installation-javainstall.html) of your choice. 
+> **Note:** To complete the agent installation process, follow the instructions for the [container](installation-javainstall.html) of your choice. 
 
 
 ### Add the Exec Helper package 
@@ -46,7 +46,7 @@ The Exec Helper for the Contrast Java agent supports Ubuntu LTS distributions Tr
 dpkg -s contrast-java-agent
 ```
 
-* If it isn't installed, follow the instructions in the **Ubuntu-Based Systems** section to install and configure the `contrast-java-agent` package. 
+* If it isn't installed, follow the instructions in the **Installation for Ubuntu-Based Systems** section to install and configure the `contrast-java-agent` package. 
 
 * To install the Exec Helper from Contrast's Debian repository, configure your system to use the repository tailored for your Ubuntu LTS distribution.
 
@@ -89,7 +89,7 @@ yum install contrast-java-agent
 
 * Edit the */etc/contrast/contrast-java-config.yaml* file to configure Contrast Java agent to connect to the Contrast application. <!-- (Go to the YAML [Configuration doc](_________) for more info.) -->
 
-> **Note:** To complete the agent configuration process, follow the instructions for the [container](installation-javainstall.html) of your choice. 
+> **Note:** To complete the agent installation process, follow the instructions for the [container](installation-javainstall.html) of your choice. 
 
 ### Add the Exec Helper package 
 
