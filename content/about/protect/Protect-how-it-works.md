@@ -22,7 +22,7 @@ Read more about [Server Defaults](admin-orgsettings.html#org-server).
 
 ## Protect Policies
 
-There are five types of policies available in Contrast Protect. 
+The following policies available in Contrast Protect: 
 
 * [Protect Rules](admin-policymgmt.html#protect) which allow you to set applications to monitor for attacks 
 * [Virtual Patches](admin-policymgmt.html#patch) which are custom defenses you define to defend against specific vulnerabilities
