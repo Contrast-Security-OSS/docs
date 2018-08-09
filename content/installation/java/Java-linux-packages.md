@@ -37,7 +37,7 @@ sudo apt-get update && sudo apt- get install `contrast-java-agent`
 
 ### Next steps
 
-At this stage, you may either complete the agent installation process by follow the instructions for the [Java application container](installation-javainstall.html) of your choice, or continue on to **Add the Exec Helper package**. 
+At this stage, you may either complete the agent installation process by follow the instructions for the [Java application container](installation-javainstall.html) of your choice, or continue on to **Add the Exec Helper** package. 
 
 
 ### Add the Exec Helper  
@@ -97,7 +97,7 @@ yum install contrast-java-agent
 
 ### Next steps
 
-At this stage, you may either complete the agent installation process by follow the instructions for the [Java application container](installation-javainstall.html) of your choice, or continue on to **Add the Exec Helper package**. 
+At this stage, you may either complete the agent installation process by follow the instructions for the [Java application container](installation-javainstall.html) of your choice, or continue on to **Add the Exec Helper** package. 
 
 ### Add the Exec Helper  
 
