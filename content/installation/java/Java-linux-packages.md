@@ -30,7 +30,7 @@ echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ all
 * Once you've finished configuration, install the Contrast Java agent.
 
 ```
-sudo apt-get update && sudo apt- get install `contrast-java-agent`
+sudo apt-get update && sudo apt-get install contrast-java-agent
 ```
 
 * Edit the */etc/contrast/contrast-java-config.yaml* file to configure Contrast Java agent to connect to the Contrast application. <!-- (Go to the YAML [Configuration doc](_________) for more info.) -->
