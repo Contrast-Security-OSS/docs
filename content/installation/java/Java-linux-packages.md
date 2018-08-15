@@ -65,14 +65,14 @@ echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ $(b
 sudo apt-get update && sudo apt-get install contrast-java-agent-exec-helper
 ```
 
-* Verify that the Contrast Java Exec Helper is working by executing `java` and confirming that Contrast starts by observing console messages
+* Verify that the Contrast Java Exec Helper is working by executing `java` and confirming that Contrast starts by observing console messages.
 
 ```
 $ bash -c "java -Dcontrast.stdout=true -version 2>1 | grep Contrast | head -n 1"
 [Contrast] Wed Aug 15 17:37:23 UTC 2018 No TeamServer configuration detected. Agent will only be reporting to local listeners (e.g., Eclipse Plugin).
 ```
 
-* The Contrast Java agent Exec Helper affects all new shells (hence the `bash -c` in the verification command, so it will be present in your current shell; reload your shell to enable the Contrast Java agent Exec Helper. Restart any `java` services to enable Contrast for those services.
+* The Exec Helper affects all new shells - indicated by the `bash -c` in the verification command. Consequently, it will be present in your current shell. Reload your shell to enable the Exec Helper. Restart any `java` services to enable Contrast for those services.
 
 > **Note:** The Exec Helper package expects to find the Contrast Java agent at */opt/contrast/contrast.jar*, where the `contrast-java-agent` package installs it. If the Contrast *jar* file has a different path, use environment variable `CONTRAST_JAVA_AGENT_PATH` to configure `contrast-java-agent-exec-helper`.
 
@@ -126,14 +126,14 @@ yum list installed contrast-java-agent
 yum install contrast-java-agent-exec-helper
 ```
 
-* Verify that the Contrast Java Exec Helper is working by executing `java` and confirming that Contrast starts by observing console messages
+* Verify that the Exec Helper is working by executing `java` and confirming that Contrast starts by observing console messages.
 
 ```
 $ bash -c "java -Dcontrast.stdout=true -version 2>1 | grep Contrast | head -n 1"
 [Contrast] Wed Aug 15 17:37:23 UTC 2018 No TeamServer configuration detected. Agent will only be reporting to local listeners (e.g., Eclipse Plugin).
 ```
 
-* The Contrast Java agent Exec Helper affects all new shells (hence the `bash -c` in the verification command, so it will be present in your current shell; reload your shell to enable the Contrast Java agent Exec Helper. Restart any `java` services to enable Contrast for those services.
+* The Contrast Java agent Exec Helper affects all new shells - indicated by the `bash -c` in the verification command. Consequently, it will be present in your current shell. Reload your shell to enable the Contrast Java agent Exec Helper. Restart any `java` services to enable Contrast for those services.
 
 > **Note:** The Exec Helper package expects to find the Contrast Java agent at */opt/contrast/contrast.jar*, where the `contrast-java-agent` packages installs it. If the Contrast *jar* file has a different path, use environment variable `CONTRAST_JAVA_AGENT_PATH` to configure the `contrast-java-agent-exec-helper`.
 
