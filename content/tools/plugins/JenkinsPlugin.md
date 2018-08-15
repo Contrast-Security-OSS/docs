@@ -21,15 +21,16 @@ Contrast API settings enable the plugin to connect to Contrast and query for res
 * Enter the **Contrast URL** (the API URL to your Contrast instance). Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *https://contrastserver/Contrast/api*). 
 * Enter the [Organization UUID](admin-orgsettings.html#apikey). Go to the **user menu > Organization Settings > API tab** to find the Organization UUID of the configured user in the Contrast UI. (You can also copy it from the URL after logging in to the Contrast UI.) 
 * Choose the **Result of a vulnerable build** from the dropdown menu. 
-* You can also check the box to fail a build if the **application is not found** in the Contrast application. 
-* You can choose to allow global threshold conditions (described below) to be overridden in post-build actions.
-* Click "Apply" to save the TeamServer profile.
+* Check the box to fail a build if the **application is not found** in the Contrast application. 
+* Choose to allow global threshold conditions to be overridden in post-build actions. (See the **Global threshold conditions**
+section for more details.)
+* Click the **Apply** button to save the profile settings.
 
 #### Test the connection
 
 When you add a Contrast profile, use the **Test TeamServer Connection** button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful, or gives an error message if it fails.
 
-### Global Threshold conditions
+### Global threshold conditions
 
 Once a connection is made, complete the following fields for **Contrast Vulnerability Threshold Conditions**. 
 
@@ -39,7 +40,7 @@ Once a connection is made, complete the following fields for **Contrast Vulnerab
 * Choose a **Vulnerability Type** (rule name) from the dropdown menu. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count. This field is recommended to reduce your results, but not required. 
 * Choose from the list of **Vulnerability Statuses**. Statues aren't required, but can be helpful if you want to exclude vulnerabilities with certain statuses - for example, "Not a Problem" - from the results. If you don't select any statuses, the plugin won't filter vulnerabilities by statuses.
 
-<a href="assets/images/Jenkins_global_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+<a href="assets/images/Jenkins_global_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_global_threshold_condition.png"/></a>
 
 You can add as many rules as you like. The plugin fails on the **first** bad condition and tells you on which condition it failed.
 
