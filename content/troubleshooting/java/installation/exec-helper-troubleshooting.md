@@ -22,7 +22,7 @@ If there aren't any logs in either of these storage locations, verify Syslog con
 
 ## Issue: I removed the libcontrast_universal_installer.so libraries, and now my system errors on every command I run 
 
-The host emits these errors because the *\*nix* system has been globally configured to load the *libcontrast_universal_installer.so* library for every binary on the system to determine if it should inject the Java agent into it. Even if you manually removed the library, the global configuration of dynamic loader is still referencing it and is failing/warning when it can't find the file.
+The host emits these errors because the *&ast;nix* system has been globally configured to load the *libcontrast_universal_installer.so* library for every binary on the system to determine if it should inject the Java agent into it. Even if you manually removed the library, the global configuration of dynamic loader is still referencing it and is failing/warning when it can't find the file.
 
 ### Linux 
 
@@ -42,7 +42,7 @@ LD_NOCONFIG=1 sudo LD_NOCONFIG=1 rm /var/ld/sparcv9/ld.config
 
 > **Note:** There are two `LD_NOCONFIG` settings because sudo is a funny beast. The first is for the `sudo` command itself, the second is for the sudo environment to execute the `rm` command.
 
-If you're in this situation, and don't have an active shell on Solaris, you will likely need to boot into [recovery mode](https://docs.oracle.com/cd/E36784\_01/html/E39134/glmwr.html) via an installation disk or backup Boot Environment, and remove the stale *ld.config* files from there.
+If you're in this situation, and don't have an active shell on Solaris, you will likely need to boot into [recovery mode](https://docs.oracle.com/cd/E36784_01/html/E39134/glmwr.html) via an installation disk or backup Boot Environment, and remove the stale *ld.config* files from there.
 
 
 
