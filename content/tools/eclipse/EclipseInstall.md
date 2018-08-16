@@ -12,6 +12,7 @@ Contrast provides visibility to vulnerabilities in your applications and protect
 
 Eclipse versions:
 
+* Photon (4.8)
 * Oxygen (4.7)
 * Neon (4.6)
 
