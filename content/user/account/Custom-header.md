@@ -1,0 +1,28 @@
+
+<!--
+title: "Customize the Header and Footer"
+description: "How to customize the header and footer styling in the UI"
+tags: "user manage account header footer custom settings"
+-->
+
+
+Customize the header and footer for every page in your Contrast account with your choice color, text and more style options. 
+
+## Customize the Header and Footer  
+
+Complete the following step to use HTML to customize the header, footer or both for your account. 
+
+* Go to *Contrast.Data.Dir/conf*, and open the *header.html* file (to customize the header) or *footer.html* (to customize the footer).
+* Add HTML content to create your own header. 
+  * This file only supports inline styles (e.g., `<... style="".../>`) for the following attributes: "font-family", "background-color", "color", "font-size" and "text-decoration". 
+  * You can add the attribute `align` with the following values: "center", "left", "right" and "justify".
+
+> **Example:** 
+> <p style="font-size:20px;color:white" align="center">Your custom text here</p>
+
+> **Note:** The size of every header and footer is set at 50 pixels. 
+
+## Edit the Header and Footer
+
+To edit the header and footer files, update the HTML in the files and **Save** your changes. To remove the header, comment out the HTML you added or leave the file empty.
+
