@@ -18,7 +18,7 @@ Contrast supports route coverage for the following frameworks.
 * **Ruby:** Rails and Sinatra
 * **Python:** Django, Pyramid and Flask
 
-While coverage is enabled automatically for most Contrast agents, you must use the following command to specify the application name when deploying the **Java** agent: `-Dcontrast.appname = <example name>`. 
+While coverage is enabled automatically for most Contrast agents, you must use the following property to specify the application name when deploying the **Java** agent: `-Dcontrast.standalone.appname=<example_name>`. If you don't include this property, the Java agent may only observe - but not discover - routes in your application.  
 
 ## View Route Details 
 
