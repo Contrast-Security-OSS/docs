@@ -12,19 +12,19 @@ An application “route” is a combination of three distinct data points: the U
 
 Contrast supports route coverage for the following frameworks.
 
-* **Java:** Spring Spring MVC 4.x 
+* **Java:** Spring MVC 4.x 
 * **.NET:** ASP.NET MVC (versions 4 and 5), WebForms, WebAPI and WCF
 * **Node:** Express 
 * **Ruby:** Rails and Sinatra
 * **Python:** Django, Pyramid and Flask
 
-While Coverage is enabled automatically for most Contrast agents, you must use the following command to specify the application name when deploying the **Java** agent: `-Dcontrast.appname = <example name>`. 
+While coverage is enabled automatically for most Contrast agents, you must use the following command to specify the application name when deploying the **Java** agent: `-Dcontrast.appname = <example name>`. 
 
 ## View Route Details 
 
 To see Contrast findings in the UI, select an application from the **Applications** grid. In your application's **Overview** tab, view the number of **Routes Exercised** compared to the number of total routes in your application. Click on the figure or select the **Route Coverage** tab to view details for each route that Contrast has identified in the application. 
 
-<a href="assets/images/App-overview.png" rel="lightbox" title="View routes in your application Overview"><img class="thumbnail" src="assets/images/App-overview.png"/></a>
+<a href="assets/images/App-overview.png" rel="lightbox" title="View routes in your application Overview page"><img class="thumbnail" src="assets/images/App-overview.png"/></a>
 
 Each layer of the chart represents routes that have been **discovered** by Contrast (but never exercised with the agent), **exercised** with the Contrast agent, and exercised and found to be **vulnerable**. Click on each layer to see how Contrast's findings have been updated each day over the past week. 
 
@@ -32,7 +32,7 @@ Each layer of the chart represents routes that have been **discovered** by Contr
 
 View details on each route - including the servers on which it exists and the number of vulnerabilities found - in the **Route** grid. Click on the vulnerability count in a grid row to view more information about each vulnerability in the application's **Vulnerabilities** page. (The number of critical vulnerabilities are noted with a red warning mark.) Click on the name of a server to go to the server's **Overview** page. 
 
-Use the filters or the search field to find specific routes. The date range (calendar) filter simultaneously updates your view in the grid and the chart. Users with administrator-level permissions can also click the **reset** icon to remove all routes listed in the grid. 
+Use the dropdown menu to filter routes, or the search field to find specific routes in the grid. The date range (calendar) filter simultaneously updates your view in the grid and the chart. Users with administrator-level permissions can also click the **reset** icon to remove all routes listed in the grid. 
 
 
 
