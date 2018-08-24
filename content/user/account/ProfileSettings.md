@@ -14,7 +14,7 @@ In the **General Information** section, use the form fields to modify your basic
 
 ## Keys
 
-Go to the **Your Keys** section to view your **Organization** keys - such as your API key and Organization ID - and your **Personal** keys - such as your Service key. Rotate your service key by clicking the link provided. You can also click the button to **Generate Sample API Request**. To view examples of API requests, go to the [Contrast API documentation](https://api.contrastsecurity.com/). 
+Go to the **Your Keys** section to view your **Organization Keys**, including your API key and Organization ID, and your **Personal Keys**, including your Service key. To rotate your service key, click the link provided. You can also click the button to **Generate Sample API Request**. To view examples of API requests, go to the [Contrast API documentation](https://api.contrastsecurity.com/). 
 
 <a href="assets/images/User-account-keys.png" rel="lightbox" title="View your Organization and Personal keys"><img class="thumbnail" src="assets/images/User-account-keys.png"/></a>
 

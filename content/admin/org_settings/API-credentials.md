@@ -20,7 +20,7 @@ Manage organization API keys as an Organization Administrator by going to the **
 
 <a href="assets/images/Org-API-keys.png" rel="lightbox" title="Manage API keys in Organization Settings"><img class="thumbnail" src="assets/images/Org-API-keys.png"/></a>
 
-In the REST API section, view your **Organization Keys** - including your API key and Organization ID - and your **Agent Keys**. Rotate your API or Agent Service keys by clicking the links provided for each. You can also click the button to **Generate Sample API Request**. 
+In the REST API section, view your **Organization Keys**, including your Organization ID and API key, and your **Agent Keys**, such as your Agent Service key. Rotate your API or Agent Service keys by clicking the links provided for each. You can also click the button to **Generate Sample API Request**. 
 
 ## Learn More
 
