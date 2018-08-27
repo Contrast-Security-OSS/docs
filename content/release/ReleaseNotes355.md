@@ -4,7 +4,7 @@ description: "Contrast 3.5.5 August 2018"
 tags: "3.5.5 August Release Notes"
 -->
 
-Want to find more details but spend less time searching? Use the new tab application route coverage and reorganized sections for all your keys. 
+Want to find more details but spend less time searching? Use the new page for application route coverage and reorganized sections for all your keys. 
 
 ## Fixes
 
@@ -35,7 +35,7 @@ The Java agent team improved the agent's handling of XML inputs, and reduced the
 
 ### .NET summary 
 
-The .NET agent team has improved performance by enabling the CLR to inline methods not instrumented by Contrast. We also improved error handling when certain reports to Contrast fail. We implemented route coverage for MVC 4, MVC5, WebForms, ASMX, WCF and Web API frameworks.
+The .NET agent team has improved performance by enabling the CLR to inline methods not instrumented by Contrast. We improved error handling when certain reports to Contrast fail. We also implemented route coverage for MVC 4, MVC5, WebForms, ASMX, WCF and Web API frameworks.
 
 ### Node.js summary 
 
@@ -43,7 +43,7 @@ The Node agent team added Protect support for Hapi 17, and is finishing up suppo
 
 ### Ruby summary 
 
-The Ruby agent team has been focused on performance issues including adding a timeout in cases where IP resolution appeared to take longer than a few seconds on startup and optimized the XXE rule source input generation. We filed an issue where rake tasks had a namespace conflict. We also completed route coverage for Rails and Sinatra frameworks.
+The Ruby agent team has been focused on performance issues, including adding a timeout in cases where IP resolution appeared to take longer than a few seconds on startup and optimizing the XXE rule source input generation. We filed an issue where rake tasks had a namespace conflict. We also completed route coverage for Rails and Sinatra frameworks.
 
 ### Python summary
 
