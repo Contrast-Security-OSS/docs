@@ -31,9 +31,12 @@ Dig deeper into your applications with route coverage and...!
 
 ### Java summary 
 
+The Java team improved the agent's handling of XML inputs, and reduced the amount of memory used by the agent's Assess analysis.
+We also implemented route coverage for Spring MVC 4. 
 
 ### .NET summary 
 
+The .NET team has improved performance by enabling the CLR to inline methods not instrumented by Contrast. We also improved error handling when certain reports to Contrast fail. We implemented route coverage, described in the **Improvement** section above, for MVC 4, MVC5, WebForms, ASMX, WCF and Web API frameworks.
 
 ### Node.js summary 
 
