@@ -43,7 +43,7 @@ The Node agent team added Protect support for Hapi 17, and is finishing up suppo
 
 ### Ruby summary 
 
-The Ruby agent team has been focused on performance issues, including adding a timeout in cases where IP resolution appeared to take longer than a few seconds on startup and optimizing the XXE rule source input generation. We filed an issue where rake tasks had a namespace conflict. We also completed route coverage for Rails and Sinatra frameworks.
+The Ruby agent team has been focused on performance issues, including adding a timeout in cases where IP resolution appeared to take longer than a few seconds on startup and optimizing the XXE rule source input generation. We fixed an issue where rake tasks had a namespace conflict. We also completed route coverage for Rails and Sinatra frameworks.
 
 ### Python summary
 
