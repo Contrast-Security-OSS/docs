@@ -190,7 +190,7 @@ $ tar -czvf ~/ctdc.tar.gz data/agents data/conf data/contrast.lic data/esapi/ da
 This process varies based on your operating system. You must install:
 
 * Tomcat 7 (Contrast recommends Tomcat 7.0.61)
-* TeamServer supported Java as shown in our [System Requirements](installation-setup.html#contrast-reqs)
+* Supported versions of Java, as shown in [System Requirements](installation-setup.html#contrast-reqs)
 
 ### Prepare and configure the application server
 
