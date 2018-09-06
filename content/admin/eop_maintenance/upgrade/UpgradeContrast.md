@@ -14,7 +14,7 @@ You should also consider using Contrast's System Announcement feature to inform 
 
 ## Perform the Upgrade 
 
-The Contrast application should be running when you start the installation process. Agents will continue to send trace and library messages during this time. When the application initiates a shutdown on its own, the agents defers sending messages until the application can be reached.
+The Contrast application should be running when you start the installation process. Agents will continue to send trace and library messages during this time. When the application initiates a shutdown on its own, the agents defer sending messages until the application can be reached.
 
 The upgrade process is nearly identical to the original process to [install the Contrast application](installation-setupinstall.html#install); however, the administrator performing the upgrade is asked whether to update an existing installation or perform a new installation. You should choose to **update an existing installation**. 
 
