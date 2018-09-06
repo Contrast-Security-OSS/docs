@@ -51,6 +51,7 @@ You can add as many rules as you like. The plugin fails on the **first** bad con
 Complete the following fields for **Post-Build Actions**.
 
 * Select a **Profile** from the dropdown.
+* Select **Application version tag format**. By default the plugin will use the first option.
 * If the profile is configured to allow the global threshold conditions to be overridden, you can choose to do so.
 * Enter the **Application Name**. The Jenkins job name is used by default for this field. This field is **required**.
 * If you chose to override the global threshold conditions, fill in the rest of the fields, including **Count**,
@@ -63,14 +64,13 @@ Complete the following fields for **Post-Build Actions**.
 When you add a Pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements. Pipeline configuration:
 
 ```
-contrastVerification profile: 'Localhost', applicationName: 'NodeTestBench', count: 10, rule: 'xss', severity: 'High'
+contrastVerification profile: 'Localhost', applicationName: 'NodeTestBench', count: 10, rule: 'xss', severity: 'High', appVersionTagFormat: 1
 ```
 
 ## Test for Vulnerabilities
 
 For the Jenkins plugin to get accurate information, you must add a unique identifier built from the Jenkins CI configuration as an agent property. The corresponding property for the Java agent is `contrast.override.appversion`. Also, the job name must match your application name, or you must override your application name with another property, to ensure that Contrast tests for the correct information.
 
-The plugin uses the unique identifier `${JOB_NAME}-${BUILD_NUMBER}` to filter vulnerabilities and check conditions. `JOB_NAME` and `BUILD_NUMBER` are available as Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
-
-
-
+The plugin uses the unique identifier `appVersionTag` to filter vulnerabilities and check conditions.
+You can change the format used by the plugin to create `appVersionTag` using `appVersionTagFormat` pipeline parameter.
+Two options are available: 1 - `applicationName-${BUILD_NUMBER}` and 2 - `applicationName-${JOB_NAME}-${BUILD_NUMBER}`. Option "1" is used by default. `JOB_NAME` and `BUILD_NUMBER` are available as Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
