@@ -51,7 +51,7 @@ You can add as many rules as you like. The plugin fails on the **first** bad con
 Complete the following fields for **Post-Build Actions**.
 
 * Select a **Profile** from the dropdown.
-* Select **Application version tag format**. By default, the plugin uses the first option.
+* Select **Application version tag format**. By default, the plugin uses the first option: "applicationName-buildNumber". 
 * If the profile is configured to allow the global threshold conditions to be overridden, you can choose to do so.
 * Enter the **Application Name**. The Jenkins job name is used by default for this field. This field is **required**.
 * If you chose to override the global threshold conditions, fill in the rest of the fields, including **Count**,
