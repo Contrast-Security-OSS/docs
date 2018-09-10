@@ -12,7 +12,21 @@ To change the status of one or more vulnerabilities, select the checkboxes in th
 
 <a href="assets/images/Vulnerability-mark-as.png" rel="lightbox" title="Change vulnerability status"><img class="thumbnail" src="assets/images/Vulnerability-mark-as.png"/></a>
 
+If an administrator [requires administrative approval when users close vulnerabilities](admin-orgsettings.html#app-defaults), vulnerabilities will go into a **Pending** state when you attempt to close them. 
+
+<!-- > **Example:** If an administrator specifies that they must approve the movement of all Critical vulnerabilities from a Fixed status to a Closed status, the status change request will appear in the **Pending** page view.  -->
+
 See [Analyze Findings](user-vulns.html#analyze) to learn more about statuses and behaviors when a vulnerability is marked and found again.
+
+### Pending vulnerabilities 
+
+If you attempt to close a vulnerability that must be approved...
+
+The vulnerability is marked as pending in the **Open** grid view. The time stamp beside the label indicates when the user made the request to close. 
+
+You'll also receive a notification when your request to close the vulnerabilities is approved or denied. If denied, the vulnerability will go back to its previous state; but, the administrator must provide a reason that will appear in the ** _____ ** page. 
+
+> **Note:** While in a Pending state, the vulnerability's previous status still applies for the purpose of organizational reports and statistics. 
 
 ## Vulnerability Severity
 
@@ -55,6 +69,8 @@ When a vulnerability is sent to a bugtracker, the status of the vulnerability ch
 To quickly see which vulnerabilities are being tracked, click the **Advanced** link, select **Status** in the sidebar, and filter for "Being Tracked". 
 
 <a href="assets/images/Integrations-bugtracker-advanced-filter.png" rel="lightbox" title="Advanced filter"><img class="thumbnail" src="assets/images/Integrations-bugtracker-advanced-filter.png"/></a>
+
+> **Note:** Any status changes caused by two-way integrations are subject to administrative approval, if required by any administrators in your organization. See the **Pending vulnerabilities** section above for more information. 
 
 To learn more about using bugtrackers with Contrast, read the [Introduction to Bugtrackers](admin-orgintegrations.html#bugtracker). 
 
