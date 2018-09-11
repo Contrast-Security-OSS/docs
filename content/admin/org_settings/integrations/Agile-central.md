@@ -16,7 +16,7 @@ Integrate Agile Central with Contrast to automatically track vulnerabilities in 
 
 ## Add a Configuration 
 
-To connect your Contrast organization with Agile Central, and setup a new integration, complete the following steps. 
+To connect your Contrast organization with Agile Central, complete the following steps. 
 
 * Go to the **user menu > Organization Settings > Integrations** page, and click **Connect** in the Agile Central row. 
 * In the **Connect with Agile Central** form, add the name for the bugtracker entry, as well as the **URL** and **API Key** in the given fields. <!-- The Agile Central URL must be accessible from the Contrast UI instance being configured. -->
@@ -43,13 +43,15 @@ To connect your Contrast organization with Agile Central, and setup a new integr
 
  -->
 
->**Note:** To add another integration once you're connected in Contrast, click the **Add Configuration** link in Agile Central row.
+>**Note:** While none of the configuration fields are required, Agile Central may populate tickets with their own default values for any fields you leave blank. 
+
+To add another integration once you're connected in Contrast, click the **Add Configuration** link in Agile Central row.
 
 ### Automatically create tickets 
 
-To automatically create tickets for newly discovered vulnerabilities, check the designated box in the configuration form. 
+To automatically create tickets for newly discovered vulnerabilities, check the designated box in the configuration form. In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. 
 
-<!-- In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. -->
+<!-- Add image here ? -->
 
 >**Note:** This selection doesn't generate tickets retroactively. 
 
