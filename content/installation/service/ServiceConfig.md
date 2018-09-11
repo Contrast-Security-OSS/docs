@@ -11,6 +11,7 @@ The Contrast Service uses a YAML file to update the service behavior.
 The configuration file is always called *contrast_security.yaml* no matter where it's located. The Contrast Service loads the configuration YAML from the following paths in order of precedence:
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
+2. An application specific configuration directory (e.g. *./config/contrast_security.yaml* for Ruby on Rails, *./settings/contrast_security.yaml* for Django)
 3. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
 4. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
@@ -18,7 +19,7 @@ The configuration file is always called *contrast_security.yaml* no matter where
 
 The configuration YAML consists of four sections. The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
 
-* `contrast`: Options for locating and communicating with the Dashboard of the Contrast interface. If using separate configuration files for the agents and service, the options for connecting with Contrast UI should be defined on for the service.
+* `contrast`: Options for locating and communicating with the Dashboard of the Contrast interface. If using separate configuration files for the agents and service, the options for connecting with Contrast UI should be defined for the service.
   * `url`: URL to connect to the Contrast application
   * `api_key`: Organization's API key
   * `service_key`: Service Key of Organization
