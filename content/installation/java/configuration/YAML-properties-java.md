@@ -1,6 +1,6 @@
 <!--
-title: "YAML configuration for the Java agent "
-description: "Instructions and template for configuring Java agent properties via YAML file"
+title: "YAML configuration properties for the Java agent "
+description: "Instructions for configuring Java agent properties via YAML file"
 tags: "installation java agent YAML configuration rules properties"
 -->
 
