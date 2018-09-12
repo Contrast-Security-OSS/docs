@@ -1,10 +1,10 @@
 <!-- 
-title: "Ruby Agent Configuration Template"
-description: "Template for Ruby Agent and Service configuration"
-tags: "installation ruby on rails agent service configuration"
+title: "Python Agent Configuration Template"
+description: "Template for Python Agent and Service configuration"
+tags: "installation python django flask pyramid agent service configuration"
 -->
 
-Go to the Ruby [Configuration Properties](installation-ruby.html#ruby-config) article for more information about this template.
+Go to the Python [Configuration Properties](installation-ruby.html#ruby-config) article for more information about this template.
 
 ```
 #================================================================================================================================================================================
@@ -60,12 +60,6 @@ agent:
 
     # Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
     # level: ERROR
-
-    # Override the name of the process the agents uses in logs.
-    # progname: Contrast Agent
-
-    # Set to `true` for the agent to tag logs with \"!AM!\" for the metrics tool.
-    # metrics: true
 
   #===========================================================================================================================================================
   # Security_logger
@@ -149,14 +143,11 @@ agent:
       # Set the the log output level. Options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
       # level: ERROR
 
-      # Override the name of the process used in logs.
-      # progname: Contrast Service
-
-  #==========================================================================
-  # Ruby
-  # The following properties apply to any Ruby agent-wide configurations.
-  #==========================================================================
-  # ruby: {}
+  #============================================================================
+  # Python
+  # The following properties apply to any Python agent-wide configurations.
+  #============================================================================
+  # python: {}
 
 #==============================================================================
 # Inventory
@@ -169,46 +160,6 @@ agent:
 
   # Apply a list of labels to libraries. Labels must be foratted as a comma-delimited list. /n Example - LibraryDTM:tags
   # tags: label1, label2, label3
-
-#============================================================================================
-# Assess
-# Use the properties in this section to override the AssesmentFeaturesDTM and submodules.
-#============================================================================================
-# assess:
-
-  # Include this property to determine if the Assess feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
-  # enable: true
-
-  # Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list.
-  # tags: label1, label2, label3
-
-  #===================================================================================
-  # Samplings
-  # Use the following properties to override values from the SamplingFeatures DTM.
-  #===================================================================================
-  # samplings:
-
-    # Override SamplingFeatures:enabled. Set to `false` to disable sampling.
-    # enable: true
-
-    # Override SamplingFeatures:baseline. This property indicates how many requests to analyze in each window before sampling begins.
-    # baseline: 5
-
-    # Override SamplingFeatures:frequency. This property indicates that every *nth* request after the baseline is analyzed.
-    # request_frequency: 10
-
-    # Override SamplingFeatures:window. This property indicates the duration for which a sample set is valid.
-    # window_ms: 180_000
-
-  #========================================================================
-  # Rules
-  # Use the following properties to control simple rule configurations.
-  #========================================================================
-  # rules:
-
-    # Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. 
-    #  Example - Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
-    # disabled_rules: NEEDS_TO_BE_SET
 
 #=====================================================================
 # Protect
