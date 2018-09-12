@@ -19,17 +19,15 @@ Integrate Agile Central with Contrast to automatically track vulnerabilities in 
 To connect your Contrast organization with Agile Central, complete the following steps. 
 
 * Go to the **user menu > Organization Settings > Integrations** page, and click **Connect** in the Agile Central row. 
-* In the **Connect with Agile Central** form, add the name for the bugtracker entry, as well as the **URL** and **API Key** in the given fields. <!-- The Agile Central URL must be accessible from the Contrast UI instance being configured. -->
+* In the **Connect with Agile Central** form, add the name for the bugtracker entry, as well as the **URL** and **API Key** in the given fields. The Agile Central URL must be accessible from the Contrast UI instance being configured.
 
 > **Notes:** 
-* To find your Agile Central API key, log in to the Agile Central Application manager <!-- (add hyperlink) --> and go to the **API Keys** tab.  
+* To find your Agile Central API key, log in to the [Agile Central Application manager](https://help.rallydev.com/rally-application-manager), and go to the **API Keys** tab.  
 * Contrast saves the username, password and Agile Central URL entered in your configuration as a set of credentials. See the **Credential Sets** section for more details.
 
 * Once you complete the fields, click the button to **Test connection**. The test verifies that Contrast can reach the Agile Central instance and that the specified user can log in.
 
 <a href="assets/images/Agile-central-connect.png" rel="lightbox" title="Configure a new Agile Central integration"><img class="thumbnail" src="assets/images/Agile-central-connect.png"/></a>
-
-<!-- update image with latest mockup-->
 
 * Once connected, select the **Applications** that you want to be available to this integration. 
 * Choose a **Project Name** and **Owner** from the dropdown menus. 
@@ -43,15 +41,13 @@ To connect your Contrast organization with Agile Central, complete the following
 
  -->
 
->**Note:** While none of the configuration fields are required, Agile Central may populate tickets with their own default values for any fields you leave blank. 
+>**Note:** While none of these configuration fields are required, Agile Central may populate tickets with their own default values for any fields you leave blank. 
 
 To add another integration once you're connected in Contrast, click the **Add Configuration** link in Agile Central row.
 
 ### Automatically create tickets 
 
 To automatically create tickets for newly discovered vulnerabilities, check the designated box in the configuration form. In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. 
-
-<!-- Add image here ? -->
 
 >**Note:** This selection doesn't generate tickets retroactively. 
 
@@ -66,18 +62,24 @@ Contrast saves the latest set of credentials that you enter in your Agile Centra
 
 ### Manage credentials
 
-To create or edit a configuration with credentials that are different than your default set, select the **Manage credentials** link. In the **URL** field, use the dropdown menu to choose a set of saved credentials; or, manually update the values in the **URL**, **Username** and **Password** fields. Once you've updated the fields, click the button to **Test Connection**. 
+To create or edit a configuration with credentials that are different than your default set, select the **Manage credentials** link. 
 
-<a href="assets/images/Jira-connect-credentials.png" rel="lightbox" title="Set up a new JIRA configuration with saved credentials"><img class="thumbnail" src="assets/images/Jira-connect-credentials.png"/></a>
+* In the **URL** field, use the dropdown menu to choose a set of saved credentials; or, manually update the values in the **URL**, **Username** and **Password** fields. 
+* Once you've updated the fields, click the button to **Test Connection**. 
 
-Click the button to **Save** your changes. If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. 
+<a href="assets/images/Agile-credentials.png" rel="lightbox" title="Set up a new Agile Central configuration with saved credentials"><img class="thumbnail" src="assets/images/Agile-credentials.png"/></a>
 
-<a href="assets/images/Jira-credentials-dialog.png" rel="lightbox" title="Override default JIRA credentials in your configuration"><img class="thumbnail" src="assets/images/Jira-credentials-dialog.png"/></a>
+* Click the button to **Save** your changes. <br> If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. 
 
-You can also select the **Manage Credentials** link in the Agile Central Integrations row to modify your existing sets of information. In the configuration form, use the dropdown menu to select a set of saved credentials, and then modify the values in the given fields. Click the link to **Rename** the set of credentials, if needed. 
+<a href="assets/images/Agile-credentials-dialog.png" rel="lightbox" title="Override your default credentials in your configuration"><img class="thumbnail" src="assets/images/Agile-credentials-dialog.png"/></a>
+
+You can also select the **Manage Credentials** link in the Agile Central Integrations row to modify your existing sets of information. 
+* In the configuration form, use the dropdown menu to select a set of saved credentials, and then modify the values in the given fields. 
+* Click the link to **Rename** the set of credentials, if needed. 
 
 >**Note:** Any updates to a set of credentials will affect all configurations using that set. 
 
-Click the button to **Test Connection**; once Contrast verifies the connection, click the button to **Save** your changes. 
+* Click the button to **Test Connection**. 
+* Once Contrast verifies the connection, click the button to **Save** your changes. 
 
 
