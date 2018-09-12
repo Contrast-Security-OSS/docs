@@ -69,7 +69,8 @@ To create or edit a configuration with credentials that are different than your 
 
 <a href="assets/images/Agile-credentials.png" rel="lightbox" title="Set up a new Agile Central configuration with saved credentials"><img class="thumbnail" src="assets/images/Agile-credentials.png"/></a>
 
-* Click the button to **Save** your changes. <br> If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. 
+* Click the button to **Save** your changes. 
+* If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. 
 
 <a href="assets/images/Agile-credentials-dialog.png" rel="lightbox" title="Override your default credentials in your configuration"><img class="thumbnail" src="assets/images/Agile-credentials-dialog.png"/></a>
 
