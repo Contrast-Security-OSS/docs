@@ -36,11 +36,6 @@ To connect your Contrast organization with Agile Central, complete the following
 * Choose a **Defect State**. 
 * Add a name that the tickets are **Submitted By**. 
 
-<!-- 
-> **Note:** If you change the Project or Issue type, required and additional fields are updated. However, the UI keeps the selected values that apply to the new configuration.
-
- -->
-
 >**Note:** While none of these configuration fields are required, Agile Central may populate tickets with their own default values for any fields you leave blank. 
 
 To add another integration once you're connected in Contrast, click the **Add Configuration** link in Agile Central row.
@@ -58,7 +53,7 @@ To see existing configurations, click the **Show Configurations** link in Agile 
 
 ## Credentials
 
-Contrast saves the latest set of credentials that you enter in your Agile Central configurations to help you set up new connections even faster. The username, password and URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
+Contrast saves the latest set of credentials that you enter in your Agile Central configurations to help you set up new connections even faster. The API key and URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
 
 ### Manage credentials
 
