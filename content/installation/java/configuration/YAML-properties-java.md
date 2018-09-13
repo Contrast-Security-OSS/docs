@@ -188,8 +188,6 @@ Use the properties in this section to set metadata for the server hosting this a
 * **server**:
 
   * **name**: Override the reported server name. <br> Example: `test-server-1`
-  * **path**: Override the reported server path.
-  * **type**: Override the reported server type.
   * **build**: Override the reported server build.
   * **version**: Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
