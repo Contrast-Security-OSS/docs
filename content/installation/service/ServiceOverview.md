@@ -8,7 +8,9 @@ The Contrast Service enables communication between multi-process dynamic languag
 
 ## About Contrast Service
 
-The Contrast service is a stand-alone executable that's used by the python agent to communicate with the Contrast UI. It is responsible for passing configuration options to the agent and to aggregate and send information from the agent back to the Conrast Ui. 
+The Contrast service is a stand-alone executable that's used by the ruby and python agents to communicate with the Contrast UI. It is responsible for passing configuration options to the agent and to aggregate and send information from the agent back to the Conrast Ui. 
+
+It also is a core component of the NGINX webserver agent. In that configuration it listens for requests to the NGINX webserver and processes requests for potential attacks before allowing the request to proceed to the proxied web application. 
 
 <a href="assets/images/Service-arch.png" rel="lightbox" title="Contrast Service architecture"><img class="thumbnail" src="assets/images/Service-arch.png"/></a>
 

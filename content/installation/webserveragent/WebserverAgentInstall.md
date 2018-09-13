@@ -1,22 +1,18 @@
 <!-- 
-title: "Contrast Service Installation"
-description: "Installing Contrast Service"
-tags: "contrast service agent installation"
+title: "Contrast Webserver Agent Installation"
+description: "Installing Contrast Webserver Agent"
+tags: "contrast service webserver agent installation"
 -->
-
-## Bundled with Language Agents
-
-The Contrast Service is packaged with the Ruby and Python agents and will run automatically when an instrumented Ruby on Rails, Flask or Django application is started. 
 
 ## Installation with System Package Manager
 
-The Contrast Service may be installed on Linux using system package managers. Unlike the service executable packaged with the Ruby and Python agents, the Contrast Service installed by system package managers isn't preconfigured with connection parameters; instead, you must [configure](installation-service.html#service-config) the service with a *yaml* configuration file.
+The Contrast Webserver Agent may be installed on Linux using system package managers. 
 
 ### Ubuntu-Based Systems
 
-#### Install the Contrast Service
+#### Install the Contrast Webserver Agent
 
-To install the Contrast Server for Ubuntu-based systems, complete the following steps. 
+To install the Contrast Webserver Agent (consisting of the Contrast Module for NGINX and the Contrast Service) for Ubuntu-based systems, complete the following steps. 
 
 * Configure your system to Contrast's distribution agnostic Debian repository. 
 
@@ -25,10 +21,12 @@ curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sud
 echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-staging-all.list
 ```
 
-* Once you've finished configuration, install the Contrast Service.
+* Once you've finished configuration, install the Contrast Service and the Contrast NGINX Module with NGINX.
 
 ```
-sudo apt-get update && sudo apt-get install contrast-service
+sudo apt-get update 
+sudo apt-get install contrast-service
+sudo apt-get install nginx-module-contrast
 ```
 
 * Edit the */etc/contrast/contrast_security.yaml* file to configure Contrast Service to connect to the Contrast UI.
@@ -37,7 +35,7 @@ sudo apt-get update && sudo apt-get install contrast-service
 
 #### Install the Contrast Service
 
-Complete the following steps to install the Contrast Service for Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7.
+Complete the following steps to install the Contrast Webserver Agent (consisting of the Contrast Module for NGINX and the Contrast Service) for Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7.
 
 * To install Java agent from Contrast's Yum repository, configure your system to use the repository.
 
@@ -56,6 +54,7 @@ EOF
 
 ```
 yum install contrast-service
+yum install nginx-module-contrast
 ```
 
 * Edit the */etc/contrast/contrast_security.yaml* file to configure the Contrast Service to connect to the Contrast UI.
