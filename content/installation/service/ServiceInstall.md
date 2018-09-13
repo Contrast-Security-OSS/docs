@@ -18,11 +18,17 @@ The Contrast Service may be installed on Linux using system package managers. Un
 
 To install the Contrast Server for Ubuntu-based systems, complete the following steps. 
 
-* Configure your system to Contrast's distribution agnostic Debian repository. 
+* Configure your system to Contrast's Debian repository. 
 
+First get the CODENAME for your release.
+```
+grep VERSION_CODENAME /etc/os-release 
+```
+
+Update the command below with the `CODENAME` and run the commands.
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-public.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ CODENAME contrast" | sudo tee /etc/apt/sources.list.d/contrastc.list
 ```
 
 * Once you've finished configuration, install the Contrast Service.
@@ -39,7 +45,7 @@ sudo apt-get update && sudo apt-get install contrast-service
 
 Complete the following steps to install the Contrast Service for Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7.
 
-* To install Java agent from Contrast's Yum repository, configure your system to use the repository.
+* To install Contrast Service from Contrast's Yum repository, configure your system to use the repository.
 
 ```
 OSREL=$(rpmquery -E "%{rhel}")
@@ -62,7 +68,7 @@ yum install contrast-service
 
 ## Remove the Service
 
-If you need to uninstall the Java agent, use the appropriate command for each package. 
+If you need to uninstall the Contrast Service, use the appropriate command for each package. 
 
 * To remove the `contrast-service` package, run `apt-get remove contrast-service` or `yum remove contrast-service`. 
 

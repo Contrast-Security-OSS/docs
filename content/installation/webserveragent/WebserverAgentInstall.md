@@ -4,16 +4,23 @@ description: "Installing Contrast Webserver Agent"
 tags: "contrast service webserver agent installation"
 -->
 
-## Installation with System Package Manager
+## Installation
 
-The Contrast Webserver Agent may be installed on Linux using system package managers. 
+The Contrast Webserver Agent consists of two components: Contrast Service and an NGINX module. Instructions for installing [Contrast Service](installation-service.html#service-overview) can be located [here](installation-service.html#service-install).
+
+The Contrast Webserver Agent may be built from source to work with NGINX versions 1.10 and above or it can be installed on Linux using system package managers for NGINX 1.12 and 1.14.
+
+### Build From Source
+
+TODO
 
 ### Ubuntu-Based Systems
 
-#### Install the Contrast Webserver Agent
+#### Install NGINX and the Contrast Webserver Agent
 
-To install the Contrast Webserver Agent (consisting of the Contrast Module for NGINX and the Contrast Service) for Ubuntu-based systems, complete the following steps. 
+To install the Contrast Webserver Agent (consisting of NGINX, the Contrast Module for NGINX, and the Contrast Service) for Ubuntu-based systems, complete the following steps. 
 
+* Configure your system to use NGINX from the official NGINX repository by following the instructions here:  http://nginx.org/en/linux_packages.html
 * Configure your system to Contrast's distribution agnostic Debian repository. 
 
 ```
@@ -33,11 +40,12 @@ sudo apt-get install contrast-webserver-agent-nginx
 
 ### Red Hat-Based Systems
 
-#### Install the Contrast Service
+#### Install the Contrast Webserver Agent
 
-Complete the following steps to install the Contrast Webserver Agent (consisting of the Contrast Module for NGINX and the Contrast Service) for Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7.
+Complete the following steps to install the Contrast Webserver Agent (consisting of NGINX, the Contrast Module for NGINX, and the Contrast Service) for Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7.
 
-* To install Java agent from Contrast's Yum repository, configure your system to use the repository.
+* Configure your system to use NGINX from the official NGINX repository by following the instructions here:  http://nginx.org/en/linux_packages.html
+* To install Contrast Webserver Agent from Contrast's Yum repository, configure your system to use the repository.
 
 ```
 OSREL=$(rpmquery -E "%{rhel}")
@@ -59,9 +67,4 @@ yum install contrast-webserver-agent-nginx
 
 * Edit the */etc/contrast/contrast_security.yaml* file to configure the Contrast Service to connect to the Contrast UI.
 
-## Remove the Service
-
-If you need to uninstall the Java agent, use the appropriate command for each package. 
-
-* To remove the `contrast-service` package, run `apt-get remove contrast-service` or `yum remove contrast-service`. 
 
