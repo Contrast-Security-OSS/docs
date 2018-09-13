@@ -18,14 +18,14 @@ The Contrast Service may be installed on Linux using system package managers. Un
 
 To install the Contrast Server for Ubuntu-based systems, complete the following steps. 
 
-* Configure your system to Contrast's Debian repository. 
+* Configure your system to retreive from the correct Debian repository. Get the `CODENAME` for your Ubuntu release. 
 
-First get the CODENAME for your release.
 ```
 grep VERSION_CODENAME /etc/os-release 
 ```
 
-Update the command below with the `CODENAME` and run the commands.
+* Update the command below with the `CODENAME` and run the commands.
+
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
 echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ CODENAME contrast" | sudo tee /etc/apt/sources.list.d/contrastc.list
