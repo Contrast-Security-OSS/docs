@@ -238,21 +238,70 @@ assess:
   rules:
 
     # Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. 
-    #  Example - Set "rule-1,rule-2" to disable rule 1 and rule 2.
+    #  Example - Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
     disabled_rules:
 ```
 Properties formatted as list/grid
 
 ## Contrast Protect Properties
 
-Use the properties in this section to control Protect features.
+Use the properties in this section to control Protect features and rules.
 
-Contact Contrast support if you wish to control individual Protect rules.
 ```yaml
 protect:
 
   # Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
   enable:
+  
+  # Use the following properties to set simple rule configurations.
+  rules:
+
+    # Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
+    #  Example - Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
+    disabled_rules:
+
+    # Use the following properties to configure if and how the agent blocks bots.
+    bot-blocker:
+
+      # Set to `true` for the agent to block known bots.
+      enable: false
+
+    # Use the following properties to override a specific Protect rule. The key is the rule ID in the Contrast UI with dashes replaced by underscores.
+    sql-injection:
+
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or off. 
+      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      mode:
+
+    cmd-injection:
+
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      mode:
+
+    path-traversal:
+
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      mode:
+
+    method-tampering:
+
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      mode:
+
+    reflected-xss:
+
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      mode: monitor
+      
+    xxe:
+
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      mode: monitor
 ```
 
 ## Application Properties
