@@ -18,7 +18,7 @@ To install the Contrast Webserver Agent (consisting of the Contrast Module for N
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-staging-all.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-public.list
 ```
 
 * Once you've finished configuration, install the Contrast Service and the Contrast NGINX Module with NGINX.
@@ -26,7 +26,7 @@ echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ all
 ```
 sudo apt-get update 
 sudo apt-get install contrast-service
-sudo apt-get install nginx-module-contrast
+sudo apt-get install contrast-webserver-agent-nginx
 ```
 
 * Edit the */etc/contrast/contrast_security.yaml* file to configure Contrast Service to connect to the Contrast UI.
@@ -44,7 +44,7 @@ OSREL=$(rpmquery -E "%{rhel}")
 sudo -E tee /etc/yum.repos.d/contrast.repo << EOF
 [contrast]
 name=contrast repo
-baseurl=https://contrastsecurity.jfrog.io/contrastsecurity/rpm-staging/centos-$OSREL/
+baseurl=https://contrastsecurity.jfrog.io/contrastsecurity/rpm-publbic/centos-$OSREL/
 gpgcheck=0
 enabled=1
 EOF
@@ -54,7 +54,7 @@ EOF
 
 ```
 yum install contrast-service
-yum install nginx-module-contrast
+yum install contrast-webserver-agent-nginx
 ```
 
 * Edit the */etc/contrast/contrast_security.yaml* file to configure the Contrast Service to connect to the Contrast UI.

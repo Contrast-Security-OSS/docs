@@ -22,7 +22,7 @@ To install the Contrast Server for Ubuntu-based systems, complete the following 
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-staging-all.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-public.list
 ```
 
 * Once you've finished configuration, install the Contrast Service.
@@ -46,7 +46,7 @@ OSREL=$(rpmquery -E "%{rhel}")
 sudo -E tee /etc/yum.repos.d/contrast.repo << EOF
 [contrast]
 name=contrast repo
-baseurl=https://contrastsecurity.jfrog.io/contrastsecurity/rpm-staging/centos-$OSREL/
+baseurl=https://contrastsecurity.jfrog.io/contrastsecurity/rpm-public/centos-$OSREL/
 gpgcheck=0
 enabled=1
 EOF
