@@ -109,37 +109,37 @@ contrast:
     # Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
     # level: NEEDS_TO_BE_SET
 
-#==============================================================================
+#===========================================================================
 # Inventory
-# Use the properties in this section to override the InventoryFeatures DTM.
-#==============================================================================
+# Use the properties in this section to override the inventory features.
+#===========================================================================
 # inventory:
 
-  # Apply a list of labels to libraries. Labels must be foratted as a comma-delimited list. /n Example - LibraryDTM:tags
-  # tags: label1, label2, label3
+  # Apply a list of labels to libraries. Labels must be foratted as a comma-delimited list. \n Example - label1, label2, label3
+  # tags: NEEDS_TO_BE_SET
 
-#============================================================================================
+#==========================================================
 # Assess
-# Use the properties in this section to override the AssesmentFeaturesDTM and submodules.
-#============================================================================================
+# Use the properties in this section to control Assess.
+#==========================================================
 # assess:
 
   # Include this property to determine if the Assess feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
   # enable: true
 
-  # Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list.
-  # tags: label1, label2, label3
+  # Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. \n Example - label1, label2, label3
+  # tags: NEEDS_TO_BE_SET
 
-  #===================================================================================
-  # Samplings
-  # Use the following properties to override values from the SamplingFeatures DTM.
-  #===================================================================================
-  # samplings:
+  #===================================================================
+  # Sampling
+  # Use the following properties to control sampling in the agent.
+  #===================================================================
+  # sampling:
 
-    # Override SamplingFeatures:enabled. Set to `false` to disable sampling.
+    # Set to `false` to disable sampling.
     # enable: true
 
-    # Override SamplingFeatures:baseline. This property indicates how many requests to analyze in each window before sampling begins.
+    # This property indicates how many requests to analyze in each window before sampling begins.
     # baseline: 5
 
 #=====================================================================
@@ -154,26 +154,24 @@ contrast:
 #==================================================================================
 # application:
 
-  # Override the reported application name. 
-  #  Example - header:Application-Name
-  # name: my-app
+  # Override the reported application name.
+  # name: NEEDS_TO_BE_SET
 
-  # Override the reported application path. 
-  #  Example - header:Application-Path
-  # path: /home/deployer/my-app
+  # Override the reported application path.
+  # path: NEEDS_TO_BE_SET
 
-  # Add a value to the ApplicationCreationDTM:group field.
-  # group: my-group
+  # Add the name of the application group with which this application should be associated in the Contrast UI.
+  # group: NEEDS_TO_BE_SET
 
-  # Override the reported application version. 
-  #  Example - header:Application-Version
-  # version: 1.2.3.4
+  # Override the reported application version.
+  # version: NEEDS_TO_BE_SET
 
   # Pass arguments to the underlying application.
   # args: NEEDS_TO_BE_SET
 
-  # Apply labels to an application. Labels must be formatted as a comma-delimited list.
-  # tags: label1,label2,label3
+  # Apply labels to an application. Labels must be formatted as a comma-delimited list. 
+  #  Example - label1,label2,label3
+  # tags: NEEDS_TO_BE_SET
 
 #==========================================================================================
 # Server
@@ -181,31 +179,27 @@ contrast:
 #==========================================================================================
 # server:
 
-  # Override the reported server name. 
-  #  Example - header:Server-Name
+  # Override the reported server name.
   # name: test-server-1
 
-  # Override the reported server path. 
-  #  Example - header:Server-Path
-  # path: /path/to/something
+  # Override the reported server path.
+  # path: NEEDS_TO_BE_SET
 
-  # Override the reported server type. 
-  #  Example - header:Server-Type
-  # type: Java 8.0
+  # Override the reported server type.
+  # type: NEEDS_TO_BE_SET
 
-  # Override the reported server build. 
-  #  Example - header:Server-Build
-  # build: 12.23.34
+  # Override the reported server build.
+  # build: NEEDS_TO_BE_SET
 
-  # Add a value to the AgentStartupDTM:version field.
-  # version: 34-45-56
+  # Override the reported server version.
+  # version: NEEDS_TO_BE_SET
 
-  # Add a value to the AgentStartupDTM:environment field.
+  # Override the reported server environment.
   # environment: development
 
   # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. 
-  #  Example - AgentStartupDTM:tags
-  # tags: label1,label2,label3
+  #  Example - label1,label2,label3 
+  # tags: NEEDS_TO_BE_SET
 
 
 ```

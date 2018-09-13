@@ -173,22 +173,22 @@ contrast:
     # Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See https://docs.contrastsecurity.com/troubleshooting-netissues.html#zero for more information.
     # web_module_whitelist: WebResource.axd
 
-#==============================================================================
+#===========================================================================
 # Inventory
-# Use the properties in this section to override the InventoryFeatures DTM.
-#==============================================================================
+# Use the properties in this section to override the inventory features.
+#===========================================================================
 # inventory:
 
-  # Set to `false` to disable Inventory features in the agent.
+  # Set to `false` to disable inventory features in the agent.
   # enable: true
 
-  # Apply a list of labels to libraries. Labels must be foratted as a comma-delimited list. /n Example - LibraryDTM:tags
-  # tags: label1, label2, label3
+  # Apply a list of labels to libraries. Labels must be foratted as a comma-delimited list. \n Example - label1, label2, label3
+  # tags: NEEDS_TO_BE_SET
 
-#============================================================================================
+#==========================================================
 # Assess
-# Use the properties in this section to override the AssesmentFeaturesDTM and submodules.
-#============================================================================================
+# Use the properties in this section to control Assess.
+#==========================================================
 # assess:
 
   # Include this property to determine if the Assess feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
@@ -197,28 +197,28 @@ contrast:
   # Control the values captured by Assess vulnerability events. `Full` captures most values by calling ToString on objects, which can provide more info but causes increased memory usage. `Minimal` has better performance as it only captures String type objects as strings and uses type name for other object type values.
   # event_detail: minimal
 
-  # Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list.
-  # tags: label1, label2, label3
+  # Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. \n Example - label1, label2, label3
+  # tags: NEEDS_TO_BE_SET
 
   # Value options are `ALL`, `SOME`, or `NONE`.
   # stacktraces: ALL
 
-  #===================================================================================
-  # Samplings
-  # Use the following properties to override values from the SamplingFeatures DTM.
-  #===================================================================================
-  # samplings:
+  #===================================================================
+  # Sampling
+  # Use the following properties to control sampling in the agent.
+  #===================================================================
+  # sampling:
 
-    # Override SamplingFeatures:enabled. Set to `false` to disable sampling.
+    # Set to `false` to disable sampling.
     # enable: true
 
-    # Override SamplingFeatures:baseline. This property indicates how many requests to analyze in each window before sampling begins.
+    # This property indicates how many requests to analyze in each window before sampling begins.
     # baseline: 5
 
-    # Override SamplingFeatures:frequency. This property indicates that every *nth* request after the baseline is analyzed.
+    # This property indicates that every *nth* request after the baseline is analyzed.
     # request_frequency: 10
 
-    # Override SamplingFeatures:window. This property indicates the duration for which a sample set is valid.
+    # This property indicates the duration for which a sample set is valid.
     # window_ms: 180_000
 
   #========================================================================
@@ -324,18 +324,18 @@ contrast:
 #==================================================================================
 # application:
 
-  # Add a value to the ApplicationCreationDTM:group field.
-  # group: my-group
+  # Add the name of the application group with which this application should be associated in the Contrast UI.
+  # group: NEEDS_TO_BE_SET
 
-  # Add a value to the ApplicationCreationDTM:code field.
-  # code: my-app-code
+  # Add the application code this application should use in the Contrast UI.
+  # code: NEEDS_TO_BE_SET
 
-  # Override the reported application version. 
-  #  Example - header:Application-Version
-  # version: 1.2.3.4
+  # Override the reported application version.
+  # version: NEEDS_TO_BE_SET
 
-  # Apply labels to an application. Labels must be formatted as a comma-delimited list.
-  # tags: label1,label2,label3
+  # Apply labels to an application. Labels must be formatted as a comma-delimited list. 
+  #  Example - label1,label2,label3
+  # tags: NEEDS_TO_BE_SET
 
   # Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. 
   #  Example - "business-unit=accounting, office=Baltimore"
@@ -347,22 +347,20 @@ contrast:
 #==========================================================================================
 # server:
 
-  # Override the reported server name. 
-  #  Example - header:Server-Name
+  # Override the reported server name.
   # name: test-server-1
 
-  # Override the reported server build. 
-  #  Example - header:Server-Build
-  # build: 12.23.34
+  # Override the reported server build.
+  # build: NEEDS_TO_BE_SET
 
-  # Add a value to the AgentStartupDTM:version field.
-  # version: 34-45-56
+  # Override the reported server version.
+  # version: NEEDS_TO_BE_SET
 
-  # Add a value to the AgentStartupDTM:environment field.
+  # Override the reported server environment.
   # environment: development
 
   # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. 
-  #  Example - AgentStartupDTM:tags
-  # tags: label1,label2,label3
+  #  Example - label1,label2,label3 
+  # tags: NEEDS_TO_BE_SET
 
 ```
