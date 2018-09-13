@@ -4,8 +4,7 @@ description: "Instructions for configuring Java agent properties via YAML file"
 tags: "installation java agent YAML configuration rules properties"
 -->
 
-Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration 
-on disk and override that configuration with environment variable and CLI args if necessary.
+Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk and override that configuration with environment variable and CLI args, if necessary.
 
 > **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
 
@@ -14,351 +13,185 @@ Configuration values use the following order of precedence:
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 1. System property value
 1. Environment variable value
-1. User configuration file value <!-- TODO , for the java agent this includes the 
-                                      legacy file and the YAMl file. Should we specify both or just not mention the 
-                                      legacy file (which no one should be using anymore, I think.-->
+1. User configuration file value 
+<!-- TODO , for the java agent this includes the legacy file and the YAMl file. Should we specify both or just not mention the legacy file (which no one should be using anymore, I think.-->
 1. Contrast UI value
 1. Default value
 
-
 <!-- Other use and file location info. This will be done after CONTRAST-26125  -->
 
-All the YAML properties below can also be set as system properties. Derive the system property key
-from the YAML by joining every node with a '.' until reach the bottom property. For instance,
-if you wish to override 
-```yaml
-contrast: 
-  enable: true
-```
-you can do so by setting `-Dcontrast.enable=false` as a system property.
+You can also set all of the following YAML properties as system properties. Derive the system property key from the YAML by joining every node with a "." until you reach the bottom property. 
+
+> **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
+  * contrast: 
+    * enable: `true`
 
 
 ## Contrast UI Properties
-Use the properties in this section to connect the agent to the Contrast UI.
 
-The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
+Use the properties in this section to connect the Java agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-```yaml
-contrast:
 
-  # Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  enable: true
+* **contrast**: 
 
-  # ********************** REQUIRED **********************
-  # Set the URL for the Contrast UI.
-  url: https://app.contrastsecurity.com/Contrast
+  * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+  * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.** 
+  * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
+  * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
+  * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
 
-  # ********************** REQUIRED **********************
-  # Set the API key needed to communicate with the Contrast UI.
-  api_key:
+  * **proxy**:
+    * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
+    * **host**: Set the proxy host. It must be set with port and scheme. <br> Example: `localhost`
+    * **port**: Set the proxy port. It must be set with host and scheme. <br> Example: `1234`
+    * **scheme**: Set the proxy scheme. It must be set with host and port. <br> Example: `http` or `https`
+    * **url**: Set as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URI and individual properties are set.
+    * **user**: Set the proxy user.
+    * **pass**: Set the proxy password.
+    * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
 
-  # ********************** REQUIRED **********************
-  # Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header.
-  service_key:
-
-  # ********************** REQUIRED **********************
-  # Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
-  user_name:
-  
-  proxy:
-
-    # Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`.
-    enable:
-
-    # Set the proxy host. It must be set with port and scheme.
-    host:
-
-    # Set the proxy port. It must be set with host and scheme.
-    port:
-
-    # Set the proxy scheme (e.g., `http` or `https`). It must be set with host and port.
-    scheme:
-
-    # Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URI and individual properties are set.
-    url:
-
-    # Set the proxy user.
-    user:
-
-    # Set the proxy password.
-    pass:
-
-    # Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
-    auth_type:
-```
 
 ## Contrast Agent Properties
 
-Use the properties in this section to control the way and frequency with which the agent communicates to logs and to the Contrast UI.
+Use the properties in this section to control the way and frequency with which the Java agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
 ### Diagnostic Logging
 
-Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you
-may be having with the agent.
-<!-- Maybe a question for Jenny, should we include the 'agent' node here? -->
-```yaml
-agent:
+Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
 
-  logger:
-  
-      # Enable diagnostic logging by setting a path to a log file. This hurts performance, but generates useful information for debugging Contrast. The value set here will be the location to which log output is saved. If no log file exists at this location, one will be created. For instance, /opt/Contrast/contrast.log*will create a log in the /opt/Contrast directory and rotate it automatically as needed. By default, this file is located at ${HOME}/.contrast/contrast.log
-      path:
-  
-      # Set the log output level. Options are OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, and ALL.
-      level:
-  
-      # Set to `true` Change the Contrast logger from a file sized based rolling scheme to a date based rolling scheme. At midnight server time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.
-      roll_daily:
-  
-      # Roll size for log files unless agent.logger.roll_daily=true
-      roll_size:
-  
-      # Number of backup files to keep
-      backups:
-```
+<!-- Maybe a question for Jenny, should we include the 'agent' node here? -->
+
+* **agent**:
+
+  * **logger**:
+    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
+    * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
+    * **roll_daily**: Change the Contrast logger from a file-sized based rolling scheme to a date-based rolling scheme. At midnight server time, the log from the previous day log is renamed to *file_name.yyyy-MM-dd*. You must set this flag to use the backups and size flags. <br> Note: This scheme does not have a size limit; manual log pruning is required. <br> Example: `false`
+    * **roll_size**: Set the roll size for log files unless `agent.logger.roll_daily=true`. <br> Example: `100M`
+    * **backups**: Set the number of backup files to keep. <br> Example: `10`
 
 ### Security Logging
-Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors
-and blocks attacks against your application. They are written to the specified file in the Common
-Event Format (CEF).
 
-The Syslog settings allow you to send security logs to remote servers.
-
-```yaml
-agent:
-
-  security_logger:
-  
-    # The file to which logging of security events will occur. By default, this file is located at ${HOME}/.contrast/security.log.
-    path:
-  
-    # Set the log level for security logging. Options are OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, and ALL. Setting this to OFF will disable security logging.",
-    level:
-  
-    # Change the Contrast security logger from a file sized based rolling scheme to a date based rolling scheme. At midnight server time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags. The options are true or false.
-    roll_daily:
-  
-    # Specify the file size cap, in MB, of each log file.
-    roll_size:
-  
-    # Specify the number of "backup" logs that will be created before Contrast will clean up the oldest file. A value of 0 here means that no backups will be created, and the log will simply be truncated when it reaches its size cap. Note, this property must be used with agent.security_logger.roll_daily=false, or we will continue to log daily and disregard this limit.
-    backups:
-  
-    syslog:
-  
-      # If true, enable Syslog logging.
-      enable:
-  
-      # Set IP address of the Syslog server to which we should send messages.
-      ip:
-  
-      # Set port of the Syslog server to which we should send messages.
-      port:
-  
-      # Set facility code of the messages we are sending to Syslog.
-      facility:
-  
-      # Set the log level of exploited attacks. Options are ALERT, CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG.
-      severity_exploited:
-  
-      # Set the log level of blocked attacks. Options are ALERT, CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG.
-      severity_blocked:
-  
-      # Set the log level of probed attacks. Options are ALERT, CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG.
-      severity_probed:
-```
+Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors and blocks attacks against your application. They are written to the specified file in the Common Event Format (CEF). The Syslog settings allow you to send security logs to remote servers.
 
 
-### Agent-Specific Properties
-<!-- That work will be done in CONTRAST-26166 -->
+  * **security_logger**:
+    * **path**: Set the file to which the agent logs security events. <br> Example: */.contrast/security.log*
+    * **level**: Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
+    * **roll_daily**: Change the Contrast security logger from a file-sized based rolling scheme to a date-based rolling scheme. At midnight server time, the log from the previous day is renamed to *file_name.yyyy-MM-dd*. This flag must be set to use the backups and size flags. Value options are `true` or `false`. <br> Note: This scheme does not have a size limit; manual log pruning will be required.
+    * **roll_size**: Specify the file size cap (in MB) of each log file.
+    * **backups**: Specify the number of backup logs that the agent will create before Contrast cleans up the oldest file. A value of `0` means that no backups are created, and the log is truncated when it reaches its size cap. <br> Note: This property must be used with `agent.security_logger.roll_daily=false`; otherwise, Contrast continues to log daily and disregard this limit.
+
+    * **syslog**:
+      * **enable**: Set to `true` to enable Syslog logging.
+      * **ip**: Set the IP address of the Syslog server to which the agent should send messages.
+      * **port**: Set the port of the Syslog server to which the agent should send messages.
+      * **facility**: Set the facility code of the messages the agent sends to Syslog.
+      * **severity_exploited**: Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+      * **severity_blocked**: Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+      * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+
+
+<!-- ### Agent-Specific Properties
+
+That work will be done in CONTRAST-26166
 
 Words here...
 
-Properties formatted as list/grid
+Properties formatted as list/grid -->
+
 
 ## Inventory Properties
 
-Use the properties in this section to control Inventory features in the agent.
+Use the properties in this section to control inventory features in the Java agent.
 
-```yaml
-inventory:
-
-  # Set to `false` to disable Inventory features in the agent.
-  enable:
-
-  # Define a list of directories where libraries are stored. Directories must be formatted as a semicolon-delimited list. e.g. path1;path2;path3
-  library_dirs:
-
-  # Set the maximum archive unpacking depth when analyzing libraries.
-  library_depth:
-
-  # Set to `false` to disable Inventory features in the agent.
-  prune_package_details:
-
-  # Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. e.g. label1, label2, label3
-  tags:
-```
+* **inventory**:
+  * **enable**: Set to `false` to disable Inventory features in the agent.
+  * **library_dirs**: Define a list of directories where libraries are stored. Directories must be formatted as a semicolon-delimited list. <br> Example: `path1;path2;path3`
+  * **library_depth**: Set the maximum archive unpacking depth when analyzing libraries. <br> Example: `10`
+  * **prune_package_details**: Set to `false` to disable Inventory features in the agent. 
+  * **tags**: Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. <br> Example: `label1, label2, label3`
 
 ## Contrast Assess Properties
 
-Use the properties in this section to control Assess in the agent. 
+Use the properties in this section to control Assess in the Java agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
 
-The sampling settings allow you to control which requests the agent tracks and which it ignores.
+> **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.  
 
-The rules setting allows you to control which Assess rules are disabled. Contact Contrast support
-for a complete list of rules 
 
-```yaml
-assess:
+* **assess**:
 
-  # Include this property to determine if the Assess feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
-  enable:
+  * **enable**: Include this property to determine if the Assess feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Example: `true`
+  * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
+  * **stacktraces**: Value options are `ALL`, `SOME`, or `NONE`.
 
-  # Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. e.g. label1, label2, label3
-  tags:
+  * **samplings**:
+    * **enable**: Set to `false` to disable sampling.
+    * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
+    * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
+    * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
 
-  # Value options are `ALL`, `SOME`, or `NONE`.
-  stacktraces:
+  * **rules**:
+    * **disabled_rules**: Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. <br> Example: Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
 
-  sampling:
-
-    # Set to `false` to disable sampling.
-    enable:
-
-    # This property indicates how many requests to analyze in each window before sampling begins. e.g. 5
-    baseline:
-
-    # This property indicates that every *nth* request after the baseline is analyzed. e.g. 10
-    request_frequency:
-
-    # This property indicates the duration for which a sample set is valid. e.g. 180_000
-    window_ms:
-
-  rules:
-
-    # Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. 
-    #  Example - Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
-    disabled_rules:
-```
-Properties formatted as list/grid
 
 ## Contrast Protect Properties
 
 Use the properties in this section to control Protect features and rules.
 
-```yaml
-protect:
+* **protect**:
+  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Example: `true`
 
-  # Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
-  enable:
-  
-  # Use the following properties to set simple rule configurations.
-  rules:
+  * **rules**:
+    * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
 
-    # Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
-    #  Example - Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
-    disabled_rules:
+    * **bot-blocker**: 
+      * **enable**: Set to `true` for the agent to block known bots.
 
-    # Use the following properties to configure if and how the agent blocks bots.
-    bot-blocker:
+    * **sql-injection**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
-      # Set to `true` for the agent to block known bots.
-      enable: false
+    * **cmd-injection**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
-    # Use the following properties to override a specific Protect rule. The key is the rule ID in the Contrast UI with dashes replaced by underscores.
-    sql-injection:
+    * **path-traversal**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or off. 
-      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
-      mode:
+    * **method-tampering**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
-    cmd-injection:
+    * **reflected-xss**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
-      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
-      mode:
+    * **xxe**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
-    path-traversal:
-
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
-      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
-      mode:
-
-    method-tampering:
-
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
-      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
-      mode:
-
-    reflected-xss:
-
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
-      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
-      mode: monitor
-      
-    xxe:
-
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
-      #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
-      mode: monitor
-```
-
+    
 ## Application Properties
 
 Use the properties in this section to control the application(s) hosting this agent.
 
-```yaml
-application:
-
-  # Override the reported application name. 
-  name:
-
-  # Override the reported application path. 
-  path:
-
-  # Add the name of the application group this application should be associated with in the Contrast UI.
-  group:
-
-  # Add the application code this application should use in the Contrast UI.
-  code:
-
-  # Override the reported application version. 
-  version:
-
-  # Apply labels to an application. Labels must be formatted as a comma-delimited list. e.g. label1, label2, label3
-  tags:
-
-  # Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. 
-  #  Example - "business-unit=accounting, office=Baltimore"
-  metadata: 
-```
+* application:
+  * **name**: Override the reported application name.
+  * **path**: Override the reported application path.
+  * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
+  * **code**: Add the application code this application should use in the Contrast UI.
+  * **version**: Override the reported application version.
+  * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
+  * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
 ## Server Properties 
 
 Use the properties in this section to set metadata for the server hosting this agent.
 
-```yaml
-server:
+* **server**:
 
-  # Override the reported server name. 
-  name:
+  * **name**: Override the reported server name. <br> Example: `test-server-1`
+  * **path**: Override the reported server path.
+  * **type**: Override the reported server type.
+  * **build**: Override the reported server build.
+  * **version**: Override the reported server version.
+  * **environment**: Override the reported server environment. <br> Example: `development`
+  * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
 
-  # Override the reported server path. 
-  path:
-
-  # Override the reported server type. 
-  type:
-
-  # Override the reported server build. 
-  build:
-
-  # Override the reported server version.
-  version:
-
-  # Set the name of the environment this server should be associated with in the Contrast UI.
-  environment:
-
-  # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. e.g. label1, label2, label3 
-  tags:
-```
