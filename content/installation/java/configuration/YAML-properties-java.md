@@ -30,7 +30,7 @@ if you wish to override
 contrast: 
   enable: true
 ```
-you can do so by setting `contrast.enable=false` as a system property.
+you can do so by setting `-Dcontrast.enable=false` as a system property.
 
 
 ## Contrast UI Properties
@@ -92,7 +92,6 @@ contrast:
 Use the properties in this section to control the way and frequency with which the agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
-
 ### Diagnostic Logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you
@@ -118,7 +117,6 @@ agent:
       # Number of backup files to keep
       backups:
 ```
-
 
 ### Security Logging
 Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors
@@ -179,7 +177,6 @@ Words here...
 
 Properties formatted as list/grid
 
-
 ## Inventory Properties
 
 Use the properties in this section to control Inventory features in the agent.
@@ -202,7 +199,6 @@ inventory:
   # Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. e.g. label1, label2, label3
   tags:
 ```
-
 
 ## Contrast Assess Properties
 
@@ -246,7 +242,6 @@ assess:
     disabled_rules:
 ```
 Properties formatted as list/grid
-
 
 ## Contrast Protect Properties
 
@@ -316,5 +311,5 @@ server:
   environment:
 
   # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. e.g. label1, label2, label3 
-  tags: label1,label2,label3
+  tags:
 ```
