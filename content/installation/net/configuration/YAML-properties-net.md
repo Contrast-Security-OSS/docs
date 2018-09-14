@@ -10,7 +10,7 @@ Contrast support YAML-based configuration for the .NET agent. This allows you to
 
 Configuration values use the following order of precedence: 
 
-<!-- 1. Corporate rule (e.g., expired license overrides `assess.enable`)
+1. Corporate rule (e.g., expired license overrides `assess.enable`)
 2. Command line value
 3. Specific environmental variable
 4. Generic environment variable value
@@ -23,7 +23,9 @@ You can also set all of the following YAML properties as system properties. Deri
 > **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
   * contrast: 
     * enable: `true`
- -->
+
+<!-- The precedence and system properties example are copied from Java. Edit or delete as needed.  -->
+
 
 Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
@@ -60,11 +62,11 @@ If these values are not set, the agent will use the values set in the Contrast U
     * **checks:** Set the frequency with which the agent checks for updates. Valid values are `daily` for every 24 hours and on startup, or `startup` for *only* when service starts up.
 
 
-
 ### Diagnostic Logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
 
+<!-- Should we put the higher-level 'agent' bullet in these subsections as well? -->  
 
   * **logger**:
     * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
