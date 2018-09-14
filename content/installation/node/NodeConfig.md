@@ -91,3 +91,31 @@ To pass configuration options to the application being run with Contrast, use th
 > **Example:** `npm run contrast -- --agent.logger.level debug -- --appArg0 foo --appArg1 bar` will pass `appArg0 foo` and `appArg1 bar` directly to the application.
 
 
+## Node.js CLI Arguments
+
+From the Node.js documentation, we see that we execute scripts in the following way:
+
+```shell
+node [options] [V8 options] [script.js] [--] [arguments];
+```
+
+The agent is a Node.js wrapper (runner) that itself invokes `node` to start the application. The agent does not pass any flags to the underlying Node.js executable, nor does it provide the ability to do so via agent configuration options.
+In order to pass CLI flags to Node.js, one will need to invoke `node` explicitly with the agent as the `script` argument, followed by the name of the application's entry point file and any configuration flags as outlined above.
+
+When the agent is installed, a symlink is created, `<app-dir>/node_modules/.bin/node-contrast`, which points to the file `<app-dir>/node_modules/node_contrast/cli.js`. Either of these can be used as this `script` argument when starting the application this way.
+
+Consider an example. Let's say that, without the Contrast agent, a user starts her application using the command:
+
+```shell
+node --title=MyWebsite --stack-trace-limit=25 ./index.js --env development
+```
+
+To run the application with the same Node.js flags, and with the Contrast agent, either of the following commands could be used:
+
+```shell
+node --title=MyWebsite --stack-trace-limit=25 ./node_modules/.bin/node-contrast ./index.js -- --env development
+```
+
+```shell
+node --title=MyWebsite --stack-trace-limit=25 ./node_modules/node_contrast/cli.js ./index.js -- --env development
+```
