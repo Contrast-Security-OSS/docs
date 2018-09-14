@@ -14,6 +14,7 @@ Generate a list of general properties directly from the command line using the C
 |Property|Description|
 |-|-|
 | contrast.activity | Boolean to enable/disable the Contrast activity thread <br> **DEFAULT VALUE:** true</br> |
+| contrast.agent.metadata | Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. \n Example - \"business-unit=accounting, office=Baltimore\" |
 | contrast.app.activity.period | Contrast application activity thread polling period in milliseconds <br> **DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
 | contrast.app.features | JSON from disk to use for application <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.app.update.period | Contrast application update thread polling period in milliseconds <br> **DEFAULT VALUE:** 5000 (5 seconds, in milliseconds)</br> |
