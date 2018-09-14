@@ -45,9 +45,9 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
     * **host**: Set the proxy host. It must be set with port and scheme. <br> Example: `localhost`
-    * **port**: Set the proxy port. It must be set with host and scheme. <br> Example: `1234`
     * **user**: Set the proxy user.
     * **pass**: Set the proxy password.
+    * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
 
 
 ## Contrast Agent Properties
@@ -69,7 +69,6 @@ Use the properties in this section to control diagnostic logging. These logs all
 <!-- Should we put the higher-level 'agent' bullet in these subsections as well? -->  
 
   * **logger**:
-    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
     * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
 
 
@@ -179,7 +178,6 @@ Use the properties in this section to control the application(s) hosting this ag
 
 * application:
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
-  * **code**: Add the application code this application should use in the Contrast UI.
   * **version**: Override the reported application version.
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
   * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
@@ -192,10 +190,6 @@ Use the properties in this section to set metadata for the server hosting this a
 * **server**:
 
   * **name**: Override the reported server name. <br> Example: `test-server-1`
-  * **path**: Override the reported server path.
-  * **type**: Override the reported server type.
-  * **build**: Override the reported server build.
-  * **version**: Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
 

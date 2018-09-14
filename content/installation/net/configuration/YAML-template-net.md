@@ -55,9 +55,6 @@ contrast:
     # Set the proxy host. It must be set with port and scheme.
     # host: localhost
 
-    # Set the proxy port. It must be set with host and scheme.
-    # port: 1234
-
     # Set the proxy scheme (e.g., `http` or `https`). It must be set with host and port.
     # scheme: http
 
@@ -69,6 +66,9 @@ contrast:
 
     # Set the proxy password.
     # pass: NEEDS_TO_BE_SET
+    
+    # Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
+    # auth_type: NEEDS_TO_BE_SET
 
 #=======================================================================================================================================
 # Agent
@@ -93,10 +93,6 @@ contrast:
   # Define the following properties to set logging values. If the following properties are not defined, the agent uses the logging values from the Contrast UI.
   #================================================================================================================================================================
   # logger:
-
-    # Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. 
-    #  Example - */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
-    # path: ./contrast_agent.log
 
     # Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
     # level: ERROR
@@ -327,9 +323,6 @@ contrast:
   # Add the name of the application group with which this application should be associated in the Contrast UI.
   # group: NEEDS_TO_BE_SET
 
-  # Add the application code this application should use in the Contrast UI.
-  # code: NEEDS_TO_BE_SET
-
   # Override the reported application version.
   # version: NEEDS_TO_BE_SET
 
@@ -349,12 +342,6 @@ contrast:
 
   # Override the reported server name.
   # name: test-server-1
-
-  # Override the reported server build.
-  # build: NEEDS_TO_BE_SET
-
-  # Override the reported server version.
-  # version: NEEDS_TO_BE_SET
 
   # Override the reported server environment.
   # environment: development
