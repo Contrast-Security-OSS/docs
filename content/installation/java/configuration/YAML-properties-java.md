@@ -26,6 +26,7 @@ You can also set all of the following YAML properties as system properties. Deri
   * contrast: 
     * enable: `true`
 
+Go to the [Java YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
 
 ## Contrast UI Properties
 
@@ -141,7 +142,8 @@ Use the properties in this section to control Assess in the Java agent. The samp
 Use the properties in this section to control Protect features and rules.
 
 * **protect**:
-  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Example: `true`
+
+  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Default: `true`
 
   * **rules**:
     * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.

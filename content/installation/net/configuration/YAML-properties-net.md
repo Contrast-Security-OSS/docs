@@ -16,15 +16,16 @@ Configuration values use the following order of precedence:
 4. Generic environment variable value
 5. User configuration file value
 6. Contrast UI value
-7. Default value -->
+7. Default value 
 
-<!-- 
 You can also set all of the following YAML properties as system properties. Derive the system property key from the YAML by joining every node with a "." until you reach the bottom property. 
 
 > **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
   * contrast: 
     * enable: `true`
  -->
+
+Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 ## Contrast UI Properties
 
@@ -120,14 +121,54 @@ Use the properties in this section to control Assess in the .NET agent. The samp
 > **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.  
 
 
-Properties formatted as list/grid
+* **assess**:
+
+  * **enable**: Include this property to determine if the Assess feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Example: `true`
+  * **event_detail**: Control the values captured by Assess vulnerability events. `Full` captures most values by calling ToString on objects, which can provide more info but causes increased memory usage. `Minimal` has better performance as it only captures String type objects as strings and uses type name for other object type values.
+  * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
+  * **stacktraces**: Value options are `ALL`, `SOME`, or `NONE`.
+
+  * **samplings**:
+    * **enable**: Set to `false` to disable sampling.
+    * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
+    * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
+    * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
+
+  * **rules**:
+    * **disabled_rules**: Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. <br> Example: Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
 
 
 ## Contrast Protect Properties
 
 Use the properties in this section to control Protect features and rules.
 
-Properties formatted as list/grid
+* **protect**:
+
+  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Default: `true`
+
+  * **rules**:
+    * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
+
+    * **bot-blocker**: 
+      * **enable**: Set to `true` for the agent to block known bots.
+
+    * **sql-injection**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+
+    * **cmd-injection**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+
+    * **path-traversal**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+
+    * **method-tampering**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+
+    * **reflected-xss**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+
+    * **xxe**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
 
 ## Application Properties
