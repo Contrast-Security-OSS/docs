@@ -4,13 +4,11 @@ description: "Installing Contrast Service"
 tags: "contrast service agent installation"
 -->
 
-## Bundled with Language Agents
-
-The Contrast Service is packaged with the Ruby and Python agents and will run automatically when an instrumented Ruby on Rails, Flask or Django application is started. 
+The Contrast Service is packaged with the Ruby and Python agents, and runs automatically when an instrumented Ruby on Rails, Flask or Django application starts. 
 
 ## Installation with System Package Manager
 
-The Contrast Service may be installed on Linux using system package managers. Unlike the service executable packaged with the Ruby and Python agents, the Contrast Service installed by system package managers isn't preconfigured with connection parameters; instead, you must [configure](installation-service.html#service-config) the service with a *yaml* configuration file.
+You may install the Contrast Service on Linux using system package managers. Unlike the service executable packaged with the [Ruby](installation-ruby.html#ruby-overview) and [Python](installation-python.html#python-overview) agents, the Contrast Service installed by system package managers isn't preconfigured with connection parameters. Instead, you must [configure](installation-service.html#service-config) the service with a YAML configuration file.
 
 ### Ubuntu-Based Systems
 
@@ -18,13 +16,13 @@ The Contrast Service may be installed on Linux using system package managers. Un
 
 To install the Contrast Server for Ubuntu-based systems, complete the following steps. 
 
-* Configure your system to retreive from the correct Debian repository. Get the `CODENAME` for your Ubuntu release. 
+* Configure your system to retrieve from the correct Debian repository. Get the `CODENAME` for your Ubuntu release. 
 
 ```
 grep VERSION_CODENAME /etc/os-release 
 ```
 
-* Update the command below with the `CODENAME` and run the commands.
+* Update the command below with the `CODENAME`, and run the commands.
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
