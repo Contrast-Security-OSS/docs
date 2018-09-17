@@ -28,7 +28,7 @@ The configuration YAML consists of four sections. The agent and Service may shar
     * `service`:
       * `host`: Set the the hostname or IP address of the Contrast Service to which the Contrast agent should report. <br> Example: `localhost`
       * `port`: Set the the port of the Contrast Service to which the Contrast agent should report. <br> Example: `30555`
-      * `socket`: For the **Webserver agent** only: If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock*
+      <!-- * `socket`: For the **Webserver agent** only: If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock* -->
       * `logger`:
         * `path`: Set the location to which the Contrast Service saves log output. If no log file exists at this location, the Service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
         * `level`: Set the the log output level. Options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
