@@ -80,11 +80,21 @@ Use the properties in this section to control security logging. These logs allow
     * **path**: Set the file to which the agent logs security events. <br> Example: */.contrast/security.log*
     * **level**: Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
 
+
+### Agent-Specific Properties
+
+The following properties apply to any Node.js configurations.
+
+  * **node**:
+    * **app_root**: Explicitly set the location of the application's `package.json` file.
+    * **stack_trace_limit**: Set the limit for lengths of stack traces.
+
 ## Inventory Properties
 
 Use the properties in this section to control inventory features in the Node agent.
 
   * **inventory**:
+    * **analyze_libraries**: If set to `false`, do not read or report library data.
     * **tags**: Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. <br> Example: `label1, label2, label3`
 
 
@@ -104,6 +114,18 @@ Use the properties in this section to control Assess in the Node agent. The samp
     * **enable**: Set to `false` to disable sampling.
     * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
 
+
+## Contrast Protect Properties
+
+Use the properties in this section to control Protect features and rules.
+
+* **protect**:
+
+  * **samples**:
+    * **blocked**: Limit the reporting of "blocked" protect events to this number (per report cycle).
+	* **blocked_at_perimeter**: Limit the reporting of "blocked-at-perim" protect events to this number (per report cycle).
+	* **exploited**: Limit the reporting of "effective" protect events to this number (per report cycle).
+	* **ineffective**: Limit the reporting of "ineffective" protect events to this number (per report cycle).
 
 ## Application Properties
 
