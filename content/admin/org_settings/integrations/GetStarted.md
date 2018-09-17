@@ -11,6 +11,7 @@ Bugtrackers:
 * JIRA
 * Visual Studio Team Services/Team Foundation Services (VSTS/TFS)
 * Bugzilla
+* Agile Central
 * Serena Business Manager 
 
 Notifications:
