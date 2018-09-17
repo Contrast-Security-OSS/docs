@@ -35,10 +35,10 @@ Use the properties in this section to connect the agent to the Contrast UI.
 
 * **contrast**: 
   * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  * **url**: Set the URL for the Contrast UI. <br> Example: *https://app.contrastsecurity.com/Contrast*
-  * **api_key**: Set the API key needed to communicate with the Contrast UI.
-  * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header.
-  * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
+  * **url**: Set the URL for the Contrast UI. **Required.** <br> Example: *https://app.contrastsecurity.com/Contrast*
+  * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
+  * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
+  * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **last_config_path**: Set the path to which the agent should store the currently used configuration from the Contrast UI. <br> Example: *./tmp/config*
 
 ## Contrast Agent Properties
@@ -86,8 +86,8 @@ The following properties are used by the Contrast Service.
 * **service**: 
   * **enable**: Set to `false` to disallow the service to be started, and effectively disable the agent, if read by the service. If the agent reads this property, it disallows service auto-start.
   * **socket**: If this property is defined, the service is listening on a Unix socket at the defined path. <br> Example: /tmp/service.sock
-  * **host**: Set the the hostname or IP address of the Contrast service to which the Contrast agent should report. <br> Example: `localhost`
-  * **port**: Set the the port of the Contrast service to which the Contrast agent should report. <br> Example: `30555`
+  * **host**: Set the the hostname or IP address of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `localhost`
+  * **port**: Set the the port of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `30555`
     
 #### Logger
 
@@ -159,7 +159,7 @@ Use the properties in this section to override Protect features.
 
 ## Application Properties
 
-Use the properties in this section for the application(s) hosting this agent.
+Use the properties in this section for the application(s) hosting each agent.
 
 For **application** tags, update the configuration of the agent. If there isn’t one, add a top-level `application` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string. 
 
@@ -173,6 +173,8 @@ For **application** tags, update the configuration of the agent. If there isn’
   * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
 ## Server Properties
+
+Use the properties in this section to set metadata for the server hosting each agent.
 
 For **server** tags, update the configuration of the service. If there isn’t one, add a top-level `server` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string.
 
