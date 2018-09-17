@@ -86,7 +86,7 @@ Use the properties in this section to control security logging. These logs allow
 The following properties apply to any Node.js configurations.
 
   * **node**:
-    * **app_root**: Explicitly set the location of the application's `package.json` file.
+    * **app_root**: Explicitly set the location of the application's *package.json* file.
     * **stack_trace_limit**: Set the limit for lengths of stack traces.
 
 ## Inventory Properties
@@ -94,7 +94,7 @@ The following properties apply to any Node.js configurations.
 Use the properties in this section to control inventory features in the Node agent.
 
   * **inventory**:
-    * **analyze_libraries**: If set to `false`, do not read or report library data.
+    * **analyze_libraries**: Set to `false` for the agent to not read or report library data.
     * **tags**: Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. <br> Example: `label1, label2, label3`
 
 
@@ -122,10 +122,10 @@ Use the properties in this section to control Protect features and rules.
 * **protect**:
 
   * **samples**:
-    * **blocked**: Limit the reporting of "blocked" protect events to this number (per report cycle).
-	* **blocked_at_perimeter**: Limit the reporting of "blocked-at-perim" protect events to this number (per report cycle).
-	* **exploited**: Limit the reporting of "effective" protect events to this number (per report cycle).
-	* **ineffective**: Limit the reporting of "ineffective" protect events to this number (per report cycle).
+    * **blocked**: Set the maximum number of Blocked events that the agent reports (per report cycle). <br> Example: `25`
+	* **blocked_at_perimeter**: Set the maximum number of Blocked-at-Perimeter events that the agent reports (per report cycle).
+	* **exploited**: Set the maximum number of Effective that the agent reports (per report cycle).
+	* **ineffective**: Set the maximum number of Ineffective events that the agent reports (per report cycle).
 
 ## Application Properties
 

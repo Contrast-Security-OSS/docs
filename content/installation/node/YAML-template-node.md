@@ -114,7 +114,7 @@ contrast:
   #================================================================================================================================================================
   # node:
 
-    # Explicitly set the location of the application's package.json file."
+    # Explicitly set the location of the application's *package.json* file.
     # app_root: NEEDS_TO_BE_SET
 
     # Set the limit for lengths of stack traces.
@@ -126,7 +126,7 @@ contrast:
 #===========================================================================
 # inventory:
 
-  # If set to false, do not read or report library data.
+  # Set to `false` for the agent to not read or report library data.
   # analyze_libraries: true
 
   # Apply a list of labels to libraries. Labels must be foratted as a comma-delimited list. \n Example - label1, label2, label3
@@ -168,16 +168,16 @@ contrast:
   #===================================================================
   # samples:
 
-    # Limit the reporting of "blocked" protect events to this number (per report cycle).
+    # Set the maximum number of Blocked events that the agent reports (per report cycle). 
     # blocked: 25
 
-    # Limit the reporting of "blocked-at-perim" protect events to this number (per report cycle).
+    # Set the maximum number of Blocked-at-Perimeter events that the agent reports (per report cycle).
     # blocked_at_perimeter: 25
 
-    # Limit the reporting of "effective" protect events to this number (per report cycle).
+    # Set the maximum number of Effective that the agent reports (per report cycle).
     # exploited: 100
 
-    # Limit the reporting of "ineffective" protect events to this number (per report cycle).
+    # Set the maximum number of Ineffective events that the agent reports (per report cycle).
     # ineffective: 50
 
 #==================================================================================
