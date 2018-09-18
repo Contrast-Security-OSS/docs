@@ -12,9 +12,13 @@ The Contrast Service is a stand-alone executable that's used by the [Ruby](insta
 
 <!-- It's also a core component of the NGINX Webserver agent. In a Webserver configuration, the Service listens for requests to the NGINX Webserver and processes requests for potential attacks before allowing the request to proceed to the proxied web application. 
  -->
+
 <a href="assets/images/Service-arch.png" rel="lightbox" title="Contrast Service architecture"><img class="thumbnail" src="assets/images/Service-arch.png"/></a>
+
 
 ## Use the Service
 
-The Contrast Service is compiled for various supported architectures: Linux 64-bit, Macintosh 64-bit and Windows 64-bit. The Service is packaged with the Ruby and Python agents, and starts automatically when the instrumented application is started. <!-- You can also start the Service independently for use with the Webserver agent when installed with the RPM or Debian packages.
+The Contrast Service is compiled for various supported architectures: Linux 64-bit, Macintosh 64-bit and Windows 64-bit. The Service is packaged with the Ruby and Python agents, and starts automatically when the instrumented application is started. 
+
+<!-- You can also start the Service independently for use with the Webserver agent when installed with the RPM or Debian packages.
  -->
