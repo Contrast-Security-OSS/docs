@@ -38,7 +38,7 @@ Define the following properties to set logging values. If these properties aren'
   * **logger**:
     * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example - */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
     * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
-    * `progname`: Name used to identify the process within the log file (Contrast Agent)
+    * **progname**: Set the name the agent uses to identify the process within the log file <br> Example: Contrast Agent
 
 ### Security logger
 
@@ -82,7 +82,7 @@ The following properties are used by the logger in the Contrast service. If the 
   * **logger**:
     * **path**: Set the location to which the Contrast service saves log output. If no log file exists at this location, the service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
     * **level**: Set the the log output level. Options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
-    * `progname`: Name to identify the process with the service log (Contrast Service)
+    * **progname**: Set the name the agent uses to identify the process within the service log file <br> Example: Contrast Agent
 
 
 ## Inventory Properties 
