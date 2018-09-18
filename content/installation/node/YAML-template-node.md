@@ -65,7 +65,6 @@ contrast:
 
   #=========
   # Auto_update
-  # TODO
   #=========
   # auto_update:
 
@@ -109,11 +108,26 @@ contrast:
     # Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
     # level: NEEDS_TO_BE_SET
 
+  #================================================================================================================================================================
+  # Node
+  # The following properties apply to any Node.js configurations.
+  #================================================================================================================================================================
+  # node:
+
+    # Explicitly set the location of the application's *package.json* file.
+    # app_root: NEEDS_TO_BE_SET
+
+    # Set the limit for lengths of stack traces.
+    # stack_trace_limit:
+
 #===========================================================================
 # Inventory
 # Use the properties in this section to override the inventory features.
 #===========================================================================
 # inventory:
+
+  # Set to `false` for the agent to not read or report library data.
+  # analyze_libraries: true
 
   # Apply a list of labels to libraries. Labels must be foratted as a comma-delimited list. \n Example - label1, label2, label3
   # tags: NEEDS_TO_BE_SET
@@ -146,7 +160,25 @@ contrast:
 # Protect
 # Use the properties in this section to override Protect features.
 #=====================================================================
-# protect: {}
+# protect:
+
+  #===================================================================
+  # Sampling
+  # Use the following properties to control sampling in the agent.
+  #===================================================================
+  # samples:
+
+    # Set the maximum number of Blocked events that the agent reports (per report cycle). 
+    # blocked: 25
+
+    # Set the maximum number of Blocked-at-Perimeter events that the agent reports (per report cycle).
+    # blocked_at_perimeter: 25
+
+    # Set the maximum number of Effective that the agent reports (per report cycle).
+    # exploited: 100
+
+    # Set the maximum number of Ineffective events that the agent reports (per report cycle).
+    # ineffective: 50
 
 #==================================================================================
 # Application
@@ -197,8 +229,8 @@ contrast:
   # Override the reported server environment.
   # environment: development
 
-  # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. 
-  #  Example - label1,label2,label3 
+  # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list.
+  #  Example - label1,label2,label3
   # tags: NEEDS_TO_BE_SET
 
 
