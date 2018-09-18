@@ -22,15 +22,6 @@ Configuration values use the following order of precedence:
 
 Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
-## Set as System Properties
-
-You can also set all of the following YAML properties as system properties. Derive the system property key from the YAML by joining every node with a "." until you reach the bottom property. 
-
-> **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
-  * contrast: 
-    * enable: `true`
-
-<!-- The precedence and system properties example are copied from Java. Edit or delete as needed.  -->
 
 ## Configuration Options
 
