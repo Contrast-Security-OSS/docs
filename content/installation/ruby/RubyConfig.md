@@ -15,6 +15,8 @@ The configuration file is called *contrast_security.yaml* wherever it's located.
 3. Within the server's *etc/contrast* directory (e.g. */etc/contrast/contrast_security.yaml*)
 3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
+Go to the Ruby [YAML Template](installation-rubyconfig.html#ruby-template) for fully formatted properties that you can copy and use in your own configuration files.
+
 ## Service Configuration
 
 The Ruby agent launches an executable on startup that also needs access to the configuration files. Since the service is generally launched by the Ruby agent process, it has access to the same configuration file as the agent. However, if the service is started independently, it will attempt to use the same load path described above for its configuration file. 
@@ -29,7 +31,9 @@ The Ruby agent supports the full array of tagging messages to the Contrast serve
 For Trace tags, update the configuration of the agent. If there isn’t one, add a top-level `assess` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string.  
 -->
 
-## Contrast UI Properties
+## Configuration Options
+
+### Contrast UI properties
 
 Use the properties in this section to connect the agent to the Contrast UI.
 
@@ -41,9 +45,9 @@ Use the properties in this section to connect the agent to the Contrast UI.
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **last_config_path**: Set the path to which the agent should store the currently used configuration from the Contrast UI. <br> Example: *./tmp/config*
 
-## Contrast Agent Properties
+### Contrast agent properties
 
-### Logger
+#### Logger
 
 Define the following properties to set logging values. If these properties aren't defined, the agent uses the logging values from the Contrast UI.
 
@@ -54,7 +58,7 @@ Define the following properties to set logging values. If these properties aren'
     * **progname**: Override the name of the process the agents uses in logs. <br> Example: Contrast Agent
     * **metrics**: Set to `true` for the agent to tag logs with "!AM!" for the metrics tool.
 
-### Security logger
+#### Security logger
 
 Define the following properties to set security logging values. If not defined, the agent uses the security logging (CEF) values from the Contrast UI.
 
@@ -65,7 +69,7 @@ Define the following properties to set security logging values. If not defined, 
     * **roll_size**: Set the roll size for log files unless `agent.logger.roll_daily=true`. <br> Example: `100M`
     * **backups**: Set the number of backup files to keep. <br> Example: `10`
 
-#### Syslog 
+##### Syslog 
 
 Define the following properties to set Syslog values. If the properties aren't defined, the agent uses the Syslog values from the Contrast UI.
 
@@ -79,7 +83,7 @@ Define the following properties to set Syslog values. If the properties aren't d
     * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
 
 
-### Service
+#### Service
 
 The following properties are used by the Contrast Service.
 
@@ -89,7 +93,7 @@ The following properties are used by the Contrast Service.
   * **host**: Set the the hostname or IP address of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `localhost`
   * **port**: Set the the port of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `30555`
     
-#### Logger
+##### Logger
 
 The following properties are used by the logger in the Contrast service. If the properties are not defined, the service uses the logging values from the Contrast UI.
 
@@ -107,7 +111,7 @@ The following configuration options allow you to fine-tune the Ruby agent.
   * `analyze_inventory_async`: If set to `true`, this wraps the initial inventory message in a thread which may speed up the response time on the first request after startup. 
  -->
 
-## Inventory Properties 
+### Inventory properties 
 
 Use the properties in this section to override the inventory features.
 
@@ -117,7 +121,7 @@ For **library** tags, update the configuration of the agent. If there isn’t on
   * **enable**: Set to `false` to disable Inventory features in the agent.
   * **tags**: Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. <br> Example: `label1, label2, label3`
 
-## Contrast Assess Properties
+### Contrast Assess properties
 
 Use the properties in this section to control Assess.
 
@@ -133,12 +137,12 @@ Use the properties in this section to control Assess.
     * **disabled_rules**: Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. <br> Example: Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
 
 
-## Contrast Protect Properties
+### Contrast Protect properties
 
 Use the properties in this section to override Protect features.
 
 * **protect**:
-  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Default: `true`
+  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. 
   * **rules**:
     * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
     * **bot-blocker**: 
@@ -157,7 +161,7 @@ Use the properties in this section to override Protect features.
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
 
-## Application Properties
+### Application properties
 
 Use the properties in this section for the application(s) hosting each agent.
 
@@ -172,7 +176,7 @@ For **application** tags, update the configuration of the agent. If there isn’
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
   * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
-## Server Properties
+### Server properties
 
 Use the properties in this section to set metadata for the server hosting each agent.
 

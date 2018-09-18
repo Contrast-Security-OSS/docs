@@ -4,7 +4,7 @@ description: "Template for Ruby Agent and Service configuration"
 tags: "installation ruby on rails agent service configuration"
 -->
 
-Go to the Ruby [Configuration Properties](installation-ruby.html#ruby-config) article for more information about this template.
+Go to the Ruby [Configuration Properties](installation-rubyconfig.html#ruby-config) article for more information about this template.
 
 ```
 #================================================================================================================================================================================

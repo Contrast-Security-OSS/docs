@@ -8,6 +8,8 @@ Contrast supports YAML-based configuration for the Java agent. This allows you t
 
 > **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
 
+## Load Path
+
 Configuration values use the following order of precedence: 
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
@@ -20,15 +22,20 @@ Configuration values use the following order of precedence:
 
 <!-- Other use and file location info. This will be done after CONTRAST-26125  -->
 
+Go to the [Java YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
+
+## Set as System Properties
+
 You can also set all of the following YAML properties as system properties. Derive the system property key from the YAML by joining every node with a "." until you reach the bottom property. 
 
 > **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
   * contrast: 
     * enable: `true`
 
-Go to the [Java YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
 
-## Contrast UI Properties
+## Configuration Options
+
+### Contrast UI properties
 
 Use the properties in this section to connect the Java agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
@@ -52,12 +59,12 @@ Use the properties in this section to connect the Java agent to the Contrast UI.
     * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
 
 
-## Contrast Agent Properties
+### Contrast agent properties
 
 Use the properties in this section to control the way and frequency with which the Java agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
-### Diagnostic Logging
+#### Diagnostic logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
 
@@ -72,7 +79,7 @@ Use the properties in this section to control diagnostic logging. These logs all
     * **roll_size**: Set the roll size for log files unless `agent.logger.roll_daily=true`. <br> Example: `100M`
     * **backups**: Set the number of backup files to keep. <br> Example: `10`
 
-### Security Logging
+#### Security logging
 
 Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors and blocks attacks against your application. They are written to the specified file in the Common Event Format (CEF). The Syslog settings allow you to send security logs to remote servers.
 
@@ -103,7 +110,7 @@ Words here...
 Properties formatted as list/grid -->
 
 
-## Inventory Properties
+### Inventory properties
 
 Use the properties in this section to control inventory features in the Java agent.
 
@@ -114,7 +121,7 @@ Use the properties in this section to control inventory features in the Java age
   * **prune_package_details**: Set to `false` to disable Inventory features in the agent. 
   * **tags**: Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. <br> Example: `label1, label2, label3`
 
-## Contrast Assess Properties
+### Contrast Assess properties
 
 Use the properties in this section to control Assess in the Java agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
 
@@ -137,13 +144,13 @@ Use the properties in this section to control Assess in the Java agent. The samp
     * **disabled_rules**: Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. <br> Example: Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
 
 
-## Contrast Protect Properties
+### Contrast Protect properties
 
 Use the properties in this section to control Protect features and rules.
 
 * **protect**:
 
-  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Default: `true`
+  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. 
 
   * **rules**:
     * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
@@ -170,7 +177,7 @@ Use the properties in this section to control Protect features and rules.
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
     
-## Application Properties
+### Application properties
 
 Use the properties in this section to control the application(s) hosting this agent.
 
@@ -183,7 +190,7 @@ Use the properties in this section to control the application(s) hosting this ag
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
   * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
-## Server Properties 
+### Server properties 
 
 Use the properties in this section to set metadata for the server hosting this agent.
 

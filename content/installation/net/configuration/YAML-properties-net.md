@@ -8,6 +8,8 @@ Contrast support YAML-based configuration for the .NET agent. This allows you to
 
 > **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
 
+## Load Path
+
 Configuration values use the following order of precedence: 
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
@@ -18,6 +20,10 @@ Configuration values use the following order of precedence:
 6. Contrast UI value
 7. Default value 
 
+Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
+
+## Set as System Properties
+
 You can also set all of the following YAML properties as system properties. Derive the system property key from the YAML by joining every node with a "." until you reach the bottom property. 
 
 > **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
@@ -26,10 +32,9 @@ You can also set all of the following YAML properties as system properties. Deri
 
 <!-- The precedence and system properties example are copied from Java. Edit or delete as needed.  -->
 
+## Configuration Options
 
-Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
-
-## Contrast UI Properties
+### Contrast UI properties
 
 Use the properties in this section to connect the .NET agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
@@ -50,7 +55,7 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
     * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
 
 
-## Contrast Agent Properties
+### Contrast agent properties
 
 Use the properties in this section to control the way and frequency with which the .NET agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
@@ -62,7 +67,7 @@ If these values are not set, the agent will use the values set in the Contrast U
     * **checks:** Set the frequency with which the agent checks for updates. Valid values are `daily` for every 24 hours and on startup, or `startup` for *only* when service starts up.
 
 
-### Diagnostic Logging
+#### Diagnostic logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
 
@@ -72,7 +77,7 @@ Use the properties in this section to control diagnostic logging. These logs all
     * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
 
 
-### Security Logging
+#### Security logging
 
 Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors and blocks attacks against your application. They are written to the specified file in the Common Event Format (CEF). The Syslog settings allow you to send security logs to remote servers.
 
@@ -88,7 +93,7 @@ Use the properties in this section to control security logging. These logs allow
       * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
 
 
-### Agent-Specific Properties
+#### Agent-specific properties
 
 The following properties apply to any .NET agent-wide configurations. <!-- More words here... -->
 
@@ -96,17 +101,17 @@ The following properties apply to any .NET agent-wide configurations. <!-- More 
 
     * **app_pool_blacklist**: Set a list of application pool names that the agent does not instrument or analyze. Names must be formatted as a comma-separated list.
     * **app_pool_whitelist**: Set a list of application pool names that the agent instruments or analyzes. If set, other application pools are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
-    * **enable_clr2_analysis**: Enable instrumentation and analysis of application pools targeting CLR2. <br> Default: `true`
-    * **enable_chaining**: Enable an experimental profiler chaining feature to allow Contrast to work alongside other tools that use the CLR Profiling API. <br> Default: `false`
-    * **enable_dvnr**: Indicate that the agent should produce a report that summarizes application hosting on the server (e.g., CLR versions, bitness or pipeline modes). <br> Default: `true`
-    * **enable_instrumentation_optimizations**: Indicate that the agent should allow CLR optimizations of JIT-compiled methods. <br> Default: `true`
-    * **enable_jit_inlining**: Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast. <br> Default: `true`
-    * **restart_iis_on_config_change**: Indicate that the agent should automatically restart IIS to apply certain configuration changes (e.g., `app_pool_blacklist`). <br> Default: `true`
-    * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting. <br> Default: `false`
+    * **enable_clr2_analysis**: Enable instrumentation and analysis of application pools targeting CLR2. 
+    * **enable_chaining**: Enable an experimental profiler chaining feature to allow Contrast to work alongside other tools that use the CLR Profiling API.
+    * **enable_dvnr**: Indicate that the agent should produce a report that summarizes application hosting on the server (e.g., CLR versions, bitness or pipeline modes).
+    * **enable_instrumentation_optimizations**: Indicate that the agent should allow CLR optimizations of JIT-compiled methods. 
+    * **enable_jit_inlining**: Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
+    * **restart_iis_on_config_change**: Indicate that the agent should automatically restart IIS to apply certain configuration changes (e.g., `app_pool_blacklist`).
+    * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
     * **thread_analysis**: Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
     * **web_module_whitelist**: Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See the [troubleshooting article](troubleshooting-netissues.html#zero) for more information. <br> Example: WebResource.axd
 
-## Inventory Properties
+### Inventory properties
 
 Use the properties in this section to control inventory features in the .NET agent.
 
@@ -115,7 +120,7 @@ Use the properties in this section to control inventory features in the .NET age
     * **tags**: Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. <br> Example: `label1, label2, label3`
 
 
-## Contrast Assess Properties
+### Contrast Assess properties
 
 Use the properties in this section to control Assess in the .NET agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
 
@@ -139,13 +144,13 @@ Use the properties in this section to control Assess in the .NET agent. The samp
     * **disabled_rules**: Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. <br> Example: Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
 
 
-## Contrast Protect Properties
+### Contrast Protect properties
 
 Use the properties in this section to control Protect features and rules.
 
 * **protect**:
 
-  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Default: `true`
+  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
 
   * **rules**:
     * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
@@ -172,7 +177,7 @@ Use the properties in this section to control Protect features and rules.
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
 
-## Application Properties
+### Application properties
 
 Use the properties in this section to control the application(s) hosting this agent.
 
@@ -183,7 +188,7 @@ Use the properties in this section to control the application(s) hosting this ag
   * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
 
-## Server Properties 
+### Server properties 
 
 Use the properties in this section to set metadata for the server hosting this agent.
 
