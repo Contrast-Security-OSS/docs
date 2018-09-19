@@ -102,7 +102,6 @@ The following properties are used by the logger in the Contrast service. If the 
     * **level**: Set the the log output level. Options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
     * **progname**: Override the name of the process used in logs. <br> Example: Contrast Service
 
-
 <!-- ### Ruby-specific properties
 
 The following configuration options allow you to fine-tune the Ruby agent.

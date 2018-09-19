@@ -4,7 +4,7 @@ description: "Instructions for configuring Node agent properties via YAML file"
 tags: "installation node agent YAML configuration rules properties"
 -->
 
-Contrast support YAML-based configuration for the Node agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
+Contrast supports YAML-based configuration for the Node agent. This allows you to store configuration on disk that you can override with environment variables or command-line arguments.
 
 > **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
 
@@ -21,17 +21,6 @@ Configuration values use the following order of precedence:
 7. Default value 
 
 Go to the [Node YAML Template](installation-nodeconfig.html#node-template) for fully formatted properties that you can copy and use in your own configuration files. 
-
-## Set as System Properties
-
-You can also set all of the following YAML properties as system properties. Derive the system property key from the YAML by joining every node with a "." until you reach the bottom property. 
-
-> **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
-  * contrast: 
-    * enable: `true`
-
-<!-- The precedence and system properties example are copied from Java. Edit or delete as needed.  -->
-
 
 ## Configuration Options 
 
