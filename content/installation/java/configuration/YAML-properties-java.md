@@ -4,7 +4,7 @@ description: "Instructions for configuring Java agent properties via YAML file"
 tags: "installation java agent YAML configuration rules properties"
 -->
 
-Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk and override that configuration with environment variable and CLI args, if necessary.
+Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
 
 > **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
 
@@ -15,8 +15,7 @@ Configuration values use the following order of precedence:
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 1. System property value
 1. Environment variable value
-1. User configuration file value 
-<!-- TODO , for the java agent this includes the legacy file and the YAMl file. Should we specify both or just not mention the legacy file (which no one should be using anymore, I think.-->
+1. YAML configuration file value
 1. Contrast UI value
 1. Default value
 
