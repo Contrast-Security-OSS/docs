@@ -63,6 +63,9 @@ contrast:
 #=======================================================================================================================================
 # agent:
 
+  # Set to limit the length of Error stack traces to a specified number.
+  # stack_trace_limit: 10
+
   #=========
   # Auto_update
   #=========
