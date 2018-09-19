@@ -91,7 +91,7 @@ To pass configuration options to the application being run with Contrast, use th
 > **Example:** `npm run contrast -- --agent.logger.level debug -- --appArg0 foo --appArg1 bar` will pass `appArg0 foo` and `appArg1 bar` directly to the application.
 
 
-## Node.js CLI Arguments
+## CLI Arguments
 
 From the Node.js documentation, you can see scripts are executed in the following way:
 
