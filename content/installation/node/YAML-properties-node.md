@@ -8,6 +8,8 @@ Contrast supports YAML-based configuration for the Node agent. This allows you t
 
 > **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
 
+## Load Path 
+
 Configuration values use the following order of precedence: 
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
@@ -20,7 +22,9 @@ Configuration values use the following order of precedence:
 
 Go to the [Node YAML Template](installation-nodeconfig.html#node-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
-## Contrast UI Properties
+## Configuration Options 
+
+### Contrast UI properties
 
 Use the properties in this section to connect the Node agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
@@ -39,7 +43,7 @@ Use the properties in this section to connect the Node agent to the Contrast UI.
     * **url**: Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
 
 
-## Contrast Agent Properties
+### Contrast agent properties
 
 Use the properties in this section to control the way and frequency with which the Node agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
@@ -52,7 +56,7 @@ If these values are not set, the agent will use the values set in the Contrast U
     * **timeout_ms**: Set the length of time to wait before aborting the auto-update attempt.
 
 
-### Diagnostic Logging
+#### Diagnostic logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
 
@@ -64,7 +68,7 @@ Use the properties in this section to control diagnostic logging. These logs all
     * **stdout**: Set to `false` for the agent to suppress output to STDOUT.
 
 
-### Security Logging
+#### Security logging
 
 Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors and blocks attacks against your application. They are written to the specified file in the Common Event Format (CEF). The Syslog settings allow you to send security logs to remote servers.
 
@@ -73,7 +77,7 @@ Use the properties in this section to control security logging. These logs allow
     * **level**: Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
 
 
-### Agent-Specific Properties
+#### Agent-specific properties
 
 The following properties apply to any Node.js configurations.
 
@@ -81,7 +85,7 @@ The following properties apply to any Node.js configurations.
     * **app_root**: Explicitly set the location of the application's *package.json* file.
     * **stack_trace_limit**: Set the limit for lengths of stack traces.
 
-## Inventory Properties
+### Inventory properties
 
 Use the properties in this section to control inventory features in the Node agent.
 
@@ -90,7 +94,7 @@ Use the properties in this section to control inventory features in the Node age
     * **tags**: Apply a list of labels to libraries. Labels must be formatted as a comma-delimited list. <br> Example: `label1, label2, label3`
 
 
-## Contrast Assess Properties
+### Contrast Assess properties
 
 Use the properties in this section to control Assess in the Node agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
 
@@ -107,7 +111,7 @@ Use the properties in this section to control Assess in the Node agent. The samp
     * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
 
 
-## Contrast Protect Properties
+### Contrast Protect properties
 
 Use the properties in this section to control Protect features and rules.
 
@@ -119,7 +123,7 @@ Use the properties in this section to control Protect features and rules.
 	* **exploited**: Set the maximum number of Effective that the agent reports (per report cycle).
 	* **ineffective**: Set the maximum number of Ineffective events that the agent reports (per report cycle).
 
-## Application Properties
+### Application properties
 
 Use the properties in this section to control the application(s) hosting this agent.
 
@@ -131,7 +135,7 @@ Use the properties in this section to control the application(s) hosting this ag
   * **args**: Pass arguments to the underlying application.
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
 
-## Server Properties 
+### Server properties 
 
 Use the properties in this section to set metadata for the server hosting this agent.
 
@@ -144,5 +148,4 @@ Use the properties in this section to set metadata for the server hosting this a
   * **version**: Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
-
 

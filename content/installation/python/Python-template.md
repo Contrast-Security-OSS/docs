@@ -4,7 +4,7 @@ description: "Template for Python Agent and Service configuration"
 tags: "installation python django flask pyramid agent service configuration"
 -->
 
-Go to the Python [Configuration Properties](installation-ruby.html#ruby-config) article for more information about this template.
+Go to the Python [Configuration Properties](installation-pythonconfig.html#python-config) article for more information about this template.
 
 ```
 #================================================================================================================================================================================
