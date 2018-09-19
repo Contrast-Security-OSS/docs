@@ -4,14 +4,7 @@ description: "Overview of Using Bugtrackers with Contrast"
 tags: "Admin organization settings integrations bugtracker overview"
 -->
 
-Streamline the remediation process for vulnerabilities by sending details directly from Contrast to a configured bugtracker. Contrast supports integrations with the following services. 
-
-* Mozilla Bugzilla
-* Atlassian JIRA
-* Visual Studio Team Services/Team Foundation Services (VSTS/TFS)
-* Serena Business Manager
-
-For more information about the configuration process for each bugtracker, use the quicklinks to go to the appropriate [articles](admin-orgintegrations.html).  
+Streamline the remediation process for vulnerabilities by sending details directly from Contrast to a configured bugtracker. Contrast supports integrations with services including Atlassian JIRA, Microsoft Visual Studio Team Services/Team Foundation Services (VSTS/TFS), Mozilla Bugzilla and Serena Business Manager. 
 
 >**Note:** You must configure a bugtracker integration in your organization before sending vulnerabilities to it.  
 
