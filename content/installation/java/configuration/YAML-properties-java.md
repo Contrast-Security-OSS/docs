@@ -4,7 +4,7 @@ description: "Instructions for configuring Java agent properties via YAML file"
 tags: "installation java agent YAML configuration rules properties"
 -->
 
-Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
+Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. This configuration must be used with the Java 1.5 agent; it cannot be used with the Java agent that automatically updates.
 
 > **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
 
