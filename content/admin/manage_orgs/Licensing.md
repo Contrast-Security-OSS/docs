@@ -1,54 +1,82 @@
 <!--
 title: "License Management"
-description: "Overview of Licensing visibility"
-tags: "Admin manage SuperAdmin EOP SaaS RASP IAST Licensing"
+description: "Overview of allocating and managing licenses"
+tags: "Admin manage SuperAdmin EOP SaaS Assess Protect Licensing"
 -->
 
-## Granting Licenses
-A SuperAdmin may grant separate Assessment (IAST) and Protection (RASP) licenses to an organization via the **Organizations** page. Assessment licenses apply to applications while Protection licenses apply to servers. The **Licenses** column will list the number of used and unused licenses that have been granted for both types and a red warning icon will be displayed if licenses are nearing expiration.  
+Allocate, revoke and manage Assess and Protect licenses for individual organizations as a SuperAdmin. An Organization Admin may then apply and remove Protect licenses for servers in their organization. 
 
-<a href="assets/images/Licensing_Grid.png" rel="lightbox" title="SuperAdmin Organizations Page"><img class="thumbnail" src="assets/images/Licensing_Grid.png"/></a>
+## Supervise Licenses
 
-Select **Grant Licenses** from the organization's row menu dropdown.  The dialog that follows will allow you to choose the number of licenses as well as the desired expiration date if you are using Contrast's SaaS product.
+A SuperAdmin may grant separate Assess and Protect licenses to an organization in the **Organizations** page. (Assess licenses apply to applications and Protect licenses apply to servers.) The **Licenses** column in the organizations grid lists the number of used and unused licenses that have been granted. If licenses are nearing expiration, a red warning icon appears in the grid row. 
 
-In the case of EOP, expiration dates will already be set, as will the total number of licenses available to grant.  These counts will show in the dialog.
+<a href="assets/images/Org-grid.png" rel="lightbox" title="Organizations page"><img class="thumbnail" src="assets/images/Org-grid.png"/></a>
 
-<a href="assets/images/Licensing_Grant.png" rel="lightbox" title="Granting A License (SaaS)"><img class="thumbnail" src="assets/images/Licensing_Grant.png"/></a>
+SuperAdmins can also view current license usage, update an EOP license, and manage impending expirations in the **User menu > System Settings > Licensing tab**. 
+
+<a href="assets/images/System-settings-licensing.png" rel="lightbox" title="View Licensing in System Settings"><img class="thumbnail" src="assets/images/System-settings-licensing.png"/></a>
+
+### Allocate Licenses
+
+To grant licenses to an organization, click the caret in the grid row and select **Allocate Licenses** from the row action dropdown menu. In the dialog that appears, SaaS users can enter the number of Assess and/or Protect licenses in the given fields to allocate to that organization. Click in the corresponding **Expiration Date** fields to make your selections on the calendars. EOP users can choose to allocate licenses from the total number available, which is shown in dialog along with the predetermined expiration dates. 
+
+<a href="assets/images/Licenses-allocate.png" rel="lightbox" title="Allocate licenses dialog for SaaS"><img class="thumbnail" src="assets/images/Licenses-allocate.png"/></a>
+
+### License Summary
+
+You can manage the licenses granted to an organization by choosing **License Summary** in the row action dropdown menu, or by clicking on the license counts in the grid. The **License Summary** dialog provides thermometer charts of the organization's Assess and Protect licenses as well as upcoming expiration dates. SaaS users can use the links to **Allocate more licenses** or **Revoke unused licenses**. 
+
+<a href="assets/images/License-summary.png" rel="lightbox" title="License Summary dialog for SaaS"><img class="thumbnail" src="assets/images/License-summary.png"/></a>
+
+### Automatically apply licenses
+
+Automatically apply licenses to newly onboarded applications in the **Licensing** tab in System Settings. Use the toggle to **Automatically apply licenses to new applications** in the Assess section and the toggle to **Automatically apply licenses to new servers** in the Protect section. In the dialog that appears, select the button to cancel the action, apply licenses to new organizations only, or apply licenses to all current organizations. 
+
+<a href="assets/images/Auto-license-confirmation.png" rel="lightbox" title="Confirm auto-licensing options"><img class="thumbnail" src="assets/images/Auto-license-confirmation.png"/></a>
+
+Once the option is turned on for Protect, use the multiselect field to choose the environments in which automatic licensing applies; the default selection is "Production". 
+
+> **Note:** The checkbox to **Allow organization override** gives Organization Admins the option to reconfigure your selections in their organization; it's selected by default. 
+
+#### Organization dialog 
+
+You may also automatically apply licenses when adding an organization in the **Organizations** page using the radio button in the dialog that appears. (The default selection requires users to manually allocate licenses.) Enabling Protect using the toggle in the dialog also enables the check box to **Automatically apply allocated licenses** to servers. 
+
+<a href="assets/images/Add-organization-dialog.png" rel="lightbox" title="Configure auto-licensing in the Add Organization dialog"><img class="thumbnail" src="assets/images/Add-organization-dialog.png"/></a>
+
+## Apply and Remove Licenses
+
+An Organization Administrator can apply, remove and view details on their Protect licenses in the **Servers** page grid, their Assess licenses in the **Applications** page grid, or all licenses in the **Organization Settings > Organization tab > Licensing panel**.
+
+### Apply licenses
+
+To apply a Protect license to an an individual server, click the **UNLICENSED** link beside the server name, or click the caret in the grid row and choose **Apply Protect License** from the row action dropdown menu. To apply Protect licenses to multiple servers, select the checkboxes in the appropriate grid rows, click the shield icon in the batch actions menu above the grid, and choose **Apply Protect License** from the menu. Click the **Apply License** button in the confirmation dialog. 
+
+Once a license is applied, the Protect toggle is enabled in the grid rows for the applicable servers.
+
+<a href="assets/images/Servers-unlicensed.png" rel="lightbox" title="Apply a Protect license"><img class="thumbnail" src="assets/images/Servers-unlicensed.png"/></a>
+
+>**Note:** Protect licenses are currently available for Java servers only.
+
+#### Available licenses
+
+If your organization has consumed all allocated licenses, or if the organization doesn't have enough licenses available for the number of servers selected, the option to apply a license is disabled. Hover over the disabled selection to **Apply Protect Licenses** for more information. To return a license to the pool of available licenses for the organization, you must remove it from a server. 
+
+#### Automatically apply licenses
+
+If a SuperAdmin chose to apply automatic licensing to all organizations, you can use the toggles to disable and re-enable automatic Assess licensing for new applications as well as automatic Protect licensing for new servers. Once Protect is enabled, you can also use the multiselect field to choose the environments in which automatic licensing applies. 
+
+<a href="assets/images/Org-settings-licensing.png" rel="lightbox" title="Configure auto-licensing in the Licensing panel"><img class="thumbnail" src="assets/images/Org-settings-licensing.png"/></a>
+
+> **Note:** If a SuperAdmin disabled organization override, the toggles are not available; however, you can still view details on current licenses. 
+
+### Remove licenses 
+
+To remove licenses from an individual server, click the caret in the grid row and choose **Remove Protect License** from the row action dropdown menu. To remove Protect licenses from multiple servers, select the checkboxes in the appropriate grid rows, click the badge icon in the batch action menu above the grid, and choose **Remove Protect License** from the menu. Click the **Remove** button in the confirmation dialog. 
+
+<a href="assets/images/Servers-remove-license.png" rel="lightbox" title="Remove Protect license"><img class="thumbnail" src="assets/images/Servers-remove-license.png"/></a>
+
+> **Note:** All licenses that you remove immediately return to the pool of available licenses for the organization. 
 
 
-## Managing Granted Licenses
 
-SuperAdmins can manage the licenses granted to an organization by choosing **License Summary** in the row menu dropdown, or by clicking on the license counts in the grid.
-
-The **License Summary** dialog provides additional visibility and control of license information.  Expiration dates can be revised (if using SaaS) and unused granted licenses may be revoked from the organization if necessary.  When revoking licenses, note that the breakdown will update in real time.
-
-<a href="assets/images/Licensing_Summary.png" rel="lightbox" title="License Summary (SaaS)"><img class="thumbnail" src="assets/images/Licensing_Summary.png"/></a>
-
-<a href="assets/images/Licensing_SummaryEdit.png" rel="lightbox" title="Editing Licenses (SaaS)"><img class="thumbnail" src="assets/images/Licensing_SummaryEdit.png"/></a>
-
-
-## Organization Settings
-
-An organization's administrator will have visibility into their licenses via the **Organization Settings** page.  Thermometer charts for Assessment and Protection will break down used vs. unused licenses and a tooltip will reveal expiration dates for each.  They will also be able to see how licenses are being applied to their applications and servers.  If licenses are nearing expiration, the affected applications or servers will be listed and linked to on the right.
-
-<a href="assets/images/Licensing_OrgSettings.png" rel="lightbox" title="Organization Settings License Summary"><img class="thumbnail" src="assets/images/Licensing_OrgSettings.png"/></a>
-
-
-## Applying And Removing Protection Licenses
-
-On the **Servers** page, a user must choose which server(s) they wish to apply a Protection license to.  Unlicensed servers will have a link to apply protection next to their name, and the toggle in the **Protect** column will be switched off and disabled.  The **Protect** link allows for quick and easy licensing of an individual server.  Applying a license can also be done via the row menu dropdown or in a batch by selecting servers and clicking the **Protection Licenses** (shield) in the batch action buttons.  One or more licenses may also be removed using this dropdown. Once a license is applied, the toggle will be enabled and Protection may be turned on.
-
-<a href="assets/images/Licensing_Servers.png" rel="lightbox" title="Applying / Removing a Protection License"><img class="thumbnail" src="assets/images/Licensing_Servers.png"/></a>
-
->**Note:** Protection licenses are currently available for Java servers only.
-
-
-### Lack Of Available Licenses
-
-In the case where all available protection licenses have been consumed, the option to apply a license will be disabled. A license must be removed from a different server in order to go back into the pool for designation elsewhere.
-
-If applying licenses to multiple servers at a time and there aren't enough available licenses remaining, the option to apply a license will be disabled until the user revises their selection.
-
-Tooltips will instruct the user as to the reason the option is disabled in either case.
-
-<a href="assets/images/Licensing_SelectionTooltip.png" rel="lightbox" title="Revise Selection Tooltip"><img class="thumbnail" src="assets/images/Licensing_SelectionTooltip.png"/></a>

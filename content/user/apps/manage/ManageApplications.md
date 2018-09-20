@@ -1,37 +1,45 @@
 <!--
 title: "Managing Applications"
 description: "Overview of the core operations for an application from the action bar."
-tags: "user TeamServer application manage archiving restoring resetting deleting"
+tags: "user ui application manage archiving restoring resetting deleting"
 -->
 
-## Managing Applications
-Users of TeamServer, depending on either their [organization or application role](admin-manageorgsroleperm.html#roles) have the ability to manage applications. Certain functions can be found either inline or in the Action Bar. Operations found in the Action Bar can be performed in bulk.
+Contrast users can manage applications based on their [organization or application role](admin-manageorgsroleperm.html#roles). Manage individual applications in the grid, or use the Action Bar to make changes in bulk. To archive, restore, reset or delete applications, see the step-by-step instructions in the [Delete Applications](user-appsmanage.html#delete) article.  
 
-<a href="assets/images/Application_Action_Bar.png" rel="lightbox" title="Application Action Bar"><img class="thumbnail" src="assets/images/Application_Action_Bar.png"/></a>
+<a href="assets/images/Applications-page.png" rel="lightbox" title="Applications page"><img class="thumbnail" src="assets/images/Applications-page.png"/></a>
 
-## Archiving Applications
-Archiving is an operation that maintains the integrity of application data such as Traces and Libraries, but essentially turns the application to an "Off" status.
+## Change Application Names 
 
-Applications that should no longer collect traces, yet are wanted for historical purposes, can be archived. When an application is archived, the agent will be informed of the application status. It will no longer send traces to TeamServer. Applications that are archived will also improve the overall portfolio score, as they will not count against the total score. 
+To change an application name, go to the application's **Overview** page. Click on the name at the top of the page to update the text, or click on the **Settings** icon and update the name in the **Application Defaults** dialog. **Each application within an organization must have an unique name.** 
 
-When an application is archived, a small grey box will reside to the right of the application name. By default, these applications will not show up in the Applications search page. By checkmarking the **Show Archived** option, users will be able to view and interact with an archived application.
+> **Note:** Super Admins can also edit application names by clicking on the name in the **Applications** page grid. 
+
+## Archive Applications
+
+You can archive applications that should no longer collect traces, but that you want to keep for historical purposes. Archiving an application maintains the integrity of application data, such as traces and libraries, but essentially turns the application "off". When an application is archived, the agent is informed of the application status and no longer sends traces to the Contrast application. Archived applications also improve your overall portfolio score, as they don't count against the total score. 
+
+A small gray box appears to the right of the application name when it's in an archived state. By default, these applications don't show up in the **Applications** grid. However, you can check the **Show Archived** option in **Advanced Settings** to view and interact with an archived application.
 
 <a href="assets/images/Archived_App.png" rel="lightbox" title="Example Archived Application"><img class="thumbnail" src="assets/images/Archived_App.png"/></a>
 
-Archiving an application does not free up a license within TeamServer. The only way to return a license back to the pool of available licenses is to archive and reset an application, then perform a full delete option to the application (see below).
+> **Note:** Archiving an application doesn't free up a license in Contrast. The only way to return a license back to the pool of available licenses is to archive, reset and then fully delete the application. (See the sections below to **Reset** and **Delete Applications**.)
 
-## Restoring Applications (Unarchive)
-Once an application is archived, a user with an Administator role may choose to restore the application. Restoring an application is the inverse of archiving an application. The application becomes visible by default. All vulnerabilities and issues immediately impact the portfolio score.
+### Restore (unarchive) applications 
 
-If an application has been reset and all of the data is purged, there is no concept of restoring purged data. In this case the data is completely lost.
+Once an application is archived, an administrator can restore the application. (Restoring an application is the inverse of archiving an application.) The application becomes visible by default, and all vulnerabilities and issues immediately impact the portfolio score.
 
-## Resetting Applications
-Customers will often reset applications for the purpose of clearing all history and findings associated with a given application. Resetting doesn't remove the application, but rather purges all of the data associated with it.
+> **Note:** If an application was reset, there is no way to restore the purged data. 
+
+## Reset Applications
+
+Resetting an application purges all of the data associated with it, but doesn't remove the application. (Users often reset applications to clear all history and findings associated with a specific application.)
+
+## Delete Applications 
+
+You must archive an application before you can fully delete it. You aren't required to reset the application, as the deletion process truncates any associated data; however, Contrast recommends that you review the data and reset the application before you delete it. 
+
+## Group Applications
+
+Grouping is a simple way to tag or label one or more applications so that you can use the group attribute to improve search functionality in the Contrast interface. (It's also very different from [merging applications](user-appsmanage.html#merge).)
 
 
-## Fully Deleting Applications 
-Applications cannot be fully deleted unless they are archived first. The application is not required to be reset as the deletion process will truncate any associated data; however, it is recommended as a best practice that the data be reviewed and ideally, reset, prior to a full delete. For a full guide to deleting applications, see [Deleting An Application](user-appsmanage.html#delete)
-
-
-## Grouping Applications
-Grouping is very different from [merging applications](user-appsmanage.html#merge). Grouping is a simple way to tag or label one or more applications for search purposes. There are no other advantages in TeamServer for grouping other than using the Group attribute to improve search functionality.

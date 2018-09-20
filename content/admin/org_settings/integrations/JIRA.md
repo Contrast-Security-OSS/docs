@@ -1,67 +1,89 @@
 <!--
-title: "JIRA Integration"
-description: "Integrating JIRA with Contrast"
+title: "Jira Integration"
+description: "Integrating Jira with Contrast"
 tags: "Admin organization settings integrations jira"
 -->
 
 
-Integrating JIRA with Contrast allows you to automatically generate tickets, synchronize comments and push notifications for your applications.
+Integrate Jira with Contrast to automatically generate tickets, synchronize comments and push notifications for your applications.
 
 ## Prerequisites
 
-* JIRA account credentials (username and password)
+* Jira account credentials (username and password)
 * Permission to create issues in the target project
-* A running JIRA instance accessible via HTTP to the Contrast interface
+* A running Jira instance accessible via HTTP to the Contrast UI
 * A project to associate the application instrumented by Contrast
 
-## Setup
+## Add a Configuration 
 
-In Integrations, click **Connect** in the JIRA row. In the **Connect with JIRA** page, complete the following fields. 
+In the **Integrations** page, click **Connect** in the Jira row. In the **Connect with Jira** form, add the name for the bugtracker entry, the **username** and **password** for the account connected to Jira in the appropriate fields. The Jira URL must be accessible from the Contrast UI instance being configured.
 
-Field | Description
------- | -----------
-**Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers
-**Username** | The username for the account connected to JIRA
-**Password** | The password for the specified username
-**Host** | The JIRA URL; must be accessible from the Contrast interface instance being configured
+> **Note:** Contrast saves the username, password and Jira URL entered in your configuration as a set of credentials. See the ** Credential Sets** section for more details.
 
+Once you complete the fields, click **Test connection**. This process may take a few moments depending on the number of your Jira projects. The test verifies that Contrast can reach the Jira instance and that the specified user is able to log in.
 
-Once you complete the fields, click **Test connection**. This process may take a few moments depending on the number of your JIRA projects. The test verifies that the JIRA instance can be reached by Contrast and that the specified user is able to log in.
+<a href="assets/images/Jira-connection-setup.png" rel="lightbox" title="Configure a new Jira integration"><img class="thumbnail" src="assets/images/Jira-connection-setup.png"/></a>
 
-Once a connection is made, select the applications that you want to be available to this bugtracker as well as customize the values for the Project, Assignee and Default Issue Type fields. You can also customize the Default Severity levels and Additional JIRA fields. Note that we automatically include any required JIRA fields to ensure that you don’t have any trouble.
+Once connected, select the **applications** that you want to be available to this integration, and customize the values for the **Project**, **Assignee** and **Default Issue Type** fields. You can also customize the **Default Priority** levels for vulnerability severity and values for **Additional JIRA** fields, such as environment or labels. 
 
-<a href="assets/images/JIRA-integration-set-up.png" rel="lightbox" title="JIRA Integration"><img class="thumbnail" src="assets/images/JIRA-integration-set-up.png"/></a>
-
-> **Note:** If you change the Project or Issue type, required and additional fields are updated. However, the interface keeps the selected values that apply to the new configuration.
+> **Note:** If you change the Project or Issue type, required and additional fields are updated. However, the UI keeps the selected values that apply to the new configuration.
 
 ### Two-way integration 
 
-Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in JIRA. 
+Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in Jira. 
 
 <a href="assets/images/Two-way-jira-integration.png" rel="lightbox" title="Enable two-way integration"><img class="thumbnail" src="assets/images/Two-way-jira-integration.png"/></a>
 
-In the JIRA configuration page, begin setup by checking the box to **Enable two-way integration**. This generates a URL that appears below the checkbox, which your JIRA administrator must use to register a webhook in JIRA. Clicking the link opens a new tab that takes you to [instructions for registering webhooks](https://developer.atlassian.com/jiradev/jira-apis/webhooks#Webhooks-rest).
+In the Jira configuration page, check the box to **Enable two-way integration**. This generates a URL that appears below the checkbox, which your Jira administrator must use to register a webhook in JIRA. Clicking the link opens a new tab that takes you to [instructions for registering webhooks](https://developer.atlassian.com/jiradev/jira-apis/webhooks#Webhooks-rest). In the webhook configuration, place a check for the **updated** event type under **Issue** column for **Issue related events**.
 
-> **Note:** When you delete a configuration with two-way integration enabled, you must delete the webhook configuration from your JIRA administrator console to completely remove the integration.
+> **Note:** When you delete a configuration with two-way integration enabled, you must delete the webhook configuration from your Jira administrator console to completely remove the integration.
 
-Continue to the fields below to set a vulnerability status based on each JIRA ticket status and resolution. Beside each ticket status and resolution pairing, choose a vulnerability status from the dropdown menu. The table below shows the default options in **bold**. 
+In the fields below, use the dropdown menu to set a vulnerability status based on a JIRA ticket status and resolution pairing. The table below shows the default vulnerability status options in **bold**. 
 
 | Ticket Status | Ticket Resolution  | Vulnerability Status Options                               |
 |---------------|--------------------|------------------------------------------------------------|
 | OPEN          | N/A                | **Confirmed** <br> Suspicious <br>  Reported               |
 | IN PROGRESS   | N/A                | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
-| RESOLVED      | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| RESOLVED      | Fixed <br> Won't Fix <br> Duplicate <br> Incomplete <br> Cannot Reproduce <br> Done <br> Won't Do | **Not a Problem** <br> Remediated <br> Fixed  |
 | REOPENED      | N/A                | **Confirmed** <br> Suspicious <br> Reported                |
-| CLOSED        | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| CLOSED        | Fixed <br> Won't Fix <br> Duplicate <br> Incomplete <br> Cannot Reproduce <br> Done <br> Won't Do | **Not a Problem** <br> Remediated <br> Fixed  |
 | BLOCKED       | N/A                | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
 | NEEDS CLARIFICATION | N/A          | **Confirmed** <br> Suspicious <br>  Not a Problem <br> Remediated <br> Reported <br> Fixed |
-| READY TO DEPLOY | FIXED <br> WON'T FIX <br> DUPLICATE <br> INCOMPLETE <br> CANNOT REPRODUCE <br> DONE <br> WON'T DO | **Not a Problem** <br> Remediated <br> Fixed  |
+| READY TO DEPLOY | Fixed <br> Won't Fix <br> Duplicate <br> Incomplete <br> Cannot Reproduce <br> Done <br> Won't Do | **Not a Problem** <br> Remediated <br> Fixed |
 
-If you choose **Not a Problem**, Contrast requires you to enter a **Reason** in the dropdown menu, as it does in the Vulnerability grid. The default selection in the dropdown menu is **Other**. 
+> **Note:** If you choose **Not a Problem**, Contrast requires you to enter a **Reason** in the dropdown menu. The default selection in the dropdown menu is **Other**. 
 
-Once the two-way integration is saved, Contrast will automatically generate comments in the Discussion tab on each vulnerability page when the status of a ticket is updated. The name of the bugtracker and the link to the ticket. 
+Once the two-way integration is saved, Contrast will automatically generate comments in the vulnerability's **Discussion** page when the status of a ticket is updated. Each comment includes the name of the bugtracker and a link to the ticket. 
 
 #### Multiple vulnerabilities
 
-For multiple vulnerabilities sent to JIRA in bulk as a single issue, the JIRA ticket status applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be closed when all the tickets are closed.
+For multiple vulnerabilities sent to Jira in bulk as a single issue, the Jira ticket status applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be closed when all the tickets are closed.
+
+### Automatically create tickets 
+
+Automatically create tickets in Jira for newly discovered vulnerabilities by checking the designated box in the configuration form. In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. The default selections are **Critical** and **High**.
+
+>**Note:** This selection doesn't generate tickets retroactively.
+
+## Credentials
+
+Contrast saves the latest set of credentials that you enter in your Jira configurations to help you set up new connections even faster. The username, password and Jira URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
+
+### Manage credentials
+
+To create or edit a configuration with credentials that are different than your default set, select the **Manage credentials** link. In the **URL** field, use the dropdown menu to choose a set of saved credentials; or, manually update the values in the **URL**, **Username** and **Password** fields. Once you've updated the fields, click the button to **Test Connection**. 
+
+<a href="assets/images/Jira-connect-credentials.png" rel="lightbox" title="Set up a new JIRA configuration with saved credentials"><img class="thumbnail" src="assets/images/Jira-connect-credentials.png"/></a>
+
+Click the button to **Save** your changes. If you're using new credentials, you must choose to override the existing set of credentials under the given name, or save the new values as a new credential set under a different name. 
+
+<a href="assets/images/Jira-credentials-dialog.png" rel="lightbox" title="Override default JIRA credentials in your configuration"><img class="thumbnail" src="assets/images/Jira-credentials-dialog.png"/></a>
+
+You can also select the **Manage Credentials** link in the Jira Integrations row to modify your existing sets of information. In the configuration form, use the dropdown menu to select a set of saved credentials, and then modify the values in the given fields. Click the link to **Rename** the set of credentials, if needed. 
+
+<a href="assets/images/Manage-jira-credentials.png" rel="lightbox" title="Manage saved credentials"><img class="thumbnail" src="assets/images/Manage-jira-credentials.png"/></a>
+
+>**Note:** Any updates to a set of credentials will affect all configurations using that set. 
+
+Click the button to **Test Connection**; once Contrast verifies the connection, click the button to **Save** your changes. 
 

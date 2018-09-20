@@ -62,5 +62,5 @@ The following steps are from the [Websphere support site](http://www-01.ibm.com/
 
 <a href="assets/images/KB2-e01.png" rel="lightbox" title="Generic JVM Arguments"><img class="thumbnail" src="assets/images/KB2-e01.png"/></a>
 
-> **Note:** IBM J9 does not allow the Java Instrumentation API to alter core Java classes when using the [Shared Classes](http://www.ibm.com/developerworks/library/j-ibmjava4/index.html) feature, so this must be disabled by specifying ```-Xshareclasses:none``` in your JVM parameters, as shown above.
+> **Note:** IBM J9 does not allow the Java Instrumentation API to alter core Java classes when using the [Shared Classes](http://www.ibm.com/developerworks/library/j-ibmjava4/index.html) feature, so this must be disabled by specifying ```-Xshareclasses:none``` in your JVM parameters, as shown above. Similarly, if -Dcom.ibm.oti.shared.enabled=true is set, you may also run into problems in older J9 JREs.
 

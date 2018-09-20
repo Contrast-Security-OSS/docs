@@ -15,18 +15,42 @@ Integrating Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) w
 
 ## Setup
 
-In the Integrations page, click **Connect** in the VSTS row. In the **Connect with Visual Studio** page, complete the following fields.
-
-Field | Description
------- | -----------
-**Name** | The name for the bugtracker entry; displayed when sending findings to bugtrackers
-**Personal Access Token** | The token associated with your user to [authenticate to your host](https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/overview).
-**Host** | The VSTS or TFS URL; must be accessible from the Contrast interface instance being configured
-
-Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in.
+In the **Integrations** page, click **Connect** in the VSTS row. This takes you to the **Connect with Visual Studio** page, where you must complete the following fields.
 
 <a href="assets/images/VSTS-TFS-integration.png" rel="lightbox" title="VSTS Integration"><img class="thumbnail" src="assets/images/VSTS-TFS-integration.png"/></a>
 
-Once a connection is made, select the applications that you want to be available to this bugtracker as well as customize the values for the Project, Assignee and Default Work Isse Type fields. You can also customize the Default Severity or Priority levels depending on the work issue type.
 
-> **Note:** Contast uses API v.2 to support VSTS and TFS 2015/2017.
+* **Name:** The name for the bugtracker entry; displayed when sending findings to bugtrackers.
+* **Personal Access Token:** The token associated with your user to [authenticate to your host](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate).
+* **Host:** The VSTS or TFS URL; must be accessible from the Contrast interface instance being configured.
+
+Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in.
+
+Once a connection is made, select the applications that you want to be available to this bugtracker. Customize the values for the Project, Assignee and Default Work Issue Type fields as well as the Default Severity or Priority levels depending on the work issue type.
+
+> **Note:** Contrast uses API v.2 to support VSTS and TFS 2015/2017.
+
+### Two-way integration
+
+Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in VSTS or TFS.
+
+<a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration with VSTS or TFS"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
+
+In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket state. If you choose **Not a Problem** as a ticket state, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid; the default selection is "Other". 
+
+> **Note:** After you fill in the the **Work Item Type** and the **Project** fields in the configuration page, as outlined in the previous section, Contrast does an API call that returns a list of your VSTS/TFS ticket states. The **Vulnerability Status** dropdown menus are populated accordingly. For more information about VSTS and TFS work item types and ticket states, read [Microsoft's documentation](https://docs.microsoft.com/en-us/vsts/work/work-items/guidance/agile-process-workflow#track-progress).
+
+Once the two-way integration is saved, Contrast will automatically generate comments in the **Discussion** tab on each vulnerability page when the state of a ticket is updated. Each comment includes the name of the bugtracker and a link to the ticket. 
+
+#### Multiple vulnerabilities
+
+For multiple vulnerabilities sent to VSTS or TFS in bulk as a single issue, the ticket state applies to all vulnerabilities associated with that ticket. For multiple tickets tied to a single vulnerability, the vulnerability can only be updated when all the tickets are updated as well.
+
+> **Example:** If you change a ticket state from "New" to "Active", Contrast updates the vulnerability status only if all the tickets related to that vulnerability are in "Active" state. 
+
+### Automatically create tickets 
+
+Automatically create tickets for newly discovered vulnerabilities by checking the designated box in the configuration form. In the multiselect field that appears, choose the Rule(s) and/or Severity level(s) of the vulnerabilities for which you want to generate tickets. The default selections are "Critical" and "High".
+
+> **Note:** This selection doesn't generate tickets retroactively.
+

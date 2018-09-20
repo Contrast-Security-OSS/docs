@@ -1,3 +1,5 @@
+
+
 <!--
 title: "Troubleshooting the Agent"
 description: "Troubleshooting guide for the agent installation process."
@@ -21,7 +23,7 @@ Using fully-qualified paths fixes everything:
 
 If it still fails, double check the path to the ***contrast.jar*** file correctly and make sure the user running the server has the correct filesystem privileges to read the file and its parent directory.
 
-## Scenario: I don't see Contrast messages in my console at startup.
+## Scenario: I don't see Contrast messages in my console at startup
 
 When you start your application server with Contrast, the first thing you should see is a few startup messages from Contrast printed to standard out. There are only a couple reasons this could happen:
 
@@ -58,7 +60,7 @@ $ java -jar contrast.jar diagnostic
 [!] Attempting to connect to the Contrast TeamServer at http://localhost:19080/Contrast (No proxy). 
 [+] Looking up http://localhost:19080/Contrast 
         Couldn't resolve host 
-[-] Client cannot resolve the Contarst TeamServer. A proxy or DNS change may be needed. 
+[-] Client cannot resolve the Contrast TeamServer. A proxy or DNS change may be needed. 
 [+] Issuing HTTP request to Contrast... 
         Executing request... 
         Reading response [200] 
@@ -77,9 +79,16 @@ You can also customize the diagnostic test and quickly test out different proxy 
 
 ## Scenario: I see OutOfMemoryError, PermGen or other unexplained stack traces
 
-If you're running into unexplained OutOfMemoryErrors, NoClassDefFoundErrors that seem to reference Contrast code, PermGen problems, the following may explain what's happening:
+If you're running into unexplained OutOfMemoryErrors, NoClassDefFoundErrors that seem to reference Contrast code or PermGen problems, the following may explain what's happening:
 * You need to add more PermGen (-XX:MaxPermSize=128m or more) and/or heap space (-Xmx768m or more).
 * You're running an unsupported container or version.
 * An unsupported OSGi container within your application is causing class loading issues with Contrast.
 
 If you have enough memory, are running a supported container, and aren't doing any class visibility funkiness, send us some details at bugs@contrastsecurity.com.
+
+## Scenario: I see "java.io.IOException: Can't promise read/write on cache dir" error when starting up
+
+This means that you don't have read/write access to the *cache* directory. 
+
+The *cache* directory is located in the *contrast* directory, and has permissions **755** by default. If the location of the *contrast* directory has been modified with the `contrast.dir` property, the *cache* directory has also moved consequently. You must update the permissions to the *cache* directory.
+

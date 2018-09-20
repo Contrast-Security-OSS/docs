@@ -30,7 +30,7 @@ TeamServer supports four authentication providers:
 Any change to this setting will require a system restart.
 
 ### Security
-SuperAdmin users can manage [password policies](admin-systemsettings.html#pwd), API key management and session timeouts. Any change to this setting will require a system restart. 
+SuperAdmin users can manage [password policies](admin-systemsecurity.html#pwd), API key management and session timeouts. Any change to this setting will require a system restart. 
 
 ### Mail
 TeamServer can send email notifications to users when significant events occur (e.g. resetting passwords and alerts). To configure a SMTP server:

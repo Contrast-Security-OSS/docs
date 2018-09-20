@@ -4,70 +4,70 @@ description: "How to access system settings"
 tags: "admin access system settings"
 -->
 
-Enterprise On-Premises (EOP) customers can manage their own instance of Contrast. To modify the TeamServer configurations around the system, you must have the [SuperAdmin role](admin-manageorgsroleperm.html#roles). Individual users can be granted SuperAdmin on a case-by-case basis. Many of these settings are accessible and can be changed within a specific organization via **Organization Settings** by an organization administrator as well.
+Enterprise-on-Premises (EOP) customers can manage their own instance of Contrast, including security policy, database settings and authentication. To modify system configuration settings for the Contrast application, you must have the [SuperAdmin role](admin-manageorgsroleperm.html#roles). Individual users can be granted SuperAdmin permission on a case-by-case basis. Organization Admins can also access and change many of these settings for a specific organization in **Organization Settings**.
 
-To get to System Settings: 
+### Find System Settings
 
-1. Log in to Contrast 
-2. Navigate to the user menu in the upper right 
-3. Select **SuperAdmin** in the "Use Contrast Security as:" section
-4. Once in the SuperAdmin view, select **System Settings** from that same menu
+To get started in System Settings, log in to your Contrast application. Go to the user menu in the top right corner (by your profile name and image), and select **SuperAdmin**. Once you're in the SuperAdmin view, open the user menu again, and select **System Settings**.
 
-<a href="assets/images/Settings_Admin.png" rel="lightbox" title="Settings Navigation Bar for an System Administrator"><img class="thumbnail" src="assets/images/Settings_Admin.png"/></a>
-
-Take a quick peek at the configuration options you'll find inside the System Settings. These settings allow a SuperAdmin to manage security policy, database settings, authentication and more.
+<a href="assets/images/System-settings-menu.png" rel="lightbox" title="Navigate to System Settings"><img class="thumbnail" src="assets/images/System-settings-menu.png"/></a>
 
 ## General Settings
-The general settings defines the Contrast TeamServer URL for both browsing and RESTful requests. In addition, if an administrator would like to integrate with [Contrast Hub](https://hub.contrastsecurity.com) for updates of libraries and CVE's, the option to "Try Hub" can be selected. Any change to this value will require you to [Restart Contrast](installation-setupinstall.html#restart).
 
-In the event you moved the installation or had to change the hostname or IP address, here is the place to make that change. Simply update the TeamServer URL field with the new value. Again, any change will require a system restart. 
+General settings define the Contrast application URL for both browsing and RESTful requests. In addition, you want to integrate with [Contrast Hub](https://hub.contrastsecurity.com) for library and CVE updates, you can select the option to "Try Hub". Any change to this value will require you to [Restart Contrast](installation-setupinstall.html#restart).
 
->**Note:** You will have to replace your agents so they know which new address to report to
+If you moved the installation or had to change the hostname or IP address, here is the place to make that change. Simply update the TeamServer URL field with the new value. Again, any change will require a system restart. 
+
+>**Note:** You will have to replace your agents so they know which address they should report to.
 
 ## Licensing
-Get a glimpse into license allocation, see if any licenses are nearing expiration, and update your license when needed. 
+
+Get a glimpse of license allocation, see if any licenses are nearing expiration, and update your license when needed. For more information, read how to [Manage Licenses](admin-manageorgs.html#manage-license) in **Organization Settings**. 
 
 ## Policy
-Manage the library compliance policy for your organization(s). Setup restrictions or version requirements for library usage which will flag violations that break compliance settings.
+
+Manage the [compliance policy](admin-policymgmt.html#compliance-policy) for your organization(s) by creating restrictions or version requirements for libraries. Contrast will then flag libraries that violate the compliance settings, and alert you to violation.
 
 ## Security
-Manage [password policies](admin-systemsettings.html#pwd), [two-step verification](admin-orgsecurity.html#security-tsv), and [API and application key management](admin-orgsecurity.html#key-manage). Any change to this setting will require a system restart. 
+
+Manage [password policies](admin-systemsecurity.html#pwd), [two-step verification](admin-orgsecurity.html#security-tsv), and [API and application key management](admin-systemsecurity.html#manage-api). You must restart the Contrast application after any change to these settings. 
 
 ## Authentication 
-Contrast supports a variety of [authentications providers](installation-setupauth.html#overview):
 
-* Embedded: Stored within the Contrast TeamServer database
+Contrast supports a the following [authentications providers](installation-setupauth.html#overview). Any change to this setting requires a system restart.
+
+* Embedded (stored within the Contrast application database)
 * [LDAP](installation-setupauth.html#ldap)
 * [Active Directory](installation-setupauth.html#ad)
 * [Single Sign-On](installation-setupauth.html#sso-setup)
 
-Any change to this setting will require a system restart.
-
 ## Database
-**Change this setting with caution.** It is very unlikely that a SuperAdmin should need change these values. In the event of system restore operation, the values of this configuration such as URL (contains host information), as well as username and password may require a change. Any change to this value will require a system restart.
+
+**Change this setting with caution.** It's very unlikely that a SuperAdmin will need change these values. In the event of a system restore operation, changes to the values of this configuration - such as the URL, which contains host information, or username and password - may be required. Any change to this value also requires a system restart.
 
 ## Mail
-Contrast can send email notifications to users when significant events occur (e.g. resetting passwords). You can configure a SMTP server as follows:
 
-| Setting         | Possible Values                                              |
-|-----------------|--------------------------------------------------------------|
-| Enable Mail     | Enabled or Disabled                                          |
-| Mail Protocol   | SMTP or SMTPs                                                |
-| Mail Host       | Fully qualified address of the SMTP server.                  |
-| Mail Port       | Likely 25                                                    |
-| Mail User       | User account for authentication purposes on the SMTP system. |
-| Mail From       | Resetting passwords and alerts                               |
-| Mail Password   | Password for mail user associated with the SMTP system.      |
-| Use SMTP Auth   | Checked or Unchecked                                         |
-| Enable STARTTLS | Checked on Unchecked   
+Contrast can send email notifications to users when significant events occur, like a password reset. Configure settings for a SMTP server using the following fields. 
+
+* **Enable Mail:** Use the toggle to enable or disable the feature. 
+* **Mail Protocol:** Values can be "SMTP" or "SMTPs". 
+* **Mail Host:** The fully qualified address of the SMTP server.                   
+* **Mail Port:** The likely value is "25".
+* **Use SMTP Auth:** Check the box to enable this setting.                             
+* **Mail User:** A user account for authentication purposes on the SMTP system. 
+* **Mail Password:** The password for the mail user associated with the SMTP system.      
+* **Mail From:** Use this setting to reset passwords and alerts.                              
+* **Enable STARTTLSL:** Check the box to enable this setting.                                 
 
 ## Log Level
-The SuperAdmin can change the default log level for the various TeamServer log files. Any change to this setting will take place after a system restart.
+
+The SuperAdmin can [change the default log level](installation-setupconfig.html#log) for the various log files. Any change to this setting will take effect after a system restart.
 
 ## Score Settings
-The score settings for both overall application score and libraries can be customized. This setting allows EOP administrators to configure how scores get calculated, as well as determine if an individual organization can override the setting. For more information, see [Score Settings](admin-orgsettings.html#score-settings).
+
+You can customize the [score settings](admin-orgsettings.html#score-settings) for both overall application score and libraries. This setting allows EOP administrators to configure how scores get calculated and permit an individual organization to override the setting. 
 
 ## System Messages
-SuperAdmins have the ability to send a system message to all users upon immediate login. A simple message and expiration date are required inputs. All users will receive this message every time they login to Contrast until the message expires or is deleted.
 
-For more on configuring system messages, see [System Messages](admin-systemsettings.html#message)
+If you want to alert all users in your organizations to important changes, you can send a [system message](admin-systemsettings.html#message), which they'll receive every time they log in to Contrast until the message expires or is deleted.
+

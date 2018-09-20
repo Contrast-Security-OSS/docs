@@ -40,11 +40,18 @@ Customize the behavior of the Contrast application installer by providing argume
 
 ## Log In to Contrast
 
-The first time you access the Contrast application, you can log in using the same credentials you used when signing up for your Contrast Hub account. The login page is located at ***/Contrast***. Contrast recommends that you change the administrator password after you've installed and configured the application.
+You can find the login page to the Contrast application at ***/Contrast***. The first time the Contrast application starts after installation, there are two users that can log into the user interface: 
 
+* **Default Username:** Your Hub Username
 * **Your SuperAdmin username:** contrast_superadmin@your-email-domain.com
 
-* **Default SuperAdmin password:** default1!
+The default password for both users is **default1!**. 
+
+> **Note:** Contrast recommends that you change both passwords after you install and configure the application.
+
+## Use Contrast without Cache
+
+If you downloaded and installed the version of Contrast that doesn't contain cache, enable [Hub](https://hub.contrastsecurity.com/h/) connectivity in [System Settings](admin-systemsettings.html#system-glance) so that you continue to get the latest library data. 
 
 ## More Information
 

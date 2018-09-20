@@ -21,11 +21,25 @@ To take a closer look at this information, select the **View** link under each h
 
 ## Licenses
 
-The Licenses tab features an Activity trend chart of data on license consumption over the past 12 months. Hover over a data point on the Assessment or Protection trend lines to see how many licenses were used that month. The thermometer chart below shows the total number of licenses purchased compared to the number being used. The timeline shows how many licenses are about to expire on given dates. For a different view of the data, take a look at the circular charts with breakdowns by fraction and percentage for Assessment and Protection. 
+The Licenses tab features an activity trend chart of data on license consumption over the past year. Hover over a data point on the Assess or Protect trend lines to see how many licenses were used each month. The thermometer chart below shows the total number of licenses purchased compared to the number being used. The timeline shows how many licenses are about to expire on given dates. For a different view of the data, the circular charts show breakdowns by fraction and percentage for Assess and Protect. 
 
-If your organization doesn't own any licenses for either Protection or Assessment, Contrast alerts you to the count of unlicensed assets in that mode.
+>**Note:** If your organization doesn't own any Protect or Assess licenses, Contrast alerts you to the count of unlicensed assets in that mode.
 
 <a href="assets/images/Org-stats-licenses.png" rel="lightbox" title="Organization statistics for licenses"><img class="thumbnail" src="assets/images/Org-stats-licenses.png"/></a>
+
+### Protect usage 
+
+Take a closer look at your Protect license usage by clicking beneath the Protect trend line in the chart. This switches you to the Protect Usage mode, which shows data for the current month in a trend chart as well as a quick view of **Usage Statistics**. 
+
+Hover over data points in the trend chart to see the number of Protect servers used and the number of available licenses that remained for each day. The y-axis marker (dotted line) shows the number of licenses that you had purchased. Use the dropdown menu above the chart to view data from a previous month within the past year. 
+
+<a href="assets/images/Protect-license-usage.png" rel="lightbox" title="Organization statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-usage.png"/></a>
+
+Click on the vertical bars in the chart to view your hourly usage of Protect licenses for each day. Peak hourly usage is represented by bright green shading at the top of the bars. 
+
+<a href="assets/images/Protect-license-usage-hours.png" rel="lightbox" title="Hourly usage statistics for Protect licenses"><img class="thumbnail" src="assets/images/Protect-license-usage-hours.png"/></a>
+
+To return to your view of license activity data for Assess and Protect servers, click the link above the graph to go **Back to License Activity**. 
 
 ## Applications
 
@@ -43,7 +57,7 @@ Switch to the Servers tab to view a thermometer chart that shows the breakdown o
 
 The circular Container Breakdown chart displays the number of deployed servers for each language in a given environment. Select a different environment in the dropdown menu to update the ring and total number of servers. Click on the server count to go to the Servers page with the relevant environment filter applied. Snapshots show servers being Assessed and Protected as well as all servers online compared to the total number of servers in the given environment. The right sidebar includes a list of newly onboarded, offline and deleted servers. 
 
-<a href="assets/images/org-stats-servers.png" rel="lightbox" title="Organization statistics for applications"><img class="thumbnail" src="assets/images/org-stats-servers.png"/></a>
+<a href="assets/images/Org-stats-servers.png" rel="lightbox" title="Organization statistics for applications"><img class="thumbnail" src="assets/images/Org-stats-servers.png"/></a>
 
 
 

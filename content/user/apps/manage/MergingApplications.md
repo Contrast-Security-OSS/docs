@@ -1,35 +1,33 @@
 <!--
 title: "Merging and Unmerging Applications"
 description: "Overview of application merging and unmerging"
-tags: "TeamServer user application manage merging"
+tags: "user ui application manage merging"
 -->
 
-## Merging Applications
-Merging two or more applications into a single application is a common operation performed by organization administrators responsible for bringing applications online. The main purpose of merging is to present a single application view in terms of scoring, discovered vulnerabilities and remediation purposes. Applications can be made up of components, which may show up individually in the application list. Merging allows you to logically organize all of an application's components into one entity within Contrast.
+Merging two or more applications into a single application is a common operation performed by Organization Administrators responsible for bringing applications online. The main purpose of merging is to present a single application view for the purposes of scoring, discovered vulnerabilities and remediation. Applications can be made up of components, which may show up individually in the application list. Merging also allows you to logically organize all of an application's components into one entity in Contrast.
 
+## Create a Master Application 
 
-In order to merge an application, the user must be an Organization Administrator and follow these steps:
+To merge applications, complete the following steps in the Contrast interface:
 
-1. Log in to Contrast
-2. Navigate to the **Applications** page
-3. Identify and select the applications to be merged via the checkboxes in the left column
-4. Select the **Merge** icon from the batch action menu at the top right of the grid
-5. Determine which of the merged applications should represent the **Master Application**
-6. Voila!  
+* Go to the **Applications** page. 
+* Find the applications that you want to merge, and use the checkboxes in the grid to select them. 
+* Select the **Merge** icon from the batch action menu at the top right of the grid. 
 
-Now that your applications are merged, you will see the **Master Application** accompanied by an icon. You can always see the application modules represented by clicking this icon or choosing "Show child applications" from the **Advanced** filter options. To quickly get to any merged applications, there is a predefined **Merged** filter available from the search bar.
+<a href="assets/images/Merge-apps.png" rel="lightbox" title="Use the batch action menu to merge applications"><img class="thumbnail" src="assets/images/Merge-apps.png"/></a>
 
-<a href="assets/images/Merged_App.png" rel="lightbox" title="Merge Applications Action"><img class="thumbnail" src="assets/images/Merged_App.png"/></a>
+* Choose one of the merged applications to represent the **master application**. 
 
-<a href="assets/images/Merged_App_Tooltip.png" rel="lightbox" title="Example of a Merged Application"><img class="thumbnail" src="assets/images/Merged_App_Tooltip.png"/></a>
+Once your applications are merged, you'll see the **master application** name accompanied by a crown icon. To see the application modules represented by the master, click the icon, or choose **Show child applications** from the **Advanced** filter options. To quickly get to any merged applications, use the **Merged** filter available from the search bar.
 
+<a href="assets/images/Master-app-tooltip.png" rel="lightbox" title="A master (merged) application"><img class="thumbnail" src="assets/images/Master-app-tooltip.png"/></a>
 
-## Unmerging Applications
-Once applications are merged, there may be a time when they need to be separated from the **Master Application**. There are a couple of ways to unmerge either all, or specific application modules. 
+## Unmerge Applications
 
-From the **Applications** page, there will be an **Unmerge** action in the row menu of any master application. By default, this will unmerge all application modules represented; however, there will also be an option to specifically define what gets unmerged.
+There are a couple of ways to unmerge either all or specific application modules from the master application. 
 
-From the **Application Modules** dialog, there will be a corresponding checkbox for each application module. Selecting one, many, or all will present the option to **Unmerge Selected** applications. This dialog can be accessed by clicking the master application icon from either the **Applications** page or the **Master Application Details** page.
+From the **Applications** page, click the **Unmerge** action in the row menu of any master application. By default, this will unmerge all application modules represented; however, there is also an option to specifically define which modules are unmerged.
 
+Click the crown icon in the application row or **Details** page to view each module in the **Application Modules** dialog. Select one, many or all modules, and click the button to **Unmerge Selected** applications. 
 
-<a href="assets/images/App_Mappings.png" rel="lightbox" title="Unmerging A Master Application"><img class="thumbnail" src="assets/images/App_Mappings.png"/></a>
+<a href="assets/images/App_Mappings.png" rel="lightbox" title="Unmerge application modules"><img class="thumbnail" src="assets/images/App_Mappings.png"/></a>

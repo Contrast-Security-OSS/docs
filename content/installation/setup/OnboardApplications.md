@@ -19,7 +19,7 @@ Start using Contrast by identifying an application server that you want Contrast
 ## Download the Contrast Agent
 Log into the Contrast interface using your Organization Admin (not SuperAdmin) account. Your username and password are the same as the Contrast Hub credentials that you used to download the installer and license.
 
-Click on the **Applications** tab and then the **Add Application** button to start the agent download and installation wizard.  Follow the on-screen instructions to configure and download the appropriate agent for the application server that you're enabling.
+Click on the **Add Agent** button to start the agent download and installation wizard. Follow the on-screen instructions to configure and download the appropriate agent for the application server that you're enabling.
 
 ## Install the Agent
 Follow the on-screen instructions to add the agent to your application server. Once you restart the application server, the Contrast agent should start and immediately connect to the Contrast application. If this doesn't happen, something may be preventing the agent from communicating with the application. The most common causes and solutions are:
@@ -27,6 +27,8 @@ Follow the on-screen instructions to add the agent to your application server. O
 * Firewalls that don't allow traffic to the Contrast application's IP address and port: You need to configure host or network firewall.
 * Web gateways and proxies that require authentication: You can configure this in the agent configuration by returning to the **Agent Download** page, setting the proper configurations and getting a new agent.
 * Contrast application server URL is misconfigured, so the agent is attempting to communicate with the wrong address. You can change this in the agent configuration, if necessary.
+
+> **Note:** Each application in the same organization must have an unique name. If multiple applications have the same name, Contrast incrementally appends each instance of the display name [e.g., App1, App1 (1), App1 (2)]. 
 
 ## Test the Configuration
 Browse the applications on the application server with Contrast enabled - just click through a few pages and forms - to generate enough activity for good information on your application inventory and dashboard. You can check that Contrast is working by returning to the Dashboard of your Contrast interface to review results. From this point forward, you have an up-to-date application security dashboard for all the applications on that application server. 

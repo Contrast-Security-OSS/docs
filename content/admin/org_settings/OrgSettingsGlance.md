@@ -8,8 +8,8 @@ Organization Administrators have access to a variety of configuration settings f
 
 <!-- <a href="assets/images/Settings_Nav.png" rel="lightbox" title="Organization Settings"><img class="thumbnail" src="assets/images/Settings_Nav.png"/></a> --> 
 
-## General Information and Licensing
-View basic information about your organization and configure high-level preferences including date and time formats in the **Organization** tab. You can also see a breakdown of your organization's Assess and Protect licenses. 
+## General Information
+View basic information about your organization and configure high-level preferences including date and time formats in the **Organization** tab. 
 
 ## Groups
 Use [Organization groups](admin-manageorgs.html#access) to designate a user's organization and application role, which determines what users can see and do in Contrast. You can create, view, edit and delete groups at any time. 
@@ -18,10 +18,14 @@ Use [Organization groups](admin-manageorgs.html#access) to designate a user's or
 Manage users for an organization, by [adding](admin-onboardteam.html#create-user), editing or deleting them. You can also assign users to a default group (or role), designate them for API-only use and unlock their account. 
 
 ## Security
-Manage [password policy](admin-systemsettings.html#pwd) and session timeouts, [two-step verification](admin-systemsettings.html#twostep) and [IP restrictions](admin-orgsecurity.html#security-ip). You can also access an [audit log](admin-orgsecurity.html#audit-log), where you can search for past activity in your organization by keyword and date.
+Manage [password policy](admin-systemsecurity.html#pwd) and session timeouts, [two-step verification](admin-orgsecurity.html#security-tsv) and [IP restrictions](admin-orgsecurity.html#security-ip). You can also access an [audit log](admin-orgsecurity.html#audit-log), where you can search for past activity in your organization by keyword and date.
+
+## SSO
+
+Single Sign-On (SSO) is an authentication service that allows access to multiple applications using one set of credentials. As a Super or Organization Administrator, you can [configure Contrast to use this service](installation-setupauth.html#sso-setup) for your organization.
 
 ## API
-Contrast [APIs](tools-api.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
+Contrast [APIs](tools-about.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
 
 ## Integrations
 Contrast offers basic [integrations](admin-orgintegrations.html) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.

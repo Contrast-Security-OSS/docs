@@ -7,7 +7,8 @@ Contrast offers a variety of Cloud Foundry integrations for your applications us
 
 For Pivotal Cloud Foundry (PCF) customers, Contrast offers a Pivotal tile. This tile automates the BOSH deployment and configuration of the Contrast service broker.
 
-# Contrast Security Framework Support
+## Contrast Security Framework Support
+
 The Contrast Security Agent Framework takes care of automatically downloading the latest Contrast agent and creating a configuration file.
 
 <table>

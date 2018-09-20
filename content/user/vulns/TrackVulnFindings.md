@@ -4,18 +4,21 @@ description: "Overview of tracking vulnerability findings"
 tags: "user track vulnerability finding management quick start guide"
 -->
 
-Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email to notify or inform users who don't have access to Contrast. This allows you to plan and maintain timely patching to protect against attacks. We offer integration with the following bugtrackers:
+Contrast gives you the ability to send vulnerabilities via bugtracker integrations or by email to notify users who don't have access to Contrast. Integrations allow you to plan and maintain timely patching to protect against attacks, as well as streamline your workflows by sending vulnerabilities directly to your tool to orchestrate standard development processes. You can also have Contrast notify you if it finds any new high or critical vulnerabilities in your application. 
+
+## Integrations 
+
+Contrast offers integration with the following bugtrackers:
 
 * JIRA
 * Bugzilla
 * Serena Business Management
-* TFS (coming soon)
+* VSTS/TFS 
 
-Organization administrators have the ability to set up any of these bugtrackers and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by selecting **Organization Settings** in the user menu and then **Integrations** in the left navigation. Through integrations, you can streamline your workflows by sending vulnerabilities found in Contrast directly to your tool to orchestrate standard development processes. You can also have Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
-
-For more information, read the article on [Integrations](admin-orgintegrations.html).
+Organization administrators can set up any of these bugtrackers and other integrations - including Slack, HipChat or any generic WebHook integration - by going to the **User menu> Organization Settings > Integrations tab**. To read more about each option, go to the [Integrations section](admin-orgintegrations.html).
 
 ## Custom Processing
-Vulnerability data can also be dumped to CSV or XML for custom processing. From the **Vulnerabiities** page, you can select all or any number of vulnerabilities to export via the paper airplane icon.  
 
-If you want to gather this data outside of the Contrast UI, we also provide robust APIs to do so. See our article on [Vulnerabilities API](tools-apivulns.html).
+Vulnerability data can also be dumped to a CSV or XML file for custom processing. From the **Vulnerabilities** page, select all or any number of vulnerabilities, and click the paper airplane icon to export them into a spreadsheet.  
+
+If you want to gather this data outside of the interface, Contrast also provides robust [APIs](https://api.contrastsecurity.com/) where you can explore even more information. Read the [Vulnerabilities API](tools-about.html#api-about) for more details.
