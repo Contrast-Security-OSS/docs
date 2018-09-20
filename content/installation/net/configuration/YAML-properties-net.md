@@ -51,6 +51,8 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
 Use the properties in this section to control the way and frequency with which the .NET agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
+All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-netconfig.html#net-template). 
+
 * **agent**:
 
   * **auto_update**:

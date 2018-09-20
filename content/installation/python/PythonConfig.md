@@ -34,6 +34,8 @@ Use the properties in this section to connect the agent to the Contrast UI.
 
 ### Contrast agent properties
 
+All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-pythonconfig.html#python-template).
+
 #### Logger
 
 Define the following properties to set logging values. If these properties aren't defined, the agent uses the logging values from the Contrast UI.

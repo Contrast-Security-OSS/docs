@@ -35,7 +35,7 @@ On Unix/Linux file systems:
 /etc/contrast/java/contrast_security.yaml
 ```
 
-Go to the [Java YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
+Go to the [Java YAML Template](installation-javaconfig.html#java-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
 
 ## Set as System Properties
 
@@ -50,8 +50,7 @@ You can also set all of the following YAML properties as system properties. Deri
 
 ### Contrast UI properties
 
-Use the properties in this section to connect the Java agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
-
+Use the properties in this section to connect the Java agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy. 
 
 * **contrast**: 
 
@@ -74,7 +73,9 @@ Use the properties in this section to connect the Java agent to the Contrast UI.
 
 ### Contrast agent properties
 
-Use the properties in this section to control agent-wide behaviors. For example, you can use this section to control the way in which the agent starts up and shuts down, and the way in which it communicates to logs and to the Contrast UI. If these values are not set, the agent will use the values set in the Contrast UI.
+Use the properties in this section to control agent-wide behaviors. For example, you can use this section to control the way in which the agent starts up and shuts down, and the way in which it communicates to logs and to the Contrast UI. If these values are not set, the agent will use the values set in the Contrast UI. 
+
+All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-javaconfig.html#java-template). 
   
 * **agent**:
   * **shutdown_time_ms**: Set how long to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
