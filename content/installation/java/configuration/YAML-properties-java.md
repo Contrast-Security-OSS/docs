@@ -4,9 +4,9 @@ description: "Instructions for configuring Java agent properties via YAML file"
 tags: "installation java agent YAML configuration rules properties"
 -->
 
-Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. This configuration must be used with the Java 1.5 agent; it cannot be used with the Java agent that automatically updates.
+Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. This configuration must be used with the **Java 1.5** agent; it can't be used with the Java agent that automatically updates.
 
-> **Note:** While property formatting in YAML configuration files is shared by all Contrast agents, each agent must use its specified file. 
+> **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
 ## Load Path
 
@@ -19,17 +19,17 @@ Configuration values use the following order of precedence:
 1. Contrast UI value
 1. Default value
 
-The path to the YAML configuration file can be set using the environment variable `CONTRAST_CONFIG_PATH` or the java system property `contrast.config.path`. Like the rest of the configuration values, the system property takes precedences over the environment variable if both are set.
+You can set the path to the YAML configuration file using the environment variable `CONTRAST_CONFIG_PATH` or the Java system property `contrast.config.path`. Like the rest of the configuration values, the system property takes precedences over the environment variable, if both are set.
 
 If the environment variable and the system property aren't set, the agent will look for the YAML configuration file in the default location.
 
-On Windows, the path for this is
+On Windows: 
 
 ```
 %ProgramData%\Contrast\java\contrast_security.yaml
 ```
 
-On Unix/Linux file systems, the path for this is
+On Unix/Linux file systems:
 
 ```
 /etc/contrast/java/contrast_security.yaml
@@ -74,19 +74,15 @@ Use the properties in this section to connect the Java agent to the Contrast UI.
 
 ### Contrast agent properties
 
-Use the properties in this section to control agent wide behaviors. For instance, this section can be used to control the way in which the agent starts up and shuts down, and the way in which it communicates to logs and to the Contrast UI.
-
-If these values are not set, the agent will use the values set in the Contrast UI.
+Use the properties in this section to control agent-wide behaviors. For example, you can use this section to control the way in which the agent starts up and shuts down, and the way in which it communicates to logs and to the Contrast UI. If these values are not set, the agent will use the values set in the Contrast UI.
   
 * **agent**:
   * **shutdown_time_ms**: Set how long to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
-  * **deinstrument_on_shutdown**:Enable to deinstrumentation classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
+  * **deinstrument_on_shutdown**: Enable to deinstrumentation classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
 
 #### Diagnostic logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
-
-<!-- Maybe a question for Jenny, should we include the 'agent' node here? -->
 
 * **agent**:
 
