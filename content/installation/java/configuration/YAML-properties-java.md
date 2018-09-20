@@ -19,7 +19,21 @@ Configuration values use the following order of precedence:
 1. Contrast UI value
 1. Default value
 
-<!-- Other use and file location info. This will be done after CONTRAST-26125  -->
+The path to the YAML configuration file can be set using the environment variable `CONTRAST_CONFIG_PATH` or the java system property `contrast.config.path`. Like the rest of the configuration values, the system property takes precedences over the environment variable if both are set.
+
+If the environment variable and the system property aren't set, the agent will look for the YAML configuration file in the default location.
+
+On Windows, the path for this is
+
+```
+%ProgramData%\Contrast\java\contrast_security.yaml
+```
+
+On Unix/Linux file systems, the path for this is
+
+```
+/etc/contrast/java/contrast_security.yaml
+```
 
 Go to the [Java YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
 
@@ -60,8 +74,13 @@ Use the properties in this section to connect the Java agent to the Contrast UI.
 
 ### Contrast agent properties
 
-Use the properties in this section to control the way and frequency with which the Java agent communicates to logs and to the Contrast UI.
+Use the properties in this section to control agent wide behaviors. For instance, this section can be used to control the way in which the agent starts up and shuts down, and the way in which it communicates to logs and to the Contrast UI.
+
 If these values are not set, the agent will use the values set in the Contrast UI.
+  
+* **agent**:
+  * **shutdown_time_ms**: Set how long to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
+  * **deinstrument_on_shutdown**:Enable to deinstrumentation classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
 
 #### Diagnostic logging
 
@@ -100,13 +119,12 @@ Use the properties in this section to control security logging. These logs allow
       * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
 
 
-<!-- ### Agent-Specific Properties
+### Agent-Specific Properties
 
-That work will be done in CONTRAST-26166
+Use the properties in this section to apply any Java agnet-wide configurations.
 
-Words here...
-
-Properties formatted as list/grid -->
+* **java**:
+  * **standalone_app_name**: Set the name of a standalone application. If this value is set, the agent assumes there is only one application in this server.
 
 
 ### Inventory properties
@@ -131,7 +149,6 @@ Use the properties in this section to control Assess in the Java agent. The samp
 
   * **enable**: Include this property to determine if the Assess feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. <br> Example: `true`
   * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
-  * **stacktraces**: Value options are `ALL`, `SOME`, or `NONE`.
 
   * **samplings**:
     * **enable**: Set to `false` to disable sampling.
@@ -173,6 +190,9 @@ Use the properties in this section to control Protect features and rules.
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
     * **xxe**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      
+    * **csrf**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
     
