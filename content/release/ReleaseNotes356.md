@@ -4,6 +4,7 @@ description: "Contrast 3.5.6 September 2018"
 tags: "3.5.6 September Release Notes"
 -->
 
+Use YAML-based common configuration properties for all of our agents, and track your vulnerabilities with our [Agile Central](admin-orgintegrations.html#central) integration. 
 
 ## Fixes
 
