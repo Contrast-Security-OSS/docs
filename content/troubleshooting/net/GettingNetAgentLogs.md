@@ -8,7 +8,7 @@ In rare scenarios, bad instrumentation causes a web server process to crash or a
 
 ## Agent Logs Directory
 
-The Contrast .NET agent logs information to the *Contrast.NET\LOGS* directory within *C:\ProgramData\Contrast.NET\LOGS*, the Windows 2008/2012 *ProgramData* directory. Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
+The Contrast .NET agent logs information to the *Contrast\dotnet\LOGS* directory within *C:\ProgramData\Contrast\dotnet\LOGS*, the Windows 2008/2012 *ProgramData* directory. Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
 
 You can change which information is logged by changing the logging level in the [.NET agent configuration](installation-netconfig.html).
 
@@ -68,7 +68,7 @@ Complete the following steps to gather information to send to Contrast.
   * [Stop the .NET agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
   * Enable additional logging. 
      * ** Start > Notepad > Right click > Run as Administrator**
-     * ** File > Open >** *C:\Program Files\Contrast.NET\DotnetAgentService.exe.config*
+     * ** File > Open >** *C:\Program Files\Contrast\dotnet\DotnetAgentService.exe.config*
      * Change `ShouldLogMethodSignatures` to `true`.
      * Uncomment the entry for `LogLevel`. 
      * Check that the specified `LogLevel` value is `trace`.
@@ -77,7 +77,7 @@ Complete the following steps to gather information to send to Contrast.
 
 Once you've reproduced the crash, gather the following items and include them in your bug report:
 
-* Agent Logs: All files in the agent log directory, *C:\ProgramData\Contrast.NET\LOGS*; right click on the **LOGS folder > Send To > Compressed (zip) folder**.
+* Agent Logs: All files in the agent log directory, *C:\ProgramData\Contrast\dotnet\LOGS*; right click on the **LOGS folder > Send To > Compressed (zip) folder**.
 * Windows Event Log: **Event Viewer > Windows Logs > Application > Save All Events As > "MyEvents.evtx"**
 * Crash Dumps: Create a zip file of each w3wp process dump file in *C:\dumps* (e.g., *w3wp.exe_171002_151601.dmp*). Dump files can be quite large.
 

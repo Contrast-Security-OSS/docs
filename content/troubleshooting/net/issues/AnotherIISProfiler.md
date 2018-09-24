@@ -1,5 +1,5 @@
 <!--
-title: "Contrast.NET Service Can't Start with Another Profiler Attached to IIS"
+title: "Contrast .NET Service Can't Start with Another Profiler Attached to IIS"
 description: "Troubleshoot guide for .NET agent issues"
 -->
 

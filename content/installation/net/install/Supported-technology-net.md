@@ -6,7 +6,7 @@ tags: "installation agent .NET windows azure supported technology"
 
 ## .NET for Windows
 
-The Contrast.NET agent supports analysis of web applications built on the following technologies.
+The Contrast .NET agent supports analysis of web applications built on the following technologies.
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |

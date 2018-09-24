@@ -31,13 +31,13 @@ To start the agent, and consequently enable analysis, complete either of the the
 #### Option one
 
 * Go to **Windows Start**, and select **Services**.
-* Right click on **Contrast.NET Main Service**, and select **Stop**
+* Right click on **Contrast .NET Main Service**, and select **Stop**
 
 #### Option two 
 
 * From an administrator command prompt, use `net stop DotnetAgentSvc`.
 
->**Note:** By default, the Contrast.NET Main Service starts automatically when Windows starts as well as when the agent is first installed.
+>**Note:** By default, the Contrast .NET Main Service starts automatically when Windows starts as well as when the agent is first installed.
 
 ### Stop the agent 
 
@@ -46,7 +46,7 @@ To stop the agent, and consequently disable Contrast instrumentation and analysi
 #### Option one
 
 * Go to **Start** and select **Services**.  
-* Right click on **Contrast.NET Main Service** and select **Start**. 
+* Right click on **Contrast .NET Main Service** and select **Start**. 
 
 #### Option two
 
@@ -72,7 +72,7 @@ The **.NET Contrast Tray** is a Windows system tray application (*ContrastTray.e
 
 ### Tabs
 
-* The **Action** tab provides high-level instructions for using the Contrast.NET Agent; these instructions change based on the agent's state. For example, if the agent can't connect to Contrast, the Action tab provides details on the error and suggestions on how to resolve the problem. 
+* The **Action** tab provides high-level instructions for using the Contrast .NET Agent; these instructions change based on the agent's state. For example, if the agent can't connect to Contrast, the Action tab provides details on the error and suggestions on how to resolve the problem. 
 
 * The **IIS** tab displays a list of all web applications running on the IIS server. The name displayed matches the alias used by IIS to identify the application unless a [custom application name](installation-netconfig.html#appname) has been specified. The **URLs** column displays the number of unique URLs (not including the query string) for the application that the agent has observed. The **Last Activity** column displays the time of the last request analyzed by the agent for that application. This tab is only displayed if IIS is installed.
 

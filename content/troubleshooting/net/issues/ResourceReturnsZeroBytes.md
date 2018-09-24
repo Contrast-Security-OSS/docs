@@ -1,5 +1,5 @@
 <!--
-title: "A Particular Resource Returns 0 Bytes Under Contrast.NET"
+title: "A Particular Resource Returns 0 Bytes Under the Contrast .NET Agent"
 description: "Troubleshooting guide for .NET agent issues"
 tags: "troubleshoot zero bytes agent installation .NET"
 -->
@@ -16,4 +16,4 @@ The .NET aget uses a filter in a `System.Web.IHttpModule` to gather HTTP respons
 
 * Configure the .NET agent using the `ResponseUrlWhitelistRegex` settings to prevent Contrast from applying the `HttpModules` filter to the resource. See the [.NET Configuration](installation-netconfig.html) article for more information.
  
-* Disable collection and analysis of HTTP response bodies by disabling full-content-analysis (`<full-content-analysis enabled="false">`) in *%ProgramData%\Contrast.NET\customerPolicy.xml*. See the article on [Custom Policy](installation-netpolicy.html#response) for more information.
+* Disable collection and analysis of HTTP response bodies by disabling full-content-analysis (`<full-content-analysis enabled="false">`) in *%ProgramData%\Contrast\dotnet\customerPolicy.xml*. See the article on [Custom Policy](installation-netpolicy.html#response) for more information.
