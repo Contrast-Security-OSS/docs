@@ -4,14 +4,15 @@ description: "Contrast 3.5.6 September 2018"
 tags: "3.5.6 September Release Notes"
 -->
 
-Lots of words...
 
 ## Fixes
 
-* Complete actions in the Servers grid row, even if you're using EI11. 
-* Delete a server without errors, even if you just deleted the application. CONTRAST-27209
-* Protect will show as "on" for merged and child applications on Protect-enabled servers. CONTRAST-23185
-
+* EI11 users can load the Contrast login page for SaaS and complete actions in the Servers grid row. 
+* Delete a server without errors, even if you just deleted the application. 
+* Protect will show as "on" for merged and child applications on Protect-enabled servers. 
+* The Application page stops loading once your search is complete. 
+* The Route Coverage page is free from Invalid Form errors. 
+* Send a vulnerability to your configured bugtracker after you refresh the page. 
 
 ## Improvements
 
