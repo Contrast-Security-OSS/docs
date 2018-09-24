@@ -76,12 +76,12 @@ The namespace can also be manipulated to show and hide certain paths.
 By default, the agent logs to *<app_root>/node-contrast.log*. For performance reasons, verbose logging options are disabled. The following configuration options allow you to modify how the agent handles file logging. 
 
 
- Parameter                       				 | Description
-------------------------------   				 | -------------
---agent.logger.append [false]                    | If `false`, create a new log file on startup instead of appending and rolling daily. Default is `true`.
---agent.logger.level <level>                     | Logging level: `fatal`, `error`, `warn`, `info`, `debug` or `trace`. Overrides `FeatureSet:logLevel`. Default is `error`.
---agent.logger.path <path>                       | Where Contrast will put its debug log. Default is *node-contrast.log*.
---agent.logger.stdout [false]                    | If `false`, suppress output to STDOUT. Default is `true`.
+ Parameter                     | Description
+------------------------------ | -------------
+--agent.logger.append [false]  | If `false`, create a new log file on startup instead of appending and rolling daily. Default is `true`.
+--agent.logger.level <level>   | Logging level: `fatal`, `error`, `warn`, `info`, `debug` or `trace`. Overrides `FeatureSet:logLevel`. Default is `error`.
+--agent.logger.path <path>     | Where Contrast will put its debug log. Default is *node-contrast.log*.
+--agent.logger.stdout [false]  | If `false`, suppress output to STDOUT. Default is `true`.
 
 
 ## Application Arguments

@@ -17,15 +17,15 @@ Use the Contrast agent to instrument Node applications deployed on IBM Bluemix. 
 * In the *contrast_security.yaml* file, you can configure the name of the server to which this application will report. (Contrast recommends that you complete this step to avoid creating duplicate servers in the application.) To configure the server name as "BluemixNodeServer" in Contrast, add `server.name: BluemixNodeServer`. 
 
 > **Example:**
-    ```yaml
-     contrast:
-       url: https://app.contrastsecurity.com
-       user_name: contrast_user
-       api_key: demo
-       service_key: demo
-     server:
-       name: BluemixNodeServer
-    ```
+```yaml
+ contrast:
+   url: https://app.contrastsecurity.com
+   user_name: contrast_user
+   api_key: demo
+   service_key: demo
+ server:
+   name: BluemixNodeServer
+```
 
 <br> 
 

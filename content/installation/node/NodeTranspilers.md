@@ -17,7 +17,7 @@ Please refer to the following example script setup for running Contrast with a C
 scripts: {
     "test": "...",
     "start": "...",
-    "contrast": "node-contrast /path/to/coffee/transpiler --appArgs '/path/to/app/entrypoint.cofee'"
+    "contrast": "node-contrast /path/to/coffee/transpiler --application.args '/path/to/app/entrypoint.cofee'"
 }
 ```
 
