@@ -8,7 +8,7 @@ Use YAML-based common configuration properties for all of our agents, and track 
 
 ## Fixes
 
-* EI11 users can load the Contrast login page for SaaS and complete actions in the Servers grid row. 
+* IE11 users can load the Contrast login page for SaaS and complete actions in the Servers grid row. 
 * Delete a server without errors, even if you just deleted the application. 
 * Protect will show as "on" for merged and child applications on Protect-enabled servers. 
 * The Application page stops loading once your search is complete. 
