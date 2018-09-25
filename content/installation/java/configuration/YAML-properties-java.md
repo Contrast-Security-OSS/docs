@@ -60,15 +60,15 @@ Use the properties in this section to connect the Java agent to the Contrast UI.
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
 
-  * **proxy**:
-    * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
-    * **host**: Set the proxy host. It must be set with port and scheme. <br> Example: `localhost`
-    * **port**: Set the proxy port. It must be set with host and scheme. <br> Example: `1234`
-    * **scheme**: Set the proxy scheme. It must be set with host and port. <br> Example: `http` or `https`
-    * **url**: Set as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URI and individual properties are set.
-    * **user**: Set the proxy user.
-    * **pass**: Set the proxy password.
-    * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
+    * **proxy**:
+      * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
+      * **host**: Set the proxy host. It must be set with port and scheme. <br> Example: `localhost`
+      * **port**: Set the proxy port. It must be set with host and scheme. <br> Example: `1234`
+      * **scheme**: Set the proxy scheme. It must be set with host and port. <br> Example: `http` or `https`
+      * **url**: Set as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URI and individual properties are set.
+      * **user**: Set the proxy user.
+      * **pass**: Set the proxy password.
+      * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
 
 
 ### Contrast agent properties
