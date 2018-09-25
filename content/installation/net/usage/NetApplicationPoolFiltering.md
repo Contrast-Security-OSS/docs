@@ -10,11 +10,11 @@ Users might want to exclude some applications from instrumentation for either of
 * You don't need to gather security, architecture and library information for excluded applications. 
 * The applications need to avoid Contrast's performance overhead. (This is especially important for resource-constrained servers.)
 
-In either case, you can use the Contrast .NET agent's application pool filtering feature. 
+In either case, you can use the .NET agent's application pool filtering feature. 
 
 ## Application Pool Filtering 
 
-Web applications hosted on IIS run on application pools. If you need to disable the Contrast .NET agent for specific application pools on an instance of IIS, configure a `ProcessBlacklist`. When an application pool is blacklisted, the agent won't attach to any applications using that application pool, and there should be no performance impact for those applications.
+Web applications hosted on IIS run on application pools. If you need to disable the .NET agent for specific application pools on an instance of IIS, configure a `ProcessBlacklist`. When an application pool is blacklisted, the agent won't attach to any applications using that application pool, and there should be no performance impact for those applications.
 
 Whitelisting and blacklisting are based on the application pool *name*. Application pool blacklists and whitelists also accept `*` as a variable-length wildcard. ("AppPool*" will match "AppPool1", "AppPool_arb", etc.)
 

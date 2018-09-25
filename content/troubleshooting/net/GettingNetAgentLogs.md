@@ -8,7 +8,7 @@ In rare scenarios, bad instrumentation causes a web server process to crash or a
 
 ## Agent Logs Directory
 
-The Contrast .NET agent logs information to the *Contrast\dotnet\LOGS* directory within *C:\ProgramData\Contrast\dotnet\LOGS*, the Windows 2008/2012 *ProgramData* directory. Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
+The .NET agent logs information to the *Contrast\dotnet\LOGS* directory within *C:\ProgramData\Contrast\dotnet\LOGS*, the Windows 2008/2012 *ProgramData* directory. Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
 
 You can change which information is logged by changing the logging level in the [.NET agent configuration](installation-netconfig.html).
 
@@ -25,7 +25,7 @@ There are two primary types of agent bugs for which Contrast needs to gather log
 
 Check your scenario against the following indicators to confirm that the web server process crashed. 
 
-* The web application is unresponsive after installing the Contrast .NET agent.
+* The web application is unresponsive after installing the .NET agent.
 
 * The Windows Event Log (**Event Viewer > Windows Logs > Application**) has Error entries for the ".NET Runtime" and "Application Error". 
 
@@ -64,7 +64,7 @@ Complete the following steps to gather information to send to Contrast.
      md c:\dumps 
      procdump.exe -ma -i c:\dumps
     ```
-  * Install the latest Contrast .NET agent.
+  * Install the latest .NET agent.
   * [Stop the .NET agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
   * Enable additional logging. 
      * ** Start > Notepad > Right click > Run as Administrator**
@@ -87,7 +87,7 @@ You can then uninstall ProcDump with `C:>procdump.exe -u`.
 
 ### Verify an unhandled exception
 
-The above process also helps the .NET engineering team resolve issues such as application errors caused by the Contrast .NET agent. Use the following indicators to determine if the Contrast .NET agent is causing an application error. 
+The above process also helps the .NET engineering team resolve issues such as application errors caused by the .NET agent. Use the following indicators to determine if the .NET agent is causing an application error. 
 
 * You've observed the application working normally without the agent. 
 

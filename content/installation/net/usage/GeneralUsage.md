@@ -72,7 +72,7 @@ The **.NET Contrast Tray** is a Windows system tray application (*ContrastTray.e
 
 ### Tabs
 
-* The **Action** tab provides high-level instructions for using the Contrast .NET Agent; these instructions change based on the agent's state. For example, if the agent can't connect to Contrast, the Action tab provides details on the error and suggestions on how to resolve the problem. 
+* The **Action** tab provides high-level instructions for using the .NET agent; these instructions change based on the agent's state. For example, if the agent can't connect to Contrast, the Action tab provides details on the error and suggestions on how to resolve the problem. 
 
 * The **IIS** tab displays a list of all web applications running on the IIS server. The name displayed matches the alias used by IIS to identify the application unless a [custom application name](installation-netconfig.html#appname) has been specified. The **URLs** column displays the number of unique URLs (not including the query string) for the application that the agent has observed. The **Last Activity** column displays the time of the last request analyzed by the agent for that application. This tab is only displayed if IIS is installed.
 

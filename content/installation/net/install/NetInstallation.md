@@ -20,7 +20,7 @@ The downloaded zip archive contains a file called *DotnetAgentSettings.ini*, whi
 
 These additional settings allow you to pre-populate your [configuration](installation-netconfig.html) with commonly changed settings. 
 
-> **Example:** To disable automatic updates of Contrast .NET agent, update the *ini* file, add `AutoUpdateEnabled=false` on a new line, and then continue the installation as normal.
+> **Example:** To disable automatic updates of the .NET agent, update the *ini* file, add `AutoUpdateEnabled=false` on a new line, and then continue the installation as normal.
 
 
 | Parameter                | Description                              | Version |
@@ -38,7 +38,7 @@ The .NET agent installer supports the command line options below. These options 
 
 * Install: `ContrastSetup.exe -s -norestart`
 
-* Install and Do Not Start the Contrast .NET Tray Application: `ContrastSetup.exe -s -norestart StartTray=0`
+* Install and do not start the Contrast .NET Tray Application: `ContrastSetup.exe -s -norestart StartTray=0`
 
 * Uninstall: `ContrastSetup.exe -uninstall -s -norestart`
 
@@ -47,7 +47,7 @@ The .NET agent installer supports the command line options below. These options 
 
 ## Changes Made by the Agent Installer
 
-Many users are curious about the changes made by the Contrast .NET agent and what impacts these changes may have. In all respects, the Contrast .NET agent installer is a normal Windows application installer built using standard MSI technology. The Contrast .NET agent installer validates that the target server satisfies several requirements (e.g., the operating system is Windows Server 2008 R2 or greater). If all requirements are met, the installer registers the .NET agent as a standard Windows program and makes the following changes:
+Many users are curious about the changes made by the .NET agent and what impacts these changes may have. In all respects, the Contrast .NET agent installer is a normal Windows application installer built using standard MSI technology. The .NET agent installer validates that the target server satisfies several requirements (e.g., the operating system is Windows Server 2008 R2 or greater). If all requirements are met, the installer registers the .NET agent as a standard Windows program and makes the following changes:
 
 - Places the agent’s files on a disk in the specified install location (e.g., *C:\ProgramFiles\Contrast\dotnet*). This includes several dynamic link library (DLLs) and executables, such as the background Windows service that drives agent behavior. 
 - Creates the specified data directory for the agent that is primarily used to store agent log files (e.g., *C:\ProgramData\Contrast\dotnet*). 
