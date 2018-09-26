@@ -20,6 +20,11 @@ Configuration values use the following order of precedence:
 6. Contrast UI value
 7. Default value 
 
+The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
+
+* Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
+* Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*.) As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.
+
 Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 
