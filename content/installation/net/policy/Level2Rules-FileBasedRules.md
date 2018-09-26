@@ -4,7 +4,7 @@ description: "Information on .NET File-Based Rules"
 tags: "installation policy customization rules level agent .Net files"
 -->
 
-Contrast.NET detects vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. You can disable rules that you no longer want the .NET agent to detect. 
+The .NET agent detects vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. You can disable rules that you no longer want the agent to detect. 
 
 The file-based rules are configured by changing the *file-based-rules xml* element. See the following sections for explanations of these rules.
 
@@ -54,7 +54,7 @@ The file-based rules are configured by changing the *file-based-rules xml* eleme
 
 ### Client-side technology detection 
 
-Contrast.NET scans the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash and Silverlight. Set `client-side-technology-detection` to `enabled="false"` to remove these checks.
+The .NET agent scans the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash and Silverlight. Set `client-side-technology-detection` to `enabled="false"` to remove these checks.
 
 ### ASPX file security checks
 
@@ -70,7 +70,7 @@ trace | Ensure tracing is turned off for the page
 
 ### *Config* file security checks 
 
-Contrast.NET scans your application's *web.config* or *app.config* files for various security issues. Set `web-config-checks` `enabled` to `false` to disable all checks. You can also disable specific rules by changing one or more of the options below.
+The .NET agent scans your application's *web.config* or *app.config* files for various security issues. Set `web-config-checks` `enabled` to `false` to disable all checks. You can also disable specific rules by changing one or more of the options below.
 
 Setting | Description
 :------ |:-----------

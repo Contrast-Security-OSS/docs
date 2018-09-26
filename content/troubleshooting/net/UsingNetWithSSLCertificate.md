@@ -38,7 +38,7 @@ Contrast only recommends that you use these solutions for testing purposes in a 
 
 Alternatively, you can configure the agent to trust **any** certificate. You should only use this configuration for testing purposes or in trusted environments.
 
-* In a text editor, open *-%SYSTEMDRIVE%\Program Files\Contrast.NET\DotnetAgentService.exe.config*. 
+* In a text editor, open *-%SYSTEMDRIVE%\Program Files\Contrast\dotnet\DotnetAgentService.exe.config*. 
 * In the **appSettings** section, add the `TeamServerValidateCert` tag. 
 
 > **Example:** 

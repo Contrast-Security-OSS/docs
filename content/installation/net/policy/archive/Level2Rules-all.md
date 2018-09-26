@@ -21,13 +21,13 @@ tags: "customization rules level agent .Net"
 
 The behavior of the Contrast .NET Agent is largely driven by rules located in the *policy.xml* file in the agent's installation directory. The .NET Agent's behavior can be customized by adding your own rules to *customerPolicy.xml*.  Users can also override rules in *policy.xml* by adding a rule with the same method signature to *customerPolicy.xml*.  
 
-The *customerPolicy.xml* file is located in *C:\ProgramData\Contrast.NET\customerPolicy.xml*
+The *customerPolicy.xml* file is located in *C:\ProgramData\Contrast\dotnet\customerPolicy.xml*
 
-Please note that the agent's default *policy.xml* should not be directly modified because users' changes will be lost when a new version of Contrast.NET is installed.  The *customerPolicy.xml* file will not be overwritten during software updates.
+Please note that the agent's default *policy.xml* should not be directly modified because users' changes will be lost when a new version of the Contrast .NET agent is installed.  The *customerPolicy.xml* file will not be overwritten during software updates.
 
 ## File-Based Rules
 
-Contrast.NET will detect vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. Users can disable rules they no longer wish to be detected by the .NET Agent. 
+The Contrast .NET agent will detect vulnerabilities in your application configuration files as well as in JavaScript and ASPX files. Users can disable rules they no longer wish to be detected by the .NET Agent. 
 
 The file-based rules are configured by changing the *file-based-rules* xml element.  See below for explanations of these rules.
 
@@ -77,7 +77,7 @@ The file-based rules are configured by changing the *file-based-rules* xml eleme
 
 ### Client-Side Technology Detection 
 
-Contrast.NET will scan the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash, and Silverlight.  Set *client-side-technology-detection* to ```enabled="false"``` in order to remove these checks.
+The Contrast .NET agent will scan the CSS, JavaScript and ASPX files in your application to detect client-side technologies and JavaScript libraries such as JQuery, Flash, and Silverlight.  Set *client-side-technology-detection* to ```enabled="false"``` in order to remove these checks.
 
 ### ASPX File Security Checks
 
@@ -93,7 +93,7 @@ trace | Ensure tracing is turned off for the page
 
 ### Config File Security Checks 
 
-Contrast.NET will scan your application's *web.config* or *app.config* files for various security issues.  Set *web-config-checks* ```enabled``` to "false" to disable all checks.  You can also disable specific rules by changing one or more of the options below.
+The Contrast .NET agent will scan your application's *web.config* or *app.config* files for various security issues.  Set *web-config-checks* ```enabled``` to "false" to disable all checks.  You can also disable specific rules by changing one or more of the options below.
 
 Setting | Description
 :------ |:-----------
@@ -127,7 +127,7 @@ wcf-exception-detail | Ensure WCF faults do not send detailed exception stack tr
 
 ## Response-Based Rules 
 
-Contrast.NET will scan the response stream of your application for various security issues.  You can disable some or all of these checks.  Disabling all response-based checks will result in a small performance improvement for analyzed web applications.
+The Contrast .NET agent will scan the response stream of your application for various security issues.  You can disable some or all of these checks.  Disabling all response-based checks will result in a small performance improvement for analyzed web applications.
 
 ```xml
 
@@ -162,9 +162,9 @@ session-rewriting | Ensure session cannot be rewritten because of cookie-less se
 
 ## Instrumentation Rules
 
-Contrast.NET will instrument your application code and follow user-provided data in order to detect potential security issues.  
+The Contrast .NET agent will instrument your application code and follow user-provided data in order to detect potential security issues.  
 
-Contrast.NET will mark all user-provided data (such as FORMS posts, web service calls or HTTP headers) as tainted.  A potential security issue exists if tainted data is not safely escaped before it gets to an output sink (such as HTML pages, databases or system commands).  
+The Contrast .NET agent will mark all user-provided data (such as FORMS posts, web service calls or HTTP headers) as tainted.  A potential security issue exists if tainted data is not safely escaped before it gets to an output sink (such as HTML pages, databases or system commands).  
 
 * **Sources** - Set methods whose return data should be tagged.
 * **Tag-lists** - Set methods that will add tags to data as it flows through them.  For example, you can tag data as "escaped" so it does not trigger a security finding.

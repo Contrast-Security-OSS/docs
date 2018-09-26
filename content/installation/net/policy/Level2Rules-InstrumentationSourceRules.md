@@ -4,7 +4,7 @@ description: "Information on .NET Instrumentation Source Rules"
 tags: "installation policy customization rules level agent .Net instrumentation source"
 -->
 
-Contrast.NET instruments your application code and follows user-provided data to detect potential security issues by marking all user-provided data - such as FORMS posts, web service calls or HTTP headers - as tainted. A potential security issue exists if tainted data isn't escaped safely before it gets to an output sink, such as HTML pages, databases or system commands.  
+The .NET agent instruments your application code and follows user-provided data to detect potential security issues by marking all user-provided data - such as FORMS posts, web service calls or HTTP headers - as tainted. A potential security issue exists if tainted data isn't escaped safely before it gets to an output sink, such as HTML pages, databases or system commands.  
 
 * **Sources:** Set methods whose return data should be tagged.
 * **Tag-lists:** Set methods that add tags to data as it flows through them. For example, you can tag data as `"escaped"` so it doesn't trigger a security finding.

@@ -1,5 +1,5 @@
 <!--
-title: "Contrast.NET Service Can't Start with Another Profiler Attached to IIS"
+title: "Contrast .NET Service Can't Start with Another Profiler Attached to IIS"
 description: "Troubleshoot guide for .NET agent issues"
 -->
 
@@ -11,13 +11,13 @@ description: "Troubleshoot guide for .NET agent issues"
 
 The .NET agent is [required](installation-netinstall.html) to be the only .NET Profiler installed on IIS. The .NET agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by the application. The Microsoft CLR has a built-in limitation that only one profiler can profile a process. This limitation comes from Microsoft and their implementation of the CLR. 
 
-> **Note:** Many performance/APM tools, such as New Relic and AppDynamics, also use the CLR Profiling API, and can't be used on the same server as the Contrast .NET agent as a result.  
+> **Note:** Many performance/APM tools, such as New Relic and AppDynamics, also use the CLR Profiling API, and can't be used on the same server as the .NET agent as a result.  
 
 You can often identify the conflicting profiler by searching for the GUID in the Tray's error message (show as `BX7CFC47-3E35-2c2e-B495-534F93B28123` in the example above.)
 
 ## Solution
 
-To resolve the issue, complete the following steps to disable or uninstall the other software that has a profiler registered with or attached to IIS, restart IIS and then start the Contrast .NET agent. 
+To resolve the issue, complete the following steps to disable or uninstall the other software that has a profiler registered with or attached to IIS, restart IIS and then start the  .NET agent. 
 
 * Use *regedit* to edit the values under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment` key. 
 * Set `COR_ENABLE_PROFILING` value to `0` and delete the `COR_PROFILER` value.
