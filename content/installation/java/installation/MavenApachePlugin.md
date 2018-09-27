@@ -25,8 +25,7 @@ Download the Contrast plugin (*contrast.jar*) from the TeamServer that you work 
 	mvn -Dmaven.tomcat.port=8181 clean package tomcat7:run-war
 	```
 
-
-If you are **NOT forking** your JVM, set the ```mvn``` command to use the following JVM parameters like a normal process would:
+	If you are **NOT forking** your JVM, set the ```mvn``` command to use the following JVM parameters like a normal process would:
 
 	``` sh
 	-javaagent:/path/to/contrast.jar
