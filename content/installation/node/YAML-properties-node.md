@@ -20,6 +20,11 @@ Configuration values use the following order of precedence:
 6. Contrast UI value
 7. Default value 
 
+The agent expects that the *contrast_security.yaml* configuration file exists in the application's root directory (where the *package.json* file usually resides). If you want to change the location of the file, provide the agent with the new location using one of the following methods: 
+
+* Pass a CLI option `--configFile <location>`
+* Set the `CONTRAST_CONFIG` environment variable
+
 Go to the [Node YAML Template](installation-nodeconfig.html#node-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 ## Configuration Options 
