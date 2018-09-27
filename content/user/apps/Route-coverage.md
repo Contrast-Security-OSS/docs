@@ -25,9 +25,10 @@ For supported frameworks, route coverage consists of two parts:
 * **Discovered** routes: the full list of routes that Contrast has detected in an application 
 * **Observed** routes: the routes in which Contrast has detected traffic
 
-<!-- the full list of routes that Contrast has **discovered** in an application, and routes in which Contrast has **observed** traffic.  --> For unsupported frameworks, Contrast displays the observed routes only. 
+While coverage is enabled automatically for most Contrast agents, you must use the following property to specify the application name when deploying the **Java** agent: `-Dcontrast.standalone.appname=<example_name>`. If you don't include this property, the Java agent may only observe - but not discover - routes in your application. 
 
-While coverage is enabled automatically for most Contrast agents, you must use the following property to specify the application name when deploying the **Java** agent: `-Dcontrast.standalone.appname=<example_name>`. If you don't include this property, the Java agent may only observe - but not discover - routes in your application.  
+> **Note:** The **Java** and **Node** agents only report coverage information for the specifically instrumented frameworks listed above. For **unsupported frameworks**, neither agent displays any routes.
+
 
 ## View Route Details 
 
