@@ -13,13 +13,13 @@ Download the Contrast plugin (*contrast.jar*) from the TeamServer that you work 
 
 ## Installation with ```MAVEN_OPTS```
 
-1. If you are **forking** your JVM, set your ```MAVEN_OPTS``` environment variable to contain Contrast's JVM parameters.
-On Windows:
+1. If you are **forking** your JVM, set your ```MAVEN_OPTS``` environment variable to contain Contrast's JVM parameters.<br><br>
+	On Windows:
 	``` sh
 	set MAVEN_OPTS=-javaagent:C:\Path\To\contrast.jar -Dcontrast.log=C:\Path\To\contrast.log
 	mvn -Dmaven.tomcat.port=8181 clean package tomcat7:run-war
 	```
-On Linux:
+	On Linux:
 	``` sh
 	export MAVEN_OPTS="-javaagent:/path/to/contrast.jar -Dcontrast.log=/path/to/contrast.log"
 	mvn -Dmaven.tomcat.port=8181 clean package tomcat7:run-war
