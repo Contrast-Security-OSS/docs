@@ -11,7 +11,7 @@ If you run Tomcat from `startup.bat`/`startup.sh`, Contrast suggests creating a 
 
 For Windows `startup-with-contrast.bat`:
 ``` sh
-set CATALINA_OPTS="%JAVA_OPTS% -javaagent:${DOWNLOADS}\contrast.jar"
+set CATALINA_OPTS="%CATALINA_OPTS% -javaagent:${DOWNLOADS}\contrast.jar"
 call ${TOMCAT_DIR} \bin\startup.bat
 ```
 
