@@ -7,7 +7,7 @@ tags: "java agent installation Tomcat"
 
 ## Running Contrast from "startup.bat" (or ".sh")
 
-If you run Tomcat from `startup.bat`/`startup.sh`, we suggest creating a new startup script, `startup-with-contrast.bat`/`startup-with-contrast.sh`. It should enable the Contrast JVM parameters and call the startup script:
+If you run Tomcat from `startup.bat`/`startup.sh`, Contrast suggests creating a new startup script, `startup-with-contrast.bat`/`startup-with-contrast.sh`. It should enable the Contrast JVM parameters and call the startup script:
 
 For Windows `startup-with-contrast.bat`:
 ``` sh
