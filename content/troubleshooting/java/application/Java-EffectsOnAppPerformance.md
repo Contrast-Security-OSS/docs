@@ -18,7 +18,6 @@ It's probably more important to think about how Contrast affects the round-trip 
 If better performance is really important to your environment, consider the following options:
 
 * Run Contrast in *sampling* mode (gain 33% performance boost)
-* Run Contrast with *bootstrap performance enhancements* (gain 30% performance boost, not available in Java 9+)
 * Turn off *response scanning* (gain 5% performance boost, and somewhat reduce memory footprint)
 * Run Contrast during nightly integration tests
 * Turn off data flow rules (add ```-Dcontrast.propagators=false```, gain 50% performance boost)
@@ -37,7 +36,4 @@ Our minimum requirements for memory are 1.8x maximum heap used during normal app
 ## More Information
 
 * [Sampling](admin-orgsettings.html#server)
-
-* [Adding Bootstrap Speed Enhancements To The Java Agent](installation-javaconfig.html#bootstrap)
-
 * [Java Agent System Properties](installation-javaconfig.html#system)
