@@ -22,7 +22,9 @@ Use the multiselect **Policy** field to choose which [Remediation](admin-policym
 
 ### Behavior 
 
-Check the box to **Require administrative approval when closing vulnerabilities** in your organization. Vulnerabilities with the statuses and severities you choose in this configuration will automatically go into a **Pending** state when a user moves to close them. Contrast will also notify you that your review is needed. The vulnerability status will remain pending until you submit your review of the closure. 
+Check the box to **Require administrative approval when closing vulnerabilities** in your organization. Vulnerabilities with the statuses and severities you choose in this configuration will automatically go into a **Pending** state when a user moves to close them. Contrast will also [notify](admin-orgsettings.html#org-notify) you that your review is needed. 
+
+The vulnerability status will remain Pending until you submit your review of the closure. If you deny the closure of a vulnerability, you must provide a reason for denial; once confirmed, your feedback appears in the vulnerability's **Discussion** tab. 
 
 See [Manage Vulnerabilities](user-vulns.html#manage-vuln) for more information about Pending states and workflows. 
 

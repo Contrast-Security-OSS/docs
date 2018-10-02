@@ -12,21 +12,37 @@ To change the status of one or more vulnerabilities, select the checkboxes in th
 
 <a href="assets/images/Vulnerability-mark-as.png" rel="lightbox" title="Change vulnerability status"><img class="thumbnail" src="assets/images/Vulnerability-mark-as.png"/></a>
 
-If an administrator [requires administrative approval when users close vulnerabilities](admin-orgsettings.html#app-defaults), vulnerabilities will go into a **Pending** state when you attempt to close them. 
-
-<!-- > **Example:** If an administrator specifies that they must approve the movement of all Critical vulnerabilities from a Fixed status to a Closed status, the status change request will appear in the **Pending** page view.  -->
-
 See [Analyze Findings](user-vulns.html#analyze) to learn more about statuses and behaviors when a vulnerability is marked and found again.
 
 ### Pending vulnerabilities 
 
-If you attempt to close a vulnerability that must be approved...
+If an administrator [requires administrative approval](admin-orgsettings.html#app-defaults), vulnerabilities will go into a **Pending** state when you attempt to close them. Administrative approval applies to changes to vulnerabilities by two-way [bugtracker integrations](admin-orgintegrations.html#bugtracker) as well as [auto-remediation policies](admin-policymgmt.html#remediate).  
 
-The vulnerability is marked as pending in the **Open** grid view. The time stamp beside the label indicates when the user made the request to close. 
+> **Note:** An administrator may apply this requirement to certain sets of vulnerabilities, such as all Critical vulnerabilities moving from a Fixed status to a Closed status.
 
-You'll also receive a notification when your request to close the vulnerabilities is approved or denied. If denied, the vulnerability will go back to its previous state; but, the administrator must provide a reason that will appear in the ** _____ ** page. 
+If you attempt to close a vulnerability that must be approved, you must provide a comment in the dialog that appears. Once you provide a reason and justification for the status change, a message will confirm that the closure is pending an administrator's review. 
+
+<a href="assets/images/Vulns-mark-as-dialog.png" rel="lightbox" title="Enter a reason and justification for a status change"><img class="thumbnail" src="assets/images/Vulns-mark-as-dialog.png"/></a>
+
+The vulnerability is marked as Pending in the **Open** grid view. The time stamp beside the label indicates when you made the request to close. To see all vulnerabilities to be approved in your organization, select the **Pending Review** view from the dropdown at the top of the page. 
+
+<a href="assets/images/Vulns-marked-pending.png" rel="lightbox" title="Vulnerabilities with pending status changes are marked in the grid"><img class="thumbnail" src="assets/images/Vulns-marked-pending.png"/></a>
+
+You'll receive a [notification](admin-orgsettings.html#org-notify) when your request to close the vulnerabilities is approved or denied. If denied, the vulnerability will go back to its previous state; but, the administrator must provide a reason that appears in the vulnerability's **Discussion** page. 
 
 > **Note:** While in a Pending state, the vulnerability's previous status still applies for the purpose of organizational reports and statistics. 
+
+#### Review vulnerability closures
+
+To approve or deny vulnerability closures as a Contrast administrator, click on the link in your UI notification or navigate to the **Pending** view in the Vulnerabilities grid. Select one or more vulnerabilities to review. Click on the **Review** button in the batch actions menu, and select **Approve** or **Deny**.  
+
+You can also go to the vulnerability's Details page, and click the **Review** button in the actions menu to approve or deny the status change.
+
+<a href="assets/images/Pending-admin-approval.png" rel="lightbox" title="Review pending status changes"><img class="thumbnail" src="assets/images/Pending-admin-approval.png"/></a>
+
+If you choose to deny the status change, you must provide a reason in the confirmation dialog. Your reason is documented in the vulnerability's **Discussion** tab. The vulnerability automatically reverts to its previous status. 
+
+If you choose to approve the status change, the user's request is marked as "Approved" in the vulnerability's **Discussion** tab. 
 
 ## Vulnerability Severity
 
@@ -56,23 +72,17 @@ Once this action is confirmed, the vulnerability is removed and no longer appear
 
 ## Track Vulnerabilities 
 
-You can send vulnerabilities to a bugtracker from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
+You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtracker) from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
 
 <a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
 
->**Note:** Bugtrackers must be configured before vulnerabilities can be sent.
+>**Note:** Bugtrackers must be configured before you send vulnerabilities.
 
 When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of the **Application Overview** page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
 
 <a href="assets/images/Integrations-sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Integrations-sent-to-bugtracker.png"/></a>
 
 To quickly see which vulnerabilities are being tracked, click the **Advanced** link, select **Status** in the sidebar, and filter for "Being Tracked". 
-
-<a href="assets/images/Integrations-bugtracker-advanced-filter.png" rel="lightbox" title="Advanced filter"><img class="thumbnail" src="assets/images/Integrations-bugtracker-advanced-filter.png"/></a>
-
-> **Note:** Any status changes caused by two-way integrations are subject to administrative approval, if required by any administrators in your organization. See the **Pending vulnerabilities** section above for more information. 
-
-To learn more about using bugtrackers with Contrast, read the [Introduction to Bugtrackers](admin-orgintegrations.html#bugtracker). 
 
 ## Export Findings
 
