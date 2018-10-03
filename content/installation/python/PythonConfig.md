@@ -31,6 +31,9 @@ Use the properties in this section to connect the agent to the Contrast UI.
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **last_config_path**: Set the path to which the agent should store the currently used configuration from the Contrast UI. <br> Example: *./tmp/config*
+  * **ca_file**: When running an on-premises Contrast instance using a self-signed certificate, use this option to provide the path to a custom CA file.
+  * **cert_pem_file**: Optionally provide a path to the server's certificate PEM file.
+  * **key_pem_file**: Optionally provide a path to the server's key PEM file.
 
 ### Contrast agent properties
 
@@ -43,7 +46,7 @@ Define the following properties to set logging values. If these properties aren'
 * **agent**: Options for communicating between the agent and the service
   * **logger**:
     * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example - */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
-    * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
+    * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Set the name the agent uses to identify the process within the log file <br> Example: Contrast Agent
 
 #### Security logger
@@ -87,7 +90,7 @@ The following properties are used by the logger in the Contrast service. If the 
 
   * **logger**:
     * **path**: Set the location to which the Contrast service saves log output. If no log file exists at this location, the service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
-    * **level**: Set the the log output level. Options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
+    * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Set the name the agent uses to identify the process within the service log file <br> Example: Contrast Agent
 
 

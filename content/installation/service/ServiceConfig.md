@@ -19,22 +19,39 @@ The configuration file is titled *contrast_security.yaml* no matter where it's l
 
 The configuration YAML consists of four sections. The agent and Service may share a common configuration file, but only some options and sections are applicable to each process.
 
-* `contrast`: Use the properties in this section to connect the agent to the Contrast UI. If you're using separate configuration files for the agents and service, you should define the options for connecting with Contrast UI for the Service.
-  * `url`: Set the URL for the Contrast UI.
-  * `api_key`: Set the API key needed to communicate with the Contrast UI.
-  * `service_key`: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header.
-  * `user_name`: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
-* `agent`: Use the properties in this section to control the way and frequency with which the agent communicates to logs and the Contrast UI.
-    * `service`:
-      * `host`: Set the the hostname or IP address of the Contrast Service to which the Contrast agent should report. <br> Example: `localhost`
-      * `port`: Set the the port of the Contrast Service to which the Contrast agent should report. <br> Example: `30555`
-      <!-- * `socket`: For the **Webserver agent** only: If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock* -->
-      * `logger`:
-        * `path`: Set the location to which the Contrast Service saves log output. If no log file exists at this location, the Service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
-        * `level`: Set the the log output level. Options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
-        * `progname`: Override the name of the process used in logs. <br> Example: Contrast Service
-* `server`: Use the properties in this section to set metadata for the server hosting this agent. <br> Example: `test-server-1`
-  * `name`: Override the reported server name.
-  * `environment`: Override the reported server environment. <br> Example: `development`
-  * `tags`: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: label1,label2,label3 
+### Contrast UI properties
+
+Use the properties in this section to connect the agent to the Contrast UI.
+
+* **contrast**: 
+  * **url**: Set the URL for the Contrast UI.
+  * **api_key**: Set the API key needed to communicate with the Contrast UI.
+  * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header.
+  * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
+  * **ca_file**: When running an on-premises Contrast instance using a self-signed certificate, use this option to provide the path to a custom CA file.
+  * **cert_pem_file**: Optionally provide a path to the server's certificate PEM file.
+  * **key_pem_file**: Optionally provide a path to the server's key PEM file.
+
+### Contrast agent properties
+
+The options under this section allow the agents to find and communicate with the Contrast Service.
+
+* **agent**: Use the properties in this section to control the way and frequency with which the agent communicates to logs and the Contrast UI.
+  * **service**:
+    * **host**: Set the the hostname or IP address of the Contrast Service to which the Contrast agent should report. <br> Example: **localhost**
+    * **port**: Set the the port of the Contrast Service to which the Contrast agent should report. <br> Example: **30555**
+    * **socket**: For the **Webserver agent** only: If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock*
+    * **logger**:
+      * **path**: Set the location to which the Contrast Service saves log output. If no log file exists at this location, the Service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
+      * **level**: Set the the log output level. Options are **ERROR**, **WARN**, **INFO**, and **DEBUG**.
+      * **progname**: Override the name of the process used in logs. <br> Example: Contrast Service
+
+### Server properties
+
+The options under this section allow for overriding the server information sent to Contrast UI.
+
+* **server**: Use the properties in this section to set metadata for the server hosting this agent. <br> Example: **test-server-1**
+  * **name**: Override the reported server name.
+  * **environment**: Override the reported server environment. <br> Example: **development**
+  * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: label1,label2,label3 
 
