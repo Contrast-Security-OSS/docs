@@ -21,7 +21,8 @@ Once configured, you can move on to installing the package below
 # Install from Linux Packages
 
 Provided the Contrast linux package reposistory is configured on your system,
-(___Insert link to contrast pacakge repo setup here___)
+_XXX: Insert link to contrast package repo setup here
+linux_package_repo/ContrastRepoConfig.md_
 use the following command to install the Webserver Agent:
 
 Debian/Ubuntu Users:
@@ -34,7 +35,7 @@ RedHat/Centos Users:
     yum install contrast-webserver-agent-nginx
 
 
-After this stage you are ready to configure the software.  ___Insert link to
+After this stage you are ready to configure the software.  ___XXX: Insert link to
 WebserverAgentConfig.md___.
 
 
@@ -42,12 +43,9 @@ WebserverAgentConfig.md___.
 
 The Webserver Agent is constructed as a module that plugs into NGINX. It can be
 compiled statically into NGINX or an an NGINX dynamic module.  The software is
-available at:
-
-    ___Insert GITHUB link___
+available at: _XXX: Insert GITHUB link_
 
 And documentation for building from source is within that repo:
-
-    ___Insert GITHUB link to BUILD_FROM_SOURCES.md___
+_XXX: Insert GITHUB link to BUILD_FROM_SOURCES.md_
 
 

@@ -1,7 +1,6 @@
 # Configuration
 
 The items that must be configured are:
-* The communication link between the Webserver Agent and Contrast-Service
 * The communication link between Contrast-Service and TeamServer
 * The NGINX service enabling the Agent to inspect traffic to certain endpoints
 
