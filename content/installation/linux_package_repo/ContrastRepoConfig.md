@@ -4,7 +4,7 @@ you have to configure your package management system to include a reference to
 our package repo. The instructions for doing this are below:
 
 Some of our packages are tied to the specific Linux distribution you are using;
-For Ubuntu, this could be one of 'bionic', 'xenial', or 'trusty'.  The
+For example, on Ubuntu this could be one of 'bionic', 'xenial', or 'trusty'.  The
 instructions will show you how to get this information and then use it to
 configure the right package repo for your system.  This is a one-time
 configuration.  Once its done, you'll be connected to the software distribution
