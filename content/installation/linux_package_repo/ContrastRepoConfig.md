@@ -1,14 +1,6 @@
-Some of Contrast's products are distributed via Linux packages. This makes
-installing and staying up to date very easy. In order to use our package repo
-you have to configure your package management system to include a reference to
-our package repo. The instructions for doing this are below:
+Some of Contrast's products are distributed via Linux packages. This makes installing and staying up to date very easy. In order to use our package repo you have to configure your package management system to include a reference to our package repo. The instructions for doing this are here.
 
-Some of our packages are tied to the specific Linux distribution you are using;
-For example, on Ubuntu this could be one of 'bionic', 'xenial', or 'trusty'.  The
-instructions will show you how to get this information and then use it to
-configure the right package repo for your system.  This is a one-time
-configuration.  Once its done, you'll be connected to the software distribution
-pipeline and can solely manage it via your distribution's package manager.
+Some of our packages are tied to the specific Linux distribution you are using. For example, on Ubuntu this could be one of 'bionic', 'xenial', or 'trusty'.  The instructions will show you how to get this information and then use it to configure the right package repo for your system.  This is a one-time configuration.  Once its done, you'll be connected to the software distribution pipeline and can solely manage it via your distribution's package manager.
 
 ### Debian/Ubuntu
 
