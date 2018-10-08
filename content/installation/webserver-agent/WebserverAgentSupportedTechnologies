@@ -1,0 +1,1 @@
+The Webserver Agent supports NGINX version 1.12.2+.  It also supports IPv6 and HTTP/2 configurations of NGINX.  Formal support is on 64-bit Linux platforms however other platforms that NGINX supports will also likely work.
