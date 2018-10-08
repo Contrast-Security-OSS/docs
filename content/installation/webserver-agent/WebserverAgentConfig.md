@@ -13,7 +13,7 @@ Contrast-Service is controlled by the configuration located at `/etc/contrast/co
 This file will control how the Webserver is represented to TeamServer. The default configuration installed with the contrast-service linux package has most necessary items filled in however you will need to edit it with your TeamServer location and API key. You will also need to configure how you want your agent represented to TeamServer
 
     server:
-      name: YOUR SERVER NAME
+      name: YOUR_SERVER_NAME
       path: /
       type: Proxy
       environment: development
@@ -46,40 +46,51 @@ Example /etc/nginx/nginx.conf:
     http {
 
       contrast on;
-      contrast_debug on;
+      contrast_debug off;
       contrast_unix_socket "/run/contrast-service.sock";
 
       error_log logs/error.log debug;
 
       server {
-        listen 8888;
+        listen 80;
         server_name localhost;
 
+        # sample static site config
         location / {
           autoindex on;
           index index.html index.html;
-          contrast_app_name "APP NAME STATIC ENDPOINT";
+          contrast_app_name "APP_NAME_A";
         }
 
+        # sample reverse proxy config
         location /app {
           rewrite /MY_APP/(.*) /$1 break;
           proxy_set_header Host $host;
           proxy_set_header X-Real-IP $remote_addr;
           proxy_pass http://127.0.0.1:4567;
-          contrast_app_name "APP NAME DYNAMIC ENDPOINT";
+          contrast_app_name "APP_NAME_B";
         }
       }
     }
 
-This important parts here are the `load_module` directive at the top which is loading the webserver agent into nginx and the various `contrast_*` directives. The `contrast_*` directives can be placed at the "main", "server", or "location" level in an nginx configuration. http://nginx.org/en/docs/beginners_guide.html#conf_structure
+The important parts here are the `load_module` directive at the top which is loading the webserver agent into nginx and the various `contrast_*` directives. The `contrast_*` directives can be placed at the "main", "server", or "location" level in an nginx configuration. http://nginx.org/en/docs/beginners_guide.html#conf_structure
 
 The individual directives are explained below:
 
-    contrast:  [on | off] Turns the loaded agent on or off.
-    contrast_debug: [on | off] Turns debug logging on or off.
-    contrast_unix_socket: [string] Specifies the the unix domain socket
-        filepath. This must agree with where Contrast-Service has it
-        configured.
-    contrast_app_name: [string] Application Name as represented in TeamServer.
+__contrast__
+Values: on \| off [off]
+Turns the loaded agent on or off.
+
+__contrast_debug__
+Values: on \| off [off]
+Turns debug logging on or off.
+
+__contrast_unix_socket__ 
+Values: string
+Specifies the the unix domain socket filepath. This must agree with where Contrast-Service has it configured.
+
+__contrast_app_name__
+Values: string
+Application Name as this agent will show up as in the Contrast UI.
 
 
