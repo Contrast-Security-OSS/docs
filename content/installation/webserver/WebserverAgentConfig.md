@@ -1,4 +1,4 @@
-# Configuration
+
 
 The items that must be configured are:
 * The communication link between Contrast-Service and TeamServer

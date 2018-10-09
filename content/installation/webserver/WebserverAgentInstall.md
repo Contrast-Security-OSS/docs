@@ -1,4 +1,4 @@
-# Installation
+
 
 The Contrast Webserver Agent has two methods of installation: linux package (recommended) or source-based.
 
