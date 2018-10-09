@@ -32,7 +32,7 @@ You'll receive a [notification](admin-orgsettings.html#org-notify) when your req
 
 > **Note:** While in a Pending state, the vulnerability's previous status still applies for the purpose of organizational reports and statistics. 
 
-#### Review vulnerability closures
+#### Review status changes
 
 To approve or deny vulnerability closures as a Contrast administrator, click on the link in your UI notification or navigate to the **Pending** view in the Vulnerabilities grid. Select one or more vulnerabilities to review. Click on the **Review** button in the batch actions menu, and select **Approve** or **Deny**.  
 
