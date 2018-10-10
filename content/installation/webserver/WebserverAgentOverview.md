@@ -1,17 +1,21 @@
+<!--
+title: "Contrast Webserver Agent Overview"
+description: "Overview of the Contrast Webserver agent"
+tags: "installation agent webserver nginx overview"
+-->
 
+The Contrast Webserver agent is application language and framework agnostic. It provides runtime protection by analyzing HTTP request and response data at the web server level rather than the application level. The agent supports Contrast Protect only. 
 
-The Contrast Webserver Agent is a Protect-only agent that provides runtime protection in a app-language/framework agnostic way by analyzing http request and response data at the web-server-level rather than the application level.
+## About the Webserver Agent
 
-## About Webserver Agent
+The Webserver agent provides runtime protection of HTTP ingress and egress traffic as it's processed by a web server. In the most-common case, a web server is running in reverse proxy mode, and the agent is transparent to the application behind the reverse proxy. As the Webserver agent integrates into the web server, and not the specific application, it's agnostic to the language being used in the web application it's protecting. As a result, you can use the agent to protect a variety of application technologies such as PHP, Go, Perl and Groovy.   
 
-The Contrast Webserver Agent provides runtime protection of HTTP ingress and egress traffic as it is processed by a web server. The most common situation is a web server that is running in reverse proxy mode. In this case, the Webserver Agent is transparent to the application behind the reverse proxy.
+From its position in the technology stack, the Webserver agent has a high-level view of the HTTP communication that's similar to traditional WAF and Next Generation WAF technologies.
 
-Since the Webserver Agent integrates into the webserver and not the specific application, it is agnostic to the actual language being used in the web application it is protecting.  Thus it can be used to protect a variety of application technologies such as: PHP, Go, Perl, Groovy, etc.  The Webserver Agent is targeted to specific webserver products and versions. These are specified in the Supported Technologies __XXX: need link__ page.
+<a href="assets/images/Webserver-agent-diagram.png" rel="lightbox" title="Webserver agent architecture"><img class="thumbnail" src="assets/images/Webserver-agent-diagram.png"/></a>
 
-From its position in the technology stack, the Webserver Agent has a high level view of the HTTP communication that is similar to traditional WAF and Next Generation WAF technologies.
-
-__XXX: Insert diagram graphic from https://contrast.atlassian.net/browse/CONTRAST-26578__ 
+The agent is targeted to specific Webserver products and versions. For more information, see [Supported Technologies](installation-webserver.html#webserver-supported) for the Webserver agent. 
 
 ## Use the Agent
 
-To start protecting your application with the Webserver Agent, start with our Installation _XXX: need link to WebserverAgentInstall_ instructions for obtaining the software.
+To start protecting your application with the Webserver agent, see the [Installation](installation-webserver.html#webserver-install) instructions for obtaining the software.
