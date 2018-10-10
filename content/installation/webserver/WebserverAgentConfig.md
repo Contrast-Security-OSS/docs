@@ -4,7 +4,7 @@ The items that must be configured are:
 * The communication link between Contrast-Service and TeamServer
 * The NGINX service enabling the Agent to inspect traffic to certain endpoints
 
-# Configuring Contrast-Service
+## Configure the Contrast Service
 
 _XXX: config location is moving to /etc/contrast/webserver/contrast-security.yaml_
 
@@ -29,13 +29,15 @@ The other section that needs your specific config in this file is:
 _XXX: where do I point someone if they are confused as to where to get these item?_
 _XXX: give the user a way to test their configuration is working wrt to TeamServer?_
 
-# Configuring NGINX with the Webserver Agent.
+## Configure NGINX 
 
-The Webserver Agent is configured within the NGINX configuration files. These are located at `/etc/nginx`.  Configuring NGINX as a reverse proxy or webserver is out of scope for this document. Here we'll explain the Webserver Agent specific configuration within the NGINX configuration files.
+The Webserver agent is configured within the NGINX configuration files located at */etc/nginx*. <!-- Configuring NGINX as a reverse proxy or web server is out of scope for this document. --> The following guides you through details for the agent-specific configuration within the NGINX configuration files.
 
-The /etc/nginx.conf should have the webserver agent module added to it, and configuration items enabling the webserver agent for certain endpoints in the nginx.conf.
+The */etc/nginx.conf* ___ should have the Webserver agent module added to it along with the configuration items enabling the agent for certain endpoints in the *nginx.conf*.
 
-Example /etc/nginx/nginx.conf:
+**Example:**
+
+``` /etc/nginx/nginx.conf:
     
     load_module modules/ngx_http_contrast_connector_module.so;
 
@@ -72,25 +74,12 @@ Example /etc/nginx/nginx.conf:
         }
       }
     }
+```
 
-The important parts here are the `load_module` directive at the top which is loading the webserver agent into nginx and the various `contrast_*` directives. The `contrast_*` directives can be placed at the "main", "server", or "location" level in an nginx configuration. http://nginx.org/en/docs/beginners_guide.html#conf_structure
+The important parts to note are the `load_module` directive at the top, which is loading the Webserver agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the "main", "server" or "location" level in an [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below. 
 
-The individual directives are explained below:
-
-__contrast__
-Values: on \| off [off]
-Turns the loaded agent on or off.
-
-__contrast_debug__
-Values: on \| off [off]
-Turns debug logging on or off.
-
-__contrast_unix_socket__ 
-Values: string
-Specifies the the unix domain socket filepath. This must agree with where Contrast-Service has it configured.
-
-__contrast_app_name__
-Values: string
-Application Name as this agent will show up as in the Contrast UI.
-
+* `contrast`: Turns the loaded agent on or off. Value options are `on` or `off`. (The default value is `off`.) 
+* `contrast_debug`: Turns debug logging on or off. Value options are `on` or `off`. (The default value is `off`.)
+* `contrast_unix_socket`: Specifies the the Unix domain socket file path. This must agree with the location at which the Contrast Service has configured it. Values must be formatted as a string. 
+* `contrast_app_name`: Application name for the agent as it appears in the Contrast UI. Values must be formatted as a string. 
 
