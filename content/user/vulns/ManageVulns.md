@@ -14,36 +14,6 @@ To change the status of one or more vulnerabilities, select the checkboxes in th
 
 See [Analyze Findings](user-vulns.html#analyze) to learn more about statuses and behaviors when a vulnerability is marked and found again.
 
-### Pending vulnerabilities 
-
-If an administrator [requires administrative approval](admin-orgsettings.html#app-defaults), vulnerabilities will go into a **Pending** state when you attempt to close them. Administrative approval applies to changes to vulnerabilities by two-way [bugtracker integrations](admin-orgintegrations.html#bugtracker) as well as [auto-remediation policies](admin-policymgmt.html#remediate).  
-
-> **Note:** An administrator may apply this requirement to certain sets of vulnerabilities, such as all Critical vulnerabilities moving from a Fixed status to a Closed status.
-
-If you attempt to close a vulnerability that must be approved, you must provide a comment in the dialog that appears. Once you provide a reason and justification for the status change, a message will confirm that the closure is pending an administrator's review. 
-
-<a href="assets/images/Vulns-mark-as-dialog.png" rel="lightbox" title="Enter a reason and justification for a status change"><img class="thumbnail" src="assets/images/Vulns-mark-as-dialog.png"/></a>
-
-The vulnerability is marked as Pending in the **Open** grid view. The time stamp beside the label indicates when you made the request to close. To see all vulnerabilities to be approved in your organization, select the **Pending Review** view from the dropdown at the top of the page. 
-
-<a href="assets/images/Vulns-marked-pending.png" rel="lightbox" title="Vulnerabilities with pending status changes are marked in the grid"><img class="thumbnail" src="assets/images/Vulns-marked-pending.png"/></a>
-
-You'll receive a [notification](admin-orgsettings.html#org-notify) when your request to close the vulnerabilities is approved or denied. If denied, the vulnerability will go back to its previous state; but, the administrator must provide a reason that appears in the vulnerability's **Discussion** page. 
-
-> **Note:** While in a Pending state, the vulnerability's previous status still applies for the purpose of organizational reports and statistics. 
-
-#### Review status changes
-
-To approve or deny vulnerability closures as a Contrast administrator, click on the link in your UI notification or navigate to the **Pending** view in the Vulnerabilities grid. Select one or more vulnerabilities to review. Click on the **Review** button in the batch actions menu, and select **Approve** or **Deny**.  
-
-You can also go to the vulnerability's Details page, and click the **Review** button in the actions menu to approve or deny the status change.
-
-<a href="assets/images/Pending-admin-approval.png" rel="lightbox" title="Review pending status changes"><img class="thumbnail" src="assets/images/Pending-admin-approval.png"/></a>
-
-If you choose to deny the status change, you must provide a reason in the confirmation dialog. Your reason is documented in the vulnerability's **Discussion** tab. The vulnerability automatically reverts to its previous status. 
-
-If you choose to approve the status change, the user's request is marked as "Approved" in the vulnerability's **Discussion** tab. 
-
 ## Vulnerability Severity
 
 Hover over a vulnerability's severity level in any **Vulnerabilities** grid to see the Likelihood and Impact calculations. To change the level, click on the colored badge and choose the new selection from the dropdown menu.
@@ -55,6 +25,32 @@ Hover over a vulnerability's severity level in any **Vulnerabilities** grid to s
 Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. Use basic column sorting to arrange vulnerabilities in a grid, or use the fields above the grid to quickly find one by its vulnerability ID, the date range in which it was found or other criteria. Click the **Advanced** link for access to more filters including tags, servers and environments. 
 
 <a href="assets/images/Vulnerability_Filters.png" rel="lightbox" title="Vulnerability Filters"><img class="thumbnail" src="assets/images/Vulnerability_Filters.png"/></a>
+
+## Pending Vulnerabilities 
+
+If an administrator [requires administrative approval](admin-orgsettings.html#app-defaults) to close vulnerabilities, vulnerabilities with their specified statuses and severities go into a **Pending** state when you attempt to close them. Administrative approval applies to changes to vulnerabilities by two-way [bugtracker integrations](admin-orgintegrations.html#bugtracker) as well as [auto-remediation policies](admin-policymgmt.html#remediate).  
+
+When you attempt to close a vulnerability that an administrator must approve, you must provide a reason and justification for the status change. Once completed, Contrast confirms that the closure is pending an administrator's review. 
+
+<a href="assets/images/Vulns-mark-as-dialog.png" rel="lightbox" title="Enter a reason and justification for a status change"><img class="thumbnail" src="assets/images/Vulns-mark-as-dialog.png"/></a>
+
+Once Contrast confirms your request, the vulnerability is marked as **Pending** in the grid. Hover over the label to see more information about when the request to close was submitted. To see all vulnerabilities awaiting review in your organization, select the **Pending Review** filter from the dropdown. 
+
+<a href="assets/images/Vulns-marked-pending.png" rel="lightbox" title="Vulnerabilities with pending status changes are marked in the grid"><img class="thumbnail" src="assets/images/Vulns-marked-pending.png"/></a>
+
+> **Note:** You may change the status of a pending vulnerability. If approval isn't required for the new status, the vulnerability is no longer marked as Pending. 
+
+You will receive a [notification](admin-orgsettings.html#org-notify) when your request to close the vulnerabilities is approved or denied. If denied, the vulnerability will go back to its previous state; but, the administrator must provide a reason for the decision, which appears in the vulnerability's **Discussion** page. 
+
+### Review status changes
+
+To approve or deny vulnerability closures as a Contrast administrator, click on the link in your UI notification or navigate to the **Pending Review** filter in the grid. 
+
+To review vulnerability closures from the grid, select one or more vulnerabilities to review. Click on the **Review** button in the batch actions menu, and select **Approve** or **Deny**. You can also go to a vulnerability's **Details** page, and click the **Review** button in the actions menu to approve or deny its closure.
+
+<a href="assets/images/Pending-admin-approval.png" rel="lightbox" title="Review pending status changes"><img class="thumbnail" src="assets/images/Pending-admin-approval.png"/></a>
+
+If you deny the status change, you must provide a reason in the confirmation dialog. Your reason is then documented in the vulnerability's **Discussion** tab. The vulnerability automatically reverts to its previous status. If you approve the status change, the user's request is marked as "Approved" in the **Discussion** tab. 
 
 ## Merge Vulnerabilities
 
