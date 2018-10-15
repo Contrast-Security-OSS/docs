@@ -7,6 +7,17 @@ Contrast offers a variety of Cloud Foundry integrations for your applications us
 
 For Pivotal Cloud Foundry (PCF) customers, Contrast offers a Pivotal tile. This tile automates the BOSH deployment and configuration of the Contrast service broker.
 
+## Requirements
+In order for an application to be instrumented in a Cloud Foundry environment your application must be using either the default Cloud Foundry java buildpack(or the offline variant), or the IBM Liberty Buildpack, and a version that includes Contrast Framework support.
+
+[Cloud Foundry Java Buildpack](https://github.com/cloudfoundry/java-buildpack/) Version 3.19+ or Version 4.2+
+[IBM Liberty Buildpack](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack) Version 2.7.0.2+
+
+> **Note:** If you are using the offline variant of the buildpack you will not be able to override the version of the agent the app is using because the dependencies are already bundled inside the buildpack.
+
+If you are using a buildpack from before Contrast Security Framework support was included, framework support can normally be added with minimal effort but it does require making the appropriate changes to your forked buildpack.
+
+
 ## Contrast Security Framework Support
 
 The Contrast Security Agent Framework takes care of automatically downloading the latest Contrast agent and creating a configuration file.
@@ -39,6 +50,11 @@ The framework can be configured by modifying the [`config/contrast_security_agen
 | ---- | -----------
 | `repository_root` | The URL of the Contrast Security repository index ([details][repositories]).
 | `version` | The version of Contrast Security to use. Candidate versions can be found in [this listing][].
+
+If you would like to specify a specific version of the Java Agent to use, you can do so by setting the `JBP_CONFIG_CONTRASTSECURITYAGENT` environment variable and specifying a version listed [here](https://artifacts.contrastsecurity.com/agents/java/index.yml).
+
+An example overriding it would like this: 
+`JBP_CONFIG_CONTRASTSECURITYAGENT`: 'version: 3.5.6_606'
 
 
 An example of creating a user-provided service and binding it to an application:
