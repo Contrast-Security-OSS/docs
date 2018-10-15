@@ -28,31 +28,31 @@ Use the properties in this section to connect the agent to the Contrast UI.
   * **api_key**: Set the API key needed to communicate with the Contrast UI.
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header.
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
-  * **certificate**: This optional section allows the use of custom or self-signed certificate authority and certificate files when connecting to the Contrast UI.
-    * **ca_file**: When running an on-premises Contrast instance using a self-signed certificate, use this option to provide the path to a custom CA file.
-    * **cert_file**: Optionally provide a path to the server's certificate PEM file.
-    * **key_file**: Optionally provide a path to the server's key PEM file.
+  * **certificate**: Allow the use of custom or self-signed certificate authority and certificate files when connecting to the Contrast UI.
+    * **ca_file**: When running an Enterprise-on-Premises (EOP) Contrast instance using a self-signed certificate, use this option to provide the path to a custom CA file.
+    * **cert_file**: Provide a path to the server's certificate PEM file.
+    * **key_file**: Provide a path to the server's key PEM file.
 
 ### Contrast agent properties
 
-The options under this section allow the agents to find and communicate with the Contrast Service.
+Use the options in this section to allow the agents to find and communicate with the Contrast Service.
 
 * **agent**: Use the properties in this section to control the way and frequency with which the agent communicates to logs and the Contrast UI.
   * **service**:
-    * **host**: Set the the hostname or IP address of the Contrast Service to which the Contrast agent should report. <br> Example: **localhost**
-    * **port**: Set the the port of the Contrast Service to which the Contrast agent should report. <br> Example: **30555**
-    * **socket**: For the **Webserver agent** only: If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock*
+    * **host**: Set the the hostname or IP address of the Contrast Service to which the Contrast agent should report. <br> Example: `localhost`
+    * **port**: Set the the port of the Contrast Service to which the Contrast agent should report. <br> Example: `30555`
+    * **socket**: Set for or the **Webserver agent** only. If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock*
     * **logger**:
       * **path**: Set the location to which the Contrast Service saves log output. If no log file exists at this location, the Service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
-      * **level**: Set the the log output level. Options are **ERROR**, **WARN**, **INFO**, and **DEBUG**.
+      * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
       * **progname**: Override the name of the process used in logs. <br> Example: Contrast Service
 
 ### Server properties
 
-The options under this section allow for overriding the server information sent to Contrast UI.
+Use the options in this section to override the server information sent to Contrast UI.
 
-* **server**: Use the properties in this section to set metadata for the server hosting this agent. <br> Example: **test-server-1**
+* **server**: Use the properties in this section to set metadata for the server hosting this agent. <br> Example: `test-server-1`
   * **name**: Override the reported server name.
-  * **environment**: Override the reported server environment. <br> Example: **development**
-  * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: label1,label2,label3 
+  * **environment**: Override the reported server environment. <br> Example: `development`
+  * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
 
