@@ -8,7 +8,7 @@ The items that must be configured are:
 
 _XXX: config location is moving to /etc/contrast/webserver/contrast-security.yaml_
 
-Contrast-Service is controlled by the configuration located at `/etc/contrast/contrast_security.yaml`. This is the Contrast Common Config format that most agents utilize.  _XXX: link to a general common config document_
+Contrast-Service is controlled by the configuration located at `/etc/contrast/contrast_security.yaml`. This is the Contrast Common Config format that most agents utilize. __XXX: link to a general common config document__
 
 This file will control how the Webserver is represented to TeamServer. The default configuration installed with the contrast-service linux package has most necessary items filled in however you will need to edit it with your TeamServer location and API key. You will also need to configure how you want your agent represented to TeamServer
 
@@ -26,8 +26,9 @@ The other section that needs your specific config in this file is:
       api_key: YOUR_CONTRAST_API_KEY
       url: http://YOUR_TEAMSERVER_LOCATION/Contrast
 
-_XXX: where do I point someone if they are confused as to where to get these item?_
-_XXX: give the user a way to test their configuration is working wrt to TeamServer?_
+These configuration items are available from the "Your Account" section of your TeamServer instance.
+
+If this configuration has an issue or has incorrect values, then the contrast-service will fail to connect to TeamServer and the failed connection result can be troubleshooted from the ```/var/log/contrast/service.log```.
 
 ## Configure NGINX 
 
