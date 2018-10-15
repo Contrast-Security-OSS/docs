@@ -1,24 +1,31 @@
-Some of Contrast's products are distributed via Linux packages. This makes installing and staying up to date very easy. In order to use our package repo you have to configure your package management system to include a reference to our package repo. The instructions for doing this are here.
+Some of Contrast's products are distributed via Linux packages. This makes installing and staying up to date very easy and familiar as it utilizes the linux packaging and distribution system. In order to use our package repo you have to configure your package management system to include a reference to our package repo.
 
-Some of our packages are tied to the specific Linux distribution you are using. For example, on Ubuntu this could be one of 'bionic', 'xenial', or 'trusty'.  The instructions will show you how to get this information and then use it to configure the right package repo for your system.  This is a one-time configuration.  Once its done, you'll be connected to the software distribution pipeline and can solely manage it via your distribution's package manager.
+Some of our packages are tied to the specific Linux distribution you are using and some are applicable to any distribution. This document will configure both distribution points so once configured, you will have access to all our Linux-packaged products.
+
+This is a one-time configuration step. Once its done, you'll be connected to the software distribution pipeline and can solely manage it via your distribution's package manager. Some Linux package managers need a public GPG key that will be used to verify the signed packages from our repo.  We'll show this in the configuration steps if its applicable to your system
 
 ### Debian/Ubuntu
 
+Debian-based distributions are identified by their codename.  Codenames for Ubuntu versions are:
 
-* Configure your system to retrieve from the correct Debian repository. Get the `CODENAME` for your Ubuntu/Debian release. 
+	* Ubuntu 18.04: bionic
+	* Ubuntu 16.04: xenial
+	* Ubuntu 14.04: trusty
 
-```
-grep VERSION_CODENAME /etc/os-release 
-```
-
-* Update the command below with the `CODENAME`, and run the commands.
+* First install the public key we use to sign our packages.
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ CODENAME contrast" | sudo tee /etc/apt/sources.list.d/contrast.list
 ```
 
-* Once you've finished configuration, update your local package cache
+* Next, add the package repos. Be sure to replace the `CODENAME` below with your distros actual codename. This can be found in ```/etc/os-release```. Create the file ```/apt/sources.list.d/contrast.list``` with your favorite editor and add the content below to it:
+
+```
+deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ CODENAME contrast
+deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast
+```
+
+* Once the data above is written to the file, you will have access to both our distro-specific packages and distro-agnostic packages. You should update your local package cache with the command below and you'll be ready to start installing Contrast software packages.
 
 ```
 sudo apt-get update
@@ -28,16 +35,15 @@ sudo apt-get update
 
 Complete the following steps to install the Contrast Service for Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7.
 
-* To install Contrast Service from Contrast's Yum repository, configure your system to use the repository.
+* The Contrast repositories for RHEL/Centos can be added by creating the file, ```/etc/yum.repos.d/contrast.repo```, and adding the following data to it with your favorite text editor:
 
 ```
-OSREL=$(rpmquery -E "%{rhel}")
-sudo -E tee /etc/yum.repos.d/contrast.repo << EOF
 [contrast]
-name=contrast repo
-baseurl=https://contrastsecurity.jfrog.io/contrastsecurity/rpm-public/centos-$OSREL/
+name=Contrast centos-$releasever repo
+baseurl=https://contrastsecurity.jfrog.io/contrastsecurity/rpm-public/centos-$releasever/
 gpgcheck=0
 enabled=1
-EOF
 ```
+
+
 
