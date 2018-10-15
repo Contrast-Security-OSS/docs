@@ -24,7 +24,7 @@ Hover over a vulnerability's severity level in any **Vulnerabilities** grid to s
 
 Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. Use basic column sorting to arrange vulnerabilities in a grid, or use the fields above the grid to quickly find one by its vulnerability ID, the date range in which it was found or other criteria. Click the **Advanced** link for access to more filters including tags, servers and environments. 
 
-<a href="assets/images/Vulnerability_Filters.png" rel="lightbox" title="Vulnerability Filters"><img class="thumbnail" src="assets/images/Vulnerability_Filters.png"/></a>
+<a href="assets/images/Vulnerability-quick-view.png" rel="lightbox" title="Filter vulnerabilities in the grid"><img class="thumbnail" src="assets/images/Vulnerability-quick-view.png"/></a>
 
 ## Pending Vulnerabilities 
 
