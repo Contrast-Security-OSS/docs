@@ -16,8 +16,8 @@ Parameter                                      | Environment Variable           
 --contrast.service_key <key>                   | CONTRAST\_\_SERVICE_KEY                        | Account service key.
 --contrast.url <url>                           | CONTRAST\_\_URL                                | URL on which to report. Default is https://app.contrastsecurity.com/.
 --contrast.user_name <name>                    | CONTRAST\_\_USER_NAME                          | Account user name.
---contrast.ca_file <path>                      | CONTRAST\_\_CA_FILE                            | When running an on-premises Contrast instance using a self-signed certificate, use this option to provide the relative or absolute path to your CA file.
---contrast.ignore_cert_errors [true]           | CONTRAST\_\_IGNORE_CERT_ERRORS                 | Allows agent to communicate data even if Contrast's cert can't be verified against supplied list of CAs.
+--contrast.ca_file <path>                      | CONTRAST\_\_CERTIFICATE\_\_CA_FILE             | When running an on-premises Contrast instance using a self-signed certificate, use this option to provide the relative or absolute path to your CA file.
+--contrast.ignore_cert_errors [true]           | CONTRAST\_\_CERTIFICATE\_\_IGNORE_CERT_ERRORS  | Allows agent to communicate data even if Contrast's cert can't be verified against supplied list of CAs.
 --contrast.proxy.enable [true]                 | CONTRAST\_\_PROXY\_\_ENABLE                    | If `false`, no proxy is being used for communication of data.
 --contrast.proxy.url <url>                     | CONTRAST\_\_PROXY\_\_URL                       | URL of proxy for communicating agent data.
 --contrast.timeout_ms <ms>                     | CONTRAST\_\_TIMEOUT_MS                         | Http timeout value (in ms). Default is **10000**.

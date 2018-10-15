@@ -30,10 +30,10 @@ Use the properties in this section to connect the agent to the Contrast UI.
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
-  * **last_config_path**: Set the path to which the agent should store the currently used configuration from the Contrast UI. <br> Example: *./tmp/config*
-  * **ca_file**: When running an on-premises Contrast instance using a self-signed certificate, use this option to provide the path to a custom CA file.
-  * **cert_pem_file**: Optionally provide a path to the server's certificate PEM file.
-  * **key_pem_file**: Optionally provide a path to the server's key PEM file.
+  * **certificate**: This optional section allows the use of custom or self-signed certificate authority and certificate files when connecting to the Contrast UI.
+    * **ca_file**: When running an on-premises Contrast instance using a self-signed certificate, use this option to provide the path to a custom CA file.
+    * **cert_file**: Optionally provide a path to the server's certificate PEM file.
+    * **key_file**: Optionally provide a path to the server's key PEM file.
 
 ### Contrast agent properties
 
