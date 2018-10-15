@@ -75,4 +75,4 @@ Administrators automatically receive the following notifications for high-level 
 
 ## Feature Notifications 
 
-For some features that require user notifications, Contrast automatically notifies the affected users in the Contrast UI when a Contrast administrator enables the feature. (You can't control these notifications in the **Notifications** page.) Contrast requires user and administrator notifications for features including [vulnerability status approval](admin-orgsettings.html#app-defaults), ___ and ___ .
+For some features that require user notifications, Contrast automatically notifies the affected users in the Contrast UI when a Contrast administrator enables the feature. (You can't control these notifications in the **Notifications** page.) Contrast requires user and administrator notifications for features including [vulnerability status approval](admin-orgsettings.html#app-defaults) and other **Policy Management** settings.
