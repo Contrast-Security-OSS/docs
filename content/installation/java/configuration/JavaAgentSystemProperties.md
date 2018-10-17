@@ -17,6 +17,7 @@ Generate a list of general properties directly from the command line using the C
 | contrast.app.activity.period | Contrast application activity thread polling period in milliseconds <br> **DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
 | contrast.app.features | JSON from disk to use for application <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.app.update.period | Contrast application update thread polling period in milliseconds <br> **DEFAULT VALUE:** 5000 (5 seconds, in milliseconds)</br> |
+| contrast.application.code | The 'application code' for the application <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.appupdate | Boolean to enable/disable threads that sends updates about applications to Contrast <br> **DEFAULT VALUE:** true</br> |
 | contrast.auto.license.assessment | Boolean to allow Contrast to license an application on creation <br> **DEFAULT VALUE:** false</br> |
 | contrast.auto.license.protection | Boolean to allow Contrast to license a server on creation <br> **DEFAULT VALUE:** false </br> |
