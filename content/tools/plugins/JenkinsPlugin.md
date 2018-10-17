@@ -51,9 +51,9 @@ You can add as many rules as you like. The plugin fails on the **first** bad con
 Complete the following fields for **Post-Build Actions**.
 
 * Select a **Profile** from the dropdown.
-* Select **Application version tag format**. By default, the plugin uses the first option: "applicationName-buildNumber". 
+* Select **Query vulnerabilities by**. By default, the plugin uses the first option: "appVersionTag, format: applicationId-buildNumber". 
 * If the profile is configured to allow the global threshold conditions to be overridden, you can choose to do so.
-* Enter the **Application Name**. The Jenkins job name is used by default for this field. This field is **required**.
+* Select the **Application Id** from the dropdown menu. This field is **required**.
 * If you chose to override the global threshold conditions, fill in the rest of the fields, including **Count**,
  **Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global threshold conditions described above.
 
@@ -64,16 +64,17 @@ Complete the following fields for **Post-Build Actions**.
 When you add a Pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements. Pipeline configuration:
 
 ```
-contrastVerification profile: 'Localhost', applicationName: 'NodeTestBench', count: 10, rule: 'xss', severity: 'High', appVersionTagFormat: 1
+contrastVerification applicationId: '1e6ad9c6-89d4-4f06-bdf6-92c569ec89de', count: 1, profile: 'new-profile', queryBy: 3, rule: 'cache-controls-missing', severity: 'High'
 ```
 
 ## Test for Vulnerabilities
 
-For the Jenkins plugin to get accurate information, you must add a unique identifier built from the Jenkins CI configuration as an agent property. The corresponding property for the Java agent is `contrast.override.appversion`. Also, the job name must match your application name, or you must override your application name with another property, to ensure that Contrast tests for the correct information.
+For the Jenkins plugin to get accurate information, you must add a unique identifier built from the Jenkins CI configuration as an agent property. The corresponding property for the Java agent is `contrast.override.appversion`.
 
-The plugin uses the unique identifier `appVersionTag` to filter vulnerabilities and check conditions. You can change the format used by the plugin to create `appVersionTag` using `appVersionTagFormat` pipeline parameter. Two options are available: 
+The plugin can use either the unique identifier `appVersionTag` or the `startDate` to filter vulnerabilities and check conditions. You can change the format used by the plugin to create `appVersionTag` or set the plugin to use `startDate` using `queryBy` pipeline parameter. Three options are available: 
 
-* `applicationName-${BUILD_NUMBER}` (default)
-* `applicationName-${JOB_NAME}-${BUILD_NUMBER}`
+* appVersionTag, format: `applicationId-${BUILD_NUMBER}` (default)
+* appVersionTag, format: `applicationId-${JOB_NAME}-${BUILD_NUMBER}`
+* `startDate` (Build timestamp)
 
 Both `JOB_NAME` and `BUILD_NUMBER` are available as a Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
