@@ -8,7 +8,7 @@ tags: "Admin Organization settings applications"
 
 Organization Admins can choose default settings for applications in their organization based on levels of importance, existing policies and Assess licensing. Go to the **User menu > Organization Settings > Applications tab** to get started. 
 
-<a href="assets/images/Application-defaults.png" rel="lightbox" title="Configure application defaults for your organization"><img class="thumbnail" src="assets/images/Application-defaults.png"/></a>
+<a href="assets/images/Application-defaults.png" rel="lightbox" title="Configure custom metadata fields to add to your applications"><img class="thumbnail" src="assets/images/Application-defaults.png"/></a>
 
 ## Set Up Defaults
 
@@ -36,4 +36,11 @@ See [Manage Vulnerabilities](user-vulns.html#manage-vuln) for more information a
 
 Check the box if you want to **Automatically apply licenses** to newly onboarded applications. The thermometer chart below the checkbox shows you the number of licenses used out of the total number of licenses available in the organization. Click on the total number of licenses to go to the Licenses view of the [Organization Statistics](user-reports.html#orgstats) page. 
 
+## Custom Fields 
+
+Use the **Custom Fields** section to add custom metadata to each of the the applications in your organization. During agent onboarding, users must enter the information that you require in this configuration. The metadata is then displayed in the Contrast UI, including the **Application** page grid and application's **Details** page. 
+
+<a href="assets/images/App-custom-settings.png" rel="lightbox" title="Configure custom metadata fields to add to your applications"><img class="thumbnail" src="assets/images/App-custom-settings.png"/></a>
+
+Use the dropdown menu to choose a field type of "Freeform", "Numeric" or Point of Contact", and enter a name for the field. Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each application. 
 
