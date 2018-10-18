@@ -73,3 +73,6 @@ Administrators automatically receive the following notifications for high-level 
 
 <a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Email notification for administrators"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
 
+## Feature Notifications 
+
+For some features that require user notifications, Contrast automatically notifies the affected users in the Contrast UI when a Contrast administrator enables the feature. (You can't control these notifications in the **Notifications** page.) Contrast requires user and administrator notifications for features including [vulnerability status approval](admin-orgsettings.html#app-defaults) and other **Policy Management** settings.
