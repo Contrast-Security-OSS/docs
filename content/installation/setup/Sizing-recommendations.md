@@ -25,7 +25,7 @@ TS1 configurations provide a baseline level of CPU performance, but are flexible
 
 | vCPUs | Clock Speed      | RAM | Storage |
 |:-----:|:----------------:|:---:|:-------:|
-| ~2    | 2.5GHz to 3.3GHz | 12GB |  30GB  |
+| ~2    | 2.5GHz to 3.3GHz | 16GB |  100GB  |
 
 
 ### TS2 configuration
@@ -35,7 +35,7 @@ TS2 configurations provide a suitable level of performance for most deployments 
 
 | vCPUs    | Clock Speed      | RAM | Storage |
 |:--------:|:----------------:|:---:|:-------:|
-| ~4 to ~8 | 2.5GHz to 3.3GHz | 12GB to 16GB | 50GB to 100GB |
+| ~4 to ~8 | 2.5GHz to 3.3GHz | 16GB to 24GB | 100GB to 200GB |
 
 
 ### TS3 configuration
@@ -45,25 +45,9 @@ TS3 configurations provide a high degree of performance and scalability for most
 
 | vCPUs | Clock Speed      | RAM | Storage |
 |:--------:|:----------------:|:---:|:-------:|
-| ~8 to ~16 | 2.5GHz to 3.3GHz | 16GB to 24GB |  100GB to 500GB   |
+| ~8 to ~16 | 2.5GHz to 3.3GHz | 24GB to 48GB |  200GB to 500GB   |
 
 
 #### Use cases for TS3:
 * Advanced use of the Contrast REST API architecture for automation or data extraction purposes.
 * Continuous integration of agents with large automated regression suites.
-
-
-### C1 configuration
-C1 configurations are recommended for Enterprise on Premises (EOP) customers deploying the Crawler microservice. The compute, resource and storage requirements are minimal for the Crawler.
-
-Most Crawler installations are suitable to run on a single vCPU. However, crawling performance improves with at least two vCPUs. Memory can be configured for the Crawler processes, which are both a Java Virtual Machine and PhantomJS process. Storage is only needed during the crawling operation. Once crawling is complete, the results of the crawling exercise are transferred to the Contrast. 
-
-> **Note:** If you use the Crawler service, you'll need more storage for Crawler results. 
-
-Contrast advises EOP customers who are implementing Crawler to run on different systems than their Contrast application. While most Contrast deployments can support the additional compute and resource requirements, Contrast still recommends running this service on a different server. Crawler can be configured to run on multiple servers for parallel crawling operations.
-
-| vCPUs | Clock Speed      | RAM | Storage |
-|:-----:|:----------------:|:---:|:-------:|
-| ~1 to ~2 | 2.5GHz to 3.3GHz | 2GB | Less than 10GB   |
-
-
