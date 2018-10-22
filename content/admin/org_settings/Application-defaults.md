@@ -40,7 +40,14 @@ Check the box if you want to **Automatically apply licenses** to newly onboarded
 
 Use the **Custom Fields** section to add custom metadata to each of the the applications in your organization. During agent onboarding, users must enter the information that you require in this configuration. The metadata is then displayed in the Contrast UI, including the **Application** page grid and application's **Details** page. 
 
-<a href="assets/images/App-custom-settings.png" rel="lightbox" title="Configure custom metadata fields to add to your applications"><img class="thumbnail" src="assets/images/App-custom-settings.png"/></a>
+<a href="assets/images/App-custom-settings.png" rel="lightbox" title="Configure custom metadata fields for your applications"><img class="thumbnail" src="assets/images/App-custom-settings.png"/></a>
 
-Use the dropdown menu to choose a field type of "Freeform", "Numeric" or Point of Contact", and enter a name for the field. Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each application. 
+Use the dropdown menu to choose a field type of "Freeform", "Numeric" or Point of Contact", and enter a name for the field. Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each new application. Click **Add Field** button to complete as many rows as you need. 
+
+Once you've defined each field, Contrast provides the formatted property that you can copy and use in your agent configuration.   
+
+If you would like to fail applications that don't include all required fields, check the box to **Restrict applications missing required fields**. This may apply to new or new and existing applications in the organization. 
+
+> **Note:** If you don't choose to restrict applications, an application added without a required field is onboarded but flagged in the UI. An email alert is also sent to the designated Point of Contact, if provided.  
+
 

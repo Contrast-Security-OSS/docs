@@ -40,6 +40,5 @@ You must archive an application before you can fully delete it. You aren't requi
 
 ## Group Applications
 
-Grouping is a simple way to tag or label one or more applications so that you can use the group attribute to improve search functionality in the Contrast interface. (It's also very different from [merging applications](user-appsmanage.html#merge).)
-
+Grouping is a simple way to tag or label one or more applications so that you can use the group attribute to improve search functionality in the Contrast interface. (It's also very different from [merging applications](user-appsmanage.html#merge).) 
 
