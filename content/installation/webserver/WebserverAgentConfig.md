@@ -11,9 +11,7 @@ The items that must be configured are:
 
 ## Configure the Contrast Service
 
-_XXX: config location is moving to /etc/contrast/webserver/contrast-security.yaml_
-
-Contrast-Service is controlled by the configuration located at `/etc/contrast/contrast_security.yaml`. This is the Contrast Common Config format that most agents utilize. __XXX: link to a general common config document__
+Contrast-Service is controlled by the configuration located at `/etc/contrast/webserver/contrast_security.yaml`.
 
 This file will control how the Webserver is represented to TeamServer. The default configuration installed with the contrast-service linux package has most necessary items filled in however you will need to edit it with your TeamServer location and API key. You will also need to configure how you want your agent represented to TeamServer
 
