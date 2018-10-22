@@ -35,7 +35,7 @@ Operating systems:
 
 * Open the **Contrast View** to configure communication to Contrast application. 
 * To open and configure the plugin, navigate to **Window** > **Show View** > **Other**. 
-* Search for “Contrast” and add the view that appears in the search.
+* Search for “Contrast”, and add the view that appears in the search.
 
 ### Step three
 
@@ -47,7 +47,7 @@ Operating systems:
 
 ### Step four 
 
-* Click **Add** to add an organization.
+* Click the button to **Add** an organization.
 
 Well done! Eclipse is configured to get vulnerability information from Contrast. 
 
@@ -57,7 +57,7 @@ The Vulnerabilities view in Eclipse shows a list of all the vulnerabilities from
 
 <a href="assets/images/Eclipse-plugin-vulnerabilities.png" rel="lightbox" title="View a list of vulnerabilities found by Contrast"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerabilities.png"/></a>
 
-For more information, double-click the vulnerability title, or click on the **Go to page** button in the Contrast Vulnerabilities tab to go to Contrast.
+For more information, double-click the vulnerability title; or, click on the **Go to page** button in the **Contrast Vulnerabilities** tab to go to the Contrast UI.
 
 <a href="assets/images/Eclipse-plugin-vulnerability-details.png" rel="lightbox" title="View vulnerability details"><img class="thumbnail" src="assets/images/Eclipse-plugin-vulnerability-details.png"/></a>
 
