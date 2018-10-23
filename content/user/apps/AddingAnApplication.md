@@ -79,15 +79,19 @@ For **Ruby**, add the `group` field to the `application` section of the *contras
  application:
     group: Contrast Testing
  ```
+ 
+ ## Step 3: Configuration
 
-## Step 3: Restart your server
+<a href="assets/images/Add-agent-step-three.png" rel="lightbox" title="Configure application settings"><img class="thumbnail" src="assets/images/Add-agent-step-three.png"/></a>
+
+## Step 4: Restart your server
 
 Before you begin browsing an application, it's important to restart your server. The wizard includes this step to guarantee that you don't forget. 
 
 <a href="assets/images/KB3-f03_4.png" rel="lightbox" title="Restart Server"><img class="thumbnail" src="assets/images/KB3-f03_4.png"/></a>
 
 
-## Step 4: Browse your application
+## Step 5: Browse your application
 
 To confirm that your agent was correctly installed, Contrast displays reported information from the server. Once you see these updates, you can complete the wizard, and begin browsing directly from the **Application Overview** page. 
 
