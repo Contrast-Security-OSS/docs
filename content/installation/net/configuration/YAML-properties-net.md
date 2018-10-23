@@ -45,7 +45,6 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
 
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
-    * **host**: Set the proxy host. It must be set with port and scheme. <br> Example: `localhost`
     * **user**: Set the proxy user.
     * **pass**: Set the proxy password.
     * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
