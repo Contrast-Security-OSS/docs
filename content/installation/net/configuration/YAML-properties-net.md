@@ -13,12 +13,11 @@ Contrast support YAML-based configuration for the .NET agent. This allows you to
 Configuration values use the following order of precedence: 
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
-2. Command line value
-3. Specific environmental variable
-4. Generic environment variable value
-5. User configuration file value
-6. Contrast UI value
-7. Default value 
+2. Specific environmental variable
+3. Generic environment variable value
+4. User configuration file value
+5. Contrast UI value
+6. Default value 
 
 The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
 
