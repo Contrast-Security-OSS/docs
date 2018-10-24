@@ -12,8 +12,9 @@ The configuration file is titled *contrast_security.yaml* no matter where it's l
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
 2. An application-specific configuration directory (e.g., *./config/contrast_security.yaml* for Ruby on Rails or *./settings/contrast_security.yaml* for Django)
-3. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
-4. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
+3. Within the server's *etc/contrast/webserver* (e.g., */etc/contrast/webserver/contrast_security.yaml*) when being used for the webserver agent
+4. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
+5. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
 ## General Configuration Options
 
@@ -28,7 +29,7 @@ The configuration YAML consists of four sections. The agent and Service may shar
     * `service`:
       * `host`: Set the the hostname or IP address of the Contrast Service to which the Contrast agent should report. <br> Example: `localhost`
       * `port`: Set the the port of the Contrast Service to which the Contrast agent should report. <br> Example: `30555`
-      <!-- * `socket`: For the **Webserver agent** only: If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock* -->
+      * `socket`: For the **Webserver agent** only: If this property is defined the service will listen on a Unix domain socket at the defined path. If this option is used, then `host` and `port` options do not apply and they should not be defined. <br> Example: */run/contrast-service.sock*
       * `logger`:
         * `path`: Set the location to which the Contrast Service saves log output. If no log file exists at this location, the Service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
         * `level`: Set the the log output level. Options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
