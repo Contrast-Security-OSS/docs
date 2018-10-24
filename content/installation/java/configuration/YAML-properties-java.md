@@ -118,7 +118,7 @@ Use the properties in this section to control security logging. These logs allow
 
 ### Agent-Specific Properties
 
-Use the properties in this section to apply any Java agnet-wide configurations.
+Use the properties in this section to apply any Java agent-wide configurations.
 
 * **java**:
   * **standalone_app_name**: Set the name of a standalone application. If this value is set, the agent assumes there is only one application in this server.
