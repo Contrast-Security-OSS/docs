@@ -79,10 +79,21 @@ For **Ruby**, add the `group` field to the `application` section of the *contras
  application:
     group: Contrast Testing
  ```
- 
- ## Step 3: Configuration
+
+## Step 3: Configuration
+
+You may be required to provide [custom metadata](admin-orgsettings.html#app-defaults) for applications in certain organizations. All fields are required unless labeled as **(optional)**. 
 
 <a href="assets/images/Add-agent-step-three.png" rel="lightbox" title="Configure application settings"><img class="thumbnail" src="assets/images/Add-agent-step-three.png"/></a>
+
+Use one of the following options to include the key:value pairs in your configuration file: 
+
+* Select the option to **Use preconfigured** properties, and enter the appropriate information in the provided fields. Once you've completed the required fields, you can click the button to **Download Config File**.  
+* Select the option to **Create manually**. Click the button to **Copy** the formatted properties - including the necessary values to connect to Contrast - to paste into your configuration file. You must then add the required property values for the application metadata. 
+
+> **Note:** If you do not include required metadata values, the application may fail onboarding. 
+
+Once your applications are onboarded, the information you provided in these fields is displayed in the [**Applications** grid](user-appsmanage.html#overview) and the application's **Overview** tab. 
 
 ## Step 4: Restart your server
 
