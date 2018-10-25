@@ -21,7 +21,7 @@ tags: "3.5.7 October Release Notes"
 
 ### Java summary 
 
-The Java agent now reports route-based coverage for Jersey 2.0-based applications. The Java team fixed an issue in which the agent would fail to instrument certain Equinox classes as well as a false positive when applications used `HttpServletRequest.getContextPath`. Springboot applications using the `contrast.standalone.appname` configuration accurately reports libraries. 
+The Java agent now reports route-based application coverage for Jersey 2.26+. The Java team fixed an issue in which the agent would fail to instrument certain Equinox classes as well as a false positive when applications used `HttpServletRequest.getContextPath`. Springboot applications using the `contrast.standalone.appname` configuration accurately reports libraries. 
 
 ### .NET summary 
 
