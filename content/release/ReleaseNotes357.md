@@ -4,15 +4,16 @@ description: "Contrast 3.5.7 October 2018"
 tags: "3.5.7 October Release Notes"
 -->
 
+Set up administrative approval for vulnerability closures and see route coverage for Jersey applications. 
 
 ## Fixes
 
-* Sort servers in the grid by "Last Seen". CONTRAST-27866
-* Custom footers will display correctly with page contents. CONTRAST-26156
+* Sort servers in the grid by "Last Seen". 
+* Custom footers will display correctly with page contents. 
 * Option to add Virtual Patches for .NET is available.
-* Compliance Violation email notifications have working links. CONTRAST-26904
-* Filtered vulnerabilities in the UI and API returns show the same count. CONTRAST-24695
-* 
+* Compliance Violation email notifications have working links. 
+* Filtered vulnerabilities in the UI and API returns show the same count. 
+* Status updates are shown correctly in Vulnerability Trend chart. 
 
 ## Improvements
 
