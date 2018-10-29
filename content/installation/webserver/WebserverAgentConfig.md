@@ -5,39 +5,38 @@ description: "Configuration instructions for the Contrast Webserver agent"
 tags: "installation agent webserver nginx configuration settings"
 -->
 
-The items that must be configured are:
-* The communication link between Contrast-Service and TeamServer
-* The NGINX service enabling the Agent to inspect traffic to certain endpoints
+Configure the following items for the Webserver agent:
+* The communication link between Contrast-Service and the Contrast UI
+* The NGINX service enabling the agent to inspect traffic to certain endpoints
 
-## Configure the Contrast Service
+## Configure the Contrast-Service
 
-Contrast-Service is controlled by the configuration located at `/etc/contrast/webserver/contrast_security.yaml`.
+Contrast-Service is controlled by the configuration file located at */etc/contrast/webserver/contrast_security.yaml*.
 
-This file will control how the Webserver is represented to TeamServer. The default configuration installed with the contrast-service linux package has most necessary items filled in however you will need to edit it with your TeamServer location and API key. You will also need to configure how you want your agent represented to TeamServer
+This YAML file controls how the Webserver agent is represented to the Contrast application (and shown in the UI). The default configuration installed with the contrast-service Linux package has most necessary items filled in; however, you must add the location of the Contrast application and API key. You must also configure how you want your agent represented to the Contrast application. 
 
-    server:
-      name: YOUR_SERVER_NAME
-      path: /
-      type: Proxy
-      environment: development
+* `server`:
+  * `name`: Override the reported server name. Example: test-server-1
+  * `path`: Override the reported server path.
+  * `type`: Override the reported server type. Example: Proxy
+  * `environment`: Override the reported server environment. Example: development
 
-The other section that needs your specific config in this file is:
 
-    contrast:
-      user_name: YOUR_CONTRAST_USERNAME
-      service_key: YOUR_CONTRAST_SERVICE_KEY
-      api_key: YOUR_CONTRAST_API_KEY
-      url: http://YOUR_TEAMSERVER_LOCATION/Contrast
+You can find the information for following configuration properties in [Your Account](user-account.html#profile) in the Contrast UI.  
 
-These configuration items are available from the "Your Account" section of your TeamServer instance.
+* `contrast`:
+  * `user_name`: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
+  * `service_key`: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. 
+  * `api_key`: Set the API key needed to communicate with the Contrast UI.
+  * `url`: Set the URL for the Contrast UI. Example: https://app.contrastsecurity.com/Contrast
 
-If this configuration has an issue or has incorrect values, then the contrast-service will fail to connect to TeamServer and the failed connection result can be troubleshooted from the ```/var/log/contrast/service.log```.
+If this configuration has an issue or incorrect values, the contrast-service fails to connect to Contrast. You can troubleshoot the failed connection result at */var/log/contrast/service.log*.
 
-## Configure NGINX 
+## Configure the NGINX Service 
 
-The Webserver agent is configured within the NGINX configuration files located at */etc/nginx*. <!-- Configuring NGINX as a reverse proxy or web server is out of scope for this document. --> The following guides you through details for the agent-specific configuration within the NGINX configuration files.
+The Webserver agent is configured within the NGINX configuration files located at */etc/nginx*. You must add the Webserver agent module as well as the configuration properties that enable the agent for certain endpoints to the */etc/nginx.conf* file.
 
-The */etc/nginx.conf* ___ should have the Webserver agent module added to it along with the configuration items enabling the agent for certain endpoints in the *nginx.conf*.
+The following example is for the agent-specific configuration within the NGINX configuration files.
 
 **Example:**
 
@@ -80,7 +79,7 @@ The */etc/nginx.conf* ___ should have the Webserver agent module added to it alo
     }
 ```
 
-The important parts to note are the `load_module` directive at the top, which is loading the Webserver agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the "main", "server" or "location" level in an [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below. 
+The important parts to note are the `load_module` directive at the top, which loads the Webserver agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the `main`, `server` or `location` level in a [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below. 
 
 * `contrast`: Turns the loaded agent on or off. Value options are `on` or `off`. (The default value is `off`.) 
 * `contrast_debug`: Turns debug logging on or off. Value options are `on` or `off`. (The default value is `off`.)
