@@ -15,12 +15,12 @@ Ensure that your system meets the pre-requisite configuration with the Contrast 
 
 __Debian/Ubuntu Users__:
 
-    apt-get update
-    apt-get install contrast-webserver-agent-nginx contrast-service
+    sudo apt-get update
+    sudo apt-get install contrast-webserver-agent-nginx contrast-service
 
 __RedHat/Centos Users__:
 
-    yum install contrast-webserver-agent-nginx contrast-service
+    sudo yum install contrast-webserver-agent-nginx contrast-service
 
 
 After this stage you are ready to configure the software.  _XXX: Insert link to WebserverAgentConfig.md_.

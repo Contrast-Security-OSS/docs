@@ -19,8 +19,8 @@ Once you determine your Ubuntu version, copy and paste one of the scripts below 
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-sudo echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ bionic contrast" | sudo tee /etc/apt/sources.list.d/contrast.list
-sudo echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee -a /etc/apt/sources.list.d/contrast.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ bionic contrast" | sudo tee /etc/apt/sources.list.d/contrast.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee -a /etc/apt/sources.list.d/contrast.list
 sudo apt-get update
 
 ```
@@ -28,8 +28,8 @@ sudo apt-get update
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-sudo echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ xenial contrast" | sudo tee /etc/apt/sources.list.d/contrast.list
-sudo echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee -a /etc/apt/sources.list.d/contrast.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ xenial contrast" | sudo tee /etc/apt/sources.list.d/contrast.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee -a /etc/apt/sources.list.d/contrast.list
 sudo apt-get update
 
 ```
@@ -38,8 +38,8 @@ sudo apt-get update
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-sudo echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ trusty contrast" | sudo tee /etc/apt/sources.list.d/contrast.list
-sudo echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee -a /etc/apt/sources.list.d/contrast.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ trusty contrast" | sudo tee /etc/apt/sources.list.d/contrast.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all contrast" | sudo tee -a /etc/apt/sources.list.d/contrast.list
 sudo apt-get update
 
 ```
