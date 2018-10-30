@@ -9,9 +9,7 @@ tags: "installation linux package repo distribution"
 
 Some of Contrast's products are distributed through Linux packages. This makes installation and updates very easy and familiar as it utilizes the Linux packaging and distribution system. 
 
-To use the Contrast package repository, you must configure your package management system to include the appropriate reference.
-
-While Contrast packages are tied to the specific Linux distribution you're using, some are applicable to any distribution. The following steps for **Ubuntu** and **RedHat/CentOS** users configure both distribution points; once configured, you will have access to all our Linux-packaged products.
+To use the Contrast package repository, you must configure your package management system to include the appropriate reference. While Contrast packages are tied to the specific Linux distribution you're using, some are applicable to any distribution. The following steps for **Ubuntu** and **RedHat/CentOS** users configure both distribution points; once configured, you will have access to all our Linux-packaged products.
 
 **This is a one-time configuration step.** Once its done, you're connected to the Contrast software distribution pipeline, and can solely manage it through your distribution's package manager. 
 

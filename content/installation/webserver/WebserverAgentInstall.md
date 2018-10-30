@@ -14,7 +14,7 @@ You can find and install the required NGINX package from Contrast's package repo
 
 > **Note:** NGINX also offers a Mainline distribution option. It's configured differently than, and not interchangeable for, the Stable distribution that's required for the Webserver agent. 
 
-You must also ensure that your system is property configured with the [Contrast Linux package repository](ADD LINK TO SHARED DOC).
+You must also ensure that your system is property configured with the [Contrast Linux package repository](installation-setup.html#linux).
 
 ## Install from Linux Packages
 
