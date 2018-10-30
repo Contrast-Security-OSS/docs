@@ -1,4 +1,9 @@
 
+<!--
+title: "Linux Package Distribution"
+description: "How to use Contrast's Linux repository"
+tags: "installation linux package repo distribution"
+-->
 
 ## About Linux Package Distribution
 
