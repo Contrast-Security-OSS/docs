@@ -7,21 +7,21 @@ tags: "installation linux package repo distribution"
 
 ## About Linux Package Distribution
 
-Some of Contrast's products are distributed through Linux packages. This makes installation and updates very easy and familiar as it utilizes the Linux packaging and distribution system. To use the Contrast package repository, you must configure your package management system to include the appropriate reference.
+Some of Contrast's products are distributed through Linux packages. This makes installation and updates very easy and familiar as it utilizes the Linux packaging and distribution system. 
 
-While some Contrast packages are tied to the specific Linux distribution you're using, some are applicable to any distribution. The following steps configure both distribution points; once configured, you will have access to all our Linux-packaged products.
+To use the Contrast package repository, you must configure your package management system to include the appropriate reference.
 
-This is a one-time configuration step. Once its done, you're connected to the Contrast software distribution pipeline, and can solely manage it through your distribution's package manager. 
+While Contrast packages are tied to the specific Linux distribution you're using, some are applicable to any distribution. The following steps for **Ubuntu** and **RedHat/CentOS** users configure both distribution points; once configured, you will have access to all our Linux-packaged products.
+
+**This is a one-time configuration step.** Once its done, you're connected to the Contrast software distribution pipeline, and can solely manage it through your distribution's package manager. 
 
 > **Note:** Some Linux package managers need a public GPG key that's used to verify the signed packages from our repository; this is included in the configuration steps, if its applicable to your system.
 
 ## Ubuntu
 
-You can run `cat /etc/os-release` find which version of Ubuntu you're running.
+To verify which version of Ubuntu you're running, run `cat /etc/os-release`. Once you determine your Ubuntu version, copy and paste one of the following scripts to your command line to set up the appropriate Linux repository for your version.
 
-Once you determine your Ubuntu version, copy and paste one of the following scripts to your command line to set up the appropriate Linux repository for your version.
-
-#### Ubuntu 18.04: bionic
+### Ubuntu 18.04: bionic
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
@@ -30,7 +30,7 @@ echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/ all 
 sudo apt-get update
 
 ```
-#### Ubuntu 16.04: xenial
+### Ubuntu 16.04: xenial
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
@@ -40,7 +40,7 @@ sudo apt-get update
 
 ```
 
-#### Ubuntu 14.04: trusty
+### Ubuntu 14.04: trusty
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
@@ -52,7 +52,7 @@ sudo apt-get update
 
 ## RedHat/CentOS
 
-For Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7, the copy and paste following single script into your shell to configure your RedHat-based system for our package repository. 
+For Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7, copy and paste the following single script into your shell to configure your RedHat-based system for Contrast's package repository. 
 
 ```
 sudo tee /etc/yum.repos.d/contrast.repo <<-"EOF"
