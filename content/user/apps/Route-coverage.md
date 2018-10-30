@@ -14,7 +14,7 @@ Contrast observes the flow of data through routes in each of your applications. 
 
 Contrast supports route coverage for the following frameworks: 
 
-* **Java:** Spring MVC 4.x 
+* **Java:** Jersey 2.26+ and Spring MVC 4.x 
 * **.NET:** ASP.NET MVC (versions 4 and 5), WebForms, WebAPI and WCF
 * **Node:** Express 
 * **Ruby:** Rails and Sinatra
