@@ -7,7 +7,7 @@ tags: "installation linux package repo distribution"
 
 ## About Linux Package Distribution
 
-Some of Contrast's products are distributed through Linux packages. This makes installation and updates very easy and familiar as it utilizes the Linux packaging and distribution system. 
+Some of Contrast's products, including the [Webserver agent](installation-webserver.html#webserver-install), are distributed through Linux packages. This makes installation and updates very easy and familiar as it utilizes the Linux packaging and distribution system. 
 
 To use the Contrast package repository, you must configure your package management system to include the appropriate reference. While most Contrast packages are tied to the specific Linux distribution you're using, some are applicable to any distribution. The following steps for **Ubuntu** and **RedHat/CentOS** users configure both distribution points; once configured, you will have access to all our Linux-packaged products.
 

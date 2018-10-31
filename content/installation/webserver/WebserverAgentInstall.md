@@ -4,11 +4,11 @@ description: "Installation instructions for the Contrast Webserver agent"
 tags: "installation agent webserver nginx linux package source"
 -->
 
-The Contrast Webserver agent is available by two methods of installation: Linux package (recommended) or source-based.
+The Contrast Webserver agent is available for installation from a Linux package repository. 
 
 ## Prerequisites 
 
-The Webserver agent targets the official Stable NGINX server. You must install their official package as a dependency for Contrast's Webserver agent module that plugs into it. If you have a distribution's NGINX package installed, you must remove it in favor of the official NGINX distributed package.
+The Webserver agent targets the official Stable NGINX server. You must install their official package as a dependency for Contrast's Webserver agent module, which plugs into it. If you have a distro's NGINX package installed, you must remove it in favor of the official NGINX distributed package.
 
 You can find and install the required NGINX package from Contrast's package repository. If you want to obtain it from NGINX directly, use their [instructions](http://nginx.org/en/linux_packages.html) to configure your system to pull from the official NGINX repository. 
 
@@ -27,7 +27,7 @@ Use the following commands to install the Webserver agent:
  sudo apt-get install contrast-webserver-agent-nginx contrast-service
 ```
 
-**RedHat/Centos Users:**
+**RedHat/Centos users:**
 
 ```
  sudo yum install contrast-webserver-agent-nginx contrast-service
@@ -35,8 +35,8 @@ Use the following commands to install the Webserver agent:
 
 After this stage, you're ready to [configure](installation-webserver.html#webserver-config) the software.
 
-## Installation from Source
+<!-- ## Installation from Source
 
-The Webserver agent is constructed as a module that plugs into NGINX. It can be compiled statically into NGINX or as an NGINX dynamic module. The software and documentation for building from source is available at: _XXX: Insert GITHUB link_ and _XXX: Insert GITHUB link to BUILD_FROM_SOURCES.md_.
+The Webserver agent is constructed as a module that plugs into NGINX. It can be compiled statically into NGINX or as an NGINX dynamic module. The software and documentation for building from source is available at: _XXX: Insert GITHUB link_ and _XXX: Insert GITHUB link to BUILD_FROM_SOURCES.md_. -->
 
 
