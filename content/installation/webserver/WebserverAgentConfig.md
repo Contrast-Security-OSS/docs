@@ -15,20 +15,20 @@ Contrast-Service is controlled by the configuration file located at */etc/contra
 
 This YAML file controls how the Webserver agent is represented to the Contrast application (and shown in the UI). The default configuration installed with the contrast-service Linux package has most necessary items filled in; however, you must add the location of the Contrast application and API key. You must also configure how you want your agent represented to the Contrast application. 
 
-* `server`:
-  * `name`: Override the reported server name. Example: test-server-1
-  * `path`: Override the reported server path.
-  * `type`: Override the reported server type. Example: Proxy
-  * `environment`: Override the reported server environment. Example: development
+* **server**:
+  * **name**: Override the reported server name. <br> Example: `test-server-1`
+  * **path**: Override the reported server path.
+  * **type**: Override the reported server type.  <br> Example: `Proxy`
+  * **environment**: Override the reported server environment. <br> Example: `development`
 
 
 You can find the information for following configuration properties in [Your Account](user-account.html#profile) in the Contrast UI.  
 
-* `contrast`:
-  * `user_name`: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
-  * `service_key`: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. 
-  * `api_key`: Set the API key needed to communicate with the Contrast UI.
-  * `url`: Set the URL for the Contrast UI. Example: https://app.contrastsecurity.com/Contrast
+* **contrast**:
+  * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
+  * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. 
+  * **api_key**: Set the API key needed to communicate with the Contrast UI.
+  * **url**: Set the URL for the Contrast UI.  <br> Example: *https://app.contrastsecurity.com/Contrast*
 
 If this configuration has an issue or incorrect values, the contrast-service fails to connect to Contrast. You can troubleshoot the failed connection result at */var/log/contrast/service.log*.
 
@@ -81,8 +81,8 @@ The following example is for the agent-specific configuration within the NGINX c
 
 The important parts to note are the `load_module` directive at the top, which loads the Webserver agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the `main`, `server` or `location` level in a [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below. 
 
-* `contrast`: Turns the loaded agent on or off. Value options are `on` or `off`. (The default value is `off`.) 
-* `contrast_debug`: Turns debug logging on or off. Value options are `on` or `off`. (The default value is `off`.)
-* `contrast_unix_socket`: Specifies the the Unix domain socket file path. This must agree with the location at which the Contrast Service has configured it. Values must be formatted as a string. 
-* `contrast_app_name`: Application name for the agent as it appears in the Contrast UI. Values must be formatted as a string. 
+* **contrast**: Turns the loaded agent on or off. Value options are `on` or `off`. (The default value is `off`.) 
+* **contrast_debug**: Turns debug logging on or off. Value options are `on` or `off`. (The default value is `off`.)
+* **contrast_unix_socket**: Specifies the the Unix domain socket file path. This must agree with the location at which the Contrast Service has configured it. Values must be formatted as a string. 
+* **contrast_app_name**: Application name for the agent as it appears in the Contrast UI. Values must be formatted as a string. 
 
