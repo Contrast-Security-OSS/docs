@@ -13,12 +13,11 @@ Contrast support YAML-based configuration for the .NET agent. This allows you to
 Configuration values use the following order of precedence: 
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
-2. Command line value
-3. Specific environmental variable
-4. Generic environment variable value
-5. User configuration file value
-6. Contrast UI value
-7. Default value 
+2. Specific environmental variable
+3. Generic environment variable value
+4. User configuration file value
+5. Contrast UI value
+6. Default value 
 
 The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
 
@@ -45,7 +44,6 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
 
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
-    * **host**: Set the proxy host. It must be set with port and scheme. <br> Example: `localhost`
     * **user**: Set the proxy user.
     * **pass**: Set the proxy password.
     * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.

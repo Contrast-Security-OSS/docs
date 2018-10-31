@@ -46,6 +46,7 @@ If you need to restore a database backup, Contrast provides the necessary steps 
 * Using the [encrypted property editor](installation-setupconfig.html#encrypt), identify the MySQL database settings.
 * Shut down Contrast.
 * Start up MySQL individually using the MySQL service packaged with Contrast <br/>
+* Connect to MySQL
 	* On Linux: ```./mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema>```<br/>
 	* On Windows: ```mysql -h <jdbc.host> -P <jdbc.port> -u <jdbc.user> -p <jdbc.schema>```
 * Drop the Contrast database with ```drop database <jdbc.schema>;```.

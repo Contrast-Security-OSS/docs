@@ -52,7 +52,7 @@ An application version is generated during the Gradle install task. The plugin g
 * If your build is running in CircleCI, Contrast will use `appName-$CIRCLE_BUILD_NUM`.
 * If your build is running neither in TravisCI nor in CircleCI, Contrast will generate one in the format `appName-yyyyMMddHHmm`.
 
-### Oboard a Sample Web Application
+### Onboard a Sample Web Application
 
 The easiest way to set up a project is to clone our sample Gradle-based web application. This application has been migrated from Maven to Gradle, and relies on MongoDB; you will install that and set up the database path.
 

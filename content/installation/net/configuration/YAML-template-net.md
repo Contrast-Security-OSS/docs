@@ -52,9 +52,6 @@ contrast:
     # Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status.
     # enable: NEEDS_TO_BE_SET
 
-    # Set the proxy host. It must be set with port and scheme.
-    # host: localhost
-
     # Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
     # url: NEEDS_TO_BE_SET
 

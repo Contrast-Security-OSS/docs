@@ -3,9 +3,21 @@ title: "Running Contrast on Cloud Foundry"
 description: "Agent configuration using the Contrast service broker, Contrast buildpack, and the Pivotal Tile"
 tags: "java agent installation pivotal cloud foundry tile buildpack"
 -->
+
 Contrast offers a variety of Cloud Foundry integrations for your applications using the default Java buildpack. You can use the buildpack on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker allows you to define multiple service plans, and allows you to generate service instances in order to bind to applications.
 
 For Pivotal Cloud Foundry (PCF) customers, Contrast offers a Pivotal tile. This tile automates the BOSH deployment and configuration of the Contrast service broker.
+
+## Requirements
+
+To instrument an application in a Cloud Foundry environment, your application must use one of the following buildpacks: 
+
+* [Cloud Foundry Java Buildpack](https://github.com/cloudfoundry/java-buildpack/), version 3.19+ or version 4.2+
+* [IBM Liberty Buildpack](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack), version 2.7.0.2+
+
+> **Note:** If you're using the offline variant of the buildpack, you won't be able to override the version of the agent  being used by the application because the dependencies are already bundled inside the buildpack.
+
+If you're using a buildpack that predates (and doesn't include) Contrast Security Framework support, you can add framework support with minimal effort; however, it requires making the appropriate changes to your forked buildpack.
 
 ## Contrast Security Framework Support
 
@@ -21,13 +33,14 @@ The Contrast Security Agent Framework takes care of automatically downloading th
 Tags are printed to standard output by the buildpack detect script.
 
 ### User-Provided Service
-When binding ContrastSecurity using a user-provided service, it must have name or tag with `contrast-security` in it. The credential payload must contain the following entries:
+
+When binding Contrast Security using a user-provided service, it must have a name or tag with `contrast-security` in it. The credential payload must contain the following entries:
 
 | Name | Description
 | ---- | -----------
-| `api_key` | Your user's api key
+| `api_key` | Your user's API key
 | `service_key` | Your user's service key
-| `teamserver_url` | The base URL in which your user has access to and the URL to which the Agent will report. ex: https://app.contrastsecurity.com
+| `teamserver_url` | The base URL to which your user has access and the URL to which the agent will report (e.g., *https://app.contrastsecurity.com*)
 | `username` | The account name to use when downloading the agent
 
 ## Configuration
@@ -39,6 +52,11 @@ The framework can be configured by modifying the [`config/contrast_security_agen
 | ---- | -----------
 | `repository_root` | The URL of the Contrast Security repository index ([details][repositories]).
 | `version` | The version of Contrast Security to use. Candidate versions can be found in [this listing][].
+
+If you would like to specify a specific version of the Java Agent to use, you can do so by setting the `JBP_CONFIG_CONTRASTSECURITYAGENT` environment variable and specifying a version listed [here](https://artifacts.contrastsecurity.com/agents/java/index.yml).
+
+An example overriding it would like this: 
+`JBP_CONFIG_CONTRASTSECURITYAGENT`: 'version: 3.5.6_606'
 
 
 An example of creating a user-provided service and binding it to an application:

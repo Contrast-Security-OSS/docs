@@ -19,7 +19,7 @@ Configuration values use the following order of precedence:
 1. Contrast UI value
 1. Default value
 
-You can set the path to the YAML configuration file using the environment variable `CONTRAST_CONFIG_PATH` or the Java system property `contrast.config.path`. Like the rest of the configuration values, the system property takes precedences over the environment variable, if both are set.
+You can set the path to the YAML configuration file using the environment variable `CONTRAST_CONFIG_PATH` or the Java system property `contrast.config.path`. Like the rest of the configuration values, the system property takes precedence over the environment variable, if both are set.
 
 If the environment variable and the system property aren't set, the agent will look for the YAML configuration file in the default location.
 
@@ -79,7 +79,7 @@ All properties in this section must be put under the `agent` node, as shown in t
   
 * **agent**:
   * **shutdown_time_ms**: Set how long to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
-  * **deinstrument_on_shutdown**: Enable to deinstrumentation classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
+  * **deinstrument_on_shutdown**: Enable to deinstrument classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
 
 #### Diagnostic logging
 
@@ -89,7 +89,7 @@ Use the properties in this section to control diagnostic logging. These logs all
 
   * **logger**:
     * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
-    * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
+    * **level**: Set the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
     * **roll_daily**: Change the Contrast logger from a file-sized based rolling scheme to a date-based rolling scheme. At midnight server time, the log from the previous day log is renamed to *file_name.yyyy-MM-dd*. You must set this flag to use the backups and size flags. <br> Note: This scheme does not have a size limit; manual log pruning is required. <br> Example: `false`
     * **roll_size**: Set the roll size for log files unless `agent.logger.roll_daily=true`. <br> Example: `100M`
     * **backups**: Set the number of backup files to keep. <br> Example: `10`
@@ -118,7 +118,7 @@ Use the properties in this section to control security logging. These logs allow
 
 ### Agent-Specific Properties
 
-Use the properties in this section to apply any Java agnet-wide configurations.
+Use the properties in this section to apply any Java agent-wide configurations.
 
 * **java**:
   * **standalone_app_name**: Set the name of a standalone application. If this value is set, the agent assumes there is only one application in this server.
@@ -217,4 +217,3 @@ Use the properties in this section to set metadata for the server hosting this a
   * **version**: Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
-
