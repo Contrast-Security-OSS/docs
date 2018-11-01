@@ -34,7 +34,7 @@ IntelliJ versions:
 	* On Windows, go to **Preferences > Contrast**. 
 * Add the **TeamServer URL**, **Username**, **Service Key**, **API key**, and **Organization ID** in the given fields.
 
-> **Note:** To find your [keys](user-account.html#profile), go to the **user menu > Your Account > Profile page** in the Contrast application.
+> **Note:** To find your [keys](user-account.html#profile), go to the **user menu > Your Account > Profile page** in the Contrast UI.
 
 * Add a new organization by clicking the **Add** button.
 
