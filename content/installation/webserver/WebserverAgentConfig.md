@@ -85,4 +85,5 @@ The important parts to note are the `load_module` directive at the top, which lo
 * **contrast_debug**: Turns debug logging on or off. Value options are `on` or `off`. (The default value is `off`.)
 * **contrast_unix_socket**: Specifies the the Unix domain socket file path. This must agree with the location at which the Contrast Service has configured it. Values must be formatted as a string. 
 * **contrast_app_name**: Application name for the agent as it appears in the Contrast UI. Values must be formatted as a string. 
+* **contrast_enable_response_body**: Turns on response body processing in the NGINX module. Processing response bodies can slow NGINX signficantly and use more resources on the system. Value options are `on` or `off`. (The default is `off`.)
 
