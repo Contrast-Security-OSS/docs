@@ -62,7 +62,7 @@ To filter the list, click the **Filter** button (funnel icon) at the top-left co
 
 <a href="assets/images/VS_ext_filters.png" rel="lightbox" title="Filter vulnerabilities "><img class="thumbnail" src="assets/images/VS_ext_filters.png"/></a>
 
-If you can't see your vulnerabilities list, click the Refresh button. This also applies for Server and Application lists. 
+If you can't see your vulnerabilities list, click the Refresh button. To clear all selected filters, click the Broom button. This also applies for Server and Application lists. 
 
 > **Note:** If you can't see your vulnerabilities even after refreshing the list, you must filter your vulnerabilities. You must repeat this  process after selecting a different organization in the Connection settings so that filters and vulnerabilities are refreshed correctly.
 
