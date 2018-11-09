@@ -24,7 +24,7 @@ While the agent can still run on web frameworks that aren't officially supported
 * [express-session](https://github.com/expressjs/session)
 * [MongoDB](https://docs.mongodb.org/ecosystem/drivers/node-js/)
 * [MySQL](https://www.npmjs.com/package/mysql)
-* [Mongoose](http://docs.sequelizejs.com/)
+* [Mongoose](https://mongoosejs.com)
 * [postgres](https://www.npmjs.com/package/pg)
 * [Sequelize](http://docs.sequelizejs.com/)
 
