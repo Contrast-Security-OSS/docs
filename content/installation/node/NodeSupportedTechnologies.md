@@ -4,30 +4,44 @@ description: "List of supported technologies"
 tags: "installation Node agent frameworks support troubleshooting nodejs javascript modules"
 -->
 
-Contrast supports Node versions 6 and 8 Long-Term Support (LTS). Contrast shifts support for Node versions as the Node project shifts its LTS windows. For a schedule, see the [Node.js Long-Term Support Release Schedule](https://github.com/nodejs/LTS).
+## Node.js Version Support
 
-Third-Party Module Support                                     | Web Framework Support<sup>[1](#footnote1)</sup>           | Coming Soon
-:-----                                                         | :----                                                     | :-------
-[express-session](https://github.com/expressjs/session)        | [express](http://expressjs.com)                           | [koa](https://www.npmjs.com/package/koa)
-[mongodb](https://docs.mongodb.org/ecosystem/drivers/node-js/) | [sails](http://sailsjs.org/)                              |
-[mysql](https://www.npmjs.com/package/mysql)                   | [hapi](https://www.npmjs.com/package/hapi) (version 16.x) |
-[postgres](https://www.npmjs.com/package/pg)                   |                                                           |
+Contrast supports Node.js Long-Term Support (LTS) versions 6, 8 and 10. Contrast shifts its support for Node.js versions as the working group shifts its LTS windows. For the schedule, see the [Node.js Long-Term Support Release Schedule](https://github.com/nodejs/LTS).
+
+> **Note:** The Node.js agent currently doesn't support HTTP2, and generally doesn't support Node.js features classified as Experimental (Stability: 1).
+
+## Web Framework Support
+
+* [Express](http://expressjs.com) version 4
+* [hapi](https://www.npmjs.com/package/hapi) versions 16 and 17
+* [Sails](http://sailsjs.org/) version 0.12
+
+While the agent can still run on web frameworks that aren't officially supported, Contrast may produce less-specific findings than it would for supported frameworks. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with Node.js's built-in [http](https://nodejs.org/api/http.html) module.
+
+
+## Third-Party Module Support
+
+* [express-session](https://github.com/expressjs/session)
+* [MongoDB](https://docs.mongodb.org/ecosystem/drivers/node-js/)
+* [MySQL](https://www.npmjs.com/package/mysql)
+* [Mongoose](https://mongoosejs.com)
+* [postgres](https://www.npmjs.com/package/pg)
+* [Sequelize](http://docs.sequelizejs.com/)
 
 Contrast doesn't guarantee support for old or deprecated versions of third-party modules.
 
 ## OS Support
 
-The agent runs entirely in the Node.js application layer with no *C* dependencies. As a result, it works on **all of the same operating systems as Node.js**, including Linux, Windows, macOS and Unix.
+The agent runs entirely in the Node.js application layer with no *C* dependencies. As a result, it works on **the same operating systems as Node.js**, including Linux, Windows, macOS and Unix.
 
 ## Testing Environments
 
-When changes are made, Contrast runs a battery of automated tests to ensure that it detects findings in supported technologies across all supported versions of Node. These automated tests exercise the Contrast agent against Contrast's [Node Test Bench](https://github.com/Contrast-Security-OSS/NodeTestBench) application. This application is updated as more third-party library support is added to the agent. 
+When changes are made, Contrast runs a battery of automated tests to ensure that it detects findings in supported technologies across all supported versions of Node. This includes tests that exercise the agent against Contrast's
+[Node Test Bench](https://github.com/Contrast-Security-OSS/NodeTestBench), [Hapi 16 Test Bench](https://github.com/Contrast-Security-OSS/Hapi16TestBench), and [Hapi 17 Test Bench](https://github.com/Contrast-Security-OSS/HapiTestBench) applications. Each of these applications is updated as Contrast adds more third-party library support to the agent.
 
-> If you want to add test cases, let Contrast know by submitting a pull request. 
+If you want to add test cases, let Contrast know by clicking on the link of your chosen application and submitting a pull request.
 
-## Additional Technology 
+## Additional Technology
 
-Contrast runs with a range third-party technology, all of which isn't listed here. If you'd like to confirm that Contrast supports your preferred technology, or you'd like to make a case for Contrast to support it, [let the Contrast team know.](mailto:bugs@contrastsecurity.com)
+Contrast runs with a range of third-party technology, including options that aren't listed here. If you want to confirm that Contrast supports your preferred technology, or you'd like to make a case for Contrast to support it, [let Contrast know.](mailto:bugs@contrastsecurity.com)
 
-***
-<a name="footnote1"><sup>1</sup></a> Missing web framework support means that Contrast may produce less specific findings than it would for supported frameworks; however, the agent is still able to run. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with Node.js's built-in [http](https://nodejs.org/api/http.html) module. 
