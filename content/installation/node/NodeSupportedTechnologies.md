@@ -39,7 +39,7 @@ The agent runs entirely in the Node.js application layer with no *C* dependencie
 When changes are made, Contrast runs a battery of automated tests to ensure that it detects findings in supported technologies across all supported versions of Node. This includes tests that exercise the agent against Contrast's
 [Node Test Bench](https://github.com/Contrast-Security-OSS/NodeTestBench), [Hapi 16 Test Bench](https://github.com/Contrast-Security-OSS/Hapi16TestBench), and [Hapi 17 Test Bench](https://github.com/Contrast-Security-OSS/HapiTestBench) applications. Each of these applications is updated as Contrast adds more third-party library support to the agent.
 
-If you want to add test cases, let Contrast know by submitting a pull request.
+If you want to add test cases, let Contrast know by clicking on the link of your chosen application and submiting a pull request.
 
 ## Additional Technology
 
