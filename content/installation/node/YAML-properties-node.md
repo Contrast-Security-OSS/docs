@@ -40,13 +40,19 @@ Use the properties in this section to connect the Node agent to the Contrast UI.
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
-  * **ca_file**: Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate. <br> Example: `path/to/ca`
   * **timeout_ms**: Set the default request timeout.
 
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
     * **url**: Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
 
+  * **certificate**
+    * **enable**: Set to `false` for the agent to ignore the certificate configuration in this section.
+    * **ca_file**: Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate.
+    * **cert_file**: Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI.
+    * **key_file**: Set the absolute or relative path to the Key PEM file for communication with Contrast UI.
+    * **key_password**: Set the password for the Key file, if required.
+    * **ignore_cert_errors**: Set to `true` for the agent to ignore certificate verification errors when the it communicates with the Contrast UI.
 
 ### Contrast agent properties
 

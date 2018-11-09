@@ -19,7 +19,11 @@ Parameter                                      | Environment Variable           
 --contrast.proxy.enable [true]                 | CONTRAST\_\_PROXY\_\_ENABLE                    | If `false`, no proxy is being used for communication of data.
 --contrast.proxy.url <url>                     | CONTRAST\_\_PROXY\_\_URL                       | URL of proxy for communicating agent data.
 --contrast.timeout_ms <ms>                     | CONTRAST\_\_TIMEOUT_MS                         | Http timeout value (in ms). Default is **10000**.
+--contrast.certificate.enable [false]          | CONTRAST\_\_CERTIFICATE\_\_ENABLE              | If set to false, the certificate configuration in this section will be ignored. (default: false)
 --contrast.certificate.ca_file <path>          | CONTRAST\_\_CERTIFICATE\_\_CA_FILE             | When running an Enterprise-on-Premises (EOP) Contrast instance using a self-signed certificate, use this option to provide the relative or absolute path to your CA file.
+--contrast.certificate.cert_file <path>        | CONTRAST\_\_CERTIFICATE\_\_CERT_FILE           | Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI.
+--contrast.certificate.key_file <path>         | CONTRAST\_\_CERTIFICATE\_\_KEY_FILE            | Set the absolute or relative path to the Key PEM file for communication with Contrast UI.
+--contrast.certificate.key_password <pass>     | CONTRAST\_\_CERTIFICATE\_\_KEY_PASSWORD        | If the Key file requires a password, set it here.
 --contrast.certificate.ignore_cert_errors [true] | CONTRAST\_\_CERTIFICATE\_\_IGNORE_CERT_ERRORS  | Allows the agent to communicate data, even if Contrast's cert can't be verified against supplied list of CAs.
 --agent.auto_update [false]                    | AGENT\_\_AUTO_UPDATE                           | If `false`, don't attempt to auto-update the agent. Default is `true`.
 --agent.auto_update_path <path>                | AGENT\_\_AUTO_UPDATE_PATH                      | Directory where the updated agent artifact should be saved before installation. Default is */var/folders/ck/4cpmx4m569j29z7n05dnfb4h0000gp/T*.
