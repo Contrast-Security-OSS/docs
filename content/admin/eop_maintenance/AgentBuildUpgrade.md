@@ -10,13 +10,9 @@ Enterprise-on-Premise (EOP) administrators can upgrade the Contrast language age
 
 EOP installations of the Contrast application (starting with version 3.2.7) are automatically configured to support a new directory: *$CONTRAST_HOME/data/agents*. This directory includes sub-directories for each of the agent languages. 
 
-> **Note:** There's a single directory for NodeJS and DotNet. However, Contrast includes two directories for Java to support the 1.5 agent and the 1.6 self-updating launcher agent.
-
-
 ````
 contrast-service@dev1eop1:~/contrast/data/agents$ ls -lrta
 drwxrwxr-x  2 contrast-service contrast-service 4096 Apr 25 19:59 node
-drwxrwxr-x  2 contrast-service contrast-service 4096 Apr 25 19:59 java-launcher
 drwxrwxr-x  2 contrast-service contrast-service 4096 Apr 25 19:59 java
 drwxrwxr-x  2 contrast-service contrast-service 4096 Apr 25 19:59 dotnet
 drwxrwxr-x  6 contrast-service contrast-service 4096 Apr 25 19:59 .
