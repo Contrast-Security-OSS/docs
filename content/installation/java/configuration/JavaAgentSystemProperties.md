@@ -180,8 +180,6 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 
 * [Java Agent Bytecode Changes](installation-javaconfig.html#bytecode)
 
-* [Clearing the Java Agent Cache](troubleshooting-java.html#cache)
-
 * [Sampling](admin-orgsettings.html#org-server)
 
 
