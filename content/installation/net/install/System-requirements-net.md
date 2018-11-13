@@ -9,7 +9,6 @@ Before installing the .NET agent, confirm that you can meet the following requir
 
 - You have administrative access to a web server, and the server is supported by Contrast.
 - There is a deployed application to be analyzed, and the web application technology is supported by Contrast.
-- No other .NET Profiler (such as performance or APM tools) are installed. 
 - IIS can be restarted.
 - The web server has network connectivity with Contrast. 
 - The server meets the minimum requirements (stated below). 
@@ -31,4 +30,4 @@ Before installing the .NET agent, confirm that you can meet the following requir
 >
 > * The .NET agent roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the .NET agent is not installed. 
 >
-> * The .NET agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by analyzed applications. The Microsoft CLR has a built-in limitation that only one profiler can profile a process. This limitation comes from Microsoft and their implementation of the CLR. Many performance/APM tools such as New Relic and AppDynamics also use the CLR Profiling API; therefore, you can't use them on the same server as the Contrast .NET agent. For more details, refer to [Microsoft's CLR documentation](https://docs.microsoft.com/en-us/dotnet/framework/unmanaged-api/profiling/setting-up-a-profiling-environment).
+> * The .NET agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by analyzed applications. The Contrast agent can now exist alongside other .NET Profiler agents, such as performance or APM tools with the `ProfilerChainingEnabled` [configuration setting](installation-netconfig.html#overview) enabled.
