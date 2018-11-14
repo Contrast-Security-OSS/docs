@@ -27,11 +27,9 @@ Generate a list of general properties directly from the command line using the C
 | contrast.deepclone | Boolean to enable/disable cloning of leaf nodes in object graphs of deserialized objects <br> **DEFAULT VALUE:** false</br> |
 | contrast.dir | This value can override the default Contrast working directory. Creates the directory if it does not exist. <br> **DEFAULT VALUE:** ${HOME}/.contrast of the user account the application runs under.</br> |
 | contrast.duplicate.delay | The period for which duplicate traces, based on Contrast hashing methods, will be supressed (in milliseconds)<br>**DEFAULT VALUE:** 5000</br> |
-| contrast.enable.auto.update | If false, Contrast doesn't contact the interface to see if an updated version is available. This check occurs before `contrast.forceupdate`. <br>**DEFAULT VALUE:** true</br> |
 | contrast.enabled | Determines if Contrast monitors the JVM. You can use this feature to turn Contrast on or off quickly without removing the `-javaagent` flag. <br> **DEFAULT VALUE:** true</br> |
 | contrast.env | Send the environment for a new application server to Contrast. See the **Note** below for more information. <br> Valid values: `development`, `qa` and `production` (case insensitive). Example: `-Dcontrast.env=qa`. |
 | contrast.external.lib.dir | List of directories where external libraries are stored; used during library analysis. Takes a semicolon-delimited list on Windows and a colon-delimited list on Linux.<br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
-| contrast.forceupdate | If true, Contrast replaces itself with the latest version available on the interface without checking the version number. This check occurs after `contrast.enable.auto.update`. <br> **DEFAULT VALUE:** false </br> |
 | contrast.inject.browseragent | Manually override name of browser agent. <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.j2ee.context.discovery | Boolean to enable/disable J2EE context discovery. <br> **DEFAULT VALUE:** true</br> |
 | contrast.mode | assess: Data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features; When this property is enabled, the agent ignores all customizations from the Contrast interface. <br> **DEFAULT VALUE:** not used; this property must be set to be active </br> |
@@ -174,14 +172,6 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.xss.keywords | File path to overriding XSS keywords file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.xss.patterns | Location of XSS patterns file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 
-## Updates
-
->**Note:** These options only apply to the Java 1.6 agent.
-
-|Parameter|Description|
-|-|-|
-| contrast.forceupdate |  If you set this value to *true*, Contrast will download the latest available agent from whatever TeamServer the current agent was downloaded from. This feature is useful if you've changed the configuration of the agent and want to ensure that all current agents pick up this change. By default, the agent will smart update on application server restart, downloading a new agent from TeamServer if the TeamServer has been upgraded since the last time the application server was started. |
-
 ## More Information
 
 * [An Application Is Not Appearing In The List](troubleshooting-setup.html#missing)
@@ -189,8 +179,6 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 * [Getting Java Agent Logs](troubleshooting-java.html#java-logs)
 
 * [Java Agent Bytecode Changes](installation-javaconfig.html#bytecode)
-
-* [Clearing the Java Agent Cache](troubleshooting-java.html#cache)
 
 * [Sampling](admin-orgsettings.html#org-server)
 
