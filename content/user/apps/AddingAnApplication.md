@@ -6,7 +6,7 @@ tags: "TeamServer user application adding"
 
 Add an application to your organization by completing the following steps. 
 
-## Step 1: Download the agent
+## Download the agent
 
 You can access the **Add Agent** wizard from any page by clicking the button in the top navigation.
 
@@ -19,7 +19,7 @@ After choosing a language, you can customize your settings by checking the box f
 <a href="assets/images/KB3-f03_6.png" rel="lightbox" title="Manage Profiles"><img class="thumbnail" src="assets/images/KB3-f03_6.png"/></a>
 
 
-## Step 2: Install on your server
+## Install on your server
 
 Select your container to view the installation instructions for the specific language and container you selected. For more information, go to the [Installation overview article](installation-setup.html#setup-overview).
 
@@ -80,7 +80,7 @@ For **Ruby**, add the `group` field to the `application` section of the *contras
     group: Contrast Testing
  ```
 
-## Step 3: Configuration
+## Configuration
 
 You may be required to provide [custom metadata](admin-orgsettings.html#app-defaults) for applications in certain organizations. All fields are required unless labeled as **(optional)**. 
 
@@ -95,14 +95,14 @@ Use one of the following options to include the key:value pairs in your configur
 
 Once your applications are onboarded, the information you provided in these fields is displayed in the [**Applications** grid](user-appsmanage.html#overview) and the application's **Overview** tab. 
 
-## Step 4: Restart your server
+## Restart your server
 
 Before you begin browsing an application, it's important to restart your server. The wizard includes this step to guarantee that you don't forget. 
 
 <a href="assets/images/KB3-f03_4.png" rel="lightbox" title="Restart Server"><img class="thumbnail" src="assets/images/KB3-f03_4.png"/></a>
 
 
-## Step 5: Browse your application
+## Browse your application
 
 To confirm that your agent was correctly installed, Contrast displays reported information from the server. Once you see these updates, you can complete the wizard, and begin browsing directly from the **Application Overview** page. 
 

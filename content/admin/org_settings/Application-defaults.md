@@ -44,7 +44,7 @@ Use the **Custom Fields** section to configure custom metadata that should be pr
 
 Complete the following steps to create custom fields: 
 
-* Use the dropdown menu to choose a field type of "Freeform", "Numeric" or Point of Contact". 
+* Use the dropdown menu to choose a field type of "Freeform", "Numeric" or "Point of Contact". 
 * Enter a name for the field. 
 * Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each new application. 
 * Click **Add Field** button to complete as many rows as you need. 
