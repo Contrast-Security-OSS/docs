@@ -40,7 +40,13 @@ Check the box if you want to **Automatically apply licenses** to newly onboarded
 
 Use the **Custom Fields** section to configure custom metadata that should be provided for each of the the applications in your organization. During [agent onboarding](user-apps.html#addapp), users must enter the information that you require in their configuration files. The metadata is then displayed in the Contrast UI, including the **Application** page grid and application's **Details** page. 
 
-<a href="assets/images/App-custom-settings.png" rel="lightbox" title="Configure custom metadata fields for your applications"><img class="thumbnail" src="assets/images/App-custom-settings.png"/></a>
+The following agent versions support custom metadata fields: 
+
+* Java 3.5.6.591+
+* .NET 18.10.35+
+* Node 1.35.0
+* Python 1.2.0
+* Ruby 2.0.8
 
 Complete the following steps to create custom fields: 
 
@@ -49,10 +55,13 @@ Complete the following steps to create custom fields:
 * Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each new application. 
 * Click **Add Field** button to complete as many rows as you need. 
 
+<a href="assets/images/App-custom-settings.png" rel="lightbox" title="Configure custom metadata fields for your applications"><img class="thumbnail" src="assets/images/App-custom-settings.png"/></a>
+
 Once you've defined each field, Contrast provides the formatted property that you can copy and paste into your agent configuration files. You must then complete the information for each key=value pair. 
 
 If you would like to fail applications that don't include all required fields, check the box to **Restrict applications missing required fields**. This may apply to new or new and existing applications in the organization. 
 
 > **Note:** If you don't choose to restrict applications, any application missing a required field will be successfully onboarded but flagged in the UI. Contrast will also send an email alert to the designated Point of Contact, if provided.  
+
 
 
