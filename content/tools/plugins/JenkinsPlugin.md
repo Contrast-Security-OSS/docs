@@ -77,4 +77,6 @@ The plugin can use either the unique identifier `appVersionTag` or the `startDat
 * appVersionTag, format: `applicationId-${JOB_NAME}-${BUILD_NUMBER}`
 * `startDate` (Build timestamp)
 
+> **Note:** The `queryBy` option should match the `contrast.override.appversion` parameter you pass to the Contrast Java agent when running your application. If you use the third option (`startDate`), you aren't required to pass the `contrast.override.appversion` parameter to the Java agent.
+
 Both `JOB_NAME` and `BUILD_NUMBER` are available as a Jenkins environment <a href="https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project">properties</a>.
