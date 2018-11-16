@@ -38,7 +38,7 @@ Check the box if you want to **Automatically apply licenses** to newly onboarded
 
 ## Custom Fields 
 
-Use the **Custom Fields** section to configure custom metadata that should be provided for each of the the applications in your organization. During [agent onboarding](user-apps.html#addapp), users must enter the information that you require in their configuration files. The metadata is then displayed in the Contrast UI, including the **Application** page grid and application's **Details** page. 
+Use the **Custom Fields** section to configure custom metadata that should be provided for each of the applications in your organization. During [agent onboarding](user-apps.html#addapp), users must enter the information that you require in their configuration files. The metadata is then displayed in the Contrast UI, including the **Application** page grid and application's **Details** page. 
 
 The following agent versions support custom metadata fields: 
 
@@ -52,7 +52,7 @@ Complete the following steps to create custom fields:
 
 * Use the dropdown menu to choose a field type of "Freeform", "Numeric" or "Point of Contact". 
 * Enter a name for the field. 
-* Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each new application. 
+* Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each application. 
 * Click **Add Field** button to complete as many rows as you need. 
 
 <a href="assets/images/App-custom-settings.png" rel="lightbox" title="Configure custom metadata fields for your applications"><img class="thumbnail" src="assets/images/App-custom-settings.png"/></a>

@@ -30,7 +30,7 @@ Select your container to view the installation instructions for the specific lan
 
 ### Custom metadata 
 
-You may be required to provide [custom metadata](admin-orgsettings.html#app-defaults) for applications in certain organizations. All required fields are marked with an asterisk (** * **). 
+You may be asked to provide [custom metadata](admin-orgsettings.html#app-defaults) for applications in certain organizations. All required fields are marked with an asterisk (** * **). 
 
 <a href="assets/images/Add-agent-config.png" rel="lightbox" title="Configure application settings"><img class="thumbnail" src="assets/images/Add-agent-config.png"/></a>
 
