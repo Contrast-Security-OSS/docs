@@ -19,13 +19,6 @@ After choosing a language, you can customize your settings by checking the box f
 <a href="assets/images/KB3-f03_6.png" rel="lightbox" title="Manage Profiles"><img class="thumbnail" src="assets/images/KB3-f03_6.png"/></a>
 
 
-## Install on Your Server
-
-Select your container to view the installation instructions for the specific language and container you selected. For more information, go to the [Installation overview article](installation-setup.html#setup-overview).
-
-<a href="assets/images/KB3-f03_3.gif" rel="lightbox" title="Container Selection"><img class="thumbnail" src="assets/images/KB3-f03_3.gif"/></a>
-
-
 ## Configuration
 
 ### Custom metadata 
@@ -47,7 +40,7 @@ Once your applications are onboarded, the information you provided in these fiel
 
 To determine users' access to an application, you can specify the access control group to which an application will belong before initial startup. Use the appropriate workflow for your language to set the group name in the agent configuration for your application.
 
-When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an Admin to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
+When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an administrator to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
 
 For more details, read how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
 
@@ -97,6 +90,12 @@ For **Ruby**, add the `group` field to the `application` section of the *contras
  application:
     group: Contrast Testing
  ```
+
+## Install on Your Server
+
+Select your container to view the installation instructions for the specific language you selected. For more information, go to the [Installation overview article](installation-setup.html#setup-overview).
+
+<a href="assets/images/KB3-f03_3.gif" rel="lightbox" title="Container Selection"><img class="thumbnail" src="assets/images/KB3-f03_3.gif"/></a>
 
 ## Restart Your Server
 
