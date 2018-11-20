@@ -6,6 +6,9 @@ tags: "3.5.8 November Release Notes"
 
 ## Fixes
 
+* Fixed notification errors for Community Edition users. CONTRAST-28600, CONTRAST-28343
+* Use the export feature for all libraries in your organization without errors. CONTRAST-28415
+* Upload spreadsheet to add users as a SuperAdmin. CONTRAST-28206
 
 ## Improvements
 
