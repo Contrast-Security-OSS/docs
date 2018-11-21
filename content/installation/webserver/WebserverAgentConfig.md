@@ -1,11 +1,11 @@
 
 <!--
-title: "Contrast Webserver Agent Configuration"
-description: "Configuration instructions for the Contrast Webserver agent"
-tags: "installation agent webserver nginx configuration settings"
+title: "Contrast Proxy Agent Configuration"
+description: "Configuration instructions for the Contrast Proxy agent"
+tags: "installation agent proxy nginx configuration settings"
 -->
 
-Configure the following items for the Webserver agent:
+Configure the following items for the Proxy agent:
 * The communication link between Contrast-Service and the Contrast UI
 * The NGINX service enabling the agent to inspect traffic to certain endpoints
 
@@ -13,7 +13,7 @@ Configure the following items for the Webserver agent:
 
 Contrast-Service is controlled by the configuration file located at */etc/contrast/webserver/contrast_security.yaml*.
 
-This YAML file controls how the Webserver agent is represented to the Contrast application (and shown in the UI). The default configuration installed with the contrast-service Linux package has most necessary items filled in; however, you must add the location of the Contrast application and API key. You must also configure how you want your agent represented to the Contrast application. 
+This YAML file controls how the Proxy agent is represented to the Contrast application (and shown in the UI). The default configuration installed with the contrast-service Linux package has most necessary items filled in; however, you must add the location of the Contrast application and API key. You must also configure how you want your agent represented to the Contrast application. 
 
 * **server**:
   * **name**: Override the reported server name. <br> Example: `test-server-1`
@@ -34,7 +34,7 @@ If this configuration has an issue or incorrect values, the contrast-service fai
 
 ## Configure the NGINX Service 
 
-The Webserver agent is configured within the NGINX configuration files located at */etc/nginx*. You must add the Webserver agent module as well as the configuration properties that enable the agent for certain endpoints to the */etc/nginx.conf* file.
+The Proxy agent is configured within the NGINX configuration files located at */etc/nginx*. You must add the Proxy agent module as well as the configuration properties that enable the agent for certain endpoints to the */etc/nginx.conf* file.
 
 The following example is for the agent-specific configuration within the NGINX configuration files.
 
@@ -79,7 +79,7 @@ The following example is for the agent-specific configuration within the NGINX c
     }
 ```
 
-The important parts to note are the `load_module` directive at the top, which loads the Webserver agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the `main`, `server` or `location` level in a [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below. 
+The important parts to note are the `load_module` directive at the top, which loads the Proxy agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the `main`, `server` or `location` level in a [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below. 
 
 * **contrast**: Turns the loaded agent on or off. Value options are `on` or `off`. (The default value is `off`.) 
 * **contrast_debug**: Turns debug logging on or off. Value options are `on` or `off`. (The default value is `off`.)

@@ -1,12 +1,13 @@
 
 <!--
-title: "Contrast Webserver Agent Supported Technologies"
-description: "Contrast Webserver agent supported technologies"
-tags: "installation agent webserver nginx supported technology"
+title: "Contrast Proxy Agent Supported Technologies"
+description: "Contrast Proxy agent supported technologies"
+tags: "installation agent proxy nginx supported technology"
 -->
 
 
-The Webserver agent supports NGINX versions 1.12.2+. It also supports IPv6 and HTTP/2 configurations of NGINX. 
+The Proxy agent supports the following web servers:
+    NGINX versions 1.12.2+. It also supports IPv6 and HTTP/2 configurations of NGINX. 
 
 ## OS Support
 
