@@ -33,7 +33,7 @@ Use the following commands to install the Proxy agent:
  sudo yum install contrast-webserver-agent-nginx contrast-service
 ```
 
-After this stage, you're ready to [configure](installation-webserver.html#webserver-config) the software.
+After this stage, you're ready to [configure](installation-proxy.html#proxy-config) the software.
 
 <!-- ## Installation from Source
 

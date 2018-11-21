@@ -7,7 +7,9 @@ tags: "installation agent proxy nginx supported technology"
 
 
 The Proxy agent supports the following web servers:
-    NGINX versions 1.12.2+. It also supports IPv6 and HTTP/2 configurations of NGINX. 
+  * NGINX versions 1.12.2+. 
+
+It also supports IPv6 and HTTP/2 configurations of NGINX. 
 
 ## OS Support
 

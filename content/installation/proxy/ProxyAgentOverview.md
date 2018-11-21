@@ -12,10 +12,10 @@ The Proxy agent provides runtime protection of HTTP ingress and egress traffic a
 
 From its position in the technology stack, the Proxy agent has a high-level view of the HTTP communication that's similar to traditional WAF and Next Generation WAF technologies.
 
-<a href="assets/images/Webserver-agent-diagram.png" rel="lightbox" title="Proxy agent architecture"><img class="thumbnail" src="assets/images/Webserver-agent-diagram.png"/></a>
+<a href="assets/images/Proxy-agent-diagram.png" rel="lightbox" title="Proxy agent architecture"><img class="thumbnail" src="assets/images/Proxy-agent-diagram.png"/></a>
 
-The agent is targeted to specific web server products and versions. For more information, see [Supported Technologies](installation-webserver.html#webserver-supported) for the Proxy agent. 
+The agent is targeted to specific web server products and versions. For more information, see [Supported Technologies](installation-proxy.html#proxy-supported) for the Proxy agent. 
 
 ## Use the Agent
 
-To start protecting your application with the Proxy agent, see the [Installation](installation-webserver.html#webserver-install) instructions for obtaining the software.
+To start protecting your application with the Proxy agent, see the [Installation](installation-proxy.html#proxy-install) instructions for obtaining the software.
