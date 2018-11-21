@@ -6,9 +6,13 @@ tags: "3.5.8 November Release Notes"
 
 ## Fixes
 
-* Fixed notification errors for Community Edition users. CONTRAST-28600, CONTRAST-28343
-* Use the export feature for all libraries in your organization without errors. CONTRAST-28415
-* Upload spreadsheet to add users as a SuperAdmin. CONTRAST-28206
+* No more notification errors for Community Edition users. CONTRAST-28600, CONTRAST-28343
+* Export data for all libraries in your organization without errors. CONTRAST-28415
+* SuperAdmins can upload new user data. CONTRAST-28206
+* Create Master applications during application merge. CONTRAST-28241
+* The Dashboard shows the appropriate vulnerability count for each user's application access. CONTRAST-22697
+* All vulnerability URL info is displayed correctly. CONTRAST-28548
+* LDAP connection issues for group creation are resolved. CONTRAST-28368, CONTRAST-28367
 
 ## Improvements
 
@@ -19,15 +23,15 @@ See your Protect data logs in SumoLogic via integration with the SIEM API. Brows
 
 ### Java summary 
 
-The Java agent team improved accuracy of Assess Path Traversal rule on Spring applications. We added better Assess support for Jersey 2.0, including route detection for for Jersey 2.0+ applications. The agent also supports configuration of common configuration properties via environment variables. 
+The Java agent team improved accuracy of the Assess Path Traversal rule on Spring applications. We added better Assess support for Jersey 2.0, including route detection for for Jersey 2.0+ applications. The agent also supports configuration of common configuration properties via environment variables. 
 
 ### .NET summary 
 
-The .NET team fixed a bug in which the agent wasn't respecting the legacy `TeamServerValidateCert` configuration setting. We also fixed a bug in which the agent failed to restart properly when profiler chaining was enabled and the Assess or Protect mode was changed. The .NET team made improvements to: 
+The .NET team fixed a bug in which the agent wasn't respecting the legacy `TeamServerValidateCert` configuration setting. We also fixed a bug in which the agent failed to restart properly when profiler chaining was enabled and the Assess or Protect mode was changed. We made improvements to: 
 
 * The display of `System.Char[]` values in the trigger event of Assess vulnerabilities
 * The performance of Assess analysis of applications that communicate with web services using `System.Net.Http.HttpClient`
-* Assess accuracy for unvalidated redirects against the current requests' URL
+* Assess accuracy for unvalidated redirects against the current request's URL
 
 The agent supports Azure Application Service-hosted applications that are hosted outside of the *wwwroot/bin* directory.
  
