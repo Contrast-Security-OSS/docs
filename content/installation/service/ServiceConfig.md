@@ -12,8 +12,9 @@ The configuration file is titled *contrast_security.yaml* no matter where it's l
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
 2. An application-specific configuration directory (e.g., *./config/contrast_security.yaml* for Ruby on Rails or *./settings/contrast_security.yaml* for Django)
-3. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
-4. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
+3. Within the server's *etc/contrast/webserver* (e.g., */etc/contrast/webserver/contrast_security.yaml*) when being used for the webserver agent
+4. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
+5. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
 ## General Configuration Options
 
@@ -55,4 +56,3 @@ Use the options in this section to override the server information sent to Contr
   * **name**: Override the reported server name.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
-
