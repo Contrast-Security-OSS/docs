@@ -6,17 +6,16 @@ tags: "3.5.8 November Release Notes"
 
 ## Fixes
 
-* No more notification errors for Community Edition users. CONTRAST-28600, CONTRAST-28343
-* Export data for all libraries in your organization without errors. CONTRAST-28415
-* SuperAdmins can upload new user data. CONTRAST-28206
-* Create Master applications during application merge. CONTRAST-28241
-* The Dashboard shows the appropriate vulnerability count for each user's application access. CONTRAST-22697
-* All vulnerability URL info is displayed correctly. CONTRAST-28548
-* LDAP connection issues for group creation are resolved. CONTRAST-28368, CONTRAST-28367
+* Export data for all libraries in your organization without errors. 
+* SuperAdmins can upload new user data. 
+* Create Master applications during application merge. 
+* The Dashboard shows the appropriate vulnerability count for each user's application access. 
+* All vulnerability URL info is displayed correctly.
+* LDAP connection issues for group creation are resolved.
 
 ## Improvements
 
-See your Protect data logs in SumoLogic via integration with the SIEM API. Browse through logs, and quickly find exactly what you’re looking for!
+See your Protect data logs in SumoLogic via integration with the SIEM API. Browse through logs, and quickly find exactly what you’re looking for.
 
 
 ## Agent Updates
