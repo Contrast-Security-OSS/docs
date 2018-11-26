@@ -61,7 +61,7 @@ Use **Contrast .NET Logs**:
 To disable the agent for a specific application, populate `ProcessBlacklist` with the appropriate application pool in *C:\Program Files\Contrast\dotnet\DotnetAgentService.exe.config*:
 
 ```
-<!--Comma-separtated list of application pools ignored by Contrast-->
+<!--Comma-separated list of application pools ignored by Contrast-->
 <add key="ProcessBlacklist" value=""/>
 ```
 
