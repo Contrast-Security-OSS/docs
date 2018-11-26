@@ -24,7 +24,7 @@ tags: "3.5.8 November Release Notes"
 
 ### Java summary 
 
-The Java agent team improved accuracy of the Assess Path Traversal rule on Spring applications. We added better Assess support for Jersey 2.0, including route detection for for Jersey 2.0+ applications. The agent also supports configuration of common configuration properties via environment variables. 
+The Java agent team improved accuracy of the Assess Path Traversal rule on Spring applications. We added better Assess support for Jersey 2.0, including route detection for Jersey 2.0+ applications. The agent also supports configuration of common configuration properties via environment variables. 
 
 ### .NET summary 
 
