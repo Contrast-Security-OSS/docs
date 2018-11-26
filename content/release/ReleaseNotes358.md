@@ -15,7 +15,9 @@ tags: "3.5.8 November Release Notes"
 
 ## Improvements
 
-See your Protect data logs in SumoLogic via integration with the SIEM API. Browse through logs, and quickly find exactly what you’re looking for.
+* See your Protect data logs in SumoLogic via integration with the SIEM API. Browse through logs, and quickly find exactly what you’re looking for.
+
+* Contrast upgraded to MySQL 5.7 for embedded MySQL. 
 
 
 ## Agent Updates
