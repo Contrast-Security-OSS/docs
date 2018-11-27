@@ -42,6 +42,15 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **tls_versions**: The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
 
+  * **certificate**: 
+    * **enable**: If set to `false`, the certificate configuration in this section will be ignored.
+    * **certificate_location**: Determine the location from which the agent loads a client certificate. Value options include `File` or `Store`.
+    * **cer_file**: Set the absolute path to the client certificate's .CER file for communication with Contrast UI. The `certificate_location` property must be set to `File`.
+    * **store_name**: Specify the name of certificate store to open. The `certificate_location` property must be set to `Store`. Value options include `AuthRoot`, `CertificateAuthority`, `My`, `Root`, `TrustedPeople`, or `TrustedPublisher`.
+    * **store_location**: Specify the location of the certificate store. The `certificate_location` property must be set to `Store`. Value options include `CurrentUser` or `LocalMachine`.
+    * **find_type**: Specify the type of value the agent uses to find the certificate in the collection of certificates from the certificate store. The `certificate_location` property must be set to `Store`. Value options include `FindByIssuerDistinguishedName`, `FindByIssuerName`, `FindBySerialNumber`, `FindBySubjectDistinguishedName`, `FindBySubjectKeyIdentifier`, `FindBySubjectName`, or `FindByThumbprint`.
+    * **find_value**: Specify the value the agent uses in combination with `find_type` to find a certification in the certificate store. <br> Note: The agent will use the first certificate from the certificate store that matches this search criteria.
+
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
     * **user**: Set the proxy user.
