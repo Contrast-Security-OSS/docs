@@ -43,7 +43,7 @@ The Proxy agent is constructed as a module that plugs into NGINX. It can be comp
 
 Users that are not connected to the Internet will need to import our linux packages to their internal network since their package manager will not reach them. There are many organizations that have automated import and sychronization proceedures for keeping up to date with repos on the Internet disconnected from their air-gapped network. You should ensure your organization doesn't already have an import process that can help with the process of getting Contrast linux packages and staying up to date with them. Regardless of your situation the information below for manually obtaining the packages will help.
 
-To manuall import the packages, you should go directly to the location where our packages are hosted for your packaging system and download the newest versions from there. Here is a dependency listing of what you will need:
+To manually import the packages, you should go directly to the location where our packages are hosted for your packaging system and download the newest versions from there. Here is a dependency listing of what you will need:
 
 	contrast-server -> contrast-modsecurity
 	contrast-webserver-agent-nginx -> nginx
