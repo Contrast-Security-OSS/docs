@@ -12,7 +12,7 @@ The configuration file is titled *contrast_security.yaml* no matter where it's l
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
 2. An application-specific configuration directory (e.g., *./config/contrast_security.yaml* for Ruby on Rails or *./settings/contrast_security.yaml* for Django)
-3. Within the server's *etc/contrast/webserver* (e.g., */etc/contrast/webserver/contrast_security.yaml*) when being used for the webserver agent
+3. Within the server's *etc/contrast/webserver* (e.g., */etc/contrast/webserver/contrast_security.yaml*) when being used for the Proxy agent
 4. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
 5. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
@@ -42,7 +42,7 @@ Use the options in this section to allow the agents to find and communicate with
   * **service**:
     * **host**: Set the the hostname or IP address of the Contrast Service to which the Contrast agent should report. <br> Example: `localhost`
     * **port**: Set the the port of the Contrast Service to which the Contrast agent should report. <br> Example: `30555`
-    * **socket**: Set for or the **Webserver agent** only. If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock*
+    * **socket**: Set for or the **Proxy agent** only. If this property is defined, the Service is listening on a Unix socket at the defined path. <br> Example: */run/contrast-security.sock*
     * **logger**:
       * **path**: Set the location to which the Contrast Service saves log output. If no log file exists at this location, the Service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
       * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
