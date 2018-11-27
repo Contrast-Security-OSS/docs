@@ -1,7 +1,7 @@
 <!--
 title: "Contrast Proxy Agent Overview"
 description: "Overview of the Contrast Proxy agent"
-tags: "installation agent webserver nginx overview"
+tags: "installation agent webserver proxy nginx overview"
 -->
 
 The Contrast Proxy agent is application language and framework agnostic. It provides runtime protection by analyzing HTTP request and response data at the web server level rather than the application level. The agent supports Contrast Protect only. 
