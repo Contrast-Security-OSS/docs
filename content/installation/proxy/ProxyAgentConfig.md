@@ -79,11 +79,11 @@ The following example is for the agent-specific configuration within the NGINX c
     }
 ```
 
-The important parts to note are the `load_module` directive at the top, which loads the Proxy agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the `main`, `server` or `location` level in a [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below. 
+The important parts to note are the `load_module` directive at the top, which loads the Proxy agent into NGINX, and the various `contrast_*` directives. You can place the `contrast_*` directives at the `http`, `server` or `location` context in a [NGINX configuration](http://nginx.org/en/docs/beginners_guide.html#conf_structure). The individual directives are explained below.
 
 * **contrast**: Turns the loaded agent on or off. Value options are `on` or `off`. (The default value is `off`.) 
 * **contrast_debug**: Turns debug logging on or off. Value options are `on` or `off`. (The default value is `off`.)
-* **contrast_unix_socket**: Specifies the the Unix domain socket file path. This must agree with the location at which the Contrast Service has configured it. Values must be formatted as a string. 
+* **contrast_unix_socket**: Specifies the the Unix domain socket file path. This must agree with the location at which the Contrast Service has configured it. Values must be formatted as a string. (The default value is `/run/contrast-service.sock`.)
 * **contrast_app_name**: Application name for the agent as it appears in the Contrast UI. Values must be formatted as a string. 
 * **contrast_analyze_response_body**: Turns on response body processing in the NGINX module. Processing response bodies can slow NGINX signficantly and use more resources on the system. Value options are `on` or `off`. (The default is `off`.)
 
