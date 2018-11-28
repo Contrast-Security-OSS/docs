@@ -8,7 +8,7 @@ The Contrast Proxy agent is application language and framework agnostic, similar
 
 ## About the Proxy Agent
 
-The Proxy agent provides runtime protection of HTTP ingress and egress traffic as it's processed by a web server. In the most-common case, a web server is running in reverse proxy mode, and the agent is transparent to the application behind the reverse proxy. This enables the agent to protect a variety of application technologies, such as PHP, Go, Perl, Groovy, or any other language without a dedicated Contrast language agent.
+The Proxy agent provides runtime protection of HTTP ingress and egress traffic as it's processed by a web server. In the most-common case, a web server is running in reverse proxy mode, and the agent is transparent to the application behind the reverse proxy. This enables the agent to Protect a variety of application technologies, such as PHP, Go, Perl, Groovy or any other language without a dedicated Contrast language agent.
 
 <a href="assets/images/Proxy-agent-diagram.png" rel="lightbox" title="Proxy agent architecture"><img class="thumbnail" src="assets/images/Proxy-agent-diagram.png"/></a>
 
