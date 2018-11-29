@@ -11,7 +11,11 @@ Some of Contrast's products, including the [Proxy agent](installation-proxy.html
 
 To use the Contrast package repository, you must configure your package management system to include the appropriate reference. While most Contrast packages are tied to the specific Linux distribution you're using, some are applicable to any distribution. The following steps for **Ubuntu** and **RedHat/CentOS** users configure both distribution points; once configured, you will have access to all our Linux-packaged products.
 
-**This is a one-time configuration step.** Once it's done, you're connected to the Contrast software distribution pipeline, and can solely manage it through your distribution's package manager. 
+**This is a one-time configuration step.** Once it's done, you're connected to the Contrast software distribution pipeline, and can solely manage it through your distribution's package manager. If you already completed this step, the appropriate repository definition file will be present:
+
+* **Ubuntu/Debian:** */etc/apt/sources.list.d/contrast.list*
+
+* **Centos/Redhat:** */etc/yum.repos.d/contrast.repo* 
 
 > **Note:** Some Linux package managers need a public GPG key that's used to verify the signed packages from our repository; this is included in the configuration steps, if it's applicable to your system.
 

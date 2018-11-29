@@ -8,7 +8,7 @@ The Contrast Proxy agent is available for installation from a Linux package repo
 
 ## Prerequisites
 
-The Proxy agent targets the official Stable NGINX server. You must install their official package as a dependency for Contrast's Proxy agent module, which plugs into it. If you have a distro's NGINX package installed, you must remove it in favor of the official NGINX distributed package.
+The Proxy agent targets the official Stable NGINX server. You must install their official package as a dependency for Contrast's Proxy agent module. If you have a distro's NGINX package installed, you must remove it in favor of the official NGINX distributed package.
 
 You can find and install the required NGINX package from Contrast's package repository. If you want to obtain it from NGINX directly, use their [instructions](http://nginx.org/en/linux_packages.html) to configure your system to pull from the official NGINX repository. 
 
