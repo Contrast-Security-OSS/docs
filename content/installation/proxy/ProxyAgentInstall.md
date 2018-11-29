@@ -39,42 +39,36 @@ After this stage, you're ready to [configure](installation-proxy.html#proxy-conf
 
 The Proxy agent is constructed as a module that plugs into NGINX. It can be compiled statically into NGINX or as an NGINX dynamic module. The software and documentation for building from source is available at: https://github.com/Contrast-Security-OSS/nginx-contrast-connector and https://github.com/Contrast-Security-OSS/nginx-contrast-connector/blob/master/BUILD_FROM_SOURCES.md -->
 
-## Air-gapped users
+## Air-Gapped Users
 
-Users that are not connected to the Internet will need to import our linux packages to their internal network since their package manager will not reach them. There are many organizations that have automated import and sychronization proceedures for keeping up to date with repos on the Internet disconnected from their air-gapped network. You should ensure your organization doesn't already have an import process that can help with the process of getting Contrast linux packages and staying up to date with them. Regardless of your situation the information below for manually obtaining the packages will help.
+Users that aren't connected to the internet must import Contrast's Linux packages to their internal network since their package manager doesn't reach them. Many organizations have automated import and synchronization procedures for keeping up to date with repositories on the internet disconnected from their air-gapped network. You should ensure your organization doesn't already have an import process that can help with this process. But, regardless of your situation, the following information for manually obtaining the packages is helpful for completing installation.
 
-To manually import the packages, you should go directly to the location where our packages are hosted for your packaging system and download the newest versions from there. Here is a dependency listing of what you will need:
+To manually import the packages, go directly to the location where Contrast hosts packages for your packaging system, and download the newest versions. A dependency listing of what you will need:
 
 	contrast-server -> contrast-modsecurity
 	contrast-webserver-agent-nginx -> nginx
 
-Download the newest version of each of those four packages and import them to your network. Distro-specific instructions follow. After importing and installing the packages, you can move to the [configure](installation-proxy.html#proxy-config)
+Download the newest version of each of the four packages, and import them to your network. Continue with the distro-specific instructions that follow. After importing and installing the packages, you can move to [configuration](installation-proxy.html#proxy-config). 
 
 
 ### Centos/Redhat
 	
-The repo files are located at
-	https://contrastsecurity.jfrog.io/contrastsecurity/rpm-public/.
-
-Select the folder of your distro and the files are presented for download.
-
-They can be installed via:
+The repository files are located at *https://contrastsecurity.jfrog.io/contrastsecurity/rpm-public/*. Once you select the folder of your distro, the files are ready for download. You can install them with the following commands:
 
 ```
 sudo yum install contrast-modsecurity-<version>.rpm
-sudo yum isntall contrast-service-<version>.rpm
+sudo yum install contrast-service-<version>.rpm
 sudo yum install nginx-<version>.rpm
 sudo yum install contrast-webserver-agent-nginx-<version>.rpm
 ```
  
-### Ubuntu:
+### Debian/Ubuntu
 
-The repo files are located at 
-	https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/pool/
+The repository files are located at *https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/pool/*. The Debian/Ubuntu repository organizes all of its various distro files in the same directory. 
 
-The ubuntu deb repo organizes all of its various distro files in the same directory. The distro of each package is embeded at the end of the package filename. Download the latest package of the four mentioned above for your particular distro and import them to your network.
+The distro of each package is embedded at the end of the package filename. Download the latest package of the four mentioned above for your particular distro, and import them to your network.
 
-They can be installed via:
+You can install them with the following commands:
 
 ```
 sudo dpkg -i contrast-modsecurity-<version>.deb
