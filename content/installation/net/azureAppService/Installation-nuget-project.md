@@ -46,10 +46,11 @@ You might notice that the following text appears when you installed the Contrast
  CONTRAST_TeamServerUserName [REPLACE WITH YOUR AGENT USERNAME]
  CONTRAST_TeamServerServiceKey [REPLACE WITH YOUR AGENT SERVICE KEY]
  CONTRAST_TeamServerApiKey [REPLACE WITH YOUR AGENT API KEY]
+ CONTRAST_INSTALL_DIRECTORY D:\Home\site\wwwroot\contrastsecurity\
  COR_ENABLE_PROFILING 1
  COR_PROFILER {EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}
- COR_PROFILER_PATH_32 D:\Home\site\wwwroot\bin\ContrastProfiler-32.dll
- COR_PROFILER_PATH_64 D:\Home\site\wwwroot\bin\ContrastProfiler-64.dll
+ COR_PROFILER_PATH_32 D:\Home\site\wwwroot\contrastsecurity\ContrastProfiler-32.dll
+ COR_PROFILER_PATH_64 D:\Home\site\wwwroot\contrastsecurity\ContrastProfiler-64.dll
 
  Go to https://docs.contrastsecurity.com/installation-netazureappservice.html for more configuration options.
 ```
