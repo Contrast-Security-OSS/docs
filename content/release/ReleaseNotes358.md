@@ -15,6 +15,10 @@ tags: "3.5.8 November Release Notes"
 
 ## Improvements
 
+* As of Contrast version 3.5.8, the auto-updating version of the Java agent is no longer available for download. The auto-update feature is not compatible with Contrast's design changes made to support the Java Platform Module System included in Java beginning with version 9. Existing agents with the auto-update feature will continue to function; however, once Contrast releases an agent capable of supporting Java 9+, they will no longer update to the latest version. 
+
+ For more details on Java agent updates, see the **Java summary** below. 
+
 * See your Protect data logs in SumoLogic via integration with the SIEM API. Browse through logs, and quickly find exactly what you’re looking for.
 
 * Contrast upgraded to MySQL 5.7 for embedded MySQL. 
