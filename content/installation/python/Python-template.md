@@ -7,21 +7,21 @@ tags: "installation python django flask pyramid agent service configuration"
 Go to the Python [Configuration Properties](installation-pythonconfig.html#python-config) article for more information about this template.
 
 ```
-#================================================================================================================================================================================
-#  
-#  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values. 
-#  
-#================================================================================================================================================================================
+#===============================================================================
+# Use the properties in this YAML file to configure a Contrast agent.
+# Go to https://docs.contrastsecurity.com/ to determine the order of precedence
+# for configuration values.
+#===============================================================================
 
+
+# Only set this property if you want to turn off Contrast. Set to `true` to turn he agent on; set to `false` to turn the agent off.
+# enable: true
 
 #================================================================================
-# Contrast
+# Api
 # Use the properties in this section to connect the agent to the Contrast UI.
 #================================================================================
-contrast:
-
-  # Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  # enable: true
+api:
 
   # ********************** REQUIRED **********************
   # Set the URL for the Contrast UI.
@@ -41,6 +41,24 @@ contrast:
 
   # Set the path to which the agent should store the currently used configuration from the Contrast UI.
   # last_config_path: ./tmp/config
+
+  #========================================================================================
+  # Certificate
+  # Use the following properties for communication with Contrast UI using certificates.
+  #========================================================================================
+  # certificate:
+
+    # If set to false, the certificate configuration in this section will be ignored.
+    # enable: true
+
+    # Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate.
+    # ca_file: NEEDS_TO_BE_SET
+
+    # Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI
+    # cert_file: NEEDS_TO_BE_SET
+
+    # Set the absolute or relative path to the Key PEM file for communication with Contrast UI
+    # key_file: NEEDS_TO_BE_SET
 
 #=======================================================================================================================================
 # Agent
@@ -73,8 +91,8 @@ agent:
     # Set the file to which the agent logs security events.
     # path: /.contrast/security.log
 
-    # Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
-    # level: NEEDS_TO_BE_SET
+    # Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    # level: ERROR
 
     # Change the Contrast security logger from a file-sized based rolling scheme to a date-based rolling scheme. At midnight server time, the log from the previous day is renamed to *file_name.yyyy-MM-dd*. Note - this scheme does not have a size limit; manual log pruning will be required. This flag must be set to use the backups and size flags. Value options are `true` or `false`.
     # roll_daily: NEEDS_TO_BE_SET
@@ -257,7 +275,8 @@ agent:
 #==================================================================================
 # application:
 
-  # Override the reported application name.
+  # Override the reported application name. 
+  #  Note - On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   # name: NEEDS_TO_BE_SET
 
   # Override the reported application path.

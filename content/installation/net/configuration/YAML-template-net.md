@@ -7,21 +7,21 @@ tags: "installation net agent YAML configuration rules properties"
 Go to the [YAML Properties](installation-netconfig.html#net-yaml) article for more information about this template.
 
 ```
-#================================================================================================================================================================================
-#  
-#  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values. 
-#  
-#================================================================================================================================================================================
+#===============================================================================
+# Use the properties in this YAML file to configure a Contrast agent.
+# Go to https://docs.contrastsecurity.com/ to determine the order of precedence
+# for configuration values.
+#===============================================================================
 
+
+# Only set this property if you want to turn off Contrast. Set to `true` to turn he agent on; set to `false` to turn the agent off.
+# enable: true
 
 #================================================================================
-# Contrast
+# Api
 # Use the properties in this section to connect the agent to the Contrast UI.
 #================================================================================
-contrast:
-
-  # Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  # enable: true
+api:
 
   # ********************** REQUIRED **********************
   # Set the URL for the Contrast UI.
@@ -39,9 +39,17 @@ contrast:
   # Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
   user_name: NEEDS_TO_BE_SET
 
-  # Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. 
-  #  The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12).
+  # Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12).
   # tls_versions: tls1|tls2|tls3
+
+  #========================================================================================
+  # Certificate
+  # Use the following properties for communication with Contrast UI using certificates.
+  #========================================================================================
+  # certificate:
+
+    # If set to false, the certificate configuration in this section will be ignored.
+    # enable: true
 
   #======================================================================================
   # Proxy
@@ -51,6 +59,9 @@ contrast:
 
     # Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status.
     # enable: NEEDS_TO_BE_SET
+
+    # Set the proxy host. It must be set with port and scheme.
+    # host: localhost
 
     # Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
     # url: NEEDS_TO_BE_SET
@@ -97,8 +108,8 @@ contrast:
   #===========================================================================================================================================================
   # security_logger:
 
-    # Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
-    # level: NEEDS_TO_BE_SET
+    # Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    # level: ERROR
 
     # Specify if connection should be encrypted or plaintext. Value options are `ENCRYPTED` or `UNENCRYPTED`.
     # connection_type: NEEDS_TO_BE_SET
@@ -352,5 +363,4 @@ contrast:
   # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. 
   #  Example - label1,label2,label3 
   # tags: NEEDS_TO_BE_SET
-
 ```

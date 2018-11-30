@@ -7,21 +7,21 @@ tags: "installation node agent YAML configuration rules properties"
 Go to the Node [YAML Properties](installation-nodeconfig.html#node-yaml) article for more information about this template.
 
 ```
-#================================================================================================================================================================================
-#  
-#  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values. 
-#  
-#================================================================================================================================================================================
+#===============================================================================
+# Use the properties in this YAML file to configure a Contrast agent.
+# Go to https://docs.contrastsecurity.com/ to determine the order of precedence
+# for configuration values.
+#===============================================================================
 
+
+# Only set this property if you want to turn off Contrast. Set to `true` to turn he agent on; set to `false` to turn the agent off.
+# enable: true
 
 #================================================================================
-# Contrast
+# Api
 # Use the properties in this section to connect the agent to the Contrast UI.
 #================================================================================
-contrast:
-
-  # Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  # enable: true
+api:
 
   # ********************** REQUIRED **********************
   # Set the URL for the Contrast UI.
@@ -39,11 +39,29 @@ contrast:
   # Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
   user_name: NEEDS_TO_BE_SET
 
-  # Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate.
-  # ca_file: path/to/ca
-
   # Set the default request timeout.
   # timeout_ms: NEEDS_TO_BE_SET
+
+  #========================================================================================
+  # Certificate
+  # Use the following properties for communication with Contrast UI using certificates.
+  #========================================================================================
+  # certificate:
+
+    # If set to false, the certificate configuration in this section will be ignored.
+    # enable: true
+
+    # Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate.
+    # ca_file: NEEDS_TO_BE_SET
+
+    # Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI
+    # cert_file: NEEDS_TO_BE_SET
+
+    # Set the absolute or relative path to the Key PEM file for communication with Contrast UI
+    # key_file: NEEDS_TO_BE_SET
+
+    # If the Key file requires a password it can be set here or in the matching ENV value (`CONTRAST__CERTIFICATE__KEY_PASSWORD`)
+    # key_password: NEEDS_TO_BE_SET
 
   #======================================================================================
   # Proxy
@@ -109,8 +127,8 @@ contrast:
     # Set the file to which the agent logs security events.
     # path: /.contrast/security.log
 
-    # Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
-    # level: NEEDS_TO_BE_SET
+    # Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    # level: ERROR
 
   #===============================================================
   # Node
@@ -166,7 +184,8 @@ contrast:
 #==================================================================================
 # application:
 
-  # Override the reported application name.
+  # Override the reported application name. 
+  #  Note - On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   # name: NEEDS_TO_BE_SET
 
   # Override the reported application path.
