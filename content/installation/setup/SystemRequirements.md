@@ -18,10 +18,10 @@ The Contrast application for Enterprise on Premises (EOP) includes a Tomcat serv
 | **OS Architecture** | 64-bit | 64-bit | Due to memory requirements, the Contrast application can **only** run on 64-bit architectures. |
 | **Operating System** | <ul><li>Microsoft Windows 2008 R2 64-bit</li> <li>Ubuntu 12.04 LTS</li><li>Centos 6</li></ul> | <ul><li>Microsoft Windows 2012 R2  </li><li>  Ubuntu 14.04 LTS </li><li> Centos 7</li></ul>| Any modern Operating System **should** run Contrast. Contrast officially supports the following: <ul><li>Ubuntu Linux </li><li> Debian Linux </li><li> Redhat Enterprise Linux </li><li> Centos Linux </li><li> Windows Server 2008 R2 64-bit </li><li> Windows 2012 R2 </li> |
 | **Java** | 1.8 | 1.8 | |
-| **MySQL** | 5.6.28 | 5.6.33 | MySQL versions 5.7 and higher are currently **not** supported |
+| **MySQL** | 5.7 | 5.7.23 | MySQL versions 8 and higher are currently **not** supported |
 
 ## MySQL Shared Libraries
-To run Contrast, you must preconfigure your base operating system on Linux with a shared library for running MySQL. Depending on which flavor of Linux you deployed with Contrast, follow the installation options below:
+To run Contrast, you must preconfigure your base operating system with a shared library for running MySQL. Depending on which operating system you deployed with Contrast, follow the installation options below:
 
 Customers running **Centos** or **RHL**:
 
@@ -35,3 +35,4 @@ Customers running **Ubuntu** or **Debian**:
 [contrast@myserver ~]# apt-get install libaio1 libaio-dev
 ````
 
+Customers running **Windows** will need [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784). MySQL added this as a requirement as part of the [MySQL 5.7.18 release](https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-18.html#mysqld-5-7-18-packaging).
