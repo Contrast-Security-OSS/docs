@@ -48,6 +48,5 @@ To reset an application, hover over the grid row and select the reset icon. (Thi
 
 You must archive an application before you can fully delete it. You aren't required to reset the application, as the deletion process truncates any associated data; however, Contrast recommends that you review the data and reset the application before you delete it. 
 
-To delete an application, go the **Archived** applications view. Hover over the grid row, and select the trashcan (delete) icon. (This must be done individually.) In the dialog that appears, select the **Delete** button to confirm your choice. 
-
+For step-by-step instructions, go to the [Delete Applications](user-appsmanage.html#delete) article. 
 
