@@ -8,26 +8,20 @@ Merging two or more applications into a single application is a common operation
 
 ## Create a Master Application 
 
-To merge applications, complete the following steps in the Contrast interface:
+To merge applications, go to the **Applications** grid, and use the check marks to select the applications to merge. Select the **Merge** icon from the menu at the bottom of the grid. 
 
-* Go to the **Applications** page. 
-* Find the applications that you want to merge, and use the checkboxes in the grid to select them. 
-* Select the **Merge** icon from the batch action menu at the top right of the grid. 
+<a href="assets/images/Merge-applications.png" rel="lightbox" title="Use the batch action menu to merge applications"><img class="thumbnail" src="assets/images/Merge-applications.png"/></a>
 
-<a href="assets/images/Merge-apps.png" rel="lightbox" title="Use the batch action menu to merge applications"><img class="thumbnail" src="assets/images/Merge-apps.png"/></a>
+In the dialog that appears, use the dropdown menu to choose one of the merged applications to represent the **master application**. 
 
-* Choose one of the merged applications to represent the **master application**. 
+Once your applications are merged, you'll see a crown icon beside the name of the master application. To see the application modules represented by the master, click on the icon. To see all merged applications, go to the **Merged** quick view in the grid.
 
-Once your applications are merged, you'll see the **master application** name accompanied by a crown icon. To see the application modules represented by the master, click the icon, or choose **Show child applications** from the **Advanced** filter options. To quickly get to any merged applications, use the **Merged** filter available from the search bar.
-
-<a href="assets/images/Master-app-tooltip.png" rel="lightbox" title="A master (merged) application"><img class="thumbnail" src="assets/images/Master-app-tooltip.png"/></a>
+<a href="assets/images/Master-application.png" rel="lightbox" title="A master (merged) application"><img class="thumbnail" src="assets/images/Master-application.png"/></a>
 
 ## Unmerge Applications
 
-There are a couple of ways to unmerge either all or specific application modules from the master application. 
+To unmerge either all or specific application modules from the master application, click on the crown icon in the application's grid row or **Overview** page. In the dialog that appears, select any number of the modules, and click the button to **Unmerge Selected** applications. 
 
-From the **Applications** page, click the **Unmerge** action in the row menu of any master application. By default, this will unmerge all application modules represented; however, there is also an option to specifically define which modules are unmerged.
+<a href="assets/images/Unmerge-applications.png" rel="lightbox" title="Unmerge application modules"><img class="thumbnail" src="assets/images/Unmerge-applications.png"/></a>
 
-Click the crown icon in the application row or **Details** page to view each module in the **Application Modules** dialog. Select one, many or all modules, and click the button to **Unmerge Selected** applications. 
 
-<a href="assets/images/App_Mappings.png" rel="lightbox" title="Unmerge application modules"><img class="thumbnail" src="assets/images/App_Mappings.png"/></a>
