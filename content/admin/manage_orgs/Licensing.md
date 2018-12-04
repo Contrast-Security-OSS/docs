@@ -56,8 +56,6 @@ Once a license is applied, the Protect toggle is enabled in the grid rows for th
 
 <a href="assets/images/Servers-unlicensed.png" rel="lightbox" title="Apply a Protect license"><img class="thumbnail" src="assets/images/Servers-unlicensed.png"/></a>
 
->**Note:** Protect licenses are currently available for Java servers only.
-
 #### Available licenses
 
 If your organization has consumed all allocated licenses, or if the organization doesn't have enough licenses available for the number of servers selected, the option to apply a license is disabled. Hover over the disabled selection to **Apply Protect Licenses** for more information. To return a license to the pool of available licenses for the organization, you must remove it from a server. 
