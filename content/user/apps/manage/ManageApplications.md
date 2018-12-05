@@ -32,15 +32,15 @@ There are a few way to narrow down the number of applications in the grid:
 
 * To **sort** the applications in the grid, use the dropdown menu to the upper-right side of the grid to sort by name, importance or language in ascending or descending order. 
 
-* To filter applications in your current view of the grid, select the **filter** (funnel) icon by the **Application** or **Open Vulnerabilities** columns. In the dropdown menu, select the filter(s) that you want to apply. To remove the select filters, select the **Clear** link beside the filter icon. 
+* To filter applications in your current view of the grid, select the **filter** (funnel) icon for the **Application** or **Open Vulnerabilities** columns. In the dropdown menu, select the filter(s) that you want to apply. To remove the selected filters, select the **Clear** link beside the filter icon. 
 
 <a href="assets/images/Filter-applications-grid.png" rel="lightbox" title="Filter applications in the grid"><img class="thumbnail" src="assets/images/Filter-applications-grid.png"/></a>
 
 ## Archive Applications
 
-You can archive applications that should no longer collect traces, but that you want to keep for historical purposes. Archiving an application maintains the integrity of application data, such as traces and libraries, but essentially turns the application "off". When an application is archived, the agent is informed of the application status and no longer sends traces to the Contrast application. Archived applications also improve your overall portfolio score, as they don't count against the total score. 
+If an application should longer collect vulnerabilities, but you want to keep it in your organization for historical purposes, the best solution is to archive the application. Archiving an application maintains the integrity of past application data, such as vulnerabilities and libraries, but the agent no longer reports vulnerabilities to the Contrast application; the application is essentially turned off. Archived applications also improve your overall portfolio score, as they don't count against the total score. 
 
-To archive an individual application, hover over the application's grid row, and select the **archive** (box) icon. To archive multiple applications, use the check marks to select the appropriate rows, and select the archive icon from the bottom menu. In the dialog that appears, select the **Archive** button to confirm your choice. 
+To archive an individual application, hover over the application's grid row, and select the **archive** (box) icon. To archive multiple applications, use the check marks to select the appropriate rows, and select the archive icon from the action bar. In the dialog that appears, select the **Archive** button to confirm your choice. 
 
 <a href="assets/images/Archive-applications-grid.png" rel="lightbox" title="Archive applications in the grid"><img class="thumbnail" src="assets/images/Archive-applications-grid.png"/></a>
 

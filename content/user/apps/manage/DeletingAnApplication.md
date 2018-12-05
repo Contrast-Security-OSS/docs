@@ -31,9 +31,9 @@ You can also reset from the **Applications** page by clicking the **Reset** butt
 
 Return to the **Application Settings** dialog from the **Overview** page, and select the link to **Archive Application**. Or, you can archive applications from the **Applications** page by selecting the appropriate applications in the grid and clicking the **Archive** button.
 
-<a href="assets/images/Delete-applications.png" rel="lightbox" title="Delete archived applications in the grid"><img class="thumbnail" src="assets/images/Delete-applications.png"/></a>
-
 Once archived, applications don't appear in the **Applications** grid by default. To view archived applications in the grid, use the dropdown menu to switch to the **Archived** quick view. The applications then appears in the grid; however, you must restore them to view details beyond the grid. 
+
+<a href="assets/images/Delete-applications.png" rel="lightbox" title="Delete archived applications in the grid"><img class="thumbnail" src="assets/images/Delete-applications.png"/></a>
 
 To learn how to restore an archived application, go the application management [Overview](user-appsmanage.html#overview). 
 
