@@ -21,15 +21,15 @@ If you don't disable all agents reporting on behalf of the application, leftover
 
 ## Step 3: Reset the application
 
-It's best practice to reset the application to make sure that all associated vulnerabilities, URLs and components are cleared properly. Click the **Settings** (gear) icon in the top right of the application **Overview** page. At the bottom of the dialog that appears, select the link to **Reset Application**.
+It's best practice to reset the application to make sure that all associated vulnerabilities, URLs and components are cleared properly. Click the **Settings** (gear) icon in the top right of the application **Overview** page. At the bottom of the **Application Settings** dialog, select the link to **Reset Application**.
 
-<a href="assets/images/Application-defaults-dialog.png" rel="lightbox" title="Reset an application in the Application Defaults dialog"><img class="thumbnail" src="assets/images/Application-defaults-dialog.png"/></a>
+<a href="assets/images/Application-settings-dialog.png" rel="lightbox" title="Reset an application in the Application Settings dialog"><img class="thumbnail" src="assets/images/Application-settings-dialog.png"/></a>
 
 You can also reset from the **Applications** page by clicking the **Reset** button in the application's grid row.
 
 ## Step 4: Archive the application
 
-Return to the **Application Defaults** dialog from the **Overview** page, and select the link to **Archive Application**. Or, you can archive applications from the **Applications** page by selecting the appropriate applications in the grid and clicking the **Archive** button.
+Return to the **Application Settings** dialog from the **Overview** page, and select the link to **Archive Application**. Or, you can archive applications from the **Applications** page by selecting the appropriate applications in the grid and clicking the **Archive** button.
 
 <a href="assets/images/Delete-applications.png" rel="lightbox" title="Delete archived applications in the grid"><img class="thumbnail" src="assets/images/Delete-applications.png"/></a>
 
