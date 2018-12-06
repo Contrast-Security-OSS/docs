@@ -15,7 +15,7 @@ Go to the [YAML Properties](installation-javaconfig.html#java-yaml) article for 
 #===============================================================================
 
 
-# Only set this property if you want to turn off Contrast. Set to `true` to turn he agent on; set to `false` to turn the agent off.
+# Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
 # enable: true
 
 #================================================================================
@@ -76,10 +76,10 @@ api:
 #=======================================================================================================================================
 # agent:
 
-  # Set how long to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
+  # Set the amount of time to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
   # shutdown_time_ms: NEEDS_TO_BE_SET
 
-  # Enable to deinstrumentation classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
+  # Set to `true` to deinstrument classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
   # deinstrument_on_shutdown: NEEDS_TO_BE_SET
 
   #================================================================================================================================================================
@@ -211,7 +211,7 @@ api:
     # Set to `false` to disable sampling.
     # enable: true
 
-    # This property indicates how many requests to analyze in each window before sampling begins.
+    # This property indicates the number of requests to analyze in each window before sampling begins.
     # baseline: 5
 
     # This property indicates that every *nth* request after the baseline is analyzed.
@@ -359,7 +359,7 @@ api:
 
 #==========================================================================================
 # Server
-# Use the properties in this section to set metadata For the server hosting this agent.
+# Use the properties in this section to set metadata for the server hosting this agent.
 #==========================================================================================
 # server:
 

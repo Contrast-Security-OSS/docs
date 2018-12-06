@@ -14,7 +14,7 @@ Go to the Python [Configuration Properties](installation-pythonconfig.html#pytho
 #===============================================================================
 
 
-# Only set this property if you want to turn off Contrast. Set to `true` to turn he agent on; set to `false` to turn the agent off.
+# Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
 # enable: true
 
 #================================================================================
@@ -42,22 +42,22 @@ api:
   # Set the path to which the agent should store the currently used configuration from the Contrast UI.
   # last_config_path: ./tmp/config
 
-  #========================================================================================
+  #============================================================================================
   # Certificate
-  # Use the following properties for communication with Contrast UI using certificates.
-  #========================================================================================
+  # Use the following properties for communication with the Contrast UI using certificates.
+  #============================================================================================
   # certificate:
 
-    # If set to false, the certificate configuration in this section will be ignored.
+    # If set to `false`, the agent will ignore the certificate configuration in this section.
     # enable: true
 
-    # Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate.
+    # Set the absolute or relative path to a CA for communication with the Contrast UI using a self-signed certificate.
     # ca_file: NEEDS_TO_BE_SET
 
-    # Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI
+    # Set the absolute or relative path to the Certificate PEM file for communication with the Contrast UI.
     # cert_file: NEEDS_TO_BE_SET
 
-    # Set the absolute or relative path to the Key PEM file for communication with Contrast UI
+    # Set the absolute or relative path to the Key PEM file for communication with the Contrast UI.
     # key_file: NEEDS_TO_BE_SET
 
 #=======================================================================================================================================
@@ -301,7 +301,7 @@ agent:
 
 #==========================================================================================
 # Server
-# Use the properties in this section to set metadata For the server hosting this agent.
+# Use the properties in this section to set metadata for the server hosting this agent.
 #==========================================================================================
 # server:
 
@@ -326,6 +326,5 @@ agent:
   # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. 
   #  Example - label1,label2,label3 
   # tags: NEEDS_TO_BE_SET
-
 
 ```

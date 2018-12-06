@@ -14,7 +14,7 @@ Go to the Node [YAML Properties](installation-nodeconfig.html#node-yaml) article
 #===============================================================================
 
 
-# Only set this property if you want to turn off Contrast. Set to `true` to turn he agent on; set to `false` to turn the agent off.
+# Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
 # enable: true
 
 #================================================================================
@@ -42,25 +42,25 @@ api:
   # Set the default request timeout.
   # timeout_ms: NEEDS_TO_BE_SET
 
-  #========================================================================================
+  #============================================================================================
   # Certificate
-  # Use the following properties for communication with Contrast UI using certificates.
-  #========================================================================================
+  # Use the following properties for communication with the Contrast UI using certificates.
+  #============================================================================================
   # certificate:
 
-    # If set to false, the certificate configuration in this section will be ignored.
+    # If set to `false`, the agent will ignore the certificate configuration in this section.
     # enable: true
 
-    # Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate.
+    # Set the absolute or relative path to a CA for communication with the Contrast UI using a self-signed certificate.
     # ca_file: NEEDS_TO_BE_SET
 
-    # Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI
+    # Set the absolute or relative path to the Certificate PEM file for communication with the Contrast UI.
     # cert_file: NEEDS_TO_BE_SET
 
-    # Set the absolute or relative path to the Key PEM file for communication with Contrast UI
+    # Set the absolute or relative path to the Key PEM file for communication with the Contrast UI.
     # key_file: NEEDS_TO_BE_SET
 
-    # If the Key file requires a password it can be set here or in the matching ENV value (`CONTRAST__CERTIFICATE__KEY_PASSWORD`)
+    # If the Key file requires a password, it can be set here or in the matching ENV value (`CONTRAST__CERTIFICATE__KEY_PASSWORD`).
     # key_password: NEEDS_TO_BE_SET
 
   #======================================================================================
@@ -169,7 +169,7 @@ api:
     # Set to `false` to disable sampling.
     # enable: true
 
-    # This property indicates how many requests to analyze in each window before sampling begins.
+    # This property indicates the number of requests to analyze in each window before sampling begins.
     # baseline: 5
 
 #=====================================================================
@@ -206,7 +206,7 @@ api:
 
 #==========================================================================================
 # Server
-# Use the properties in this section to set metadata For the server hosting this agent.
+# Use the properties in this section to set metadata for the server hosting this agent.
 #==========================================================================================
 # server:
 

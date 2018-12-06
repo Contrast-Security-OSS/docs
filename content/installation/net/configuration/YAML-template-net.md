@@ -14,7 +14,7 @@ Go to the [YAML Properties](installation-netconfig.html#net-yaml) article for mo
 #===============================================================================
 
 
-# Only set this property if you want to turn off Contrast. Set to `true` to turn he agent on; set to `false` to turn the agent off.
+# Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
 # enable: true
 
 #================================================================================
@@ -42,13 +42,13 @@ api:
   # Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12).
   # tls_versions: tls1|tls2|tls3
 
-  #========================================================================================
+  #============================================================================================
   # Certificate
-  # Use the following properties for communication with Contrast UI using certificates.
-  #========================================================================================
+  # Use the following properties for communication with the Contrast UI using certificates.
+  #============================================================================================
   # certificate:
 
-    # If set to false, the certificate configuration in this section will be ignored.
+    # If set to `false`, the agent will ignore the certificate configuration in this section.
     # enable: true
 
   #======================================================================================
@@ -219,7 +219,7 @@ api:
     # Set to `false` to disable sampling.
     # enable: true
 
-    # This property indicates how many requests to analyze in each window before sampling begins.
+    # This property indicates the number of requests to analyze in each window before sampling begins.
     # baseline: 5
 
     # This property indicates that every *nth* request after the baseline is analyzed.
@@ -350,7 +350,7 @@ api:
 
 #==========================================================================================
 # Server
-# Use the properties in this section to set metadata For the server hosting this agent.
+# Use the properties in this section to set metadata for the server hosting this agent.
 #==========================================================================================
 # server:
 
@@ -363,4 +363,5 @@ api:
   # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. 
   #  Example - label1,label2,label3 
   # tags: NEEDS_TO_BE_SET
+
 ```
