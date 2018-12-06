@@ -8,7 +8,7 @@ The ability to compare differences across environments as code travels is a key 
 
 Go to the **Servers** page to set up environments. You can set the environment for each server to **Development**, **QA** or **Production**. 
 
-<a href="assets/images/Server_Environment.png" rel="lightbox" title="Server Environment"><img class="thumbnail" src="assets/images/Server_Environment.png"/></a>
+<a href="assets/images/Server-environments.png" rel="lightbox" title="Change server environments in the Servers grid"><img class="thumbnail" src="assets/images/Server-environments.png"/></a>
 
 To see a side-by-side comparison of each environment for an application, select your application in the **Applications** page grid, and designate servers in the application **Overview** page. To designate new servers, click the links to **Set Up Servers** for each environment. <!-- In the **Servers** page... --> <!-- How? --> 
 
