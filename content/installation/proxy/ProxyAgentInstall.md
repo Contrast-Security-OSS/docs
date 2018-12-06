@@ -18,16 +18,16 @@ You must also ensure that your system is properly configured with the [Contrast 
 
 ## Install from Linux Packages
 
-Use the following commands to install the Proxy agent: 
+Use the following commands to install the Proxy agent.
 
-**Debian/Ubuntu users:**
+**Debian/Ubuntu:**
 
 ```
  sudo apt-get update
  sudo apt-get install contrast-webserver-agent-nginx contrast-service
 ```
 
-**RedHat/Centos users:**
+**RedHat/Centos:**
 
 ```
  sudo yum install contrast-webserver-agent-nginx contrast-service
@@ -43,15 +43,15 @@ The Proxy agent is constructed as a module that plugs into NGINX. It can be comp
 
 Users that aren't connected to the internet must import Contrast's Linux packages to their internal network since their package manager doesn't reach them. Many organizations have automated import and synchronization procedures for keeping up to date with repositories on the internet disconnected from their air-gapped network. You should ensure your organization doesn't already have an import process that can help with this process. But, regardless of your situation, the following information for manually obtaining the packages is helpful for completing installation.
 
-To manually import the packages, go directly to the location where Contrast hosts packages for your packaging system, and download the newest versions. A dependency listing of what you will need:
+To manually import the packages, you must go directly to the location where Contrast hosts packages for your packaging system, and download the newest versions. A dependency listing of what you will need:
 
 	contrast-server -> contrast-modsecurity
 	contrast-webserver-agent-nginx -> nginx
 
-Download the newest version of each of the four packages, and import them to your network. Continue with the distro-specific instructions that follow. After importing and installing the packages, you can move to [configuration](installation-proxy.html#proxy-config). 
+The following distro-specific instructions walk you through the process to download the newest version of each of the four packages and import them to your network. After importing and installing the packages, you can move to [configuration](installation-proxy.html#proxy-config). 
 
 
-### Centos/Redhat
+### Redhat/Centos
 	
 The repository files are located at *https://contrastsecurity.jfrog.io/contrastsecurity/rpm-public/*. Once you select the folder of your distro, the files are ready for download. You can install them with the following commands:
 
@@ -66,9 +66,7 @@ sudo yum install contrast-webserver-agent-nginx-<version>.rpm
 
 The repository files are located at *https://contrastsecurity.jfrog.io/contrastsecurity/debian-public/pool/*. The Debian/Ubuntu repository organizes all of its various distro files in the same directory. 
 
-The distro of each package is embedded at the end of the package filename. Download the latest package of the four mentioned above for your particular distro, and import them to your network.
-
-You can install them with the following commands:
+The distro of each package is embedded at the end of the package filename. Download the latest package of the four mentioned above for your particular distro, and import them to your network. You can install them with the following commands:
 
 ```
 sudo dpkg -i contrast-modsecurity-<version>.deb
