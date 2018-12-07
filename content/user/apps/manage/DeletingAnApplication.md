@@ -33,7 +33,7 @@ Return to the **Application Settings** dialog from the **Overview** page, and se
 
 Once archived, applications don't appear in the **Applications** grid by default. To view archived applications in the grid, use the dropdown menu to switch to the **Archived** quick view. The applications then appears in the grid; however, you must restore them to view details beyond the grid. 
 
-<a href="assets/images/Delete-applications.png" rel="lightbox" title="Delete archived applications in the grid"><img class="thumbnail" src="assets/images/Delete-applications.png"/></a>
+<a href="assets/images/Delete-applications.png" rel="lightbox" title="Archive applications before you delete them"><img class="thumbnail" src="assets/images/Delete-applications.png"/></a>
 
 To learn how to restore an archived application, go the application management [Overview](user-appsmanage.html#overview). 
 
