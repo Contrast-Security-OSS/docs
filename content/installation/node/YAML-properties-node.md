@@ -148,6 +148,7 @@ Use the properties in this section to control the application(s) hosting this ag
   * **version**: Override the reported application version.
   * **args**: Pass arguments to the underlying application.
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
+  * **metadata**: Define a set of `key=value` pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
 ### Server properties 
 
