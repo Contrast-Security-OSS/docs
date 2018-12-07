@@ -24,9 +24,9 @@ From the **Servers** page, you can enable and configure Syslog output to an indi
 
 ### Individual server 
 
-To enable Syslog on an individual server, hover over the grid row, and select the **setting** icon. In the **Server Settings** dialog, check the box to **Enable output of Protect events to Syslog**. If Syslog defaults have been set for the server environment in **Organization Settings**, the values are prepopulated in the fields that appear. Once you save the settings, Syslog is enabled on the server.
+To enable Syslog on an individual server, hover over the grid row, and select the **Server Settings** icon. In the **Server Settings** dialog, check the box to **Enable output of Protect events to Syslog**. If Syslog defaults have been set for the server environment in **Organization Settings**, the values are prepopulated in the fields that appear. Once you save the settings, Syslog is enabled on the server.
 
-<a href="assets/images/Server-settings.png" rel="lightbox" title="Enable Syslog for a server"><img class="thumbnail" src="assets/images/Server-settings.png"/></a>
+<a href="assets/images/Server-settings-grid.png" rel="lightbox" title="Enable Syslog for a server in Server Settings"><img class="thumbnail" src="assets/images/Server-settings-grid.png"/></a>
 
 ### Multiple servers
 
