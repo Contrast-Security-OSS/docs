@@ -6,7 +6,7 @@ tags: "TeamServer user application adding"
 
 Add an application to your organization by completing the following steps. 
 
-## Step 1: Download the agent
+## Download the Agent
 
 You can access the **Add Agent** wizard from any page by clicking the button in the top navigation.
 
@@ -19,17 +19,28 @@ After choosing a language, you can customize your settings by checking the box f
 <a href="assets/images/KB3-f03_6.png" rel="lightbox" title="Manage Profiles"><img class="thumbnail" src="assets/images/KB3-f03_6.png"/></a>
 
 
-## Step 2: Install on your server
+## Configuration
 
-Select your container to view the installation instructions for the specific language and container you selected. For more information, go to the [Installation overview article](installation-setup.html#setup-overview).
+### Custom metadata 
 
-<a href="assets/images/KB3-f03_3.gif" rel="lightbox" title="Container Selection"><img class="thumbnail" src="assets/images/KB3-f03_3.gif"/></a>
+You may be asked to provide [custom metadata](admin-orgsettings.html#app-defaults) for applications in certain organizations. All required fields are marked with an asterisk (** * **). 
 
-### Choose an access control group
+<a href="assets/images/Add-agent-config.png" rel="lightbox" title="Configure application settings"><img class="thumbnail" src="assets/images/Add-agent-config.png"/></a>
+
+Use one of the following options to include the key:value pairs in your configuration file: 
+
+* Select the option to **Use preconfigured** properties, and enter the appropriate information in the provided fields. Once you've completed the required fields, you can click the button to **Download Config File**.  
+* Select the option to **Create manually**. Click the button to **Copy** the formatted properties - including the necessary values to connect to Contrast - to paste into your configuration file. You must then add the required property values for the application metadata. 
+
+> **Note:** If you do not include required metadata values, the application may fail onboarding. 
+
+Once your applications are onboarded, the information you provided in these fields is displayed in the [**Applications** grid](user-appsmanage.html#overview) and the application's **Overview** tab. 
+
+### Access control groups
 
 To determine users' access to an application, you can specify the access control group to which an application will belong before initial startup. Use the appropriate workflow for your language to set the group name in the agent configuration for your application.
 
-When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an Admin to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
+When Contrast recognizes the group you named, it automatically associates the application with that group, and allows all group members to access the application with the role determined by the group. If a user specifies a group that doesn't exist or isn't set by an administrator to allow this function, Contrast ignores the group association but still onboards the application. You can then add the application to a group using the standard workflow. 
 
 For more details, read how to [Create](admin-onboardteam.html#group) and [Manage Access Groups](admin-manageorgs.html#access).
 
@@ -80,14 +91,20 @@ For **Ruby**, add the `group` field to the `application` section of the *contras
     group: Contrast Testing
  ```
 
-## Step 3: Restart your server
+## Install on Your Server
+
+Select your container to view the installation instructions for the specific language you selected. For more information, go to the [Installation overview article](installation-setup.html#setup-overview).
+
+<a href="assets/images/KB3-f03_3.gif" rel="lightbox" title="Container Selection"><img class="thumbnail" src="assets/images/KB3-f03_3.gif"/></a>
+
+## Restart Your Server
 
 Before you begin browsing an application, it's important to restart your server. The wizard includes this step to guarantee that you don't forget. 
 
 <a href="assets/images/KB3-f03_4.png" rel="lightbox" title="Restart Server"><img class="thumbnail" src="assets/images/KB3-f03_4.png"/></a>
 
 
-## Step 4: Browse your application
+## Browse Your Application
 
 To confirm that your agent was correctly installed, Contrast displays reported information from the server. Once you see these updates, you can complete the wizard, and begin browsing directly from the **Application Overview** page. 
 
