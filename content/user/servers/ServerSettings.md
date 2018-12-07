@@ -26,7 +26,7 @@ Contrast's logs follow the general [Log4J standard](https://logging.apache.org/l
 
 ## Assess Options
 
-Assess provides detailed information on vulnerabilities discovered by Contrast so that you can track, share and receive remediation guidance. Turning Assess on allows you to enable sampling and designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capturing stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning <!-- samping ? --> off results in less performance on the application(s); however, you'll have less clarity on where underlying security issues are occurring.
+Assess provides detailed information on vulnerabilities discovered by Contrast so that you can track, share and receive remediation guidance. Turning Assess on allows you to enable sampling and designate how stacktraces are captured. Sampling allows Contrast to selectively analyze requests in order to avoid repeat analysis and improve server performance. Capturing stacktraces allows the server to collect data about the current state, including the lines of code being executed. Turning off results in less performance on the application(s); however, you'll have less clarity on where underlying security issues are occurring.
 
 ### Sampling
 
@@ -64,4 +64,4 @@ Alternatively, you can use ```-Dcontrast.sampling``` = X, Y, Z where:
 
 Protect provides monitoring of your servers and applications - identifying and blocking attacks in real time. Turning Protect on gives you the option to bot block, which allows Contrast to use simple signaturing to block traffic from scrapers, attack tools and other unwanted automation. You can also [output events to Syslog](user-servers.html#syslog) for one or multiple servers.
 
->**Note:** Turning Protection on by default requires that Protect licenses are automatically applied to servers.
+>**Note:** Turning Protect on by default requires that Protect licenses are automatically applied to servers.
