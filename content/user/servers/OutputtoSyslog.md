@@ -18,7 +18,7 @@ For more information on creating server configurations in Organization Settings,
 
 ## Enable Output to Syslog 
 
-From the **Servers** page, you can enable and configure Syslog output to individual servers or to multiple servers at one time. Once Syslog is enabled, the server has a gray arrow icon beside its name in the grid. Hover over the icon to see the output location of Protect events.
+From the **Servers** page, you can enable and configure Syslog output to an individual server or multiple servers at one time. When Syslog is enabled, the server has a gray arrow icon beside its name in the grid. Hover over the icon to see the output location of Protect events.
 
 <a href="assets/images/Output-to-syslog.png" rel="lightbox" title="Output to Syslog enabled"><img class="thumbnail" src="assets/images/Output-to-syslog.png"/></a>
 
@@ -30,18 +30,15 @@ To enable Syslog on an individual server, hover over the grid row, and select th
 
 ### Multiple servers
 
-To enable Syslog on multiple servers, use the check marks to select the servers, and select the **Server Settings** icon in the action bar. In the **Bulk Server Settings** dialog, click the **Edit** link to enable the option to send Protect events to Syslog. Select the checkbox to **Send output of Protect events to Syslog**, and complete the fields that appear. Once you complete all required fields and save the settings, Syslog is enabled on the selected servers. 
+To enable Syslog on multiple servers, use the check marks to select the servers, and select the **Server Settings** icon in the action bar. 
+
+> **Note:** If one or more of the selected servers is not eligible to have Syslog enabled, Syslog is only enabled on the servers that are eligible. 
+
+In the **Bulk Server Settings** dialog, click the **Edit** link to enable the option to send Protect events to Syslog. Select the checkbox to **Send output of Protect events to Syslog**, and complete the fields that appear. 
+
+> **Note:** If all selected servers are in the same environment, and Syslog defaults are set for that environment in **Organization Settings**, the values are prepopulated in the fields that appear. If eligible servers selected are in different environments, you can choose to use the default settings for the applicable servers or manually configure the settings for all servers. 
+
+Once you complete all required fields and save the settings, Syslog is enabled on the selected servers. 
 
 <a href="assets/images/Bulk-server-settings.png" rel="lightbox" title="Enable Syslog for multiple servers"><img class="thumbnail" src="assets/images/Bulk-server-settings.png"/></a>
-
-
-
-<!-- ## Batch Actions
-
-These actions are only functional when at least one of the selected servers is eligible, and the action is only applied to the eligible selection(s).
-
-* If all eligible selections are in the same environment and an environment default was set in **Organization Settings**, the configuration dialog fields are prepopulated with the defaults settings. You can then decide to proceed with the default or repopulate the fields to create a custom setting.
-* If the eligible selections are in different environments, you can choose to use the default settings for the applicable servers or manually configure the settings for all servers. 
-* If any or all servers are in environments for which no defaults have been set, they must be manually configured. -->
-
 
