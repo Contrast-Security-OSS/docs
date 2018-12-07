@@ -18,15 +18,15 @@ For more information on creating server configurations in Organization Settings,
 
 ## Enable Output to Syslog 
 
-From the **Servers** page, you can enable and configure Syslog output to an individual server or multiple servers at one time. When Syslog is enabled, the server has a gray arrow icon beside its name in the grid. Hover over the icon to see the output location of Protect events.
-
-<a href="assets/images/Output-to-syslog.png" rel="lightbox" title="Output to Syslog enabled"><img class="thumbnail" src="assets/images/Output-to-syslog.png"/></a>
+From the **Servers** page, you can enable and configure Syslog output to an individual server or multiple servers at one time. 
 
 ### Individual server 
 
-To enable Syslog on an individual server, hover over the grid row, and select the **Server Settings** icon. In the **Server Settings** dialog, check the box to **Enable output of Protect events to Syslog**. If Syslog defaults have been set for the server environment in **Organization Settings**, the values are prepopulated in the fields that appear. Once you save the settings, Syslog is enabled on the server.
+To enable Syslog on an individual server, hover over the grid row, and select the **Server Settings** icon. 
 
 <a href="assets/images/Server-settings-grid.png" rel="lightbox" title="Enable Syslog for a server in Server Settings"><img class="thumbnail" src="assets/images/Server-settings-grid.png"/></a>
+
+In the **Server Settings** dialog, check the box to **Enable output of Protect events to Syslog**. If Syslog defaults have been set for the server environment in **Organization Settings**, the values are prepopulated in the fields that appear. Once you save the settings, Syslog is enabled on the server.
 
 ### Multiple servers
 
@@ -34,11 +34,18 @@ To enable Syslog on multiple servers, use the check marks to select the servers,
 
 > **Note:** If one or more of the selected servers is not eligible to have Syslog enabled, Syslog is only enabled on the servers that are eligible. 
 
-In the **Bulk Server Settings** dialog, click the **Edit** link to enable the option to send Protect events to Syslog. Select the checkbox to **Send output of Protect events to Syslog**, and complete the fields that appear. 
+In the **Bulk Server Settings** dialog, click the **Edit** link to enable the option to send Protect events to Syslog. Select the checkbox to **Send output of Protect events to Syslog**, and complete the fields that appear. Once you complete all required fields and save the settings, Syslog is enabled on the selected servers. 
+
+<a href="assets/images/Bulk-server-settings.png" rel="lightbox" title="Enable Syslog for multiple servers"><img class="thumbnail" src="assets/images/Bulk-server-settings.png"/></a>
 
 > **Note:** If all selected servers are in the same environment, and Syslog defaults are set for that environment in **Organization Settings**, the values are prepopulated in the fields that appear. If eligible servers selected are in different environments, you can choose to use the default settings for the applicable servers or manually configure the settings for all servers. 
 
-Once you complete all required fields and save the settings, Syslog is enabled on the selected servers. 
+## Enabled Servers
 
-<a href="assets/images/Bulk-server-settings.png" rel="lightbox" title="Enable Syslog for multiple servers"><img class="thumbnail" src="assets/images/Bulk-server-settings.png"/></a>
+When Syslog is enabled, the server has a gray arrow icon beside its name in the grid. Hover over the icon to see the output location of Protect events.
+
+<a href="assets/images/Output-to-syslog.png" rel="lightbox" title="Output to Syslog enabled"><img class="thumbnail" src="assets/images/Output-to-syslog.png"/></a>
+
+To edit server settings, repeat the steps above to update the values in the appropriate configuration form, and save your changes. 
+
 
