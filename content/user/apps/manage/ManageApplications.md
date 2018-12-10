@@ -72,3 +72,4 @@ You must archive an application before you can fully delete it. You aren't requi
 
 For step-by-step instructions, go to the [Delete Applications](user-appsmanage.html#delete) article. 
 
+

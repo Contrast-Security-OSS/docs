@@ -8,7 +8,7 @@ tags: "Admin Organization settings applications"
 
 Organization Admins can choose default settings for applications in their organization based on levels of importance, existing policies and Assess licensing. Go to the **User menu > Organization Settings > Applications tab** to get started. 
 
-<a href="assets/images/Application-defaults.png" rel="lightbox" title="Configure application defaults for your organization"><img class="thumbnail" src="assets/images/Application-defaults.png"/></a>
+<a href="assets/images/Application-defaults.png" rel="lightbox" title="Configure custom metadata fields to add to your applications"><img class="thumbnail" src="assets/images/Application-defaults.png"/></a>
 
 ## Set Up Defaults
 
@@ -35,5 +35,33 @@ See [Manage Vulnerabilities](user-vulns.html#manage-vuln) for more information a
 ### Licensing 
 
 Check the box if you want to **Automatically apply licenses** to newly onboarded applications. The thermometer chart below the checkbox shows you the number of licenses used out of the total number of licenses available in the organization. Click on the total number of licenses to go to the Licenses view of the [Organization Statistics](user-reports.html#orgstats) page. 
+
+## Custom Fields 
+
+Use the **Custom Fields** section to configure custom metadata that should be provided for each of the applications in your organization. During [agent onboarding](user-apps.html#addapp), users are prompted to enter metadata for the fields you create, and add the information in their configuration files. The metadata is then displayed in the **Applications** page grid, where you can also use it to filter applications, and the application's **Details** page in the Contrast UI. 
+
+The following agent versions support custom metadata fields: 
+
+* Java 3.5.6.591+
+* .NET 18.10.35+
+* Node 1.35.0
+* Python 1.2.0
+* Ruby 2.0.8
+
+Complete the following steps to create custom fields: 
+
+* Use the dropdown menu to choose a field type of "Freeform", "Numeric" or "Point of Contact". <br> (The type of field you choose may determine the type of validation that's required.)
+* Enter a name for the field. 
+* Use the checkboxes to determine if the metadata provided should be **Required** and/or a **Unique** value for each application. 
+* Click **Add Field** button to complete as many rows as you need. 
+
+<a href="assets/images/App-custom-settings.png" rel="lightbox" title="Configure custom metadata fields for your applications"><img class="thumbnail" src="assets/images/App-custom-settings.png"/></a>
+
+Once you've defined each field, Contrast provides the formatted property that you can copy and paste into your agent configuration files. You must then complete the information for each key=value pair. 
+
+If you would like to fail applications that don't include all required fields, check the box to **Restrict applications missing required fields**. This may apply to new or new and existing applications in the organization. 
+
+> **Note:** If you don't choose to restrict applications, any application missing a required field will be successfully onboarded but flagged in the UI. Contrast will also send an email alert to the designated Point of Contact, if provided.  
+
 
 

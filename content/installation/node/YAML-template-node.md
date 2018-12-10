@@ -185,6 +185,10 @@ contrast:
   #  Example - label1,label2,label3
   # tags: NEEDS_TO_BE_SET
 
+  # Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs.
+  #  Example - "business-unit=accounting, office=Baltimore"
+  # metadata: NEEDS_TO_BE_SET
+
 #==========================================================================================
 # Server
 # Use the properties in this section to set metadata For the server hosting this agent.

@@ -169,19 +169,20 @@ The following steps outline the process to migrate Contrast to your own Tomcat i
 
 In the example below, Contrast was installed at path `/usr/local/contrast`. Gather the following files: 
 
+* data/agents/
 * data/conf/
 * data/esapi/
 * data/.contrast
 * data/.initialized
 * data/cache/
 * data/contrast.lic
-* webapps/Contrast.war
+* webapp/Contrast.war
 
-This code compresses necessary artifacts into your user's home directory:
+The following commands compresses necessary artifacts into your user's home directory:
 
 ```
 $ cd /usr/local/contrast
-$ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/cache/ data/.initialized data/.contrast webapps/Contrast.war
+$ tar -czvf ~/ctdc.tar.gz data/agents data/conf data/contrast.lic data/esapi/ data/cache/ data/.initialized data/.contrast webapp/Contrast.war
 ```
 
 ### Install Tomcat and Java
@@ -189,7 +190,7 @@ $ tar -czvf ~/ctdc.tar.gz data/conf data/contrast.lic data/esapi/ data/cache/ da
 This process varies based on your operating system. You must install:
 
 * Tomcat 7 (Contrast recommends Tomcat 7.0.61)
-* Java 7 (Contrast recommends Java 1.7.0_80)
+* Supported versions of Java, as shown in [System Requirements](installation-setup.html#contrast-reqs)
 
 ### Prepare and configure the application server
 
@@ -254,19 +255,13 @@ Symlink, copy or move the *WAR* into the Tomcat *webapps* directory. The path fo
 
 
 ```
-$ sudo ln -s /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
+$ sudo ln -s /opt/contrast-data/webapp/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
 ```
 
 or
 
 ```
-$ cp /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
-```
-
-or
-
-```
-$ cp /opt/contrast-data/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
+$ cp /opt/contrast-data/webapp/Contrast.war /var/lib/tomcat7/webapps/Contrast.war
 ```
 
 Once the *WAR* is deployed, you should be able to start your newly configured and distributed Contrast application. If you run into any problems, please let Contrast's Technical Support team know right away.
