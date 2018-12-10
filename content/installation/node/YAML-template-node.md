@@ -189,6 +189,12 @@ contrast:
   #  Example - "business-unit=accounting, office=Baltimore"
   # metadata: NEEDS_TO_BE_SET
 
+  # Provide the ID of a session which already exists in the Contrast UI. Vulnerabilities discovered by the agent are associated with this session. If an invalid ID is supplied, the agent will be disabled. This option and `application.session_metadata` are mutually exclusive; if both are set, the agent being disabled.
+  # session_id: NEEDS_TO_BE_SET
+
+  # Provide metadata which is used to create a new session ID in the Contrast UI. Vulnerabilities discovered by the agent will be associated with this new session. This value should be formatted as key=value pairs (conforming to RFC 2253). This option and `application.session_id` are mutually exclusive; if both are set the agent being disabled.
+  # session_metadata: NEEDS_TO_BE_SET
+
 #==========================================================================================
 # Server
 # Use the properties in this section to set metadata For the server hosting this agent.
