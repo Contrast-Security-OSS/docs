@@ -67,7 +67,10 @@ Go to the **User menu > Organization Settings > Servers tab** to start setting u
 
 * Check the box to **Enable output of Protect events to Syslog**. 
 	* Enter the **IP Address** and **Port** in the given fields. Use the dropdown menu to chose the **Facility**. 
-	* Click on the event severity badges, and use the dropdown menu to choose a message **Severity** level for each one. 
+	* Click on the event severity badges, and use the dropdown menu to choose a message **Severity** level for each one. The defaults are:
+	 * **1 - Alert** for Exploited
+	 * **4 - Warning** for Blocked
+	 * **5 - Notice** for Probed 
 
 <a href="assets/images/Server-default-syslog.png" rel="lightbox" title="Configure output to Syslog"><img class="thumbnail" src="assets/images/Server-default-syslog.png"/></a>
 
