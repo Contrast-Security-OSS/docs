@@ -34,7 +34,7 @@ If this configuration has an issue or incorrect values, the contrast-service fai
 
 ## Configure the NGINX Service 
 
-The Proxy agent is configured within the NGINX configuration files located at */etc/nginx*. You must add the Proxy agent module as well as the configuration properties that enable the agent for certain endpoints to the */etc/nginx.conf* file.
+The Proxy agent is configured within the NGINX configuration files located at */etc/nginx/*. You must add the Proxy agent module as well as the configuration properties that enable the agent for certain endpoints to the */etc/nginx/nginx.conf* file.
 
 The following example is for the agent-specific configuration within the NGINX configuration files.
 
