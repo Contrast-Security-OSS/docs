@@ -6,15 +6,15 @@ tags: "user applications discover vulnerabilities quick start guide"
 
 The Contrast agent discovers any code flaws that are in your applications, and reports it to the Contrast application. The Contrast then presents and classifies these vulnerabilities with a severity level to help you prioritize and mark the vulnerabilities as needed. 
 
-The **Vulnerabilities** page in the Contrast UI allows you to browse, search and filter through all an application's vulnerabilities. Click on each vulnerability for more details, including guidelines for determining how to resolve them to prevent an attack.
-
 ## Vulnerability Reporting 
 
 If the agent reports a vulnerability and Contrast has never seen it before, Contrast creates a new entry for the vulnerability. If that vulnerability already exists, Contrast updates the existing entry, issue count and number of days since it was last detected. 
 
 ## View Findings 
 
-Contrast shows you all the vulnerabilities it's discovered including SQL Injection, Cross-Site Scripting (XSS), Command Injection, Path Traversal, XML External Entity Processing (XXE), Cross-Site Request Forgery (CSRF), Java Deserialization and many more. Go to the main **Vulnerabilities** page to see all vulnerabilities across your portfolio, or go to the **Vulnerabilities** tab from the application's **Overview** tab to see a list of all vulnerabilities found in that application. 
+Contrast shows you all the vulnerabilities it's discovered including SQL Injection, Cross-Site Scripting (XSS), Command Injection, Path Traversal, XML External Entity Processing (XXE), Cross-Site Request Forgery (CSRF), Java Deserialization and many more.
+
+The **Vulnerabilities** page in the Contrast UI allows you to browse, search and filter through all vulnerabilities in your organization. Click on each vulnerability for more details, including guidelines for determining how to resolve them to prevent an attack. You can also go to the **Vulnerabilities** tab from the application's details page to see a list of all vulnerabilities found in that application.
 
 > **Note:** For Contrast to find weaknesses and present findings, you must exercise your application. 
 
