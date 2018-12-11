@@ -37,6 +37,12 @@ Once archived, applications don't appear in the **Applications** grid by default
 
 To learn how to restore an archived application, go the application management [Overview](user-appsmanage.html#overview). 
 
+## Step 4a: Delete the group associated to the application (optional)
+
+Go to the **Organization Settings** page and select the link **Groups**.  Click on the trash can icon in the grid row of the group associated to the application.
+
+> **Note:** Deleting an application without deleting the group won't let you recreate a group with the same name.  Otherwire to delete  the ghost group a message must be sent to the Contrast Support for the SaaS user.
+
 ## Step 5: Delete the application
 
 **When you delete an application, all of its associated findings - i.e., vulnerabilities and libraries - are removed permanently.** To complete the deletion process, and select the **delete** (trashcan) icon in the archived application's grid row. In the dialog that appears, select the **Delete** button to confirm your choice. 
