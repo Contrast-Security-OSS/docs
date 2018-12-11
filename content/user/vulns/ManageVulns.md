@@ -20,13 +20,13 @@ Hover over a vulnerability's severity level in any **Vulnerabilities** grid to s
 
 <a href="assets/images/Vulnerability-severity.png" rel="lightbox" title="Likelihood and Impact ratings of a vulnerability severity level"><img class="thumbnail" src="assets/images/Vulnerability-severity.png"/></a>
 
-## Filter Vulnerabilities 
+## Sort and Filter Vulnerabilities
 
 Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. Use basic column sorting to arrange vulnerabilities in a grid, or use the fields above the grid to quickly find one by its vulnerability ID, the date range in which it was found or other criteria. Click the **Advanced** link for access to more filters including tags, servers and environments. 
 
 <a href="assets/images/Vulnerability-quick-view.png" rel="lightbox" title="Filter vulnerabilities in the grid"><img class="thumbnail" src="assets/images/Vulnerability-quick-view.png"/></a>
 
-## Pending Vulnerabilities 
+## Pending Vulnerabilities
 
 If an administrator [requires administrative approval](admin-orgsettings.html#app-defaults) to close vulnerabilities, vulnerabilities with the specified statuses and severities go into a **Pending** state when you attempt to close them. Administrative approval applies to vulnerability updates by two-way [bugtracker integrations](admin-orgintegrations.html#bugtracker) as well as [auto-remediation policies](admin-policymgmt.html#remediate).  
 
@@ -84,7 +84,7 @@ To quickly see which vulnerabilities are being tracked, click the **Advanced** l
 
 Export details on vulnerability findings by selecting the grouping of vulnerabilities that you want to include in the report, and clicking the **Export** icon to choose either CSV or XML format.
 
-<a href="assets/images/Vuln-export-options.png" rel="lightbox" title="Vulnerability export options"><img class="thumbnail" src="assets/images/Vuln-export-options.png"/></a>
+<a href="assets/images/Vulnerability-export-options.png" rel="lightbox" title="Vulnerability export options"><img class="thumbnail" src="assets/images/Vulnerability-export-options.png"/></a>
 
 The exported file contains the following data fields for each vulnerability:
 
