@@ -8,21 +8,23 @@ Contrast users can manage vulnerabilities based on their organization or applica
 
 ## Vulnerability Status
 
-To change the status of one or more vulnerabilities, select the checkboxes in the grid rows, click the **Mark as** button and choose a new status from the dropdown menu. You may add comments to logged status changes to provide more context. You can also click on a vulnerability, and change its status from the **Overview** tab. 
+To change the status of one or more vulnerabilities, use the check marks to select the appropriate grid rows, and click the **Mark as** menu in the action bar at the bottom of the grid, and choose a new status from the menu. You may add comments to logged status changes to provide more context. 
 
 <a href="assets/images/Vulnerability-mark-as.png" rel="lightbox" title="Change vulnerability status"><img class="thumbnail" src="assets/images/Vulnerability-mark-as.png"/></a>
+
+To change the status of an individual vulnerability, click on its status in the grid, and choose a new status from the menu. You can also click on a vulnerability, and change its status from the **Overview** tab. 
 
 See [Analyze Findings](user-vulns.html#analyze) to learn more about statuses and behaviors when a vulnerability is marked and found again.
 
 ## Vulnerability Severity
 
-Hover over a vulnerability's severity level in any **Vulnerabilities** grid to see the Likelihood and Impact calculations. To change the level, click on the colored badge and choose the new selection from the dropdown menu.
+To change a vulnerability's severity level, click on the colored badge and choose a new level from the menu. (This action must be done individually.)
 
 <a href="assets/images/Vulnerability-severity.png" rel="lightbox" title="Likelihood and Impact ratings of a vulnerability severity level"><img class="thumbnail" src="assets/images/Vulnerability-severity.png"/></a>
 
 ## Sort and Filter Vulnerabilities
 
-Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. Use basic column sorting to arrange vulnerabilities in a grid, or use the fields above the grid to quickly find one by its vulnerability ID, the date range in which it was found or other criteria. Click the **Advanced** link for access to more filters including tags, servers and environments. 
+Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. Use basic column sorting to arrange vulnerabilities in a grid, or use the fields above the grid to quickly find one by its vulnerability ID, the date range in which it was found or other criteria. 
 
 <a href="assets/images/Vulnerability-quick-view.png" rel="lightbox" title="Filter vulnerabilities in the grid"><img class="thumbnail" src="assets/images/Vulnerability-quick-view.png"/></a>
 
@@ -54,23 +56,23 @@ If you deny the status change, you must provide a reason in the confirmation dia
 
 ## Merge Vulnerabilities
 
-Contrast allows you to merge vulnerabilities of the same type to consolidate findings. From any **Vulnerabilities** grid, select two or more vulnerabilities you'd like to merge, and click the merge icon in the action bar. In the confirmation dialog that appears, select the vulnerability that you want to represent the merge. 
+Merge vulnerabilities of the same type from the same application to consolidate findings. From any **Vulnerabilities** grid, use the check marks to select two or more vulnerabilities you'd like to merge, and click the merge icon in the action bar. In the confirmation dialog that appears, select the vulnerability that you want to represent the merge. 
 
 <a href="assets/images/Merge_Vulnerabilities.png" rel="lightbox" title="Merge Vulnerabilities"><img class="thumbnail" src="assets/images/Merge_Vulnerabilities.png"/></a>
 
 ## Delete Vulnerabilities
 
-To delete one or more vulnerabilities, select the checkboxes in the grid rows, and click the trash can icon in the action bar above the grid. You can also delete a single vulnerability by clicking the trashcan icon in the row dropdown menu or in the vulnerability's **Overview** tab. 
+To delete one or more vulnerabilities, use the check marks to select the appropriate grid rows, and select the **delete** (trashcan) icon in the bottom action bar. To delete a single vulnerability, hover over the grid row and select the **delete** icon in the row dropdown menu; you can also find the icon in the vulnerability's **Overview** tab. In the dialog that appears, select the **Delete** button to confirm your choice.
 
 <a href="assets/images/Vulnerability-delete.png" rel="lightbox" title="Delete vulnerabilities"><img class="thumbnail" src="assets/images/Vulnerability-delete.png"/></a>
 
-Once this action is confirmed, the vulnerability is removed and no longer appears in your list unless Contrast discovers it again. 
+Once confirmed, the vulnerability is removed and no longer appears in your list unless Contrast discovers it again. 
 
 ## Track Vulnerabilities 
 
 You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtracker) from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
 
-<a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
+<a href="assets/images/Send-to-bugtracker-dialog.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/Send-to-bugtracker-dialog.png"/></a>
 
 >**Note:** Bugtrackers must be configured before you send vulnerabilities.
 
@@ -82,7 +84,7 @@ To quickly see which vulnerabilities are being tracked, click the **Advanced** l
 
 ## Export Findings
 
-Export details on vulnerability findings by selecting the grouping of vulnerabilities that you want to include in the report, and clicking the **Export** icon to choose either CSV or XML format.
+Export details on vulnerability findings by selecting the vulnerabilities that you want to include in the report, and clicking the **Export** icon in the action bar. Once choose to generate the report in CSV or XML format, Contrast immediately generates the file for download.
 
 <a href="assets/images/Vulnerability-export-options.png" rel="lightbox" title="Vulnerability export options"><img class="thumbnail" src="assets/images/Vulnerability-export-options.png"/></a>
 
