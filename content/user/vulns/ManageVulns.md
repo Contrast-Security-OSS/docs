@@ -76,7 +76,7 @@ You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtra
 
 When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of the **Application Overview** page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
 
-<a href="assets/images/Integrations-sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Integrations-sent-to-bugtracker.png"/></a>
+<a href="assets/images/Sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Sent-to-bugtracker.png"/></a>
 
 To quickly see which vulnerabilities are being tracked, click the **Advanced** link, select **Status** in the sidebar, and filter for "Being Tracked". 
 
@@ -126,6 +126,4 @@ curl \
 ```
 
 For more information, read [About the Contrast API](tools-about.html#api-about). 
-
-
 
