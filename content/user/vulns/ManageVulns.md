@@ -22,11 +22,29 @@ To change a vulnerability's severity level, click on the colored badge and choos
 
 <a href="assets/images/Vulnerability-severity.png" rel="lightbox" title="Likelihood and Impact ratings of a vulnerability severity level"><img class="thumbnail" src="assets/images/Vulnerability-severity.png"/></a>
 
+## Tag Vulnerabilities 
+
+Tag vulnerabilities to organize your view of findings and improve search functionality in the Contrast UI.
+
+To tag a single vulnerability, hover over the grid row and select the tag icon. To tag multiple vulnerabilities at the same time, use the check marks to select the appropriate grid rows, and select the tag icon in the bottom action bar.
+
+<a href="assets/images/Vulnerability-tags.png" rel="lightbox" title="Tag vulnerabilities for better organization"><img class="thumbnail" src="assets/images/Vulnerability-tags.png"/></a>
+
+In the dialog that appears, enter a new tag name or choose an existing tag from the dropdown menu. Select the button to **Save** your changes.
+
 ## Sort and Filter Vulnerabilities
 
-Contrast provides multiple ways to narrow findings and focus on the vulnerabilities that matter to you. Use basic column sorting to arrange vulnerabilities in a grid, or use the fields above the grid to quickly find one by its vulnerability ID, the date range in which it was found or other criteria. 
+There are a few different ways to narrow findings and focus on the vulnerabilities that matter to you. 
 
-<a href="assets/images/Vulnerability-quick-view.png" rel="lightbox" title="Filter vulnerabilities in the grid"><img class="thumbnail" src="assets/images/Vulnerability-quick-view.png"/></a>
+* To see all vulnerabilities in the a certain category - such as vulnerabilities that are open or pending review - use the dropdown menu by the vulnerability count above the grid to choose the appropriate quick view. The grid defaults to **All**. 
+
+* To find specific vulnerabilities, click on the **search** tool above the grid, and type the name or tag of the vulnerability you want to locate. 
+
+* To **sort** vulnerabilities in the grid, use the dropdown menu to the upper-right side of the grid to choose a category by which to sort in ascending or descending order.
+
+* To filter vulnerabilities in your current view of the grid, select the **filter** (funnel) icon for the **Severity**, **Applications**, **Last Detected** or **Status** columns. In the dropdown menu, select the filter(s) that you want to apply. To remove the selected filters, select the **Clear** link beside the filter icon. 
+
+<a href="assets/images/Vulnerability-filters.png" rel="lightbox" title="Filter vulnerabilities in the grid"><img class="thumbnail" src="assets/images/Vulnerability-filters.png"/></a>
 
 ## Pending Vulnerabilities
 
@@ -38,7 +56,7 @@ When you attempt to close a vulnerability that an administrator must approve, yo
 
 Once Contrast confirms your request, the vulnerability is marked as **Pending** in the grid. Hover over the label to see more information about when the request to close was submitted. To see all vulnerabilities awaiting review in your organization, select the **Pending Review** quick view from the dropdown. 
 
-<a href="assets/images/Vulns-marked-pending.png" rel="lightbox" title="Vulnerabilities with pending status changes are marked in the grid"><img class="thumbnail" src="assets/images/Vulns-marked-pending.png"/></a>
+<a href="assets/images/Vulnerability-pending.png" rel="lightbox" title="Vulnerabilities with pending status changes are marked in the grid"><img class="thumbnail" src="assets/images/Vulnerability-pending.png"/></a>
 
 > **Note:** You may change the status of a pending vulnerability. If approval isn't required for the new status, the vulnerability is no longer marked as Pending. 
 
@@ -48,9 +66,9 @@ You will receive a [notification](admin-orgsettings.html#org-notify) when your r
 
 To approve or deny vulnerability closures as a Contrast administrator, click on the link in your UI notification or navigate to the **Pending Review** view in the grid. 
 
-To review vulnerability closures from the grid, select one or more vulnerabilities to review. Click on the **Review** button in the batch actions menu, and select **Approve** or **Deny**. You can also go to a vulnerability's **Details** tab, and click the **Review** button in the actions menu to approve or deny its closure.
+To review vulnerability closures from the grid, select one or more vulnerabilities to review. Click on the **Review** button in the action bar, and select **Approve** or **Deny**. You can also go to a vulnerability's **Details** tab, and click the **Review** button in the actions menu to approve or deny its closure.
 
-<a href="assets/images/Pending-admin-approval.png" rel="lightbox" title="Review pending status changes"><img class="thumbnail" src="assets/images/Pending-admin-approval.png"/></a>
+<a href="assets/images/Review-pending.png" rel="lightbox" title="Review pending status changes"><img class="thumbnail" src="assets/images/Review-pending.png"/></a>
 
 If you deny the status change, you must provide a reason in the confirmation dialog. Your reason is then documented in the vulnerability's **Discussion** tab. The vulnerability automatically reverts to its previous status. If you approve the status change, the user's request is marked as "Approved" in the **Discussion** tab. 
 
@@ -72,15 +90,15 @@ Once confirmed, the vulnerability is removed and no longer appears in your list 
 
 You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtracker) from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
 
-<a href="assets/images/Send-to-bugtracker-dialog.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/Send-to-bugtracker-dialog.png"/></a>
+<a href="assets/images/Send-to-bugtracker-dialog.png" rel="lightbox" title="Bugtracker export options"><img class="thumbnail" src="assets/images/Send-to-bugtracker-dialog.png"/></a>
 
 >**Note:** Bugtrackers must be configured before you send vulnerabilities.
 
-When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of the **Application Overview** page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
+When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of an application's details page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
 
 <a href="assets/images/Sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Sent-to-bugtracker.png"/></a>
 
-To quickly see which vulnerabilities are being tracked, click the **Advanced** link, select **Status** in the sidebar, and filter for "Being Tracked". 
+To quickly see which vulnerabilities are tracked, use the filter in the **Status** column, and select "Being Tracked".
 
 ## Export Findings
 

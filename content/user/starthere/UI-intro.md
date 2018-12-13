@@ -22,7 +22,7 @@ To  see all the information, these applications must be licensed. For more infor
  
 ## Manage Applications
 
-Go to the Applications page to get detailed information, see findings, scores, manage licenses, settings and more. Read the [Manage Applications article](user-appsmanage.html) for more details.
+Go to the Applications page to see findings, scores, manage licenses, settings and more. Read the [Manage Applications article](user-appsmanage.html) for more details.
  
 ## Improve Your Application Score
 
@@ -60,17 +60,7 @@ If a vulnerability is reported and Contrast has never seen it before, Contrast c
  
 ## Manage Vulnerabilities
 
-Go the Vulnerabilities page to view details on each one and get rid of weaknesses so your application isn't compromised. Read the [Manage Vulnerabilities article](user-vulns.html#manage-vuln) to understand them even better. 
-
-### Tag vulnerabilities 
-
-What’s better than assigning a vulnerability to a user? Creating tags for each vulnerability. These tags can be names of users, groups or just about anything. They are very useful when trying to navigate through vulnerabilities. To create a tag, go to the application's Overview page and select the Vulnerabilities tab. The **Tag Vulnerabilities** option is grayed out until you select the vulnerability you want to tag. 
-
-<a href="assets/images/Tag-vulnerability.png" rel="lightbox" title="Tag vulnerabilities in the application page"><img class="thumbnail" src="assets/images/Tag-vulnerability.png"/></a>
- 
-> **Example:** You create **tagA** and assign a few vulnerabilities with it. When you try to browse through your vulnerabilities and want to only look at ones with **tagA**, you can filter for just those.
-
-These tags can be created for applications and servers as well. To learn more about filters, please read about [Contrast Navigation](user-starthere.html#ui-navigate). 
+Go the **Vulnerabilities** page to view details on each one and get rid of weaknesses in your application. You can also perform tasks like tagging and updating severity levels. Read how to [Manage Vulnerabilities](user-vulns.html#manage-vuln) to understand them even better. 
  
 ## Analyze Findings
 

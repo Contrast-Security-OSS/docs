@@ -11,6 +11,7 @@ To get the best experience out of Contrast, familiarize yourself with the compon
 Here at Contrast, we work hard to engage and guide our users. Don’t hesitate to <a href="mailto:andria.mattsen@contrastsecurity.com,terra.caussin@contrastsecurity.com">give us some suggestions</a>! 
 
 ## Navigation
+
 The top navigation bar is persistent as you move through Contrast - giving easy access to core pieces at any time. There are two versions of the top navigation bar depending on your system role and access levels. Most users will interface with the organization view. Users with system administration capabilities will have the luxury of toggling between the organization view and system administration view.
 
 ### Organization View
@@ -48,21 +49,22 @@ If you have system administration capabilities, you will be able to switch from 
 | Administrator Menu      | Provides access to subsidiary administration pages of Contrast such as System Settings, Policy Management, and Help.      |
 
 
-## Table Actions
-Many pages within Contrast contain rows of data presented in table format. These tables have a built-in search mechanism to easily get to data of interest. Searches are performed on multiple columns and quickly display matched rows as you type. Coupled with the search field in many cases, Contrast provides quick views for immediate access to most frequently used filters.
+## Grid Actions
 
-Each table offers column sorting to alter the ordering of the data in exactly the way you want. In addition, tables offer actions that allow you to perform operations on individual rows or in bulk by selecting many rows. The goal? Get you to your data fast.
+Many pages within Contrast contain rows of data presented in table format. These grids have a built-in search mechanism to easily get to the data you need. You can also use the quick views to see data by the most frequently used categories. 
 
-<a href="assets/images/ActionBar_OrgApps.png" rel="lightbox" title="Sample Table Actions"><img class="thumbnail" src="assets/images/ActionBar_OrgApps.png"/></a>
+<a href="assets/images/Vulnerabilities-grid.png" rel="lightbox" title="View vulnerabilities in the grid"><img class="thumbnail" src="assets/images/Vulnerabilities-grid.png"/></a>
 
-## Advanced Filtering 
+Each table offers column sorting to alter the ordering of the data in exactly the way you want. In addition, tables offer actions that allow you to perform operations on individual rows or in bulk by selecting many rows. 
+
+### Sorting and filtering 
+
 Advanced filtering is available on each main listing of assets and findings - Applications, Servers, Libraries, Vulnerabilities, and Attacks. Simply click the **Advanced** link next to the search field. Here you’ll find panels of various data sets that allow you to limit the result set and hone in on the pieces that interest you.
-
-For example, you could apply a filter to a list of Vulnerabilities to view only Cross-Site Scripting vulnerabilities that have a Critical severity and have yet to be remediated. 
 
 <a href="assets/images/TraceFilter.png" rel="lightbox" title="Advanced Filtering"><img class="thumbnail" src="assets/images/TraceFilter.png"/></a>
 
-## Delve into the Details 
+## The Details 
+
 From any main page, you can drill into an asset or finding by clicking on its name within the table row. Contrast highlights metrics on the asset or finding for a quick snapshot of core data. Navigate the sub-pages to get more details on related pieces, view activity more closely, access review policy, or capture comments and collaborate with team members. 
 
 <a href="assets/images/Details.png" rel="lightbox" title="Details View"><img class="thumbnail" src="assets/images/Details.png"/></a>
