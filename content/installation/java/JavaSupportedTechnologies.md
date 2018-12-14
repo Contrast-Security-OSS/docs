@@ -25,13 +25,14 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |                                           |                                      | OWASP ESAPI, AntiSamy, Coverity
 |                                           |                                      | Oracle, SQL Server, PostgreSQL, DB2, MySQL JDBC drivers
 |                                           |                                      | Seam
-|                                           |                                      | Spring, Spring Boot
+|                                           |                                      | Spring, Spring Boot, Spring AOP
 |                                           |                                      | Struts, Struts 2
 |                                           |                                      | Wicket
 |                                           |                                      | XStream, Jackson (JSON/XML)
 |                                           |                                      | Xerces, JAXB, nu.xom
 
-<sup>*</sup> Contrast tests WebSphere on Windows and Linux, and offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
+
+Contrast tests WebSphere on Windows and Linux, and offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
 
 
 ### Note for Proguard Users
