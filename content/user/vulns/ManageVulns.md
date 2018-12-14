@@ -36,7 +36,7 @@ In the dialog that appears, enter a new tag name or choose an existing tag from 
 
 There are a few different ways to narrow findings and focus on the vulnerabilities that matter to you. 
 
-* To see all vulnerabilities in the a certain category - such as vulnerabilities that are open or pending review - use the dropdown menu by the vulnerability count above the grid to choose the appropriate quick view. The grid defaults to **All**. 
+* To see all vulnerabilities in a certain category - such as vulnerabilities that are open or pending review - use the dropdown menu by the vulnerability count above the grid to choose the appropriate quick view. The grid defaults to **All**. 
 
 * To find specific vulnerabilities, click on the **search** tool above the grid, and type the name or tag of the vulnerability you want to locate. 
 
@@ -54,7 +54,7 @@ When you attempt to close a vulnerability that an administrator must approve, yo
 
 <a href="assets/images/Vulns-mark-as-dialog.png" rel="lightbox" title="Enter an explanation for a status change"><img class="thumbnail" src="assets/images/Vulns-mark-as-dialog.png"/></a>
 
-Once Contrast confirms your request, the vulnerability is marked as **Pending** in the grid. Hover over the label to see more information about when the request to close was submitted. To see all vulnerabilities awaiting review in your organization, select the **Pending Review** quick view from the dropdown. 
+Once Contrast confirms your request, the vulnerability is marked as "Pending" in the grid. Hover over the label to see more information about when the request to close was submitted. To see all vulnerabilities awaiting review in your organization, select the **Pending Review** quick view from the dropdown. 
 
 <a href="assets/images/Vulnerability-pending.png" rel="lightbox" title="Vulnerabilities with pending status changes are marked in the grid"><img class="thumbnail" src="assets/images/Vulnerability-pending.png"/></a>
 
@@ -88,13 +88,13 @@ Once confirmed, the vulnerability is removed and no longer appears in your list 
 
 ## Track Vulnerabilities 
 
-You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtracker) from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
+You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtracker) from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an application's **Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
 
 <a href="assets/images/Send-to-bugtracker-dialog.png" rel="lightbox" title="Bugtracker export options"><img class="thumbnail" src="assets/images/Send-to-bugtracker-dialog.png"/></a>
 
 >**Note:** Bugtrackers must be configured before you send vulnerabilities.
 
-When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page or the **Vulnerabilities** tab of an application's details page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
+When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page and the **Vulnerabilities** tab of an application's details page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
 
 <a href="assets/images/Sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Sent-to-bugtracker.png"/></a>
 
