@@ -42,6 +42,9 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **tls_versions**: The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
 
+  * **certificate**: 
+    * **enable**: If set to `false`, the certificate configuration in this section will be ignored.
+  
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
     * **user**: Set the proxy user.
