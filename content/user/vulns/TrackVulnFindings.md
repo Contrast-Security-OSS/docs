@@ -4,7 +4,7 @@ description: "Overview of tracking vulnerability findings"
 tags: "user UI track vulnerability findings management"
 -->
 
-Use Contrast's bugtracker integrations to send vulnerability data other members of your organization. Integrations allow you to plan and maintain timely patching to protect against attacks, as well as streamline your workflows by sending vulnerabilities directly to your tool to orchestrate standard development processes. You can receive also [notifications](admin-orgsettings.html#org-notify) if Contrast finds any new high or critical vulnerabilities in your application. 
+Use Contrast's bugtracker integrations to send vulnerability data to other members of your organization. Integrations allow you to plan and maintain timely patching to protect against attacks, and help you streamline workflows by sending vulnerability information directly to your bugtracking tool. You can receive also [notifications](admin-orgsettings.html#org-notify) if Contrast finds any new high or critical vulnerabilities in your application. 
 
 ## Integrations 
 
@@ -20,9 +20,9 @@ You can send vulnerabilities to a bugtracker by selecting the **Send Vulnerabili
 
 When you send a vulnerability to a bugtracker, the status of the vulnerability changes to **Reported**. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
 
-<a href="assets/images/Sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Sent-to-bugtracker.png"/></a>
+<a href="assets/images/Sent-to-bugtracker.png" rel="lightbox" title="The arrow icon indicates vulnerabilities sent to a bugtracker"><img class="thumbnail" src="assets/images/Sent-to-bugtracker.png"/></a>
 
-To quickly see which vulnerabilities are tracked, use the filter in the **Status** column, and select "Being Tracked".
+> **Note:** To quickly see which vulnerabilities are tracked, use the filter in the **Status** column and select "Being Tracked".
 
 ## Custom Processing
 
