@@ -26,7 +26,7 @@ To tag a single application, hover over the grid row and select the tag icon. To
 
 There are a few way to narrow down the number of applications in the grid: 
 
-* To see all application in the a certain category - such as merged, unlicensed or archived applications - use the dropdown menu by the application count above the grid to choose the appropriate quick view. The grid defaults to **All**. 
+* To see all applications in the a certain category - such as merged, unlicensed or archived applications - use the dropdown menu by the application count above the grid to choose the appropriate quick view. The grid defaults to **All**. 
 
 * To find specific applications, click on the **search** tool above the grid, and type the name of the application or application tag you want to locate. 
 
