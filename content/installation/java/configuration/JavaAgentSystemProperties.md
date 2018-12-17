@@ -13,6 +13,7 @@ Generate a list of general properties directly from the command line using the C
 
 |Property|Description|
 |-|-|
+| application.name | Sets the application name; this name is reported to Contrast. <br> **DEFAULT VALUE:** determined by scanning web.xml</br> <br> Note: This new property is preferred to contrast.override.appname and contrast.standalone.appname, both of which are deprecated and scheduled for removal in an upcoming release.</br>   <br>See One Application per JVM for more information. TODO</br> |
 | contrast.activity | Boolean to enable/disable the Contrast activity thread <br> **DEFAULT VALUE:** true</br> |
 | contrast.agent.metadata | Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> **Example:** "business-unit=accounting, office=Baltimore" |
 | contrast.app.activity.period | Contrast application activity thread polling period in milliseconds <br> **DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
@@ -36,7 +37,7 @@ Generate a list of general properties directly from the command line using the C
 | contrast.mode | assess: Data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features; When this property is enabled, the agent ignores all customizations from the Contrast interface. <br> **DEFAULT VALUE:** not used; this property must be set to be active </br> |
 | contrast.nested.libs.depth | Maximum archive unpacking depth when analyzing libraries <br> **DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.noteamserver.enable | Boolean to enable/disable Contrast to start up without access to the Contrast interface. <br>**DEFAULT VALUE:** false</br> |
-| contrast.override.appname | Sets the application name; this name is reported to Contrast. <br> **DEFAULT VALUE:** determined by scanning web.xml</br> |
+| contrast.override.appname | Sets the application name; this name is reported to Contrast. <br> **DEFAULT VALUE:** determined by scanning web.xml</br> <br>Note: This property is being deprecated in favor of the new property application.name .</br> <br>See One Application per JVM for more information. TODO</br> |
 | contrast.override.appversion | Sets the application version; this version is reported to the Contrast interface. <br> **DEFAULT VALUE:** determined by scanning web.xml</br> |
 | contrast.path | Contrast "working directory" override <br> **DEFAULT VALUE:** the "current" folder according to the container </br> |
 | contrast.poll.features | Boolean to enable/disable features polling thread <br> **DEFAULT VALUE:** true</br> |
@@ -48,7 +49,7 @@ Generate a list of general properties directly from the command line using the C
 | contrast.server | Overrides name of the server displayed in the Contrast interface. Includes any valid path characters, e.g. *myserver-1/myapp* or *john_dev*. <br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.server.activity.period | Polling period for Contrast polling thread (in milliseconds). <br> **DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
 | contrast.stacks.maxdepth | Maximum stack depth to include in reported findings. <br> **DEFAULT VALUE:** 75 </br> |
-| contrast.standalone.appname | Indicates the application is a standalone application with the provided name. <br>**DEFAULT VALUE:** none, must be set</br> |
+| contrast.standalone.appname | Indicates the application is a standalone application with the provided name. <br>**DEFAULT VALUE:** none, must be set</br> <br>Note: This property is being deprecated in favor of the new property application.name .</br> <br>See One JVM, One Application for more information. TODO</br>|
 | contrast.supporter.jackson.interning | Controls whether or not string interning is disabled in Jackson. The default value is `true`.<br>**DEFAULT VALUE:** true</br> |
 | contrast.supporter.minidevjson | Boolean to enable/disable *net.minidev.json* support. <br>**DEFAULT VALUE:** true</br> |
 | contrast.teamserver.channel.pause.period | The amount of time to pause agent-to-Contrast communication when a bad response code is received. <br>**DEFAULT VALUE:** 900000 (15 minutes in milliseconds)</br> |
