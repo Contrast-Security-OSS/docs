@@ -88,17 +88,11 @@ Once confirmed, the vulnerability is removed and no longer appears in your list 
 
 ## Track Vulnerabilities 
 
-You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtracker) from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an application's **Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
-
-<a href="assets/images/Send-to-bugtracker-dialog.png" rel="lightbox" title="Bugtracker export options"><img class="thumbnail" src="assets/images/Send-to-bugtracker-dialog.png"/></a>
-
->**Note:** Bugtrackers must be configured before you send vulnerabilities.
-
-When a vulnerability is sent to a bugtracker, the status of the vulnerability changes to **Reported** in the **Vulnerabilities** page and the **Vulnerabilities** tab of an application's details page. An arrow icon also appears beside the status in the grid row for the vulnerability. Hover over this icon for more information, including the bugtracker name(s) and corresponding ticket number(s). 
+You can [send vulnerabilities to a bugtracker](admin-orgintegrations.html#bugtracker) from the **Send Vulnerability** (paper plane) icon located in the **Vulnerabilities** grid, or from the **Vulnerabilities** tab of an application's details page. When you send a vulnerability to a bugtracker, it's automatically updated to a **Reported** status, and an arrow icon appears beside the status in the grid row for the vulnerability. To quickly see which vulnerabilities are tracked, use the filter in the **Status** column, and select "Being Tracked".
 
 <a href="assets/images/Sent-to-bugtracker.png" rel="lightbox" title="Vulnerabilities sent to bugtracker"><img class="thumbnail" src="assets/images/Sent-to-bugtracker.png"/></a>
 
-To quickly see which vulnerabilities are tracked, use the filter in the **Status** column, and select "Being Tracked".
+For more details on using bugtrackers for vulnerabilities, read how to [Track Findings](user-vulns.html#track). 
 
 ## Export Findings
 
