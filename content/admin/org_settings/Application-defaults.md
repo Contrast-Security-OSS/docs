@@ -8,7 +8,7 @@ tags: "Admin Organization settings applications"
 
 Organization Admins can choose default settings for applications in their organization based on levels of importance, existing policies and Assess licensing. Go to the **User menu > Organization Settings > Applications tab** to get started. 
 
-<a href="assets/images/Application-defaults.png" rel="lightbox" title="Configure custom metadata fields to add to your applications"><img class="thumbnail" src="assets/images/Application-defaults.png"/></a>
+<a href="assets/images/Application-defaults.png" rel="lightbox" title="Configure default settings for new and existing applications"><img class="thumbnail" src="assets/images/Application-defaults.png"/></a>
 
 ## Set Up Defaults
 
