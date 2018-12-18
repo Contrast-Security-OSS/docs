@@ -16,7 +16,7 @@ The Contrast application for Enterprise on Premises (EOP) includes a Tomcat serv
 | Category            | Minimum   | Recommended | Description |
 | :------------------ | :-------- | :---------- | :---------- |
 | **OS Architecture** | 64-bit | 64-bit | Due to memory requirements, the Contrast application can **only** run on 64-bit architectures. |
-| **Operating System** | <ul><li>Microsoft Windows 2008 R2 64-bit</li> <li>Ubuntu 12.04 LTS</li><li>Centos 6</li></ul> | <ul><li>Microsoft Windows 2012 R2  </li><li>  Ubuntu 14.04 LTS </li><li> Centos 7</li></ul>| Any modern Operating System **should** run Contrast. Contrast officially supports the following: <ul><li>Ubuntu Linux </li><li> Debian Linux </li><li> Redhat Enterprise Linux </li><li> Centos Linux </li><li> Windows Server 2008 R2 64-bit </li><li> Windows 2012 R2 </li> |
+| **Operating System** | <ul><li>Microsoft Windows 2012 R2</li> <li>Ubuntu 12.04 LTS</li><li>Centos 6</li></ul> | <ul><li>Microsoft Windows 2012 R2  </li><li>  Ubuntu 14.04 LTS </li><li> Centos 7</li></ul>| Any modern Operating System **should** run Contrast. Contrast officially supports the following: <ul><li>Ubuntu Linux </li><li> Debian Linux </li><li> Redhat Enterprise Linux </li><li> Centos Linux </li><li> Windows Server 2008 R2 64-bit </li><li> Windows 2012 R2 </li> |
 | **Java** | 1.8 | 1.8 | |
 | **MySQL** | 5.7 | 5.7.23 | MySQL versions 8 and higher are currently **not** supported |
 
