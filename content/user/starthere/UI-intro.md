@@ -38,7 +38,7 @@ For more information, read the article on [Library Analysis](user-libraries.html
 
 In the Servers page, you can set the environment for each server to Development, QA or Production. Select your application in the grid to compare the differences across environments as code travels and track vulnerabilities in the Overview page. Contrast sets up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
 
-For more information, including screenshots, go to the [Set Up Environments article](user-apps.html#environ). 
+For more information, go to [Set Up Environments](user-apps.html#environ). 
 
 ## Reports
 
@@ -77,7 +77,7 @@ Contrast discovers any code flaws, which are presented with a severity level to 
  
 ## Track Findings
 
-Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email for users who don't have access to Contrast. You can set up these and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by going to the **user menu > Organization Settings > Integrations tab** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
+Contrast gives you the ability to [send vulnerability data](user-vulns.html#track) to bugtracker integrations or to users via email. You can set up bugtrackers and other integrations - including Slack, HipChat or any generic WebHook integration - by going to the **user menu > Organization Settings > Integrations tab** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
 
 For more information, read the article on [Integrations](admin-orgintegrations.html).
  
@@ -85,12 +85,12 @@ For more information, read the article on [Integrations](admin-orgintegrations.h
 
 Find information on solutions and techniques to resolve a vulnerability by delving into Contrast's overview of the issue, which explains why it was flagged. Contrast also provides a **How To Fix** section which gives steps on resolving the issue. 
  
-### Check a fixed vulnerability 
+### Confirm the fix  
 
 There are a couple of ways to verify that you fixed a vulnerability. 
 
 **Replay the request.** If the issue is remediated and marked accordingly, you can replay the HTTP request under the **HTTP Info** tab in the vulnerability's details page to see if the issue is fixed. If it isn't fixed, the issue reappears with a status of **Reported**.
 
-**Check build number.** You can assign a build version number to an application for tracking; this data, if available, also applies to any vulnerabilities found on the application. You can use the number to verify whether an issue still exists by selecting the "Open" quick view of the **Vulnerabilities** grid and searching for the build number. 
+**Check build number.** You can assign a build version number to an application for tracking; this data, if available, also applies to any vulnerabilities found in the application. You can use the number to verify whether an issue still exists by selecting the "Open" quick view of the **Vulnerabilities** grid and searching for the build number. 
 
  

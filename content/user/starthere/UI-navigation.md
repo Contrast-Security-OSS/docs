@@ -52,20 +52,20 @@ If you have system administration capabilities, you will be able to switch from 
 
 ## Grid Actions
 
-Contrast displays primary assets and findings - applications, servers, libraries, vulnerabilities and attacks - in table format with rows of data. These grids have a built-in search mechanism to easily get to the data you need. You can also use the quick views to see data by the most frequently used categories. 
+Contrast displays primary assets and findings - applications, servers, libraries, vulnerabilities and attacks - in table format with rows of data. Use the search field to quickly find the data you need. You can also use the quick views to see data by the most frequently used categories. 
 
 <a href="assets/images/Vulnerabilities-grid.png" rel="lightbox" title="View vulnerabilities in the grid"><img class="thumbnail" src="assets/images/Vulnerabilities-grid.png"/></a>
 
-Each table offers column sorting to alter the ordering of the data in exactly the way you want. In addition, tables offer actions that allow you to perform operations on individual rows or in bulk by selecting many rows. 
+In each grid, complete actions to manage your organization - such as merging applications or sending a vulnerability to your bugtracker - for individual or multiple items. For individual items, hover over the grid row, and select the appropriate icon to for each action. For multiple items, use the check marks to select each row, and use the icons in the bottom action bar to complete each action. 
 
 ### Sorting and filtering 
 
-Sort and filter data in the grids for better focus. Use the dropdown menu above the grids to select a quick view of findings in certain categories, such as licensed applications or open vulnerabilities. You can also use the filters in the grids to find specific sets of findings, such as servers with the same tags. The dropdown menu above the right corner of the grid lets you sort all the findings in your current by certain categories, such as application name, in ascending or descending order. 
+Sort and filter data in the grids to adjust your focus. Use the dropdown menu above the grids to select a quick view of findings in certain categories, such as licensed applications or open vulnerabilities. You can also use the filters in the grids to find specific sets of findings, such as servers with the same tags. The dropdown menu above the right corner of the grid lets you sort all the findings in your current view by certain categories, such as application name (alphabetically), in ascending or descending order. 
 
 <a href="assets/images/Servers-filter.png" rel="lightbox" title="Sort and filtering findings in the UI"><img class="thumbnail" src="assets/images/Servers-filter.png"/></a>
 
 ## The Details 
 
-From any main page, you can drill into an asset or finding by clicking on its name within the table row. Contrast highlights metrics on the asset or finding for a quick snapshot of core data. Navigate the sub-pages to get more details on related pieces, view activity more closely, access review policy, or capture comments and collaborate with team members. 
+From any main page, you can drill into an asset or finding's details by clicking on its name within the table row. Contrast highlights metrics on the asset or finding for a quick snapshot of core data. Use the tabs in each details page to get more details on related pieces, view activity more closely, access review policy, or capture comments and collaborate with team members. 
 
 <a href="assets/images/Details.png" rel="lightbox" title="Details View"><img class="thumbnail" src="assets/images/Details.png"/></a>
