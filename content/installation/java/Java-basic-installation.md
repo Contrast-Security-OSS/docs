@@ -10,7 +10,7 @@ To install the Java agent, complete the following steps:
 * Click the button in the top navigation bar to **Add Agent**.
 * Select the **Java** agent in the dropdown menu, and click the button to **Download Agent**. You may need to specify proxy authentication information required by your network before downloading the agent.
 
-> **Note:** You must not rename the *contrast.jar* file. If the agent file name is changed, the agent will [fail to connect](troubleshooting-javainstall.html#class) with the Contrast application.
+> **Note:** You must not rename the agent file. If the agent file name is changed, the agent will [fail to connect](troubleshooting-javainstall.html#class) with the Contrast application.
 
 <a href="assets/images/Download-java-agent.png" rel="lightbox" title="Download the Java agent"><img class="thumbnail" src="assets/images/Download-java-agent.png"/></a>
 
