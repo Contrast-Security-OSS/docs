@@ -36,10 +36,14 @@ In preparation for the new model, application naming properties `contrast.overri
  
 ### Node.js summary 
 
+In version 1.36.0, the Node team improved the accuracy of our hard-coded keys vulnerability detection. We fixed a bug that caused some trace reports to be rejected due to having an invalid data type set for the server's port value. We also fixed a bug in the agent's startup process that, under certain policy conditions, prevented the agent from discovering route coverage information for Express.js applications.
 
 ### Ruby summary 
 
-Ruby team has been working to enhance the agent's Assess functionality. We've worked to move several method patches to *C* and refactored how extensions are generated to more reliably instrument applications in Assess mode. We also resolved a bug around parameter tracking in Assess, which allows for more accurate dataflow detection.
+For the 2.0.10 release, Ruby team has been working to enhance the agent's Assess functionality. We've worked to move several method patches to *C* and refactored how extensions are generated to more reliably instrument applications in Assess mode. We also resolved a bug around parameter tracking in Assess, which allows for more accurate dataflow detection.
 
 ### Python summary
+
+Version 1.4.0 brings new Protect enhancements for XSS, Path Traversal and Command Injection. The Python team also improved our library analysis architecture to be more memory efficient and use less processes. We made configuration updates to include backward compatibility of existing YAML files.
+
 
