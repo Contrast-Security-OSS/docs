@@ -25,6 +25,12 @@ Our gift to you: completely revamped grids for all your for applications, server
 ### Java summary 
 
 
+#### One application per JVM 
+
+In an upcoming release, the Java agent will move to a mandatory one application per JVM reporting model. This change provides more consistency across agent configuration and reporting across technology stacks. It also better reflects current best practices in web application packaging and deployment, targeting cloud infrastructures with dynamically deployable and scalable application clusters. The new model also eliminates the sometimes unreliable heuristics (based request context path) currently used to partition requests to specific applications, and will provide better reporting as a result.
+
+In preparation for the new model, application naming properties `contrast.override.appname` and `contrast.standalone.appname` are being deprecated and replaced by `application.name`. As of a future release, the deprecated properties will no longer be honored. [Java System Properties](installation-javaconfig.html#system) will be updated to reflect each stage of these changes. 
+
 ### .NET summary 
 
  
