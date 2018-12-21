@@ -8,17 +8,17 @@ Our gift to you: completely revamped grids for all your applications, servers an
 
 ## Fixes
 
-* Use the toggle in the grid to enable or disable Protect on Python servers. CONTRAST-29121
-* Filter Assess Rules by language and see the correct results. CONTRAST-22748
-* Use the Save button to make modifications to your Server Defaults policy. CONTRAST-29245
-* Use corrected instructions and YAML configuration properties provided in the Add Agent wizard for the Proxy agent. CONTRAST-28859, CONTRAST-28853
-* Multiselect fields work correctly for Library Policy configurations. CONTRAST-21998
-* The Vulnerabilities grid shows information for parent applications only, and immediately reflect changes to vulnerability status. CONTRAST-29088, CONTRAST-28992
-* Links to *grepcode.com* are replaced with links to [searchcode](https://searchcode.com/) in vulnerability Details. CONTRAST-28008
-* Save changes to Library Policy in System Settings without errors. CONTRAST-28951 
-* Set up automatic ticket creation in Jira integrations. CONTRAST-28433
-* Filter counts match results in the Applications grid. CONTRAST-25905 
-* Set up an LDAP configuration with a Base DN of "o". CONTRAST-28594
+* Use the toggle in the grid to enable or disable Protect on Python servers. 
+* Filter Assess Rules by language and see the correct results. 
+* Use the Save button to make modifications to your Server Defaults policy. 
+* Use corrected instructions and YAML configuration properties provided in the Add Agent wizard for the Proxy agent.
+* Multiselect fields work correctly for Library Policy configurations.
+* The Vulnerabilities grid shows information for parent applications only, and immediately reflect changes to vulnerability status. 
+* Links to *grepcode.com* are replaced with links to [searchcode](https://searchcode.com/) in vulnerability Details.
+* Save changes to Library Policy in System Settings without errors. 
+* Set up automatic ticket creation in Jira integrations. 
+* Filter counts match results in the Applications grid. 
+* Set up an LDAP configuration with the best Base DN for you.
 
 ## Improvements
 
@@ -33,6 +33,7 @@ Our gift to you: completely revamped grids for all your applications, servers an
 
 ### Java summary 
 
+The Java team expanded coverage of the Protect Expression Language Injection rule to now also cover RichFaces CVEs including CVE-2018-14667. We improved the accuracy of Regular Expression DoS rule as well as the reliability of Protect CSRF rule. We also fixed an issue where the agent could fail to enable Assess rules if all rules were enabled.
 
 #### One application per JVM 
 
@@ -42,7 +43,15 @@ In preparation for the new model, application naming properties `contrast.overri
 
 ### .NET summary 
 
- 
+The .NET agent installer no longer requires a *DotnetAgentSettings.ini* file; it now requires a *contrast_security.yaml* file. Unlike the *.ini* file, the YAML file supports all of the .NET agent’s [configuration options](installation-netconfig.html#net-yaml).
+
+The agent now detects new values for application version, group and tags in re-deployed *web.config* files without requiring a restart of the agent. Changes in Protect rule modes now take effect without requiring a restart of the agent. The .NET team also completed the following bug fixes: 
+
+* Profiler logs respect log level configuration
+* The agent respects application version, group and tags values in *web.config* in IIS-Express-hosted applications
+* A false positive where the agent would report cross-site scripting vulnerabilities from HTTP cookie sources
+* The agent no longer reports WCF client methods as routes for an application
+
 ### Node.js summary 
 
 In version 1.36.0, the Node team improved the accuracy of our hard-coded keys vulnerability detection. We fixed a bug that caused some trace reports to be rejected due to having an invalid data type set for the server's port value. We also fixed a bug in the agent's startup process that, under certain policy conditions, prevented the agent from discovering route coverage information for Express.js applications.
