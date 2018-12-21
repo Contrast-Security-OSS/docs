@@ -16,7 +16,9 @@ Our gift to you: completely revamped grids for all your applications, servers an
 * The Vulnerabilities grid shows information for parent applications only, and immediately reflect changes to vulnerability status. CONTRAST-29088, CONTRAST-28992
 * Links to *grepcode.com* are replaced with links to [searchcode](https://searchcode.com/) in vulnerability Details. CONTRAST-28008
 * Save changes to Library Policy in System Settings without errors. CONTRAST-28951 
+* Set up automatic ticket creation in Jira integrations. CONTRAST-28433
 * Filter counts match results in the Applications grid. CONTRAST-25905 
+* Set up an LDAP configuration with a Base DN of "o". CONTRAST-28594
 
 ## Improvements
 
