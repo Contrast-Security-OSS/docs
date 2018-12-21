@@ -4,12 +4,19 @@ description: "Contrast 3.5.9 December 2018"
 tags: "3.5.9 December Release Notes"
 -->
 
-Our gift to you: completely revamped grids for all your for applications, servers, and vulnerabilities! 
+Our gift to you: completely revamped grids for all your applications, servers and vulnerabilities!
 
 ## Fixes
 
-* ...
-
+* Use the toggle in the grid to enable or disable Protect on Python servers. CONTRAST-29121
+* Filter Assess Rules by language and see the correct results. CONTRAST-22748
+* Use the Save button to make modifications to your Server Defaults policy. CONTRAST-29245
+* Use corrected instructions and YAML configuration properties provided in the Add Agent wizard for the Proxy agent. CONTRAST-28859, CONTRAST-28853
+* Multiselect fields work correctly for Library Policy configurations. CONTRAST-21998
+* The Vulnerabilities grid shows information for parent applications only, and immediately reflect changes to vulnerability status. CONTRAST-29088, CONTRAST-28992
+* Links to *grepcode.com* are replaced with links to [searchcode](https://searchcode.com/) in vulnerability Details. CONTRAST-28008
+* Save changes to Library Policy in System Settings without errors. CONTRAST-28951 
+* Filter counts match results in the Applications grid. CONTRAST-25905 
 
 ## Improvements
 
