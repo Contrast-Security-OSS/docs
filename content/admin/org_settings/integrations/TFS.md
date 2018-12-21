@@ -25,9 +25,12 @@ In the **Integrations** page, click **Connect** in the VSTS row. This takes you 
 * **Host:** The VSTS or TFS URL; must be accessible from the Contrast interface instance being configured.
 * **Version:** Contrast uses API v.2 to support VSTS and TFS 2015/2017.
 
-Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in.
+Once you complete each field, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in. Once connected, complete the following fields. 
 
-Once connected, select the **Applications** that you want to be available to this bugtracker. Customize the values for the **Project**, **Assignee** and **Default Work Issue Type** fields as well as the **Default Severity** or **Priority** levels, depending on the work issue type. Use the **Team Backlog** field to send tickets to a particular subproject backlog in the VSTS project you've chosen above. Choose the **Area** within the project from the options in the dropdown menu.
+* Select the **Applications** that you want to be available to this bugtracker. 
+* Customize the values for the **Project**, **Assignee** and **Default Work Issue Type** fields as well as the **Default Severity** or **Priority** levels, depending on the work issue type. 
+* Use the **Team Backlog** field to send tickets to a particular subproject backlog in the VSTS project you've chosen. 
+* Choose the **Area** within the project from the options in the dropdown menu.
 
 ### Two-way integration
 
