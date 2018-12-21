@@ -20,7 +20,7 @@ The downloaded zip archive contains a file called *contrast_security.yaml* which
 
 The agent can be fully configured using the *contrast_security.yaml* file. See agent [configuration](installation-netconfig.html) for more information.
 
-> **Example:** To disable automatic updates of the .NET agent, update the *contrast_security.yaml* file, add the code below, and then continue the installation as normal.
+> **Example:** To disable automatic updates of the .NET agent, update the *contrast_security.yaml* file, add a new line and the code below, and then continue the installation as normal.
 
 ```
 agent:
