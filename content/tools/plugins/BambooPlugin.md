@@ -36,7 +36,7 @@ To use the plugin, you should first configure a Contrast profile. To do this, se
 
 <a href="assets/images/Bamboo_TeamServer_Profile.png" rel="lightbox" title="Configuring a Contrast profile in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_TeamServer_Profile.png"/></a>
 
-You'll then be brought to the **Profile Configuration** page. Select the **New Profile** button to see fields for adding a profile. Fill out the form fields according to their labels. The server name that you enter should correspond to a server name on Contrast.
+You'll then be brought to the **Profile Configuration** page. Select the **New Profile** button to see fields for adding a profile. Fill out the form fields according to their labels.
 
 If you are a SaaS customer you do **not** need to enter a Contrast URL. Once you have filled out all the fields, select the **Test Connection** button to verify that your settings are correct.
 
@@ -64,7 +64,8 @@ A dialog will appear. Find the **Contrast CI for Assess** task and select it.
 
 <a href="assets/images/Bamboo_Add_Contrast_Task.png" rel="lightbox" title="Vulnerability threshold task"><img class="thumbnail" src="assets/images/Bamboo_Add_Contrast_Task.png"/></a>
 
-The task configuration screen relies on a Contrast profile, which you configured in the previous steps, and an application name. The application name must be on the server that you defined when creating the profile.
+The task configuration screen relies on a Contrast profile, which you configured in the previous steps, a server name, an application name, and a **passive** parameter. The server name that you enter should correspond to a server name on Contrast. The server name is not required. The application name must be on the server. 
+If the **passive** parameter is true, the plugin will not query build-specific vulnerabilities, but vulnerabilities in general for the application. In this case, there is no need to run the app with its integration tests before the Contrast post-build action in the bamboo build.
 
 The next part of the task configuration is defining conditions for when to fail a build. This involves entering three pieces of data:
 
