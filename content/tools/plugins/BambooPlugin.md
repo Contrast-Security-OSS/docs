@@ -6,7 +6,8 @@ tags: "tools Bamboo SDK Integration Java Continuous Integration"
 
 This plugin adds functionality to Bamboo so that you can configure profiles for connecting to Contrast and verify builds against vulnerability thresholds.
 
-## Installing the Plugin
+## Install the Plugin
+
 The first step is to build the plugin. To begin, clone the plugin from our Github [repository](https://github.com/Contrast-Security-OSS/contrast-bamboo-plugin.git).
 ```bash
 git clone https://github.com/Contrast-Security-OSS/contrast-bamboo-plugin.git
@@ -20,7 +21,6 @@ Once you have built the plugin, you can upload it to your Bamboo instance. Begin
 
 <a href="assets/images/Bamboo_Add_On_Option.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_Add_On_Option.png"/></a>
 
-
 Then select the **Upload add-on** link.
 
 <a href="assets/images/Bamboo_Upload_Plugin.png" rel="lightbox" title="Uploading an add-on in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_Upload_Plugin.png"/></a>
@@ -31,7 +31,8 @@ After uploading the plugin, you should see it appear under **User Installed Add-
 
 <a href="assets/images/Bamboo_Plugin_Uploaded.png" rel="lightbox" title="Successfully uploaded add-on"><img class="thumbnail" src="assets/images/Bamboo_Plugin_Uploaded.png"/></a>
 
-### Creating a Contrast profile
+### Create a Contrast profile
+
 To use the plugin, you should first configure a Contrast profile. To do this, select the **TeamServer Profiles** button under **Add-Ons** within the **Bamboo Administration** dashboard.
 
 <a href="assets/images/Bamboo_TeamServer_Profile.png" rel="lightbox" title="Configuring a Contrast profile in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_TeamServer_Profile.png"/></a>
@@ -43,9 +44,11 @@ If you are a SaaS customer you do **not** need to enter a Contrast URL. Once you
 <a href="assets/images/Bamboo_Add_Profile_Success.png" rel="lightbox" title="Successful configuration"><img class="thumbnail" src="assets/images/Bamboo_Add_Profile_Success.png"/></a>
 
 ## Vulnerability Thresholds
+
 The plugin can be added as a task to build jobs to check for vulnerability conditions that you configure. This checks Contrast for the number of vulnerabilities in the applications as well as types of vulnerabilities.
 
-### Configuring vulnerability thresholds
+### Configure vulnerability thresholds
+
 To add a task to a build job, you must either create a new plan or use an existing build plan. For the purpose of these instructions, you'll walk through creating a new build plan.
 
 Select the **Create a New Build Plan** button.
@@ -64,26 +67,28 @@ A dialog will appear. Find the **Contrast CI for Assess** task and select it.
 
 <a href="assets/images/Bamboo_Add_Contrast_Task.png" rel="lightbox" title="Vulnerability threshold task"><img class="thumbnail" src="assets/images/Bamboo_Add_Contrast_Task.png"/></a>
 
-The task configuration screen relies on a Contrast profile, which you configured in the previous steps, a server name, an application name, and a **passive** parameter. The server name that you enter should correspond to a server name on Contrast. The server name is not required. The application name must be on the server. 
-If the **passive** parameter is true, the plugin will not query build-specific vulnerabilities, but vulnerabilities in general for the application. In this case, there is no need to run the app with its integration tests before the Contrast post-build action in the bamboo build.
-
-The next part of the task configuration is defining conditions for when to fail a build. This involves entering three pieces of data:
-
-* **Threshold Count:** the minimum number of findings required to fail the build.
-* **Threshold Severity:** the minimum severity at which to count a finding towards the threshold count.
-* **Threshold Vulnerability Type:** the type of finding required to count a finding towards a threshold count.
-
->**Note:** Using the **Any** option means that any severity or vulnerability type is counted towards the max threshold count.
-
-You can configure multiple conditions for each task by selecting the **Add New Threshold Condition** button.
+The Tasks configuration screen relies on a Contrast profile, which you configured in the previous steps, as well as a server name, application name and a **Passive** parameter. The server name isn't required, but should correspond to a server name in Contrast if used. The application name must be on the designated server. 
 
 <a href="assets/images/Bamboo_Task_Definition.png" rel="lightbox" title="Configuring the task"><img class="thumbnail" src="assets/images/Bamboo_Task_Definition.png"/></a>
 
-The last step is to enable the build plan by selecting the checkbox in the bottom left.
+If you select the **Passive** parameter, the plugin will query all vulnerabilities, not only build-specific vulnerabilities, for the application. In this case, there is no need to run the application with its integration tests before the Contrast post-build action in the Bamboo build.
+
+The next part of the task configuration is defining conditions for when to fail a build. This involves entering three pieces of data:
+
+* **Threshold Count:** The minimum number of findings required to fail the build.
+* **Threshold Severity:** The minimum severity at which to count a finding towards the threshold count.
+* **Threshold Vulnerability Type:** The type of finding required to count a finding towards a threshold count.
+
+>**Note:** Using the **Any** option means that any severity or vulnerability type is counted towards the maximum threshold count.
+
+You can configure multiple conditions for each task by selecting the **Add New Threshold Condition** button.
 
 <a href="assets/images/Bamboo_Enable_Plan.png" rel="lightbox" title="Enable build plan"><img class="thumbnail" src="assets/images/Bamboo_Enable_Plan.png"/></a>
 
-### Running the build
+The last step is to enable the build plan by selecting the checkbox in the bottom left.
+
+### Run the build
+
 To run your build for the first time, you'll need to select the **Run** button and then in the dropdown select the **Run Plan** option.
 
 Once the build is finished, you can see if it passed or failed. To view the Contrast task details, look at the logs of the job to which the task is attached. In the following example, this is the default job. As you can see in the logs, the task only found two vulnerabilities that met your conditions, therefore the job passes.
