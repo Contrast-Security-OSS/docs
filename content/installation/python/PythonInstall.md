@@ -42,12 +42,23 @@ pip install ./path/to/contrast-agent-<version>.tar.gz
 To hook into incoming requests and outbound responses, a middleware needs to be added to your application. To add the middleware to your application, see the following guidance:
 
 
-**Django; in your *settings.py* file:**
+**Django 1.10+ and 2.0+; in your *settings.py* file:**
 
 ``` python
 MIDDLEWARE = [
   # OTHER MIDDLEWARE,
   'contrast.agent.middlewares.django_middleware.DjangoMiddleware'
+]
+```
+
+Older versions of Django have a different architecture for middlewares, use below for those versions:
+
+**Django 1.6 to 1.9; in your *settings.py* file:**
+
+``` python
+MIDDLEWARE_CLASSES = [
+  # OTHER MIDDLEWARE,
+  'contrast.agent.middlewares.legacy_django_middleware.DjangoMiddleware'
 ]
 ```
 
