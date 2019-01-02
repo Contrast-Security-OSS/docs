@@ -29,12 +29,13 @@ Once you complete each field, click **Test connection**. This process may take a
 
 * Select the **Applications** that you want to be available to this bugtracker. 
 * Customize the values for the **Project**, **Assignee** and **Default Work Issue Type** fields as well as the **Default Severity** or **Priority** levels, depending on the work issue type. 
-* Use the **Team Backlog** field to send tickets to a particular subproject backlog in the VSTS project you've chosen. 
-* Choose the **Area** within the project from the options in the dropdown menu.
+* To send tickets to a particular subproject backlog, choose a **Team** from the options in the dropdown menu, and then choose the **Area** within the team.  
 
 ### Two-way integration
 
 Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in VSTS or TFS.
+
+<a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration between Contrast and your VSTS/TFS project"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
 
 In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket state. If you choose **Not a Problem** as a ticket state, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid; the default selection is "Other". 
 
