@@ -17,24 +17,25 @@ Integrating Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) w
 
 In the **Integrations** page, click **Connect** in the VSTS row. This takes you to the **Connect with Visual Studio** page, where you must complete the following fields.
 
-<a href="assets/images/VSTS-TFS-integration.png" rel="lightbox" title="VSTS Integration"><img class="thumbnail" src="assets/images/VSTS-TFS-integration.png"/></a>
+<a href="assets/images/VSTS-configuration.png" rel="lightbox" title="Configure your VSTS integration"><img class="thumbnail" src="assets/images/VSTS-configuration.png"/></a>
 
 
 * **Name:** The name for the bugtracker entry; displayed when sending findings to bugtrackers.
 * **Personal Access Token:** The token associated with your user to [authenticate to your host](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate).
 * **Host:** The VSTS or TFS URL; must be accessible from the Contrast interface instance being configured.
+* **Version:** Contrast uses API v.2 to support VSTS and TFS 2015/2017.
 
-Once you complete the fields, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in.
+Once you complete each field, click **Test connection**. This process may take a few minutes, depending on the number of your VSTS or TFS projects. The test verifies that Contrast can reach the VSTS or TFS instance and that the specified user can log in. Once connected, complete the following fields. 
 
-Once a connection is made, select the applications that you want to be available to this bugtracker. Customize the values for the Project, Assignee and Default Work Issue Type fields as well as the Default Severity or Priority levels depending on the work issue type.
-
-> **Note:** Contrast uses API v.2 to support VSTS and TFS 2015/2017.
+* Select the **Applications** that you want to be available to this bugtracker. 
+* Customize the values for the **Project**, **Assignee** and **Default Work Issue Type** fields as well as the **Default Severity** or **Priority** levels, depending on the work issue type. 
+* To send tickets to a particular subproject backlog, choose a **Team** from the options in the dropdown menu, and then choose the **Area** within the team.  
 
 ### Two-way integration
 
 Use two-way integration to automatically update the status of a linked vulnerability when you close or reopen an issue in VSTS or TFS.
 
-<a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration with VSTS or TFS"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
+<a href="assets/images/TFS-two-way.png" rel="lightbox" title="Set up two-way integration between Contrast and your VSTS/TFS project"><img class="thumbnail" src="assets/images/TFS-two-way.png"/></a>
 
 In the configuration page, begin setup by checking the box to **Enable two-way integration**. In the **Vulnerability Status** fields that appear, use the dropdown menus to set a vulnerability status based on each VSTS/TFS ticket state. If you choose **Not a Problem** as a ticket state, Contrast requires you to choose a **Reason** in the dropdown menu, as it does in the Vulnerability grid; the default selection is "Other". 
 
