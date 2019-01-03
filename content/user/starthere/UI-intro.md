@@ -8,11 +8,9 @@ Welcome to Contrast! This is your guide to everything you need to know to get st
 
 ## Onboard Your Application
 
-Once you've logged onto Contrast, click the **Add Agent** button on the top right, which brings you to an agent download page. A wizard walks you through what needs to be done. What language is your application primarily in – Java, .NET or Node.js? If you're using Java, you'll notice that there are two options: Java and Java 1.5. The only difference is that Java includes the functionality to do automatic updates, which isn’t available in Java 1.5.
- 
-When you download an agent, the file should be called *contrast.jar*. This file needs to stay in its current form and shouldn’t be renamed. Once you download the *contrast.jar* file, regardless of your application server, Contrast needs to pass in `-javaagent:/path/to/server/contrast.jar` to your application server's JVM. Once complete, restart your application server. 
+Once you've logged onto Contrast, click the **Add Agent** button on the top right, which brings you to an agent download page. A wizard walks you through each step of the process. 
 
-For more information on adding an application, please read the article on [Add Applications](user-apps.html#addapp).
+For more information on adding an application, read [Add Applications](user-apps.html#addapp).
  
 ## Use the Application
 
@@ -26,21 +24,21 @@ Go to the Applications page to see findings, scores, manage licenses, settings a
  
 ## Improve Your Application Score
 
-Get your application secure by remediating vulnerabilities or enabling Protection rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](user-apps.html#score-guide) for more information. 
+Get your application secure by remediating vulnerabilities or enabling Protect rules. We provide you with a grade to show you how well your application is performing. Visit the [Contrast Scoring Guide](user-apps.html#score-guide) for more information. 
  
 ## Track Libraries
 
-Be aware of libraries that may be vulnerable and bring them up to date by going to the Libraries tab in the application's Overview page. 
+Be aware of libraries that may be vulnerable and bring them up to date by going to the Libraries tab in the application's overview page. 
  
 Contrast provides you with a grade for the library, known Common Vulnerabilities and Exposures (CVEs), latest version and release date, used and total classes in the library, and the application that's using the library. Contrast calculates this grade based on three things: the age of the library, how many versions behind the library is, and the number of known CVEs that affect the library.
 
-For more information, read the article on [Library Analysis](user-libraries.html#analysis).
+For more information, read [Library Analysis](user-libraries.html#analysis).
 
 ## Set Up Environments
 
 In the Servers page, you can set the environment for each server to Development, QA or Production. Select your application in the grid to compare the differences across environments as code travels and track vulnerabilities in the Overview page. Contrast sets up a shell for you to designate servers; once that’s in place, Contrast can get busy finding weaknesses.
 
-For more information, including screenshots, go to the [Set Up Environments article](user-apps.html#environ). 
+For more information, go to [Set Up Environments](user-apps.html#environ). 
 
 ## Reports
 
@@ -79,7 +77,7 @@ Contrast discovers any code flaws, which are presented with a severity level to 
  
 ## Track Findings
 
-Contrast gives you the ability to send vulnerabilities to bugtracker integrations or by email for users who don't have access to Contrast. You can set up these and a bunch of other integrations - including Slack, HipChat or any generic WebHook integration - by selecting **Organization Settings** in the User menu and then **Integrations** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
+Contrast gives you the ability to [send vulnerability data](user-vulns.html#track) to bugtracker integrations or to users via email. You can set up bugtrackers and other integrations - including Slack, HipChat or any generic WebHook integration - by going to the **user menu > Organization Settings > Integrations tab** in the sidebar. You can tell Contrast to notify you if there are any new high or critical vulnerabilities found in your application. 
 
 For more information, read the article on [Integrations](admin-orgintegrations.html).
  
@@ -87,17 +85,12 @@ For more information, read the article on [Integrations](admin-orgintegrations.h
 
 Find information on solutions and techniques to resolve a vulnerability by delving into Contrast's overview of the issue, which explains why it was flagged. Contrast also provides a **How To Fix** section which gives steps on resolving the issue. 
  
-### Check a fixed vulnerability 
+### Confirm the fix  
 
-You fixed your vulnerability, but how can you verify that in Contrast? There are a few things you can do from the application page:
+There are a couple of ways to verify that you fixed a vulnerability. 
 
-* Replay the request:
-If the issue is remediated and marked accordingly, you can replay the HTTP request under the **HTTP Info** tab in the Vulnerabilities tab to see if the issue is fixed. If it isn't fixed, the issue reappears with a status of **Reported**.
+**Replay the request.** If the issue is remediated and marked accordingly, you can replay the HTTP request under the **HTTP Info** tab in the vulnerability's details page to see if the issue is fixed. If it isn't fixed, the issue reappears with a status of **Reported**.
 
-* Check build number:
-For each application, you can assign it a build version number. By adding the property `-Dcontrast.override.appversion` to the `-javaagent` command, you can use this as a filter and verify whether the issue still exists for this build version by clicking the **Advanced** link and the **Build Number** dropdown.
+**Check build number.** You can assign a build version number to an application for tracking; this data, if available, also applies to any vulnerabilities found in the application. You can use the number to verify whether an issue still exists by selecting the "Open" quick view of the **Vulnerabilities** grid and searching for the build number. 
 
-* Check by time unit tests:
-You can also filter by the time at which your unit tests were run, and set a date range to view your vulnerabilities in the **Set Date Range** input field above the vulnerabilities grid.
  
-You can find additional properties in articles on [Java Agent System Properties](installation-javaconfig.html#system) and [.NET Agent Configuration](installation-netconfig.html). 
