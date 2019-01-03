@@ -32,7 +32,7 @@ Be aware of libraries that may be vulnerable and bring them up to date by going 
  
 Contrast provides you with a grade for the library, known Common Vulnerabilities and Exposures (CVEs), latest version and release date, used and total classes in the library, and the application that's using the library. Contrast calculates this grade based on three things: the age of the library, how many versions behind the library is, and the number of known CVEs that affect the library.
 
-For more information, read the article on [Library Analysis](user-libraries.html#analysis).
+For more information, read [Library Analysis](user-libraries.html#analysis).
 
 ## Set Up Environments
 
@@ -77,7 +77,7 @@ Contrast discovers any code flaws, which are presented with a severity level to 
  
 ## Track Findings
 
-Contrast gives you the ability to [send vulnerability data](user-vulns.html#track) to bugtracker integrations or to users via email. You can set up bugtrackers and other integrations - including Slack, HipChat or any generic WebHook integration - by going to the **user menu > Organization Settings > Integrations tab** in the sidebar. You can tell Contrast notify you if there are any new high or critical vulnerabilities found in your application. 
+Contrast gives you the ability to [send vulnerability data](user-vulns.html#track) to bugtracker integrations or to users via email. You can set up bugtrackers and other integrations - including Slack, HipChat or any generic WebHook integration - by going to the **user menu > Organization Settings > Integrations tab** in the sidebar. You can tell Contrast to notify you if there are any new high or critical vulnerabilities found in your application. 
 
 For more information, read the article on [Integrations](admin-orgintegrations.html).
  
