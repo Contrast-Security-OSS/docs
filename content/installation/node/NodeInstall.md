@@ -4,6 +4,26 @@ description: "Installing the Node.js Agent"
 tags: "NodeJS agent installation"
 -->
 
+## Prerequisites
+In order to install the Node agent, you must install a C++ compiler toolchain if you do not already have one installed (ex: Clang, GCC, or MSVC).
+
+You must also install Python for [Node-gyp](https://github.com/nodejs/node-gyp) (Node's build tool) to function.
+
+Note: the official [node Docker images](https://hub.docker.com/_/node/) come with all of the prerequisites pre installed.
+
+#### Windows
+
+To install the necessary compiler toolchain on Windows, run `> npm install -g --production windows-build-tools`.
+
+### macOS
+
+MacOS ships with the `clang` compiler suite. Type `clang --version` to ensure that you have the compiler installed. If clang is **not** already installed, run `$ xcode-select --install` to install it.
+
+## Linux
+
+Often, Linux distributions will ship with a C++ compiler toolchain. You can verify by typing `c++ --version`. If you do not have a C++ compiler installed, install the `g++` package available on most Linux package managers.
+
+
 ## Installation
 
 After downloading from your account, install the agent from your application's root directory as follows:
@@ -50,3 +70,7 @@ First, add the following script to your application's *package.json*:
 ```
 
 Then, the agent can be run with ```npm run contrast```. This npm script can be changed to include other runtime configurations, such as an alternate configuration file location. For more information, see [Node Agent Configuration](installation-node.html#node-config).
+
+## Errors that could arise during installation
+
+`Invalid ELF Header` - This error occurs when a C++ module targeting Linux has been compiled for a non-Linux target. Ensure that you are installing the agent from a compatible system.
