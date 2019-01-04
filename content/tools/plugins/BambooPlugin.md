@@ -33,7 +33,7 @@ After uploading the plugin, you should see it appear under **User Installed Add-
 
 ### Create a Contrast profile
 
-To use the plugin, you should first configure a Contrast profile. To do this, select the **TeamServer Profiles** button under **Add-Ons** within the **Bamboo Administration** dashboard.
+To use the plugin, you should first configure a Contrast profile. To do this, select the **Contrast Profiles** button under **Add-Ons** within the **Bamboo Administration** dashboard.
 
 <a href="assets/images/Bamboo_TeamServer_Profile.png" rel="lightbox" title="Configuring a Contrast profile in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_TeamServer_Profile.png"/></a>
 
