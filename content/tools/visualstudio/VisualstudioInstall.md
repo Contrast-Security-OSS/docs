@@ -35,15 +35,16 @@ choosing the **Contrast Security - Connection** option.
 
 ### Step three
 
-* In the Connection settings form, fill your **Contrast URL**, **Username** and **Service Key** in the given fields. (To find your [service key](user-account.html#profile) in the Contrast application, go to the **user menu > Your Account > Profile page**.)
-
-<a href="assets/images/VS-connection.png" rel="lightbox" title="Navigate to add-ons"><img class="thumbnail" src="assets/images/VS-connection.png"/></a>
-
-* Add a new organization by clicking the **Add** button and inserting the [organization API key](admin-orgsettings.html#apikey). (You can find this key in Contrast application by going to the **user menu > Organization Settings > API tab**.) 
+* In the **Contrast Connection** form, add your **Contrast URL**, **Username**, **Service Key**, **API Key** and **Organization UUID** in the given fields. (To find your [keys](user-account.html#profile) and other Contrast account information in the Contrast UI, go to the **user menu > Your Account > Profile**.)
 
 > **Note:** The API key must belong to the organization you want to have access or you'll get Unauthorized errors. This will lock your account after many failed attempts.
 
-* Click the **Load** button, select the organization for this API key from the dropdown menu, and click **Save**.
+
+<a href="assets/images/VS-connection.png" rel="lightbox" title="Navigate to add-ons"><img class="thumbnail" src="assets/images/VS-connection.png"/></a>
+
+* Once you complete these fields, select the **Add** button. (Visual Studio automatically tests the connection as it attempts to retrieve the organization from Contrast.)
+
+* Select the correct organization in the **Organizations** field, and click **Okay**.
 
 Well done! Visual Studio is configured to get vulnerability information from Contrast. 
 
