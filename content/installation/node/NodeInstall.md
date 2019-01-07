@@ -74,7 +74,3 @@ First, add the following script to your application's *package.json*:
 ```
 
 Then, the agent can be run with ```npm run contrast```. This npm script can be changed to include other runtime configurations, such as an alternate configuration file location. For more information, see [Node Agent Configuration](installation-node.html#node-config).
-
-## Errors that can arise during installation
-
-`Invalid ELF Header` - This error occurs when a native C++ module targeting Linux has been compiled for a non-Linux target. Ensure that you are installing the agent from a compatible system.
