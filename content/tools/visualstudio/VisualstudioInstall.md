@@ -35,20 +35,16 @@ choosing the **Contrast Security - Connection** option.
 
 ### Step three
 
-* In the Connection settings form, fill your **Contrast URL**, **Username** and **Service Key** in the given fields. (To find your [service key](user-account.html#profile) in the Contrast application, go to the **user menu > Your Account > Profile page**.)
+* In the **Contrast Connection** form, add your **Contrast URL**, **Username**, **Service Key**, **API Key** and **Organization UUID** in the given fields. (To find your [keys](user-account.html#profile) and other Contrast account information in the Contrast UI, go to the **user menu > Your Account > Profile**.)
 
-<a href="assets/images/VS_ext_settings_full.png" rel="lightbox" title="Navigate to add-ons"><img class="thumbnail" src="assets/images/VS_ext_settings_full.png"/></a>
+> **Note:** The API key must belong to the organization you want to have access or you'll get Unauthorized errors. This will lock your account after many failed attempts.
 
-* Add a new organization by clicking the **Add** button and inserting the [organization API key](admin-orgsettings.html#apikey). (You can find this key in Contrast application by going to the **user menu > Organization Settings > API tab**.) 
 
-> **Note:** The API key must belong to the organization you want to have access or you'll get Unauthorized errors. This will lock your account after many failed attempts!
+<a href="assets/images/VS-connection.png" rel="lightbox" title="Navigate to add-ons"><img class="thumbnail" src="assets/images/VS-connection.png"/></a>
 
-* Click the **Load** button, select the organization for this API key from the dropdown menu, and click **Save**.
+* Once you complete these fields, select the **Add** button. (Visual Studio automatically tests the connection as it attempts to retrieve the organization from Contrast.)
 
-### Step four 
-
-* You can check the connectivity by clicking **Test Connection**. You can do this after selecting a saved organization or while adding a new one.
-* Click **OK** once you're finished. 
+* Select the correct organization in the **Organizations** field, and click **Okay**.
 
 Well done! Visual Studio is configured to get vulnerability information from Contrast. 
 
@@ -68,4 +64,3 @@ If you can't see your vulnerabilities list, click the Refresh button. To clear a
 
 Under the **Actions** column, you can use the button on the left (magnifier glass icon) to see more information about the vulnerability. You can use the button to the right (browser link icon) to go to the Vulnerability page in the Contrast application.
 
-<a href="assets/images/VS_ext_action_buttons.png" rel="lightbox" title="View vulnerability details"><img src="assets/images/VS_ext_action_buttons.png"/></a>
