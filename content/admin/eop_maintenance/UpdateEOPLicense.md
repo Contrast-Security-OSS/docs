@@ -17,9 +17,9 @@ Contrast Enterprise-on-Premise (EOP) customers may occasionally need a new licen
 
 * Navigate to the **user menu > System Settings > Licensing tab**.
 * Click the **Update This License** button at the bottom of the panel.
-* Enter your Hub credentials to allow Contrast to download and apply the latest license from Hub. 
+* Enter your Hub credentials to allow Contrast to download and apply the latest license from Hub. <br> If you don't have access to a Hub account, click the **Upload License** link and paste your license in the field provided. 
 
-<a href="assets/images/KB1-b02.png" rel="lightbox" title="License Update"><img class="thumbnail" src="assets/images/KB1-b02.png"/></a>
+<a href="assets/images/Update-EOP-license.png" rel="lightbox" title="Update licenses in System Settings"><img class="thumbnail" src="assets/images/Update-EOP-license.png"/></a>
 
 * Click **Update** to finish the process. 
 * Restart Contrast to apply the new license changes.
@@ -32,7 +32,7 @@ Contrast Enterprise-on-Premise (EOP) customers may occasionally need a new licen
 
 * Stop the Contrast application service. 
   * On Windows, use the service control panel. 
-  * On Linux, execute `sudo service contrast-server stop` or other appropriate command for the distribution/configuration.  Verify that all TeamServer processes have stopped by executing `ps aux | grep contrast`, and confirm there are no processes listed. If *myslqld* is still running, it may take a few minutes to terminate on its own after stopping the service. If it doesn't terminate, contact Support. **Do not kill the processes.**
+  * On Linux, execute `sudo service contrast-server stop` or other appropriate command for the distribution/configuration.  Verify that all Contrast application processes have stopped by executing `ps aux | grep contrast`, and confirm there are no processes listed. If *myslqld* is still running, it may take a few minutes to terminate on its own after stopping the service. If it doesn't terminate, contact Support. **Do not kill the processes.**
 
 > **Note**: Don't move the current *contrast.lic* file. Contrast needs both the old and new license files to upgrade the license. 
 
@@ -49,5 +49,5 @@ Contrast Enterprise-on-Premise (EOP) customers may occasionally need a new licen
 
 ## Update Multiple Instances of Contrast
 
-To update all instances of the Contrast application, follow the steps for the file system method described above for each application instance that's running. Contrast is currently exploring an alternative for distributed configurations that enables you to update all instances at once; however, a solution hasn't yet been implemented. 
+To update all instances of the Contrast application, follow the steps for the file system method described above for each application instance that's running. Contrast is currently exploring an alternative for distributed configurations that enables you to update all instances at once; however, a solution hasn't been implemented. 
 
