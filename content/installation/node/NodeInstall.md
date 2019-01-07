@@ -5,27 +5,28 @@ tags: "NodeJS agent installation"
 -->
 
 ## Prerequisites
-In order to install the Node agent, you must install a C++ compiler toolchain if you do not already have one installed (ex: Clang, GCC, or MSVC).
 
-You must also install Python in order for [Node-gyp](https://github.com/nodejs/node-gyp) (Node's build tool) to function.
+To install the Node agent, you must have installed:
 
-If you're able to build other modules with C++ bindings like [node-sass](https://www.npmjs.com/package/node-sass) and [sqlite3](https://github.com/mapbox/node-sqlite3), then you should be fine for Contrast.
+* A C++ compiler toolchain (e.g., Clang, GCC or MSVC) 
 
-Note: the official [node Docker images](https://hub.docker.com/_/node/) come with all of the prerequisites pre-installed.
+* Python (which is needed for [Node-gyp](https://github.com/nodejs/node-gyp), Node's build tool, to function)
 
-#### Windows
+> **Notes:** 
+ * If you can build other modules with C++ bindings like [node-sass](https://www.npmjs.com/package/node-sass) and [sqlite3](https://github.com/mapbox/node-sqlite3), you probably meet all of the requirements for Contrast.
+ * The official [Node Docker images](https://hub.docker.com/_/node/) come with all of the prerequisites installed.
 
-To install the necessary compiler toolchain on Windows, run `npm install -g --production windows-build-tools`.
+### Windows
 
-If you are using a Node version older than 8.0, you must use `windows-build-tools` version 3.0 (not the neweset version: 4.0).
+To install the necessary compiler toolchain on Windows, run `npm install -g --production windows-build-tools`. If you're using a Node version older than 8.0, you must use `windows-build-tools` version 3.0 (not the newest version, 4.0).
 
 ### macOS
 
-MacOS ships with the `clang` compiler suite. Type `clang --version` to ensure that you have the compiler installed. If clang is **not** already installed, run `$ xcode-select --install` to install it.
+MacOS ships with the `clang` compiler suite. Use `clang --version` to ensure that you have the compiler installed. If clang is **not** already installed, run `$ xcode-select --install` to install it.
 
-## Linux
+### Linux
 
-Often, Linux distributions will ship with a C++ compiler toolchain. You can verify by typing `c++ --version`. If you do not have a C++ compiler installed, install the `g++` package available from most Linux package managers.
+Linux distributions often ship with a C++ compiler toolchain. You can verify that the compiler is installed with `c++ --version`. If you don't have a C++ compiler installed, install the `g++` package available from most Linux package managers.
 
 
 ## Installation
@@ -75,6 +76,6 @@ First, add the following script to your application's *package.json*:
 
 Then, the agent can be run with ```npm run contrast```. This npm script can be changed to include other runtime configurations, such as an alternate configuration file location. For more information, see [Node Agent Configuration](installation-node.html#node-config).
 
-## Errors that can arise during installation
+## Errors during Installation
 
 `Invalid ELF Header` - This error occurs when a native C++ module targeting Linux has been compiled for a non-Linux target. Ensure that you are installing the agent from a compatible system.
