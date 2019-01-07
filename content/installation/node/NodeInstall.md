@@ -9,6 +9,8 @@ In order to install the Node agent, you must install a C++ compiler toolchain if
 
 You must also install Python in order for [Node-gyp](https://github.com/nodejs/node-gyp) (Node's build tool) to function.
 
+If you're able to build other modules with C++ bindings like [node-sass](https://www.npmjs.com/package/node-sass) and [sqlite3](https://github.com/mapbox/node-sqlite3), then you should be fine for Contrast.
+
 Note: the official [node Docker images](https://hub.docker.com/_/node/) come with all of the prerequisites pre-installed.
 
 #### Windows
