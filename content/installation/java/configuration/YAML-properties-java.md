@@ -52,7 +52,7 @@ You can also set all of the following YAML properties as system properties. Deri
 
 Use the properties in this section to connect the Java agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy. 
 
-* **contrast**: 
+* **api**: 
 
   * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
   * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.** 
@@ -78,8 +78,8 @@ Use the properties in this section to control agent-wide behaviors. For example,
 All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-javaconfig.html#java-template). 
   
 * **agent**:
-  * **shutdown_time_ms**: Set how long to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
-  * **deinstrument_on_shutdown**: Enable to deinstrument classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
+  * **shutdown_time_ms**: Set the amount of time to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
+  * **deinstrument_on_shutdown**: Set to `true` to deinstrument classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
 
 #### Diagnostic logging
 
@@ -101,7 +101,7 @@ Use the properties in this section to control security logging. These logs allow
 
   * **security_logger**:
     * **path**: Set the file to which the agent logs security events. <br> Example: */.contrast/security.log*
-    * **level**: Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
+    * **level**: Set the log level for security logging. Value options are `ERROR`, `WARN`, `INFO`, `DEBUG` and `TRACE`.
     * **roll_daily**: Change the Contrast security logger from a file-sized based rolling scheme to a date-based rolling scheme. At midnight server time, the log from the previous day is renamed to *file_name.yyyy-MM-dd*. This flag must be set to use the backups and size flags. Value options are `true` or `false`. <br> Note: This scheme does not have a size limit; manual log pruning will be required.
     * **roll_size**: Specify the file size cap (in MB) of each log file.
     * **backups**: Specify the number of backup logs that the agent will create before Contrast cleans up the oldest file. A value of `0` means that no backups are created, and the log is truncated when it reaches its size cap. <br> Note: This property must be used with `agent.security_logger.roll_daily=false`; otherwise, Contrast continues to log daily and disregard this limit.
@@ -121,7 +121,7 @@ Use the properties in this section to control security logging. These logs allow
 Use the properties in this section to apply any Java agent-wide configurations.
 
 * **java**:
-  * **standalone_app_name**: Set the name of a standalone application. If this value is set, the agent assumes there is only one application in this server.
+  * **standalone_app_name**: Configure the Java agent to skip its application discovery algorithm, and instead associate all libraries, vulnerabilities, and web traffic to a single application with the name specified by this property. This configuration is preferred when deploying Java SE applications with embedded web servers (e.g., applications built with Spring Boot, Dropwizard, and embedded Jetty). When used with an application server, this configuration associates all web traffic with the single, standalone application, including web traffic handled by application server-hosted endpoints that wouldn't be associated with a discovered application otherwise. <br> Note: This settings takes preferences over the `application.name` setting.
 
 
 ### Inventory properties
@@ -149,7 +149,7 @@ Use the properties in this section to control Assess in the Java agent. The samp
 
   * **samplings**:
     * **enable**: Set to `false` to disable sampling.
-    * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
+    * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
     * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
 
@@ -198,7 +198,7 @@ Use the properties in this section to control Protect features and rules.
 Use the properties in this section to control the application(s) hosting this agent.
 
 * application:
-  * **name**: Override the reported application name.
+  * **name**: Override the reported application name. <br> Note: On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   * **path**: Override the reported application path.
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
   * **code**: Add the application code this application should use in the Contrast UI.
