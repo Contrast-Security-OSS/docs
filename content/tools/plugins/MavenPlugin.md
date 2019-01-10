@@ -18,6 +18,16 @@ You can view the plugin code in Contrast's [Github repository](https://github.co
 
 <!-- The plugin can be found here on the Maven repository. -->
 
+
+## Usage
+
+This Maven plugin can be used to allow Contrast to discover vulnerabilities in your application during your integration or verification tests. 
+
+## Goals
+
+* `install`: installs a Contrast Java agent to your local project
+* `verify`: checks for new vulnerabilities in your web application.
+
 ## Configuration
 
 The table below shows all the parameters for the plugin. These settings are for connecting to Contrast and filtering your vulnerabilities.
