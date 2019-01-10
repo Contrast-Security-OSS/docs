@@ -37,16 +37,20 @@ For Trace tags, update the configuration of the agent. If there isn’t one, add
 
 Use the properties in this section to connect the agent to the Contrast UI.
 
-* **contrast**: 
+* **api**: 
   * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
   * **url**: Set the URL for the Contrast UI. **Required.** <br> Example: *https://app.contrastsecurity.com/Contrast*
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
-  * **certificate**: Allow the use of custom or self-signed certificate authority and certificate files when connecting to the Contrast UI.
-    * **ca_file**: When running an Enterprise-on-Premises (EOP) Contrast instance using a self-signed certificate, use this option to provide the path to a custom CA file.
-    * **cert_file**: Provide a path to the server's certificate PEM file.
-    * **key_file**: Provide a path to the server's key PEM file.
+
+#### Certificate 
+
+  * **certificate**: 
+    * **enable**: If set to `false`, the agent will ignore the certificate configuration in this section.
+    * **ca_file**: Set the absolute or relative path to a CA for communication with the Contrast UI using a self-signed certificate.
+    * **cert_file**: Set the absolute or relative path to the Certificate PEM file for communication with the Contrast UI.
+    * **key_file**: Set the absolute or relative path to the Key PEM file for communication with the Contrast UI.
 
 ### Contrast agent properties
 
@@ -69,7 +73,7 @@ Define the following properties to set security logging values. If not defined, 
 
   * **security_logger**:
     * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
-    * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
+    * **level**: Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
     * **roll_daily**: Change the Contrast logger from a file-sized based rolling scheme to a date-based rolling scheme. At midnight server time, the log from the previous day log is renamed to *file_name.yyyy-MM-dd*. You must set this flag to use the backups and size flags. <br> Note: This scheme does not have a size limit; manual log pruning is required. <br> Example: `false`
     * **roll_size**: Set the roll size for log files unless `agent.logger.roll_daily=true`. <br> Example: `100M`
     * **backups**: Set the number of backup files to keep. <br> Example: `10`
@@ -134,7 +138,7 @@ Use the properties in this section to control Assess.
   * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
   * **samplings**:
     * **enable**: Set to `false` to disable sampling.
-    * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
+    * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
     * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
   * **rules**:
@@ -172,7 +176,7 @@ Use the properties in this section for the application(s) hosting each agent.
 For **application** tags, update the configuration of the agent. If there isn’t one, add a top-level `application` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string. 
 
 * application:
-  * **name**: Override the reported application name. If not provided, the agent finds an appropriate application name.
+  * **name**: Override the reported application name. <br> Note: On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   * **path**: Override the reported application path.
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.  
   * **code**: Add the application code this application should use in the Contrast UI.
