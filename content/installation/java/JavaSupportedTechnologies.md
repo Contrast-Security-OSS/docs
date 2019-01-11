@@ -7,18 +7,18 @@ tags: "Java agent installation containers JDKs frameworks libraries support trou
 Contrast is tested and proven to be compatible with the following technologies; however, Contrast is also compatible with many more that aren't listed.
 
 |Supported JDKS                             | Supported Containers                 | Supported Application Frameworks
-|:-------------- |:-------------------- |:--------------------------------
-|IBM 1.5 (2008+), 1.6, 1.7                  | GlassFish 3, 4                       | Apache POI, fileupload, HttpComponents
-|JRockit 1.5, 1.6 (update 95+ or R28.3.6+)  | Grizzly 2.3.20+                      | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
-|Oracle JDK 1.5, 1.6, 1.7, 1.8              | JBoss 4.2, 5, 5.1, 6.1, 7, 7.1       | Direct Web Remoting (DWR)
-|Open JDK 1.5, 1.6, 1.7, 1.8                | Jetty 6, 7, 8, 9                     | DropWizard
+|:--------------                            |:--------------------                 |:--------------------------------
+|IBM 1.6, 1.7                               | GlassFish 4                          | Apache POI, fileupload, HttpComponents
+|JRockit 1.6 (update 95+ or R28.3.6+)       | Grizzly 2.3.20+                      | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
+|Oracle JDK 1.6, 1.7, 1.8                   | JBoss 4.2, 5, 5.1, 6.1, 7, 7.1       | Direct Web Remoting (DWR)
+|Open JDK 1.6, 1.7, 1.8                     | Jetty 7, 8, 9                        | DropWizard
 |                                           | Karaf 3.0.x                          | Freemarker, Velocity
-|                                           | Netty 3.x, 4.x                       | GSON, Kryo, minidev, org.json
-|                                           | Play 2.2,2.3,2.4                     | Google Web Toolkit (GWT)
-|                                           | Tomcat 4, 5, 6, 7, 8                 | Hibernate
+|                                           | Netty 4.x                            | GSON, Kryo, minidev, org.json
+|                                           | Play 2.4                             | Google Web Toolkit (GWT)
+|                                           | Tomcat 5, 6, 7, 8                    | Hibernate
 |                                           | Vert.X 3.0+                          | J2SE
-|                                           | WebLogic 9, 10, 11g, 12c             | JDBC, JDBI, MongoDB
-|                                           | WebSphere 6.1, 7, 8, 8.5<sup>*</sup> | JSF (MyFaces, RichFaces, Sun)
+|                                           | WebLogic 10, 11g, 12c                | JDBC, JDBI, MongoDB
+|                                           | WebSphere 8.5<sup>*</sup>            | JSF (MyFaces, RichFaces, Sun)
 |                                           | WildFly 10, 10.1.x                   | java.nio, java.beans
 |                                           |                                      | Java EE/J2EE, Servlet/JSP
 |                                           |                                      | Jersey
