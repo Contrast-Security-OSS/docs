@@ -266,6 +266,9 @@ contrast:
       #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
+      # Tell the agent to be more aggressive in detecting user inputs as SQL comments. This will enable the agent to better detect SQL Injection input vectors that use comments to terminate queries. The agent blocks if blocking is enabled.
+      # aggressive_comment: false
+
     #====================================================================================
     # Cmd-injection
     # Use the following properties to configure how the command injection rule works.
