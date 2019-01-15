@@ -5,6 +5,54 @@ tags: "Contrast terms troubleshooting glossary"
 -->
 
 
+## Agent 
+
+A Contrast agent is code installed in a web application that may run in **Inventory**, **Protect** or **Assess** mode.
+
+---
+
+## Account Takeover 
+
+Account takeover (ATO) is an umbrella term for attacks intended to steal login credentials or otherwise break authentication in web applications.
+
+---
+
+## Application
+
+An application is a logical grouping of customer code analyzed by a Contrast **agent**. This grouping is idiomatic to the agent's language and platform; dynamic languages consider the entire process a single application, while the .NET agent follows the same rules as IIS for identifying multiple applications in the same process. 
+
+---
+
+## Assess
+
+Contrast Assess is a set of **rules** designed to perform highly accurate data flow analysis to detect vulnerabilities when **applications** are tested with normal test data. Assess is considered an **agent** mode, and is supported by the Java, .NET, Node.js and Ruby agents.
+
+---
+
+## Attack
+
+An attack represents one or more **attack events** that occur within a discrete time frame.
+
+---
+
+## Attack Event
+
+An attack event represents one HTTP request against a protected **application** with one or more user inputs that appear to be attack vectors.
+
+---
+
+## Brute Force Attack
+
+A brute force attack consists of an attacker submitting many passwords or passphrases with the hope of eventually guessing correctly. The attacker systematically checks all possible passwords and passphrases until the correct one is found.
+
+---
+
+## Command Injection
+
+Command injection is an **attack** in which the goal is execution of arbitrary commands on the host operating system via a vulnerable **application**. Command injection attacks are possible when an application passes unsafe user supplied data (e.g., forms, cookies or HTTP headers) to a system shell.
+
+---
+
 ## Contrast
 
 **Contrast** is a security technology for finding vulnerabilities in an application. It finds vulnerabilities by instrumenting the application and virtual machine with sensors and watching the stream of generated events for patterns that represent vulnerabilities. The term encompasses the entire suite of technologies around this product, including the agents and Contrast UI.
@@ -17,9 +65,15 @@ The **Contrast JVM Plugin** is a Java agent that is installed in the application
 
 ---
 
+## Contrast Service
+
+The Contrast Service is an executable written in Go that handles communication with the **Contrast UI** for the Ruby, Python and Proxy **agents**. For the Proxy agent, it also acts as an analysis **engine** that can apply Protect **rules** to models representing HTTP requests.
+
+---
+
 ## Contrast UI 
 
-The **Contrast UI** is a web application that receives **traces** from Contrast **engines**, and allows the analyst to view and triage the results.
+The **Contrast UI** is the web interface that users log into to download agents and view information on their **applications** and reported vulnerabilities. This also includes the REST API to which the **agents** report data. The Contrast UI is predominately Java code with a React (new) and Angular JS (old) front end.
 
 ---
 
@@ -50,6 +104,12 @@ The Contrast **engine** detects the same vulnerability conditions over and over 
 ## Event
 
 An event is generated when the running application calls code that Contrast instrumented with a *sensor*.
+
+---
+
+## .NET Agent
+
+The .NET agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for .NET web applications.
 
 ---
 
