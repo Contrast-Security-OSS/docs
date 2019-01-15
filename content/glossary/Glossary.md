@@ -4,54 +4,52 @@ description: "Glossary of terms"
 tags: "TeamServer terms troubleshooting glossary"
 -->
 
-Definitions of commonly-used terms associated with Contrast technology are as follows:
-
 
 ## Contrast
 
-**Contrast** is a new security technology for finding vulnerabilities in an application. It finds vulnerabilities by instrumenting the application and virtual machine with sensors and watching the stream of generated events for patterns that represent vulnerabilities. The term **Contrast** encompasses the entire suite of technologies around this product, including the *JVM plugin* (the *engine*), and the Contrast site (the *TeamServer*).
+**Contrast** is a new security technology for finding vulnerabilities in an application. It finds vulnerabilities by instrumenting the application and virtual machine with sensors and watching the stream of generated events for patterns that represent vulnerabilities. The term **Contrast** encompasses the entire suite of technologies around this product, including the agents and Contrast UI.
 
 ---
 
-## Contrast JVM Plugin (Agent)
+## Contrast JVM Plugin
 
-The **Contrast JVM Plugin** is a Java agent that is installed in the application server that is hosting the application(s) to be analyzed. This *engine* generates *traces* that contain vulnerability results detected by the *engine* while the application is operating. It periodically sends these *traces* to its associated *TeamServer* for further analysis by a human being.
+The **Contrast JVM Plugin** is a Java agent that is installed in the application server that is hosting the application(s) to be analyzed. This **engine** generates **traces** that contain vulnerability results detected by the **engine** while the application is operating. It periodically sends these **traces** to its associated **Contrast UI** for further analysis by Contrast users.
 
 ---
 
-## Contrast Site (TeamServer)
+## Contrast UI 
 
-The **Contrast site** is a web application that receives *traces* from Contrast *engines* and allows the analyst to view and triage the results.
+The **Contrast UI** is a web application that receives **traces** from Contrast **engines**, and allows the analyst to view and triage the results.
 
 ---
 
 ## Creation Event
 
-When an *untrusted data source* provides data to the application, a **Creation Event** (or **Source Event**) is generated that documents what occurred. This information is stored with the *tracked* data object that is created and is used to describe where untrusted data came from if a *rule* generates a *trace*.
+When an **untrusted data source** provides data to an application, Contrast generates a **Creation Event** (or **Source Event**) that documents what occurred. Contrast stores this information with the **tracked** data object that it created, and uses it to describe the source of the untrusted data, if a **rule** generates a **trace**.
 
 ---
 
 ## Custom Event
 
-Each **event** contains the runtime values of the underlying *object*, the parameters to the method invoked, the return from the method, and the runtime stack trace.
+Each **event** contains the runtime values of the underlying **object**, the parameters to the method invoked, the return from the method, and the runtime stack trace.
 
 ---
 
 ## Duplicate Trace Elimination
 
-The Contrast *engine* will detect the same vulnerability conditions over and over in an application, and this would normally cause the same *trace* to be generated repetitively. To address this, there is **duplicate trace elimination** logic in both the *engine* and the *TeamServer* to eliminate duplicate *traces*.
+The Contrast **engine** detects the same vulnerability conditions over and over in an application; this would normally cause the same **trace** to be generated repetitively. To address this, there is **duplicate trace elimination** logic in both the **engine** and the **Contrast UI** to eliminate duplicate traces.
 
 ---
 
 ## Event
 
-An **event** is generated when the running application calls code that Contrast has instrumented with a *sensor*.
+An event is generated when the running application calls code that Contrast instrumented with a *sensor*.
 
 ---
 
 ## Policy File
 
-A **policy file** contains all the *rulepacks* to use in the *engine* along with some configuration information.
+A **policy file** contains all the **rulepacks** to use in the **engine** along with some configuration information.
 
 ---
 
