@@ -41,6 +41,10 @@ When changes are made, Contrast runs a battery of automated tests to ensure that
 
 If you want to add test cases, let Contrast know by clicking on the link of your chosen application and submitting a pull request.
 
+## Working with transpilers
+
+Refer to [this article](installation-node.html#transpiler) on working with transpilers.
+
 ## Additional Technology
 
 Contrast runs with a range of third-party technology, including options that aren't listed here. If you want to confirm that Contrast supports your preferred technology, or you'd like to make a case for Contrast to support it, [let Contrast know.](mailto:bugs@contrastsecurity.com)
