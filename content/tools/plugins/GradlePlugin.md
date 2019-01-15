@@ -20,7 +20,18 @@ The latest version of the plugin can be found on [Gradle's plugin webpage](https
 
 ## Use the Plugin
 
-### Configuration
+### Goals
+
+* `contrastInstall`: Installs a Contrast Java agent to your local project. 
+The plugin edits the `org.gradle.jvmargs` property in the *gradle.properties* file to launch the JVM with the Contrast agent. An application version, by which the vulnerabilities are filtered in the `contrastVerify` task, is generated during this task. The plugin generates the application version in the following order:
+
+    * If your build is running in TravisCI, Contrast uses `appName-$TRAVIS_BUILD_NUMBER`.
+    * If your build is running in CircleCI, Contrast uses `appName-$CIRCLE_BUILD_NUM`.
+    * If your build is running in neither TravisCI nor CircleCI, Contrast generates one in the format `appName-yyyyMMddHHmm`.
+
+* `contrastVerify`: Checks for new vulnerabilities in your web application. 
+
+## Configuration
 
 The table belows shows all the parameters for the plugin. These settings are for connecting to the Contrast application and filtering your vulnerabilities.
 
@@ -40,19 +51,7 @@ The table belows shows all the parameters for the plugin. These settings are for
 
 >**Note**: Even if your build succeeds, the plugin will fail the overall build if a vulnerability is found at or above the severity level set in the configuration.
 
-### JVM arguments
-
-The plugin edits the `org.gradle.jvmargs` property in the *gradle.properties* file to launch the JVM with the Contrast agent. 
-
-### appVersion
-
-An application version is generated during the Gradle install task. The plugin generates the application version in the following order.
-
-* If your build is running in TravisCI, Contrast will use `appName-$TRAVIS_BUILD_NUMBER`.
-* If your build is running in CircleCI, Contrast will use `appName-$CIRCLE_BUILD_NUM`.
-* If your build is running neither in TravisCI nor in CircleCI, Contrast will generate one in the format `appName-yyyyMMddHHmm`.
-
-### Onboard a Sample Web Application
+## Onboard a Sample Web Application
 
 The easiest way to set up a project is to clone our sample Gradle-based web application. This application has been migrated from Maven to Gradle, and relies on MongoDB; you will install that and set up the database path.
 
@@ -88,7 +87,7 @@ gradle build -x test contrastInstall
 
 ```
 cd path/to/Contrast-Sample-Gradle-Application/build
-java -javaagent:contrast.jar -Dcontrast.appname=mytestapp -Dcontrast.server=mytestserver -jar libs/Contrast-Sample-Gradle-Application-0.0.1-SNAPSHOT.jar
+java -Dcontrast.appname=mytestapp -Dcontrast.server=mytestserver -jar libs/Contrast-Sample-Gradle-Application-0.0.1-SNAPSHOT.jar
 ```
 
 * After executing the above code, the server will start.  At this point we want to check that the application is running at localhost:8080 and that the application shows up in TeamServer.
@@ -113,7 +112,7 @@ contrastConfiguration {
 gradle build contrastVerify -x test
 ```
 
-### Example
+## Example
 
 Below is a sample configuration for the Contrast Gradle Plugin:
 

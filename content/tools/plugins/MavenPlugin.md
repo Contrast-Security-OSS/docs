@@ -16,7 +16,14 @@ This guidance refers to version 2.0 of the Contrast Maven Plugin. For informatio
 
 You can view the plugin code in Contrast's [Github repository](https://github.com/Contrast-Security-OSS/contrast-maven-plugin). You can also review how our two goals, `install` and `verify`, work.
 
-<!-- The plugin can be found here on the Maven repository. -->
+## Use the Plugin
+
+Use the Maven plugin to allow Contrast to discover vulnerabilities in your application during integration or verification tests. 
+
+### Goals
+
+* `install`: Installs a Contrast Java agent to your local project.
+* `verify`: Checks for new vulnerabilities in your web application.
 
 ## Configuration
 
@@ -107,7 +114,7 @@ When your application's integration tests are run, the Contrast agent can add an
 
 ## Containers
 
-Please see the following articles for specific installation instructions:
+See the following articles for specific installation instructions:
 
 * [Install the agent on Maven Apache Tomcat](installation-javainstall.html#apache)
 * [Install the agent on Maven Cargo Plugin](installation-javainstall.html#cargo)
