@@ -89,6 +89,13 @@ Use the properties in this section to control diagnostic logging. These logs all
 Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors and blocks attacks against your application. They are written to the specified file in the Common Event Format (CEF). The Syslog settings allow you to send security logs to remote servers.
 
   * **security_logger**:
+    * **level**: Set the log level for security logging. Value options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    * **connection_type**: Specify if a connection should be encrypted or plain text. Value options are `ENCRYPTED` or `UNENCRYPTED`.
+
+
+##### Syslog
+
+Define the following properties to set Syslog values. If the properties are not defined, the agent uses the Syslog values from the Contrast UI.
 
     * **syslog**:
       * **enable**: Set to `true` to enable Syslog logging.

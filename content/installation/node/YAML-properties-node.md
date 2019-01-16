@@ -52,7 +52,6 @@ Use the following properties for communication with the Contrast UI using certif
     * **cert_file**: Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI.
     * **key_file**: Set the absolute or relative path to the Key PEM file for communication with Contrast UI.
     * **key_password**: Set the password for the Key file, if required.
-    * **ignore_cert_errors**: Set to `true` for the agent to ignore certificate verification errors when the it communicates with the Contrast UI.
 
 #### Proxy
 

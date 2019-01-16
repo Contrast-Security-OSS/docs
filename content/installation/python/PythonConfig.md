@@ -30,6 +30,8 @@ Use the properties in this section to connect the agent to the Contrast UI.
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
+  * **last_config_path**: Set the path to which the agent should store the currently used configuration from the Contrast UI. <br> Example: *./tmp/config*
+
 
 #### Certificate 
 
@@ -141,10 +143,7 @@ Use the properties in this section for the application(s) hosting each agent.
   * **name**: Override the reported application name. <br> Note: On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   * **path**: 
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.  
-
-#### Code 
-
-  * **code**:  
+  * **code**: Add the application code this application should use in the Contrast UI.
   * **version**: Override the reported application version.
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
    * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
