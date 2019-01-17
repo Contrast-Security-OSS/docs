@@ -83,6 +83,18 @@ When an **untrusted data source** provides data to an application, Contrast gene
 
 ---
 
+## Credential Stuffing
+
+Credential stuffing is the automated injection of breached username and password pairs to fraudulently gain access to user accounts. This is a subset of the **brute force attack** category: large numbers of spilled credentials are automatically entered into websites until they are potentially matched to an existing account, which the attacker can then hijack for their own purposes.
+
+---
+
+## Cross-Site Scripting
+
+Cross-site scripting is a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+
+---
+
 ## Custom Event
 
 Each **event** contains the runtime values of the underlying **object**, the parameters to the method invoked, the return from the method, and the runtime stack trace.
@@ -99,11 +111,61 @@ The Contrast **engine** detects the same vulnerability conditions over and over 
 
 <!-- Text goes here.  -->
 
+See **Agent**. 
+
+---
+
+## Enterprise on Premises
+
+Enterprise on Premises (EOP) refers to **Contrast UI** instances that customers run and manage within their own internal networks. Many customers have InfoSec policies that forbid sending vulnerability or attack data to the cloud; therefore, these customers need an "on premises" offering of Contrast. Contrast pushes EOP updates to **Hub** on a monthly cadence.
+
+---
+
+## Environment
+
+Within the context of the **Contrast UI**, an environment is used to organize **applications** under one of three categories: Development, QA and Production.
+
 ---
 
 ## Event
 
-An event is generated when the running application calls code that Contrast instrumented with a *sensor*.
+When an An event, in Assess mode, is generated when the running application calls code that Contrast instrumented with a **sensor**.
+
+---
+
+## Hub
+
+Hub is a web application that **Enterprise-on-Premises** customers can use to download the "EOP Installer" of Contrast UI and different versions of each agent.
+
+---
+
+## IP Blacklist
+
+An IP blacklist is a **rule** configured in the Contrast UI that immediately blocks any HTTP request from the listed IP address. 
+
+---
+
+## IP Whitelist
+
+An IP whitelist is a **rule** configured in Contrast UI that allows any HTTP request from the listed IP address.
+
+---
+
+## Java Agent
+
+The Java agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for applications written in Java. 
+
+---
+
+## Library
+
+Generally any packaged, third-party code included in the **application**. Languages may use specific terms - e.g., gems for Ruby, packages for Node, JARs for Java - but they are all represented <!-- the same way --> in the Contrast UI. 
+
+---
+
+## Monitor
+
+Monitor is a Protect rule mode that tracks attacks through the application, but doesn't cause an exception to be thrown if a successful attack event occurs. However, the agent will report the event to the Contrast UI with all of the metadata that the agent gathered about the **attack event**.
 
 ---
 
@@ -119,9 +181,33 @@ The .NET agent is a Contrast **agent** that runs in **Assess** or **Protect** mo
 
 ---
 
+## Path Traversal
+
+Path Traversal aims to access files and directories stored outside the web root folder. By manipulating variables that reference files with “dot-dot-slash" (../) sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on a file system including application source code or configuration and critical system files. You should note that access to files is limited by system operational access control (such as locked or in-use files on the Microsoft Windows operating system).
+
+---
+
+## Policy
+
+A policy is the set of rules enabled on a given application. It may also refer to a Compliance Policy, Library Policy or Remediation Policy.
+
+---
+
 ## Policy File
 
 A **policy file** contains all the **rulepacks** to use in the **engine** along with some configuration information.
+
+---
+
+## Preflight
+
+Preflight is a message sent to the Contrast UI by agents in **Assess** mode. The Contrast UI responds with a message indicating which traces should be sent to Contrast UI. This is an optimization step to prevent the Contrast UI from having to process duplicate traces.
+
+---
+
+## Probe 
+
+An **attack event** that looks like an attack, but didn't touch any vulnerable code in the protected application, is displayed in the Contrast UI as a Probe event.
 
 ---
 
@@ -153,6 +239,30 @@ A propagator is a method that accepts tainted input and stores or produces taint
 
 ---
 
+## Protect
+
+Protect is a set of rules and features designed for Production **environments** to monitor and block **attacks**. Protect is considered an agent mode and, is supported by the Java, .NET, Node.js, Ruby, Python and Proxy agents. Traditionally, this mode tracks values from sources, performs an initial analysis, and then examines values at sinks to determine if an attack is taking place.
+
+---
+
+## Proxy Agent
+
+The Proxy agent is a Contrast **agent** that run in **Protect** mode only. It consists of two parts: an open-source module for NGINX that forwards HTTP request data to the **Contrast Service** via a UNIX socket. Analysis is performed at the Service, and a response is sent back to NGINX that indicates if the HTTP request should be allowed to proceed to the proxied application. The **rules** for the Proxy agent are primarily based on the OWASP ModSecurity core rule set.
+
+---
+
+## Python Agent
+
+The Python agent is a Contrast **agent** that run in **Protect** mode only.
+
+---
+
+## Ruby Agent
+
+Ruby agent is a Contrast **agent** that runs in **Protect** and **Assess** modes. Protect has been GA since September 2017. Assess entered GA in fall of 2018.
+
+---
+
 ## Rule
 
 A rule defines a pattern for the **engine** to look for while monitoring a running application. If the pattern is matched, the *engine* generates a *trace* to send to the *TeamServer*. Each pattern consists of a series of methods ending in a *trigger*. Each of these methods can also be required. If these methods are detected, the pattern does not match.
@@ -179,7 +289,7 @@ A **security control** is a security mechanism that does something to make input
 
 ## Sensor
 
-A **sensor** is the instrumentation that Contrast adds to the running application. The sensor's job is to gather data from the immediate method context, generate a simple *event*, and send it to the Contrast *engine*.
+A sensor is the instrumentation that Contrast adds to the running application. The sensor's job is to gather data from the immediate method context, generate a simple *event*, and send it to the Contrast *engine*.
 
 ---
 
