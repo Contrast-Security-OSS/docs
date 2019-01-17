@@ -265,7 +265,9 @@ Ruby agent is a Contrast **agent** that runs in **Protect** and **Assess** modes
 
 ## Rule
 
-A rule defines a pattern for the **engine** to look for while monitoring a running application. If the pattern is matched, the *engine* generates a *trace* to send to the *TeamServer*. Each pattern consists of a series of methods ending in a *trigger*. Each of these methods can also be required. If these methods are detected, the pattern does not match.
+A rule refers to the specific logic required for Contrast to identify a vulnerability in Assess mode, or block an attack event in Protect mode, while monitoring a running application.
+
+If the pattern is matched, the engine generates a **trace** to send to the **Contrast UI**. Each pattern consists of a series of methods ending in a *trigger*. Each of these methods can also be required. If these methods are detected, the pattern does not match.
 
 ---
 
@@ -275,15 +277,21 @@ A **rulepack** identifies a collection of *rules*. A core set of *rules* are del
 
 ---
 
+## SaaS
+
+SaaS refers to a set of Contrast UI environments hosted in AWS. Updates are pushed to SaaS as desired.
+
+---
+
 ## Scope
 
-A method **scope** can be defined for a *rule*. When an application's execution leaves the scope defined for a *rule*, the *engine* will check the conditions of the *rule* as defined by its *events* to determine if a *trace* should be generated.
+A method **scope** can be defined for a **rule**. When an application's execution leaves the scope defined for a *rule*, the *engine* will check the conditions of the rule as defined by its **events** to determine if a trace should be generated.
 
 ---
 
 ## Security Control
 
-A **security control** is a security mechanism that does something to make input data safe, such as validate input, encode output, check for data level authorization, etc. Security Controls that don't specifically look at data to make a security check, such as validating whether a user is authorized to invoke a particular method, are simply defined as *events*, which can be monitored by a *rule*.
+A **security control** is a security mechanism that does something to make input data safe, such as validate input, encode output, check for data level authorization, etc. Security Controls that don't specifically look at data to make a security check, such as validating whether a user is authorized to invoke a particular method, are simply defined as **events**, which can be monitored by a **rule**.
 
 ---
 
@@ -293,9 +301,27 @@ A sensor is the instrumentation that Contrast adds to the running application. T
 
 ---
 
+## Sink 
+
+Sink is the method, object or other code in which unsanitized and/or unvalidated user input from an **untrusted data source** could cause damage to an application.
+
+---
+
 ## Source
 
 This is the short name for an **untrusted data source**.
+
+---
+
+## SQL Injection
+
+SQL Injection is a class of vulnerabilities in which the attacker can change the meaning of a database query. See [Little Bobby Tables](https://xkcd.com/327/) for examples. 
+
+---
+
+## SQLi
+
+See **SQL Injection**. 
 
 ---
 
@@ -321,4 +347,9 @@ A trigger is part of a **rule** pattern that indicates that the Contrast **engin
 
 An untrusted data source is a **source** of dangerous input to the application. It typically comes directly from the end user and an HTTP request, but it could be from a back-end partner feed, the application's database or any other source considered unsafe.
 
+___
+
+## XSS
+
+See **Cross-Site Scripting**.
 
