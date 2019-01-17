@@ -7,13 +7,13 @@ tags: "Contrast terms troubleshooting glossary"
 
 ## Agent 
 
-A Contrast agent is code installed in a web application that may run in **Inventory**, **Protect** or **Assess** mode.
+A Contrast agent is code installed in a web **application** that may run in **Inventory**, **Protect** or **Assess** mode.
 
 ---
 
 ## Account Takeover 
 
-Account takeover (ATO) is an umbrella term for attacks intended to steal login credentials or otherwise break authentication in web applications.
+Account takeover (ATO) is an umbrella term for attacks intended to steal login credentials or otherwise break authentication in web **applications**.
 
 ---
 
@@ -25,7 +25,7 @@ An application is a logical grouping of customer code analyzed by a Contrast **a
 
 ## Assess
 
-Contrast Assess is a set of **rules** designed to perform highly accurate data flow analysis to detect vulnerabilities when **applications** are tested with normal test data. Assess is considered an **agent** mode, and is supported by the Java, .NET, Node.js and Ruby agents.
+Contrast Assess is a set of **rules** designed to perform highly accurate data flow analysis to detect vulnerabilities when **applications** are tested with normal test data. Assess is an **agent** mode, and is supported by the Java, .NET, Node.js and Ruby agents.
 
 ---
 
@@ -55,19 +55,19 @@ Command injection is an **attack** in which the goal is execution of arbitrary c
 
 ## Contrast
 
-**Contrast** is a security technology for finding vulnerabilities in an application. It finds vulnerabilities by instrumenting the application and virtual machine with sensors and watching the stream of generated events for patterns that represent vulnerabilities. The term encompasses the entire suite of technologies around this product, including the agents and Contrast UI.
+**Contrast** is a security technology for finding vulnerabilities in an **application**. It finds vulnerabilities by instrumenting the application and virtual machine with sensors, and watching the stream of generated events for patterns that represent vulnerabilities. The term encompasses the entire suite of technologies around this product, including the **agents** and **Contrast UI**.
 
 ---
 
 ## Contrast JVM Plugin
 
-The **Contrast JVM Plugin** is a Java agent that is installed in the application server that is hosting the application(s) to be analyzed. This **engine** generates **traces** that contain vulnerability results detected by the **engine** while the application is operating. It periodically sends these **traces** to its associated **Contrast UI** for further analysis by Contrast users.
+The **Contrast JVM Plugin** is a Java agent installed in the application server that's hosting the application(s) to be analyzed. This **engine** generates **traces** that contain vulnerability results detected by the **engine** while the application is operating. It periodically sends these **traces** to its associated **Contrast UI** for further analysis by Contrast users.
 
 ---
 
 ## Contrast Service
 
-The Contrast Service is an executable written in Go that handles communication with the **Contrast UI** for the Ruby, Python and Proxy **agents**. For the Proxy agent, it also acts as an analysis **engine** that can apply Protect **rules** to models representing HTTP requests.
+The Contrast Service is an executable written in Go that handles communication with the **Contrast UI** for the Ruby, Python and Proxy **agents**. For the Proxy agent, it also acts as an analysis **engine** that can apply Protect rules to models representing HTTP requests.
 
 ---
 
@@ -79,19 +79,19 @@ The **Contrast UI** is the web interface that users log into to download agents 
 
 ## Creation Event
 
-When an **untrusted data source** provides data to an application, Contrast generates a **creation event** (or **source event**) that documents what occurred. Contrast stores this information with the **tracked** data object that it created, and uses it to describe the source of the untrusted data, if a **rule** generates a **trace**.
+When an **untrusted data source** provides data to an application, Contrast generates a creation event (or source event) that documents what occurred. Contrast stores this information with the **tracked** data object that it created, and uses it to describe the source of the untrusted data, if a **rule** generates a **trace**.
 
 ---
 
 ## Credential Stuffing
 
-Credential stuffing is the automated injection of breached username and password pairs to fraudulently gain access to user accounts. This is a subset of the **brute force attack** category: large numbers of spilled credentials are automatically entered into websites until they are potentially matched to an existing account, which the attacker can then hijack for their own purposes.
+Credential stuffing is the automated injection of breached username and password pairs to fraudulently gain access to user accounts. This is a subset of the **brute force attack** category: large numbers of spilled credentials are automatically entered into websites until they're potentially matched to an existing account, which the attacker can then hijack for their own purposes.
 
 ---
 
 ## Cross-Site Scripting
 
-Cross-site scripting is a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+Cross-site scripting (XSS) is a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS **attacks** occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
 
 ---
 
@@ -136,6 +136,13 @@ When an An event, in Assess mode, is generated when the running application call
 ## Hub
 
 Hub is a web application that **Enterprise-on-Premises** customers can use to download the "EOP Installer" of Contrast UI and different versions of each agent.
+
+
+---
+
+## Inventory 
+
+<!-- Words go here. -->
 
 ---
 
@@ -195,19 +202,19 @@ A policy is the set of rules enabled on a given application. It may also refer t
 
 ## Policy File
 
-A **policy file** contains all the **rulepacks** to use in the **engine** along with some configuration information.
+A policy file contains all the **rulepacks** to use in the **engine** along with some configuration information.
 
 ---
 
 ## Preflight
 
-Preflight is a message sent to the Contrast UI by agents in **Assess** mode. The Contrast UI responds with a message indicating which traces should be sent to Contrast UI. This is an optimization step to prevent the Contrast UI from having to process duplicate traces.
+Preflight is a message sent to the Contrast UI by agents in **Assess** mode. The **Contrast UI** responds with a message indicating which **traces** the agent should send to the UI. This is an optimization step to prevent the UI from processing duplicate traces.
 
 ---
 
 ## Probe 
 
-An **attack event** that looks like an attack, but didn't touch any vulnerable code in the protected application, is displayed in the Contrast UI as a Probe event.
+An **attack event** that looks like an attack, but didn't touch any vulnerable code in the protected application, is displayed in the **Contrast UI** as a Probe event.
 
 ---
 
@@ -327,13 +334,13 @@ See **SQL Injection**.
 
 ## Trace
 
-A trace is a series of events that represent a vulnerability. Traces are generated by the *engine* any time that a series of events matches a runtime **rule**. 
+A trace is a series of events that represent a vulnerability. Traces are generated by the **engine** any time that a series of events matches a runtime **rule**. 
 
 ---
 
 ## Tracked
 
-When data flows from an **untrusted data source** into an **object**, that object is considered **tracked**. When data from a tracked object flows into another object through a **propagator**, that *object* is also tracked. **Events** can be defined in **rules** that consider whether an object is tracked or not as part of the event definition.
+When data flows from an **untrusted data source** into an **object**, that object is considered **tracked**. When data from a tracked object flows into another object through a **propagator**, that object is also tracked. **Events** can be defined in **rules** that consider whether an object is tracked or not.
 
 ---
 
@@ -345,8 +352,7 @@ A trigger is part of a **rule** pattern that indicates that the Contrast **engin
 
 ## Untrusted Data Source
 
-An untrusted data source is a **source** of dangerous input to the application. It typically comes directly from the end user and an HTTP request, but it could be from a back-end partner feed, the application's database or any other source considered unsafe.
-
+An untrusted data source is a source of dangerous input to the application. It typically comes directly from the end user and an HTTP request, but it could be from a back-end partner feed, the application's database or any other source considered unsafe.
 ___
 
 ## XSS
