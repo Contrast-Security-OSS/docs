@@ -26,7 +26,9 @@ gem install path/to/contrast-agent-2.x.x.gem
 To use Contrast as a Gem Source, add the following line to your application's Gemfile:
 
 ``` ruby
-gem 'contrast-agent', '~> 2.0'
+group :contrast do
+    gem 'contrast-agent'
+end
 ```
 
 Add the following line to the top of your application's Gemfile:
@@ -50,7 +52,7 @@ bundle install
 ```
 
 ``` bash
-bundle update
+bundle update --group contrast
 ```
 
 If you're using the Sinatra framework, you must configure your application to use the Contrast agent. A simple application configured to work with the Contrast agent looks like the following example:
