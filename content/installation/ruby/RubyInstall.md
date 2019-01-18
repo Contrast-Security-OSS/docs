@@ -26,7 +26,7 @@ gem install path/to/contrast-agent-2.x.x.gem
 To use Contrast as a Gem Source, add the following line to your application's Gemfile:
 
 ``` ruby
-group :contrast do
+group :development, :contrast do
     gem 'contrast-agent'
 end
 ```
