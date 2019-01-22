@@ -20,12 +20,15 @@ Go to the Python [YAML Template](installation-pythonconfig.html#python-template)
 
 ## Configuration Options
 
+### Enable the agent 
+
+* **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+
 ### Contrast UI properties
 
 Use the properties in this section to connect the agent to the Contrast UI.
 
 * **api**: 
-  * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
   * **url**: Set the URL for the Contrast UI. **Required.** <br> Example: *https://app.contrastsecurity.com/Contrast*
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
