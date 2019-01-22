@@ -156,7 +156,13 @@ agent:
   # Ruby
   # The following properties apply to any Ruby agent-wide configurations.
   #==========================================================================
-  # ruby: {}
+  # ruby:
+
+    # Allow the agent to track frozen Objects returned by source methods. This configuration is on by default.
+    # track_frozen_sources: NEEDS_TO_BE_SET
+
+    # Allow the agent to track propagation through interpolated Strings. This configuration is on by default.
+    # interpolate: NEEDS_TO_BE_SET
 
 #===========================================================================
 # Inventory

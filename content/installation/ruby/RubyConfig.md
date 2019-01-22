@@ -107,13 +107,13 @@ The following properties are used by the logger in the Contrast service. If the 
     * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Override the name of the process used in logs. <br> Example: Contrast Service
 
-<!-- ### Ruby-specific properties
+### Ruby-specific properties
 
 The following configuration options allow you to fine-tune the Ruby agent.
 
-* `ruby`: Options specific to the Ruby agent
-  * `analyze_inventory_async`: If set to `true`, this wraps the initial inventory message in a thread which may speed up the response time on the first request after startup. 
- -->
+* **ruby**: 
+  * **track_frozen_sources**: Allow the agent to track frozen Objects returned by source methods. This configuration is on by default. 
+  * **interpolate**: Allow the agent to track propagation through interpolated Strings. This configuration is on by default.
 
 ### Inventory properties 
 
