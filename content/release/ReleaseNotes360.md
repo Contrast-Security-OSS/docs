@@ -11,7 +11,7 @@ tags: "3.6.0 January Release Notes"
 
 ## Improvements
 
-* 
+Check back next release! 
 
 
 ## Agent Updates
