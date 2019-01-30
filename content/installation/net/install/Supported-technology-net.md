@@ -10,7 +10,7 @@ The Contrast .NET agent supports analysis of web applications built on the follo
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
-| .NET Framework             | 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 |
+| .NET Framework             | 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 |
 | CLR                        | <li>CLR2</li> <br/> <li>CLR4</li>                       |
 | Web Servers                | <li>IIS</li> <br/> <li>IIS Express</li>                 |
 | Operating System           | <li>Windows 7, 8, 10</li><br/> <li>Windows Server 2008 R2, 2012, 2012 R2, 2016</li><br/><li>Azure Virtual Machines, Cloud Services, Mobile Services</li><br/><li> Azure App Service </li> |
@@ -28,13 +28,10 @@ The .NET agent for Azure App Service supports analysis of web applications built
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
-| .NET Framework             | Your application must be set to use CLR4. Any application that can run on this version is supported. (.NET 4.7.1 is deployed currently on Azure. Version 3.5 isn't supported.)  |
+| .NET Framework             | Your application must be set to use CLR4. Any application that can run on this version is supported. (.NET 4.7.2 is deployed currently on Azure. Version 3.5 isn't supported.)  |
 | CLR                        | CLR4                       |
 | Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
 | Web Application Frameworks | All of the frameworks supported by the Windows agent are analyzed on Azure. |
 
 
 > **Note:** Only applications using the full .NET Framework are currently supported. Contrast plans to add support for .NET Core applications in the future.
-
-
-
