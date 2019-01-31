@@ -12,7 +12,7 @@ tags: "3.6.0 January Release Notes"
 * Windows and Linux filepaths for Java configuration in the **Add Agent** wizard are straightened out.
 * Successfully delete an IP address you'd added in **Organization Settings > Security** tab.
 * Clone Profiles with Proxy properties in the **Add Agent** wizard.
-* The **Vulnerabilities** page show data instead of error messages.
+* The **Vulnerabilities** page successfully displays vulnerability data.
 
 ## Improvements
 
@@ -22,7 +22,7 @@ Check back next release for new features!
 
 ### Java summary 
 
-The Java team improved accuracy of Protect SQL-Injection, XSS, and Expression Language Injection rules, as well as the Assess SQL-Injection rule. We fixed several errors that do not affect analysis, but would cause noise within agent logs: 
+The Java team improved accuracy of Protect SQL-Injection, XSS and Expression Language Injection rules, as well as the Assess SQL-Injection rule. We fixed several errors that don't affect analysis, but would cause noise within agent logs: 
 * NullPointerException when observing certain database technologies as an architecture component
 * NullPointerException when observing a web service without a port as an architecture component
 * NullPointerException when reflecting over SaxParser
@@ -40,7 +40,7 @@ The .NET team fixed an issue where the agent could cause an error when ASPX page
 
 ### Node.js summary 
 
-The Node team released the last 1.x agent before migrating to the new dataflow tracking technology in the 2.0 version of the agent that we plan to release in February. This version of the agent has updates to prevent side effects in data flow through ternary statements as well as updates to the Syslog support.
+The Node team released the last 1.x agent before we migrate to the new dataflow tracking technology in the 2.0 version of the agent, which we plan to release in February. The latest version of the agent has updates to prevent side effects in data flow through ternary statements as well as updates to the Syslog support.
 
 ### Ruby summary 
 
@@ -49,7 +49,5 @@ The Ruby team added support for server names that contain non-UTF8 characters, a
 ### Python summary
 
 The Python team added support for Python 3.7. We added additional support for the metadata feature by sending metadata in the application startup message. The agent also includes support for a configuration to disable automatic startup of the service in environments where the service is being launched by and external runner.
-
-
 
 
