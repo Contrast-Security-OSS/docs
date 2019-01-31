@@ -7,11 +7,16 @@ tags: "3.6.0 January Release Notes"
 
 ## Fixes
 
-* 
+* Access **Reports** from the user menu without errors. CONTRAST-30049
+* Language-specific Assess rules display the correct applications to which they apply. CONTRAST-22748
+* Windows and Linux filepaths for Java configuration in the **Add Agent** wizard are straightened out. CONTRAST-29411, CONTRAST-29831
+* Successfully delete an IP address you'd added in **Organization Settings > Security** tab. CONTRAST-23474
+* Clone Profiles with Proxy properties in the **Add Agent** wizard. CONTRAST-29408
+* The **Vulnerabilities** page show data instead of error messages. CONTRAST-29696
 
 ## Improvements
 
-Check back next release! 
+Check back next release for new features! 
 
 
 ## Agent Updates
@@ -36,11 +41,16 @@ The .NET team fixed an issue where the agent could cause an error when ASPX page
 
 ### Node.js summary 
 
+The Node team released the last 1.x agent before migrating to the new dataflow tracking technology in the 2.0 version of the agent that we plan to release in February. This version of the agent has updates to prevent side effects in data flow through ternary statements as well as updates to the Syslog support.
 
 ### Ruby summary 
 
+The Ruby team added support for server names that contain non-UTF8 characters, and fixed a defect where the agent couldn't send activity messages when the path segment of the URI was nil. In Assess mode, the agent includes updates to better handle edge cases with frozen strings.
 
 ### Python summary
+
+The Python team added support for Python 3.7. We added additional support for the metadata feature by sending metadata in the application startup message. The agent also includes support for a configuration to disable automatic startup of the service in environments where the service is being launched by and external runner.
+
 
 
 
