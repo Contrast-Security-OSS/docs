@@ -7,17 +7,16 @@ tags: "3.6.0 January Release Notes"
 
 ## Fixes
 
-* Access **Reports** from the user menu without errors. CONTRAST-30049
-* Language-specific Assess rules display the correct applications to which they apply. CONTRAST-22748
-* Windows and Linux filepaths for Java configuration in the **Add Agent** wizard are straightened out. CONTRAST-29411, CONTRAST-29831
-* Successfully delete an IP address you'd added in **Organization Settings > Security** tab. CONTRAST-23474
-* Clone Profiles with Proxy properties in the **Add Agent** wizard. CONTRAST-29408
-* The **Vulnerabilities** page show data instead of error messages. CONTRAST-29696
+* Access **Reports** from the user menu without errors. 
+* Language-specific Assess rules display the correct applications to which they apply.  
+* Windows and Linux filepaths for Java configuration in the **Add Agent** wizard are straightened out.
+* Successfully delete an IP address you'd added in **Organization Settings > Security** tab.
+* Clone Profiles with Proxy properties in the **Add Agent** wizard.
+* The **Vulnerabilities** page show data instead of error messages.
 
 ## Improvements
 
 Check back next release for new features! 
-
 
 ## Agent Updates
 
