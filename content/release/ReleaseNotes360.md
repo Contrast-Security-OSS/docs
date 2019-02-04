@@ -10,13 +10,13 @@ tags: "3.6.0 January Release Notes"
 * Access **Reports** from the user menu without errors. 
 * Language-specific Assess rules display the correct applications to which they apply.  
 * Windows and Linux filepaths for Java configuration in the **Add Agent** wizard are straightened out.
-* Successfully delete an IP address you'd added in **Organization Settings > Security** tab.
+* Successfully delete an IP address you added in **Organization Settings > Security** tab.
 * Clone Profiles with Proxy properties in the **Add Agent** wizard.
 * The **Vulnerabilities** page successfully displays vulnerability data.
 
 ## Improvements
 
-Check back next release for new features! 
+Check back next release! 
 
 ## Agent Updates
 
