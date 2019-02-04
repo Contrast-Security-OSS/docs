@@ -21,6 +21,7 @@ or
 ````
 service contrast-server <start|stop|restart|status>
 ````
+Some versions of Linux such as Red Hat Enterprise Linux (RHEL) use ```systemd``` by default. You find can instructions on setting up a systemd service [here](https://support.contrastsecurity.com/hc/en-us/articles/360020852712-How-to-create-a-systemd-service-for-starting-stopping-the-Contrast-server)
 
 #### Non-root installation
 To start the Contrast server independently of the parent shell, execute:
