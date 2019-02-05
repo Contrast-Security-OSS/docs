@@ -29,21 +29,36 @@ Go to the [.NET YAML Template](installation-netconfig.html#net-template) for ful
 
 ## Configuration Options
 
+### Enable the agent 
+
+* **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+
 ### Contrast UI properties
 
 Use the properties in this section to connect the .NET agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-* **contrast**: 
-
-  * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+* **api**: 
   * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.** 
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
-  * **tls_versions**: The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
+  * **tls_versions**: Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
+
+#### Certificate
+
+Use the following properties for communication with the Contrast UI using certificates.
+
+  * **certificate**:
+    * **enable**: If set to `false`, the agent will ignore the certificate configuration in this section.
+
+#### Proxy
+
+Use the following properties for communication with the Contrast UI over a proxy.
 
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
+    * **localhost**: Set the proxy host. It must be set with port and scheme.
+    * **url**: Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
     * **user**: Set the proxy user.
     * **pass**: Set the proxy password.
     * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
@@ -67,8 +82,6 @@ All properties in this section must be put under the `agent` node, as shown in t
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
 
-<!-- Should we put the higher-level 'agent' bullet in these subsections as well? -->  
-
   * **logger**:
     * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
 
@@ -78,6 +91,13 @@ Use the properties in this section to control diagnostic logging. These logs all
 Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors and blocks attacks against your application. They are written to the specified file in the Common Event Format (CEF). The Syslog settings allow you to send security logs to remote servers.
 
   * **security_logger**:
+    * **level**: Set the log level for security logging. Value options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    * **connection_type**: Specify if a connection should be encrypted or plain text. Value options are `ENCRYPTED` or `UNENCRYPTED`.
+
+
+##### Syslog
+
+Define the following properties to set Syslog values. If the properties are not defined, the agent uses the Syslog values from the Contrast UI.
 
     * **syslog**:
       * **enable**: Set to `true` to enable Syslog logging.
@@ -132,7 +152,7 @@ Use the properties in this section to control Assess in the .NET agent. The samp
 
   * **samplings**:
     * **enable**: Set to `false` to disable sampling.
-    * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
+    * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
     * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
 
