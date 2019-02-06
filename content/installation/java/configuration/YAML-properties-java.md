@@ -179,6 +179,7 @@ Use the properties in this section to control Protect features and rules.
 
     * **path-traversal**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      * **aggressive_comment**: Tell the agent to be more aggressive in detecting user inputs as SQL comments. This enables the agent to improve detection of SQL Injection input vectors that use comments to terminate queries. The agent blocks if blocking is enabled.
 
     * **method-tampering**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
