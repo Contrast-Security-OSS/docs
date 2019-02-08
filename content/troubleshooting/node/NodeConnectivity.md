@@ -12,7 +12,7 @@ Check the credentials in *contrast_security.yaml*. This message is typically a r
 
 **Contrast was unable to connect to TeamServer. Continuing without instrumentation.**
 
-This occurs if the agent couldn't communicate with the Contrast application at all. Check to make sure that the `contrast.url` field in *contrast_security.yaml* is correct. It should be in the format `https://app.contrastsecurity.com`. There is no need to specify the */Contrast/* route.
+This occurs if the agent couldn't communicate with the Contrast application at all. Check to make sure that the `api.url` field in *contrast_security.yaml* is correct. It should be in the format `https://app.contrastsecurity.com`. There is no need to specify the */Contrast/* route.
 
 **This application is unwanted by TeamServer and no findings will be reported. Make sure the application is unarchived.**
 
@@ -20,4 +20,4 @@ As is evident from the warning message, this typically occurs when the applicati
 
 ## Set Up Proxies
 
-Sometimes it's necessary to proxy all communication between the agent and the Contrast application. To do this, run the agent with `--contrast.proxy.enable true` and `--contrast.proxy.url <proxy_url>`. Any communication to Contrast will be sent via the proxy server specified in the URL.
+Sometimes it's necessary to proxy all communication between the agent and the Contrast application. To do this, run the agent with `--api.proxy.enable true` and `--api.proxy.url <proxy_url>`. Any communication to Contrast will be sent via the proxy server specified in the URL.

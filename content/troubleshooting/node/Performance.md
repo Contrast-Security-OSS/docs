@@ -9,11 +9,10 @@ As you might expect, Contrast's analysis does make your app run a little slower.
 ## Startup Time
 
 When you start your server with Contrast, you'll notice a delay in startup time. This is first caused by the agent attempting to establish a connection with TeamServer. High latency between the server and TeamServer, or a TeamServer which is under heavy load, may exacerbate the startup time. Where startup time is critical, this cost can be reduced as follows:
-* Run Contrast with the ```--skipAutoUpdate``` flag
-* Run Contrast with the ```--skipLibs``` flag. The agent will not collect information about the application's dependencies.
-* Run Contrast with the ```--localonly``` flag (we don't recommend this, as the agent will subsequently not attempt communication with TeamServer)
+* Run Contrast with `--agent.auto_update.enable false`. This will prevent the agent from checking for updates during its initial communication with TeamServer.
+* Run Contrast with `--inventory.analyze_libraries false`. The agent will not collect information about the application's dependencies.
 
-For most applications, the bulk of the startup time the agents adds is caused by the source code rewrites it performs for instrumentation. This delay scales directly with the amount of source code in the application - dependencies included. Where startup time is critical, this cost can be reduced by running Contrast with the ```--norewrite``` flag. This option is a last resort and should be avoided, as it will drastically reduce the accuracy of our dataflow.
+For most applications, the bulk of the startup time the agents adds is caused by the source code rewrites it performs for instrumentation. This delay scales directly with the amount of source code in the application - dependencies included. Where startup time is critical, this cost can be reduced by running Contrast with the `agent.node.enable_rewrite` flag set to `false`. This option is a last resort and should be avoided, as it will drastically reduce the accuracy of our dataflow.
 
 ## Request Processing Time
 
@@ -21,7 +20,6 @@ It's probably more important to think about how Contrast affects the round-trip 
 
 If better performance is really important to your environment, consider the following options:
 
-* Turn off data flow rules (add ```--nopropagation```)
 * Run Contrast nightly during integration tests
 * Run Contrast in an alternate environment (QA system or DEV environment)
 * Run Contrast on a single node in a load-balanced environment
