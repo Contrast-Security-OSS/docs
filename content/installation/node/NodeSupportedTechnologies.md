@@ -45,3 +45,7 @@ If you want to add test cases, let Contrast know by clicking on the link of your
 
 Contrast runs with a range of third-party technology, including options that aren't listed here. If you want to confirm that Contrast supports your preferred technology, or you'd like to make a case for Contrast to support it, [let Contrast know.](mailto:bugs@contrastsecurity.com)
 
+
+## More Information 
+
+* [Working with Transpilers](installation-node.html#transpiler)
