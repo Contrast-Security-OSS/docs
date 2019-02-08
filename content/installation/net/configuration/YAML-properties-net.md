@@ -61,6 +61,10 @@ All properties in this section must be put under the `agent` node, as shown in t
 
 * **agent**:
 
+#### Auto-update
+
+Use the following properties to control auto-update behavior of the .NET Framework Agent.  These settings do not apply to the .NET Core agent, which does not have the capability to auto-update.
+
   * **auto_update**:
     * **enable**: Set to `true` for the agent to automatically upgrade to newer versions.
     * **checks:** Set the frequency with which the agent checks for updates. Valid values are `daily` for every 24 hours and on startup, or `startup` for *only* when service starts up.

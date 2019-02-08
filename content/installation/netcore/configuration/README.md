@@ -1,0 +1,1 @@
+This section should be the same as for regular .NET agent, so just link to that from here.

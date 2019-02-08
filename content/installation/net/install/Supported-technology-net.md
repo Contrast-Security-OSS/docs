@@ -20,9 +20,8 @@ The Contrast .NET agent supports analysis of web applications built on the follo
 >**Notes:** 
 > * The **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. The Profiler API is an interface based on a **Component Object Model (COM)**, and isn't supported on Linux.
 > * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime. 
-> * Contrast doesn't support analysis of .NET Core applications at this time because .NET Core applications run on a different runtime (CoreCLR).
 
-##.NET for Azure App Service 
+## .NET for Azure App Service 
 
 The .NET agent for Azure App Service supports analysis of web applications built on the following technologies.
 
