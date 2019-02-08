@@ -15,22 +15,20 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 
 **Minimum requirements:**
 
-* .NET Framework 4.5.1 present
-* .NET Core 2.1 present
+* .NET Framework 4.5.1 or later present
+* .NET Core 2.1 or later present
 * 2 CPU
 * 4 GB memory
 * Windows operating system
 
 **Recommended requirements:**
 
-* .NET Framework 4.5.1 present
-* .NET Core 2.1 present
 * 4+ CPU
 * 8+ GB memory  
 
 > **Notes:** 
-> * The server must have .NET Framework 4.5.1 installed;  This is only used to start up the agent and connect to Contrast UI. This requirement doesn't extend to applications that need to be analyzed. The .NET Core agent can analyze web applications that run on supported CoreCLR Runtimes (CLRs): CoreClr v. 2.1 and above.
+> * The server must have .NET Framework 4.5.1 or later installed;  This is only used to start up the agent and connect to the Contrast UI.  This requirement doesn't extend to applications that need to be analyzed. The .NET Core agent can analyze web applications that run on a supported CoreCLR Runtime (CLR): CoreClr v. 2.1 and above.
 >
 > * The .NET agent running under Assess mode roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the .NET agent is not installed. 
 >
-> * The .NET agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by analyzed applications. The Contrast .NET Core agent currently cannot exist alongside other .NET Profiler agents, such as performance or APM tools.
+> * The .NET agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by analyzed applications. The Contrast .NET Core agent, unlike the .NET Framework, currently cannot exist alongside other .NET Profiler agents, such as performance or APM tools.

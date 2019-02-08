@@ -39,14 +39,25 @@ the agent directory]___
 * CORECLR_ENABLE_PROFILING: ___1___
 * CORECLR_PROFILER: ___{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}___
 * CONTRAST_INSTALL_DIRECTORY: ___[Path to agent directory]___
-* AGENT__DOTNET__CONTAINER: true,
+* AGENT__DOTNET__CONTAINER: true
 * CONTRAST_CONFIG_PATH: path to yaml config file, such as ```contrast_security.yaml```
 
-These environment variables ca be set as part of your application startup script, or as a ASP.NET Core launch profile.  For example:
+### Running under IIS
 
+Either set the environment variables on the
+
+* [Application Pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) on the server
+
+* [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables) in application web.config
+
+
+### Running with a launch profile
+
+These environment variables ca be set as part of your application startup script, or as a ASP.NET Core launch profile.  
+
+>For Example:
 ```json
-    "MyAppWithContrastAgent": {
-      ...
+    "MyAppWithContrastAgent": {      
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "CORECLR_PROFILER_PATH_64": "c:\\contrast\\dotnetcore\\ContrastProfiler-64.dll",
@@ -57,12 +68,12 @@ These environment variables ca be set as part of your application startup script
         "AGENT__DOTNET__CONTAINER": "true",
         "CONTRAST_CONFIG_PATH": "c:\\contrast\\config\\MyApp\\contrast_security.yaml"
       }
-      ...
+      // other settings
     }
 
 ```
 
-The application can then be run with 
+The application can then be run with: 
 ```
 dotnet run --launch-profiler MyAppWithContrastAgent
 ```
