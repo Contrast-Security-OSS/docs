@@ -26,6 +26,21 @@ While very uncommon, our instrumentation can introduce some errors. These types 
 
 **Contrast has changed data in a way that changes the behavior of the application.** For example, data has been malformed by the agent and may break some business logic or cause conditional statements to pass or fail incorrectly. This is very rare, as Contrast tries to avoid ever modifying the *meaning* of the data. This is often the hardest type of problem to pin down, as on the surface it may seem like the application is fully functional. If you suspect the agent is doing this somewhere, please try to track down what behavior is changing and how it is changing from when the application is run without Contrast. With a known behavior, it becomes easier to track which data is being incorrectly changed. If it is possible to cause a stack trace once you know where this is happening, this information can make it much easier for us to figure out what we're breaking.
 
+## Scenario: Contrast Assess makes my application prohibitively slow.
+
+While it's normal to experience some overhead from our Assess instrumentation, it shouldn't be bad enough that the application is unuseable.
+However, this has been known to happen if the agent is monitoring too many calls it doesn't need to.
+For example, the agent may try to observe too many function calls in intentionally slow operation such `bcrypt` hashing function, and the overhead this causes makes the application very slow to respond.
+
+We try to avoid these situations as much as possible.
+To handle them, the agent employs something we call dead-zoning. 
+Dead-zoning disables instrumentation during operations which are too expensive to follow in detail, or which the agent does not need to watch to begin with.
+When we suspect that our instrumentation in a library such as `bcrypt-js` is responsible for this kind of performance degredation, we will add it to our list of dead-zones.
+
+If you suspect something like this is causing performance issues in your application, you can add a deadzone for a library with the `agent.node.unsafe.deadzones` option, which accepts a comma-separated lists of the modules you wish to deadzone.
+If this works, please reach our to our Support team, especially if the module is a public one available in npm.
+We can use this information to update our internal dead-zoning policy and improve the way we detect modules which need to be dead-zoned automatically.
+
 ## More Information
 
 [Node.js Agent Configuration](installation-node.html#node-config)
