@@ -1,3 +1,4 @@
+
 <!--
 title: "Contrast .NET Agent Installation"
 description: "Contrast .NET Agent Installation."
@@ -10,52 +11,59 @@ To install the .NET agent, complete the following steps.
 
 * Log in to the Contrast UI. 
 * Click the button in the top navigation bar to **Add Agent**.
-* Select the **.NET Core** in the dropdown menu, and click the button to **Download Agent**. You might need to specify proxy authentication information required by your network before downloading the agent.
-* Extract the downloaded zip archive (e.g., *ContrastSetup_18.4.56.zip*) on the web server, and place it in a directory that your applications can access. 
+* Select **.NET Core** in the dropdown menu, and click the **Download Agent** button for the platform your application will be hosted on. You might need to specify proxy authentication information, if required by your network, before downloading the agent.
+* Proceed to step 2 and click on the **Download Config File** button to download the agent's configurations.
+* On the web server, extract the downloaded zip archive (e.g. *ContrastSetup_18.4.56.zip*) to a directory that your applications have sufficient permissions to access.
+* On the web server, place the downloaded config file in a directory that your applications have sufficient permissions to access.
 
 
 ## Customize Your Installation
 
-The downloaded zip archive contains a file called *contrast_security.yaml* which is used by the agent for configuration. This includes the authentication credentials and proxy settings the agent needs to connect to Contrast. 
+The downloaded configuration file called *contrast_security.yaml* is used by the agent to configure authentication credentials and proxy settings used to connect to Contrast. 
 
 You can fully configure the agent using the *contrast_security.yaml* file. See the agent [configuration](installation-netconfig.html#net-yaml) instructions for more information.
 
 > **Example:** To change the default log level of the .NET agent, update the *contrast_security.yaml* file, add a new line and the code below, and then continue the installation as normal.
- ```
+ ```yaml
  agent:
   logger:
     level: TRACE
  ```
-
-**Note:** If you have application-specific customizations, you can copy the *contrast_security.yaml* to a separate folder or rename it.  Otherwise all applications could use the same configuration file.
-
+ 
 ## Enable .NET Core Agent
 
-To enable the .NET Core agent on your application, you will need to set the following environment variables before running your application
+To enable the .NET Core agent on your application, you will need to set the following environment variables before running your application:
 
-* CORECLR_PROFILER_PATH_64: ___[Path to ```ContrastProfiler-64.dll``` in 
-the agent directory]___
-* CORECLR_PROFILER_PATH_32: ___[Path to ```ContrastProfiler-32.dll``` in the agent directory]___
-* CORECLR_ENABLE_PROFILING: ___1___
-* CORECLR_PROFILER: ___{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}___
-* CONTRAST_INSTALL_DIRECTORY: ___[Path to agent directory]___
-* AGENT__DOTNET__CONTAINER: true
-* CONTRAST_CONFIG_PATH: path to yaml config file, such as ```contrast_security.yaml```
+* CORECLR_PROFILER_PATH: ___Use the below matrix to find the correct profiler path___
+* CORECLR_ENABLE_PROFILING: `1`
+* CORECLR_PROFILER: `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}`
+* CONTRAST_INSTALL_DIRECTORY: ___{{ Unzipped Directory Root }}___
+* AGENT__DOTNET__CONTAINER: `true`
+* CONTRAST_CONFIG_PATH: ___Path to yaml config file, such as ```contrast_security.yaml```___
+
+| Platform | Profiler Path |
+|--|--|
+| Windows (64-bit) | `{{ Unzipped Directory Root }}\runtimes\win-x64\native\ContrastProfiler.dll` |
+| Windows (32-bit) | `{{ Unzipped Directory Root }}\runtimes\win-x86\native\ContrastProfiler.dll` |
+| Linux (64-bit) | `{{ Unzipped Directory Root }}/runtimes/linux-x64/native/ContrastProfiler.so` |
+| OSX (64-bit) | `{{ Unzipped Directory Root }}/runtimes/osx-x64/native/ContrastProfiler.so` |
+
+> **Note:** the platform's CPU architecture is based on the CoreCLR's "bitness". For example, when using a 32-bit CoreCLR you must use the 32-bit profiler even if the OS is 64-bit.
+> **Note:** only the Windows platform is supported at this time.
 
 ### Running under IIS
 
-Either set the environment variables on the
+Set the environment variables using either of these two methods:
+
+* In application web.config via [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables) (recommended)
 
 * [Application Pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) on the server
 
-* [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables) in application web.config
-
-
-### Running with a launch profile
+### Running with a Launch Profile
 
 These environment variables ca be set as part of your application startup script, or as a ASP.NET Core launch profile.  
 
->For Example:
+> **Example:**
 ```json
     "MyAppWithContrastAgent": {      
       "environmentVariables": {
@@ -70,11 +78,10 @@ These environment variables ca be set as part of your application startup script
       }
       // other settings
     }
-
 ```
 
 The application can then be run with: 
-```
+```powershell
 dotnet run --launch-profiler MyAppWithContrastAgent
 ```
 
