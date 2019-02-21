@@ -1,10 +1,10 @@
 <!--
-title: "YAML configuration for the .NET agent "
-description: "Instructions and template for configuring .NET agent properties via YAML file"
-tags: "installation net agent YAML configuration rules properties"
+title: "YAML configuration for the .NET Core agent "
+description: "Instructions and template for configuring .NET Core agent properties via YAML file"
+tags: "installation net core agent YAML configuration rules properties"
 -->
 
-Contrast support YAML-based configuration for the .NET agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
+Contrast support YAML-based configuration for the .NET Core agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
 
 > **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
@@ -24,14 +24,14 @@ The *contrast_security.yaml* file should be placed on the file system using one 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
 * Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.)
 
-Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
+Go to the [.NET Core YAML Template](installation-netcoreconfig.html#netcore-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 
 ## Configuration Options
 
 ### Contrast UI properties
 
-Use the properties in this section to connect the .NET agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
+Use the properties in this section to connect the .NET Core agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
 * **contrast**: 
 
@@ -40,7 +40,7 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
-  * **tls_versions**: The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
+  * **tls_versions**: The .NET Core agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
 
   * **certificate**: 
     * **enable**: If set to `false`, the certificate configuration in this section will be ignored.
@@ -54,23 +54,10 @@ Use the properties in this section to connect the .NET agent to the Contrast UI.
 
 ### Contrast agent properties
 
-Use the properties in this section to control the way and frequency with which the .NET agent communicates to logs and to the Contrast UI.
+Use the properties in this section to control the way and frequency with which the .NET Core agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
 All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-netconfig.html#net-template). 
-
-* **agent**:
-
-#### Auto-update
-
-Use the following properties to control auto-update behavior of the .NET agent. 
-
-> **Note:** These settings don't apply to the .NET Core agent, which doesn't have the capability to auto-update.
-
-  * **auto_update**:
-    * **enable**: Set to `true` for the agent to automatically upgrade to newer versions.
-    * **checks:** Set the frequency with which the agent checks for updates. Valid values are `daily` for every 24 hours and on startup, or `startup` for *only* when service starts up.
-
 
 #### Diagnostic logging
 
@@ -100,7 +87,7 @@ Use the properties in this section to control security logging. These logs allow
 
 #### Agent-specific properties
 
-The following properties apply to any .NET agent-wide configurations. <!-- More words here... -->
+The following properties apply to any .NET Core agent-wide configurations. <!-- More words here... -->
 
   * **dotnet**:
 
@@ -119,7 +106,7 @@ The following properties apply to any .NET agent-wide configurations. <!-- More 
 
 ### Inventory properties
 
-Use the properties in this section to control inventory features in the .NET agent.
+Use the properties in this section to control inventory features in the .NET Core agent.
 
   * **inventory**:
     * **enable**: Set to `false` to disable Inventory features in the agent.
@@ -128,7 +115,7 @@ Use the properties in this section to control inventory features in the .NET age
 
 ### Contrast Assess properties
 
-Use the properties in this section to control Assess in the .NET agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
+Use the properties in this section to control Assess in the .NET Core agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
 
 > **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.  
 

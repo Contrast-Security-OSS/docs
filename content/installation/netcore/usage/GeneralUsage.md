@@ -1,32 +1,35 @@
 <!--
-title: ".NET Agent Supported Technologies"
-description: "General Usage of the Contrast .NET Agent"
-tags: "installation usage agent .Net"
+title: ".NET Agent Usage"
+description: "General Usage of the Contrast .NET Core Agent"
+tags: "installation usage agent .NET Core"
 -->
 
 ## How It Works
 
-Contrast agents are designed to require little to no interaction from the user to setup instrumentation on a .NET Core application. Once the environment is setup, through environment variables or application launch profile, the .NET Core agent will automatically instrument the ASP.NET Core application.  Agent analysis is performed as applications are exercised by users (or by automated scripts or tests). You can view the results of the agent's analysis on the [Contrast website](https://app.contrastsecurity.com).
+The Contrast agent is designed to require little to no interaction from the user to setup instrumentation on a .NET Core application. Once the environment is set up through environment variables or application launch profile, the .NET Core agent automatically instruments the ASP.NET Core application. The agent performs analysis as users (or automated scripts or tests) exercise applications. You can view the results of the agent's analysis in the [Contrast UI](https://app.contrastsecurity.com).
 
-The Contrast .NET Core agent consists of a two components, both running within the same process as your application.
+The Contrast .NET Core agent consists of a two components that both run within the same process as your application.
 
-* **.NET Profiler** that instruments applications to weave in method calls out to agent sensors. 
+* The **.NET Profiler** that instruments applications to weave in method calls out to agent sensors. 
 
 * **Sensors** that gather security, architecture and library information. 
 
-These components are located in several DLL files that you may download from the Contrast website.  They can be placed anywhere on disk and do not need to be placed in your application folder.
+These components are located in several DLL files that you may download from the Contrast UI. You can place them anywhere on disk, and don't need to be placed in your application folder.
 
 ## Agent Updates
 
-Since the .NET Core agent is running alongside your application, it cannot update itself.  To update the agent replace the agent files in the agent directory and restart your application.
+Since the .NET Core agent is running alongside your application, it can't update itself. To update the agent, replace the agent files in the agent directory and restart your application.
 
 ## Analysis
 
 ### Start the agent 
 
-The agent will automatically start along with your application as long as the environment is setup as described in [.NET Core installation].  
+The agent automatically starts with your application as long as the environment is setup as described in [.NET Core installation](installation-netcoreinstall.html).  
 
 ### Stop the agent 
 
-To stop the agent, stop the application and remove agent from its environment.  Alternately you may just change the ```CORECLR_ENABLE_PROFILING``` setting to 0.
+To stop the agent, stop the application and remove agent from its environment. Alternately, you may change the `CORECLR_ENABLE_PROFILING` setting to "0".
 
+## IIS Express 
+
+The installation for the IIS Express users is the same as self-hosted applications.

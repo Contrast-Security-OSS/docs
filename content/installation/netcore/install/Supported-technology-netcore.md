@@ -4,7 +4,7 @@ description: "Contrast .NET agent supported technology"
 tags: "installation agent .NET windows azure supported technology"
 -->
 
-## .NET for Windows
+## .NET Core for Windows
 
 The Contrast .NET agent supports analysis of web applications built on the following technologies.
 
@@ -21,8 +21,8 @@ The Contrast .NET agent supports analysis of web applications built on the follo
 >**Notes:** 
 > * The **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. 
 > * Running in Linux is currently not supported.
-> * ASP.NET Core applications running under .NET Framework is not supported
+> * ASP.NET Core applications running under the .NET framework aren't supported.
 
-## .NET Core for Azure App Service 
+<!-- ## .NET Core for Azure App Service 
 
-TBD if we will support in the first release.
+TBD if we will support in the first release. -->
