@@ -1,12 +1,12 @@
 <!--
-title: "Contrast .NET Agent Supported Technology"
-description: "Contrast .NET agent supported technology"
-tags: "installation agent .NET windows azure supported technology"
+title: "Contrast .NET Core Agent Supported Technology"
+description: "Contrast .NET Core agent supported technology"
+tags: "installation agent .NET Core windows azure supported technology"
 -->
 
 ## .NET Core for Windows
 
-The Contrast .NET agent supports analysis of web applications built on the following technologies.
+The Contrast .NET Core agent supports analysis of web applications built on the following technologies.
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
@@ -18,9 +18,8 @@ The Contrast .NET agent supports analysis of web applications built on the follo
 | Processor Architecture     | The agent can be installed on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications. |
 | Web Application Frameworks | ASP.NET Core |
 
->**Notes:** 
-> * The **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. 
-> * Running in Linux is currently not supported.
+> * **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. 
+> * Linux is currently not supported.
 > * ASP.NET Core applications running under the .NET framework aren't supported.
 
 <!-- ## .NET Core for Azure App Service 
