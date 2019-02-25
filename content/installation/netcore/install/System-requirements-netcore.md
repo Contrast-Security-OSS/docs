@@ -16,8 +16,8 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 
 ## Minimum Requirements
 
-* .NET Framework 4.5.1 or later present
-* .NET Core 2.1 or later present
+* .NET Framework >= 4.7.0
+* .NET Core >= 2.1 < 3.0 (installed system-wide)
 * 2 CPU
 * 4 GB memory
 * Windows operating system
@@ -28,7 +28,7 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 * 8+ GB memory  
 
 > **Notes:** 
-> * The server must have .NET Framework 4.5.1 or later installed; this is only used to start up the agent and connect to the Contrast UI. This requirement doesn't extend to applications that need to be analyzed. The .NET Core agent can analyze web applications that run on a supported CoreCLR Runtime (CLR): CoreClr v. 2.1 and above.
+> * The server must have .NET Framework 4.7.0 or later installed; this is only used to start up the agent and connect to the Contrast UI. This requirement doesn't extend to applications that need to be analyzed. The .NET Core agent can analyze web applications that run on a supported CoreCLR Runtime (CLR): CoreClr v. 2.1 and above.
 >
 > * The .NET Core agent running in Assess mode roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the .NET agent isn't installed. 
 >

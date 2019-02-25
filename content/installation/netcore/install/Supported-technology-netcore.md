@@ -20,6 +20,9 @@ The Contrast .NET Core agent supports analysis of web applications built on the 
 
 > * **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. 
 > * Linux is currently not supported.
+> * Self-contained deployments are currently not supported.
+> * Framework-dependent executables are currently not supported.
+> * .NET Core >= 3.0 is currently not supported.
 > * ASP.NET Core applications running under the .NET framework aren't supported.
 
 <!-- ## .NET Core for Azure App Service 
