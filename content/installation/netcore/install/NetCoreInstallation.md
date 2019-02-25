@@ -21,7 +21,18 @@ To install the .NET agent, complete the following steps.
 
 The agent uses the downloaded configuration file, *contrast_security.yaml*, to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration instructions](installation-netcoreconfig.html#netcore-yaml) for more information.
 
- 
+### Permissions
+
+Ensure that the following paths are accessible by the run-time user of the application.
+
+| Path | Permissions |
+|--|--|
+| Path to yaml config file, such as `contrast_security.yaml` | Read |
+| \{\{ Unzipped Directory Root \}\} | Read |
+| C:\ProgramData\Contrast\dotnet\LOGS | Read/Write |
+
+When running in IIS, make sure the app pool can access the above paths. For example, given an an app pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the _effective_ permissions to **read** the unzip directory root.
+
 ## Enable .NET Core Agent
 
 To enable the .NET Core agent on your application, you must set the following environment variables before running your application.
@@ -37,8 +48,6 @@ To enable the .NET Core agent on your application, you must set the following en
 |--|--|
 | Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
-| Linux (64-bit) | \{\{ Unzipped Directory Root \}\}/runtimes/linux-x64/native/ContrastProfiler.so |
-| OSX (64-bit) | \{\{ Unzipped Directory Root \}\}/runtimes/osx-x64/native/ContrastProfiler.so |
 
 > **Notes:** 
  * The platform's CPU architecture is based on the CoreCLR's "bitness". For example, when using a 32-bit CoreCLR you must use the 32-bit profiler even if the OS is 64-bit.
@@ -52,9 +61,32 @@ Set the environment variables using either of these two methods:
 
 * [Application Pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) on the server
 
+> **Example:** Using the "web.config" method:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <remove name="aspNetCore" />
+      <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />
+    </handlers>
+    <aspNetCore processPath="dotnet" arguments=".\ExampleNetCoreApp.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout">
+      <environmentVariables>
+        <environmentVariable name="CORECLR_PROFILER_PATH" value="C:\contrast\dotnetcore\runtimes\win-x64\native\ContrastProfiler.dll" />
+        <environmentVariable name="CORECLR_ENABLE_PROFILING" value="1" />
+        <environmentVariable name="CORECLR_PROFILER" value="{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}" />
+        <environmentVariable name="CONTRAST_INSTALL_DIRECTORY" value="C:\contrast\dotnetcore\" />
+        <environmentVariable name="AGENT__DOTNET__CONTAINER" value="true" />
+        <environmentVariable name="CONTRAST_CONFIG_PATH" value="C:\contrast\dotnet\contrast_security.yaml" />
+      </environmentVariables>
+    </aspNetCore>
+  </system.webServer>
+</configuration>
+```
+
 ### Running with a Launch Profile
 
-You can set these environment variables as part of your application startup script, or as an ASP.NET Core launch profile.  
+Set the environment variables as part of your application startup script, or as an ASP.NET Core launch profile.
 
 > **Example:**
 ```json
