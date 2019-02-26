@@ -4,6 +4,7 @@ description: "Installing the Ruby Agent"
 tags: "Ruby on Rails agent installation"
 -->
 
+## Installation 
 
 To install the Contrast agent into your Ruby application, you must complete the following steps.  
 
