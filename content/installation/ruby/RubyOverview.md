@@ -16,5 +16,5 @@ From its position within the Rack middleware stack, the Ruby agent inspects HTTP
 
 ## Use the Agent 
 
-To Assess and Protect your application, download the Ruby agent and create a configuration file as described in [Ruby Agent Installation](installation-ruby.html#ruby-install). The Ruby agent is installed as a standard Ruby Gem.
+To Assess or Protect your application, download the Ruby agent and create a configuration file as described in [Ruby Agent Installation](installation-ruby.html#ruby-install). The Ruby agent is installed as a standard Ruby Gem.
 
