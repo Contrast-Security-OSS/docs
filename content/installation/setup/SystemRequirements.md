@@ -18,7 +18,7 @@ The Contrast application for Enterprise on Premises (EOP) includes a Tomcat serv
 | **OS Architecture** | 64-bit | 64-bit | Due to memory requirements, the Contrast application can **only** run on 64-bit architectures. |
 | **Operating System** | <ul><li>Microsoft Windows 2012 R2</li> <li>Ubuntu 12.04 LTS</li><li>Centos 6</li></ul> | <ul><li>Microsoft Windows 2012 R2  </li><li>  Ubuntu 14.04 LTS </li><li> Centos 7</li></ul>| Any modern Operating System **should** run Contrast. Contrast officially supports the following: <ul><li>Ubuntu Linux </li><li> Debian Linux </li><li> Redhat Enterprise Linux </li><li> Centos Linux </li><li> Windows 2012 R2 </li> |
 | **Java** | 1.8 | 1.8 | |
-| **MySQL** | 5.7 | 5.7.23 | We currently run 5.7.23 in AWS. We don't anticipate any issues if you run a different build of MySQL 5.7 but if you do please open a support ticket.  MySQL versions 8 and higher are currently **not** supported |
+| **MySQL** | 5.7 | 5.7.23 | Contrast currently runs 5.7.23 in AWS. Contrast doesn't anticipate any issues if you run a different build of MySQL 5.7; if you do experience an issue, please open a Support ticket.  MySQL versions 8 and higher are currently **not** supported |
 
 ## MySQL Shared Libraries
 To run Contrast, you must preconfigure your base operating system with a shared library for running MySQL. Depending on which operating system you deployed with Contrast, follow the installation options below:
