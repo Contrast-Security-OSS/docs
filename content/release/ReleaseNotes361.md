@@ -7,7 +7,13 @@ tags: "3.6.1 February Release Notes"
 
 ## Fixes
 
-* 
+* The Contrast UI loads correctly in Internet Explorer 11. CONTRAST-30517
+* The **Libraries** grid loads correctly, even if you sent a library to a bugtracker. CONTRAST-30162
+* Timestamps are back in the **Vulnerabilities** and **Servers** grids. CONTRAST-26685
+* Custom banners are fixed at the bottom of the grids pages. CONTRAST-30228
+* The **Servers** grid is immediately populated once you onboard your first application. CONTRAST-29893
+* The Build Numbers filter has returned to each application's Vulnerabilities tab. CONTRAST-30618
+* Add an exclusion for a Protect Rule from an attack Overview page. CONTRAST-21582
 
 ## Improvements
 
