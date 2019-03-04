@@ -14,6 +14,7 @@ tags: "3.6.1 February Release Notes"
 * The **Servers** grid is immediately populated once you onboard your first application.
 * The Build Numbers filter has returned to each application's **Vulnerabilities** tab.
 * You can add an exclusion for a Protect Rule from an attack **Overview** page.
+* Java launchers cannot download a new Java agent.
 
 ## Improvements
 
@@ -31,7 +32,7 @@ The .NET team fixed race conditions when evaluating exclusions and capturing a s
 
 ### Node.js summary 
 
-The Node team resolved an issue where the *asar* library was causing an `npm` audit run to fail. The NoSQL rule was updated to catch a potential attack using the not equal operator. A issue where the agent couldn't be installed on a bare-bones Linux distribution due to a dependency of a dependency relying on the git executable being available was closed.
+The Node team resolved an issue where the *asar* library was causing an `npm` audit run to fail. We updated the NoSQL rule to catch a potential attack using the not equal operator. We also closed an issue where the agent couldn't be installed on a bare-bones Linux distribution due to a dependency of a dependency relying on the git executable being available.
 
 ### Ruby summary 
 
@@ -39,5 +40,5 @@ The Ruby team has focused on performance and security updates in the Assess feat
 
 ### Python summary
 
-The Python agent team added support for the urllib3 and requests library for the SSRF Protect Rule. There were additional updates for performance and code stability in how Protect Rules are applied to sinks.
+The Python agent team added support for the urllib3 and requests library for the SSRF Protect Rule. We made additional updates for performance and code stability in how Protect Rules are applied to sinks.
 
