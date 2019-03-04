@@ -14,7 +14,7 @@ tags: "3.6.1 February Release Notes"
 * The **Servers** grid is immediately populated once you onboard your first application.
 * The Build Numbers filter has returned to each application's **Vulnerabilities** tab.
 * You can add an exclusion for a Protect Rule from an attack **Overview** page.
-* Java launchers cannot download a new Java agent.
+* Java launchers can download a new Java agent.
 
 ## Improvements
 
