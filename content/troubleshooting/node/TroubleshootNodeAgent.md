@@ -16,6 +16,10 @@ Here are a few things you can do:
 
 Part of our instrumentation process involves rewriting source as it's loaded into the module cache. The agent may fail to rewrite some files for a number of reasons: unexpected syntax, weird character encodings, etc. When this happens, the agent will log its failure and load the original, unmodified source into the module cache. While we may have difficulty following dataflow through these files, everything else should work as normal. Simply, if you are seeing these messages: please let us know!
 
+## Scenario: Invalid ELF Header
+
+An Invalid ELF Header error occurs when a native C++ module targeting Linux has been compiled for a non-Linux target. This error typically occurs when the agent is installed on one system and then copied over to another. To fix, ensure that you are installing the agent from a compatible system.
+
 ## Scenario: Contrast causes my application to misbehave.
 
 While very uncommon, our instrumentation can introduce some errors. These types of problems are very high priority for us and are usually quickly escalated to one of our engineers; any information you can provide about the bug is very helpful to us in getting it fixed as fast as possible. When this happens, it's usually in one of three ways.

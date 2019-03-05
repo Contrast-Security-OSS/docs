@@ -32,7 +32,7 @@ Contrast doesn't guarantee support for old or deprecated versions of third-party
 
 ## OS Support
 
-The agent runs entirely in the Node.js application layer with no *C* dependencies. As a result, it works on **the same operating systems as Node.js**, including Linux, Windows, macOS and Unix.
+The agent runs in the Node.js application layer with some C++ dependencies. As a result, it works on **the same operating systems as Node.js**, including Linux, Windows, macOS and other Unix-like systems, assuming there is a C++ compiler toolchain installed.
 
 ## Testing Environments
 
