@@ -1,7 +1,7 @@
 <!--
-title: "Reporting Issues with Contrast Java SDK"
-description: "Reporting Issues with Contrast Java SDK"
-tags: "troubleshoot Report Issues Github SDK Java"-->
+title: "Reporting Issues with the Contrast SDK"
+description: "Reporting Issues with the Contrast SDK"
+tags: "troubleshoot SDK Report Issues Github Java"-->
 
 
-If you find an issue with the Contrast Java SDK, please let us know by [opening an issue](https://github.com/Contrast-Security-OSS/contrast-sdk-java/issues) on the GitHub page for the SDK. Select the **New Issue** button on the right hand side of the page to specify and submit. Thanks!
+If you find an issue with the Contrast SDK, please let us know by [opening an issue](https://github.com/Contrast-Security-OSS/contrast-sdk-dotnet/issues) in GitHub. Select the **New Issue** button on the right hand side of the page to specify and submit. Thanks!
