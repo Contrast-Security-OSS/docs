@@ -43,13 +43,13 @@ Are you sure the Engine was installed correctly? Here's a checklist of common fi
 
 There are a few network-related reasons why your server wouldn't appear on Contrast's installation wizard, even if Contrast was installed correctly. Assuming you've seen the Contrast and server's startup messages in your console on startup, consider the following options.
 
-**Your network requires a HTTP proxy to access Contrast's site**
+**Your network requires a HTTP proxy to access Contrast's site.**
 If you need to configure an HTTP proxy to reach the Internet in your web browser, it's very likely Contrast will also require an HTTP proxy. To add an one off HTTP proxy, select "Advanced Configuration" and then "Use HTTP Proxy"in the Agent download screen. Fill out values for the HTTP proxy host and port. These values should be supplied by your network administrators. Finally, download and install Contrast as per the normal instructions.
 
-**Your network firewall doesn't allow outbound HTTP connections to Contrast's site**
-Work with your network administrators to allow the server on which the Agent is running to create outbound HTTP requests to the Contrast TeamServer from which you obtained said Agent. For SaaS users, this is *app.contrastsecurity.com* on port 443.
+**Your network firewall doesn't allow outbound HTTP connections to Contrast's site.**
+Work with your network administrators to allow the server on which the Agent is running to create outbound HTTP requests to the Contrast application from which you obtained the agent. For SaaS users, this is *app.contrastsecurity.com* on port 443.
 
-**You're suffering from the Windows and Java7 IPv6 bug**
+**You're suffering from the Windows and Java7 IPv6 bug.**
 Starting with Java 7, the behavior of the IP stack is to utilize [IPv6 addresses](http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html) if available. On [Windows](http://bugs.java.com/bugdatabase/view_bug.do?bug_id=7095419), this causes problems with Java machines attempting to make connections out and results in inexplicable "PermissionDenied" exceptions. To fix, this, add ```-Djava.net.preferIPv4Stack=true``` to your JVM options.
 
 The Contrast engine ships with a diagnostic tool that can be run by passing the "diagnostic" argument to ***contrast.jar***. This may help you identify your problem area.
@@ -69,13 +69,17 @@ $ java -jar contrast.jar diagnostic
 [+] Client can connect directly to the Contrast TeamServer. No proxy needed.
 ````
 
-You can also customize the diagnostic test and quickly test out different proxy and NTLM configurations by setting the following System properties:
-* proxy.host - the proxy hostname or IP address.
-* proxy.port - the proxy port (usually 80 or 8080).
-* proxy.auth - one of "none", "basic", "digest" or "ntlm".
-* proxy.user - your proxy user name, if authentication is needed. For NTLM proxies, this is usually DOMAIN\username.
-* proxy.pass - your proxy password, if authentication is needed.
-* contrast.teamserver.url - a different URL than that supplied by the TeamServer at time of download
+You can also customize the diagnostic test and quickly test out different proxy and NTLM configurations by setting the following system properties:
+
+* `api.proxy.host`: The proxy hostname or IP address.
+* `api.proxy.port`: The proxy port (usually 80 or 8080).
+* `api.proxy.auth_type`: Values can be "none", "basic", "digest" or "ntlm".
+* `api.proxy.user`: Your proxy user name, if authentication is needed. For NTLM proxies, this is usually DOMAIN\username.
+* `api.proxy.pass`: Your proxy password, if authentication is needed.
+* `api.url`: A different URL than that supplied by the Contrast application at time of download.
+* `api.proxy.scheme`: The protocol you're using (http/https).
+* `agent.java.automatic_boot_delegation`
+
 
 ## Scenario: I see OutOfMemoryError, PermGen or other unexplained stack traces
 
@@ -84,7 +88,7 @@ If you're running into unexplained OutOfMemoryErrors, NoClassDefFoundErrors that
 * You're running an unsupported container or version.
 * An unsupported OSGi container within your application is causing class loading issues with Contrast.
 
-If you have enough memory, are running a supported container, and aren't doing any class visibility funkiness, send us some details at bugs@contrastsecurity.com.
+If you have enough memory, are running a supported container, and aren't doing any class visibility funkiness, send us some details at support@contrastsecurity.com.
 
 ## Scenario: I see "java.io.IOException: Can't promise read/write on cache dir" error when starting up
 
