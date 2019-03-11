@@ -19,21 +19,21 @@ To install the .NET agent, complete the following steps.
 
 ## Customize Your Installation
 
-The agent uses the downloaded configuration file, *contrast_security.yaml*, to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration instructions](installation-netcoreconfig.html#netcore-yaml) for more information.
+The agent uses the downloaded configuration file, *contrast_security.yaml*, to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration guidelines](installation-netcoreconfig.html#netcore-yaml) for more information.
 
 ### Permissions
 
-Ensure that the following paths are accessible by the run-time user of the application.
+Ensure that the following paths are accessible by the runtime user of the application.
 
 | Path | Permissions |
 |--|--|
-| Path to yaml config file, such as `contrast_security.yaml` | Read |
+| The path to YAML configuration file, such as *contrast_security.yaml*. | Read |
 | \{\{ Unzipped Directory Root \}\} | Read |
 | C:\ProgramData\Contrast\dotnet\LOGS | Read/Write |
 
-When running in IIS, make sure the app pool can access the above paths. For example, given an an app pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the _effective_ permissions to **read** the unzip directory root.
+When running in IIS, make sure the application pool can access the above paths. For example, given an an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
 
-## Enable .NET Core Agent
+## Enable the Agent
 
 To enable the .NET Core agent on your application, you must set the following environment variables before running your application.
 
@@ -50,16 +50,16 @@ To enable the .NET Core agent on your application, you must set the following en
 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
 
 > **Notes:** 
- * The platform's CPU architecture is based on the CoreCLR's "bitness". For example, when using a 32-bit CoreCLR you must use the 32-bit profiler even if the OS is 64-bit.
+ * The platform's CPU architecture is based on the CoreCLR's "bitness". For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
  * Only the Windows platform is supported at this time.
 
 ### Running under IIS
 
 Set the environment variables using either of these two methods:
 
-* In application web.config via [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables) (recommended)
+* In the application *web.config* via [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables) (recommended)
 
-* [Application Pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) on the server
+* The [application pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) on the server
 
 > **Example:** Using the "web.config" method:
 ```xml
@@ -86,7 +86,7 @@ Set the environment variables using either of these two methods:
 
 ### Running with a Launch Profile
 
-Set the environment variables as part of your application startup script, or as an ASP.NET Core launch profile.
+Set the environment variables as part of your application startup script or as an ASP.NET Core launch profile.
 
 > **Example:**
 ```json

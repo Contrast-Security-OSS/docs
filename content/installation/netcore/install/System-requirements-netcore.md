@@ -4,7 +4,7 @@ description: "Contrast .NET Core agent system requirements"
 tags: "installation agent .NET Core system requirements"
 -->
 
-## Prerequisites 
+## Before You Start 
 
 Before installing the .NET Core agent, confirm that you can meet the following requirements:
 
@@ -17,13 +17,13 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 
 * .NET Framework >= 4.7.0 installed
 * .NET Core >= 2.1 < 3.0 (installed system-wide)
-* 2 CPU's
+* 2 CPUs
 * 4 GB of RAM
 * Windows operating system
 
 ## Recommended Requirements
 
-* 4+ CPU's
+* 4+ CPUs
 * 8+ GB of RAM
 
 > **Notes:** 
