@@ -30,7 +30,3 @@ The agent automatically starts with your application as long as the environment 
 
 To stop the agent, stop the application and remove agent from its environment. Alternately, you may change the `CORECLR_ENABLE_PROFILING` setting to `0`.
 
-## IIS Express 
-
-The installation for the IIS Express users is the same as self-hosted applications.
-

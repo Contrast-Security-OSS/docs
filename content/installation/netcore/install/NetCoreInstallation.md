@@ -7,7 +7,7 @@ tags: "installation agent .NET Core"
 
 ## The Basics
 
-To install the .NET agent, complete the following steps.
+To install the .NET agent, complete the following steps. The installation process for the IIS Express users is the same as self-hosted applications.
 
 * Log in to the Contrast UI. 
 * Click the button in the top navigation bar to **Add Agent**.
@@ -15,7 +15,6 @@ To install the .NET agent, complete the following steps.
 * Proceed to Step 2 and click on the **Download Config File** button to download the agent's configurations.
 * On the web server, extract the downloaded zip archive (e.g., *ContrastSetup_18.4.56.zip*) to a directory that your applications have sufficient permissions to access.
 * On the web server, place the downloaded configuration file in a directory that your applications have sufficient permissions to access.
-
 
 ## Customize Your Installation
 
