@@ -16,7 +16,7 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |                                           | Netty 4.x                            | GSON, Kryo, minidev, org.json
 |                                           | Play 2.4                             | Google Web Toolkit (GWT)
 |                                           | Tomcat 5, 6, 7, 8                    | Hibernate
-|                                           | Vert.X 3.0+                          | J2SE
+|                                           | Vert.X 3.0                           | J2SE
 |                                           | WebLogic 10, 11g, 12c                | JDBC, JDBI, MongoDB
 |                                           | WebSphere 8.5<sup>*</sup>            | JSF (MyFaces, RichFaces, Sun)
 |                                           | WildFly 10, 10.1.x                   | java.nio, java.beans
