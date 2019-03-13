@@ -12,20 +12,35 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 
 ### Assess
 
-Assess rules supported in .NET Core:
+#### Assess rules supported in .NET Core:
 
+* autocomplete-missing
+* cache-controls-missing
+* clickjacking-control-missing
 * cmd-injection 
 * crypto-bad-mac 
 * crypto-bad-ciphers 
 * crypto-weak-randomness 
+* csp-header-missing
+* csp-header-insecure
+* hsts-header-missing
+* insecure-auth-protocol
 * reflected-xss 
 * path-traversal
+* parameter-pollution
+* secure-flag-missing
 * sql-injection 
 * unvalidated-redirect 
+* xcontenttype-header-missing
 * xxe 
+* xxssprotection-header-disabled
 
-Assess rules that will be supported in the future:
 
+#### Assess rules that may be supported in the future:
+
+* authorization-missing-deny
+* authorization-rules-misordered
+* cache-control-disabled
 * compilation-debug
 * cache-control-disabled
 * cache-control-missing
@@ -37,28 +52,39 @@ Assess rules that will be supported in the future:
 * insecure-auth-protocol
 * log-injection
 * ldap-injection
-* plaintext-conn-strings
-* version-header-enabled
 * max-request-length
+* plaintext-conn-strings
+* role-manager-protection
+* role-manager-ssl
 * secure-flag-missing
 * session-regenerate
 * session-rewriting
 * session-timeout
 * stored-xss
+* trace-enabled
 * xpath-injection
+* version-header-enabled
+* weak-membership-config
 
 
-The following rules aren't applicable to .NET Core and won't be supported: 
+#### Assess rules that are not applicable to .NET Core and won't be supported: 
 
 * event-validation-disabled
+* forms-auth-protection
+* forms-auth-redirect
+* forms-auth-ssl
 * request-validation-control-disabled
 * request-validation-disabled
+* trace-enabled-aspx
 * viewstate-encryption-disabled
 * viewstate-mac-disabled
+* wcf-detect-replays
+* wcf-exception-details
+* wcf-metadata-enabled
 
 ### Protect
 
-Protect rules supported in .NET Core:
+#### Protect rules supported in .NET Core:
 
 * cmd-injection
 * reflected-xss
@@ -67,7 +93,7 @@ Protect rules supported in .NET Core:
 * xxe 
 
 
-Protect rules that will be supported in the future:
+#### Protect rules that will be supported in the future:
 
 * method-tampering
 * untrusted-deserialization

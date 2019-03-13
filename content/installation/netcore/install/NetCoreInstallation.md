@@ -52,7 +52,7 @@ To enable the .NET Core agent on your application, you must set the following en
  * The platform's CPU architecture is based on the CoreCLR's "bitness". For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
  * Only the Windows platform is supported at this time.
 
-### Running under IIS
+### Running under IIS and IIS Express
 
 Set the environment variables using either of these two methods:
 
@@ -67,7 +67,7 @@ Set the environment variables using either of these two methods:
   <system.webServer>
     <handlers>
       <remove name="aspNetCore" />
-      <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />
+      <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" hostingModel="OutOfProcess" />
     </handlers>
     <aspNetCore processPath="dotnet" arguments=".\ExampleNetCoreApp.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout">
       <environmentVariables>

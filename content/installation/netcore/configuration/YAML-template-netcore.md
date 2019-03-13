@@ -118,6 +118,18 @@ contrast:
 
       # Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
       # severity_probed: NEEDS_TO_BE_SET
+      
+  #===============================================================================
+  # polling
+  # The following properties apply to .NET agent communication with Contrast UI
+  #===============================================================================
+  polling:
+
+    # Set the frequency with which the agent sends application activity to the Contrast UI.  This affects how quickly inventory activity (such route coverage, technologies) and protect activity (attacks, blocks) shows up in Contrast UI.
+    app_activity_ms: 30_000
+
+    # Set the the frequency with which the agent sends server updates to the Contrast UI. This also affects how long it takes the agent to pick up changes made in Contrast UI.  
+    server_activity_ms: 60_000      
 
   #==========================================================================
   # Dotnet

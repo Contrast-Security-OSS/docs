@@ -16,6 +16,6 @@ The installation is the same as self-hosted applications.  See [NetCoreInstallat
 
 ## Azure App Service
 
-TBD
+Not currently supported
 
 
