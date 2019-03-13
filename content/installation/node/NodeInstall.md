@@ -8,7 +8,7 @@ tags: "NodeJS agent installation"
 
 To install the Node agent, you must have installed:
 
-* A C++ compiler toolchain (e.g., Clang, GCC or MSVC) 
+* A C++ compiler toolchain (e.g., Clang, GCC or MSVC) and a POSIX-compatible `make`
 
 * Python (which is needed for [Node-gyp](https://github.com/nodejs/node-gyp), Node's build tool, to function)
 
@@ -37,6 +37,8 @@ After downloading from your account, install the agent from your application's r
 npm install node-contrast-#.#.#.tgz --no-save
 ```
 This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json*.
+
+> **Note:** At this time, the Node agent **does not** support Yarn for installation. You must install through `npm`.
 
 ## Setup
 
