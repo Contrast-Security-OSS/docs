@@ -83,6 +83,18 @@ Set the environment variables using either of these two methods:
 </configuration>
 ```
 
+The `AspNetCoreModule` is supported in both IIS or IIS Express. The `AspNetCoreModuleV2` (default after .Net Core 2.2) module is only supported in IIS or IIS Express when running with `hostingModel` set to `OutOfProcess` (default when unset).
+
+The `hostingModel` option can be changed using either of these two directives:
+
+```xml
+<!-- web.config -->
+<aspNetCore hostingModel="OutOfProcess" />
+
+<!-- or in the csproj -->
+<AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+```
+
 ### Running with a Launch Profile
 
 Set the environment variables as part of your application startup script or as an ASP.NET Core launch profile.

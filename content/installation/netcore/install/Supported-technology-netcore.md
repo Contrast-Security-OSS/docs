@@ -20,10 +20,10 @@ The Contrast .NET Core agent supports analysis of web applications built on the 
 
 The following technologies currently aren't supported by the .NET Core agent. 
 
-* Mono runtime <br> (Mono doesn't have a Profiler API.)
-* Linux
+* Linux/OSX
+* Http.sys (formerly called WebListener), IISHttpServer (used when hosting with `AspNetCoreModuleV2` module with `InProcess` enabled)
 * Self-contained deployments 
 * Framework-dependent executables
 * .NET Core version 3.0 or above 
-* ASP.NET Core applications running under the .NET framework 
+* ASP.NET Core applications running under the .NET Framework 
 
