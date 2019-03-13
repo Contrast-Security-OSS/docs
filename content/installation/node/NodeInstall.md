@@ -38,7 +38,7 @@ npm install node-contrast-#.#.#.tgz --no-save
 ```
 This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json*.
 
-Please note that the Contrast Node agent *does not* currently support Yarn for installation. Please install through npm.
+> **Note:** At this time, the Node agent **does not** support Yarn for installation. You must install through `npm`.
 
 ## Setup
 
