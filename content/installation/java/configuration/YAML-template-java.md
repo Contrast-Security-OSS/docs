@@ -8,21 +8,21 @@ Go to the [YAML Properties](installation-javaconfig.html#java-yaml) article for 
 
 
 ```
-#================================================================================================================================================================================
-#  
-#  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values. 
-#  
-#================================================================================================================================================================================
+#===============================================================================
+# Use the properties in this YAML file to configure a Contrast agent.
+# Go to https://docs.contrastsecurity.com/ to determine the order of precedence
+# for configuration values.
+#===============================================================================
 
+
+# Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+# enable: true
 
 #================================================================================
-# Contrast
+# Api
 # Use the properties in this section to connect the agent to the Contrast UI.
 #================================================================================
-contrast:
-
-  # Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  # enable: true
+api:
 
   # ********************** REQUIRED **********************
   # Set the URL for the Contrast UI.
@@ -76,10 +76,10 @@ contrast:
 #=======================================================================================================================================
 # agent:
 
-  # Set how long to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
+  # Set the amount of time to run the agent before shutting down itself (in milliseconds). A negative value disables scheduled shutdown.
   # shutdown_time_ms: NEEDS_TO_BE_SET
 
-  # Enable to deinstrumentation classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
+  # Set to `true` to deinstrument classes on shutdown. If this is not enabled, the agent disables sensors on shutdown, but leaves instrumentation.
   # deinstrument_on_shutdown: NEEDS_TO_BE_SET
 
   #================================================================================================================================================================
@@ -119,8 +119,8 @@ contrast:
     # Set the file to which the agent logs security events.
     # path: /.contrast/security.log
 
-    # Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
-    # level: NEEDS_TO_BE_SET
+    # Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    # level: ERROR
 
     # Change the Contrast security logger from a file-sized based rolling scheme to a date-based rolling scheme. At midnight server time, the log from the previous day is renamed to *file_name.yyyy-MM-dd*. Note - this scheme does not have a size limit; manual log pruning will be required. This flag must be set to use the backups and size flags. Value options are `true` or `false`.
     # roll_daily: NEEDS_TO_BE_SET
@@ -165,7 +165,8 @@ contrast:
   #==========================================================================
   # java:
 
-    # Set the name of a standalone application. If this value is set, the agent assumes there is only one application in this server.
+    # Configure the Java agent to skip its application discovery algorithm, and instead associate all libraries, vulnerabilities, and web traffic to a single application with the name specified by this property. This configuration is preferred when deploying Java SE applications with embedded web servers (e.g., applications built with Spring Boot, Dropwizard, and embedded Jetty). When used with an application server, this configuration associates all web traffic with the single, standalone application, including web traffic handled by application server-hosted endpoints that would not be associated with a discovered application otherwise. 
+    #  Note - This settings takes preferences over the `application.name` setting.
     # standalone_app_name: NEEDS_TO_BE_SET
 
 #===========================================================================
@@ -210,7 +211,7 @@ contrast:
     # Set to `false` to disable sampling.
     # enable: true
 
-    # This property indicates how many requests to analyze in each window before sampling begins.
+    # This property indicates the number of requests to analyze in each window before sampling begins.
     # baseline: 5
 
     # This property indicates that every *nth* request after the baseline is analyzed.
@@ -335,7 +336,8 @@ contrast:
 #==================================================================================
 # application:
 
-  # Override the reported application name.
+  # Override the reported application name. 
+  #  Note - On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   # name: NEEDS_TO_BE_SET
 
   # Override the reported application path.
@@ -360,7 +362,7 @@ contrast:
 
 #==========================================================================================
 # Server
-# Use the properties in this section to set metadata For the server hosting this agent.
+# Use the properties in this section to set metadata for the server hosting this agent.
 #==========================================================================================
 # server:
 

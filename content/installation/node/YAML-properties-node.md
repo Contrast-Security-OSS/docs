@@ -29,22 +29,24 @@ Go to the [Node YAML Template](installation-nodeconfig.html#node-template) for f
 
 ## Configuration Options 
 
+### Enable the agent 
+
+* **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+
 ### Contrast UI properties
 
 Use the properties in this section to connect the Node agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-* **contrast**: 
-
-  * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+* **api**: 
   * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.** 
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **timeout_ms**: Set the default request timeout.
 
-  * **proxy**:
-    * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
-    * **url**: Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
+#### Certificate 
+
+Use the following properties for communication with the Contrast UI using certificates.
 
   * **certificate**
     * **enable**: Set to `false` for the agent to ignore the certificate configuration in this section.
@@ -52,7 +54,14 @@ Use the properties in this section to connect the Node agent to the Contrast UI.
     * **cert_file**: Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI.
     * **key_file**: Set the absolute or relative path to the Key PEM file for communication with Contrast UI.
     * **key_password**: Set the password for the Key file, if required.
-    * **ignore_cert_errors**: Set to `true` for the agent to ignore certificate verification errors when the it communicates with the Contrast UI.
+
+#### Proxy
+
+Use the following properties for communication with the Contrast UI over a proxy.
+
+  * **proxy**:
+    * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
+    * **url**: Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
 
 ### Contrast agent properties
 
@@ -88,7 +97,7 @@ Use the properties in this section to control security logging. These logs allow
 
   * **security_logger**:
     * **path**: Set the file to which the agent logs security events. <br> Example: */.contrast/security.log*
-    * **level**: Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
+    * **level**: Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
 
 
 #### Agent-specific properties
@@ -122,7 +131,7 @@ Use the properties in this section to control Assess in the Node agent. The samp
 
   * **samplings**:
     * **enable**: Set to `false` to disable sampling.
-    * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
+    * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
 
 
 ### Contrast Protect properties
@@ -142,7 +151,7 @@ Use the properties in this section to control Protect features and rules.
 Use the properties in this section to control the application(s) hosting this agent.
 
 * application:
-  * **name**: Override the reported application name.
+  * **name**: Override the reported application name. <br> Note: On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   * **path**: Override the reported application path.
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
   * **version**: Override the reported application version.
