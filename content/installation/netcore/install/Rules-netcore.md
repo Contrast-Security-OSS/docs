@@ -24,7 +24,9 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 * csp-header-missing
 * csp-header-insecure
 * hsts-header-missing
+* httponly
 * insecure-auth-protocol
+* ldap-injection
 * reflected-xss 
 * path-traversal
 * parameter-pollution
@@ -32,6 +34,7 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 * sql-injection 
 * unvalidated-redirect 
 * xcontenttype-header-missing
+* xpath-injection
 * xxe 
 * xxssprotection-header-disabled
 
@@ -43,26 +46,25 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 * cache-control-disabled
 * compilation-debug
 * cache-control-disabled
-* cache-control-missing
 * cookies-flag-missing
 * custom-errors-off
 * header-injection
-* httponly
+* header-checking-disabled
 * http-only-disabled
-* insecure-auth-protocol
 * log-injection
 * ldap-injection
 * max-request-length
 * plaintext-conn-strings
+* request-validation-disabled
 * role-manager-protection
 * role-manager-ssl
-* secure-flag-missing
 * session-regenerate
 * session-rewriting
 * session-timeout
 * stored-xss
 * trace-enabled
-* xpath-injection
+* trust-boundary-violation
+* unvalidated-forward
 * version-header-enabled
 * weak-membership-config
 
@@ -74,7 +76,6 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 * forms-auth-redirect
 * forms-auth-ssl
 * request-validation-control-disabled
-* request-validation-disabled
 * trace-enabled-aspx
 * viewstate-encryption-disabled
 * viewstate-mac-disabled
