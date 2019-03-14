@@ -31,6 +31,6 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 >
 > * The .NET Core agent running in Assess mode roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the .NET agent isn't installed. 
 >
-> * The .NET Core agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by analyzed applications. The .NET Core agent, unlike the .NET agent, cannot exist alongside other .NET Profiler agents, such as performance or APM tools.
+> * The .NET Core agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by analyzed applications. The .NET Core agent, unlike the .NET agent, can't exist alongside other .NET Profiler agents, such as performance or APM tools.
 
 

@@ -12,7 +12,7 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 
 ### Assess
 
-#### Assess rules supported in .NET Core:
+Assess rules supported in .NET Core:
 
 * autocomplete-missing
 * cache-controls-missing
@@ -39,7 +39,7 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 * xxssprotection-header-disabled
 
 
-#### Assess rules that may be supported in the future:
+Assess rules that may be supported in the future:
 
 * authorization-missing-deny
 * authorization-rules-misordered
@@ -69,7 +69,7 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 * weak-membership-config
 
 
-#### Assess rules that are not applicable to .NET Core and won't be supported: 
+Assess rules that aren't applicable to .NET Core and won't be supported: 
 
 * event-validation-disabled
 * forms-auth-protection
@@ -85,7 +85,7 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 
 ### Protect
 
-#### Protect rules supported in .NET Core:
+Protect rules supported in .NET Core:
 
 * cmd-injection
 * reflected-xss
@@ -94,7 +94,7 @@ The following rules are or will be supported by the .NET Core agent. Security ru
 * xxe 
 
 
-#### Protect rules that will be supported in the future:
+Protect rules that will be supported in the future:
 
 * method-tampering
 * untrusted-deserialization

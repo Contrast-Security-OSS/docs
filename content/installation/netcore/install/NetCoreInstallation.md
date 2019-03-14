@@ -56,11 +56,11 @@ To enable the .NET Core agent on your application, you must set the following en
 
 Set the environment variables using either of these two methods:
 
-* In the application *web.config* via [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables) (recommended)
+* The application *web.config* via [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables), as shown in the following example (recommended)
 
 * The [application pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) on the server
 
-> **Example:** Using the "web.config" method:
+> **Example of the "web.config" method:**
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
@@ -83,9 +83,9 @@ Set the environment variables using either of these two methods:
 </configuration>
 ```
 
-The `AspNetCoreModule` is supported in both IIS or IIS Express. The `AspNetCoreModuleV2` module (default after .Net Core 2.2) is only supported in IIS or IIS Express when running with `hostingModel` set to `OutOfProcess` (default when unset).
+The `AspNetCoreModule` is supported in both IIS or IIS Express. The `AspNetCoreModuleV2` module (the default after .Net Core 2.2) is only supported in IIS or IIS Express when running with `hostingModel` set to `OutOfProcess` (the default when unset).
 
-The `hostingModel` option can be changed using either of these two directives:
+You can change the `hostingModel` option with either of these two directives:
 
 ```xml
 <!-- web.config -->
@@ -116,7 +116,7 @@ Set the environment variables as part of your application startup script or as a
     }
 ```
 
-You can then run the application with: 
+You can then run the application: 
 
 ```powershell
 dotnet run --launch-profiler MyAppWithContrastAgent

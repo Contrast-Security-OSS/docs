@@ -4,7 +4,7 @@ description: "Instructions and template for configuring .NET Core agent properti
 tags: "installation net core agent YAML configuration rules properties"
 -->
 
-Contrast support YAML-based configuration for the .NET Core agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
+Contrast support YAML-based configuration for the .NET Core agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET Core YAML Template](installation-netcoreconfig.html#netcore-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 > **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
@@ -23,8 +23,6 @@ The *contrast_security.yaml* file should be placed on the file system using one 
 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
 * Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.)
-
-Go to the [.NET Core YAML Template](installation-netcoreconfig.html#netcore-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 
 ## Configuration Options

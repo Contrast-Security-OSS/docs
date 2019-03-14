@@ -14,7 +14,7 @@ The Contrast .NET Core agent supports analysis of web applications built on the 
 | CLR                        | CoreCLR |
 | Server container                | Kestrel                |
 | Hosting container          | <li>Self-hosted</li><br /> <li>IIS</li><br /><li>IIS Express</li>
-| Operating System           | <li>Windows 7, 8, 10</li><br/> <li>Windows Server 2008 R2, 2012, 2012 R2, 2016</li><br/><li>Azure Virtual Machines, Cloud Services, Mobile Services - TBD</li><br/><li> Azure App Service - TBD </li> |
+| Operating System           | <li>Windows 7, 8, 10</li><br/> <li>Windows Server 2008 R2, 2012, 2012 R2, 2016</li>|
 | Processor Architecture     | The agent can be installed on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications. |
 | Web Application Frameworks | ASP.NET Core |
 
