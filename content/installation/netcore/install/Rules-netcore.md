@@ -6,11 +6,9 @@ tags: "installation agent .NET Core windows assess protect rules"
 -->
 
 
-## .NET Core Agent Rule Support
-
 The following rules are or will be supported by the .NET Core agent. Security rules that are currently supported by the .NET Framework, but are either not supported by the .NET Core agent or not applicable to it, are also noted.
 
-### Assess
+## Assess Rules
 
 Assess rules supported in .NET Core:
 
@@ -83,7 +81,7 @@ Assess rules that aren't applicable to .NET Core and won't be supported:
 * wcf-exception-details
 * wcf-metadata-enabled
 
-### Protect
+## Protect Rules
 
 Protect rules supported in .NET Core:
 
