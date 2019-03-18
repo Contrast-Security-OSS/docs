@@ -36,7 +36,7 @@ Complete the following steps to install the .NET agent on an Azure VM:
 
 <a href="assets/images/KB3-e15_4.png" rel="lightbox" title="Cloud RDP"><img class="thumbnail" src="assets/images/KB3-e15_4.png"/></a>
 
-## Azure Web Apps
+## Azure App Service (formerly Azure Web Apps)
 
 Follow the instructions to install the agent for Azure App Service via [Nuget](installation-netinstall.html#net-manual) or [Azure Portal Extensions](installation-netinstall.html#net-express).  
 

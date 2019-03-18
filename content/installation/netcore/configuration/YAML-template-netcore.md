@@ -1,27 +1,27 @@
 <!--
-title: "YAML configuration template for the .NET agent "
-description: "YAML file template for configuring .NET agent properties"
-tags: "installation net agent YAML configuration rules properties"
+title: "YAML configuration template for the .NET Core agent "
+description: "YAML file template for configuring .NET Core agent properties"
+tags: "installation agent .NET Core YAML configuration properties"
 -->
 
-Go to the [YAML Properties](installation-netconfig.html#net-yaml) article for more information about this template.
+Go to the [YAML Properties](installation-netcoreconfig.html#netcore-yaml) article for more information about this template.
 
 ```
-#===============================================================================
-# Use the properties in this YAML file to configure a Contrast agent.
-# Go to https://docs.contrastsecurity.com/ to determine the order of precedence
-# for configuration values.
-#===============================================================================
+#================================================================================================================================================================================
+#  
+#  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values. 
+#  
+#================================================================================================================================================================================
 
-
-# Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-# enable: true
 
 #================================================================================
-# Api
+# Contrast
 # Use the properties in this section to connect the agent to the Contrast UI.
 #================================================================================
-api:
+contrast:
+
+  # Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+  # enable: true
 
   # ********************** REQUIRED **********************
   # Set the URL for the Contrast UI.
@@ -39,17 +39,9 @@ api:
   # Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
   user_name: NEEDS_TO_BE_SET
 
-  # Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12).
+  # Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. 
+  #  The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12).
   # tls_versions: tls1|tls2|tls3
-
-  #============================================================================================
-  # Certificate
-  # Use the following properties for communication with the Contrast UI using certificates.
-  #============================================================================================
-  # certificate:
-
-    # If set to `false`, the agent will ignore the certificate configuration in this section.
-    # enable: true
 
   #======================================================================================
   # Proxy
@@ -59,9 +51,6 @@ api:
 
     # Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status.
     # enable: NEEDS_TO_BE_SET
-
-    # Set the proxy host. It must be set with port and scheme.
-    # host: localhost
 
     # Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
     # url: NEEDS_TO_BE_SET
@@ -81,18 +70,7 @@ api:
 #=======================================================================================================================================
 # agent:
 
-  #=========
-  # Auto_update
-  # TODO
-  #=========
-  # auto_update:
-
-    # Set to `true` for the agent to automatically upgrade to newer versions.
-    # enable: true
-
-    # Set the frequency with which the agent checks for updates. Valid values are `daily` for every 24 hours and on startup, or `startup` for *only* when service starts up.
-    # checks: daily
-
+  
   #================================================================================================================================================================
   # Logger
   # Define the following properties to set logging values. If the following properties are not defined, the agent uses the logging values from the Contrast UI.
@@ -108,8 +86,8 @@ api:
   #===========================================================================================================================================================
   # security_logger:
 
-    # Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
-    # level: ERROR
+    # Set the log level for security logging. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`. Set this property to `OFF` to disable security logging.
+    # level: NEEDS_TO_BE_SET
 
     # Specify if connection should be encrypted or plaintext. Value options are `ENCRYPTED` or `UNENCRYPTED`.
     # connection_type: NEEDS_TO_BE_SET
@@ -140,7 +118,7 @@ api:
 
       # Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
       # severity_probed: NEEDS_TO_BE_SET
-
+      
   #===============================================================================
   # polling
   # The following properties apply to .NET agent communication with Contrast UI
@@ -151,7 +129,7 @@ api:
     app_activity_ms: 30_000
 
     # Set the the frequency with which the agent sends server updates to the Contrast UI. This also affects how long it takes the agent to pick up changes made in Contrast UI.  
-    server_activity_ms: 60_000       
+    server_activity_ms: 60_000      
 
   #==========================================================================
   # Dotnet
@@ -159,41 +137,18 @@ api:
   #==========================================================================
   # dotnet:
 
-    # Set a list of application pool names that the agent does not instrument or analyze. Names must be formatted as a comma-separated list.
-    # app_pool_blacklist: NEEDS_TO_BE_SET
-
-    # Set a list of application pool names that the agent instruments or analyzes. If set, other application pools are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
-    # app_pool_whitelist: NEEDS_TO_BE_SET
-
-    # Enable instrumentation and analysis of application pools targeting CLR2.
-    # enable_clr2_analysis: true
-
-    # Enable an experimental profiler chaining feature to allow Contrast to work alongside other tools that use the CLR Profiling API.
-    # enable_chaining: false
-
-    # Indicate that the agent should produce a report that summarizes application hosting on the server (e.g., CLR versions, bitness or pipeline modes).
-    # enable_dvnr: true
-
     # Indicate that the agent should allow CLR optimizations of JIT-compiled methods.
     # enable_instrumentation_optimizations: true
 
     # Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
     # enable_jit_inlining: true
     
-    # Indicate that the agent should allow the CLR to perform transparency checks under full trust.
-    # enable_transparency_checks: false
-
-    # Indicate that the agent should automatically restart IIS to apply certain configuration changes (e.g., app_pool_blacklist).
-    # restart_iis_on_config_change: true
-
     # Indicate that the agent should not check for other profilers before starting.
     # skip_profiler_check: false
 
     # Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
     # thread_analysis: full
 
-    # Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See https://docs.contrastsecurity.com/troubleshooting-netissues.html#zero for more information.
-    # web_module_whitelist: WebResource.axd
 
 #===========================================================================
 # Inventory
@@ -234,7 +189,7 @@ api:
     # Set to `false` to disable sampling.
     # enable: true
 
-    # This property indicates the number of requests to analyze in each window before sampling begins.
+    # This property indicates how many requests to analyze in each window before sampling begins.
     # baseline: 5
 
     # This property indicates that every *nth* request after the baseline is analyzed.
@@ -365,7 +320,7 @@ api:
 
 #==========================================================================================
 # Server
-# Use the properties in this section to set metadata for the server hosting this agent.
+# Use the properties in this section to set metadata For the server hosting this agent.
 #==========================================================================================
 # server:
 
@@ -380,3 +335,5 @@ api:
   # tags: NEEDS_TO_BE_SET
 
 ```
+
+

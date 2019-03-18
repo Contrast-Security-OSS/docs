@@ -1,10 +1,10 @@
 <!--
-title: "YAML configuration for the .NET agent "
-description: "Instructions and template for configuring .NET agent properties via YAML file"
-tags: "installation net agent YAML configuration rules properties"
+title: "YAML configuration for the .NET Core agent "
+description: "Instructions and template for configuring .NET Core agent properties via YAML file"
+tags: "installation agent .NET Core YAML configuration properties"
 -->
 
-Contrast support YAML-based configuration for the .NET agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
+Contrast supports YAML-based configuration for the .NET Core agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET Core YAML Template](installation-netcoreconfig.html#netcore-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 > **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
@@ -24,44 +24,27 @@ The *contrast_security.yaml* file should be placed on the file system using one 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
 * Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.)
 
-Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
-
 
 ## Configuration Options
 
-### Enable the agent 
-
-* **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-
 ### Contrast UI properties
 
-Use the properties in this section to connect the .NET agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
+Use the properties in this section to connect the .NET Core agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-* **api**: 
+* **contrast**: 
+
+  * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
   * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.** 
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
-  * **tls_versions**: Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
-
-#### Certificate
-
-Use the following properties for communication with the Contrast UI using certificates.
-
-  * **certificate**:
-    * **enable**: If set to `false`, the agent will ignore the certificate configuration in this section.
-
-#### Proxy
-
-Use the following properties for communication with the Contrast UI over a proxy.
+  * **tls_versions**: The .NET Core agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
 
   * **certificate**: 
     * **enable**: If set to `false`, the certificate configuration in this section will be ignored.
   
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
-    * **localhost**: Set the proxy host. It must be set with port and scheme.
-    * **url**: Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
     * **user**: Set the proxy user.
     * **pass**: Set the proxy password.
     * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
@@ -69,27 +52,16 @@ Use the following properties for communication with the Contrast UI over a proxy
 
 ### Contrast agent properties
 
-Use the properties in this section to control the way and frequency with which the .NET agent communicates to logs and to the Contrast UI.
+Use the properties in this section to control the way and frequency with which the .NET Core agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
 All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-netconfig.html#net-template). 
 
-* **agent**:
-
-#### Auto-update
-
-Use the following properties to control auto-update behavior of the .NET agent. 
-
-> **Note:** These settings don't apply to the .NET Core agent, which doesn't have the capability to auto-update.
-
-  * **auto_update**:
-    * **enable**: Set to `true` for the agent to automatically upgrade to newer versions.
-    * **checks:** Set the frequency with which the agent checks for updates. Valid values are `daily` for every 24 hours and on startup, or `startup` for *only* when service starts up.
-
-
 #### Diagnostic logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
+
+<!-- Should we put the higher-level 'agent' bullet in these subsections as well? -->  
 
   * **logger**:
     * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
@@ -100,13 +72,6 @@ Use the properties in this section to control diagnostic logging. These logs all
 Use the properties in this section to control security logging. These logs allow you to watch Protect as it monitors and blocks attacks against your application. They are written to the specified file in the Common Event Format (CEF). The Syslog settings allow you to send security logs to remote servers.
 
   * **security_logger**:
-    * **level**: Set the log level for security logging. Value options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
-    * **connection_type**: Specify if a connection should be encrypted or plain text. Value options are `ENCRYPTED` or `UNENCRYPTED`.
-
-
-##### Syslog
-
-Define the following properties to set Syslog values. If the properties are not defined, the agent uses the Syslog values from the Contrast UI.
 
     * **syslog**:
       * **enable**: Set to `true` to enable Syslog logging.
@@ -120,26 +85,20 @@ Define the following properties to set Syslog values. If the properties are not 
 
 #### Agent-specific properties
 
-The following properties apply to any .NET agent-wide configurations. <!-- More words here... -->
+The following properties apply to any .NET Core agent-wide configurations. <!-- More words here... -->
 
   * **dotnet**:
 
-    * **app_pool_blacklist**: Set a list of application pool names that the agent does not instrument or analyze. Names must be formatted as a comma-separated list.
-    * **app_pool_whitelist**: Set a list of application pool names that the agent instruments or analyzes. If set, other application pools are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
-    * **enable_clr2_analysis**: Enable instrumentation and analysis of application pools targeting CLR2. 
-    * **enable_chaining**: Enable the profiler chaining feature to allow Contrast to work alongside other tools that use the CLR Profiling API.
-    * **enable_dvnr**: Indicate that the agent should produce a report that summarizes application hosting on the server (e.g., CLR versions, bitness or pipeline modes).
+    
     * **enable_instrumentation_optimizations**: Indicate that the agent should allow CLR optimizations of JIT-compiled methods. 
     * **enable_jit_inlining**: Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
-    * **enable_transparency_checks**: Indicate that the agent should allow the CLR to perform transparency checks under full trust.
-    * **restart_iis_on_config_change**: Indicate that the agent should automatically restart IIS to apply certain configuration changes (e.g., `app_pool_blacklist`).
     * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
     * **thread_analysis**: Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
-    * **web_module_whitelist**: Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See the [troubleshooting article](troubleshooting-netissues.html#zero) for more information. <br> Example: WebResource.axd
+
 
 ### Inventory properties
 
-Use the properties in this section to control inventory features in the .NET agent.
+Use the properties in this section to control inventory features in the .NET Core agent.
 
   * **inventory**:
     * **enable**: Set to `false` to disable Inventory features in the agent.
@@ -148,7 +107,7 @@ Use the properties in this section to control inventory features in the .NET age
 
 ### Contrast Assess properties
 
-Use the properties in this section to control Assess in the .NET agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
+Use the properties in this section to control Assess in the .NET Core agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
 
 > **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.  
 
@@ -162,7 +121,7 @@ Use the properties in this section to control Assess in the .NET agent. The samp
 
   * **samplings**:
     * **enable**: Set to `false` to disable sampling.
-    * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
+    * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
     * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
 
