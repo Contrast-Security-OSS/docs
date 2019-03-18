@@ -6,7 +6,7 @@ tags: "installation agent .NET Core windows assess protect rules"
 -->
 
 
-The following rules are or will be supported by the .NET Core agent. Security rules that are currently supported by the .NET Framework, but are either not supported by the .NET Core agent or not applicable to it, are also noted.
+The following Assess and Protect rules are or will be supported by the .NET Core agent, as noted. Security rules that are currently supported by the .NET Framework, but are either not supported by the .NET Core agent or not applicable to it, are also noted.
 
 ## Assess Rules
 

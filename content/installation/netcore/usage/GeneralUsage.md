@@ -6,7 +6,7 @@ tags: "installation usage agent .NET Core"
 
 ## How It Works
 
-The Contrast agent is designed to require little to no interaction from the user to setup instrumentation on a .NET Core application. Once the environment is set up through environment variables or application launch profile, the .NET Core agent automatically instruments the ASP.NET Core application. The agent performs analysis as users (or automated scripts or tests) exercise applications. You can view the results of the agent's analysis in the [Contrast UI](https://app.contrastsecurity.com).
+The Contrast agent is designed to require little to no interaction from the user to set up instrumentation on a .NET Core application. Once the environment is set up through environment variables or application launch profile, the .NET Core agent automatically instruments the ASP.NET Core application. The agent performs analysis as users (or automated scripts or tests) exercise applications. You can view the results of the agent's analysis in the [Contrast UI](https://app.contrastsecurity.com).
 
 The Contrast .NET Core agent consists of two components that run within the same process as your application.
 
@@ -28,5 +28,5 @@ The agent automatically starts with your application as long as the environment 
 
 ### Stop the agent 
 
-To stop the agent, stop the application and remove agent from its environment. Alternately, you may change the `CORECLR_ENABLE_PROFILING` setting to `0`.
+To stop the agent, stop the application and remove agent from its environment. Alternatively, you may change the `CORECLR_ENABLE_PROFILING` setting to `0`.
 

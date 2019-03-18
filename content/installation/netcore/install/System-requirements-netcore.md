@@ -17,8 +17,8 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 
 ## Minimum Requirements
 
-* .NET Framework version 4.7.0 or above installed<sup>1</sup>
-* .NET Core versions 2.1 or 2.2 (installed system wide)
+* .NET Framework versions >= 4.7.0 installed<sup>1</sup>
+* .NET Core versions >= 2.1 < 3.0 (installed system wide)
 * 2 CPUs
 * 4 GB of RAM<sup>2</sup>
 * Windows operating system

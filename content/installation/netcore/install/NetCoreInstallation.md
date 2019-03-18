@@ -7,10 +7,10 @@ tags: "installation agent .NET Core"
 
 ## The Basics
 
-To install the .NET agent, complete the following steps. The installation process for the IIS Express users is the same as self-hosted applications.
+To install the .NET agent, complete the following steps. The installation process for self-hosted applications also applies to IIS Express users.
 
 * Log in to the Contrast UI. 
-* Click the button in the top navigation bar to **Add Agent**.
+* Click the **Add Agent** button in the top navigation bar.
 * Select **.NET Core** in the dropdown menu, and click the **Download Agent** button for the platform on which your application is hosted. You might need to specify proxy authentication information, if required by your network, before downloading the agent.
 * Proceed to Step 2 and click on the **Download Config File** button to download the agent's configurations.
 * On the web server, extract the downloaded zip archive (e.g., *ContrastSetup_18.4.56.zip*) to a directory that your applications have sufficient permissions to access.
@@ -30,18 +30,18 @@ Ensure that the following paths are accessible by the runtime user of the applic
 | \{\{ Unzipped Directory Root \}\} | Read |
 | C:\ProgramData\Contrast\dotnet\LOGS | Read/Write |
 
-When running in IIS, make sure the application pool can access the above paths. For example, given an an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
+When running in IIS, make sure the application pool can access the these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
 
 ## Enable the Agent
 
 To enable the .NET Core agent on your application, you must set the following environment variables before running your application.
 
-* CORECLR_PROFILER_PATH: Use the below matrix to find the correct profiler path
+* CORECLR_PROFILER_PATH: Use the following table to find the correct Profiler path.
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}`
 * CONTRAST_INSTALL_DIRECTORY: \{\{ Unzipped Directory Root \}\}
 * AGENT__DOTNET__CONTAINER: `true`
-* CONTRAST_CONFIG_PATH: Path to yaml config file, such as `contrast_security.yaml`
+* CONTRAST_CONFIG_PATH: The path to YAML configuration file (i.e., *contrast_security.yaml*).
 
 | Platform | Profiler Path |
 |--|--|
@@ -49,7 +49,7 @@ To enable the .NET Core agent on your application, you must set the following en
 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
 
 > **Notes:** 
- * The platform's CPU architecture is based on the CoreCLR's "bitness". For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
+ * The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
  * Only the Windows platform is supported at this time.
 
 ### Running under IIS and IIS Express
@@ -60,7 +60,7 @@ Set the environment variables using either of these two methods:
 
 * The [application pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) on the server
 
-> **Example of the "web.config" method:**
+> **Example of the *web.config* method:**
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
@@ -95,7 +95,7 @@ You can change the `hostingModel` option with either of these two directives:
 <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
 ```
 
-### Running with a Launch Profile
+### Running with a launch profile
 
 Set the environment variables as part of your application startup script or as an ASP.NET Core launch profile.
 
