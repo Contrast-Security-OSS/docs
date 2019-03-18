@@ -1,7 +1,7 @@
 <!--
 title: "YAML configuration for the .NET Core agent "
 description: "Instructions and template for configuring .NET Core agent properties via YAML file"
-tags: "installation net core agent YAML configuration rules properties"
+tags: "installation agent .NET Core YAML configuration properties"
 -->
 
 Contrast supports YAML-based configuration for the .NET Core agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET Core YAML Template](installation-netcoreconfig.html#netcore-template) for fully formatted properties that you can copy and use in your own configuration files. 

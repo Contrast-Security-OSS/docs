@@ -1,7 +1,7 @@
 <!--
 title: ".NET Agent Usage"
 description: "General Usage of the Contrast .NET Core Agent"
-tags: "installation usage agent .NET Core"
+tags: "installation agent .NET Core windows usage updates analysis"
 -->
 
 ## How It Works

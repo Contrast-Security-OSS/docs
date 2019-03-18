@@ -1,8 +1,8 @@
 
 <!--
 title: "Contrast .NET Core Agent Installation"
-description: "Contrast .NET Core agent installation instructions."
-tags: "installation agent .NET Core"
+description: "Contrast .NET Core agent installation instructions"
+tags: "installation agent .NET Core windows"
 -->
 
 ## The Basics

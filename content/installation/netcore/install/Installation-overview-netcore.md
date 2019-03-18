@@ -1,7 +1,7 @@
 <!--
 title: "Overview of Contrast .NET Core Agent Installation"
 description: "Contrast .NET Core agent installation overview"
-tags: "installation agent .NET Core dotnetcore windows azure overview"
+tags: "installation agent .NET Core windows azure overview"
 -->
 
 The **Contrast .NET Core agent** analyzes the behavior of .NET Core web applications as users interact with them. To start analyzing an application, [download the .NET Core agent distribution](installation-netcoreinstall.html) from the Contrast UI, and set up the environment of your applications to use the agent. 
