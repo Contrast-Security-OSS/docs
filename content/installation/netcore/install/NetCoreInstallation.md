@@ -40,7 +40,7 @@ To enable the .NET Core agent on your application, you must set the following en
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}`
 * CONTRAST_INSTALL_DIRECTORY: \{\{ Unzipped Directory Root \}\}
-* AGENT__DOTNET__CONTAINER: `true`
+* AGENT\__DOTNET\__CONTAINER: `true`
 * CONTRAST_CONFIG_PATH: The path to YAML configuration file (i.e., *contrast_security.yaml*).
 
 | Platform | Profiler Path |
