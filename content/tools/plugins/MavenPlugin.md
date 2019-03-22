@@ -36,12 +36,12 @@ The table below shows all the parameters for the plugin. These settings are for 
 | apiKey      | True     |            | [API Key](admin-orgsettings.html#apikey)                                          |       |
 | orgUuid     | True     |            | [Organization UUID](admin-orgsettings.html#apikey)                                |       |
 | appName     | True     |            | Name of the application as seen in the Contrast UI                                |       |
-| appId       | False    |            | Id of the application as seen in the Contrast site. Either appId or appName is required. If both are specified, we'll use appId and ignore appName | 2.5 |
+| appId       | False    |            | ID of the application as seen in the Contrast UI. Either the `appId` or `appName` is required. If both are specified, Contrast uses the `appId` and ignores the `appName`. | 2.5 |
 | standalone  | False    | False      | Set this to "true" if this is a standalone application.                           |    2.2|
-| appVersion  | False    | See **appVersion** section. | The `appversion` to report to the Contrast application. See the **appVersion** section for more information.    |       |
+| appVersion  | False    |             | The `appversion` to report to the Contrast application. See the **appVersion** section for more information.    |       |
 | apiUrl      | True     |            | API URL to your Contrast application                                              |       |
 | serverName  | True     |            | Name of the server you set with `-Dcontrast.server`                               |       |
-| serverId    | False    |            | Id of the server as seen in the Contrast site. Either serverId or serverName is required. If both are specified, we'll use serverId and ignore serverName | 2.5 |
+| serverId    | False    |            | ID of the server as seen in the Contrast UI. Either the `serverId` or `serverName` is required. If both are specified, Contrast uses the `serverId` and ignores the `serverName`. | 2.5 |
 | serverPath  | False    |            | The server context path                                                           |    2.1|
 | minSeverity | False    | Medium     | Minimum severity level to verify; options are Note, Low, Medium, High or Critical |       |
 | jarPath     | False    |            | Path to *contrast.jar*, if you already have one downloaded                        |       |
