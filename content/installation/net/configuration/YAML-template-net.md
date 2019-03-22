@@ -310,6 +310,16 @@ api:
   # enable: true
 
   # ============================================================================
+  # protect.analysis_cache
+  # Use the properties in this section to control the behavior of the
+  # cache used to store the results of analysis for duplicate inputs.
+  # ============================================================================
+  # analysis_cache:
+
+    # Set to `false` to disable the use of the analysis cache.
+    # enable: true
+
+  # ============================================================================
   # protect.rules
   # Use the following properties to set simple rule configurations.
   # ============================================================================
