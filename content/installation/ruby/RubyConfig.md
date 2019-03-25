@@ -4,9 +4,9 @@ description: "Configuring the Ruby Agent and Service"
 tags: "installation ruby on rails agent service configuration"
 -->
 
-The Ruby agent and service use a YAML file to alter the agent behavior. 
+The Ruby agent and service use a YAML file to alter the agent behavior. Go to the Ruby [YAML Template](installation-rubyconfig.html#ruby-template) for fully formatted properties that you can copy and use in your own configuration files.
 
-## Load Path
+## Order of Precedence
 
 The configuration file is called *contrast_security.yaml* wherever it's located. The Ruby agent and service load the configuration YAML from the following paths in order of precedence:
 
@@ -14,8 +14,6 @@ The configuration file is called *contrast_security.yaml* wherever it's located.
 2. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)
 3. Within the server's *etc/contrast* directory (e.g. */etc/contrast/contrast_security.yaml*)
 3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
-
-Go to the Ruby [YAML Template](installation-rubyconfig.html#ruby-template) for fully formatted properties that you can copy and use in your own configuration files.
 
 ## Service Configuration
 

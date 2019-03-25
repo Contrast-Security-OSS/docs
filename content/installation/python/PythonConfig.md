@@ -4,9 +4,9 @@ description: "Configuring the Python Agent and Service"
 tags: "installation python django flask pyramid agent service configuration"
 -->
 
-The Python agent and Contrast Service use a YAML file to alter the agent behavior. 
+The Python agent and Contrast Service use a YAML file to alter the agent behavior. Go to the Python [YAML Template](installation-pythonconfig.html#python-template) for fully formatted properties that you can copy and use in your own configuration files.
 
-## Load Path
+## Order of Precedence
 
 The configuration file is always called *contrast_security.yaml* no matter where it's located. The Python agent loads the configuration YAML from the following paths in order of precedence:
 
@@ -14,9 +14,7 @@ The configuration file is always called *contrast_security.yaml* no matter where
 2. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
 3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
 
-The configuration YAML consists of four sections. The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
-
-Go to the Python [YAML Template](installation-pythonconfig.html#python-template) for fully formatted properties that you can copy and use in your own configuration files.
+The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
 
 ## Configuration Options
 

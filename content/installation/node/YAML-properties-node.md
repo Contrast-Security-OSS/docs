@@ -4,11 +4,11 @@ description: "Instructions for configuring Node agent properties via YAML file"
 tags: "installation node agent YAML configuration rules properties"
 -->
 
-Contrast supports YAML-based configuration for the Node agent. This allows you to store configuration on disk that you can override with environment variables or command-line arguments.
+Contrast supports YAML-based configuration for the Node agent. This allows you to store configuration on disk that you can override with environment variables or command-line arguments. Go to the [Node YAML Template](installation-nodeconfig.html#node-template) for fully formatted properties that you can copy and use in your own configuration files.
 
 > **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
-## Load Path 
+## Order of Precedence 
 
 Configuration values use the following order of precedence: 
 
@@ -20,12 +20,12 @@ Configuration values use the following order of precedence:
 6. Contrast UI value
 7. Default value 
 
+## Load Path 
+
 The agent expects that the *contrast_security.yaml* configuration file exists in the application's root directory (where the *package.json* file usually resides). If you want to change the location of the file, provide the agent with the new location using one of the following methods: 
 
 * Pass a CLI option `--configFile <location>`
 * Set the `CONTRAST_CONFIG` environment variable
-
-Go to the [Node YAML Template](installation-nodeconfig.html#node-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 ## Configuration Options 
 

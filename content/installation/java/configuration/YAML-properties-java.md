@@ -4,11 +4,11 @@ description: "Instructions for configuring Java agent properties via YAML file"
 tags: "installation java agent YAML configuration rules properties"
 -->
 
-Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
+Contrast supports YAML-based configuration for the Java agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [Java YAML Template](installation-javaconfig.html#java-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
 
 > **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
-## Load Path
+## Order of Precedence
 
 Configuration values use the following order of precedence: 
 
@@ -19,9 +19,11 @@ Configuration values use the following order of precedence:
 1. Contrast UI value
 1. Default value
 
+## Load Path
+
 You can set the path to the YAML configuration file using the environment variable `CONTRAST_CONFIG_PATH` or the Java system property `contrast.config.path`. Like the rest of the configuration values, the system property takes precedence over the environment variable, if both are set.
 
-If the environment variable and the system property aren't set, the agent will look for the YAML configuration file in the default location.
+If the environment variable and the system property aren't set, the agent looks for the YAML configuration file in the default location.
 
 On Windows: 
 
@@ -34,8 +36,6 @@ On Unix/Linux file systems:
 ```
 /etc/contrast/java/contrast_security.yaml
 ```
-
-Go to the [Java YAML Template](installation-javaconfig.html#java-template) for fully formatted properties that you can copy and use in your own agent configuration files. 
 
 ## Set as System Properties
 

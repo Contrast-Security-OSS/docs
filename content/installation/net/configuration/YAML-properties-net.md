@@ -4,11 +4,11 @@ description: "Instructions and template for configuring .NET agent properties vi
 tags: "installation net agent YAML configuration rules properties"
 -->
 
-Contrast support YAML-based configuration for the .NET agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments.
+Contrast support YAML-based configuration for the .NET agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 > **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
-## Load Path
+## Order of Precedence 
 
 Configuration values use the following order of precedence: 
 
@@ -19,13 +19,12 @@ Configuration values use the following order of precedence:
 5. Contrast UI value
 6. Default value 
 
+## Load Path
+
 The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
 * Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.)
-
-Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
-
 
 ## Configuration Options
 
