@@ -119,7 +119,7 @@ Set the environment variables as part of your application startup script or as a
 You can then run the application: 
 
 ```powershell
-dotnet run --launch-profiler MyAppWithContrastAgent
+dotnet run --launch-profile MyAppWithContrastAgent
 ```
 
 ## Next Steps
