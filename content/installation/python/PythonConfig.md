@@ -8,11 +8,13 @@ The Python agent and Contrast Service use a YAML file to alter the agent behavio
 
 ## Order of Precedence
 
-The configuration file is always called *contrast_security.yaml* no matter where it's located. The Python agent loads the configuration YAML from the following paths in order of precedence:
+The configuration file is named *contrast_security.yaml* or *contrast_security.yml* no matter where it's located. The Python agent loads the configuration YAML from the following paths in order of precedence:
 
-1. The current working directory (e.g., *./contrast_security.yaml*)
-2. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
-3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
+1. Any path saved in the environment variable `CONTRAST_CONFIG_PATH`
+2. The settings directory within the current directory (e.g., *./settings/contrast_security.yaml*)
+3. The current working directory (e.g., *./contrast_security.yaml*)
+4. Within the server's *etc/contrast/python* directory (e.g., */etc/contrast/python/contrast_security.yaml*)
+5. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
 
 The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
 
