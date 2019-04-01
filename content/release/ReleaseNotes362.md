@@ -21,9 +21,11 @@ Contrast Jenkins plugin enhancements make easier to work with your application i
 
 ### Java summary
 
+The Java team improved the accuracy of Protect command injection, SQL injection and XSS rules. We also fixed a bug where exclusions weren't applied for some Protect rules. We cleaned up and clarified the output of the agent’s diagnostic connection check, made minor improvements to agent startup time, and reduced redundant log messages. 
 
 ### .NET summary 
 
+The .NET team improved the accuracy of Assess path traversal as well as the performance of Assess data flow analysis. We fixed a bug where modifying the agent’s configuration file while the agent was running could cause an error in the agent’s background windows service. We also reduced redundant log messages. 
 
 ### Node.js summary 
 
