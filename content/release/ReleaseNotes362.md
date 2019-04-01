@@ -7,15 +7,15 @@ tags: "3.6.2 March Release Notes"
 
 ## Fixes
 
-* Provide your own configuration file during agent onboarding without errors. 
-* Use a typo-free Windows sample for **Automations Options** when you're onboarding a Java agent. 
-* All recommended **Assess Rules** are enabled by default in all environments for new organizations. 
-* The **Libraries** grid displays the number of vulnerabilities associated with the individual library.
-* The library name tooltip is properly displayed in the **Libraries** grid when the release date is "0". 
+* A typo in the Windows sample for **Automations Options** caused some trouble when onboarding a Java agent. 
+* Providing your own configuration file during agent onboarding caused errors. 
+* All recommended **Assess Rules** weren't enabled by default in all environments for new organizations. 
+* The **Libraries** grid displayed the number of vulnerabilities associated with the applications using it, not the individual library.
+* The library name tooltip wasn't properly displayed in the **Libraries** grid when the release date was "0". 
 
 ## Improvements
 
-Contrast Jenkins plugin enhancements make easier to work with your application in the post-build step. If you have access to multiple applications, the dropdown menu turns into a search-as-you-type field that makes it easier to find the right one. The application list also refreshes automatically in the background to stay in sync with the Contrast UI.
+Enhancements to the Contrast Jenkins plugin make easier to work with your application in the post-build step. If you have access to multiple applications, the dropdown menu turns into a search-as-you-type field to help you find the right one. The application list also refreshes automatically in the background to stay in sync with the Contrast UI.
 
 ## Agent Updates
 
@@ -33,9 +33,9 @@ The Node team focused on developing a new implementation for performing data flo
 
 ### Ruby summary 
 
-The Ruby team focused on updating support to align with the LTS versions of the Ruby language. As a result, the supported range of Ruby for agent 2.3.0 and greater has changed to 2.3.0-2.6.X. We also updated dynamic patching to utilize *C* methods instead of standard Ruby aliasing, which preserves method scope. Both of these changes improve the overall performance and stability of the Ruby agent.
+The Ruby team focused on updating support to align with the LTS versions of the Ruby language. As a result, the supported range of Ruby for agent 2.3.0 and greater has changed to 2.3.0-2.6.X. We also updated dynamic patching to utilize **C** methods instead of standard Ruby aliasing, which preserves method scope. Both of these changes improve the overall performance and stability of the Ruby agent.
 
 ### Python summary
 
-The Python agent team worked to improve our Pyramid and WSGI middlewares by refactoring response information. This includes CommandInjection hardening for new lines and inline comments along with support for the PyYAML 5.1 release that broke a lot of open-source projects. We added better image response handling to remove a possible slow down or crash in the agent.
+The Python agent team worked to improve our Pyramid and WSGI middlewares by refactoring response information. This includes Command Injection hardening for new lines and inline comments along with support for the PyYAML 5.1 release that broke a lot of open-source projects. We added better image response handling to remove a possible slow down or crash in the agent.
 
