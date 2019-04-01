@@ -25,7 +25,7 @@ The Java team improved the accuracy of Protect command injection, SQL injection 
 
 ### .NET summary 
 
-The .NET team improved the accuracy of Assess path traversal as well as the performance of Assess data flow analysis. We fixed a bug where modifying the agent’s configuration file while the agent was running could cause an error in the agent’s background windows service. We also reduced redundant log messages. 
+The .NET team improved the accuracy of Assess path traversal as well as the performance of Assess data flow analysis. We fixed a bug where modifying the agent’s configuration file while the agent was running could cause an error in the agent’s background Windows service. We also reduced redundant log messages. 
 
 ### Node.js summary 
 
