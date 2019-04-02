@@ -8,7 +8,7 @@ In rare scenarios, bad instrumentation causes a web server process to crash or a
 
 ## Agent Logs Directory
 
-The .NET agent logs information to the *LOGS* directory within *C:\ProgramData\Contrast\dotnet\*, the Windows 2008/2012/2016 *ProgramData* directory. Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the paths into the Windows Explorer location; you may need to replace the drive letter *C* with *D*.
+The .NET agent logs information to the *LOGS* directory within the data directory specified at install time. By default, LOGS are written to *%ProgramData%\Contrast\dotnet\LOGS*, within the Windows *ProgramData* directory. Depending on the setup of the Windows profile and folder view settings, the directories may be hidden. If so, paste the path into the Windows Explorer location.
 
 You can change which information is logged by changing the logging level in the [.NET agent configuration](installation-netconfig.html).
 
@@ -67,7 +67,7 @@ Complete the following steps to gather information to send to Contrast.
   * Install the latest .NET agent.
   * [Stop the .NET agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
   * Enable additional logging. 
-     * ** Start > Notepad > Right click > Run as Administrator**
+     * ** Start > Notepad
      * ** File > Open >** *C:\ProgramData\Contrast\dotnet\contrast_security.yaml*
      * Add the following configuration to the yaml file to enable verbose logging and logging of every method JIT-compiled by the CLR:
 ```

@@ -61,7 +61,7 @@ Use **Contrast .NET Logs**:
 To disable the agent for a specific application, populate `agent.dotnet.app_pool_blacklist` with the appropriate application pool in *C:\ProgramData\Contrast\dotnet\contrast_security.yaml*:
 
 ```
-<!--Comma-separated list of application pools ignored by Contrast-->
+# Comma-separated list of application pools ignored by Contrast
 agent:
   dotnet:
     app_pool_blacklist: ExampleAppPoolName
@@ -74,7 +74,7 @@ If you need to only enable the agent for specific applications hosted by IIS, co
 To enable the agent for only specific application pools, populate `agent.dotnet.app_pool_whitelist` with the appropriate application pool in *C:\ProgramData\Contrast\dotnet\contrast_security.yaml*:
 
 ```
-<!--Comma-separated list of application pools exclusively profiled by Contrast-->
+# Comma-separated list of application pools exclusively profiled by Contrast
 agent:
   dotnet:
     app_pool_whitelist: ExampleAppPoolName
