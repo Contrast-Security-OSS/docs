@@ -14,7 +14,7 @@ In either case, you can use the .NET agent's application pool filtering feature.
 
 ## Application Pool Filtering 
 
-Web applications hosted on IIS run on application pools. If you need to disable the .NET agent for specific application pools on an instance of IIS, configure a `ProcessBlacklist`. When an application pool is blacklisted, the agent won't attach to any applications using that application pool, and there should be no performance impact for those applications.
+Web applications hosted on IIS run on application pools. If you need to disable the .NET agent for specific application pools on an instance of IIS, configure a `agent.dotnet.app_pool_blacklist`. When an application pool is blacklisted, the agent won't attach to any applications using that application pool, and there should be no performance impact for those applications.
 
 Whitelisting and blacklisting are based on the application pool *name*. Application pool blacklists and whitelists also accept `*` as a variable-length wildcard. ("AppPool*" will match "AppPool1", "AppPool_arb", etc.)
 
@@ -58,22 +58,26 @@ Use **Contrast .NET Logs**:
 
 ## Blacklist an Application Pool
 
-To disable the agent for a specific application, populate `ProcessBlacklist` with the appropriate application pool in *C:\Program Files\Contrast\dotnet\DotnetAgentService.exe.config*:
+To disable the agent for a specific application, populate `agent.dotnet.app_pool_blacklist` with the appropriate application pool in *C:\ProgramData\Contrast\dotnet\contrast_security.yaml*:
 
 ```
 <!--Comma-separated list of application pools ignored by Contrast-->
-<add key="ProcessBlacklist" value=""/>
+agent:
+  dotnet:
+    app_pool_blacklist: ExampleAppPoolName
 ```
 
 ## Whitelist an Application Pool 
 
-If you need to only enable the agent for specific applications hosted by IIS, configure a `ProcessWhitelist` to only analyze certain application pools. If an application pool is whitelisted, the agent analyzes the matching pools. There should be no performance impact for any other applications.
+If you need to only enable the agent for specific applications hosted by IIS, configure `agent.dotnet.app_pool_whitelist` to only analyze certain application pools. If an application pool is whitelisted, the agent analyzes the matching pools. There should be no performance impact for any other applications.
 
-To enable the agent for only specific application pools, populate `ProcessWhitelist` with the appropriate application pool in *C:\Program Files\Contrast\dotnet\DotnetAgentService.exe.config*:
+To enable the agent for only specific application pools, populate `agent.dotnet.app_pool_whitelist` with the appropriate application pool in *C:\ProgramData\Contrast\dotnet\contrast_security.yaml*:
 
 ```
 <!--Comma-separated list of application pools exclusively profiled by Contrast-->
-<add key="ProcessWhitelist" value=""/>
+agent:
+  dotnet:
+    app_pool_whitelist: ExampleAppPoolName
 ```
 
 For more information on the standard configuration for the agent, see the [Configuration Overview](installation-netconfig.html#overview).

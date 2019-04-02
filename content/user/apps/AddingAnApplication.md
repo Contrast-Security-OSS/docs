@@ -55,9 +55,22 @@ For **Java**, add the system property `contrast.group` to make your new startup 
 
 For **.Net**, you can configure group access at the application or server level. 
 
-* To add the individual application to the group, add the `Contrast.AppGroup` property to the `appSettings` group in the application's *web.config* file. 
-* To add all applications on a server to a group, add `Contrast.AppGroup` to the *DotnetAgentService.exe.config* file for the agent server.   
+* To add the individual application to the group, add the `contrast.application.group` or `Contrast.AppGroup` property to the `appSettings` group in the application's *web.config* file. 
+* To add all applications on a server to a group, add `application.group` to the *contrast_security.yaml* file for the agent server.   
 
+> **Example:**
+ ``` web.config
+ <appSettings>
+   <add key="contrast.application.group" value="" />
+ </appSettings>
+ ```
+ 
+ > **Example:**
+ ``` yaml
+ application:
+   group: insertGroupNameHere
+ ```
+ 
 For **Node.js**, you can choose from two configuration methods. 
 
 * You can add `"appGroup":"groupname"` to the *contrast_security.yaml* file. 

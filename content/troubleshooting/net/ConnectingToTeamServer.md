@@ -15,11 +15,11 @@ tags: "troubleshoot Contrast interface agent installation .NET"
 
 ## Solution
 
-* Open the .NET agent's configuration file, *DotnetAgentService.exe.config*, which is located in the agent's installation directory (i.e., *C:/Program Files/Contrast .NET*).
+* Open the .NET agent's configuration file, *contrast_security.yaml*, which is located in the agent's data directory (i.e., *C:/ProgramData/Contrast/dotnet*).
 
-* Verify that the `TeamServerUrl` value (e.g., [https://app.contrastsecurity.com/Contrast](https://app.contrastsecurity.com/Contrast)) can be reached from a normal web browser on the server. If the URL can't be reached, you should review the network path and related settings between the server and the Contrast application.
+* Verify that the `api.url` value (e.g., [https://app.contrastsecurity.com/Contrast](https://app.contrastsecurity.com/Contrast)) can be reached from a normal web browser on the server. If the URL can't be reached, you should review the network path and related settings between the server and the Contrast application.
 
-* Verify proxy settings. If a normal web browser can connect to Contrast but the agent can't, the agent might be missing the proxy settings required by your network environment. You can configure a proxy using the `ProxyAuth`, `ProxyUser`, `ProxyPass` and `ProxyAddress` values in the [configuration](installation-netconfig.html) file.
+* Verify proxy settings. If a normal web browser can connect to Contrast but the agent can't, the agent might be missing the proxy settings required by your network environment. You can configure a proxy using the `api.proxy.url`, `api.proxy.user`, `api.proxy.pass` and `api.proxy.auth_type` values in the [configuration](installation-netconfig.html) file.
 
-* Verify that the API key is correct. If the above settings are correct, the API key used by your organization might have changed. Follow these [directions](admin-systemsettings.html#apikey) to view your current API Key.
+* Verify that the API key (`api.api_key`) is correct. If the above settings are correct, the API key used by your organization might have changed. Follow these [directions](admin-systemsettings.html#apikey) to view your current API Key.
 
