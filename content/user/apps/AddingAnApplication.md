@@ -61,7 +61,7 @@ For **.Net**, you can configure group access at the application or server level.
 > **Example:**
  ``` web.config
  <appSettings>
-   <add key="contrast.application.group" value="" />
+   <add key="contrast.application.group" value="insertGroupNameHere" />
  </appSettings>
  ```
  
