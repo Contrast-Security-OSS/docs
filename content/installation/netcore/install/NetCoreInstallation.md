@@ -36,17 +36,19 @@ When running in IIS, make sure the application pool can access the these paths. 
 
 To enable the .NET Core agent on your application, you must set the following environment variables before running your application.
 
-* CORECLR_PROFILER_PATH: Use the following table to find the correct Profiler path.
+* CORECLR_PROFILER_PATH_32: Use the following table to find the correct Profiler path for 32-bit applications.
+* CORECLR_PROFILER_PATH_64: Use the following table to find the correct Profiler path for 64-bit applications.
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}`
 * CONTRAST_INSTALL_DIRECTORY: \{\{ Unzipped Directory Root \}\}
+* CONTRAST_CONFIG_PATH: The path to YAML configuration file.  Can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to CONTRAST_INSTALL_DIRECTORY. (i.e., *contrast_security.yaml*)
 * AGENT\__DOTNET\__CONTAINER: `true`
-* CONTRAST_CONFIG_PATH: The path to YAML configuration file (i.e., *contrast_security.yaml*).
 
-| Platform | Profiler Path |
-|--|--|
-| Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
-| Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
+
+Environment Variable | Platform | Profiler Path |
+|--|--|--|
+CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
+CORECLR_PROFILER_PATH_64 | Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
 
 > **Notes:** 
  * The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
@@ -71,12 +73,13 @@ Set the environment variables using either of these two methods:
     </handlers>
     <aspNetCore processPath="dotnet" arguments=".\ExampleNetCoreApp.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout">
       <environmentVariables>
-        <environmentVariable name="CORECLR_PROFILER_PATH" value="C:\contrast\dotnetcore\runtimes\win-x64\native\ContrastProfiler.dll" />
+        <environmentVariable name="CORECLR_PROFILER_PATH_64" value="C:\contrast\dotnetcore\runtimes\win-x64\native\ContrastProfiler.dll" />
+        <environmentVariable name="CORECLR_PROFILER_PATH_32" value="C:\contrast\dotnetcore\runtimes\win-x86\native\ContrastProfiler.dll" />
         <environmentVariable name="CORECLR_ENABLE_PROFILING" value="1" />
         <environmentVariable name="CORECLR_PROFILER" value="{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}" />
         <environmentVariable name="CONTRAST_INSTALL_DIRECTORY" value="C:\contrast\dotnetcore\" />
-        <environmentVariable name="AGENT__DOTNET__CONTAINER" value="true" />
         <environmentVariable name="CONTRAST_CONFIG_PATH" value="C:\contrast\dotnet\contrast_security.yaml" />
+        <environmentVariable name="AGENT__DOTNET__CONTAINER" value="true" />        
       </environmentVariables>
     </aspNetCore>
   </system.webServer>
@@ -104,15 +107,14 @@ Set the environment variables as part of your application startup script or as a
     "MyAppWithContrastAgent": {      
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CORECLR_PROFILER_PATH_64": "c:\\contrast\\dotnetcore\\ContrastProfiler-64.dll",
         "CORECLR_PROFILER_PATH_32": "c:\\contrast\\dotnetcore\\ContrastProfiler-32.dll",
+        "CORECLR_PROFILER_PATH_64": "c:\\contrast\\dotnetcore\\ContrastProfiler-64.dll",        
         "CORECLR_ENABLE_PROFILING": "1",
-        "CORECLR_PROFILER": "{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}",
+        "CORECLR_PROFILER": "{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}",        
         "CONTRAST_INSTALL_DIRECTORY": "c:\\contrast\\dotnetcore\\",
-        "AGENT__DOTNET__CONTAINER": "true",
-        "CONTRAST_CONFIG_PATH": "c:\\contrast\\config\\MyApp\\contrast_security.yaml"
+        "CONTRAST_CONFIG_PATH": "c:\\contrast\\config\\MyApp\\contrast_security.yaml",
+        "AGENT__DOTNET__CONTAINER": "true"        
       }
-      // other settings
     }
 ```
 
