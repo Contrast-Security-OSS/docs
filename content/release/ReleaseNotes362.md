@@ -15,7 +15,8 @@ tags: "3.6.2 March Release Notes"
 
 ## Improvements
 
-Enhancements to the Contrast Jenkins plugin make easier to work with your application in the post-build step. If you have access to multiple applications, the dropdown menu turns into a search-as-you-type field to help you find the right one. The application list also refreshes automatically in the background to stay in sync with the Contrast UI.
+* Enhancements to the Contrast Jenkins plugin make easier to work with your application in the post-build step. If you have access to multiple applications, the dropdown menu turns into a search-as-you-type field to help you find the right one. The application list also refreshes automatically in the background to stay in sync with the Contrast UI.
+* Enterprise-on-Premises (EOP) has been upgraded to Tomcat 7.0.92. 
 
 ## Agent Updates
 
