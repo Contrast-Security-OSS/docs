@@ -46,10 +46,8 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 * **Last Name**
 * **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
 * **Password** <br> This field is required if the **Email** field is set to "false". 
-* **Organization UUID** 
+* **Organization UUID** <br> To find the Organization UUID in the Contrast UI, impersonate the appropriate organization, and then go to the **Organization Settings > Organization tab > General Information** section.
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
-
-> **Note:** Find the Organization UUID in the Contrast UI by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
 
 #### Optional information 
 
@@ -141,12 +139,10 @@ Download CSV-formatted templates directly from the Contrast UI by hovering over 
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
-
 ## User Status
 
 Once added, each user's status is displayed on the main **Users** page so that you can see who's awaiting activation, active or inactive, or locked out of their account based on a security policy. For more information about user administration, read how to [Manage Users](admin-manageorgs.html#manage-user). 
 
 <a href="assets/images/User-grid.png" rel="lightbox" title="Users grid for Organization Administrators"><img class="thumbnail" src="assets/images/User-grid.png"/></a>
-
 
 
