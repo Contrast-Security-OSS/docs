@@ -45,6 +45,7 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 * **First Name** 
 * **Last Name**
 * **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
+* **Password** <br> This field is required if the **Email** field is set to "false". 
 * **Organization UUID** 
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
@@ -66,7 +67,7 @@ To include the following fields in the spreadsheet, add a new column and value(s
 
 #### Authentication methods
 
-For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly. 
+Users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured must use the field heading **Username** in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly. 
 
 #### Templates
 
@@ -110,6 +111,7 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 * **First Name**
 * **Last Name** 
 * **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
+* **Password** <br> This field is required if the **Email** field is set to "false".
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
 #### Optional information 
@@ -126,7 +128,7 @@ To include the following fields in the spreadsheet, add a new column and value(s
 
 #### Authentication methods
 
-For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly.  
+Users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured must use the **Username** field heading in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly.  
 
 #### Templates
 
