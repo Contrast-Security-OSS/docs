@@ -31,11 +31,11 @@ To start the agent, and consequently enable analysis, complete either of the the
 #### Option one
 
 * Go to **Windows Start**, and select **Services**.
-* Right click on **Contrast .NET Main Service**, and select **Stop**
+* Right click on **Contrast .NET Main Service**, and select **Start**
 
 #### Option two 
 
-* From an administrator command prompt, use `net stop DotnetAgentSvc`.
+* From an administrator command prompt, use `net start DotnetAgentSvc`.
 
 >**Note:** By default, the Contrast .NET Main Service starts automatically when Windows starts as well as when the agent is first installed.
 
@@ -46,11 +46,11 @@ To stop the agent, and consequently disable Contrast instrumentation and analysi
 #### Option one
 
 * Go to **Start** and select **Services**.  
-* Right click on **Contrast .NET Main Service** and select **Start**. 
+* Right click on **Contrast .NET Main Service** and select **Stop**. 
 
 #### Option two
 
-* From an administrator command prompt, use `net start DotnetAgentSvc`.
+* From an administrator command prompt, use `net stop DotnetAgentSvc`.
 
 ## .NET Contrast Tray          
 

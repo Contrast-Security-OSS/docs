@@ -38,17 +38,12 @@ Contrast only recommends that you use these solutions for testing purposes in a 
 
 Alternatively, you can configure the agent to trust **any** certificate. You should only use this configuration for testing purposes or in trusted environments.
 
-* In a text editor, open *-%SYSTEMDRIVE%\Program Files\Contrast\dotnet\DotnetAgentService.exe.config*. 
-* In the **appSettings** section, add the `TeamServerValidateCert` tag. 
+* In a text editor, open *-%SYSTEMDRIVE%\ProgramData\Contrast\dotnet\contrast_security.yaml*. 
+* Set `api.certificate.ignore_cert_errors` to `false`: 
 
 > **Example:** 
  ```
- <?xml version="1.0"?>
- <configuration>
-  <appSettings>
-  <add key="TeamServerUrl" value="*****************"/>
-  <add key="TeamServerUserName" value="*******************"/>
-  <add key="TeamServerApiKey" value="**************"/>
-  <add key="TeamServerServiceKey" value="************"/>
-  <add key="TeamServerValidateCert" value="false"/>
+api:
+  certificate:
+    ignore_cert_errors: false
  ```

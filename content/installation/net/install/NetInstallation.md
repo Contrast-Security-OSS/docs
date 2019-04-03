@@ -27,7 +27,7 @@ You can fully configure the agent using the *contrast_security.yaml* file. See t
     enable: false
  ```
 
-**Note:** The *contrast_security.yaml* file is copied to the agent's data directory by the installer (*C:\ProgramData\Contrast\dotnet\contrast_security.yaml* by default.) The installer does **not** copy the YAML file if it already exists at the destination.
+> **Note:** The *contrast_security.yaml* file is copied to the agent's data directory by the installer (*C:\ProgramData\Contrast\dotnet\contrast_security.yaml* by default). The installer does **not** copy the YAML file if it already exists at the destination.
 
 ## Silent Installation
 
@@ -50,8 +50,6 @@ Many users are curious about the changes made by the .NET agent and the impacts 
 - Places the agent’s files on a disk in the specified install location (e.g., *C:\Program Files\Contrast\dotnet*). This includes several dynamic link libraries (DLLs) and executables, such as the background Windows service that drives agent behavior. 
 - Creates the specified data directory for the agent that's primarily used to store agent log files and configuration (e.g., *C:\ProgramData\Contrast\dotnet*). 
 - Registers the agent’s background Window service with the operating system.
-- Reads the *DotnetAgentSettings.ini* file to customize the agent’s configuration file with details necessary to communicate with the Contrast application (e.g., API key).
-- Registers several agent assemblies with the .NET global assembly cache so they can be loaded by instrumented applications.
 - Starts the agent’s background Windows service and Tray (UI) application. This service has a number of responsibilities: 
   - Preparing the environment for instrumentation by registering the agent’s profiler component with IIS through environment variables, and restarting IIS. This causes the CLR to load the agent’s profiler, which is responsible for instrumenting analyzed applications. 
   - Communication with the Contrast UI.
