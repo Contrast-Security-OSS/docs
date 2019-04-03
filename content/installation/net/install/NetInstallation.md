@@ -27,7 +27,7 @@ You can fully configure the agent using the *contrast_security.yaml* file. See t
     enable: false
  ```
 
-**Note:** The *contrast_security.yaml* file is copied to the agent's data directory by the installer (*C:\ProgramData\Contrast\dotnet\contrast_security.yaml* by default.) The installer does **not** copy the YAML file if it already exists at the destination.
+> **Note:** The *contrast_security.yaml* file is copied to the agent's data directory by the installer (*C:\ProgramData\Contrast\dotnet\contrast_security.yaml* by default). The installer does **not** copy the YAML file if it already exists at the destination.
 
 ## Silent Installation
 
