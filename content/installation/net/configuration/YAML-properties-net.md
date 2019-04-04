@@ -268,12 +268,12 @@ agent:
 ```
 
 ### Whitelist an Application Pool for Instrumentation
-The following configuration excludes all application pools except `ExampleAppPool` from instrumentation by the .NET Agent. This can help improve performance on applications you do not wish to analyze.
+The following configuration excludes all application pools except `ExampleAppPool` and `Fabrikam` from instrumentation by the .NET Agent. This can help improve performance on applications you do not wish to analyze.
 
 ```
 agent:
   dotnet:
-    app_pool_whitelist: ExampleAppPool
+    app_pool_whitelist: ExampleAppPool,Fabrikam
 ```
 
 ### Disable Auto-update
