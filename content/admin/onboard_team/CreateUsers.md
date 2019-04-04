@@ -45,7 +45,6 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 * **First Name** 
 * **Last Name**
 * **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
-* **Password** <br> This field is required if the **Email** field is set to "false". 
 * **Organization UUID** <br> To find the Organization UUID in the Contrast UI, impersonate the appropriate organization, and then go to the **Organization Settings > Organization tab > General Information** section.
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
@@ -53,15 +52,17 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 
 To include the following fields in the spreadsheet, add a new column and value(s) for each as written below. 
 
-* **Email Activation** <br> If the value is "None", the default is "Required Password".
-* **System Administration** <br> The default value is "Off".
-* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
 * **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
 * **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
 * **Timezone** <br> The default value is the organization time zone.
-* **Access** <br> The default value is "On".
-* **API only** <br> The default value is "Off".
 * **Protect** <br> The default value is "Off".
+* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
+* **Language** <br> 
+* **System Administration** <br> The default value is "Off".
+* **Email Activation** <br> If the value is "None", the default is "Required Password".
+* **Password** <br> This field is required if the **Email Activation** field is set to "false". 
+* **API only** <br> The default value is "Off".
+* **Access** <br> The default value is "On".
 
 #### Authentication methods
 
@@ -109,7 +110,6 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 * **First Name**
 * **Last Name** 
 * **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
-* **Password** <br> This field is required if the **Email** field is set to "false".
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
 
 #### Optional information 
