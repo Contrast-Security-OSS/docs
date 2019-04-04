@@ -132,7 +132,7 @@ Use the properties in this section to control security logging. These logs allow
 
 Define the following properties to set Syslog values. If the properties are not defined, the agent uses the Syslog values from the Contrast UI.
 
-  * **security_logger**:
+  * **syslog**:
     * **enable**: Set to `true` to enable Syslog logging.
     * **ip**: Set the IP address of the Syslog server to which the agent should send messages.
     * **port**: Set the port of the Syslog server to which the agent should send messages.
