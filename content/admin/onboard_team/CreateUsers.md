@@ -57,7 +57,7 @@ To include the following fields in the spreadsheet, add a new column and value(s
 * **Timezone** <br> The default value is the organization time zone.
 * **Protect** <br> The default value is "Off".
 * **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
-* **Language** <br> 
+* **Language** <br> The value is determined by the value of the `lang.default` property in the *general.properties* configuration file for the Contrast application. The default value of the configuration property is `en` (English). 
 * **System Administration** <br> The default value is "Off".
 * **Email Activation** <br> If the value is "None", the default is "Required Password".
 * **Password** <br> This field is required if the **Email Activation** field is set to "false". 
