@@ -85,7 +85,7 @@ Use the properties in this section to control diagnostic logging. These logs all
 
 
   * **logger**:
-    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If path starts with `/dev/` it will not create a rotated file. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
+    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If the path starts with `/dev/`, it doesn't create a rotated file. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
     * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
     * **append**: Set to `false` for the agent to always create a new log file instead of appending and rolling.
     * **stdout**: Set to `false` for the agent to suppress output to STDOUT.
