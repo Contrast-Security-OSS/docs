@@ -15,8 +15,8 @@ Configuration values use the following order of precedence:
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 2. Specific environmental variable
 3. Generic environment variable value
-4. Application-specific configuration file value (i.e. web.config)
-5. User configuration file value (i.e. contrast_security.yaml)
+4. Application-specific configuration file value (i.e. *web.config*)
+5. User configuration file value (i.e. *contrast_security.yaml*)
 6. Contrast UI value
 7. Default value
 
@@ -27,17 +27,17 @@ The *contrast_security.yaml* file should be placed on the file system using one 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
 * Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.)
 
-## Using Environment Variables
-Every configuration option supported by the *contrast_security.yaml* file can also be specified using environment variables. 
+## Environment Variables
 
-Environment variable names are derived from the yaml path by replacing path segment delimiters (`.`) with double underscores (`__`) and prefixing the result with `CONTRAST__` e.g. `server.name` becomes `CONTRAST__SERVER__NAME` while `api.api_key` becomes `CONTRAST__API__API_KEY`.
+You can use environment variables to specify every configuration option supported by the *contrast_security.yaml* file. Environment variable names are derived from the YAML path by replacing path segment delimiters (`.`) with double underscores (`__`) and prefixing the result with `CONTRAST__`. For example, `server.name` becomes `CONTRAST__SERVER__NAME` while `api.api_key` becomes `CONTRAST__API__API_KEY`.
 
-## Using web.config
-The `application` configuration options can also be specified in an application's `web.config` file. In order for the agent to pick up customized application settings, you must place these settings in the application web.config file's root configuration `appSettings` section.
+## Use web.config
 
-Configuration option names in `web.config` files are derived from the yaml path prefixed with `contrast.` e.g. `application.name` becomes `contrast.application.name`.
+You can also specify the `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section.
 
-The following application-specific configuration options can be specified in each application's `web.config` file:
+Configuration option names in *web.config* files are derived from the YAML path prefixed with `contrast.`. For example, `application.name` becomes `contrast.application.name`.
+
+You can specify the following application-specific configuration options in each application's `web.config` file:
 
 * `contrast.application.name`
 * `contrast.application.version`
@@ -47,7 +47,7 @@ The following application-specific configuration options can be specified in eac
 * `contrast.inventory.tags`
 * `contrast.assess.tags`
 
-If `contrast.application.name` is not specified, the .NET agent will use the application's virtual path as an application name. If the application is hosted in the root of a site (i.e., the virtual path is ***/***), then the .NET agent will use the site's name as the application name.
+If `contrast.application.name` is not specified, the .NET agent will use the application's virtual path as an application name. If the application is hosted in the root of a site (i.e., the virtual path is ***/***), the .NET agent will use the site's name as the application name.
 
 ## Configuration Options
 
@@ -77,7 +77,7 @@ Use the following properties for communication with the Contrast UI using certif
     * **store_name**: Specify the name of certificate store to open. The `certificate_location` property must be set to `Store`. Value options include `AuthRoot`, `CertificateAuthority`, `My`, `Root`, `TrustedPeople`, or `TrustedPublisher`.
     * **store_location**: Specify the location of the certificate store. The `certificate_location` property must be set to `Store`. Value options include `CurrentUser` or `LocalMachine`.
     * **find_type**: Specify the type of value the agent uses to find the certificate in the collection of certificates from the certificate store. The `certificate_location` property must be set to `Store`. Value options include `FindByIssuerDistinguishedName`, `FindByIssuerName`, `FindBySerialNumber`, `FindBySubjectDistinguishedName`, `FindBySubjectKeyIdentifier`, `FindBySubjectName`, or `FindByThumbprint`.
-    * **find_value**: Specify the value the agent uses in combination with `find_type` to find a certification in the certificate store. Note that the agent will use the first certificate from the certificate store that matches this search criteria.
+    * **find_value**: Specify the value the agent uses in combination with `find_type` to find a certification in the certificate store. <br> Note: The agent will use the first certificate from the certificate store that matches this search criteria.
     
 #### Proxy
 
@@ -256,10 +256,11 @@ Use the properties in this section to set metadata for the server hosting this a
 
 ## Example Configurations
 
-The following examples can be added to an existing `contrast_security.yaml` file to achieve the example desired behavior.
+You can add the following examples to an existing *contrast_security.yaml* file to achieve the desired behavior.
 
-### Enable Profiler Chaining
-The following configuration enables profiler chaining. This allows the .NET Agent to work alongside other tools that use the CLR Profiling API such as performance APMs.
+### Enable profiler chaining
+
+The following configuration enables profiler chaining. This allows the .NET agent to work alongside other tools that use the CLR Profiling API, such as performance APMs.
 
 ```
 agent:
@@ -267,8 +268,9 @@ agent:
     enable_chaining: true
 ```
 
-### Whitelist an Application Pool for Instrumentation
-The following configuration excludes all application pools except `ExampleAppPool` and `Fabrikam` from instrumentation by the .NET Agent. This can help improve performance on applications you do not wish to analyze.
+### Whitelist an application pool for instrumentation
+
+The following configuration excludes all application pools except `ExampleAppPool` and `Fabrikam` from instrumentation by the .NET agent. This can help improve performance on applications you don't want to analyze.
 
 ```
 agent:
@@ -276,8 +278,9 @@ agent:
     app_pool_whitelist: ExampleAppPool,Fabrikam
 ```
 
-### Disable Auto-update
-The following configuration disables the auto-update feature that automatically downloads and installs new versions of the .NET Agent from Contrast.
+### Disable auto-update
+
+The following configuration disables the auto-update feature that automatically downloads and installs new versions of the .NET agent from Contrast.
 
 ```
 agent:
@@ -285,8 +288,9 @@ agent:
     enable: false
 ```
 
-### Combined Example
-The following configuration enables profiler chaining, specifies an application pool whitelist, disables auto-update, and sets the server name to "MyServer".
+### Combined example
+
+The following configuration enables profiler chaining, specifies an application pool whitelist, disables auto-update and sets the server name to "MyServer".
 
 ```
 agent:
