@@ -6,11 +6,11 @@ tags: "installation node agent YAML configuration rules properties"
 
 Contrast supports YAML-based configuration for the Node agent. This allows you to store configuration on disk that you can override with environment variables or command-line arguments. Go to the [Node YAML Template](installation-nodeconfig.html#node-template) for fully formatted properties that you can copy and use in your own configuration files.
 
-> **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
+> **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file.
 
-## Order of Precedence 
+## Order of Precedence
 
-Configuration values use the following order of precedence: 
+Configuration values use the following order of precedence:
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 2. Command line value
@@ -18,18 +18,18 @@ Configuration values use the following order of precedence:
 4. Generic environment variable value
 5. User configuration file value
 6. Contrast UI value
-7. Default value 
+7. Default value
 
-## Load Path 
+## Load Path
 
-The agent expects that the *contrast_security.yaml* configuration file exists in the application's root directory (where the *package.json* file usually resides). If you want to change the location of the file, provide the agent with the new location using one of the following methods: 
+The agent expects that the *contrast_security.yaml* configuration file exists in the application's root directory (where the *package.json* file usually resides). If you want to change the location of the file, provide the agent with the new location using one of the following methods:
 
 * Pass a CLI option `--configFile <location>`
 * Set the `CONTRAST_CONFIG` environment variable
 
-## Configuration Options 
+## Configuration Options
 
-### Enable the agent 
+### Enable the agent
 
 * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
 
@@ -37,14 +37,14 @@ The agent expects that the *contrast_security.yaml* configuration file exists in
 
 Use the properties in this section to connect the Node agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-* **api**: 
-  * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.** 
+* **api**:
+  * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.**
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **timeout_ms**: Set the default request timeout.
 
-#### Certificate 
+#### Certificate
 
 Use the following properties for communication with the Contrast UI using certificates.
 
@@ -68,7 +68,7 @@ Use the following properties for communication with the Contrast UI over a proxy
 Use the properties in this section to control the way and frequency with which the Node agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
-All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-nodeconfig.html#node-template). 
+All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-nodeconfig.html#node-template).
 
 
 * **agent**:
@@ -85,8 +85,8 @@ Use the properties in this section to control diagnostic logging. These logs all
 
 
   * **logger**:
-    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
-    * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
+    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If path starts with `/dev/` it will not create a rotated file. If no log file exists at this location, the agent creates a file. <br> Example: */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
+    * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
     * **append**: Set to `false` for the agent to always create a new log file instead of appending and rolling.
     * **stdout**: Set to `false` for the agent to suppress output to STDOUT.
 
@@ -119,9 +119,9 @@ Use the properties in this section to control inventory features in the Node age
 
 ### Contrast Assess properties
 
-Use the properties in this section to control Assess in the Node agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
+Use the properties in this section to control Assess in the Node agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled.
 
-> **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.  
+> **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.
 
 
 * **assess**:
@@ -159,7 +159,7 @@ Use the properties in this section to control the application(s) hosting this ag
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
   * **metadata**: Define a set of `key=value` pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
-### Server properties 
+### Server properties
 
 Use the properties in this section to set metadata for the server hosting this agent.
 
