@@ -52,30 +52,49 @@ api:
   # Use the following properties for communication
   # with the Contrast UI using certificates.
   # ============================================================================
-  # certificate:
+  certificate:
 
     # If set to `false`, the agent will ignore the
     # certificate configuration in this section.
     # enable: true
+
+    # Determine the location from which the agent loads a client certificate. Value options include `File` or `Store`
+    # certificate_location: 
+
+    # Set the absolute path to the client certificate's .CER file for communication with Contrast UI. 
+    # The `certificate_location` property must be set to `File`.
+    # cer_file: 
+
+    # Specify the name of certificate store to open. The `certificate_location` property must be set to `Store`.
+    # Value options include `AuthRoot`, `CertificateAuthority`, `My`, `Root`, `TrustedPeople`, or `TrustedPublisher`.
+    # store_name: 
+
+    # Specify the location of the certificate store. The `certificate_location` property must be set to `Store`.
+    # Value options include `CurrentUser` or `LocalMachine`.
+    # store_location: 
+
+    # Specify the type of value the agent uses to find the certificate in the collection of certificates from the certificate store.
+    # The `certificate_location` property must be set to `Store`.
+    # Value options include `FindByIssuerDistinguishedName`, `FindByIssuerName`, `FindBySerialNumber`, `FindBySubjectDistinguishedName`, `FindBySubjectKeyIdentifier`, `FindBySubjectName`, or `FindByThumbprint`.
+    # find_type: 
+
+    # Specify the value the agent uses in combination with `find_type` to find a certification in the certificate store.
+    # Note: The agent will use the first certificate from the certificate store that matches this search criteria.
+    # find_value: 
 
   # ============================================================================
   # api.proxy
   # Use the following properties for communication
   # with the Contrast UI over a proxy.
   # ============================================================================
-  # proxy:
+  proxy:
 
     # Add a property value to determine if the agent should communicate with
     # the Contrast UI over a proxy. If a property value is not present, the
     # presence of a valid proxy host and port determines enabled status.
     # enable: NEEDS_TO_BE_SET
 
-    # Set the proxy host. It must be set with port and scheme.
-    # host: localhost
-
-    # Set this property as an alternate for `scheme://host:port`. It takes
-    # precedence over the other settings, if specified; however, an error
-    # will be thrown if both the URL and individual properties are set.
+    # Set the URL of the proxy server.
     # url: NEEDS_TO_BE_SET
 
     # Set the proxy user.
@@ -93,13 +112,12 @@ api:
 # Use the properties in this section to control the way and frequency
 # with which the agent communicates to logs and the Contrast UI.
 # ==============================================================================
-# agent:
+agent:
 
   # ============================================================================
   # agent.auto_update
-  # TODO
   # ============================================================================
-  # auto_update:
+  auto_update:
 
     # Set to `true` for the agent to automatically upgrade to newer versions.
     # enable: true
@@ -115,7 +133,7 @@ api:
   # If the following properties are not defined, the
   # agent uses the logging values from the Contrast UI.
   # ============================================================================
-  # logger:
+  logger:
 
     # Set the the log output level. Valid options are
     # `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
@@ -127,7 +145,7 @@ api:
   # logging values. If not defined, the agent uses the
   # security logging (CEF) values from the Contrast UI.
   # ============================================================================
-  # security_logger:
+  security_logger:
 
     # Set the log level for security logging. Valid options
     # are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
@@ -142,7 +160,7 @@ api:
     # Define the following properties to set Syslog values. If the properties
     # are not defined, the agent uses the Syslog values from the Contrast UI.
     # ==========================================================================
-    # syslog:
+    syslog:
 
       # Set to `true` to enable Syslog logging.
       # enable: NEEDS_TO_BE_SET
@@ -174,7 +192,7 @@ api:
   # agent.dotnet
   # The following properties apply to any .NET agent-wide configurations.
   # ============================================================================
-  # dotnet:
+  dotnet:
 
     # Set a list of application pool names that the agent does not instrument
     # or analyze. Names must be formatted as a comma-separated list.
@@ -230,7 +248,7 @@ api:
 # inventory
 # Use the properties in this section to override the inventory features.
 # ==============================================================================
-# inventory:
+inventory:
 
   # Set to `false` to disable inventory features in the agent.
   # enable: true
@@ -243,7 +261,7 @@ api:
 # assess
 # Use the properties in this section to control Assess.
 # ==============================================================================
-# assess:
+assess:
 
   # Include this property to determine if the Assess
   # feature should be enabled. If this property is not
@@ -269,7 +287,7 @@ api:
   # assess.sampling
   # Use the following properties to control sampling in the agent.
   # ============================================================================
-  # sampling:
+  sampling:
 
     # Set to `false` to disable sampling.
     # enable: true
@@ -289,7 +307,7 @@ api:
   # assess.rules
   # Use the following properties to control simple rule configurations.
   # ============================================================================
-  # rules:
+  rules:
 
     # Define a list of Assess rules to disable in the agent.
     # The rules must be formatted as a comma-delimited list.
@@ -302,7 +320,7 @@ api:
 # protect
 # Use the properties in this section to override Protect features.
 # ==============================================================================
-# protect:
+protect:
 
   # Use the properties in this section to determine if the
   # Protect feature should be enabled. If this property is not
@@ -323,7 +341,7 @@ api:
   # protect.rules
   # Use the following properties to set simple rule configurations.
   # ============================================================================
-  # rules:
+  rules:
 
     # Define a list of Protect rules to disable in the agent.
     # The rules must be formatted as a comma-delimited list.
@@ -334,7 +352,7 @@ api:
     # Use the following properties to configure
     # if and how the agent blocks bots.
     # ==========================================================================
-    # bot-blocker:
+    bot-blocker:
 
       # Set to `true` for the agent to block known bots.
       # enable: false
@@ -345,7 +363,7 @@ api:
     # Protect rule. The key is the rule ID in the
     # Contrast UI with dashes replaced by underscores.
     # ==========================================================================
-    # sql-injection:
+    sql-injection:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or off.
@@ -359,7 +377,7 @@ api:
     # Use the following properties to configure
     # how the command injection rule works.
     # ==========================================================================
-    # cmd-injection:
+    cmd-injection:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
@@ -373,7 +391,7 @@ api:
     # Use the following properties to configure
     # how the path traversal rule works.
     # ==========================================================================
-    # path-traversal:
+    path-traversal:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
@@ -387,7 +405,7 @@ api:
     # Use the following properties to configure
     # how the method tampering rule works.
     # ==========================================================================
-    # method-tampering:
+    method-tampering:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
@@ -401,7 +419,21 @@ api:
     # Use the following properties to configure how
     # the reflected cross-site scripting rule works.
     # ==========================================================================
-    # reflected-xss:
+    reflected-xss:
+
+      # Set the mode of the rule. Value options are
+      # `monitor`, `block`, `block_at_perimeter`, or `off`.
+      #  
+      # Note - If a setting says, "if blocking is enabled",
+      # the setting can be `block` or `block_at_perimeter`.
+      # mode: monitor
+
+    # ==========================================================================
+    # protect.rules.untrusted-deserialization
+    # Use the following properties to configure how
+    # the untrusted deserialization scripting rule works.
+    # ==========================================================================
+    untrusted-deserialization:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
@@ -415,7 +447,7 @@ api:
     # Use the following properties to configure
     # how the XML external entity works.
     # ==========================================================================
-    # xxe:
+    xxe:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
@@ -429,7 +461,7 @@ api:
 # Use the properties in this section for
 # the application(s) hosting this agent.
 # ==============================================================================
-# application:
+application:
 
   # Add the name of the application group with which this
   # application should be associated in the Contrast UI.
@@ -457,7 +489,7 @@ api:
 # Use the properties in this section to set
 # metadata for the server hosting this agent.
 # ==============================================================================
-# server:
+server:
 
   # Override the reported server name.
   # name: test-server-1

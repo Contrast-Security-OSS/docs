@@ -4,7 +4,7 @@ description: "Instructions and template for configuring .NET agent properties vi
 tags: "installation net agent YAML configuration rules properties"
 -->
 
-Contrast support YAML-based configuration for the .NET agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
+Contrast supports YAML-based configuration for the .NET agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET YAML Template](installation-netconfig.html#net-template) for fully formatted properties that you can copy and use in your own configuration files. 
 
 > **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
 
@@ -15,9 +15,10 @@ Configuration values use the following order of precedence:
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 2. Specific environmental variable
 3. Generic environment variable value
-4. User configuration file value
-5. Contrast UI value
-6. Default value 
+4. Application-specific configuration file value (i.e. *web.config*)
+5. User configuration file value (i.e. *contrast_security.yaml*)
+6. Contrast UI value
+7. Default value
 
 ## Load Path
 
@@ -25,6 +26,28 @@ The *contrast_security.yaml* file should be placed on the file system using one 
 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
 * Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.)
+
+## Environment Variables
+
+You can use environment variables to specify every configuration option supported by the *contrast_security.yaml* file. Environment variable names are derived from the YAML path by replacing path segment delimiters (`.`) with double underscores (`__`) and prefixing the result with `CONTRAST__`. For example, `server.name` becomes `CONTRAST__SERVER__NAME` while `api.api_key` becomes `CONTRAST__API__API_KEY`.
+
+## Use web.config
+
+You can also specify the `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section.
+
+Configuration option names in *web.config* files are derived from the YAML path prefixed with `contrast.`. For example, `application.name` becomes `contrast.application.name`.
+
+You can specify the following application-specific configuration options in each application's `web.config` file:
+
+* `contrast.application.name`
+* `contrast.application.version`
+* `contrast.application.group`
+* `contrast.application.metadata`
+* `contrast.application.tags`
+* `contrast.inventory.tags`
+* `contrast.assess.tags`
+
+If `contrast.application.name` is not specified, the .NET agent will use the application's virtual path as an application name. If the application is hosted in the root of a site (i.e., the virtual path is ***/***), the .NET agent will use the site's name as the application name.
 
 ## Configuration Options
 
@@ -49,18 +72,20 @@ Use the following properties for communication with the Contrast UI using certif
 
   * **certificate**:
     * **enable**: If set to `false`, the agent will ignore the certificate configuration in this section.
-
+    * **certificate_location**: Determine the location from which the agent loads a client certificate. Value options include `File` or `Store`.
+    * **cer_file**: Set the absolute path to the client certificate's .CER file for communication with Contrast UI. The `certificate_location` property must be set to `File`.
+    * **store_name**: Specify the name of certificate store to open. The `certificate_location` property must be set to `Store`. Value options include `AuthRoot`, `CertificateAuthority`, `My`, `Root`, `TrustedPeople`, or `TrustedPublisher`.
+    * **store_location**: Specify the location of the certificate store. The `certificate_location` property must be set to `Store`. Value options include `CurrentUser` or `LocalMachine`.
+    * **find_type**: Specify the type of value the agent uses to find the certificate in the collection of certificates from the certificate store. The `certificate_location` property must be set to `Store`. Value options include `FindByIssuerDistinguishedName`, `FindByIssuerName`, `FindBySerialNumber`, `FindBySubjectDistinguishedName`, `FindBySubjectKeyIdentifier`, `FindBySubjectName`, or `FindByThumbprint`.
+    * **find_value**: Specify the value the agent uses in combination with `find_type` to find a certification in the certificate store. <br> Note: The agent will use the first certificate from the certificate store that matches this search criteria.
+    
 #### Proxy
 
 Use the following properties for communication with the Contrast UI over a proxy.
-
-  * **certificate**: 
-    * **enable**: If set to `false`, the certificate configuration in this section will be ignored.
   
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
-    * **localhost**: Set the proxy host. It must be set with port and scheme.
-    * **url**: Set this property as an alternate for `scheme://host:port`. It takes precedence over the other settings, if specified; however, an error will be thrown if both the URL and individual properties are set.
+    * **url**: Set the URL of the proxy server.
     * **user**: Set the proxy user.
     * **pass**: Set the proxy password.
     * **auth_type**: Set the proxy authentication type. Value options are `NTLM`, `Digest`, and `Basic`.
@@ -107,14 +132,14 @@ Use the properties in this section to control security logging. These logs allow
 
 Define the following properties to set Syslog values. If the properties are not defined, the agent uses the Syslog values from the Contrast UI.
 
-    * **syslog**:
-      * **enable**: Set to `true` to enable Syslog logging.
-      * **ip**: Set the IP address of the Syslog server to which the agent should send messages.
-      * **port**: Set the port of the Syslog server to which the agent should send messages.
-      * **facility**: Set the facility code of the messages the agent sends to Syslog.
-      * **severity_exploited**: Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
-      * **severity_blocked**: Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
-      * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+  * **syslog**:
+    * **enable**: Set to `true` to enable Syslog logging.
+    * **ip**: Set the IP address of the Syslog server to which the agent should send messages.
+    * **port**: Set the port of the Syslog server to which the agent should send messages.
+    * **facility**: Set the facility code of the messages the agent sends to Syslog.
+    * **severity_exploited**: Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+    * **severity_blocked**: Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+    * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
 
 
 #### Agent-specific properties
@@ -159,7 +184,7 @@ Use the properties in this section to control Assess in the .NET agent. The samp
   * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
   * **stacktraces**: Value options are `ALL`, `SOME`, or `NONE`.
 
-  * **samplings**:
+  * **sampling**:
     * **enable**: Set to `false` to disable sampling.
     * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
@@ -200,6 +225,9 @@ Use the properties in this section to control Protect features and rules.
     * **reflected-xss**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
+    * **untrusted-deserialization**:
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      
     * **xxe**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
@@ -226,4 +254,51 @@ Use the properties in this section to set metadata for the server hosting this a
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
 
 
+## Example Configurations
 
+You can add the following examples to an existing *contrast_security.yaml* file to achieve the desired behavior.
+
+### Enable profiler chaining
+
+The following configuration enables profiler chaining. This allows the .NET agent to work alongside other tools that use the CLR Profiling API, such as performance APMs.
+
+```
+agent:
+  dotnet:
+    enable_chaining: true
+```
+
+### Whitelist an application pool for instrumentation
+
+The following configuration excludes all application pools except `ExampleAppPool` and `Fabrikam` from instrumentation by the .NET agent. This can help improve performance on applications you don't want to analyze.
+
+```
+agent:
+  dotnet:
+    app_pool_whitelist: ExampleAppPool,Fabrikam
+```
+
+### Disable auto-update
+
+The following configuration disables the auto-update feature that automatically downloads and installs new versions of the .NET agent from Contrast.
+
+```
+agent:
+  auto-update:
+    enable: false
+```
+
+### Combined example
+
+The following configuration enables profiler chaining, specifies an application pool whitelist, disables auto-update and sets the server name to "MyServer".
+
+```
+agent:
+  auto-update:
+    enable: false
+  dotnet:
+    enable_chaining: true
+    app_pool_whitelist: ExampleAppPool
+server:
+  name: MyServer
+```
