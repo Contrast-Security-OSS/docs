@@ -45,28 +45,28 @@ The following fields must be included in the spreadsheet. See the **Templates** 
 * **First Name** 
 * **Last Name**
 * **Email** or **Username** <br> See the **Authentication** section below for more requirements. 
-* **Organization UUID** 
+* **Organization UUID** <br> To find the Organization UUID in the Contrast UI, impersonate the appropriate organization, and then go to the **Organization Settings > Organization tab > General Information** section.
 * **Organization Role** <br> Values can be "View", "Edit", "Rules_admin" or "Admin".
-
-> **Note:** Find the Organization UUID in the Contrast UI by impersonating the appropriate organization, and then going to **Organization Settings > Organization tab > General Information section**. 
 
 #### Optional information 
 
 To include the following fields in the spreadsheet, add a new column and value(s) for each as written below. 
 
-* **Email Activation** <br> If the value is "None", the default is "Required Password".
-* **System Administration** <br> The default value is "Off".
-* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
 * **Date Format** <br> The default value is the organization setting, such as "MM/dd/YYYY".
 * **Time Format** <br> The default value is the organization setting, such as "hh:mm a".
 * **Timezone** <br> The default value is the organization time zone.
-* **Access** <br> The default value is "On".
-* **API only** <br> The default value is "Off".
 * **Protect** <br> The default value is "Off".
+* **Groups** <br> Values can be "View", "Edit", "Rules Admin", "Admin" or custom group names. Format multiple group names as "GroupA&&GroupB&&GroupC".
+* **Language** <br> The value is determined by the value of the `lang.default` property in the *general.properties* configuration file for the Contrast application. The default value of the configuration property is `en` (English). 
+* **System Administration** <br> The default value is "Off".
+* **Email Activation** <br> If the value is "None", the default is "Required Password".
+* **Password** <br> This field is required if the **Email Activation** field is set to "false". 
+* **API only** <br> The default value is "Off".
+* **Access** <br> The default value is "On".
 
 #### Authentication methods
 
-For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly. 
+Users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured must use the field heading **Username** in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly. 
 
 #### Templates
 
@@ -126,7 +126,7 @@ To include the following fields in the spreadsheet, add a new column and value(s
 
 #### Authentication methods
 
-For users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured, you must use the field heading **Username** instead of **Email** in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly.  
+Users who have [HTTP Header](installation-setupauth.html#http-proxy), [LDAP](installation-setupauth.html#ldap) or [AD](installation-setupauth.html#ad) authentication configured must use the **Username** field heading in the spreadsheet. (If using the provided CSV template, you must replace the **Email** field heading with **Username**.) The username values entered in the spreadsheet and the authentication configuration must match exactly.  
 
 #### Templates
 
@@ -139,12 +139,10 @@ Download CSV-formatted templates directly from the Contrast UI by hovering over 
 
 Once the spreadsheet upload is in progress, you can leave the page and continue with other tasks in Contrast. If the upload is successful, Contrast shows you a confirmation message with the number of users uploaded. If the upload failed, Contrast shows you an error message with the source of the error on the spreadsheet.
 
-
 ## User Status
 
 Once added, each user's status is displayed on the main **Users** page so that you can see who's awaiting activation, active or inactive, or locked out of their account based on a security policy. For more information about user administration, read how to [Manage Users](admin-manageorgs.html#manage-user). 
 
 <a href="assets/images/User-grid.png" rel="lightbox" title="Users grid for Organization Administrators"><img class="thumbnail" src="assets/images/User-grid.png"/></a>
-
 
 
