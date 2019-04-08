@@ -1,13 +1,13 @@
 <!--
 title: "Glossary"
-description: "Glossary of terms"
-tags: "Contrast terms troubleshooting glossary"
+description: "Glossary of common terms"
+tags: "Contrast terms glossary"
 -->
 
 
 ## Agent 
 
-A Contrast agent is code installed in a web **application** that may run in **Inventory**, **Protect** or **Assess** mode.
+A Contrast agent is code installed in a web **application** that may run in **Protect** or **Assess** mode.
 
 ---
 
@@ -25,7 +25,7 @@ An application is a logical grouping of customer code analyzed by a Contrast **a
 
 ## Assess
 
-Contrast Assess is a set of **rules** designed to perform highly accurate data flow analysis to detect vulnerabilities when **applications** are tested with normal test data. Assess is an **agent** mode, and is supported by the Java, .NET, Node.js and Ruby agents.
+Contrast Assess is a set of **rules** designed to perform highly accurate data flow analysis to detect **vulnerabilities** when **applications** are tested with normal test data. Assess is an **agent** mode supported by the Java, .NET, Node and Ruby agents.
 
 ---
 
@@ -55,13 +55,7 @@ Command injection is an **attack** in which the goal is execution of arbitrary c
 
 ## Contrast
 
-**Contrast** is a security technology for finding vulnerabilities in an **application**. It finds vulnerabilities by instrumenting the application and virtual machine with sensors, and watching the stream of generated events for patterns that represent vulnerabilities. The term encompasses the entire suite of technologies around this product, including the **agents** and **Contrast UI**.
-
----
-
-## Contrast JVM Plugin
-
-The **Contrast JVM Plugin** is a Java agent installed in the application server that's hosting the application(s) to be analyzed. This **engine** generates **traces** that contain vulnerability results detected by the **engine** while the application is operating. It periodically sends these **traces** to its associated **Contrast UI** for further analysis by Contrast users.
+Contrast is a security technology to **Assess** your **application** for vulnerabilities and **Protect** it from **attacks**. Contrast finds vulnerabilities by instrumenting the application and virtual machine with sensors, and watching the stream of generated events for patterns that represent vulnerabilities. The term encompasses the entire suite of technologies around this product, including the **agents** and **Contrast UI**.
 
 ---
 
@@ -73,7 +67,7 @@ The Contrast Service is an executable written in Go that handles communication w
 
 ## Contrast UI 
 
-The **Contrast UI** is the web interface that users log into to download agents and view information on their **applications** and reported vulnerabilities. This also includes the REST API to which the **agents** report data. The Contrast UI is predominately Java code with a React (new) and Angular JS (old) front end.
+The **Contrast UI** is the web interface from which users download agents and view information on their **applications** and reported **vulnerabilities**. This also includes the REST API to which the **agents** report data.
 
 ---
 
@@ -85,19 +79,19 @@ When an **untrusted data source** provides data to an application, Contrast gene
 
 ## Credential Stuffing
 
-Credential stuffing is the automated injection of breached username and password pairs to fraudulently gain access to user accounts. This is a subset of the **brute force attack** category: large numbers of spilled credentials are automatically entered into websites until they're potentially matched to an existing account, which the attacker can then hijack for their own purposes.
+Credential stuffing is the automated injection of breached username and password pairs to fraudulently gain access to user accounts. This is a subset of the **brute force attack** category.
 
 ---
 
 ## Cross-Site Scripting
 
-Cross-site scripting (XSS) is a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS **attacks** occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+Cross-site scripting (XSS) is a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS **attacks** occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread; they can occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
 
 ---
 
 ## Custom Event
 
-Each **event** contains the runtime values of the underlying **object**, the parameters to the method invoked, the return from the method, and the runtime stack trace.
+Each **event** contains the runtime values of the underlying **object**, the parameters to the method invoked, the return from the method and the runtime stack trace.
 
 ---
 
@@ -115,34 +109,27 @@ See **Agent**.
 
 ---
 
-## Enterprise on Premises
+## Enterprise-on-Premises (EOP)
 
-Enterprise on Premises (EOP) refers to **Contrast UI** instances that customers run and manage within their own internal networks. Many customers have InfoSec policies that forbid sending vulnerability or attack data to the cloud; therefore, these customers need an "on premises" offering of Contrast. Contrast pushes EOP updates to **Hub** on a monthly cadence.
+Enterprise-on-Premises (EOP) refers to **Contrast UI** instances that customers run and manage within their own internal networks. Many customers have InfoSec policies that forbid sending **vulnerability** or **attack** data to the cloud; as a result, these customers need an "on-premises" offering of Contrast. Contrast pushes EOP updates to **Hub** on a monthly basis.
 
 ---
 
 ## Environment
 
-Within the context of the **Contrast UI**, an environment is used to organize **applications** under one of three categories: Development, QA and Production.
+Within the **Contrast UI**, an environment is used to organize **applications** under one of three categories: Development, QA and Production.
 
 ---
 
 ## Event
 
-When an An event, in Assess mode, is generated when the running application calls code that Contrast instrumented with a **sensor**.
+In Assess mode, an event is generated when the running application calls code that Contrast instrumented with a **sensor**.
 
 ---
 
 ## Hub
 
-Hub is a web application that **Enterprise-on-Premises** customers can use to download the "EOP Installer" of Contrast UI and different versions of each agent.
-
-
----
-
-## Inventory 
-
-<!-- Words go here. -->
+Hub is a web application that **Enterprise-on-Premises** customers can use to download the "EOP Installer" of the Contrast UI and different versions of each agent.
 
 ---
 
@@ -166,13 +153,13 @@ The Java agent is a Contrast **agent** that runs in **Assess** or **Protect** mo
 
 ## Library
 
-Generally any packaged, third-party code included in the **application**. Languages may use specific terms - e.g., gems for Ruby, packages for Node, JARs for Java - but they are all represented <!-- the same way --> in the Contrast UI. 
+A library is any packaged, third-party code included in the **application**. Languages may use specific terms - e.g., gems for Ruby, packages for Node, JARs for Java - but they are all represented as "libraries" in the Contrast UI. 
 
 ---
 
 ## Monitor
 
-Monitor is a Protect rule mode that tracks attacks through the application, but doesn't cause an exception to be thrown if a successful attack event occurs. However, the agent will report the event to the Contrast UI with all of the metadata that the agent gathered about the **attack event**.
+Monitor is a **Protect** rule mode that **tracks** attacks through the application, but doesn't cause an exception to be thrown if a successful **attack event** occurs. However, the agent reports the event to the Contrast UI with all of the metadata that the agent gathered about the attack event.
 
 ---
 
@@ -190,7 +177,7 @@ The .NET agent is a Contrast **agent** that runs in **Assess** or **Protect** mo
 
 ## Path Traversal
 
-Path Traversal aims to access files and directories stored outside the web root folder. By manipulating variables that reference files with “dot-dot-slash" (../) sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on a file system including application source code or configuration and critical system files. You should note that access to files is limited by system operational access control (such as locked or in-use files on the Microsoft Windows operating system).
+Path Traversal aims to access files and directories stored outside the web root folder. By manipulating variables that reference files with “dot-dot-slash" (../) sequences and its variations, or by using absolute file paths, an attacker may be able to access arbitrary files and directories stored on a file system, including application source code or configuration and critical system files. You should note that access to files is limited by system operational access control (such as locked or in-use files on the Microsoft Windows operating system).
 
 ---
 
@@ -220,23 +207,19 @@ An **attack event** that looks like an attack, but didn't touch any vulnerable c
 
 ## Propagation
 
-In Contrast, **propagation** happens anytime untrusted data is transferred to another **object**. When propagation happens in a running program, that generates a **propagation event**. The **propagation rules** within the *rules* in use by your *engine* determine how propagation is modeled in Contrast.
+Propagation occurs when untrusted data is transferred to another **object**. When propagation happens in a running program, that generates a **propagation event**. The **propagation rules** within the rules in use by your **engine** determine how propagation is modeled in Contrast.
 
 ---
 
 ## Propagation Event
 
-A **propagation event** is generated when a **propagation** condition is met in a running program as defined by a **propagation rule**. When the conditions of the **rule** are met, a propagation event is generated that tracks the tainted data and **trace** information from the source object to the destination object. The destination object is considered **tracked**.
+A **propagation event** is generated when a **propagation** condition is met in a running program as defined by a **propagation rule**. When the conditions of the **rule** are met, a propagation event is generated that tracks the tainted data and **trace** information from the source object to the destination object. The destination object is considered to be **tracked**.
 
 ---
 
 ## Propagation Rule
 
-To model how **propagation** actually works in a running application, Contrast uses **propagation rules**. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an **object**, the parameters to a method, and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source.
-
-> Example: 
- * The `StringBuffer.append()` method propagates untrusted data from the first parameter to the object (the `StringBuffer`). Contrast calls this a **P2O Propagation**. 
- * The `toString()` method on a tracked object causes the untrusted data to propagate from the object to the method result (the string returned by `toString()`). Contrast calls this an **O2R Propagation**. 
+To model how **propagation** actually works in a running application, Contrast uses **propagation rules**. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an **object**; the parameters to a method; and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source. 
 
 ---
 
@@ -248,13 +231,13 @@ A propagator is a method that accepts tainted input and stores or produces taint
 
 ## Protect
 
-Protect is a set of rules and features designed for Production **environments** to monitor and block **attacks**. Protect is considered an agent mode and, is supported by the Java, .NET, Node.js, Ruby, Python and Proxy agents. Traditionally, this mode tracks values from sources, performs an initial analysis, and then examines values at sinks to determine if an attack is taking place.
+Protect is a set of rules and features designed for Production **environments** to monitor and block **attacks**. Protect is considered an agent mode and, is supported by the Java, .NET, Node, Ruby, Python and Proxy agents. This mode tracks values from sources, performs an initial analysis, and then examines values at **sinks** to determine if an attack is taking place.
 
 ---
 
 ## Proxy Agent
 
-The Proxy agent is a Contrast **agent** that run in **Protect** mode only. It consists of two parts: an open-source module for NGINX that forwards HTTP request data to the **Contrast Service** via a UNIX socket. Analysis is performed at the Service, and a response is sent back to NGINX that indicates if the HTTP request should be allowed to proceed to the proxied application. The **rules** for the Proxy agent are primarily based on the OWASP ModSecurity core rule set.
+The Proxy agent is a Contrast **agent** that runs in **Protect** mode. It consists of an open-source module for NGINX that forwards HTTP request data to the **Contrast Service** via a UNIX socket. Analysis is performed at the Service, and a response is sent back to NGINX that indicates if the HTTP request should be allowed to proceed to the proxied application. The **rules** for the Proxy agent are primarily based on the OWASP ModSecurity core rule set.
 
 ---
 
@@ -266,27 +249,27 @@ The Python agent is a Contrast **agent** that run in **Protect** mode only.
 
 ## Ruby Agent
 
-Ruby agent is a Contrast **agent** that runs in **Protect** and **Assess** modes. Protect has been GA since September 2017. Assess entered GA in fall of 2018.
+The Ruby agent is a Contrast **agent** that runs in **Protect** and **Assess** modes.
 
 ---
 
 ## Rule
 
-A rule refers to the specific logic required for Contrast to identify a vulnerability in Assess mode, or block an attack event in Protect mode, while monitoring a running application.
+A rule refers to the specific logic required for Contrast to identify a vulnerability in **Assess** mode or block an attack event in **Protect** mode while monitoring a running application.
 
-If the pattern is matched, the engine generates a **trace** to send to the **Contrast UI**. Each pattern consists of a series of methods ending in a *trigger*. Each of these methods can also be required. If these methods are detected, the pattern does not match.
+If the pattern is matched, the engine generates a **trace** to send to the **Contrast UI**. Each pattern consists of a series of methods ending in a **trigger**. Each of these methods can also be required. If these methods are detected, the pattern does not match.
 
 ---
 
 ## Rulepack
 
-A **rulepack** identifies a collection of *rules*. A core set of *rules* are delivered with Contrast, but can be customized and supplemented with custom *rules* per organization and per application if the customer's license allows.
+A **rulepack** identifies a collection of **rules**. A core set of rules are delivered with Contrast, but can be customized and supplemented with custom rules per organization and per application if the customer's license allows.
 
 ---
 
-## SaaS
+## Software as a Service (SaaS)
 
-SaaS refers to a set of Contrast UI environments hosted in AWS. Updates are pushed to SaaS as desired.
+Software as a Service (SaaS) refers to a set of Contrast UI environments hosted in AWS. Updates are pushed to SaaS as desired.
 
 ---
 
@@ -304,7 +287,7 @@ A **security control** is a security mechanism that does something to make input
 
 ## Sensor
 
-A sensor is the instrumentation that Contrast adds to the running application. The sensor's job is to gather data from the immediate method context, generate a simple *event*, and send it to the Contrast *engine*.
+A sensor is the instrumentation that Contrast adds to the running application. The sensor's job is to gather data from the immediate method context, generate a simple **event**, and send it to the Contrast **engine**.
 
 ---
 
@@ -316,13 +299,13 @@ Sink is the method, object or other code in which unsanitized and/or unvalidated
 
 ## Source
 
-This is the short name for an **untrusted data source**.
+The abbreviated name for an **untrusted data source**.
 
 ---
 
 ## SQL Injection
 
-SQL Injection is a class of vulnerabilities in which the attacker can change the meaning of a database query. See [Little Bobby Tables](https://xkcd.com/327/) for examples. 
+SQL Injection is a class of **vulnerabilities** in which the attacker can change the meaning of a database query. See [Little Bobby Tables](https://xkcd.com/327/) for examples. 
 
 ---
 
@@ -340,7 +323,7 @@ A trace is a series of events that represent a vulnerability. Traces are generat
 
 ## Tracked
 
-When data flows from an **untrusted data source** into an **object**, that object is considered **tracked**. When data from a tracked object flows into another object through a **propagator**, that object is also tracked. **Events** can be defined in **rules** that consider whether an object is tracked or not.
+When data flows from an **untrusted data source** into an **object**, that object is considered to be "tracked". When data from a tracked object flows into another object through a **propagator**, that object is also tracked. **Events** can be defined in **rules** that consider whether an object is tracked or not.
 
 ---
 
@@ -352,7 +335,14 @@ A trigger is part of a **rule** pattern that indicates that the Contrast **engin
 
 ## Untrusted Data Source
 
-An untrusted data source is a source of dangerous input to the application. It typically comes directly from the end user and an HTTP request, but it could be from a back-end partner feed, the application's database or any other source considered unsafe.
+An untrusted data source is a source of dangerous input to the **application**. It typically comes directly from the end user and an HTTP request, but it could be from a back-end partner feed, the application's database or any other source considered unsafe.
+
+___
+
+## Vulnerability
+
+<!-- Text goes here. -->
+
 ___
 
 ## XSS
