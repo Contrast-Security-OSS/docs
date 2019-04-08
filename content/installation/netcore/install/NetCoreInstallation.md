@@ -28,20 +28,20 @@ Ensure that the following paths are accessible by the runtime user of the applic
 |--|--|
 | The path to YAML configuration file, such as *contrast_security.yaml*. | Read |
 | \{\{ Unzipped Directory Root \}\} | Read |
-| C:\ProgramData\Contrast\dotnet\LOGS | Read/Write |
+| Data Directory (default: \{\{ Program Data Folder \}\}\Contrast\dotnet) | Read/Write |
 
 When running in IIS, make sure the application pool can access the these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
 
 ## Enable the Agent
 
-To enable the .NET Core agent on your application, you must set the following environment variables before running your application.
+To enable the .NET Core agent on your application, you must set the following environment variables on your application's process.
 
 * CORECLR_PROFILER_PATH_32: Use the following table to find the correct Profiler path for 32-bit applications.
 * CORECLR_PROFILER_PATH_64: Use the following table to find the correct Profiler path for 64-bit applications.
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}`
-* CONTRAST_INSTALL_DIRECTORY: \{\{ Unzipped Directory Root \}\}
-* CONTRAST_CONFIG_PATH: Optionally et the path to the YAML configuration file.  The default is *`CONTRAST_INSTALL_DIRECTORY`\contrast_security.yaml* .  It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to `CONTRAST_INSTALL_DIRECTORY` (i.e., */custom_config.yaml*).
+* CONTRAST_CONFIG_PATH: Optionally set the path to the YAML configuration file.  It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*).  The default if not set is *`CONTRAST_DATA_DIRECTORY`\contrast_security.yaml* .
+* CONTRAST_DATA_DIRECTORY: Optionally change the path where agent logs will be kept.  Default is *C:\ProgramData\Contrast\dotnet*.
 
 
 Environment Variable | Platform | Profiler Path |
@@ -76,7 +76,6 @@ Set the environment variables using either of these two methods:
         <environmentVariable name="CORECLR_PROFILER_PATH_32" value="C:\contrast\dotnetcore\runtimes\win-x86\native\ContrastProfiler.dll" />
         <environmentVariable name="CORECLR_ENABLE_PROFILING" value="1" />
         <environmentVariable name="CORECLR_PROFILER" value="{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}" />
-        <environmentVariable name="CONTRAST_INSTALL_DIRECTORY" value="C:\contrast\dotnetcore\" />
         <environmentVariable name="CONTRAST_CONFIG_PATH" value="C:\contrast\dotnet\contrast_security.yaml" />
       </environmentVariables>
     </aspNetCore>
@@ -104,12 +103,10 @@ Set the environment variables as part of your application startup script or as a
 ```json
     "MyAppWithContrastAgent": {      
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
         "CORECLR_PROFILER_PATH_32": "c:\\contrast\\dotnetcore\\ContrastProfiler-32.dll",
-        "CORECLR_PROFILER_PATH_64": "c:\\contrast\\dotnetcore\\ContrastProfiler-64.dll",        
+        "CORECLR_PROFILER_PATH_64": "c:\\contrast\\dotnetcore\\ContrastProfiler-64.dll",    
         "CORECLR_ENABLE_PROFILING": "1",
         "CORECLR_PROFILER": "{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}",        
-        "CONTRAST_INSTALL_DIRECTORY": "c:\\contrast\\dotnetcore\\",
         "CONTRAST_CONFIG_PATH": "c:\\contrast\\config\\MyApp\\contrast_security.yaml",
       }
     }
