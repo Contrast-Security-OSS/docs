@@ -5,27 +5,25 @@ tags: "java agent installation maven codehaus"
 -->
 
 
-## Prerequisites
-Download the Contrast plugin (***contrast.jar***) from the Contrast site.
-
 ## Instructions
 
-* Add a ```<cargo.jvmargs>``` property to the ```<properties>``` section of ```<configuration>``` in your ***pom.xml***, like this: </configuration 
+* Add a `<cargo.jvmargs>` property to the `<properties>` section of `<configuration>` in your ***pom.xml***:
 
 ````
 <build>
   <plugins>
     <plugin>
-      <groupId>org.codehaus.cargo.maven2</groupId>
+      <groupId>org.codehaus.cargo</groupId>
       <artifactId>cargo-maven2-plugin</artifactId>
+      <version>1.7.3</version>
       <configuration>
         <container>
-          <containerId>tomcat5x</containerId>
+          <containerId>jetty9x</containerId>
           [...]
         </container>
         <configuration>
           <properties>
-            <cargo.jvmargs>-javaagent:${DOWNLOADS}/contrast.jar -noverify</cargo.jvmargs>
+            <cargo.jvmargs>-javaagent:${DOWNLOADS}/contrast.jar</cargo.jvmargs>
           </properties>
         </configuration>
         [...]
@@ -35,8 +33,12 @@ Download the Contrast plugin (***contrast.jar***) from the Contrast site.
 </build>
 ````
 
-* Run your Maven target or Cargo unit test normally. 
-* A Constart startup message should appear in the Console before your server messages appear. (Allow 1-2 extra minutes for server startup.) 
-* Navigate to your application, and allow an extra minute for it to start up. 
+* Run your Maven target or Cargo unit test as usual. 
+* A Contrast startup message should appear in the console before your server messages appear. (Allow one or two extra minutes for server startup.)
+* Navigate to your application, and allow an extra minute for startup.
 
-For more information on adding JVM arguments to Cargo container, consult the [Cargo documentation](https://codehaus-cargo.github.io/cargo/Configuration+properties.html).
+## More Information
+
+For more information on adding JVM arguments to Cargo container, see the [Cargo documentation](https://codehaus-cargo.github.io/cargo/Configuration+properties.html).
+
+For a complete example of using Contrast with Maven and the cargo-maven2-plugin, see the article to [Add the Agent to a Maven Project](installation-javapackage.html#cargo).
