@@ -40,8 +40,8 @@ To enable the .NET Core agent on your application, you must set the following en
 * CORECLR_PROFILER_PATH_64: Use the following table to find the correct Profiler path for 64-bit applications.
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}`
-* CONTRAST_CONFIG_PATH: Optionally set the path to the YAML configuration file.  It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*).  The default if not set is *`CONTRAST_DATA_DIRECTORY`\contrast_security.yaml* .
-* CONTRAST_DATA_DIRECTORY: Optionally change the path where agent logs will be kept.  Default is *C:\ProgramData\Contrast\dotnet*.
+* CONTRAST_CONFIG_PATH: Set the path to the YAML configuration file. It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*). If not set, the default is *`CONTRAST_DATA_DIRECTORY`\contrast_security.yaml*. This setting is **optional**.
+* CONTRAST_DATA_DIRECTORY: Change the path to where agent logs are kept. The default is *C:\ProgramData\Contrast\dotnet*. This setting is **optional**. 
 
 
 Environment Variable | Platform | Profiler Path |
