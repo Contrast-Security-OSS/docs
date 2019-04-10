@@ -91,7 +91,7 @@ Cross-site scripting (XSS) is a type of injection, in which malicious scripts ar
 
 ## Custom Event
 
-Each **event** contains the runtime values of the underlying **object**, the parameters to the method invoked, the return from the method and the runtime stack trace.
+Each **event** contains the runtime values of the underlying object, the parameters to the method invoked, the return from the method and the runtime stack trace.
 
 ---
 
@@ -169,12 +169,6 @@ The .NET agent is a Contrast **agent** that runs in **Assess** or **Protect** mo
 
 ---
 
-## Object
-
-<!-- Text goes here.  -->
-
----
-
 ## Path Traversal
 
 Path Traversal aims to access files and directories stored outside the web root folder. By manipulating variables that reference files with “dot-dot-slash" (../) sequences and its variations, or by using absolute file paths, an attacker may be able to access arbitrary files and directories stored on a file system, including application source code or configuration and critical system files. You should note that access to files is limited by system operational access control (such as locked or in-use files on the Microsoft Windows operating system).
@@ -207,7 +201,7 @@ An **attack event** that looks like an attack, but didn't touch any vulnerable c
 
 ## Propagation
 
-Propagation occurs when untrusted data is transferred to another **object**. When propagation happens in a running program, that generates a **propagation event**. The **propagation rules** within the rules in use by your **engine** determine how propagation is modeled in Contrast.
+Propagation occurs when untrusted data is transferred to another object. When propagation happens in a running program, that generates a **propagation event**. The **propagation rules** within the rules in use by your **engine** determine how propagation is modeled in Contrast.
 
 ---
 
@@ -219,7 +213,7 @@ A **propagation event** is generated when a **propagation** condition is met in 
 
 ## Propagation Rule
 
-To model how **propagation** actually works in a running application, Contrast uses **propagation rules**. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an **object**; the parameters to a method; and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source. 
+To model how **propagation** actually works in a running application, Contrast uses **propagation rules**. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an object; the parameters to a method; and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source. 
 
 ---
 
@@ -323,7 +317,7 @@ A trace is a series of events that represent a vulnerability. Traces are generat
 
 ## Tracked
 
-When data flows from an **untrusted data source** into an **object**, that object is considered to be "tracked". When data from a tracked object flows into another object through a **propagator**, that object is also tracked. **Events** can be defined in **rules** that consider whether an object is tracked or not.
+When data flows from an **untrusted data source** into an object, that object is considered to be "tracked". When data from a tracked object flows into another object through a **propagator**, that object is also tracked. **Events** can be defined in **rules** that consider whether an object is tracked or not.
 
 ---
 
@@ -341,7 +335,7 @@ ___
 
 ## Vulnerability
 
-<!-- Text goes here. -->
+According to OWASP, a vulnerability is a [hole or a weakness](https://www.owasp.org/index.php/Category:Vulnerability) in your **application** code. There are [many different types of vulnerabilities](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) that may be used by an attacker to cause harm.
 
 ___
 
