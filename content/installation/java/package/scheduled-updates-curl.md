@@ -6,9 +6,9 @@ tags: "java agent deployment maven central cron curl auto-update update"
 
 ## About Updates with Maven Central 
 
-Some users like to automatically update their Contrast Java agent software to the latest version. Linux users can schedule Java agent updates from Maven Central using common Linux tools `cron` and `curl`. The following instructions show you how to configure a scheduled Java agent job on an Ubuntu 18.04 Linux host.
+Some users prefer to keep their Contrast Java agent software up-to-date with the latest version automatically. Linux users can schedule Java agent updates from Maven Central using common Linux tools `cron` and `curl`. This example demonstrates configuring scheduled Java agent job on an Ubuntu 18.04 Linux host.
 
-If you want to perform each step as you follow along with this guide, you can use [Vagrant](https://www.vagrantup.com/) to create a new Ubuntu 18.04 virtual machine.
+If you want to complete each step as you follow along with these instructions, you can use [Vagrant](https://www.vagrantup.com/) to create a new Ubuntu 18.04 virtual machine.
 
 ```console
 vagrant init ubuntu/bionic64
@@ -30,9 +30,9 @@ vagrant ssh
 sudo mkdir -p /opt/contrast
 ```
 
-* Create a script for installing the latest Java agent in the */etc/cron.daily* directory. Scripts in this directory execute once daily; as a result, the host updates the latest Java agent each day.
+* Create a script for installing the latest Java agent in the */etc/cron.daily* directory. Scripts in this directory execute once daily; likewise, the host updates the latest Java agent each day.
 
-* Use `tee` to create this script. Press `CTRL+D` when you've finished typing all the lines:
+* Using `tee` to create this script, press `CTRL+D` when you've finished typing all lines of the script:
 
 ```console
 $ sudo tee -a /etc/cron.daily/install-latest-contrast-agent > /dev/null
@@ -55,7 +55,7 @@ mv /tmp/$CONTRAST_FILE_NAME $CONTRAST_DIRECTORY/$CONTRAST_FILE_NAME
 sudo chmod +x /etc/cron.daily/install-latest-contrast-agent
 ```
 
-* To test the script, execute it and then verify that the file exists using `stat`:
+* Test the script by executing it and then verifying that the file exists using `stat`:
 
 ```console
 $ sudo /etc/cron.daily/install-latest-contrast-agent
@@ -84,17 +84,15 @@ The Contrast URL is *https://app.contrastsecurity.com/Contrast*, or the URL of y
 
 ## Step 3: Configure Contrast
 
-When Contrast is installed on a Linux host, users typically want Contrast-enabled web applications on the host to share basic configuration parameters, such as the ones required to connect to Contrast UI. By convention, Contrast look for configuration in a YAML file at path */etc/contrast/java/contrast_securtiy.yaml* on Linux hosts.
+When Contrast is installed on a Linux host, users typically want Contrast-enabled web applications on the host to share basic configuration parameters, such as as the ones required to connect to Contrast UI. By convention, Contrast look for configuration in a YAML file at path */etc/contrast/java/contrast_securtiy.yaml* on Linux hosts.
 
-* Create the */etc/contrast/java* directory:
+* Begin by creating the */etc/contrast/java* directory:
 
 ```console
 sudo mkdir -p /etc/contrast/java
 ```
 
-* Use `tee` to create the configuration file. Press `CTRL+D` when you've finished typing all the lines. 
-
-* Replace `<contrast_url>`, `<your_api_key>`, `<agent_user_name>` and `<agent_user_service_key>` with the values you obtained from the Contrast UI in the previous step:
+* Using `tee` to create the configuration file, press `CTRL+D` when you've finished typing all lines of the configuration file. Replace `<contrast_url>`, `<your_api_key>`, `<agent_user_name>` and `<agent_user_service_key>` with the values you obtained from the Contrast UI in the previous step:
 
 ```console
 $ sudo tee -a /etc/contrast/java/contrast_securtiy.yaml > /dev/null
@@ -107,7 +105,7 @@ api:
 
 ## Step 4: Verify the installation
 
-* Run a diagnostic test to verify that Contrast is installed and properly configured. The host must have Java installed to execute the diagnostic test:
+* Verify that Contrast is installed and properly configured by running a diagnostic test. The host must have Java installed to execute the diagnostic test:
 
 ```console
 sudo apt install --yes openjdk-11-jre-headless
