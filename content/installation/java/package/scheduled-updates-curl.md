@@ -8,7 +8,11 @@ tags: "java agent deployment maven central cron curl auto-update update"
 
 Some users like to automatically update their Contrast Java agent software to the latest version. Linux users can schedule Java agent updates from Maven Central using common Linux tools `cron` and `curl`. The following instructions show you how to configure a scheduled Java agent job on an Ubuntu 18.04 Linux host.
 
-If you want to perform each step as you follow along with this guide, you can use [Vagrant](https://www.vagrantup.com/) to create a new Ubuntu 18.04 virtual machine.
+> **Note:** Use your preferred editor to create a file with the following contents. The examples provided use `tee` to create the file. 
+
+## Before You Start
+
+If you want to perform each step as you follow along with this guide, you can use [Vagrant](https://www.vagrantup.com/) to create a new Ubuntu 18.04 virtual machine: 
 
 ```console
 vagrant init ubuntu/bionic64
@@ -92,9 +96,7 @@ When Contrast is installed on a Linux host, users typically want Contrast-enable
 sudo mkdir -p /etc/contrast/java
 ```
 
-* Use `tee` to create the configuration file. Press `CTRL+D` when you've finished typing all the lines. 
-
-* Replace `<contrast_url>`, `<your_api_key>`, `<agent_user_name>` and `<agent_user_service_key>` with the values you obtained from the Contrast UI in the previous step:
+* Use `tee` to create the configuration file. Replace `<contrast_url>`, `<your_api_key>`, `<agent_user_name>` and `<agent_user_service_key>` with the values you obtained from the Contrast UI in the previous step:
 
 ```console
 $ sudo tee -a /etc/contrast/java/contrast_securtiy.yaml > /dev/null
@@ -104,6 +106,7 @@ api:
   user_name: <agent_user_name>
   service_key: <agent_user_service_key>
 ```
+* Press `CTRL+D` when you've finished typing all the lines.
 
 ## Step 4: Verify the installation
 
