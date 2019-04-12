@@ -44,14 +44,32 @@ To enable the .NET Core agent on your application, you must set the following en
 * CONTRAST_DATA_DIRECTORY: Change the path to where agent logs are kept. The default is *C:\ProgramData\Contrast\dotnet*. This setting is **optional**. 
 
 
-Environment Variable | Platform | Profiler Path |
+| Environment Variable | Platform | Profiler Path |
 |--|--|--|
-CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
-CORECLR_PROFILER_PATH_64 | Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
+| CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
+| CORECLR_PROFILER_PATH_64 | Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
 
 > **Notes:** 
  * The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
  * Only the Windows platform is supported at this time.
+
+### Running from Powershell
+
+Set the environment variables:
+
+> **Example:**
+```powershell
+$env:CORECLR_PROFILER_PATH_64 = 'C:\contrast\dotnetcore\runtimes\win-x64\native\ContrastProfiler.dll'
+$env:CORECLR_PROFILER_PATH_32 = 'C:\contrast\dotnetcore\runtimes\win-x86\native\ContrastProfiler.dll'
+$env:CORECLR_ENABLE_PROFILING = '1'
+$env:CORECLR_PROFILER = '{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}'
+$env:CONTRAST_CONFIG_PATH = 'C:\contrast\dotnet\contrast_security.yaml'
+```
+
+You can then run the application: 
+```powershell
+dotnet .\MyAppWithContrastAgent.dll
+```
 
 ### Running under IIS and IIS Express
 
