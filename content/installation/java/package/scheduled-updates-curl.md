@@ -12,7 +12,7 @@ Some users like to automatically update their Contrast Java agent software to th
 
 ## Before You Start
 
-If you want to perform each step as you follow along with this guide, you can use [Vagrant](https://www.vagrantup.com/) to create a new Ubuntu 18.04 virtual machine: 
+If you want to perform each step as you follow along with this guide, you can use [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) to create a new Ubuntu 18.04 virtual machine: 
 
 ```console
 vagrant init ubuntu/bionic64
