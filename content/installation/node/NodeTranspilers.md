@@ -6,6 +6,8 @@ tags: "node agent compatibility coffee coffeescript typescript babel"
 
 Contrast supports applications written in languages that compile to JavaScript, such as [CoffeeScript](http://coffeescript.org/) and [TypeScript](http://www.typescriptlang.org/). While Contrast only instruments JavaScript, you can tell Contrast how to get to the compiled code; whether the JavaScript is precompiled or compiled at runtime determines your method.
 
+> **Note:** Although Contrast functions with languages that compile to JavaScript, the source may not correspond directly with the resulting JavaScript. As a result, reported metadata - such as vulnerability line-of-code and filename - references the compiled result, not the original source.
+
 ## Runtime Compilers
 Languages like [CoffeeScript](http://coffeescript.org/) run via a command line utility, which acts as a *runner* and compiles your application to JavaScript at runtime. It's possible to have Contrast's Node.js agent act as a runner for the runtime transpiler, which acts as a runner for your application.
 
