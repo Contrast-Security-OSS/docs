@@ -4,13 +4,13 @@ description: "Configurations and tweaks for customizing the Contrast .NET agent 
 tags: "configuration .Net Azure AppService tweaks "
 -->
 
-The .NET agent for Azure App Service can be configured using the environment variable convention of agent configuration. For example, the agent's logging level can changed by adding `CONTRAST__AGENT__LOGGER__LEVEL` in the Azure portal. See [YAML configuration properties](../configuration/installation-netconfig.html#net-yaml) for more information and a full list of supported configuration options.
+The .NET agent for Azure App Service can be configured using the environment variable convention of agent configuration. For example, the agent's logging level can changed by adding `CONTRAST__AGENT__LOGGER__LEVEL` in the Azure portal. See [YAML configuration properties](installation-netconfig.html#net-yaml) for more information and a full list of supported configuration options.
 
-You can also specify specific `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section. See [application-specific settings](../configuration/installation-netconfig.html#appname) for more details.
+You can also specify specific `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section. See [application-specific settings](installation-netconfig.html#appname) for more details.
 
 # Legacy Azure Configuration Options
 
-> **Note:** These configuration values are considered legacy configuration options. New configuration values will only be supported via YAML-based configuration. All users are encouraged to migrate to [YAML configuration properties](../configuration/installation-netconfig.html#net-yaml).
+> **Note:** These configuration values are considered legacy configuration options. New configuration values will only be supported via YAML-based configuration. All users are encouraged to migrate to [YAML configuration properties](installation-netconfig.html#net-yaml).
 
 The following configurations are for the .NET agent for Azure App Service. You can override the following configurations using Application Settings in the portal, or in your application's web.config file. You can also modify the following configurations.
 
