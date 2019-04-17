@@ -4,11 +4,21 @@ description: "Configurations and tweaks for customizing the Contrast .NET agent 
 tags: "configuration .Net Azure AppService tweaks "
 -->
 
-The following configurations are for the .NET agent for Azure App Service. You can override the following configurations using Application Settings in the portal, or in your application's *web.config* file. You can also modify the following configurations.
+The .NET agent for Azure App Service can be configured using the environment variable convention of agent configuration. See [YAML configuration properties](installation-netconfig.html#net-yaml) for more information and a full list of supported configuration options.
+
+> **Example:** To change the agent's logging level, add `CONTRAST__AGENT__LOGGER__LEVEL` in the Azure portal.
+
+You can also specify specific `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section. See [application-specific settings](installation-netconfig.html#appname) for more details.
+
+## Legacy Configuration Options
+
+The following configuration values for Azure App Service are considered **legacy** configuration options. New configuration values are only supported as YAML-based configuration. All users are encouraged to migrate to [YAML configuration properties](installation-netconfig.html#net-yaml).
+
+You can override these configurations using Application Settings in the Azure portal, or in your application's *web.config* file. You can also modify the following configurations.
 
 > **Example:** To change a the default log level, change the configuration setting `LogLevel` by either adding `CONTRAST_LogLevel` in the Azure portal or adding a `Contrast.LogLevel` application setting in the *web.config* file.  
 
-## Identification and Tagging
+### Identification and tagging
 
 | Parameter           | Description | 
 |---------------------|-------------|
@@ -22,14 +32,14 @@ The following configurations are for the .NET agent for Azure App Service. You c
 | LibraryTags   | Controls free-form tags sent to Contrast for the application's libraries; you can use tags to search for specific libraries in the Contrast UI.      
 | FindingTags   | Controls free-form tags sent to Contrast for the application's vulnerabilities; you can use tags to search for specific vulnerabilities in the Contrast UI.      
 
-## Diagnostics
+### Diagnostics
 
 | Parameter           | Description | 
 |---------------------|-------------|
 | LogLevel            | More detailed levels of logging degrade performance, but can generate useful information for debugging Contrast. The logging level is configured in [Server Settings](user-servers.html#settings) in the Contrast UI by default; however, you can also configure it at the agent level. Options are `Error`, `Warn`, `Info`, `Debug` and `Trace`.  
 
 
-## Performance Tweaks
+### Performance tweaks
 
 | Parameter           | Description | 
 |---------------------|-------------|
