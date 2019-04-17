@@ -10,7 +10,7 @@ Users can customize several pieces of information that are specific to each appl
 
 | Option                       | Legacy Option        | Description | Version |
 |------------------------------|----------------------|-------------|---------|
-| contrast.application.name    | Contrast.AppName     | Controls the application name sent to the Contrast UI for this application. The `Contrast.AppName` setting should be present on each server where the application is to be analyzed. If it isn't present, the applications could have different display names and be considered as different applications by the Contrast application. See the **Absent Configuration Setting** section below for more details.      | 3.1.3+  |
+| contrast.application.name    | Contrast.AppName     | Controls the application name sent to the Contrast UI for this application. The `contrast.application.name` setting should be present on each server where the application is to be analyzed. If it isn't present, the applications could have different display names and be considered as different applications by the Contrast application. See the **Absent Configuration Setting** section below for more details.      | 3.1.3+  |
 | contrast.application.version | Contrast.AppVersion  | Controls the application version tag sent to Contrast. | 3.3.6+  |
 | contrast.application.group   | Contrast.AppGroup    | Specifies the group to which this application will be added in the Contrast UI, if this application isn't already a member of a group.        | 3.4.5+ |
 | contrast.application.tags    | Contrast.AppTags     | Controls free-form tags sent to Contrast for the application. You can use tags to search for specific applications in the Contrast UI.        | 4.8.20+ |

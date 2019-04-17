@@ -42,10 +42,10 @@ You might notice that the following text appears when you installed the Contrast
  2. Navigate to the 'Application Settings' section and set the following settings:
  Key Value
  ---------------------------------------
- CONTRAST_TeamServerUrl [IF USING ANOTHER SERVER THAN THE DEFAULT: https://app.contrastsecurity.com]
- CONTRAST_TeamServerUserName [REPLACE WITH YOUR AGENT USERNAME]
- CONTRAST_TeamServerServiceKey [REPLACE WITH YOUR AGENT SERVICE KEY]
- CONTRAST_TeamServerApiKey [REPLACE WITH YOUR AGENT API KEY]
+ CONTRAST__API__URL [IF USING ANOTHER SERVER THAN THE DEFAULT: https://app.contrastsecurity.com]
+ CONTRAST__API__USER [REPLACE WITH YOUR AGENT USERNAME]
+ CONTRAST__API__SERVICE_KEY [REPLACE WITH YOUR AGENT SERVICE KEY]
+ CONTRAST__API__API_KEY [REPLACE WITH YOUR AGENT API KEY]
  CONTRAST_INSTALL_DIRECTORY D:\Home\site\wwwroot\contrastsecurity\
  COR_ENABLE_PROFILING 1
  COR_PROFILER {EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}

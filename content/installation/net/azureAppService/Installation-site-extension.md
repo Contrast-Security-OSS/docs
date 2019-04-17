@@ -19,10 +19,10 @@ The following values are the Application Settings that the agent needs to connec
 
 | Key                        | Value                       |
 | -------------------------- | ---------------------------------------- |
-| CONTRAST_TeamServerUserName             | Replace with your agent username. |
-| CONTRAST_TeamServerServiceKey           | Replace with your agent service key. |
-| CONTRAST_TeamServerApiKey               | Replace with your agent API key.  |
-| CONTRAST_TeamServerUrl                  | Defaults to https://app.contrastsecurity.com. Replace with another URL, if you're using a Contrast application that's hosted elsewhere. (**Optional**)  |
+| CONTRAST__API__USER        | Replace with your agent username. |
+| CONTRAST__API__SERVICE_KEY | Replace with your agent service key. |
+| CONTRAST__API__API_KEY     | Replace with your agent API key.  |
+| CONTRAST__API__URL         | Defaults to https://app.contrastsecurity.com. Replace with another URL, if you're using a Contrast application that's hosted elsewhere. (**Optional**)  |
 
 ## Step Three: Add the site extension to the hosted application
 
