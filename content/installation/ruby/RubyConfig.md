@@ -119,6 +119,7 @@ The following configuration options allow you to fine-tune the Ruby agent.
 * **ruby**: 
   * **track_frozen_sources**: Allow the agent to track frozen Objects returned by source methods. This configuration is on by default. 
   * **interpolate**: Allow the agent to track propagation through interpolated Strings. This configuration is on by default.
+  * **disabled_agent_rake_tasks**: Define a comma-separated string of rake tasks in which to disable agent operation.
 
 ### Inventory properties 
 
