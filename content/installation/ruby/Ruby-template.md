@@ -234,6 +234,10 @@ agent:
     # Strings. This configuration is on by default.
     # interpolate: NEEDS_TO_BE_SET
 
+    # Set a comma-separated string of rake tasks
+    # in which to disable agent operation.
+    # disabled_agent_rake_tasks: about,assets:clean,assets:clobber,assets:environment,assets:precompile,assets:precompile:all,db:create,db:drop,db:migrate:status,db:rollback,db:schema:cache:clear,db:schema:cache:dump,db:schema:dump,db:schema:load,db:seed,db:setup,db:structure:dump,db:version,doc:app,log:clear,middleware,notes,notes:custom,rails:template,rails:update,routes,secret,spec,spec:features,spec:requests,spec:controllers,spec:helpers,spec:models,spec:views,spec:routing,spec:rcov,stats,test,test:all,test:all:db,test:recent,test:single,test:uncommitted,time:zones:all,tmp:clear,tmp:create,webpacker:compile
+
 # ==============================================================================
 # inventory
 # Use the properties in this section to override the inventory features.
