@@ -174,9 +174,9 @@ Use the properties in this section to control Protect features and rules.
       * **enable**: Set to `true` for the agent to block known bots.
 
     * **sql-injection**:
-      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
+      * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`. 
       * **aggressive_comment**: Tell the agent to be more aggressive in detecting user inputs as SQL comments. This enables the agent to improve detection of SQL Injection input vectors that use comments to terminate queries. The agent blocks if blocking is enabled.
-      * **detect_tautologies**: Tell the agent to detect when semantic analysis of the query reveals tautologies used in exfiltration attacks (e.g., \"or 1=1\" or \"or 2<>3\"). The agent blocks if blocking is enabled.
+      * **detect_tautologies**: Tell the agent to detect when semantic analysis of the query reveals tautologies used in exfiltration attacks (e.g., "or 1=1" or "or 2<>3"). The agent blocks if blocking is enabled.
       * **detect_dangerous_functions**: Tell the agent to detect when semantic analysis of the query reveals the invocation of dangerous functions typically used in weaponized exploits. The agent blocks if blocking is enabled.
       * **detect_chained_queries**: Tell the agent to detect when semantic analysis of the query reveals chained queries, which is uncommon in normal usage but common in exploit. The agent blocks if blocking is enabled.
       * **detect_suspicious_unions**: Tell the agent to detect when semantic analysis of the query reveals database queries are being made for system tables and sensitive information. The agent blocks if blocking is enabled.
@@ -190,7 +190,7 @@ Use the properties in this section to control Protect features and rules.
     * **path-traversal**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       * **detect_custom_code_accessing_system_files**: Detect when custom code attempts to access sensitive system files. The agent blocks if blocking is enabled.
-      * **detect_common_file_exploits**: Detect when users attempt to bypass filters by using \"::$DATA\" channels or null bytes in file names. The agent blocks if blocking is enabled.
+      * **detect_common_file_exploits**: Detect when users attempt to bypass filters by using "::$DATA" channels or null bytes in file names. The agent blocks if blocking is enabled.
 
     * **method-tampering**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
