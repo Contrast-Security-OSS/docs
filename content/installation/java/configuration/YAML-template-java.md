@@ -117,8 +117,8 @@ api:
     # `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
     # level: ERROR
 
-    # Set to `true` to log to STDOUT. Set to `false`
-    # for the agent to suppress output to STDOUT.
+    # Set to `true` to log to stdout. Set to `false`
+    # for the agent to suppress output to stdout.
     # stdout: NEEDS_TO_BE_SET
 
     # Set to `true` to log to STDERR.
@@ -363,8 +363,28 @@ api:
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
+      # Tell the agent to detect when semantic analysis of the query
+      # reveals tautologies used in exfiltration attacks (e.g., \"or
+      # 1=1\" or \"or 2<>3\"). The agent blocks if blocking is enabled.
+      # detect_tautologies: true
+
+      # Tell the agent to detect when semantic analysis of the query
+      # reveals the invocation of dangerous functions typically used in
+      # weaponized exploits. The agent blocks if blocking is enabled.
+      # detect_dangerous_functions: true
+
+      # Tell the agent to detect when semantic analysis of the query
+      # reveals chained queries, which is uncommon in normal usage but
+      # common in exploit. The agent blocks if blocking is enabled.
+      # detect_chained_queries: true
+
+      # Tell the agent to detect when semantic analysis of the query
+      # reveals database queries are being made for system tables and
+      # sensitive information. The agent blocks if blocking is enabled.
+      # detect_suspicious_unions: true
+
       # Tell the agent to be more aggressive in detecting user
-      # inputs as SQL comments. This will enable the agent to better
+      # inputs as SQL comments. This enables the agent to better
       # detect SQL Injection input vectors that use comments to
       # terminate queries. The agent blocks if blocking is enabled.
       # aggressive_comment: false
@@ -383,6 +403,14 @@ api:
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
+      # Detect when the agent sees user parameters being executed as
+      # system commands. The agent blocks if blocking is enabled.
+      # detect_parameter_command_backdoors: true
+
+      # Detect when a system command is issued which contains
+      # chained commands. The agent blocks if blocking is enabled.
+      # detect_chained_commands: true
+
     # ==========================================================================
     # protect.rules.path-traversal
     # Use the following properties to configure
@@ -396,6 +424,15 @@ api:
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
+
+      # Detect when custom code attempts to access sensitive
+      # system files. The agent blocks if blocking is enabled.
+      # detect_custom_code_accessing_system_files: true
+
+      # Detect when users attempt to bypass filters by
+      # using \"::$DATA\" channels or null bytes in file
+      # names. The agent blocks if blocking is enabled.
+      # detect_common_file_exploits: true
 
     # ==========================================================================
     # protect.rules.method-tampering
