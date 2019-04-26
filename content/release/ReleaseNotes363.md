@@ -10,7 +10,7 @@ tags: "3.6.3 April Release Notes"
 * System Admins couldn't [create users](admin-onboardteam.html#create-user) by CSV import when the Email Activation field was set to "false".
 * Super Admins couldn't save **Library Compliance** setting unless version requirements were enabled for "all libraries".
 * API documentation wasn't available for SaaS users.
-* Libraries displayed release dates from 1899. CONTRAST-31196
+* Libraries displayed release dates from 1899.
 * Links from an application's **Route Coverage** page didn't direct users to the the correct list of vulnerabilities.
 * Editing a user profile without changing their Organization Role caused errors.
 * The Compliance Policy filter wasn't working correctly on the **Applications** grid. 
