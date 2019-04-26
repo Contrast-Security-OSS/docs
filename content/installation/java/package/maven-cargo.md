@@ -6,7 +6,7 @@ tags: "java agent deployment maven central cargo"
 
 ##  About the Project
 
-The following instructions walks a Java developer through the necessary steps to add the Contrast Java agent to an existing Maven project and reuse the project's existing integration tests to find vulnerabilities. This includes guided changes to an [example servlet project](https://github.com/Contrast-Security-OSS/contrast-java-examples/maven-cargo). A completed version of the project exists in a [GitHub branch](https://github.com/Contrast-Security-OSS/contrast-java-examples/tree/maven-cargo-complete/maven-cargo).
+The following instructions walks a Java developer through the necessary steps to add the Contrast Java agent to an existing Maven project and reuse the project's existing integration tests to find vulnerabilities. This includes guided changes to an [example servlet project](https://github.com/Contrast-Security-OSS/contrast-java-examples/tree/master/maven-cargo). A completed version of the project exists in a [GitHub branch](https://github.com/Contrast-Security-OSS/contrast-java-examples/tree/maven-cargo-complete/maven-cargo).
 
 ## Before You Start
 
