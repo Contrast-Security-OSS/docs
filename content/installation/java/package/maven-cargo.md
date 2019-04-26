@@ -192,7 +192,7 @@ $ ./mvnw clean verify
 
 During the integration test, the agent detects and reports the vulnerable servlet to the Contrast UI. To see the vulnerability report, go to the [Vulnerabilities grid](user-vulns.html#discover-vulns) in the Contrast UI, and filter your view by the application name **maven-cargo-how-to**.
 
-## More Information
+## Learn More
 
 To integrate Contrast further with your Maven build, check out the [Contrast Maven Plugin](tools-build.html#maven). You can configure its `verify` goal to fail your Maven build when vulnerabilities are detected in your test run.
 
