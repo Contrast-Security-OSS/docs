@@ -17,18 +17,12 @@ tags: "3.6.3 April Release Notes"
 * Users with two-factor authentication enabled had issues with login redirects and loading application details. CONTRAST-32695, CONTRAST-30530
 
 
-## Improvements
-
-* We enhanced Runtime Exploit Prevention (REP), the multi-technique detection and response engine of Contrast Protect, for Java Protect users. The collection of REP rules is enabled by default for SaaS and EOP. You can also update the settings in your agent's configuration file to adjust which rules are enabled.
-
-* Maven/Gradle - See the **Java summary** for more details. 
-
-
 ## Agent Updates
 
 ### Java summary
 
-Java 11
+The Java team improved the accuracy of Assess XSS, SQL injection rules as well as the accuracy of Protect command injection and SQL injection rules. We enabled Runtime Exploit Prevention (REP) by default for Protect users on SaaS and EOP. (You can also update the settings for individual REP rules in your agent's [configuration](installation-javaconfig.html#java-yaml) file.) We also made the Java agent available on Maven Central. See the [new documentation](installation-javapackage.html) to learn more! 
+
 
 ### .NET summary 
 
