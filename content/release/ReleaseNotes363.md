@@ -7,7 +7,14 @@ tags: "3.6.3 April Release Notes"
 
 ## Fixes
 
-* 
+* System Admins couldn't [create users](admin-onboardteam.html#create-user) with CSV import when the Email Activation field was set to "false". CONTRAST-31212
+* Super Admins couldn't save **Library Compliance** setting unless version requirements were enabled for "all libraries". CONTRAST-32237
+* API documentation wasn't available for SaaS users. CONTRAST-32666
+* Libraries displayed release dates from 1899. CONTRAST-31196
+* Vulnerabilities links from an application's **Route Coverage** page did not direct users to the the correct list of vulnerabilities. CONTRAST-31719
+* User profiles couldn't be edited successfully if their Organization Role remained the same. CONTRAST-32859
+* The Compliance Policy filter wasn't working on the **Applications** grid. CONTRAST-30464
+* Users with two-factor authentication enabled had issues with login redirects and loading application details. CONTRAST-32695, CONTRAST-30530
 
 
 ## Improvements
@@ -36,4 +43,5 @@ The Ruby team focused on improving performance of our Assess offering. We refact
 
 ### Python summary
 
+The new version of the Python agent includes with a lot of product quality updates. In an effort to improve stability and agent quality, the team identified different aspects of the agent that needed improvements and updated them. This helped flush out any small errors that could have occurred later. We also fixed several small bugs, like accidentally patching twice for certain libraries and a scenario where the agent may retry to initialize itself.
 
