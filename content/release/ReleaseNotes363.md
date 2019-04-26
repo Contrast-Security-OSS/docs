@@ -25,6 +25,11 @@ The Java team improved the accuracy of Assess XSS, SQL injection rules as well a
 
 ### .NET summary 
 
+The .NET team fixed the following bugs: 
+* In one limited scenario, Contrast could reject some vulnerability reports from the agent. 
+* Parameter pollution vulnerabilities reported by the agent wouldn't be rendered correctly by Contrast.
+* The agent could cause ServerVariables to contain null values when accessed using different cased names.
+* The agent would fail to identify WCF as an architecture component. 
 
 ### Node.js summary 
 
