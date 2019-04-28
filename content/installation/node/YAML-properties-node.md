@@ -25,7 +25,7 @@ Configuration values use the following order of precedence:
 The agent expects that the *contrast_security.yaml* configuration file exists in the application's root directory (where the *package.json* file usually resides). If you want to change the location of the file, provide the agent with the new location using one of the following methods: 
 
 * Pass a CLI option `--configFile <location>`
-* Set the `CONTRAST_CONFIG` environment variable
+* Set the `CONTRAST_CONFIG_PATH` environment variable
 
 ## Configuration Options 
 

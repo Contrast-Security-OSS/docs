@@ -10,7 +10,7 @@ You may use configuration options to alter Contrast's behavior. They can all be 
 
 Parameter                                      | Environment Variable                           | Description
 ------------------------------                 | --------                                       | -------------
--c, --configFile <path>                        | CONTRAST_CONFIG                                | Set *config* file location. Defaults to *<app_root>/contrast_security.yaml*.
+-c, --configFile <path>                        | CONTRAST\_CONFIG\_PATH                         | Set *config* file location. Defaults to *<app_root>/contrast_security.yaml*.
 --contrast.enable [false]                      | CONTRAST\_\_ENABLE                             | Set `false` to disable reporting. Default is `true`.
 --contrast.api_key <key>                       | CONTRAST\_\_API_KEY                            | The organization API key.
 --contrast.service_key <key>                   | CONTRAST\_\_SERVICE_KEY                        | Account service key.
