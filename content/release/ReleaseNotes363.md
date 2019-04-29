@@ -16,6 +16,9 @@ tags: "3.6.3 April Release Notes"
 * The Compliance Policy filter wasn't working correctly on the **Applications** grid. 
 * Users with two-factor authentication enabled had issues with login redirects and loading application details. 
 
+## Improvements
+
+The Custom Agent Profile option in the **Add Agent** wizard is gone! Use the `proxy` properties in your [Java](installation-javaconfig.html#java-yaml) or [.NET](installation-netconfig.html#net-yaml) agent's YAML file to set proxy credentials for communication with the Contrast UI. 
 
 ## Agent Updates
 
