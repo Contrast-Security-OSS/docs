@@ -6,11 +6,11 @@ tags: "Admin EOP maintenance credentials SuperAdmin reset system"
 
 ## Windows
 
-Users on Windows should complete the following steps to reset the SuperAdmin password in the Contrast application. 
+Contrast users on Windows should complete the following steps to reset the SuperAdmin password in the Contrast application. 
 
 * Stop the Contrast Server service.
 * Launch a command prompt (`cmd.exe`) as an Administrator by right-clicking on **cmd.exe** and selecting **Run As Administrator**.
-* Go to the *Contrast\bin directory*. (On most systems, this is *C:\Program Files\Contrast\bin*.)
+* Go to the *Contrast\bin* directory. (On most systems, this is *C:\Program Files\Contrast\bin*.)
 * Enter the following command to edit the JVM options.
 
 	```
@@ -26,38 +26,38 @@ Users on Windows should complete the following steps to reset the SuperAdmin pas
 	```
 
 * Save the file and exit Notepad.
-* Enter the following command to start the Contrast service.
+* Enter the following command to start the Contrast service:
 
 	```
 	net start "Contrast Server"
 	```
 
 * Verify you are able to log in with the new password.
-* Enter the following command to stop the Contrast service.
+* Enter the following command to stop the Contrast service:
 
 	```
 	net stop "Contrast Server"
 	```
 
-* Enter the following command to edit the JVM options.
+* Enter the following command to edit the JVM options:
 
 	```
 	notepad contrast-server.vmoptions
 	```
 
-* Remove the options added in the <sup>* </sup>fifth step.
+* Remove the options added in the <sup>* </sup> fifth step.
 * Save the file and exit Notepad.
 * Exit the command prompt.
 * Start the Contrast Server service as normal (i.e., from the **Services** control panel applet).
 
 ## Linux
 
-Users on Linux should complete the following steps to reset the SuperAdmin password in the Contrast application. 
+Contrast users on Linux should complete the following steps to reset the SuperAdmin password in the Contrast application. 
 
 * Shut down Contrast Server.
-* Open a command prompt as `root` (or open a normal terminal/shell and use `sudo` or `su` to become root).
+* Open a command prompt as `root`. (Or open a normal terminal/shell and use `sudo` or `su` to become root).
 * Go to the *$CONTRAST_INSTALLATION* directory. (On most systems, this is */opt/Contrast*.)
-* Type the following command.
+* Type the following command:
 
 	```
 	export INSTALL4J_ADD_VM_PARAMS="$INSTALL4J_ADD_VM_PARAMS -Dreset.superadmin=true -Dsuperadmin.username=contrast_superadmin@<your.email.domain.com> -Dsuperadmin.password=<new password>”
