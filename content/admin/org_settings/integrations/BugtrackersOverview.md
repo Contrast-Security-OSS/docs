@@ -14,7 +14,7 @@ Streamline the remediation process for vulnerabilities by sending details direct
 
 You can send vulnerabilities to a bugtracker from the **Send Vulnerability** (paper plane) icon located on the **Vulnerabilities** page, or from the **Vulnerabilities** tab of an **Application Overview** page. In the dialog that follows, choose which information should be included when exporting the findings.
 
-<a href="assets/images/KB3-f04_1.png" rel="lightbox" title="Bugtracker Export Options"><img class="thumbnail" src="assets/images/KB3-f04_1.png"/></a>
+<a href="assets/images/Send-to-bugtracker.png" rel="lightbox" title="Send a vulnerability to your integrated bugtracker"><img class="thumbnail" src="assets/images/Send-to-bugtracker.png"/></a>
 
 For more information, go to the [Manage Vulnerabilities](user-vulns.html#manage-vuln) article.
 
