@@ -39,7 +39,7 @@ To enable the .NET Core agent on your application, you must set the following en
 * CORECLR_PROFILER_PATH_32: Use the following table to find the correct Profiler path for 32-bit applications.
 * CORECLR_PROFILER_PATH_64: Use the following table to find the correct Profiler path for 64-bit applications.
 * CORECLR_ENABLE_PROFILING: `1`
-* CORECLR_PROFILER: `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}`
+* CORECLR_PROFILER: `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`
 * CONTRAST_CONFIG_PATH: Set the path to the YAML configuration file. It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*). If not set, the default is *`CONTRAST_DATA_DIRECTORY`\contrast_security.yaml*. This setting is **optional**.
 * CONTRAST_DATA_DIRECTORY: Change the path to where agent logs are kept. The default is *C:\ProgramData\Contrast\dotnet*. This setting is **optional**. 
 
@@ -52,6 +52,7 @@ To enable the .NET Core agent on your application, you must set the following en
 > **Notes:** 
  * The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
  * Only the Windows platform is supported at this time.
+ * The required `CORECLR_PROFILER` variable was changed during the closed beta from `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}` to `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`. This value differs from the .NET Framework agent.
 
 ### Running from Powershell
 
@@ -62,7 +63,7 @@ Set the environment variables:
 $env:CORECLR_PROFILER_PATH_64 = 'C:\contrast\dotnetcore\runtimes\win-x64\native\ContrastProfiler.dll'
 $env:CORECLR_PROFILER_PATH_32 = 'C:\contrast\dotnetcore\runtimes\win-x86\native\ContrastProfiler.dll'
 $env:CORECLR_ENABLE_PROFILING = '1'
-$env:CORECLR_PROFILER = '{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}'
+$env:CORECLR_PROFILER = '{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}'
 $env:CONTRAST_CONFIG_PATH = 'C:\contrast\dotnet\contrast_security.yaml'
 ```
 
@@ -93,7 +94,7 @@ Set the environment variables using either of these two methods:
         <environmentVariable name="CORECLR_PROFILER_PATH_64" value="C:\contrast\dotnetcore\runtimes\win-x64\native\ContrastProfiler.dll" />
         <environmentVariable name="CORECLR_PROFILER_PATH_32" value="C:\contrast\dotnetcore\runtimes\win-x86\native\ContrastProfiler.dll" />
         <environmentVariable name="CORECLR_ENABLE_PROFILING" value="1" />
-        <environmentVariable name="CORECLR_PROFILER" value="{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}" />
+        <environmentVariable name="CORECLR_PROFILER" value="{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}" />
         <environmentVariable name="CONTRAST_CONFIG_PATH" value="C:\contrast\dotnet\contrast_security.yaml" />
       </environmentVariables>
     </aspNetCore>
@@ -124,7 +125,7 @@ Set the environment variables as part of your application startup script or as a
         "CORECLR_PROFILER_PATH_32": "c:\\contrast\\dotnetcore\\ContrastProfiler-32.dll",
         "CORECLR_PROFILER_PATH_64": "c:\\contrast\\dotnetcore\\ContrastProfiler-64.dll",    
         "CORECLR_ENABLE_PROFILING": "1",
-        "CORECLR_PROFILER": "{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}",        
+        "CORECLR_PROFILER": "{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}",        
         "CONTRAST_CONFIG_PATH": "c:\\contrast\\config\\MyApp\\contrast_security.yaml",
       }
     }
