@@ -52,7 +52,7 @@ To enable the .NET Core agent on your application, you must set the following en
 > **Notes:** 
  * The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
  * Only the Windows platform is supported at this time.
- * The required `CORECLR_PROFILER` variable was changed during the closed beta from `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}` to `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`. This value differs from the .NET Framework agent.
+ * The required `CORECLR_PROFILER` variable `{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}` has been updated to `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`. This value is different for the .NET Framework agent.
 
 ### Running from Powershell
 
