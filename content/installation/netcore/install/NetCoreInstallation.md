@@ -183,6 +183,21 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
 
 1. Follow the directions for installing the Contrast .NET Agent - [Contrast .NET Core Installation](NetCoreInstallation.html)
 
+    The application environment with Contrast and New Relic should look like:
+
+    ``` shell
+    CORECLR_ENABLE_PROFILING=1
+    CONTRAST_CCC_CORECLR_PROFILER={36032161-FFC0-4B61-B559-F6C5D41BAE5A}
+    CORECLR_NEWRELIC_HOME=PATH\TO\INSTALL
+    CONTRAST_CCC_CORECLR_PROFILER_PATH=%CORECLR_NEWRELIC_HOME%\NewRelic.Profiler.dll
+    NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY
+    NEW_RELIC_APP_NAME=YOUR_APP_NAME
+    CORECLR_PROFILER_PATH_64=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x64\native\ContrastProfiler.dll
+    CORECLR_PROFILER_PATH_32=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x86\native\ContrastProfiler.dll
+    CORECLR_PROFILER={8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
+    CONTRAST_CONFIG_PATH=<CONTRAST_CORE_CLR_CONFIG_PATH>\contrast_security.yaml
+    ```
+    
 1. Configure the agent to allow chaining via the [contrast_security.yaml](installation-netcoreconfig.html):
 
     ``` yaml
@@ -214,6 +229,19 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
 
 1. Follow the directions for installing the Contrast .NET Agent - [Contrast .NET Core Installation](NetCoreInstallation.html)
 
+    The application environment with Contrast and AppDynamics should look like:
+
+    ``` shell
+    CORECLR_ENABLE_PROFILING=1
+    CONTRAST_CCC_CORECLR_PROFILER={39AEABC1-56A5-405F-B8E7-C3668490DB4A}
+    CONTRAST_CCC_CORECLR_PROFILER_PATH_32=<actual_path>\AppDynamics.Profiler_x86.dll
+    CONTRAST_CCC_CORECLR_PROFILER_PATH_64=<actual_path>\AppDynamics.Profiler_x64.dll
+    CORECLR_PROFILER_PATH_64=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x64\native\ContrastProfiler.dll
+    CORECLR_PROFILER_PATH_32=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x86\native\ContrastProfiler.dll
+    CORECLR_PROFILER={8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
+    CONTRAST_CONFIG_PATH=<CONTRAST_CORE_CLR_CONFIG_PATH>\contrast_security.yaml
+    ```
+    
 1. Configure the agent to allow chaining via the [contrast_security.yaml](installation-netcoreconfig.html):
 
     ``` yaml
