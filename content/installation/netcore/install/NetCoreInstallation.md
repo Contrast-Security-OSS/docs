@@ -147,7 +147,7 @@ Any of the following environment variable names that exist should be transformed
 - `CORECLR_PROFILER_PATH_32` -> `CONTRAST_CCC_CORECLR_PROFILER_PATH_32`
 - `CORECLR_PROFILER_PATH_64` -> `CONTRAST_CCC_CORECLR_PROFILER_PATH_64`
 
-Lastly, the agent must have chaining enabled via the [contrast_security.yaml](installation-netconfig.html#net-yaml):
+Lastly, the agent must have chaining enabled via the [contrast_security.yaml](installation-netcoreconfig.html):
 
 ``` yaml
 agent:
@@ -183,7 +183,7 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
 
 1. Follow the directions for installing the Contrast .NET Agent - [Contrast .NET Core Installation](NetCoreInstallation.html)
 
-1. Configure the agent to allow chaining via the [contrast_security.yaml](installation-netconfig.html#net-yaml):
+1. Configure the agent to allow chaining via the [contrast_security.yaml](installation-netcoreconfig.html):
 
     ``` yaml
     agent:
@@ -214,7 +214,7 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
 
 1. Follow the directions for installing the Contrast .NET Agent - [Contrast .NET Core Installation](NetCoreInstallation.html)
 
-1. Configure the agent to allow chaining via the [contrast_security.yaml](installation-netconfig.html#net-yaml):
+1. Configure the agent to allow chaining via the [contrast_security.yaml](installation-netcoreconfig.html):
 
     ``` yaml
     agent:
