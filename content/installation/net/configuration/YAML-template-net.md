@@ -6,7 +6,7 @@ tags: "installation net agent YAML configuration rules properties"
 
 Go to the [YAML Properties](installation-netconfig.html#net-yaml) article for more information about this template.
 
-```
+```yaml
 # ==============================================================================
 # Use the properties in this YAML file to configure a
 # Contrast agent. Go to https://docs.contrastsecurity.com/ to

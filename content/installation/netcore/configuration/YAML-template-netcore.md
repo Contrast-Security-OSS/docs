@@ -6,7 +6,7 @@ tags: "installation agent .NET Core YAML configuration properties"
 
 Go to the [YAML Properties](installation-netcoreconfig.html#netcore-yaml) article for more information about this template.
 
-```
+```yaml
 #================================================================================================================================================================================
 #  
 #  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values. 
@@ -148,7 +148,10 @@ contrast:
 
     # Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
     # thread_analysis: full
-
+    
+    # Enable an experimental profiler chaining feature to allow Contrast
+    # to work alongside other tools that use the CLR Profiling API.
+    # enable_chaining: false
 
 #===========================================================================
 # Inventory
@@ -335,5 +338,3 @@ contrast:
   # tags: NEEDS_TO_BE_SET
 
 ```
-
-
