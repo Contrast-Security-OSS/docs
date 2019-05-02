@@ -136,18 +136,18 @@ You can then run the application:
 dotnet run --launch-profile MyAppWithContrastAgent
 ```
 
-## Contrast .NET Core Profiler Chaining
+## Profiler Chaining
 
-Contrast profiler chaining allows the Contrast .NET Core agent to run alongside another .NET Core APM profiler, such as the ones provided by AppDynamics or New Relic. To achieve profiler chaining, the CORECLR environment variables for the APM should be substituted by CONTRAST_CCC_CORECLR versions.
+Contrast profiler chaining allows the .NET Core agent to run alongside another .NET Core APM profiler, such as the ones provided by AppDynamics or New Relic. To achieve profiler chaining, you should replace the CORECLR environment variables for the APM with CONTRAST_CCC_CORECLR versions.
 
-Any of the following environment variable names that exist should be transformed as follows: (#new-relic)
+Any of the following environment variable names that exist should be transformed as follows: 
 
 - `CORECLR_PROFILER` -> `CONTRAST_CCC_CORECLR_PROFILER`
 - `CORECLR_PROFILER_PATH` -> `CONTRAST_CCC_CORECLR_PROFILER_PATH`
 - `CORECLR_PROFILER_PATH_32` -> `CONTRAST_CCC_CORECLR_PROFILER_PATH_32`
 - `CORECLR_PROFILER_PATH_64` -> `CONTRAST_CCC_CORECLR_PROFILER_PATH_64`
 
-Lastly, the agent must have chaining enabled via the [contrast_security.yaml](installation-netcoreconfig.html):
+Lastly, the agent must have chaining enabled in the [contrast_security.yaml](installation-netcoreconfig.html):
 
 ``` yaml
 agent:
@@ -161,9 +161,9 @@ agent:
 
 ### New Relic
 
-Follow these instructions to install the Contrast .NET Core agent alongside the New Relic agent.
+Complete the follwing steps to install the .NET Core agent alongside the New Relic agent.
 
-1. Install the New Relic agent - <https://docs.newrelic.com/docs/agents/net-agent/installation/install-net-core-agent>
+1. [Install the New Relic agent](https://docs.newrelic.com/docs/agents/net-agent/installation/install-net-core-agent).
 
 1. Change the environment variable keys as follows:
 
@@ -181,7 +181,7 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
     NEW_RELIC_APP_NAME=YOUR_APP_NAME
     ```
 
-1. Follow the directions for installing the Contrast .NET Agent - [Contrast .NET Core Installation](NetCoreInstallation.html)
+1. Follow the directions to [install the Contrast .NET agent](NetCoreInstallation.html).
 
     The application environment with Contrast and New Relic should look like:
 
@@ -198,7 +198,7 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
     CONTRAST_CONFIG_PATH=<CONTRAST_CORE_CLR_CONFIG_PATH>\contrast_security.yaml
     ```
     
-1. Configure the agent to allow chaining via the [contrast_security.yaml](installation-netcoreconfig.html):
+1. Configure the agent to allow chaining in the [contrast_security.yaml](installation-netcoreconfig.html):
 
     ``` yaml
     agent:
@@ -208,9 +208,9 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
 
 ### AppDynamics
 
-Follow these instructions to install the Contrast .NET Core agent alongside the AppDynamics agent.
+Complete the following steps to install the .NET Core agent alongside the AppDynamics agent.
 
-1. Install the AppDynamics agent - <https://docs.appdynamics.com/display/PRO45/Install+the+.NET+Core+Microservices+Agent+for+Windows>
+1. [Install the AppDynamics agent](https://docs.appdynamics.com/display/PRO45/Install+the+.NET+Core+Microservices+Agent+for+Windows).
 
 1. Change the environment variable keys as follows:
 
@@ -227,7 +227,7 @@ Follow these instructions to install the Contrast .NET Core agent alongside the 
     CONTRAST_CCC_CORECLR_PROFILER_PATH_64=<actual_path>\AppDynamics.Profiler_x64.dll
     ```
 
-1. Follow the directions for installing the Contrast .NET Agent - [Contrast .NET Core Installation](NetCoreInstallation.html)
+1. Follow the directions to [install the Contrast .NET agent](NetCoreInstallation.html).
 
     The application environment with Contrast and AppDynamics should look like:
 
