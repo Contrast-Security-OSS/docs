@@ -38,11 +38,10 @@ npm install node-contrast-#.#.#.tgz --no-save
 ```
 This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json*.
 
-> **Note:** If you use yarn, you cannot run `yarn add node-contrast-#.#.#.tgz`.  Yarn has known issues with packages that contain bundled dependencies like our agent package.  Run the following **after** your yarn install:
-
-``` sh
-mkdir -p node_modules/node_contrast && tar zxvf node_contrast-#.#.#.tgz --strip 1 -C node_modules/node_contrast
-```
+> **Note:** If you use yarn, you can't run `yarn add node-contrast-#.#.#.tgz`. Yarn has known issues with packages that contain bundled dependencies like our agent package. Run the following **after** you install yarn:
+ ``` sh
+ mkdir -p node_modules/node_contrast && tar zxvf node_contrast-#.#.#.tgz --strip 1 -C node_modules/node_contrast
+ ```
 
 ## Setup
 
