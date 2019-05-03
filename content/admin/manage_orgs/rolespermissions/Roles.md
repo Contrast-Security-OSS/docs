@@ -19,9 +19,9 @@ Every user is provided a default role for the default organization. Users who ar
 
 * **Administrator:** The user is responsible for configuration and overall management of the organization. This user can license applications, manage user accounts, make purchases (SaaS Only) and perform other advanced configuration functions found in Organization Settings. 
 
-* **Edit:** The user can interact with the full lifecycle of vulnerabilities as well as bring applications online and delete them. This user has no administration capabilities. This role is appropriate for the vast majority of Contrast users. 
-
 * **Rules Admin:** The user has Edit-level privilege to rules as well as the ability to manage rule information at the organizational level. This includes tasks such as adding validation and sanitization methods, and adding organization guidance and references to existing rules.
+
+* **Edit:** The user can interact with the full lifecycle of vulnerabilities as well as bring applications online and delete them. This user has no administration capabilities. This role is appropriate for the vast majority of Contrast users. 
 
 * **View:** The user can access the Contrast interface and browse the organization's applications in read-only mode, but can't perform edits to traces or the application.
 
@@ -32,9 +32,9 @@ When you include a user in an organization group, you can define individual appl
  
 * **Administrator:** The user has no restrictions within the application, including the ability to manage users' access.
 
-* **Edit:** The user can remediate findings, edit attributes about the application, and create or delete applications, and create servers. 
-
 * **Rules Admin:** The user has the same functionality as an Edit user; however, this user can also edit rules.
+
+* **Edit:** The user can remediate findings, edit attributes about the application, and create or delete applications, and create servers. 
 
 * **View:** The user has read-only access to the application, which limits the user to viewing application findings in Contrast. 
 
