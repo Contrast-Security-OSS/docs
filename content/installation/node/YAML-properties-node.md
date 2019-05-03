@@ -50,6 +50,7 @@ Use the following properties for communication with the Contrast UI using certif
 
   * **certificate**
     * **enable**: Set to `false` for the agent to ignore the certificate configuration in this section.
+    * **ignore_cert_errors**: Allows the agent to communicate data, even if Contrast's cert can't be verified against supplied list of CAs.
     * **ca_file**: Set the absolute or relative path to a CA for communication with Contrast UI using a self-signed certificate.
     * **cert_file**: Set the absolute or relative path to the Certificate PEM file for communication with Contrast UI.
     * **key_file**: Set the absolute or relative path to the Key PEM file for communication with Contrast UI.
@@ -151,6 +152,7 @@ Use the properties in this section to control Protect features and rules.
 Use the properties in this section to control the application(s) hosting this agent.
 
 * application:
+  * **code**: Add the application code this application should use in the Contrast UI.
   * **name**: Override the reported application name. <br> Note: On Java systems where multiple, distinct applications may be served by a single process, this configuration causes the agent to report all discovered applications as one application with the given name.
   * **path**: Override the reported application path.
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
