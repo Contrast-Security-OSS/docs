@@ -12,7 +12,7 @@ To install the Node agent, you must have installed:
 
 * Python (which is needed for [Node-gyp](https://github.com/nodejs/node-gyp), Node's build tool, to function)
 
-> **Notes:** 
+> **Notes:**
  * If you can build other modules with C++ bindings like [node-sass](https://www.npmjs.com/package/node-sass) and [sqlite3](https://github.com/mapbox/node-sqlite3), you probably meet all of the requirements for Contrast.
  * The official [Node Docker images](https://hub.docker.com/_/node/) come with all of the prerequisites installed.
 
@@ -38,7 +38,10 @@ npm install node-contrast-#.#.#.tgz --no-save
 ```
 This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json*.
 
-> **Note:** At this time, the Node agent **does not** support Yarn for installation. You must install through `npm`.
+> **Note:** If you use yarn, you can't run `yarn add node-contrast-#.#.#.tgz`. Yarn has known issues with packages that contain bundled dependencies like our agent package. Run the following **after** you install yarn:
+ ``` sh
+ mkdir -p node_modules/node_contrast && tar zxvf node_contrast-#.#.#.tgz --strip 1 -C node_modules/node_contrast
+ ```
 
 ## Setup
 
