@@ -56,6 +56,10 @@ api:
     # certificate configuration in this section.
     # enable: true
 
+    # Allows the agent to communicate data, even if Contrast's cert
+    # can't be verified against supplied list of CAs.
+    # ingnore_cert_errors: NEEDS_TO_BE_SET
+
     # Set the absolute or relative path to a CA for communication
     # with the Contrast UI using a self-signed certificate.
     # ca_file: NEEDS_TO_BE_SET
@@ -128,7 +132,7 @@ api:
     # useful information for debugging Contrast. The value set here
     # is the location to which the agent saves log output. If no
     # log file exists at this location, the agent creates a file.
-    #  
+    #
     # Example - */opt/Contrast/contrast.log* creates a log in the
     # */opt/Contrast* directory, and rotates it automatically as needed.
     # path: ./contrast_agent.log
@@ -222,11 +226,15 @@ api:
 # application:
 
   # Override the reported application name.
-  #  
+  #
   # Note - On Java systems where multiple, distinct applications may be
   # served by a single process, this configuration causes the agent to report
   # all discovered applications as one application with the given name.
   # name: NEEDS_TO_BE_SET
+
+  # Add the application code this application should use in the Contrast UI.
+  # Example - "the-coolest-node-app"
+  # code: NEEDS_TO_BE_SET
 
   # Override the reported application path.
   # path: NEEDS_TO_BE_SET
