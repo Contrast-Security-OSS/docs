@@ -6,7 +6,7 @@ tags: "user UI applications metadata build view vulnerabilities"
 
 ## About Build-Based Metadata
 
-list of build properties: branchName, buildNumber, commitHash, committer, gitTag, repository, testRun and version.
+List of build properties: branchName, buildNumber, commitHash, committer, gitTag, repository, testRun and version.
 
 <!-- They can enable/disable individual properties, right? -->
 
@@ -14,13 +14,13 @@ list of build properties: branchName, buildNumber, commitHash, committer, gitTag
 
 To send build properties for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. You can supply these settings as system properties, environment settings or properties in YAML configuration files. See the following configuration examples for each application language.
  
-If you use system properties for **Java**, include an additional entry in the line where you add your `javaagent` flag. In this case, you would set the property `contrast.application.session_metadata` to a set of key-value pairs that identify your test run. 
+If you use system properties for [Java](installation-javaconfig.html), include an additional entry in the line where you add your `javaagent` flag. In this case, you would set the property `contrast.application.session_metadata` to a set of key-value pairs that identify your test run. 
 
 ```
 -Dcontrast.application.session_metadata="branchName=feature/some-new-thing,committer=Jane,repository=Contrast-Java"
 ```
  
-As a **.NET** developer using *app.config* or *web.config*, you can add an entry to your configuration to specify this property. 
+As a [.NET](installation-netconfig.html) developer using *app.config* or *web.config*, you can add an entry to your configuration to specify this property. 
 
 ```
 <?xml version="1.0"?>
@@ -30,7 +30,7 @@ As a **.NET** developer using *app.config* or *web.config*, you can add an entry
     <add key="contrast.application.session_metadata" value="branchName=feature/some-new-thing,committer=Jane,repository=Contrast-DotNet" />
 ```
  
-If you use YAML configuration, like most **Node** and **Ruby** agents, you can add an additional entry to your *contrast_security.yaml* file. 
+If you use YAML configuration, like most [Node](installation-nodeconfig.html) and [Ruby](installation-rubyconfig.html) agents, you can add an additional entry to your *contrast_security.yaml* file. 
 
 ```
 application:
