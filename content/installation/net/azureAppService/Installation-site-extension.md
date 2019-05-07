@@ -4,22 +4,22 @@ description: "Guide to installing .NET Agent on Azure App Service using Site Ext
 tags: "installation configuration .Net Azure AppService site extension"
 -->
 
-Complete the following steps for express installation of the .NET agent via Azure Portal Extensions. 
+Complete the following steps for express installation of the .NET agent via Azure Portal Extensions.
 
 ## Step One: Create an application hosted on Azure App Service
 
-* Create an [Azure account](https://portal.azure.com/), if you don't have one already. 
-* Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service. 
+* Create an [Azure account](https://portal.azure.com/), if you don't have one already.
+* Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service.
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
 
-## Step Two: Add application settings for Contrast  
+## Step Two: Add application settings for Contrast
 
 The following values are the Application Settings that the agent needs to connect to Contrast. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
 
 
 | Key                        | Value                       |
 | -------------------------- | ---------------------------------------- |
-| CONTRAST\__API__USER        | Replace with your agent username. |
+| CONTRAST\__API__USER_NAME       | Replace with your agent username. |
 | CONTRAST\__API__SERVICE_KEY | Replace with your agent service key. |
 | CONTRAST\__API__API_KEY     | Replace with your agent API key.  |
 | CONTRAST\__API__URL         | Defaults to https://app.contrastsecurity.com. Replace with another URL, if you're using a Contrast application that's hosted elsewhere. (**Optional**)  |
@@ -42,9 +42,9 @@ The following values are the Application Settings that the agent needs to connec
 <a href="assets/images/AzureSite_ContrastExtensionInstalled.png" rel="lightbox" title="Confirm the installation"><img class="thumbnail" src="assets/images/AzureSite_ContrastExtensionInstalled.png"/></a>
 
 * Go back to the application overview and **Restart** the application.
-* Navigate to the application, and confirm the application is reporting to Contrast. 
+* Navigate to the application, and confirm the application is reporting to Contrast.
 
-> **Note:** The agent can also be installed from the **Site Extensions** area of your application management SCM (Kudu) site. 
+> **Note:** The agent can also be installed from the **Site Extensions** area of your application management SCM (Kudu) site.
 
 ## Update Your Installation
 
