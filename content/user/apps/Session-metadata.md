@@ -1,10 +1,10 @@
 <!--
 title: "Build-Based View"
 description: "How to track applications' vulnerabilities by build"
-tags: "user UI applications metadata build view vulnerabilities"
+tags: "user UI applications session metadata build vulnerabilities"
 -->
 
-## About Build-Based Metadata
+## About Session Metadata
 
 List of build properties: branchName, buildNumber, commitHash, committer, gitTag, repository, testRun and version.
 
