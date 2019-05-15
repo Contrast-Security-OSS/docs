@@ -112,6 +112,17 @@ The following properties are used by the logger in the Contrast service. If the 
     * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Override the name of the process used in logs. <br> Example: Contrast Service
 
+#### Heap dump
+
+You can use the following properties to trigger heap dumps from within the agent to snapshot the behavior of instrumented applications.
+
+  * **enable:** Set to `true` for the agent to automatically take heap dumps of the instrumented application.
+  * **path:** Set the location to which to save the heap dump files. If relative, the path is determined based on the process' working directory.
+  * **delay_ms:** Set the amount of time to wait, in milliseconds, after agent startup to begin taking heap dumps.
+  * **window_ms:** Set the amount of time to wait, in milliseconds, between each heap dump.
+  * **count:** Set the number of heap dumps to take before disabling this feature.
+  * **clean:** Set to `true` for the agent to trigger garbage collection before taking a heap dump to remove temproary objects from the dump.
+
 ### Ruby-specific properties
 
 The following configuration options allow you to fine-tune the Ruby agent.
