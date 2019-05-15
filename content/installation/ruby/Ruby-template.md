@@ -219,6 +219,35 @@ agent:
 
       # Override the name of the process used in logs.
       # progname: Contrast Service
+      
+  # ============================================================================
+  # agent.heap_dump
+  # The following properties are used to trigger heap dumps from within
+  # the agent to snapshot the behavior of instrumented applications.
+  # ============================================================================
+  # heap_dump:
+
+    # Set to `true` for the agent to automatically
+    # take heap dumps of the instrumented application.
+    # enable: false
+
+    # The location to which to save the heap dump files. If relative,
+    # the path is determined based on the process' working directory.
+    # path: contrast_heap_dumps
+
+    # How long to wait, in milliseconds, after
+    # agent startup to begin taking heap dumps.
+    # delay_ms: 10_000
+
+    # How long to wait, in milliseconds, between each heap dump.
+    # window_ms: 10_000
+
+    # The number of heap dumps to take before disabling this feature.
+    # count: 5
+
+    # Set to `true` for the agent to trigger garbage collection before
+    # taking a heap dump to remove temproary objects from the dump.
+    # clean: false
 
   # ============================================================================
   # agent.ruby
