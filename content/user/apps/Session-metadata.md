@@ -6,13 +6,15 @@ tags: "user UI applications session metadata build vulnerabilities"
 
 ## About Session Metadata
 
-List of build properties: branchName, buildNumber, commitHash, committer, gitTag, repository, testRun and version.
+Your agent will include session metadata when it reports vulnerabilities for your applications.  
+
+Build properties: branchName, buildNumber, commitHash, committer, gitTag, repository, testRun and version.
 
 <!-- They can enable/disable individual properties, right? -->
 
 ## Agent Configuration 
 
-To send build properties for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. You can supply these settings as system properties, environment settings or properties in YAML configuration files. See the following configuration examples for each application language.
+To send session properties for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. You can supply these settings as system properties, environment settings or properties in YAML configuration files. See the following configuration examples for each application language.
  
 If you use system properties for [Java](installation-javaconfig.html), include an additional entry in the line where you add your `javaagent` flag. In this case, you would set the property `contrast.application.session_metadata` to a set of key-value pairs that identify your test run. 
 
@@ -51,6 +53,12 @@ If you use plugins in your CI, like the [Jenkins git plugin](tools-ci.html#jenki
 -Dcontrast.application.session_metadata="branchName=$GIT_BRANCH,committer=$GIT_COMMITTER_NAME,commitHash=$GIT_COMMIT_HASH,repository=$GIT_URL,buildNumber=$BUILD_NUMBER"
 ```
 
-## View Application Data 
+## View Data by Application
 
+To see the session data reported, go to your application's **Vulnerabilities** tab. 
 
+Use the **View By** menu above the chart to filter the data by the properties that you included in your agent configuration. This updates the values shown in the **Seen By** column in the grid. Use the filter for the grid column to refine the results. 
+
+Your selections also update the data shown in the chart, which you can view by **Severity** or **Discovery**. Hover...
+
+> **Note:** To see vulnerabilities that are not associated with session metadata, select **Disassociated** in the **View By** menu. 
