@@ -14,7 +14,7 @@ Then extract the nuget package and set the following environment variables on th
 | COR_PROFILER               | {EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}   |
 | COR_PROFILER_PATH_32       | <Unzipped nuget package path>\content\contrastsecurity\ContrastProfiler-32.dll   |
 | COR_PROFILER_PATH_64       | <Unzipped nuget package path>\content\contrastsecurity\ContrastProfiler-64.dll   |
-| AGENT__DOTNET__CONTAINER   | true                        |
+| AGENT\_\_DOTNET\_\_CONTAINER   | true                        |
 
 Then use the Contrast yaml configuration file or environment variables to setup Contrast authentication or other settings.
 
