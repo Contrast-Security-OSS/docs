@@ -6,11 +6,7 @@ tags: "user UI applications session metadata build vulnerabilities"
 
 ## About Session Metadata
 
-Your agent will include session metadata when it reports vulnerabilities for your applications.  
-
-Build properties: branchName, buildNumber, commitHash, committer, gitTag, repository, testRun and version.
-
-<!-- They can enable/disable individual properties, right? -->
+Pinpoint the source of vulnerabilities in your application with metadata reported by your Contrast agent. Once configured to report the properties you've chosen, the agent reports the information along with the rest of your standard vulnerability data to the Contrast UI. The build properties that the agent can report are **branch name**, **build number**, **commit hash**, **committer**, **Git tag**, **repository**, **test run** and **version**. 
 
 ## Agent Configuration 
 
