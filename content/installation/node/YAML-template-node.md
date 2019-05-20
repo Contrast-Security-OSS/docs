@@ -165,6 +165,31 @@ api:
     # level: ERROR
 
   # ============================================================================
+  # agent.heap_dump
+  # The following properties are used to trigger heap dumps from within
+  # the agent to snapshot the behavior of instrumented applications.
+  # ============================================================================
+  # heap_dump:
+
+    # Set to `true` for the agent to automatically
+    # take heap dumps of the instrumented application.
+    # enable: false
+
+    # The location to which to save the heap dump files. If relative,
+    # the path is determined based on the process' working directory.
+    # path: contrast_heap_dumps
+
+    # How long to wait, in milliseconds, after
+    # agent startup to begin taking heap dumps.
+    # delay_ms: 10_000
+
+    # How long to wait, in milliseconds, between each heap dump.
+    # window_ms: 10_000
+
+    # The number of heap dumps to take before disabling this feature.
+    # count: 5
+
+  # ============================================================================
   # agent.node
   # The following properties apply to any Node configurations.
   # ============================================================================
@@ -289,5 +314,5 @@ api:
   # must be formatted as a comma-delimited list.
   # Example - label1,label2,label3
   # tags: NEEDS_TO_BE_SET
-
+  
 ```
