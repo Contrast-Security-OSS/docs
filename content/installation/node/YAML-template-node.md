@@ -175,18 +175,18 @@ api:
     # take heap dumps of the instrumented application.
     # enable: false
 
-    # The location to which to save the heap dump files. If relative,
+    # Set the location to which to save the heap dump files. If relative,
     # the path is determined based on the process' working directory.
     # path: contrast_heap_dumps
 
-    # How long to wait, in milliseconds, after
+    # Set the amount of time to wait, in milliseconds, after
     # agent startup to begin taking heap dumps.
     # delay_ms: 10_000
 
-    # How long to wait, in milliseconds, between each heap dump.
+    # Set the amount of time to wait, in milliseconds, between each heap dump.
     # window_ms: 10_000
 
-    # The number of heap dumps to take before disabling this feature.
+    # Set the number of heap dumps to take before disabling this feature.
     # count: 5
 
   # ============================================================================
