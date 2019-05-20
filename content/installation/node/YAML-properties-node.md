@@ -100,6 +100,19 @@ Use the properties in this section to control security logging. These logs allow
     * **path**: Set the file to which the agent logs security events. <br> Example: */.contrast/security.log*
     * **level**: Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
 
+#### Heap dumps
+
+The following properties are used to trigger heap dumps from within the agent to snapshot the behavior of instrumented applications.
+
+  * **enable**: Set to `true` for the agent to automatically take heap dumps of the instrumented application.
+
+  * **path**: Set the location to which to save the heap dump files. If relative, the path is determined based on the process' working directory. <br> Example: *contrast_heap_dumps*
+
+  * **delay_ms**: Set the amount of time to wait, in milliseconds, after agent startup to begin taking heap dumps. <br> Example: `10_000`
+
+  * **window_ms**: Set the amount of time to wait, in milliseconds, between each heap dump. <br> Example: `10_000`
+
+  * **count**: Set the number of heap dumps to take before disabling this feature. <br> Example: `5`
 
 #### Agent-specific properties
 
