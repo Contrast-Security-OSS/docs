@@ -92,7 +92,6 @@ The following properties apply to any .NET Core agent-wide configurations. <!-- 
     * **enable_jit_inlining**: Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
     * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
     * **thread_analysis**: Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
-    * **enable_chaining:** Enable the profiler chaining feature to allow Contrast to work alongside other tools that use the CLR Profiling API.
 
 
 ### Inventory properties
