@@ -45,7 +45,7 @@ api:
   # Set the version of the TLS protocol the agent uses to communicate with the
   # Contrast UI. The .NET agent default behavior is (SecurityProtocolType.Tls
   # | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12).
-  # tls_versions: tls1|tls2|tls3
+  # tls_versions: (tls|tls11|tls12)
 
   # ============================================================================
   # api.certificate
