@@ -21,10 +21,10 @@ Navigate to your application, and allow an extra minute for it to start up.
 
 Many Karaf users will probably want to use two extra system properties when running Contrast:
  * *contrast.classpath.libs*, which tells Contrast to use the standard classpath libraries instead of libraries found in */WEB-INF/lib*
- * *contrast.appname*, which allows you to name your application
+ * *contrast.override.appname*, which allows you to name your application
  
 Adding these flags will result in an export that looks more like the following:
 
 ```
-$ export KARAF_OPTS="-Dcontrast.appname=MyKarafApp -Dcontrast.classpath.libs=true -javaagent:/path/to/contrast.jar"
+$ export KARAF_OPTS="-Dcontrast.override.appname=MyKarafApp -Dcontrast.classpath.libs=true -javaagent:/path/to/contrast.jar"
 ```
