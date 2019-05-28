@@ -148,10 +148,6 @@ contrast:
 
     # Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
     # thread_analysis: full
-    
-    # Enable an experimental profiler chaining feature to allow Contrast
-    # to work alongside other tools that use the CLR Profiling API.
-    # enable_chaining: false
 
 #===========================================================================
 # Inventory
