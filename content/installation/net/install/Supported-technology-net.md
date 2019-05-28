@@ -30,19 +30,19 @@ The .NET agent for Azure App Service supports analysis of web applications built
 | .NET Framework             | Your application must be set to use CLR4. Any application that can run on this version is supported. (.NET 4.7.2 is deployed currently on Azure. Version 3.5 is not supported.)  |
 | CLR                        | CLR4                       |
 | Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
-| Web Application Frameworks | Same as .NET for Windows |
+| Web Application Frameworks | See the **.NET for Windows** table. |
 
-> **Note:** Only applications using the full .NET Framework are currently supported. Contrast plans to add support for .NET Core applications in the future.
+> **Note:** Only applications using the full .NET framework agent are currently supported. Contrast plans to add support for .NET Core applications in the future.
 
 ## .NET for Docker
 
-The .NET agent can run in docker on a Windows based image that includes IIS and .NET Framework 4.6.2 or higher.  We recommend basing your image on [microsoft/aspnet](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet).  Please see [.NET Docker documentation](installation-netinstall.html#docker) for detailed installation instructions.
+The .NET agent can run in Docker on a Windows-based image that includes IIS and .NET Framework 4.6.2 or higher. Contrast recommends that you base your image on [Microsoft ASP.NET](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet). See the [.NET Docker documentation](installation-netinstall.html#net-docker) for detailed installation instructions.
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
 | .NET Framework             | Your application must be set to use CLR4. Any application that can run on .NET 4.6.2 or above is supported.   |
 | CLR                        | CLR4                       |
 | Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
-| Web Application Frameworks | Same as .NET for Windows |
+| Web Application Frameworks | See the **.NET for Windows** table. |
 
 

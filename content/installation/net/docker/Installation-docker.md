@@ -4,9 +4,11 @@ description: "Guide to installing .NET Agent on Docker for Windows containers us
 tags: "installation configuration .Net Docker site nuget visualstudio"
 -->
 
-Use an image based on [microsoft/aspnet](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet).  Contrast agent assemblies can be download from the [Contrast.NET.Azure.AppService nuget package](https://www.nuget.org/api/v2/package/Contrast.NET.Azure.AppService)
+To install the .NET agent in Docker...
 
-Then extract the nuget package and set the following environment variables on the application process.
+Use an image based on [Microsoft ASP.NET](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet). You can download Contrast agent assemblies from the [Contrast.NET.Azure.AppService NuGet package](https://www.nuget.org/api/v2/package/Contrast.NET.Azure.AppService).
+
+* Extract the NuGet package, and set the following environment variables on the application process.
 
 | Environment variable       | Value                       |
 | -------------------------- | --------------------------- |
@@ -16,14 +18,18 @@ Then extract the nuget package and set the following environment variables on th
 | COR_PROFILER_PATH_64       | <Unzipped nuget package path>\content\contrastsecurity\ContrastProfiler-64.dll   |
 | CONTRAST\_\_AGENT\_\_DOTNET\_\_CONTAINER   | true                        |
 
-Then use the Contrast yaml configuration file or environment variables to setup Contrast authentication and other settings.
+* Use the [YAML configuration](installation-netconfig.html#net-yaml) file or environment variables for the agent to set Contrast authentication and other settings.
 
-Examples of the following use cases are provided in the [contrast-dotnet-examples](https://github.com/Contrast-Security-OSS/contrast-dotnet-examples) GitHub repo
+## Examples
 
-1). ASP.NET application in the default AppPool
+Examples of the following use cases are provided in the [contrast-dotnet-examples](https://github.com/Contrast-Security-OSS/contrast-dotnet-examples) GitHub repository. 
+
+### ASP.NET application in the default AppPool
+
 * [Dockerfile](https://github.com/Contrast-Security-OSS/contrast-dotnet-examples/blob/master/docker/netframework/Dockerfile-DefaultAppPool)
 * [Entrypoint script](https://github.com/Contrast-Security-OSS/contrast-dotnet-examples/blob/master/docker/netframework/shared/startDefaultAppPool.ps1)
 
-2). ASP.NET application in a custom AppPool
+### ASP.NET application in a custom AppPool
+
 * [Dockerfile](https://github.com/Contrast-Security-OSS/contrast-dotnet-examples/blob/master/docker/netframework/Dockerfile-CustomAppPool)
 * [Entrypoint script](https://github.com/Contrast-Security-OSS/contrast-dotnet-examples/blob/master/docker/netframework/shared/startCustomAppPool.ps1)
