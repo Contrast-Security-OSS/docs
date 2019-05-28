@@ -9,16 +9,16 @@ tags: "3.6.4 May Release Notes"
 
 * Auto-remediation settings did not immediately update vulnerability statuses. CONTRAST-33609
 * Attack even data was not displayed properly in Diagnostics. CONTRAST-31314
-* 
-
+* Clicking the server count in an application **Overview** page did not direct you to the correct servers. CONTRAST-34176
+* Users weren't able to set up SSO with Azure. SUP-144
+* Email notifications for compliance policy violations didn't include the correct link. CONTRAST-32906
 
 ## Improvements
 
-Use Server Messages to stay on top of agent updates. When your agent version is out of date, Contrast will send you an email with recommendations for updates. You can also check your notifications in the Contrast UI, or hover over the warning icon in the **Servers** grid and your server's **Overview** tab for a reminder. To enable Server Messages, go to the **Notifications** page from **Your Account** or **Organization Settings**.
+Enable Server Messages to stay on top of agent updates. When your agent version is out of date, Contrast will send you an email with recommendations for updates. You can also check your notifications in the Contrast UI, or hover over the warning icon in the **Servers** grid and your server's **Overview** tab for a reminder. To enable Server Messages, go to the **Notifications** page from **Your Account** or **Organization Settings**.
 
+* Library enhancements improved your ability to see library data throughout the UI. 
 
-Improved mapping of vulnerabilities to artifacts
-Improved user experience around the parsing and displaying of artifact licenses
 
 Ability to turn on the OSS licensing feature in organisation settings.
 Exposure of library license data in the Contrast UI and in the export files.
@@ -26,13 +26,19 @@ Viewable on hover of library name in the library grid.
 Included in the metadata of library detail page.
 Filtering by license enabled in the library grid.
 
+Improved mapping of vulnerabilities to artifacts
+Improved user experience around the parsing and displaying of artifact licenses
+
 
 ## Agent Updates
 
 ### Java summary
 
+Check back next release for more updates!
+
 ### .NET summary 
 
+The .NET team improved the accuracy and performance of Protect Command Injection as well as the accuracy of accuracy of Protect SQL-Injection and Reflected XSS. We implemented a Server Side Request Forgery (SSRF) rule for Assess. We also fixed a bug where the Tray would occasionally fail to update agent status. 
 
 ### Node.js summary 
 
