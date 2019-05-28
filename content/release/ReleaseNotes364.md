@@ -14,11 +14,7 @@ tags: "3.6.4 May Release Notes"
 
 ## Improvements
 
-* Enable Server Messages to stay on top of agent updates. When your agent version is out of date, Contrast will send you an email with recommendations for updates. You can also check your notifications in the Contrast UI, or hover over the warning icon in the **Servers** grid and your server's **Overview** tab for a reminder. To enable Server Messages, go to the **Notifications** page from **Your Account** or **Organization Settings**.
-
-<!-- * Turn on our new OSS licensing feature for your organization to see enhanced library license data throughout the UI and exported files. To enable the feature, go to the **Organizations** tab in your SuperAdmin view, and turn on **OSS Licensing** in the **Add** or **Edit Organizations** form. To see the data in the **Libraries** grid, hover over a library name or use the License filter to narrow down results. You can also see the data in a libraries' **Overview** page. 
-
-* Improved mapping of vulnerabilities to artifacts. Improved user experience around the parsing and displaying of artifact licenses. -->
+Enable Server Messages to stay on top of agent updates. When your agent version is out of date, Contrast will send you an email with recommendations for updates. You can also check your notifications in the Contrast UI, or hover over the warning icon in the **Servers** grid and your server's **Overview** tab for a reminder. To enable Server Messages, go to the **Notifications** page from **Your Account** or **Organization Settings**.
 
 ## Agent Updates
 
