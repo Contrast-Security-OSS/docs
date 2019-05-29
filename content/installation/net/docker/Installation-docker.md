@@ -1,12 +1,18 @@
 <!--
 title: "Installing Contrast .NET Framework agent in Docker"
-description: "Guide to installing .NET Agent on Docker for Windows containers using the Nuget package"
-tags: "installation configuration .Net Docker site nuget visualstudio"
+description: "Guide to installing .NET agent on Docker for Windows containers using the NuGet package"
+tags: "installation configuration .net docker nuget visual studio"
 -->
 
-To install the .NET agent in Docker...
+The following instructions show you how install and configure the Contrast .NET agent in Docker for Windows using the NuGet package. Examples of the finished code exist in a [GitHub repository](https://github.com/Contrast-Security-OSS/contrast-dotnet-examples).
 
-Use an image based on [Microsoft ASP.NET](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet). You can download Contrast agent assemblies from the [Contrast.NET.Azure.AppService NuGet package](https://www.nuget.org/api/v2/package/Contrast.NET.Azure.AppService).
+## Install the Agent 
+
+Complete the following steps to install and configure the agent. 
+
+* To begin, use an image based on [Microsoft ASP.NET](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet). 
+
+* You can download Contrast agent assemblies from the [Contrast.NET.Azure.AppService NuGet package](https://www.nuget.org/api/v2/package/Contrast.NET.Azure.AppService).
 
 * Extract the NuGet package, and set the following environment variables on the application process.
 
@@ -18,7 +24,7 @@ Use an image based on [Microsoft ASP.NET](https://hub.docker.com/_/microsoft-dot
 | COR_PROFILER_PATH_64       | <Unzipped nuget package path>\content\contrastsecurity\ContrastProfiler-64.dll   |
 | CONTRAST\_\_AGENT\_\_DOTNET\_\_CONTAINER   | true                        |
 
-* Use the [YAML configuration](installation-netconfig.html#net-yaml) file or environment variables for the agent to set Contrast authentication and other settings.
+* Use the [YAML configuration](installation-netconfig.html#net-yaml) file or environment variables to set Contrast authentication and other settings for the agent.
 
 ## Examples
 
