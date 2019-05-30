@@ -15,7 +15,7 @@ set JAVA_OPTS=-javaagent:{path-to-jboss-direcotry}\contrast.jar %JAVA_OPTS%
 Of course, you'll have to substitute the path to ***contrast.jar*** and your JBoss server directory for your environment. 
 
 ## Running JBoss 6 EAP/JBoss 7.X in Domain Mode
-If you're running in domain mode (using ***domain.bat*** or ***domain.sh***), you'll have to add the ```-javaagent``` switch to the JVM options in ***$JBOSS_HOME/domain/configuration/domain.xml***. Here's an example file snippet:
+If you're running in domain mode (using ***domain.bat*** or ***domain.sh***), you'll have to add the `-javaagent` switch to the JVM options in ***$JBOSS_HOME/domain/configuration/domain.xml***. Here's an example file snippet:
 
 ````
 <server-group ...>
@@ -30,8 +30,8 @@ If you're running in domain mode (using ***domain.bat*** or ***domain.sh***), yo
 
 ## More Information
 
-* [Running Contrast on an Eclipse WTP application](installation-javainstall.html#eclipse)
+* [Running Contrast on an Eclipse WTP application](installation-javaserver.html#eclipse)
 
-* [Running Contrast on an IntelliJ application](installation-javainstall.html#intellij)
+* [Running Contrast on an IntelliJ application](installation-javaserver.html#intellij)
 
-* [Running Contrast on GlassFish using IntelliJ or NetBeans](installation-javainstall.html#glass)
+* [Running Contrast on GlassFish using IntelliJ or NetBeans](installation-javaserver.html#glass)

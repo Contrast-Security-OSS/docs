@@ -16,7 +16,7 @@ To install the Java agent from the Contrast UI, complete the following steps:
 
 > **Example:** `java -javaagent:contrast.jar -jar <app-name>.jar`
 
-> To see examples for specific technologies, go to [Installation by Container](installation-javainstall.html) and select the article for the container you want to use.
+> To see examples for specific technologies, go to the [Server Configuration](installation-javaserver.html) page, and select the article for the container you want to use.
 
 To start analyzing an application, use the web application as you normally would in your browser: click on links, submit forms using normal data, etc. The sensors of the Contrast Java agent will gather information about the application’s security, architecture and libraries. You can view the results of the agent’s analysis in the Contrast UI.
 
