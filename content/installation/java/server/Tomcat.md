@@ -33,7 +33,7 @@ If you run Tomcat from **as a service**, changing the JVM options to add the age
 
 <a href="assets/images/KB2-a01_1.png" rel="lightbox" title="System Tray Icon"><img class="thumbnail" src="assets/images/KB2-a01_1.png"/></a>
 
-Switching to the Java tab will show you where you need to add the ```-javaagent``` flag:
+Switching to the Java tab will show you where you need to add the `-javaagent` flag:
 
 <br>
 
@@ -43,10 +43,10 @@ Switching to the Java tab will show you where you need to add the ```-javaagent`
 
 Not using startup scripts or the Windows service? Here's how to run Contrast from other Tomcat Launchers:
 
-- [Running Contrast on Tomcat with Maven Apache Tomcat Plugin](installation-javainstall.html#apache)
+- [Running Contrast on Tomcat with Maven Apache Tomcat Plugin](installation-javaserver.html#apache)
 
-- [Running Contrast on an Eclipse WTP Application](installation-javainstall.html#eclipse)
+- [Running Contrast on an Eclipse WTP Application](installation-javaserver.html#eclipse)
 
-- [Running Contrast on an IntelliJ Application](installation-javainstall.html#intellij)
+- [Running Contrast on an IntelliJ Application](installation-javaserver.html#intellij)
 
-- [Running Contrast on a NetBeans Application](installation-javainstall.html#netbeans)
+- [Running Contrast on a NetBeans Application](installation-javaserver.html#netbeans)

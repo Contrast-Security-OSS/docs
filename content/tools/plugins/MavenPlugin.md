@@ -120,5 +120,5 @@ When your application's integration tests are run, the Contrast agent can add an
 
 See the following articles for specific installation instructions:
 
-* [Install the agent on Maven Apache Tomcat](installation-javainstall.html#apache)
-* [Install the agent on Maven Cargo Plugin](installation-javainstall.html#cargo)
+* [Install the agent on Maven Apache Tomcat](installation-javaserver.html#apache)
+* [Install the agent on Maven Cargo Plugin](installation-javaserver.html#cargo)
