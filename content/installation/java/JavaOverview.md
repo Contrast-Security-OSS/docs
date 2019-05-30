@@ -8,4 +8,4 @@ The Contrast Java agent analyzes the behavior of Java applications running on J2
 
 ## How It Works
 
-To start analyzing an application, [install the Java agent](installation-java.html#java-standard) by adding it as `-javaagent` JVM parameter. After installation, continue to use the application as you normally would. (If it's a web application, just click on links, submit forms using normal data, and so forth.) The Java agent's sensors gather information about the application's security, architecture and libraries. You can see the results of the agent's analysis in the Contrast UI.
+To start analyzing an application, [install the Java agent](installation-javastandard.html) by adding it as `-javaagent` JVM parameter. After installation, continue to use the application as you normally would. (If it's a web application, just click on links, submit forms using normal data, and so forth.) The Java agent's sensors gather information about the application's security, architecture and libraries. You can see the results of the agent's analysis in the Contrast UI.

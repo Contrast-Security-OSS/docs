@@ -24,7 +24,7 @@ The Custom Agent Profile option in the **Add Agent** wizard is gone! Use the `pr
 
 ### Java summary
 
-The Java team improved the accuracy of Assess XSS, SQL injection rules as well as the accuracy of Protect command injection and SQL injection rules. We enabled Runtime Exploit Prevention (REP) by default for Protect users on SaaS and EOP. (You can also update the settings for individual REP rules in your agent's [configuration](installation-javaconfig.html#java-yaml) file.) We also made the Java agent available on Maven Central. See the [new documentation](installation-javapackage.html) to learn more! 
+The Java team improved the accuracy of Assess XSS, SQL injection rules as well as the accuracy of Protect command injection and SQL injection rules. We enabled Runtime Exploit Prevention (REP) by default for Protect users on SaaS and EOP. (You can also update the settings for individual REP rules in your agent's [configuration](installation-javaconfig.html#java-yaml) file.) We also made the Java agent available on Maven Central. See the [new documentation](installation-javaguides.html) to learn more! 
 
 ### .NET summary 
 

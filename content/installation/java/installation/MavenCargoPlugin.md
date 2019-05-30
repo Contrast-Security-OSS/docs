@@ -41,4 +41,4 @@ tags: "java agent installation maven codehaus"
 
 For more information on adding JVM arguments to Cargo container, see the [Cargo documentation](https://codehaus-cargo.github.io/cargo/Configuration+properties.html).
 
-For a complete example of using Contrast with Maven and the cargo-maven2-plugin, see the article to [Add the Agent to a Maven Project](installation-javapackage.html#cargo).
+For a complete example of using Contrast with Maven and the cargo-maven2-plugin, see the article to [Add the Agent to a Maven Project](installation-javaguides.html#cargo).
