@@ -25,7 +25,7 @@ Integrate Contrast in your deployment flow.
 
 #### Step three
 * Click over the **+ New Service connection** button and select _Contrast Server Connection_.
-* Fill all the fields with the required data. All fields data can be found in _user menu_ > _Your Account_ > _Profile_ in the _Preferences_ section at the bottom.
+* Fill all the fields with the required data. All fields data can be found in _user menu_ > _Your Account_ > _Profile_ at the bottom of the _Preferences_ section.
 
 <a href="assets/images/AzureDevOps_service_connection.png" rel="lightbox" title="Service Connection fields"><img class="thumbnail" src="assets/images/AzureDevOps_service_connection.png"/></a>
 
