@@ -1,7 +1,7 @@
 <!--
 title: "Contrast Integration for Azure DevOps" 
 description: "Extension to integrate Contrast in your deployment workflow"
-tags: "tools AzureDevOps integration extension deployment"
+tags: "tools azure devops integration extension deployment"
 -->
 
 
@@ -21,16 +21,14 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 * Go to your **Project settings** at the bottom of you side bar.
 
- <a href="assets/images/AzureDevOps_sidebar.png" rel="lightbox" title="Azure DevOps Sidebar"><img class="thumbnail" src="assets/images/AzureDevOps_sidebar.png"/></a>
-
 * In the **Pipelines** section of the settings menu, select **Service connections**.
 
  <a href="assets/images/AzureDevOps_connection_settings.png" rel="lightbox" title="Service Connection Settings"><img class="thumbnail" src="assets/images/AzureDevOps_service_connection_settings.png"/></a>
 
 ### Step three
 
-* Click over the **+ New Service connection** button, and select **Contrast Server Connection**.
-* Fill all the fields with the required data. You can find the values for all the fields in the Contrast UI by going to the [**user menu > Your Account > Profile** page](user-account.html#profile).
+* Click over the **+ New Service connection** button (shown in the image in the previous step), and select **Contrast Server Connection**.
+* Complete all the fields with the required data. You can find the values for all the fields in the Contrast UI by going to the [**user menu > Your Account > Profile** page](user-account.html#profile).
 
 <a href="assets/images/AzureDevOps_service_connection.png" rel="lightbox" title="Service Connection fields"><img class="thumbnail" src="assets/images/AzureDevOps_service_connection.png"/></a>
 
@@ -40,14 +38,14 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 ### Step one
 
-* Now that you have at least one Service Connection, enter on _Edit_ mode for the Release pipeline you wish to include the gate.
-* Select a Pre or Post deployment condition.
+* Now that you have at least one service connection, enter on **Edit** mode for the Release pipeline you wish to include the gate.
+* Select a Pre- or Post-deployment Condition.
 * Enable the Gates section if you haven't already and click on the **+ Add** button to select **Verify application vulnerabilities** option.
 
 ### Step two
 
-* Select a **Service Connection** from the **Contrast Service Connection** field. If you don't have one already, then click over the *+ New* button and proceed as in the step three for Setup and Configuration. You can also click on the **Manage** option to go to the Service connections settings in your **Project Settings**.
-* Now select one of your applications from the **Application** dropdown. This will enable more fields for configurating the gate.
+* Select a **Service Connection** from the **Contrast Service Connection** field. You can also click on the **Manage** option to go to the Service connections settings in your **Project Settings**.
+* Select one of your applications from the **Application** dropdown. This will enable more fields for configuring the gate.
 
 <a href="assets/images/AzureDevOps_gate_part1.png" rel="lightbox" title="Azure DevOps Gate Part 1"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part1.png"/></a>
 
