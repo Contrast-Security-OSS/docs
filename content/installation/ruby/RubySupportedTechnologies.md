@@ -8,21 +8,25 @@ The Ruby agent supports Ruby language versions 2.3.x through 2.6.x. Framework su
 
 ## Database Support
 
-The Ruby Agent has SQL Injection modules for MySQL (`mysql2` gem), SQLite3 and PostgreSQL (`pg` gem). The Ruby Agent also has NoSQL Injection modules for MongoDB (`mongoid` gem).
+The Ruby agent has SQL Injection modules for MySQL (`mysql2` gem), SQLite3 and PostgreSQL (`pg` gem). The agent also has NoSQL Injection modules for MongoDB (`mongoid` gem).
 
 ## OS Support
 
-Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has **[glibc C](https://www.gnu.org/software/libc/)** dependencies and may not work in other operating system environments, those running [musl C](https://www.musl-libc.org/), or under [JRuby](https://www.jruby.org/). 
+Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has [glibc C](https://www.gnu.org/software/libc/) dependencies and may not work in other operating system environments, operating systems running [musl C](https://www.musl-libc.org/), or under [JRuby](https://www.jruby.org/). 
 
-For those users running on operating systems running **musl C**, a potential work around is available. 
-Installing the Agent and manually re-installing a dependency may allow for startup: 
+For users running on operating systems running **musl C**, a potential work around is available. You may try to install the agent and manually re-install a dependency to allow for startup: 
+
 ```
 gem uninstall -I google-protobuf
 gem install google-protobuf --version=3.7.1 --platform=ruby
 ```
-or reinstalling all gems under the Ruby platform:
+
+You may also try to reinstall all gems under the Ruby platform:
+
 ```
 BUNDLE_FORCE_RUBY_PLATFORM=1 bundle install
 ```
 
-More details about this issue and the work around can be found [here](https://github.com/protocolbuffers/protobuf/issues/4460#issuecomment-434631296).
+## Learn More
+
+You can find more details about this issue and the work around in [GitHub](https://github.com/protocolbuffers/protobuf/issues/4460#issuecomment-434631296).
