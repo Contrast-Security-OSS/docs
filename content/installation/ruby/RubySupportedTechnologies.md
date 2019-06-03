@@ -12,6 +12,17 @@ The Ruby Agent has SQL Injection modules for MySQL (`mysql2` gem), SQLite3 and P
 
 ## OS Support
 
-Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has *C* dependencies, and may not work in other operating system environments or under JRuby. 
+Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has **[glibc C](https://www.gnu.org/software/libc/)** dependencies and may not work in other operating system environments, those running [musl C](https://www.musl-libc.org/), or under [JRuby](https://www.jruby.org/). 
 
+For those users running on operating systems running **musl C**, a potential work around is available. 
+Installing the Agent and manually re-installing a dependency may allow for startup: 
+```
+gem uninstall -I google-protobuf
+gem install google-protobuf --version=3.7.1 --platform=ruby
+```
+or reinstalling all gems under the Ruby platform:
+```
+BUNDLE_FORCE_RUBY_PLATFORM=1 bundle install
+```
 
+More details about this issue and the work around can be found [here](https://github.com/protocolbuffers/protobuf/issues/4460#issuecomment-434631296).
