@@ -21,7 +21,7 @@ The Contrast .NET Core agent supports analysis of web applications built on the 
 | Processor Architecture     | The agent can be used on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications. |
 | Web Application Frameworks | ASP.NET Core (2.1.X, 2.2.X)              |
 
-When running on Windows, the following technologies aren't supported by the .NET Core agent at this time:
+When running on Windows, the following technologies are **not** supported by the .NET Core agent at this time:
 
 * Http.sys (formerly called WebListener).
 * Self-contained deployments.
@@ -33,11 +33,11 @@ When running on Windows, the following technologies aren't supported by the .NET
 
 ## .NET Core for Linux
 
-The Linux platform is not supported by the .NET Core agent at this time.
+The Linux platform is **not** supported by the .NET Core agent at this time.
 
 # Unsupported Scenarios
 
-The .NET Core agent does not support the following scenarios:
+The .NET Core agent does **not** support the following scenarios:
 
 * Running with an ASP.NET Core with a higher version than that of the runtime. For example, when running an application with the .NET Core 2.1 runtime that references ASP.NET Core 2.2.
 * Running with a NET.Core application application that has a mismatch between the referenced ASP.NET Core version and the target runtime selected during compilation time.
