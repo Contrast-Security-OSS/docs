@@ -16,17 +16,19 @@ To set up source names, go to the **user menu > Policy Management > IP Managemen
 <!-- * Apply to past events..? -->
 * Once the fields are completed, click **Add** to save the Source Name. 
 
+<a href="assets/images/Add-source-name.png" rel="lightbox" title="Add a source name"><img class="thumbnail" src="assets/images/Add-source-name.png"/></a>
+
 ## View Source Names
 
 Once a source name is added in your organization, it appears in the grid in the **Source Names** tab. Use the search field above the grid to find a grouping by name<!-- or IP address -->.
 
-For more information about using source names to view attackers and manage attacks events, see [Analyze](user-attacks.html#analyze-attacks) and [Monitor Attacks](user-attacks.html#monitor). 
+For more information about using source names to view attackers and attack events, see [Monitor Attacks](user-attacks.html#monitor). 
 
 ## Edit and Delete Names
 
 ### Edit an existing name 
 
-To edit a source name, click on the name in the Source Names grid<!-- or Monitor page -->. Use the **Edit Source Name** form to update the necessary fields. Once the changes are complete, select the **Save** button. 
+To edit a source name, click on the name in the Source Names grid. Use the **Edit Source Name** form to update the necessary fields. Once the changes are complete, select the **Save** button. 
 
 Once the name is updated, the UI will reflect the changes for all applicable events. If you change the criteria for the name, and some events no longer qualify, the name is removed from the events and replaced with the IP address. 
 
@@ -40,6 +42,4 @@ Once the name is deleted, all references to the name are replaced with the IP ad
 
 If the data reported for an attack event matches more than one source name, the name that you most recently updated is applied.
 
-<!-- Add note to Attacks articles -->
-
-
+<!-- What if IP is blacklisted or blacklisting is attempted? -->
