@@ -24,7 +24,7 @@ For more information about using source names to view attackers and manage attac
 
 ## Edit and Delete Names
 
-## Edit an existing name 
+### Edit an existing name 
 
 To edit a source name, click on the name in the Source Names grid<!-- or Monitor page -->. Use the **Edit Source Name** form to update the necessary fields. Once the changes are complete, select the **Save** button. 
 

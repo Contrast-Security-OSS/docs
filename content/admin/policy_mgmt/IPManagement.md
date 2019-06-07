@@ -4,9 +4,9 @@ description: "Overview of IP management"
 tags: "Admin IP policy management protect"
 -->
 
-IP Management is Contrast's blacklist and whitelist (trusted hosts) management feature. Organization and Policy (Rules) have access to this feature. Go to **Policy Management** from the user menu and select IP Management from the left navigation. Here you can see the current hosts on the blacklist and whitelist as well as manage new and existing hosts. You can specify which servers you’d like the rule to apply to and set an expiration on the rule in the event you just want to place a host in a “penalty box”.
+Manage IPs in your organization with blacklists, whitelists (trusted hosts) and source names. Organization and Rules admins can go to the **user menu > Policy Management > IP Management tab** to create and manage your preferences.
 
-* **IP Blacklists** allow you to put a rule in place to distrust an IP, considering it unacceptable. This is used for immediate triage until a more permanent protection policy can be put in place or investigation can be conducted.  
-* **Trusted Hosts** can be used to whitelist a host that is conducting an internal vulnerability scan to avoid polluting Contrast with non-attack data.
-* **Source Names** ...
+* **IP Blacklists** allow you to put a rule in place to distrust an IP, considering it unacceptable. This appropriate for immediate triage until you can put a more permanent Protect policy in place or conduct an investigation.
+* **Trusted Hosts** let you whitelist a host that is conducting an internal vulnerability scan to avoid polluting Contrast with non-attack data.
+* [Source Names](admin-ipmgmt.html#source-name) allow you to mark one or more trusted IP addresses or subnet masks as any name you choose. The chosen name then appears in your **Attacks > Monitor** page as well as **Attack Events**, which allows you to quickly identify and differentiate them from attack data that needs your attention. 
 
