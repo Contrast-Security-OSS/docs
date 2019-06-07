@@ -13,13 +13,13 @@ The Contrast .NET Core agent supports analysis of web applications built on the 
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
-| .NET Core Runtime          | >= 2.1 and < 3.0                         |
-| CLR                        | CoreCLR                                  |
-| Server container           | Kestrel and IISHttpServer                |
+| .NET Core Runtime          | 2.1.X, 2.2.X                             |
+| .NET Core Target           | 2.1 (netcoreapp2.1), 2.2 (netcoreapp2.2) |
+| Server container           | Kestrel, IISHttpServer                   |
 | Hosting container          | <li>Self-hosted</li><br /> <li>IIS</li><br /><li>IIS Express</li> |
-| Operating System           | <li>Windows 7, 8, 10</li><br/> <li>Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019</li> |
+| Operating System           | <li>Windows 7, 8/8.1, 10</li><br/> <li>Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019</li> |
 | Processor Architecture     | The agent can be used on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications. |
-| Web Application Frameworks | ASP.NET Core (>= 2.1 and < 3.0)          |
+| Web Application Frameworks | ASP.NET Core (2.1.X, 2.2.X)              |
 
 When running on Windows, the following technologies aren't supported by the .NET Core agent at this time:
 
