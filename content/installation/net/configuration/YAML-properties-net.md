@@ -284,7 +284,7 @@ The following configuration disables the auto-update feature that automatically 
 
 ```
 agent:
-  auto-update:
+  auto_update:
     enable: false
 ```
 
@@ -294,7 +294,7 @@ The following configuration enables profiler chaining, specifies an application 
 
 ```
 agent:
-  auto-update:
+  auto_update:
     enable: false
   dotnet:
     enable_chaining: true
