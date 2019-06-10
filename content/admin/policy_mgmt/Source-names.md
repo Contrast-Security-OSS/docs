@@ -20,7 +20,7 @@ To set up source names, go to the **user menu > Policy Management > IP Managemen
 
 ## View Source Names
 
-Once a source name is added in your organization, it appears in the grid in the **Source Names** tab. Use the search field above the grid to find a grouping by name<!-- or IP address -->.
+Once a source name is added in your organization, it appears in the grid in the **Source Names** tab. Use the search field above the grid to find a grouping by name or IP address.
 
 For more information about using source names to view attackers and attack events, see [Monitor Attacks](user-attacks.html#monitor). 
 
