@@ -5,7 +5,7 @@ tags: "configuration .Net Azure AppService tweaks netframework"
 -->
 
 The .NET Framework agent for Azure App Service can be configured using the environment variable convention of agent configuration.
-All settings should be added to the 'Application Settings' section of the Configuration section.  Please use the [environment variable syntax](installation-netconfig.html#environment-variables) when adding these settings.
+All settings should be added to the `Application Settings` section of the `Configuration` blade in the Azure Portal.  Please use the [environment variable syntax](installation-netconfig.html#environment-variables) when adding these settings.
 See [YAML configuration properties](installation-netconfig.html#net-yaml) for more information and a full list of supported configuration options.
 
 > **Example:** To change the agent's logging level (agent.logger.level) to trace, add a setting with key `CONTRAST__AGENT__LOGGER__LEVEL` and value `TRACE`.
@@ -14,9 +14,16 @@ See [YAML configuration properties](installation-netconfig.html#net-yaml) for mo
 
 You can also specify specific `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section. See [application-specific settings](installation-netconfig.html#appname) for more details.
 
+### Using a configuration YAML file
+
+Instead of setting individual options in Application Settings, you may opt to use a common YAML configuration file containing Contrast settings.  First upload the file to your Azure Web App by including it in your application deployment or using the Kudu console.  Then add an Application Setting `CONTRAST_CONFIG_PATH` that points to this file.
+
+> **Example:** To use a file called "contrast_security.yaml" in the root of your application, add an application setting with key `CONTRAST_CONFIG_PATH` and value `D:\Home\site\wwwroot\contrast_security.yaml`.
+Application files in Azure App Service are deployed to 'D:\home\site\wwwroot'.
+
 ## Common Configuration Options for Azure App Service.
 
-The following are common configuration settings Azure App Service, and their default values.  These can be included in the yaml config file or in Application Settings, using environment variable syntax.  This is a subset of all configurations available using [YAML configuration properties](installation-netconfig.html#net-yaml).
+The following are some common configuration settings for Azure App Service, and their default values.  These can be included in the yaml config file or in Application Settings, using environment variable syntax.  This is a subset of all configurations that are available when using [YAML configuration properties](installation-netconfig.html#net-yaml).
 
 ### Identification and tagging
 
@@ -25,7 +32,7 @@ The following are common configuration settings Azure App Service, and their def
 | server.name          | Customizes the display name used by the Contrast UI for the server running the .NET agent. If this configuration setting isn't present, the server name is the **Resource Group** - **Region** of your application (e.g.,`MyResourceGroup - US East`).
 | server.environment   | Set the environment value sent to Contrast when servers are created. Valid values are `DEVELOPMENT`, `QA` or `PRODUCTION` (case insensitive). The default value is `QA`. This does not affect servers that already exist in Contrast.
 | server.tags          | Controls free-form tags sent to Contrast for servers; you can use tags to search for servers in the Contrast interface. See the article on [Application-Specific Settings](installation-netconfig.html#appname) for details on tagging applications, libraries and vulnerabilities.
-| application.name    | Change the application name sent to the Contrast interface for this application. The default is your Azure App Service application name as set on Azure Portal.
+| application.name    | Change the application name sent to the Contrast interface for this application. The default is your Azure App Service name as seen in the Azure Portal.
 | application.version | Controls the application version tag sent to Contrast.  Default is none.
 | application.group   | Specifies the to which group this application will be added in the Contrast interface, if this application isn't already a member of a group.  Default is none.
 | application.tags    | Controls free-form tags sent to Contrast for the application; you can use tags to search for specific applications in the Contrast UI.  Default is none.

@@ -1,7 +1,7 @@
 <!--
 title: "Installing Contrast using Azure App Service Site Extension"
 description: "Guide to installing .NET Agent on Azure App Service using Site Extensions"
-tags: "installation configuration .Net Azure AppService site extension"
+tags: "installation configuration .Net Azure AppService site extension netframework"
 -->
 
 Complete the following steps for express installation of the .NET agent via Azure Portal Extensions.
