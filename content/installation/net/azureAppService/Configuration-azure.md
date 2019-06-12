@@ -1,10 +1,10 @@
 <!--
-title: "Configuring Contrast .NET Agent on Azure App Service"
-description: "Configurations and tweaks for customizing the Contrast .NET agent running on Azure App Service"
-tags: "configuration .Net Azure AppService tweaks "
+title: "Configuring Contrast .NET Framework Agent on Azure App Service"
+description: "Configurations and tweaks for customizing the Contrast .NET Framework agent running on Azure App Service"
+tags: "configuration .Net Azure AppService tweaks netframework"
 -->
 
-The .NET agent for Azure App Service can be configured using the environment variable convention of agent configuration.
+The .NET Framework agent for Azure App Service can be configured using the environment variable convention of agent configuration.
 All settings should be added to the 'Application Settings' section of the Configuration section.  Please use the [environment variable syntax](installation-netconfig.html#environment-variables) when adding these settings.
 See [YAML configuration properties](installation-netconfig.html#net-yaml) for more information and a full list of supported configuration options.
 
