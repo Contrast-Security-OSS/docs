@@ -19,9 +19,9 @@ To see all vulnerabilities in a certain category - such as vulnerabilities that 
 
 ### View the timeline
 
-Click the chart symbol above the grid to view a timeline of the vulnerabilities. Use the buttons above the chart to view data by **Severity** or **Discovery**. Any filters you apply in the grid also update the data in the chart. Use the filter in the **Last Detected** column to update the time span shown in the timeline. 
+Click the chart symbol above the grid to view a timeline of the vulnerabilities. Use the buttons above the chart to view data by **Severity** or **Discovery**. Any filters you apply in the grid also update the data in the chart. Use the filter for the **Last Detected** column to update the time span shown in the timeline. 
 
-Hover over the trend lines for a tooltip with a breakdown for that point in time. If you're viewing data by severity, this includes the number of vulnerabilities reported, the specific time stamp, and a breakdown of the total number of vulnerabilities by severity. If you're viewing data by discovery, this includes the number of vulnerabilities reported, the specific time stamp, and a breakdown the total number of vulnerabilities by status (newly discovered, duplicate or remediated). 
+Hover over the trend lines to see a breakdown of the data for that point in time. If you're viewing data by severity, this includes the number of vulnerabilities reported, the specific time stamp, and a breakdown of the total number of vulnerabilities by severity. If you're viewing data by discovery, this includes the number of vulnerabilities reported, the specific time stamp, and a breakdown the total number of vulnerabilities by status (newly discovered, duplicate or remediated). 
 
 To see your application's vulnerability data in more detail, you can also configure your Contrast agent to report [session metadata](user-vulnerableapps.html#session). 
 

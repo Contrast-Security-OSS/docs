@@ -4,15 +4,17 @@ description: "How to track applications' vulnerabilities by build"
 tags: "user UI applications session metadata build vulnerabilities"
 -->
 
-## About Session Metadata
-
-Pinpoint the source of vulnerabilities in your application with metadata reported by your Contrast agent. Once configured to report the properties you've chosen, the agent reports the information along with the rest of your standard vulnerability data to the Contrast UI. The build properties that the agent can report are **branch name**, **build number**, **commit hash**, **committer**, **Git tag**, **repository**, **test run** and **version**. 
+Pinpoint the source of vulnerabilities in your application with session metadata reported by your Contrast agent. As soon as you add the necessary configuration property to your agent file, the agent reports the information along with the rest of your standard vulnerability data to the Contrast UI. 
 
 ## Agent Configuration 
 
-To send session properties for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. You can supply these settings as system properties, environment settings or properties in YAML configuration files. See the following configuration examples for each application language.
+To send session metadata for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. The build properties that the agent can report are **branch name**, **build number**, **commit hash**, **committer**, **Git tag**, **repository**, **test run** and **version**. You may include all or some of these properties, as desired. 
+
+You can supply these settings as system properties, environment settings or properties in a YAML configuration file. See the following configuration examples for each application language.
+
+### Examples
  
-If you use system properties for [Java](installation-javaconfig.html), include an additional entry in the line where you add your `javaagent` flag. In this case, you would set the property `contrast.application.session_metadata` to a set of key-value pairs that identify your test run. 
+If you use system properties for [Java](installation-javaconfig.html), include an additional entry in the line where you add your `javaagent` flag. In this case, you will set the property `contrast.application.session_metadata` to a set of key-value pairs that identify your test run. 
 
 ```
 -Dcontrast.application.session_metadata="branchName=feature/some-new-thing,committer=Jane,repository=Contrast-Java"
@@ -43,7 +45,7 @@ If you don't want to set these fields locally, you can also edit your continuous
 -Dcontrast.application.session_metadata="branchName=feature/some-new-thing,committer=Jane,repository=Contrast-Java,buildNumber=$BUILD_NUMBER"
 ```
 
-If you use plugins in your CI, like the [Jenkins git plugin](tools-ci.html#jenkins), you can use these to make even more dynamic updates. 
+If you use plugins in your CI, like the [Contrast Jenkins Plugin](tools-ci.html#jenkins), you can use these to make even more dynamic updates. 
 
 ```
 -Dcontrast.application.session_metadata="branchName=$GIT_BRANCH,committer=$GIT_COMMITTER_NAME,commitHash=$GIT_COMMIT_HASH,repository=$GIT_URL,buildNumber=$BUILD_NUMBER"
@@ -51,10 +53,14 @@ If you use plugins in your CI, like the [Jenkins git plugin](tools-ci.html#jenki
 
 ## View Data by Application
 
-To see the session data reported, go to your application's **Vulnerabilities** tab. 
+To see the session metadata reported by the agent, go to your application's **Vulnerabilities** tab. The data for each vulnerability is displayed in the grid and the timeline. 
 
-Use the **View By** menu above the chart to filter the data by the properties that you included in your agent configuration. This updates the values shown in the **Seen By** column in the grid. Use the filter for the grid column to refine the results. 
+<!-- Try image here -->
 
-Your selections also update the data shown in the chart, which you can view by **Severity** or **Discovery**. Hover...
+Use the **View By** menu above the timeline to filter the data by the properties that you included in your agent configuration. This updates the values shown in the **Seen By** column in the grid. Use the filter for the grid column to refine the results. 
 
 > **Note:** To see vulnerabilities that are not associated with session metadata, select **Disassociated** in the **View By** menu. 
+
+Your selections also update the data shown in the timeline, which you can view by **Severity** or **Discovery**. Hover over the trend lines in the grid for a breakdown of the data at that point in time. 
+
+For an overview of an application's vulnerability data, see the vulnerabilities [Overview](user-vulnerableapps.html#view-vulns).
