@@ -4,21 +4,18 @@ description: "How to create and use the Source Names feature"
 tags: "admin policy management ip attacks attacker source name"
 -->
 
-Use source names to quickly identify non-threatening internal traffic and testing while monitoring attack events in your organization. To create a source name, all you need is the IP information you want to mark as safe and a unique name you'll recognize in the Contrast UI. 
+Use source names to quickly identify non-threatening internal traffic and testing while monitoring attack events in your organization.
 
 ## About Source Names
 
-Source names allow you to label one or more IP addresses and/or subnet masks with a display name of your choice. 
-Once the source name is saved, Contrast displays it in the **Attacks > Monitor** page as well as the **Attacks Details** page instead of the user's IP address. You and other users in your organization can then quickly identify the named attacker as a known, friendly source when assessing attack events.   
-
-> **Note:** Unlike the data for attackers labeled with source names, data for whitelisted IP addresses does not appear in the Contrast UI. 
+Source names allow you to label one or more IP addresses and/or subnet masks with a display name of your choice. To create a source name, all you need is the IP information you want to mark as safe and a unique name you'll recognize in the Contrast UI. Once the source name is saved, Contrast displays it in the **Attacks > Monitor** page as well as the **Attacks Details** page instead of the user's IP information. You and other users in your organization can then quickly identify the named attacker as a known, friendly source when assessing attack events.    
 
 ## Create Source Names
 
 To set up source names, go to the **user menu > Policy Management > IP Management page**, and select the **Source Names** tab. Click the button to **Add Source Name**. In the **Add Source Name** form, complete the following fields: 
 
 * Select the **Name** by which you want to identify one or more IP addresses.
-* Add the **IP Address/Subnet Mask** to identify by this source name. Use the link to **Add** more IP addresses or subnet masks, if necessary. 
+* Add the **IP Address/Subnet Mask** to identify by this source name. Use the link to **Add** more IP addresses or subnet masks to the group, if necessary. 
 * Use the dropdown menus to select the **Start** and **End** dates and times for the source name. You may choose to create a custom time span that starts on a past date; in this case, the source name applies retroactively to any attack events. 
 * Once the fields are completed, click **Add** to save the source name. 
 
