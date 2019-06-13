@@ -1,7 +1,7 @@
 <!--
-title: "Installing Contrast via Nuget Azure App Service package"
-description: "Guide to installing .NET Agent on Azure App Service using the Nuget package"
-tags: "installation configuration .Net Azure AppService site nuget visualstudio"
+title: "Installing Contrast .NET Framework agent via Nuget Azure App Service package"
+description: "Guide to installing .NET Framework Agent on Azure App Service using the Nuget package"
+tags: "installation configuration .Net Azure AppService site nuget visualstudio netframework"
 -->
 
 Complete the following steps to manually install the .NET agent via Nuget.
@@ -20,8 +20,7 @@ In Visual Studio:
 
 * Search for **Contrast.Net.Azure.AppService** package, select it and add it to your project.
 
-* Build your application. Confirm that Contrast assemblies (e.g., `Contrast.Sensors.dll` and `ContrastProfiler-32.dll`) are in your application's *bin* directory.
- * You can easily navigate to the *bin* directory by right clicking on the project in Visual Studio, selecting **Open Folder in File Explorer** and going to the directory from there.
+* Build your application. Confirm that Contrast assemblies (e.g., `ContrastProfiler-64.dll`) are in a new `contrastsecurity` folder that gets created in application's root directory.
 
 ## Step Three: Add application authentication settings for Contrast
 
@@ -33,29 +32,42 @@ There are two primary ways to add the authentication settings that Contrast need
 You might notice that the following text appears when you installed the Contrast .NET NuGet package:
 
  ```
- Added package 'Contrast.NET.Azure.WebSites.18.X.X' to 'packages.config'
- Executing script file 'C:\yourprojectpath\packages\Contrast.NET.Azure.WebSites.18.4.14\tools\net451\install.ps1'...
- ***Package install is complete***
+------------------------------------------------------------
+---- Contrast .NET Framework Agent for Azure App Service ---
+------------------------------------------------------------
 
- Please make sure to add the following configurations to your Azure Web App prior to deploying.
- 1. Go to portal.azure.com, log in, go to App Services and navigate to your Web App.
- 2. Navigate to the 'Application Settings' section and set the following settings:
- Key Value
- ---------------------------------------
- CONTRAST__API__URL [IF USING A SERVER OTHER THAN THE DEFAULT: https://app.contrastsecurity.com]
- CONTRAST__API__USER_NAME [REPLACE WITH YOUR AGENT USERNAME]
- CONTRAST__API__SERVICE_KEY [REPLACE WITH YOUR AGENT SERVICE KEY]
- CONTRAST__API__API_KEY [REPLACE WITH YOUR AGENT API KEY]
- CONTRAST_INSTALL_DIRECTORY D:\Home\site\wwwroot\contrastsecurity\
- COR_ENABLE_PROFILING 1
- COR_PROFILER {EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}
- COR_PROFILER_PATH_32 D:\Home\site\wwwroot\contrastsecurity\ContrastProfiler-32.dll
- COR_PROFILER_PATH_64 D:\Home\site\wwwroot\contrastsecurity\ContrastProfiler-64.dll
+This package includes files required to run the Contrast .NET Core agent.  These files have been installed in your "<application directory>/contrastsecurity" folder
+To use the Contrast agent, you must set following settings on your Azure App Service Web App.
 
- Go to https://docs.contrastsecurity.com/installation-netazureappservice.html for more configuration options.
+1. Publish your app to Azure App Service.
+
+2. Go to portal.azure.com, log in, go to App Services and navigate to your Web App.
+
+3. Navigate to the Configuration section and then set the following in the 'Application Settings' area.
+
+COR_ENABLE_PROFILING:			1
+COR_PROFILER:					{EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}
+COR_PROFILER_PATH_32:		    D:\Home\site\wwwroot\contrastsecurity\ContrastProfiler-32.dll
+COR_PROFILER_PATH_64:			D:\Home\site\wwwroot\contrastsecurity\ContrastProfiler-64.dll
+CONTRAST_INSTALL_DIRECTORY:		D:\Home\site\wwwroot\contrastsecurity\
+
+If using a configuration yaml file, include it in the application and set this setting.
+CONTRAST_CONFIG_PATH:           D:\Home\site\wwwroot\[path to contrast_security.yaml within the application]
+
+Alternately the agent can be configured with environment variables.  At minimum set these settings for authentication:
+
+CONTRAST__API__URL:             [Optional, if using another server than the default: https://app.contrastsecurity.com]
+CONTRAST__API__USER_NAME:       [Replace with agent user name]
+CONTRAST__API__SERVICE_KEY:     [Replace with agent service key]
+CONTRAST__API__API_KEY:         [Replace with agent api key]
+
+4. Save changes to the Configuration section.
+
+
+Go to https://docs.contrastsecurity.com/installation-netconfig.html for more configuration options."
 ```
 
-Go to the **Application Settings** area of your application in the Azure Portal. Set the Contrast applications that the agent needs to connect to Contrast, and click **Save**. (You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.)
+Go to the **Application Settings** area of your application in the Azure Portal. Set the Contrast authentication keys that the agent needs to connect to Contrast, and click **Save**. (You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.)
 
 ## Step Four: Publish the application to Azure
 
@@ -65,7 +77,7 @@ Go to the **Application Settings** area of your application in the Azure Portal.
 
 ## Update Your Installation
 
-When redeploying a web application that has Contrast agent running, you may run into an error that says "Files in use" on `ContrastProfiler-32.dll` or `ConrastProfiler-64.dll`.
+When redeploying a web application that has Contrast agent running, you may run into an error that says "Files in use" on `ContrastProfiler-64.dll` or `ConrastProfiler-32.dll`.
 
 This happens because the agent `dll` files are locked by .NET, and can't be overwritten while the application is still running. The `dll` files need to be unloaded before publishing. To unload them, stop the site, publish and then start the site back up.  Alternately, you can change the `COR_ENABLE_PROFILING` setting to `0` in the portal, publish and then change the setting back to `1`.
 
