@@ -19,7 +19,7 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 ### Step two
 
-* Go to your **Project settings** at the bottom of you side bar.
+* Go to your [**Project settings**](https://docs.microsoft.com/en-us/azure/devops/project/navigation/go-to-service-page?view=azure-devops#open-project-settings) at the bottom of you side bar. You'll need to be part of the Project administration group or have enough permissions in order to alter the settings.
 
 * In the **Pipelines** section of the settings menu, select **Service connections**.
 
@@ -40,7 +40,14 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 * Now that you have at least one service connection, enter on **Edit** mode for the Release pipeline you wish to include the gate.
 * Select a Pre- or Post-deployment Condition.
+
+<a href="assets/images/AzureDevOps_deployment_conditions.png" rel="lightbox" title="Deployment conditions"><img class="thumbnail" src="assets/images/AzureDevOps_deployment_conditions.png"/></a>
+
 * Enable the Gates section if you haven't already and click on the **+ Add** button to select **Verify application vulnerabilities** option.
+
+<a href="assets/images/AzureDevOps_gates_section.png" rel="lightbox" title="Gates section"><img class="thumbnail" src="assets/images/AzureDevOps_gates_section.png"/></a>
+
+<a href="assets/images/AzureDevOps_select_gate.png" rel="lightbox" title="Select gate"><img class="thumbnail" src="assets/images/AzureDevOps_select_gate.png"/></a>
 
 ### Step two
 
