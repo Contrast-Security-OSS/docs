@@ -5,7 +5,7 @@ tags: "tools azure devops integration extension deployment"
 -->
 
 
-Integrate Contrast in your deployment workflow with the Azure DevOps extension. The following instructions guide you through the steps to set up and configure the extension for your Contrast instance. 
+Use the the Azure DevOps extension to integrate Contrast with your deployment workflow. The following instructions guide you through the steps to set up and configure the extension for your Contrast instance. 
 
 ## Before You Start 
 
@@ -19,7 +19,7 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 ### Step two
 
-* Go to your [**Project settings**](https://docs.microsoft.com/en-us/azure/devops/project/navigation/go-to-service-page?view=azure-devops#open-project-settings) at the bottom of you side bar. You'll need to be part of the Project administration group or have enough permissions in order to alter the settings.
+* Go to your [Project Settings](https://docs.microsoft.com/en-us/azure/devops/project/navigation/go-to-service-page?view=azure-devops#open-project-settings) at the bottom of you side bar. You'll need to be part of the Project administration group or have enough permissions to alter the settings.
 
 * In the **Pipelines** section of the settings menu, select **Service connections**.
 
@@ -38,12 +38,13 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 ### Step one
 
-* Now that you have at least one service connection, enter on **Edit** mode for the Release pipeline you wish to include the gate.
-* Select a Pre- or Post-deployment Condition.
+* Now that you have at least one service connection, enter on **Edit** mode for the release pipeline you wish to include the gate.
+* Select a pre- or post-deployment condition.
 
 <a href="assets/images/AzureDevOps_deployment_conditions.png" rel="lightbox" title="Deployment conditions"><img class="thumbnail" src="assets/images/AzureDevOps_deployment_conditions.png"/></a>
 
-* Enable the Gates section if you haven't already and click on the **+ Add** button to select **Verify application vulnerabilities** option.
+* Enable the **Gates** section if you haven't already. 
+* Click on the **+ Add** button to select the **Verify application vulnerabilities** option.
 
 <a href="assets/images/AzureDevOps_gates_section.png" rel="lightbox" title="Gates section"><img class="thumbnail" src="assets/images/AzureDevOps_gates_section.png"/></a>
 
@@ -51,18 +52,18 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 ### Step two
 
-* Select a **Service Connection** from the **Contrast Service Connection** field. You can also click on the **Manage** option to go to the Service connections settings in your **Project Settings**.
-* Select one of your applications from the **Application** dropdown. This will enable more fields for configuring the gate.
+* Select a **Service Connection** from the **Contrast Service Connection** field. You can also click on the **Manage** option to go to the **Service connections** settings in your **Project Settings**.
+* Select one of your applications from the **Application** dropdown. This enables more fields for configuring the gate.
 
 <a href="assets/images/AzureDevOps_gate_part1.png" rel="lightbox" title="Azure DevOps Gate Part 1"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part1.png"/></a>
 
 ### Step three
 
-* The **Allowed Status** and **Build Number** fields can be used to filter your results from Contrast. Based on what you set on this fields it will be used to be validated against the conditions you configure in the following fields.
+* You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast. The values set in these fields will be validated against the conditions you configure in the following fields.
 
 <a href="assets/images/AzureDevOps_gate_part2.png" rel="lightbox" title="Azure DevOps Gate Part 2"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part2.png"/></a>
 
-* Proceed to set your severity counters. Each field is the maximum amount allowed of vulnerabilities per severity. If your selected application has vulnerabilities with severity above any of these counters, your gate will fail.
+* Proceed to your severity counters, where you must set the maximum number of vulnerabilities allowed per severity. If your selected application has more vulnerabilities than allowed for that severity level, your gate will fail.
 
 <a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
 
