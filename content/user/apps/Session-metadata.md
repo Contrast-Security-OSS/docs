@@ -55,12 +55,14 @@ If you use plugins in your CI, like the [Contrast Jenkins Plugin](tools-ci.html#
 
 To see the session metadata reported by the agent, go to your application's **Vulnerabilities** tab. The data for each vulnerability is displayed in the grid and the timeline. 
 
-<!-- Try image here -->
-
 Use the **View By** menu above the timeline to filter the data by the properties that you included in your agent configuration. This updates the values shown in the **Seen By** column in the grid. Use the filter for the grid column to refine the results. 
 
-> **Note:** To see vulnerabilities that are not associated with session metadata, select **Disassociated** in the **View By** menu. 
+<a href="assets/images/Seen-by-filter.png" rel="lightbox" title="Filter vulnerabilities by categories of session metadata"><img class="thumbnail" src="assets/images/Seen-by-filter.png"/></a>
+
+> **Note:** To see vulnerabilities that aren't associated with any session metadata, select **Disassociated** in the **View By** menu. 
 
 Your selections also update the data shown in the timeline, which you can view by **Severity** or **Discovery**. Hover over the trend lines in the grid for a breakdown of the data at that point in time. 
 
-For an overview of an application's vulnerability data, see the vulnerabilities [Overview](user-vulnerableapps.html#view-vulns).
+<a href="assets/images/Session-metadata-timeline.png" rel="lightbox" title="View a breakdown of vulnerabilities for a specific branch"><img class="thumbnail" src="assets/images/Session-metadata-timeline.png"/></a>
+
+For a broader view of an the vulnerability data reported for each application, see the vulnerabilities [Overview](user-vulnerableapps.html#view-vulns).
