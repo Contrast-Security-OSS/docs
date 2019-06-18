@@ -1,7 +1,7 @@
 <!--
-title: "Build-Based View"
-description: "How to track applications' vulnerabilities by build"
-tags: "user UI applications session metadata build vulnerabilities"
+title: "Session Metadata"
+description: "Set up session metadata to track applications' vulnerabilities"
+tags: "user UI applications session metadata vulnerabilities"
 -->
 
 Pinpoint the source of vulnerabilities in your application with session metadata reported by your Contrast agent. As soon as you add the necessary configuration property to your agent file, the agent reports the information along with the rest of your standard vulnerability data to the Contrast UI. 
