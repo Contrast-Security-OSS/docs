@@ -18,7 +18,7 @@ The **Active Attacks** badge at the top of the page communicates the current att
 
 In the Attackers column, you can see a list of attackers and the number of associated attack events reported within your selected timeframe. Click on the total number of attackers at the top of the column to see the data in the [Attacks](user-attacks.html#analyze-attacks) grid. 
 
-If an attacker is identified by a [source name](admin-ipmgmt.html#source-name), hover over the name to see a list of the IP addresses labeled with this name. If an attacker successfully exploited an application, it's shown in red. Click on an attacker to go to the relevant **Attack Details** page. 
+If an attacker is identified by a [source name](admin-ipmgmt.html#source-name), hover over the name to see a list of the IP addresses labeled with this name. If an attacker is unknown (not identified by a source name), the silhouette icon to the left of their IP address includes a question mark. If an attacker successfully exploited an application, it's shown in red. Click on an attacker to go to the relevant **Attack Details** page. 
 
 > **Note:** If the data reported for an attack event matches more than one source name, Contrast applies the name that you updated most recently.
 
