@@ -10,7 +10,7 @@ Pinpoint the source of vulnerabilities in your application with session metadata
 
 To send session metadata for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. The build properties that the agent can report are **branch name**, **build number**, **commit hash**, **committer**, **Git tag**, **repository**, **test run** and **version**. You may include all or some of these properties, as desired. See the following table for the configuration key that corresponds to each property. 
 
-| UI label     | Configuration keys|
+| UI label     | Configuration key |
 |--------------|-------------------|
 | Commit Hash  | commitHash        |
 | Committer    | committer         |
@@ -66,16 +66,21 @@ If you use plugins in your CI, like the [Contrast Jenkins Plugin](tools-ci.html#
 
 To see the session metadata reported by the agent, go to your application's **Vulnerabilities** tab. The data for each vulnerability is displayed in the grid and the timeline. 
 
+### Filters
+
 Use the **View By** menu above the timeline to filter the data by the properties that you included in your agent configuration. This updates the values shown in the **Seen By** column in the grid. Use the filter for the grid column to refine the results. 
 
-> **Note:** If session metadata hasn't been configured for this agent, the **Seen By** column does not appear. 
+To see vulnerabilities that aren't associated with any session metadata, select **Disassociated** in the **View By** menu. The **Seen By** column will then disappear, as the agent hasn't reported any metadata for these vulnerabilities.  
 
 <a href="assets/images/Seen-by-filter.png" rel="lightbox" title="Filter vulnerabilities by categories of session metadata"><img class="thumbnail" src="assets/images/Seen-by-filter.png"/></a>
 
-> **Note:** To see vulnerabilities that aren't associated with any session metadata, select **Disassociated** in the **View By** menu. 
+> **Note:** If session metadata hasn't been configured for this agent, the **View By** menu and **Seen By** column do not appear.
+
+### Timeline 
 
 Your selections also update the data shown in the timeline, which you can view by **Severity** or **Discovery**. Hover over the trend lines in the grid for a breakdown of the data at that point in time. 
 
 <a href="assets/images/Session-metadata-timeline.png" rel="lightbox" title="View a breakdown of vulnerabilities for a specific branch"><img class="thumbnail" src="assets/images/Session-metadata-timeline.png"/></a>
 
 For a broader view of an the vulnerability data reported for each application, see the vulnerabilities [Overview](user-vulnerableapps.html#view-vulns).
+
