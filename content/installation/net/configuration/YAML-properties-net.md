@@ -233,7 +233,7 @@ Use the properties in this section to control Protect features and rules.
 
 ### Application properties
 
-Use the properties in this section to control the application(s) hosting this agent.  Setting these in the global configuration file will set the same setting for all applications on the server.  Therefore it's recommended that you use [Application-Specific Settings](installation-netconfig.html#appname) to customize individual application settings
+Use the properties in this section to control the application(s) hosting this agent. If you set these properties in the global configuration file, all applications on the server will automatically have the same setting. Therefore, Contrast recommends that you use [Application-Specific Settings](installation-netconfig.html#appname) to customize individual application settings.
 
 * application:
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
