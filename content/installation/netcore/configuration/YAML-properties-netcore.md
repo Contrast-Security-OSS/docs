@@ -4,20 +4,20 @@ description: "Instructions and template for configuring .NET Core agent properti
 tags: "installation agent .NET Core YAML configuration properties"
 -->
 
-Contrast supports YAML-based configuration for the .NET Core agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET Core YAML Template](installation-netcoreconfig.html#netcore-template) for fully formatted properties that you can copy and use in your own configuration files. 
+Contrast supports YAML-based configuration for the .NET Core agent. This allows you to store configuration on disk that you can override with environment variables or command line arguments. Go to the [.NET Core YAML Template](installation-netcoreconfig.html#netcore-template) for fully formatted properties that you can copy and use in your own configuration files.
 
-> **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file. 
+> **Note:** While all Contrast agents share the same property formatting in YAML configuration files, each agent must use its specified file.
 
 ## Load Path
 
-Configuration values use the following order of precedence: 
+Configuration values use the following order of precedence:
 
-1. Corporate rule (e.g., expired license overrides `assess.enable`)
+1. Corporate rule (e.g., expired license overrides `contrast.assess.enable`)
 2. Specific environmental variable
 3. Generic environment variable value
 4. User configuration file value
 5. Contrast UI value
-6. Default value 
+6. Default value
 
 The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
 
@@ -31,18 +31,18 @@ The *contrast_security.yaml* file should be placed on the file system using one 
 
 Use the properties in this section to connect the .NET Core agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-* **contrast**: 
+* **contrast**:
 
   * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.** 
+  * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.**
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
   * **tls_versions**: The .NET Core agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12). <br> Example: `tls1|tls2|tls3`
 
-  * **certificate**: 
+  * **certificate**:
     * **enable**: If set to `false`, the certificate configuration in this section will be ignored.
-  
+
   * **proxy**:
     * **enable**: Add a property value to determine if the agent should communicate with the Contrast UI over a proxy. If a property value is not present, the presence of a valid proxy host and port determines enabled status. Value options are `true` or `false`
     * **user**: Set the proxy user.
@@ -55,13 +55,13 @@ Use the properties in this section to connect the .NET Core agent to the Contras
 Use the properties in this section to control the way and frequency with which the .NET Core agent communicates to logs and to the Contrast UI.
 If these values are not set, the agent will use the values set in the Contrast UI.
 
-All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-netconfig.html#net-template). 
+All properties in this section must be put under the `agent` node, as shown in the [YAML template](installation-netconfig.html#net-template).
 
 #### Diagnostic logging
 
 Use the properties in this section to control diagnostic logging. These logs allow us to diagnose any issues you may be having with the agent.
 
-<!-- Should we put the higher-level 'agent' bullet in these subsections as well? -->  
+<!-- Should we put the higher-level 'agent' bullet in these subsections as well? -->
 
   * **logger**:
     * **level**: Set the the log output level. Value options are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
@@ -88,7 +88,7 @@ Use the properties in this section to control security logging. These logs allow
 The following properties apply to any .NET Core agent-wide configurations. <!-- More words here... -->
 
   * **dotnet**:
-    * **enable_instrumentation_optimizations**: Indicate that the agent should allow CLR optimizations of JIT-compiled methods. 
+    * **enable_instrumentation_optimizations**: Indicate that the agent should allow CLR optimizations of JIT-compiled methods.
     * **enable_jit_inlining**: Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
     * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
     * **thread_analysis**: Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
@@ -105,9 +105,9 @@ Use the properties in this section to control inventory features in the .NET Cor
 
 ### Contrast Assess properties
 
-Use the properties in this section to control Assess in the .NET Core agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled. 
+Use the properties in this section to control Assess in the .NET Core agent. The sampling settings allow you to control which requests the agent tracks and which it ignores. The rules setting allows you to control which Assess rules are disabled.
 
-> **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.  
+> **Note:** If you need a complete list of rules, use the **Support** widget in OpenDocs to contact Contrast's Customer Support team.
 
 
 * **assess**:
@@ -138,7 +138,7 @@ Use the properties in this section to control Protect features and rules.
   * **rules**:
     * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
 
-    * **bot-blocker**: 
+    * **bot-blocker**:
       * **enable**: Set to `true` for the agent to block known bots.
 
     * **sql-injection**:
@@ -171,7 +171,7 @@ Use the properties in this section to control the application(s) hosting this ag
   * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
 
 
-### Server properties 
+### Server properties
 
 Use the properties in this section to set metadata for the server hosting this agent.
 
