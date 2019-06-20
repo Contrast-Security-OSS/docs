@@ -8,7 +8,7 @@ Use source names to quickly identify non-threatening internal traffic and testin
 
 ## About Source Names
 
-Source names allow you to label one or more IP addresses and/or subnet masks with a display name of your choice. To create a source name, all you need is the IP information you want to mark as safe and a unique name you'll recognize in the Contrast UI. Once the source name is saved, Contrast displays it in the **Attacks > Monitor** page as well as the **Attacks Details** page instead of the user's IP information. You and other users in your organization can then quickly identify the named attacker as a known source when assessing attack events.    
+Source names allow you to label one or more IP addresses and/or subnet masks with a display name of your choice. To create a source name, all you need is the IP information you want to mark and a unique name you'll recognize in the Contrast UI. Once the source name is saved, Contrast displays it in the **Attacks > Monitor** page as well as the **Attacks Details** page instead of the user's IP information. You and other users in your organization can then quickly identify the named attacker as a known source when assessing attack events.    
 
 ## Create Source Names
 
