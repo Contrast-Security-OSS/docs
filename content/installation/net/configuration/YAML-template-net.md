@@ -59,28 +59,28 @@ api:
     # enable: true
 
     # Determine the location from which the agent loads a client certificate. Value options include `File` or `Store`
-    # certificate_location: 
+    # certificate_location:
 
-    # Set the absolute path to the client certificate's .CER file for communication with Contrast UI. 
+    # Set the absolute path to the client certificate's .CER file for communication with Contrast UI.
     # The `certificate_location` property must be set to `File`.
-    # cer_file: 
+    # cer_file:
 
     # Specify the name of certificate store to open. The `certificate_location` property must be set to `Store`.
     # Value options include `AuthRoot`, `CertificateAuthority`, `My`, `Root`, `TrustedPeople`, or `TrustedPublisher`.
-    # store_name: 
+    # store_name:
 
     # Specify the location of the certificate store. The `certificate_location` property must be set to `Store`.
     # Value options include `CurrentUser` or `LocalMachine`.
-    # store_location: 
+    # store_location:
 
     # Specify the type of value the agent uses to find the certificate in the collection of certificates from the certificate store.
     # The `certificate_location` property must be set to `Store`.
     # Value options include `FindByIssuerDistinguishedName`, `FindByIssuerName`, `FindBySerialNumber`, `FindBySubjectDistinguishedName`, `FindBySubjectKeyIdentifier`, `FindBySubjectName`, or `FindByThumbprint`.
-    # find_type: 
+    # find_type:
 
     # Specify the value the agent uses in combination with `find_type` to find a certification in the certificate store.
     # Note: The agent will use the first certificate from the certificate store that matches this search criteria.
-    # find_value: 
+    # find_value:
 
   # ============================================================================
   # api.proxy
@@ -311,7 +311,7 @@ assess:
 
     # Define a list of Assess rules to disable in the agent.
     # The rules must be formatted as a comma-delimited list.
-    #  
+    #
     # Example - Set "reflected-xss,sql-injection" to disable
     # the reflected-xss rule and the sql-injection rule.
     # disabled_rules: NEEDS_TO_BE_SET
@@ -367,7 +367,7 @@ protect:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or off.
-      #  
+      #
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
@@ -381,7 +381,7 @@ protect:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
-      #  
+      #
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
@@ -395,7 +395,7 @@ protect:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
-      #  
+      #
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
@@ -409,7 +409,7 @@ protect:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
-      #  
+      #
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
@@ -423,7 +423,7 @@ protect:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
-      #  
+      #
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
@@ -437,7 +437,7 @@ protect:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
-      #  
+      #
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
@@ -451,7 +451,7 @@ protect:
 
       # Set the mode of the rule. Value options are
       # `monitor`, `block`, `block_at_perimeter`, or `off`.
-      #  
+      #
       # Note - If a setting says, "if blocking is enabled",
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
