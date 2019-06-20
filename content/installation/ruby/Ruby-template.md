@@ -6,7 +6,7 @@ tags: "installation ruby on rails agent service configuration"
 
 Go to the Ruby [Configuration Properties](installation-rubyconfig.html#ruby-config) article for more information about this template.
 
-```
+```yaml
 # ==============================================================================
 # Use the properties in this YAML file to configure a
 # Contrast agent. Go to https://docs.contrastsecurity.com/ to
@@ -219,7 +219,7 @@ agent:
 
       # Override the name of the process used in logs.
       # progname: Contrast Service
-      
+
   # ============================================================================
   # agent.heap_dump
   # The following properties are used to trigger heap dumps from within
@@ -231,18 +231,18 @@ agent:
     # take heap dumps of the instrumented application.
     # enable: false
 
-    # The location to which to save the heap dump files. If relative,
+    # Set the location to which to save the heap dump files. If relative,
     # the path is determined based on the process' working directory.
     # path: contrast_heap_dumps
 
-    # How long to wait, in milliseconds, after
-    # agent startup to begin taking heap dumps.
+    # Set the amount of time to wait, in milliseconds,
+    # after agent startup to begin taking heap dumps.
     # delay_ms: 10_000
 
-    # How long to wait, in milliseconds, between each heap dump.
+    # Set the amount of time to wait, in milliseconds, between each heap dump.
     # window_ms: 10_000
 
-    # The number of heap dumps to take before disabling this feature.
+    # Set the number of heap dumps to take before disabling this feature.
     # count: 5
 
     # Set to `true` for the agent to trigger garbage collection before
@@ -482,6 +482,22 @@ agent:
   # set must be formatted as a comma-delimited list of `key=value` pairs.
   # Example - "business-unit=accounting, office=Baltimore"
   # metadata: NEEDS_TO_BE_SET
+
+  # Provide the ID of a session which already exists in the Contrast
+  # UI. Vulnerabilities discovered by the agent are associated with
+  # this session. If an invalid ID is supplied, the agent will be
+  # disabled. This option and `application.session_metadata` are
+  # mutually exclusive; if both are set, the agent will be disabled.
+  # session_id: NEEDS_TO_BE_SET
+
+  # Provide metadata which is used to create a new session ID in the
+  # Contrast UI. Vulnerabilities discovered by the agent are associated
+  # with this new session. This value should be formatted as key=value pairs
+  # (conforming to RFC 2253). Available key names for this configuration
+  # are branchName, buildNumber, commitHash, committer, gitTag, repository,
+  # testRun, and version. This option and `application.session_id` are
+  # mutually exclusive; if both are set the agent will be disabled.
+  # session_metadata: NEEDS_TO_BE_SET
 
 # ==============================================================================
 # server

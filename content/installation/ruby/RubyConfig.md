@@ -196,6 +196,8 @@ For **application** tags, update the configuration of the agent. If there isn’
   * **version**: Override the reported application version.
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
   * **metadata**: Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. <br> Example: "business-unit=accounting, office=Baltimore"
+  * **session_id**: Provide the ID of a session which already exists in the Contrast UI. Vulnerabilities discovered by the agent are associated with this session. If an invalid ID is supplied, the agent will be disabled. This option and `application.session_metadata` are mutually exclusive; if both are set, the agent will be disabled.
+  * **session_metadata**: Provide metadata which is used to create a new session ID in the Contrast UI. Vulnerabilities discovered by the agent are associated with this new session. This value should be formatted as key=value pairs (conforming to RFC 2253). Available key names for this configuration are branchName, buildNumber, commitHash, committer, gitTag, repository, testRun, and version. This option and `application.session_id` are mutually exclusive; if both are set the agent will be disabled.
 
 ### Server properties
 
