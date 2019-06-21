@@ -40,7 +40,7 @@ The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is
 
 ### Node.js summary 
 
-
+The Node.js team delivers expanded rule coverage and better precision with the 2.4.0 release. We now support an Unsafe File Upload Protect rule (in Express and Koa) to block attacks or monitor at perimeteras well as Server Side Request Forgery (SSRF) detection in Assess. We properly block protect rules in Hapi by returning 403 not 500 in certain cases. Lastly, we've added support for multi-part form uploads in Koa.
 
 ### Ruby summary 
 
