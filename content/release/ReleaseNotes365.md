@@ -6,18 +6,18 @@ tags: "3.6.5 June Release Notes"
 
 ## Fixes
 
-* Attempting to approve or deny pending vulnerabilities caused an error. CONTRAST-34589
-* Default library score settings weren't reflected correctly in the application score. CONTRAST-35174
-* Users with an Edit role couldn't export library data from the library's Overview page. CONTRAST-34594
-* Sending a vulnerability to Jira with an attachment caused an error in some cases. CONTRAST-35082
-* Managing user access groups caused internal server errors for SaaS users. CONTRAST-34481
-* Cache issues prevented users from seeing vulnerability details after applying a license to an application. CONTRAST-34911
-* Slack integration notifications ignored New Asset selections made in **Notification Settings**. CONTRAST-35335
-* The **Libraries** grid timed out and returned errors in some users' SaaS environments. CONTRAST-34075
+* Attempting to approve or deny pending vulnerabilities caused an error.
+* Default library score settings weren't reflected correctly in the application score.
+* Users with an Edit role couldn't export library data from the library's **Overview** page.
+* Sending a vulnerability to Jira with an attachment caused an error in some cases.
+* Managing user access groups caused internal server errors for SaaS users.
+* Cache issues prevented users from seeing vulnerability details after applying a license to an application.
+* Slack integration notifications ignored New Asset selections made in **Notification Settings**.
+* The **Libraries** grid timed out and returned errors in some users' SaaS environments.
 
 ## Improvements
 
-* Set up [Session metadata](user-vulnerableapps.html#session) you pinpoint the source of vulnerabilities for each of your applications. To start seeing session metadata, update your agent configuration to report one of the available metadata types, including build numbers, branch names, repositories, and committers. Go to your application’s **Vulnerabilities** tab to see the data in the new vulnerabilities timeline, and use the **Seen By** column in the grid to filter vulnerabilities by specific values.
+* Set up [session metadata](user-vulnerableapps.html#session) you pinpoint the source of vulnerabilities for each of your applications. To start seeing session metadata, update your agent configuration to report one of the available metadata types, including build numbers, branch names, repositories, and committers. Go to your application’s **Vulnerabilities** tab to see the data in the new vulnerabilities timeline, and use the **Seen By** column in the grid to filter vulnerabilities by specific values.
 
 * Use [source names](admin-ipmgmt.html#source-name) to label attack events by expected sources so you can promptly choose which attack events to investigate. All you need is the IP information for a known source (like a pen tester) to get started. When you view attacks in the **Attacks > Monitor** page and **Attacks Details** pages, Contrast will display the source name instead of the attacker’s IP information. (And we’ll be adding source names to the Attack Events grid next!)
 
@@ -28,6 +28,7 @@ tags: "3.6.5 June Release Notes"
 
 ### Java summary
 
+Check back next release for updates!
 
 ### .NET summary 
 
@@ -35,7 +36,7 @@ The .NET team added support for agent use within [Docker containers](installatio
 
 ### .NET Core summary
 
-The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is now available! The agent supports the same expansive Assess and Protect security policy as the .NET Framework agent.
+The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is now available! The agent supports the same expansive Assess and Protect security policy as the .NET Framework agent, but for your .NET Core applications. To start using the agent, check out the [system requirements](installation-netcore.html#netcore-system), and then [download and install](installation-netcoreinstall.html) the agent from the Contrast UI. 
 
 ### Node.js summary 
 
@@ -47,6 +48,5 @@ The Ruby team delivered expanded rule coverage and better performance for the ag
 
 ### Python summary
 
-The Python 1.10.0 release introduces a few important changes. We are dropping support for Python 3.4 as it's reached it's End of Life date. We also allow users to set Protect rule modes in the [configuration YAML](installation-pythonconfig.html), which gives you easier control over deployed instances of the agent without having to use the Contrast UI. We also improved response handling on SecurityExceptions: In the instance application code catches our exception during an attack, the agent will send the exception after application code has completely if we need to block a request. Some minor bug fixes include the CSRF header used by the agent and improvements for the PyramidMiddleware with legacy Pyramid versions.
-
+The Python agent's 1.10.0 release introduces a few important changes. We're dropping support for Python 3.4 as it's reached its End of Life date. We also allow users to set Protect rule modes in the [configuration YAML](installation-pythonconfig.html), which gives you more control over deployed instances of the agent without using the Contrast UI. We also improved response handling on SecurityExceptions: In the instance application code catches our exception during an attack, the agent will send the exception after application code has completed, if we need to block a request. Some minor bug fixes include the CSRF header used by the agent and improvements for the PyramidMiddleware with legacy Pyramid versions.
 
