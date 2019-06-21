@@ -6,7 +6,7 @@ tags: "installation node agent YAML configuration rules properties"
 
 Go to the Node [YAML Properties](installation-nodeconfig.html#node-yaml) article for more information about this template.
 
-```
+```yaml
 # ==============================================================================
 # Use the properties in this YAML file to configure a
 # Contrast agent. Go to https://docs.contrastsecurity.com/ to
@@ -55,10 +55,6 @@ api:
     # If set to `false`, the agent will ignore the
     # certificate configuration in this section.
     # enable: true
-
-    # Allows the agent to communicate data, even if Contrast's cert
-    # can't be verified against supplied list of CAs.
-    # ingnore_cert_errors: NEEDS_TO_BE_SET
 
     # Set the absolute or relative path to a CA for communication
     # with the Contrast UI using a self-signed certificate.
@@ -132,7 +128,7 @@ api:
     # useful information for debugging Contrast. The value set here
     # is the location to which the agent saves log output. If no
     # log file exists at this location, the agent creates a file.
-    #
+    #  
     # Example - */opt/Contrast/contrast.log* creates a log in the
     # */opt/Contrast* directory, and rotates it automatically as needed.
     # path: ./contrast_agent.log
@@ -145,8 +141,8 @@ api:
     # new log file instead of appending and rolling.
     # append: true
 
-    # Set to `true` to log to STDOUT. Set to `false`
-    # for the agent to suppress output to STDOUT.
+    # Set to `true` to log to stdout. Set to `false`
+    # for the agent to suppress output to stdout.
     # stdout: NEEDS_TO_BE_SET
 
   # ============================================================================
@@ -179,8 +175,8 @@ api:
     # the path is determined based on the process' working directory.
     # path: contrast_heap_dumps
 
-    # Set the amount of time to wait, in milliseconds, after
-    # agent startup to begin taking heap dumps.
+    # Set the amount of time to wait, in milliseconds,
+    # after agent startup to begin taking heap dumps.
     # delay_ms: 10_000
 
     # Set the amount of time to wait, in milliseconds, between each heap dump.
@@ -251,15 +247,11 @@ api:
 # application:
 
   # Override the reported application name.
-  #
+  #  
   # Note - On Java systems where multiple, distinct applications may be
   # served by a single process, this configuration causes the agent to report
   # all discovered applications as one application with the given name.
   # name: NEEDS_TO_BE_SET
-
-  # Add the application code this application should use in the Contrast UI.
-  # Example - "the-coolest-node-app"
-  # code: NEEDS_TO_BE_SET
 
   # Override the reported application path.
   # path: NEEDS_TO_BE_SET
@@ -267,6 +259,9 @@ api:
   # Add the name of the application group with which this
   # application should be associated in the Contrast UI.
   # group: NEEDS_TO_BE_SET
+
+  # Add the application code this application should use in the Contrast UI.
+  # code: NEEDS_TO_BE_SET
 
   # Override the reported application version.
   # version: NEEDS_TO_BE_SET
@@ -284,6 +279,22 @@ api:
   # set must be formatted as a comma-delimited list of `key=value` pairs.
   # Example - "business-unit=accounting, office=Baltimore"
   # metadata: NEEDS_TO_BE_SET
+
+  # Provide the ID of a session which already exists in the Contrast
+  # UI. Vulnerabilities discovered by the agent are associated with
+  # this session. If an invalid ID is supplied, the agent will be
+  # disabled. This option and `application.session_metadata` are
+  # mutually exclusive; if both are set, the agent will be disabled.
+  # session_id: NEEDS_TO_BE_SET
+
+  # Provide metadata which is used to create a new session ID in the
+  # Contrast UI. Vulnerabilities discovered by the agent are associated
+  # with this new session. This value should be formatted as key=value pairs
+  # (conforming to RFC 2253). Available key names for this configuration
+  # are branchName, buildNumber, commitHash, committer, gitTag, repository,
+  # testRun, and version. This option and `application.session_id` are
+  # mutually exclusive; if both are set the agent will be disabled.
+  # session_metadata: NEEDS_TO_BE_SET
 
 # ==============================================================================
 # server
@@ -314,5 +325,5 @@ api:
   # must be formatted as a comma-delimited list.
   # Example - label1,label2,label3
   # tags: NEEDS_TO_BE_SET
-  
+
 ```
