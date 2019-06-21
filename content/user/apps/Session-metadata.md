@@ -82,5 +82,5 @@ Your selections also update the data shown in the timeline, which you can view b
 
 <a href="assets/images/Session-metadata-timeline.png" rel="lightbox" title="View a breakdown of vulnerabilities for a specific branch"><img class="thumbnail" src="assets/images/Session-metadata-timeline.png"/></a>
 
-For a broader view of an the vulnerability data reported for each application, see the vulnerabilities [Overview](user-vulnerableapps.html#view-vulns).
+For a broader view of vulnerability data reported for each application, see the vulnerabilities [Overview](user-vulnerableapps.html#view-vulns).
 
