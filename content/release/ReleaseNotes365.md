@@ -6,7 +6,14 @@ tags: "3.6.5 June Release Notes"
 
 ## Fixes
 
-* 
+* Attempting to approve or deny pending vulnerabilities caused an error. CONTRAST-34589
+* Default library score settings weren't reflected correctly in the application score. CONTRAST-35174
+* Users with an Edit role couldn't export library data from the library's Overview page. CONTRAST-34594
+* Sending a vulnerability to Jira with an attachment caused an error in some cases. CONTRAST-35082
+* Managing user access groups caused internal server errors for SaaS users. CONTRAST-34481
+* Cache issues prevented users from seeing vulnerability details after applying a license to an application. CONTRAST-34911
+* Slack integration notifications ignored New Asset selections made in Notification Settings. CONTRAST-35335
+* Libraries grid timed out and returned errors in some users' SaaS environments. CONTRAST-34075
 
 ## Improvements
 
@@ -28,7 +35,7 @@ The .NET agent now supports use within [Docker containers](installation-netinsta
 
 ### .NET Core summary
 
-The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is now available! The agent supports the same expansive Assess and Protect security policy as our .NET Framework agent.
+The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is now available! The agent supports the same expansive Assess and Protect security policy as the .NET Framework agent.
 
 ### Node.js summary 
 
@@ -36,8 +43,10 @@ The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is
 
 ### Ruby summary 
 
+The Ruby team delivered expanded rule coverage and better performance for the 2.6.0 release. The agent now supports an "Unsafe File Upload" Protect rule to block attacks at perimeter as well as Server Side Request Forgery (SSRF) detection in Assess. We've also enhanced our string instrumentation rewriting along with other under-the-hood performance improvements.
 
 ### Python summary
 
+Python 1.10.0 release has introduced a few important changes. One change is dropping support for Python 3.4 since it has reached it's End of Life date. Another change allows users to set Protect Rule modes in the configuration yaml. This should allow for easier control over deployed instances of the agent without having to use the Contrast UI. The last major change was improvements to response handling on SecurityException's. In the instance application code catches our exception during an attack, the agent will send the exception after application code has completely if we need to block a request. Some minor bugs included in this release are fixing the CSRF header used by the agent and improvements for the PyramidMiddleware with legacy Pyramid versions.
 
 
