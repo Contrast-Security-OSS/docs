@@ -6,7 +6,7 @@ tags: "installation Node agent frameworks support troubleshooting nodejs javascr
 
 ## Node.js Version Support
 
-Contrast supports Node.js Long-Term Support (LTS) versions 6, 8 and 10. Contrast shifts its support for Node.js versions as the working group shifts its LTS windows. For the schedule, see the [Node.js Long-Term Support Release Schedule](https://github.com/nodejs/LTS).
+Contrast supports Node.js Long-Term Support (LTS) versions in *Active LTS* and *Maintenance LTS* status. Contrast shifts its support for Node.js versions as the working group shifts its LTS windows. For the schedule, see the [Node.js Long-Term Support Release Schedule](https://github.com/nodejs/LTS).
 
 > **Note:** The Node.js agent currently doesn't support HTTP2, and generally doesn't support Node.js features classified as Experimental (Stability: 1).
 
