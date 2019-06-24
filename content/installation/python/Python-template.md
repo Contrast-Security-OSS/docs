@@ -6,7 +6,7 @@ tags: "installation python django flask pyramid agent service configuration"
 
 Go to the Python [Configuration Properties](installation-pythonconfig.html#python-config) article for more information about this template.
 
-```
+```yaml
 # ==============================================================================
 # Use the properties in this YAML file to configure a
 # Contrast agent. Go to https://docs.contrastsecurity.com/ to

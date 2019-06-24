@@ -58,29 +58,41 @@ api:
     # certificate configuration in this section.
     # enable: true
 
-    # Determine the location from which the agent loads a client certificate. Value options include `File` or `Store`
-    # certificate_location:
+    # Determine the location from which the agent loads a client
+    # certificate. Value options include `File` or `Store`.
+    # certificate_location: NEEDS_TO_BE_SET
 
-    # Set the absolute path to the client certificate's .CER file for communication with Contrast UI.
-    # The `certificate_location` property must be set to `File`.
-    # cer_file:
+    # Set the absolute path to the client certificate's
+    # .CER file for communication with Contrast UI. The
+    # `certificate_location` property must be set to `File`.
+    # cer_file: NEEDS_TO_BE_SET
 
-    # Specify the name of certificate store to open. The `certificate_location` property must be set to `Store`.
-    # Value options include `AuthRoot`, `CertificateAuthority`, `My`, `Root`, `TrustedPeople`, or `TrustedPublisher`.
-    # store_name:
+    # Specify the name of certificate store to open. The
+    # `certificate_location` property must be set to `Store`.
+    # Value options include `AuthRoot`, `CertificateAuthority`,
+    # `My`, `Root`, `TrustedPeople`, or `TrustedPublisher`.
+    # store_name: NEEDS_TO_BE_SET
 
-    # Specify the location of the certificate store. The `certificate_location` property must be set to `Store`.
+    # Specify the location of the certificate store. The
+    # `certificate_location` property must be set to `Store`.
     # Value options include `CurrentUser` or `LocalMachine`.
-    # store_location:
+    # store_location: NEEDS_TO_BE_SET
 
-    # Specify the type of value the agent uses to find the certificate in the collection of certificates from the certificate store.
+    # Specify the type of value the agent uses to find the certificate
+    # in the collection of certificates from the certificate store.
     # The `certificate_location` property must be set to `Store`.
-    # Value options include `FindByIssuerDistinguishedName`, `FindByIssuerName`, `FindBySerialNumber`, `FindBySubjectDistinguishedName`, `FindBySubjectKeyIdentifier`, `FindBySubjectName`, or `FindByThumbprint`.
-    # find_type:
+    # Value options include `FindByIssuerDistinguishedName`,
+    # `FindByIssuerName`, `FindBySerialNumber`,
+    # `FindBySubjectDistinguishedName`, `FindBySubjectKeyIdentifier`,
+    # `FindBySubjectName`, or `FindByThumbprint`.
+    # find_type: NEEDS_TO_BE_SET
 
-    # Specify the value the agent uses in combination with `find_type` to find a certification in the certificate store.
-    # Note: The agent will use the first certificate from the certificate store that matches this search criteria.
-    # find_value:
+    # Specify the value the agent uses in combination with
+    # `find_type` to find a certification in the certificate store.
+    #  
+    # Note - The agent will use the first certificate from
+    # the certificate store that matches this search criteria.
+    # find_value: NEEDS_TO_BE_SET
 
   # ============================================================================
   # api.proxy
@@ -94,7 +106,12 @@ api:
     # presence of a valid proxy host and port determines enabled status.
     # enable: NEEDS_TO_BE_SET
 
-    # Set the URL of the proxy server.
+    # Set the proxy host. It must be set with port and scheme.
+    # host: localhost
+
+    # Set this property as an alternate for `scheme://host:port`. It takes
+    # precedence over the other settings, if specified; however, an error
+    # will be thrown if both the URL and individual properties are set.
     # url: NEEDS_TO_BE_SET
 
     # Set the proxy user.
@@ -386,6 +403,10 @@ protect:
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
+      # Tell the agent to detect when commands come directly
+      # from input. The agent blocks if blocking is enabled.
+      # detect_phased_commands: true
+
     # ==========================================================================
     # protect.rules.path-traversal
     # Use the following properties to configure
@@ -483,6 +504,22 @@ application:
   # set must be formatted as a comma-delimited list of `key=value` pairs.
   # Example - "business-unit=accounting, office=Baltimore"
   # metadata: NEEDS_TO_BE_SET
+
+  # Provide the ID of a session which already exists in the Contrast
+  # UI. Vulnerabilities discovered by the agent are associated with
+  # this session. If an invalid ID is supplied, the agent will be
+  # disabled. This option and `application.session_metadata` are
+  # mutually exclusive; if both are set, the agent will be disabled.
+  # session_id: NEEDS_TO_BE_SET
+
+  # Provide metadata which is used to create a new session ID in the
+  # Contrast UI. Vulnerabilities discovered by the agent are associated
+  # with this new session. This value should be formatted as key=value pairs
+  # (conforming to RFC 2253). Available key names for this configuration
+  # are branchName, buildNumber, commitHash, committer, gitTag, repository,
+  # testRun, and version. This option and `application.session_id` are
+  # mutually exclusive; if both are set the agent will be disabled.
+  # session_metadata: NEEDS_TO_BE_SET
 
 # ==============================================================================
 # server

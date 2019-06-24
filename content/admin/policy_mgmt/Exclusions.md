@@ -24,7 +24,9 @@ Contrast allows you to specify a particular type of input. Any findings using th
 
 * For **Parameter**, **Header** and **Cookie**: You must specify the name of the particular input for which you wish to suppress findings. You can use wildcard `.*` to suppress all findings from the selected input type.
 
+
 * **QueryString** and **Body**: These will suppress findings from the entire QueryString and Body, respectively. The QueryString and Body may only be excluded in conjunction with the URL exclusion pattern defined below.
+
 
 In conjunction with the input type, you must choose how to apply URLs:
 
@@ -33,6 +35,7 @@ In conjunction with the input type, you must choose how to apply URLs:
 * **These URLs** (allows regex): Specify a set of URLs to which to apply the exclusion. 
 
 >**Note:** Slash followed by wildcard `/.*` is an acceptable substitute for listing all URLs.
+
 
 #### Example Input Regular Expressions
 
@@ -50,6 +53,7 @@ This type of exclusion allows you to focus on a list of specific URLs to be igno
 
 >**Note:** Slash followed by wildcard `/.*` is an acceptable substitute for listing all URLs.
 
+
 #### Example URL Regular Expressions
 
 | Desired Effect | Regular Expression | Effect |
@@ -62,6 +66,7 @@ This type of exclusion allows you to focus on a list of specific URLs to be igno
 | Exclude paths containing non-digits | `/myapp/\D+` | Excludes all paths like `/myapp/word` |
 
 See the table below for a [Regular Expression Quick Reference](#regular-expression-quick-reference).
+
 
 ### Code
 
@@ -106,6 +111,7 @@ Each exclusion can be enabled or disabled for either Assess or Protect mode, dep
 Alternatively, you can see a global list of existing exclusions across all applications under **Policy Management > Application Exclusions** via the user menu. Each exclusion can also be edited and toggled off for each mode on this page. 
 
 <a href="assets/images/Application-exclusions.png" rel="lightbox" title="Manage exclusions in Policy Management"><img class="thumbnail" src="assets/images/Application-exclusions.png"/></a>
+
 
 ## Regular Expression Quick Reference
 
