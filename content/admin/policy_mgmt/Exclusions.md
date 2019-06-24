@@ -16,15 +16,15 @@ Exclusions are used to suppress events that you don't want to hear about for one
 
 ## Types of Exclusions 
 
-Exclusions can apply to an input, URLs or code. Contrast won’t process any inputs that match the exclusion criteria, and each exclusion only applies to the application for which it was created. Please review the options for the type of exclusion you would like to set up. 
+Exclusions can apply to an input, URLs or code. Contrast won’t process any inputs that match the exclusion criteria, and each exclusion only applies to the application for which it was created. Review the following options for the type of exclusion you would like to set up. 
 
 ### Input 
 
 Contrast allows you to specify a particular type of input. Any findings using this input will be suppressed.
 
-* For **Parameter**, **Header** and **Cookie**: You must specify the name of the particular input for which you wish to suppress findings. You can use wildcard ```.*``` to suppress all findings from the selected input type.
+* For **Parameter**, **Header** and **Cookie**: You must specify the name of the particular input for which you wish to suppress findings. You can use wildcard `.*` to suppress all findings from the selected input type.
 
-* **QueryString** and **Body**: These will suppress findings from the entire QueryString and Body, respectively.  **QueryString** and **Body** may only be excluded in conjunction the URL exclusion pattern defined below.
+* **QueryString** and **Body**: These will suppress findings from the entire QueryString and Body, respectively. The QueryString and Body may only be excluded in conjunction with the URL exclusion pattern defined below.
 
 In conjunction with the input type, you must choose how to apply URLs:
 
@@ -32,23 +32,23 @@ In conjunction with the input type, you must choose how to apply URLs:
 
 * **These URLs** (allows regex): Specify a set of URLs to which to apply the exclusion. 
 
->**Note:** Slash followed by wildcard ```/.*``` is an acceptable substitute for listing all URLs.
+>**Note:** Slash followed by wildcard `/.*` is an acceptable substitute for listing all URLs.
 
 #### Example Input Regular Expressions
 
 | Type | Desired Effect | Regular Expression | Effect |
 |-|-|-|-|
-| Cookie | Exclude cookies names starting with value | `^App` | Excludes all cookie names starting with `App` |
+| Cookie | Exclude cookies names starting with a value | `^App` | Excludes all cookie names starting with `App` |
 | Parameter | Exclude parameter names ending with a value | `testing$` | Excludes all parameter names ending with `testing` |
 | Header | Exclude explicitly named header | `ignore` | Excludes the header `ignore` only |
 
-[Regular Expression Quick Reference](#regular-expression-quick-reference)
+See the table below for a [Regular Expression Quick Reference](#regular-expression-quick-reference).
 
 ### URL
 
 This type of exclusion allows you to focus on a list of specific URLs to be ignored using **These URLs**. In this field, you can list the specific URLs to exclude, resulting in any findings from these URLs being suppressed. 
 
->**Note:** Slash followed by wildcard ```/.*``` is an acceptable substitute for listing all URLs.
+>**Note:** Slash followed by wildcard `/.*` is an acceptable substitute for listing all URLs.
 
 #### Example URL Regular Expressions
 
@@ -61,7 +61,7 @@ This type of exclusion allows you to focus on a list of specific URLs to be igno
 | Exclude paths containing digits | `/myapp/\d+` | Excludes all paths like `/myapp/1234` |
 | Exclude paths containing non-digits | `/myapp/\D+` | Excludes all paths like `/myapp/word` |
 
-[Regular Expression Quick Reference](#regular-expression-quick-reference)
+See the table below for a [Regular Expression Quick Reference](#regular-expression-quick-reference).
 
 ### Code
 
@@ -103,7 +103,7 @@ Each exclusion can be enabled or disabled for either Assess or Protect mode, dep
 
 <a href="assets/images/Application-policy-exclusions-tab.png" rel="lightbox" title="Enable or disable exclusions in an application Policy tab"><img class="thumbnail" src="assets/images/Application-policy-exclusions-tab.png"/></a>
 
-Alternatively, you can see a global list of existing exclusions across all applications under **Policy Management > Application Exclusions** via the User Menu. Each exclusion can also be edited and toggled off for each mode on this page. 
+Alternatively, you can see a global list of existing exclusions across all applications under **Policy Management > Application Exclusions** via the user menu. Each exclusion can also be edited and toggled off for each mode on this page. 
 
 <a href="assets/images/Application-exclusions.png" rel="lightbox" title="Manage exclusions in Policy Management"><img class="thumbnail" src="assets/images/Application-exclusions.png"/></a>
 
