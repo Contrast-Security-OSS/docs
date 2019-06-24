@@ -109,7 +109,7 @@ Alternatively, you can see a global list of existing exclusions across all appli
 
 ## Regular Expression Quick Reference
 
-| ? | ? | example pattern | example match |
+| Effect | Pattern | Example Pattern | Example Match |
 |-|-|-|
 | Start of a string | `^` | `^w+` | `Start` of a string |  
 | End of a string | `$` | `w+$` | End of a `string` |
