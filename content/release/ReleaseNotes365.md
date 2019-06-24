@@ -21,7 +21,7 @@ tags: "3.6.5 June Release Notes"
 
 * Use [source names](admin-ipmgmt.html#source-name) to label attack events by expected sources so you can promptly choose which attack events to investigate. All you need is the IP information for a known source (like a pen tester) to get started. When you view attacks in the **Attacks > Monitor** page and **Attacks Details** pages, Contrast will display the source name instead of the attacker’s IP information. (We’ll be adding source names to the Attack Events grid next!)
 
-* Contrast offers two new Protect rules against unsafe files: The Unsafe File Uploads rule blocks malicious files being uploaded to web applications, and the Zip File Overwrite rule protects against malicious files and directory structures within zip files uploaded to web applications. These rules available for all languages.
+* Contrast offers two new Protect rules against unsafe files: The Unsafe File Uploads rule blocks malicious files being uploaded to web applications, and the Zip File Overwrite rule protects against malicious files and directory structures within zip files uploaded to web applications. These rules are available for all languages.
 
 
 ## Agent Updates
@@ -34,9 +34,11 @@ Check back next release for updates!
 
 The .NET team added support for agent use within [Docker containers](installation-netinstall.html#net-docker) for .NET 4.5.2+ applications. We improved accuracy of an insecure authentication protocol Assess rule, and added a new Assess rule to detect the “X-Powered-By” header. We fixed a bug that caused a null reference error in processing exclusions. We also added support for setting `application.code`.
 
+> **Note:** The agent no longer supports the legacy *DotnetAgentService.exe.config* file for application pool whitelisting and blacklisting. We recommend that you move these configuration values to `agent.dotnet.app_pool_whitelist` and `agent.dotnet.app_pool_blacklist` in the *contrast_security.yaml*. This change applies to all versions after 19.5.4.
+
 ### .NET Core summary
 
-The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is now available! The agent supports the same expansive Assess and Protect security policy as the .NET Framework agent, just for your .NET Core applications. To start using the agent, check out the [system requirements](installation-netcore.html#netcore-system), and then [download and install](installation-netcoreinstall.html) the agent from the Contrast UI. 
+The [.NET Core agent](installation-netcore.html#netcore-overview) for Windows is now available! The agent supports many of the same expansive Assess and Protect security policies as the .NET Framework agent, including detection of all the most important vulnerabilities and attacks. To start using the agent, check out the [system requirements](installation-netcore.html#netcore-system), and then [download and install](installation-netcoreinstall.html) the agent from the Contrast UI. 
 
 ### Node.js summary 
 
