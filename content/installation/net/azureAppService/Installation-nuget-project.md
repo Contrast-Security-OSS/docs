@@ -1,7 +1,7 @@
 <!--
 title: "Installing Contrast .NET Framework agent via Nuget Azure App Service package"
 description: "Guide to installing .NET Framework Agent on Azure App Service using the Nuget package"
-tags: "installation configuration .Net Azure AppService site nuget visualstudio netframework"
+tags: "installation configuration .net framework Azure AppService nuget visualstudio"
 -->
 
 Complete the following steps to manually install the .NET agent via Nuget.
@@ -20,7 +20,7 @@ In Visual Studio:
 
 * Search for **Contrast.Net.Azure.AppService** package, select it and add it to your project.
 
-* Build your application. Confirm that Contrast assemblies (e.g., `ContrastProfiler-64.dll`) are in a new `contrastsecurity` folder that gets created in application's root directory.
+* Build your application. Confirm that Contrast assemblies (e.g., `ContrastProfiler-64.dll`) are in a new *contrastsecurity* folder that's created in application's root directory.
 
 ## Step Three: Add application authentication settings for Contrast
 

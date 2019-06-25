@@ -1,29 +1,34 @@
 <!--
 title: "Configuring Contrast .NET Framework Agent on Azure App Service"
 description: "Configurations and tweaks for customizing the Contrast .NET Framework agent running on Azure App Service"
-tags: "configuration .Net Azure AppService tweaks netframework"
+tags: "configuration .net framework Azure AppService"
 -->
 
-The .NET Framework agent for Azure App Service can be configured using the environment variable convention of agent configuration.
-All settings should be added to the `Application Settings` section of the `Configuration` blade in the Azure Portal.  Please use the [environment variable syntax](installation-netconfig.html#environment-variables) when adding these settings.
-See [YAML configuration properties](installation-netconfig.html#net-yaml) for more information and a full list of supported configuration options.
+## Configuration Methods
 
-> **Example:** To change the agent's logging level (agent.logger.level) to trace, add a setting with key `CONTRAST__AGENT__LOGGER__LEVEL` and value `TRACE`.
+Configure the .NET Framework agent for Azure App Service in the Azure Portal, a *web.config* file or a YAML configuration file. 
 
-> **Example 2:** To change the agent's server name (server.name) to "MyServer", add a setting with key `CONTRAST__SERVER__NAME` and value `MyServer`.
+### Azure Portal
 
-You can also specify specific `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section. See [application-specific settings](installation-netconfig.html#appname) for more details.
+You can configure the .NET Framework agent using the environment variable convention of agent configuration. Add all settings to the **Application Settings** section of the **Configuration** blade in the Azure Portal using [environment variable syntax](installation-netconfig.html#environment-variables).
 
-### Using a configuration YAML file
+> **Examples:** <br>
+ * To change the agent's logging level (`agent.logger.level`) to trace, add a setting with key `CONTRAST__AGENT__LOGGER__LEVEL` and value `TRACE`. <br>
+ * To change the agent's server name (`server.name`) to "MyServer", add a setting with key `CONTRAST__SERVER__NAME` and value `MyServer`.
 
-Instead of setting individual options in Application Settings, you may opt to use a common YAML configuration file containing Contrast settings.  First upload the file to your Azure Web App by including it in your application deployment or using the Kudu console.  Then add an Application Setting `CONTRAST_CONFIG_PATH` that points to this file.
+### web.config file
 
-> **Example:** To use a file called "contrast_security.yaml" in the root of your application, add an application setting with key `CONTRAST_CONFIG_PATH` and value `D:\Home\site\wwwroot\contrast_security.yaml`.
-Application files in Azure App Service are deployed to 'D:\home\site\wwwroot'.
+You can also specify `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section. See [application-specific settings](installation-netconfig.html#appname) for more details.
 
-## Common Configuration Options for Azure App Service.
+### YAML file
 
-The following are some common configuration settings for Azure App Service, and their default values.  These can be included in the yaml config file or in Application Settings, using environment variable syntax.  This is a subset of all configurations that are available when using [YAML configuration properties](installation-netconfig.html#net-yaml).
+Instead of setting individual options in the Azure Portal, you may use a YAML configuration file containing Contrast settings. First, upload the file to your Azure web application by including it in your application deployment or using the Kudu console. Then add an application setting, `CONTRAST_CONFIG_PATH`, that points to this file.
+
+> **Example:** To use the *contrast_security.yaml* file in the root of your application, add an application setting with key `CONTRAST_CONFIG_PATH` and value *D:\Home\site\wwwroot\contrast_security.yaml*. Application files in Azure App Service are deployed to *D:\home\site\wwwroot*.
+
+## Common Configuration Options 
+
+The following tables outline some common configuration settings for Azure App Service and their default values. These settings can be included in the YAML configuration file or in Application Settings using environment variable syntax.  This is a subset of all configurations that are available when using [YAML configuration properties](installation-netconfig.html#net-yaml).
 
 ### Identification and tagging
 
