@@ -13,7 +13,6 @@ When you start your server with Contrast, you'll see a few messages that indicat
 
 ## Request Processing Time
 
-It's probably more important to think about how Contrast affects the round-trip time. In typical applications, Contrast adds around 2x round-trip time to a request that contains a lot of business logic with all the bells and whistles turned on. Round trip times for static resources typically don't get measurably worse. In requests where the total round-trip time is dominated by database or Web Service calls, Contrast's effect will be less noticeable.
 
 If better performance is really important to your environment, consider the following options:
 
