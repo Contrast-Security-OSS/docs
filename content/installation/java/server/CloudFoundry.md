@@ -78,18 +78,13 @@ Any applications that you want to use with the service broker should employ the 
 cf push YOUR_APP_NAME_GOES_HERE
 ```
 
-### Set up (generic cf)
+### Set up (generic cloud foundry)
 
-Build service broker app:
-```bash
-git clone https://github.com/Contrast-Security-OSS/contrast-service-broker
-cd contrast-service-broker
-mvn clean package spring-boot:repackage -DskipTests=true
-```
+Contact Contrast support for access tot he service broker source code.
 
 Deploy service broker app:
 ```bash
-cf push contrast-security-service-broker -p /path/to/contrast-service-broker-<version>.jar
+cf push contrast-security-service-broker 
 ```
 
 The service broker now appears in your Cloud Foundry console. The service broker doesn't offer any plans by default. Plans are configurable via the ```CONTRAST_SERVICE_PLANS``` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application, select **Runtime** and then **Environment Variables** to set the value. Please refer to the following example to set the value through the commandline:
@@ -242,7 +237,7 @@ The service broker does **not** offer any service plans by default and requires 
 
 <a href="assets/images/Pivotal_Service_Plan.png" rel="lightbox" title="Adding a service plan"><img class="thumbnail" src="assets/images/Pivotal_Service_Plan.png"/></a>
 
-You can now see six form fields.
+You can now see ten form fields.
 
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
@@ -252,6 +247,10 @@ You can now see six form fields.
 | Organization UUID            | The organization to which the application will belong  |
 | Username                     | Contrast username                                      |
 | Plan Name                    | Name of the plan as it will appear in Apps Manager     |
+| Proxy Host                   | The hostname of a proxy for the service broker to communicate with Contrast     |
+| Proxy Port                   | The proxy port                                        |
+| Proxy Username               | The proxy username if it requires authentication      |
+| Plan Password                | The proxy password                                    |
 
 <br>
 
