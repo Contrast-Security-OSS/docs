@@ -78,9 +78,9 @@ Any applications that you want to use with the service broker should employ the 
 cf push YOUR_APP_NAME_GOES_HERE
 ```
 
-### Set up (generic cloud foundry)
+### Set up generic Cloud Foundry
 
-Contact Contrast support for access tot he service broker source code.
+Contact Contrast support for access to the service broker source code.
 
 Deploy service broker app:
 ```bash
