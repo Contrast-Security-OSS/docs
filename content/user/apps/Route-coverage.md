@@ -19,6 +19,7 @@ Contrast supports route coverage for the following frameworks:
 * **Node:** Express 
 * **Ruby:** Rails and Sinatra
 * **Python:** Django, Pyramid and Flask
+* **.NET Core:** ASP.NET Core MVC (2.1, 2.2) and ASP.NET Core Razor Pages (2.1, 2.2)
 
 For supported frameworks, route coverage consists of two parts:  
 
