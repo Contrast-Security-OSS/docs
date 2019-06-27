@@ -4,11 +4,9 @@ description: "Tips on improving application performance with the .NET agent"
 tags: "troubleshoot configuration performance application impact agent .NET"
 -->
 
-As you might expect, Contrast's analysis makes your application run a little slower. But, the time difference is usually minimal, and the results are definitely worth it.
-
 ## Request Processing Time
 
-It's more important to think about how Contrast affects the round-trip time. In typical applications, Contrast doubles the round-trip time for a request that contains a lot of business logic. Contrast only affects the CPU processing time of your application. Round-trip times for static resources don't get measurably worse in most cases. In many applications, a significant amount of time is spent waiting on databases and accessing remote resources. In requests where the total round-trip time is dominated by database or WebService calls, Contrast's effect is less noticeable.
+It's more important to think about how Contrast affects the round-trip time. Contrast only affects the CPU processing time of your application. Round-trip times for static resources don't get measurably worse in most cases. In many applications, a significant amount of time is spent waiting on databases and accessing remote resources. In requests where the total round-trip time is dominated by database or WebService calls, Contrast's effect is less noticeable.
 
 ## Performance Tuning for Assess
 
