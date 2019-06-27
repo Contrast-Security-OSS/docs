@@ -6,7 +6,7 @@ tags: "user manage account header footer custom settings"
 -->
 
 
-Create a customized header and footer for the Contrast UI with your choice of color, text and more style options. This feature is available for Enterprise-on-Premises (EOP) users.
+Create a customized header and footer for the Contrast UI with your choice of color, text and more style options. This feature is available for users with Enterprise-on-Premises (EOP) instances of Contrast.
 
 ## Header and Footer Styling
 
