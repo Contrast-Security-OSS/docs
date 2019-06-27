@@ -7,20 +7,20 @@ tags: "python agent installation"
 
 To install the Contrast agent into your Python application, you must complete the following steps.  
 
-1. Add the <i>contrast-agent-*.tar.gz</i> to the application's <i>requirements.txt</i>. (This is outlined in the <b>Setup</b> section below.) 
-2. Add the *contrast_security.yaml* file to the application's *config* directory. (This is outlined in the **Configuration** section below.)
+1. Add the <i>contrast-python-agent-<version>.tar.gz</i> to the application's <i>requirements.txt</i>. (This is outlined in the <b>Setup</b> section below.)
+2. Add the *contrast_security.yaml* file to the application's top directory. (This is outlined in the **Configuration** section below.)
 3. Run the Contrast Service as a standalone service on the same server as the application. (This is outlined in the section below to **Run the Service**.)
 
 ## Setup
 
-The <i>contrast-agent-*.tar.gz</i> is a standard packaged Python library that you can add to the application's *requirements.txt*.
+The <i>contrast-python-agent-<version>.tar.gz</i> is a standard packaged Python library that you can add to the application's *requirements.txt*.
 
 ### Contrast as a Python Package
 
 To use Contrast, add this line to your application's *requirements.txt* after downloading the agent:
 
 ``` python
--e ./path/to/contrast-agent-<version>.tar.gz
+./path/to/contrast-python-agent-<version>.tar.gz
 ```
 
 After editing the *requirements.txt* you can install normally with:
@@ -31,10 +31,10 @@ pip install -r requirements.txt
 
 ### Manual installation
 
-To install the Contrast agent manually, download the <i>contrast-agent-<version>.tar.gz</i> file to a local directory and run:
+To install the Contrast agent manually, download the <i>contrast-python-agent-<version>.tar.gz</i> file to a local directory and run:
 
 ``` bash
-pip install ./path/to/contrast-agent-<version>.tar.gz
+pip install ./path/to/contrast-python-agent-<version>.tar.gz
 ``` 
 
 ### Middleware inclusion

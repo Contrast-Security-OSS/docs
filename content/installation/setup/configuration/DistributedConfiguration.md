@@ -38,7 +38,7 @@ Contrast provides several code samples using [Ansible](https://www.ansible.com/)
 
 With a few changes, you can utilize an external MySQL database - an open-source database that runs on both Windows and Linux - with your existing EOP installation. Complete the following steps:
 
-* Install and configure MySQL 5.6 on database server host. Contrast recommends 5.6.28.  
+* Install and configure a supported version of MySQL as shown in our [System Requirements](installation-setup.html#contrast-reqs) on the database server host.
 * Create maintenance window for Contrast downtime.
 * [Back up the embedded MySQL Database](installation-setup.html#setup-mysql).
 * [Restore the database](installation-setup.html#setup-mysql) to an external MySQL database.
@@ -47,11 +47,11 @@ With a few changes, you can utilize an external MySQL database - an open-source 
 
 ### Install and configure the MySQL Server
 
-Contrast recommends running the application with MySQL 5.6.28; however, it works with other versions of MySQL 5.6.x on Windows and Linux as well. Contrast also recommend working with your Operations and/or Database team to ensure a secure and durable installation.  
+Contrast recommends running the application with versions of MySQL as shown in our [System Requirements](installation-setup.html#contrast-reqs). Contrast also recommend working with your Operations and/or Database team to ensure a secure and durable installation.  
 
-> **Note:** Go to the [Github repository](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml) for a snippet of Ansible that you can use to install the latest MySQL 5.6 on Ubuntu 14.04.   
+> **Note:** Go to the [Github repository](https://github.com/Contrast-Security-OSS/ctdc/blob/master/mysql.yml) for a snippet of Ansible that you can use to install the MySQL on Ubuntu 14.04.   
 
-You can download the *gpg* keyfile and additional information from the [MySQL documentation](http://dev.mysql.com/doc/refman/5.6/en/checking-gpg-signature.html). Contrast changes the bind address to "*" above for illustration, but recommends binding your MySQL server to the IP of your application server. Contrast recommend creating a user and grants that offer access to only the Contrast schema and limited to the host IP address or subnet. 
+You can download the *gpg* keyfile and additional information from the [MySQL documentation](http://dev.mysql.com/doc/refman/5.7/en/checking-gpg-signature.html). Contrast changes the bind address to "*" above for illustration, but recommends binding your MySQL server to the IP of your application server. Contrast recommend creating a user and grants that offer access to only the Contrast schema and limited to the host IP address or subnet. 
 
 ### Take a backup of MySQL
 

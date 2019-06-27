@@ -4,8 +4,9 @@ description: "Overview of IP management"
 tags: "Admin IP policy management protect"
 -->
 
-IP Management is Contrast's blacklist and whitelist (trusted hosts) management feature. Organization and Policy (Rules) have access to this feature. Go to **Policy Management** from the user menu and select IP Management from the left navigation. Here you can see the current hosts on the blacklist and whitelist as well as manage new and existing hosts. You can specify which environments you’d like the rule to apply to and set an expiration on the rule in the event you just want to place a host in a “penalty box”.
+Manage IP policy in your organization with blacklists, whitelists (trusted hosts) and source names. Users with Organization Admin and Rules Admin permissions can go to the **user menu > Policy Management > IP Management tab** to create and manage your preferences.
 
-* **IP Blacklists** allow you to put a rule in place to distrust an IP, considering it unacceptable. This is used for immediate triage until a more permanent protection policy can be put in place or investigation can be conducted.  
-* **Trusted Hosts** can be used to whitelist a host that is conducting an internal vulnerability scan to avoid polluting Contrast with non-attack data. This will disable the Protect features of Contrast for this IP (or range) including blocking and reporting. The Assess features will remain unaffected and will continue to function as normal. 
+* **IP Blacklists** allow you to put rules in place to distrust IP addresses, which are then considered to be unacceptable. This is appropriate for immediate triage until you can put a more permanent Protect policy in place or conduct an investigation.
+* **IP Whitelists** let you mark trusted hosts conducting internal vulnerability scans as safe to avoid polluting Contrast with non-attack data. This disables Protect features of Contrast for this IP (or range), including blocking and reporting. Assess features remain unaffected, and continue to function as normal. Data for whitelisted IP addresses does not appear in the Contrast UI. 
+* [Source Names](admin-ipmgmt.html#source-name) allow you to label attack events caused by known sources, such as pen testers, based on one or more IP addresses or subnet masks. When you view attacks in the **Attacks > Monitor** and **Attack Details** pages, Contrast displays the source name instead of the attacker's IP information. This allows you to quickly identify and differentiate expected events from attack events that need your attention. 
 
