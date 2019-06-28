@@ -25,7 +25,7 @@ An application is a logical grouping of customer code analyzed by a Contrast **a
 
 ## Assess
 
-Contrast Assess is a set of **rules** designed to perform highly accurate data flow analysis to detect **vulnerabilities** when **applications** are tested with normal test data. Assess is an **agent** mode supported by the Java, .NET, Node and Ruby agents.
+Contrast Assess is a set of **rules** designed to perform highly accurate data flow analysis to detect **vulnerabilities** when **applications** are tested with normal test data. Assess is an **agent** mode supported by the Java, .NET, .NET Core, Node and Ruby agents.
 
 ---
 
@@ -61,7 +61,7 @@ Contrast is a security technology to **Assess** your **application** for vulnera
 
 ## Contrast Service
 
-The Contrast Service is an executable written in Go that handles communication with the **Contrast UI** for the Ruby, Python and Proxy **agents**. For the Proxy agent, it also acts as an analysis **engine** that can apply Protect rules to models representing HTTP requests.
+The Contrast Service is an executable written in Go that handles communication with the **Contrast UI** for the Ruby, Python and Proxy **agents**. For the Proxy agent, it also acts as an analysis **agent** that can apply Protect rules to models representing HTTP requests.
 
 ---
 
@@ -73,7 +73,7 @@ The **Contrast UI** is the web interface from which users download agents and vi
 
 ## Creation Event
 
-When an **untrusted data source** provides data to an application, Contrast generates a creation event (or source event) that documents what occurred. Contrast stores this information with the **tracked** data object that it created, and uses it to describe the source of the untrusted data, if a **rule** generates a **trace**.
+When an **untrusted data source** provides data to an application, Contrast generates a creation event (or source event) that documents what occurred. Contrast stores this information with the **tracked** data object that it created, and uses it to describe the source of the untrusted data, if a **rule** generates a **vulnerability**.
 
 ---
 
@@ -85,33 +85,25 @@ Credential stuffing is the automated injection of breached username and password
 
 ## Cross-Site Scripting
 
-Cross-site scripting (XSS) is a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS **attacks** occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread; they can occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+Cross-site scripting (XSS) is a type of injection in which malicious scripts are injected into otherwise benign and trusted websites. XSS **attacks** occur when an attacker uses a web **application** to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread; they can occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
 
 ---
 
 ## Custom Event
 
-Each **event** contains the runtime values of the underlying object, the parameters to the method invoked, the return from the method and the runtime stack trace.
+Each **event** contains the runtime values of the underlying object, the parameters to the method invoked, the return from the method and the runtime stack vulnerability.
 
 ---
 
 ## Duplicate Trace Elimination
 
-The Contrast **engine** detects the same vulnerability conditions over and over in an application; this would normally cause the same **trace** to be generated repetitively. To address this, there is **duplicate trace elimination** logic in both the **engine** and the **Contrast UI** to eliminate duplicate traces.
-
----
-
-## Engine
-
-<!-- Text goes here.  -->
-
-See **Agent**. 
+The Contrast **agent** detects the same vulnerability conditions over and over in an application; this would normally cause the same **vulnerability** to be generated repetitively. To address this, there is duplicate trace elimination logic in both the agent and the **Contrast UI** to eliminate duplicate vulnerabilities.
 
 ---
 
 ## Enterprise-on-Premises (EOP)
 
-Enterprise-on-Premises (EOP) refers to **Contrast UI** instances that customers run and manage within their own internal networks. Many customers have InfoSec policies that forbid sending **vulnerability** or **attack** data to the cloud; as a result, these customers need an "on-premises" offering of Contrast. Contrast pushes EOP updates to **Hub** on a monthly basis.
+Enterprise-on-Premises (EOP) refers to **Contrast UI** instances that customers run and manage within their own internal networks. Many organizations that use Contrast have InfoSec policies that forbid sending **vulnerability** or **attack** data to the cloud; as a result, these organizations need an "on-premises" offering of Contrast. Contrast pushes EOP updates to **Hub** on a monthly basis.
 
 ---
 
@@ -123,7 +115,7 @@ Within the **Contrast UI**, an environment is used to organize **applications** 
 
 ## Event
 
-In Assess mode, an event is generated when the running application calls code that Contrast instrumented with a **sensor**.
+In **Assess** mode, an event is generated when the running application calls code that Contrast instrumented with a **sensor**.
 
 ---
 
@@ -159,13 +151,19 @@ A library is any packaged, third-party code included in the **application**. Lan
 
 ## Monitor
 
-Monitor is a **Protect** rule mode that **tracks** attacks through the application, but doesn't cause an exception to be thrown if a successful **attack event** occurs. However, the agent reports the event to the Contrast UI with all of the metadata that the agent gathered about the attack event.
+Monitor is a **Protect** mode that **tracks** attacks through the application, but doesn't cause an exception to be thrown if a successful **attack event** occurs. However, the agent reports the event to the Contrast UI with all of the metadata that the agent gathered about the attack event.
 
 ---
 
 ## .NET Agent
 
 The .NET agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for .NET web applications.
+
+---
+
+## .NET Core Agent
+
+The .NET Core agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for .NET Core web applications.
 
 ---
 
@@ -177,43 +175,43 @@ Path Traversal aims to access files and directories stored outside the web root 
 
 ## Policy
 
-A policy is the set of rules enabled on a given application. It may also refer to a Compliance Policy, Library Policy or Remediation Policy.
+A policy is the set of rules enabled on a given **application**. It may also refer to a Compliance Policy, Library Policy or Remediation Policy.
 
 ---
 
 ## Policy File
 
-A policy file contains all the **rulepacks** to use in the **engine** along with some configuration information.
+A policy file contains all the **rulepacks** to use in the **agent** along with some configuration information.
 
 ---
 
 ## Preflight
 
-Preflight is a message sent to the Contrast UI by agents in **Assess** mode. The **Contrast UI** responds with a message indicating which **traces** the agent should send to the UI. This is an optimization step to prevent the UI from processing duplicate traces.
+Preflight is a message sent to the Contrast UI by agents in **Assess** mode. The **Contrast UI** responds with a message indicating which **vulnerabilities** the agent should send to the UI. This is an optimization step to prevent the UI from processing duplicate vulnerabilities.
 
 ---
 
 ## Probe 
 
-An **attack event** that looks like an attack, but didn't touch any vulnerable code in the protected application, is displayed in the **Contrast UI** as a Probe event.
+An **attack event** that looks like an attack, but didn't touch any vulnerable code in the protected application, is displayed in the **Contrast UI** as a Probed event.
 
 ---
 
 ## Propagation
 
-Propagation occurs when untrusted data is transferred to another object. When propagation happens in a running program, that generates a **propagation event**. The **propagation rules** within the rules in use by your **engine** determine how propagation is modeled in Contrast.
+Propagation occurs when untrusted data is transferred to another object. When propagation happens in a running program, that generates a **propagation event**. The **propagation rules** within the rules in use by your **agent** determine how propagation is modeled in Contrast.
 
 ---
 
 ## Propagation Event
 
-A **propagation event** is generated when a **propagation** condition is met in a running program as defined by a **propagation rule**. When the conditions of the **rule** are met, a propagation event is generated that tracks the tainted data and **trace** information from the source object to the destination object. The destination object is considered to be **tracked**.
+A propagation event is generated when a **propagation** condition is met in a running program as defined by a **propagation rule**. When the conditions of the rule are met, a propagation event is generated that tracks the tainted data and **vulnerability** information from the source object to the destination object. The destination object is considered to be **tracked**.
 
 ---
 
 ## Propagation Rule
 
-To model how **propagation** actually works in a running application, Contrast uses **propagation rules**. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an object; the parameters to a method; and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source. 
+To model how **propagation** actually works in a running application, Contrast uses propagation rules. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an object; the parameters to a method; and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source. 
 
 ---
 
@@ -225,7 +223,7 @@ A propagator is a method that accepts tainted input and stores or produces taint
 
 ## Protect
 
-Protect is a set of rules and features designed for Production **environments** to monitor and block **attacks**. Protect is considered an agent mode and, is supported by the Java, .NET, Node, Ruby, Python and Proxy agents. This mode tracks values from sources, performs an initial analysis, and then examines values at **sinks** to determine if an attack is taking place.
+Protect is a set of rules and features designed for Production **environments** to monitor and block **attacks**. Protect is considered an **agent** mode; it's supported by the Java, .NET, Node, Ruby, Python and Proxy agents. This mode tracks values from sources, performs an initial analysis, and then examines values at **sinks** to determine if an attack is taking place.
 
 ---
 
@@ -249,9 +247,9 @@ The Ruby agent is a Contrast **agent** that runs in **Protect** and **Assess** m
 
 ## Rule
 
-A rule refers to the specific logic required for Contrast to identify a vulnerability in **Assess** mode or block an attack event in **Protect** mode while monitoring a running application.
+A rule refers to the specific logic required for Contrast to identify a **vulnerability** in **Assess** mode or block an **attack event** in **Protect** mode while monitoring a running application.
 
-If the pattern is matched, the engine generates a **trace** to send to the **Contrast UI**. Each pattern consists of a series of methods ending in a **trigger**. Each of these methods can also be required. If these methods are detected, the pattern does not match.
+If the pattern is matched, the agent generates a vulnerability to send to the **Contrast UI**. Each pattern consists of a series of methods ending in a **trigger**. Each of these methods can also be required. If these methods are detected, the pattern does not match.
 
 ---
 
@@ -263,31 +261,31 @@ A **rulepack** identifies a collection of **rules**. A core set of rules are del
 
 ## Software as a Service (SaaS)
 
-Software as a Service (SaaS) refers to a set of Contrast UI environments hosted in AWS. Updates are pushed to SaaS as desired.
+Software as a Service (SaaS) refers to a set of Contrast UI **environments** hosted in AWS. Contrast pushes updates to SaaS as they're available.
 
 ---
 
 ## Scope
 
-A method **scope** can be defined for a **rule**. When an application's execution leaves the scope defined for a *rule*, the *engine* will check the conditions of the rule as defined by its **events** to determine if a trace should be generated.
+A method **scope** can be defined for a **rule**. When an application's execution leaves the scope defined for a rule, the **agent** checks the conditions of the rule as defined by its **events** to determine if a vulnerability should be generated.
 
 ---
 
 ## Security Control
 
-A **security control** is a security mechanism that does something to make input data safe, such as validate input, encode output, check for data level authorization, etc. Security Controls that don't specifically look at data to make a security check, such as validating whether a user is authorized to invoke a particular method, are simply defined as **events**, which can be monitored by a **rule**.
+A **security control** is a security mechanism that performs an action to make input data safe, such as validate input, encode output, check for data level authorization, etc. Security controls that don't specifically look at data to make a security check - such as validating whether a user is authorized to invoke a particular method - are simply defined as **events**, which can be monitored by a **rule**.
 
 ---
 
 ## Sensor
 
-A sensor is the instrumentation that Contrast adds to the running application. The sensor's job is to gather data from the immediate method context, generate a simple **event**, and send it to the Contrast **engine**.
+A sensor is the instrumentation that Contrast adds to the running application. The sensor's job is to gather data from the immediate method context, generate a simple **event**, and send it to the Contrast **agent**.
 
 ---
 
 ## Sink 
 
-Sink is the method, object or other code in which unsanitized and/or unvalidated user input from an **untrusted data source** could cause damage to an application.
+Sink is the method, object or other code in which unsanitized and/or unvalidated user input from an **untrusted data source** could cause damage to an **application**.
 
 ---
 
@@ -299,19 +297,13 @@ The abbreviated name for an **untrusted data source**.
 
 ## SQL Injection
 
-SQL Injection is a class of **vulnerabilities** in which the attacker can change the meaning of a database query. See [Little Bobby Tables](https://xkcd.com/327/) for examples. 
-
----
-
-## SQLi
-
-See **SQL Injection**. 
+SQL Injection (SQLi) is a class of **vulnerabilities** in which the attacker can change the meaning of a database query. See [Little Bobby Tables](https://xkcd.com/327/) for examples. 
 
 ---
 
 ## Trace
 
-A trace is a series of events that represent a vulnerability. Traces are generated by the **engine** any time that a series of events matches a runtime **rule**. 
+A trace is a series of events that represent a **vulnerability**. Traces are generated by the **agent** any time that a series of events matches a runtime **rule**. 
 
 ---
 
@@ -323,19 +315,18 @@ When data flows from an **untrusted data source** into an object, that object is
 
 ## Trigger
 
-A trigger is part of a **rule** pattern that indicates that the Contrast **engine** should go back through the collected **events** to see if that rule has been matched.
+A trigger is part of a **rule** pattern that indicates that the Contrast **agent** should go back through the collected **events** to see if that rule has been matched.
 
 ---
 
 ## Untrusted Data Source
 
-An untrusted data source is a source of dangerous input to the **application**. It typically comes directly from the end user and an HTTP request, but it could be from a back-end partner feed, the application's database or any other source considered unsafe.
-
+An untrusted data source is a source of dangerous input to the **application**. It typically comes directly from the end user and an HTTP request, but it could be from a back-end partner feed, the application's database or any other unsafe source.
 ___
 
 ## Vulnerability
 
-According to OWASP, a vulnerability is a [hole or a weakness](https://www.owasp.org/index.php/Category:Vulnerability) in your **application** code. There are [many different types of vulnerabilities](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) that may be used by an attacker to cause harm.
+A vulnerability is a [hole or a weakness](https://www.owasp.org/index.php/Category:Vulnerability) in your **application** code, according to OWASP. There are [many different types of vulnerabilities](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) that may be used by an attacker to cause harm.
 
 ___
 
