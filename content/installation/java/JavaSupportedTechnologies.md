@@ -12,7 +12,7 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |JRockit 1.6 (update 95+ or R28.3.6+)       | Grizzly 2.3.20+                      | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
 |Oracle JDK 1.6, 1.7, 1.8                   | JBoss 4.2, 5, 5.1, 6.1, 7, 7.1       | Direct Web Remoting (DWR)
 |Open JDK 1.6, 1.7, 1.8                     | Jetty 7, 8, 9                        | DropWizard
-|                                           | Karaf 3.0.x                          | Freemarker, Velocity
+|                                           | Karaf 3.0.x                          | Freemarker
 |                                           | Netty 4.x                            | GSON, Kryo, minidev, org.json
 |                                           | Play 2.4                             | Google Web Toolkit (GWT)
 |                                           | Tomcat 5, 6, 7, 8                    | Hibernate
