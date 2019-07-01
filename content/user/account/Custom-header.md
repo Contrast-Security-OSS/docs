@@ -6,11 +6,11 @@ tags: "user manage account header footer custom settings"
 -->
 
 
-Create a customized header and footer for your Contrast account with your choice color, text and more style options. 
+Create a customized header and footer for the Contrast UI with your choice of color, text and more style options. This feature is available for users with Enterprise-on-Premises (EOP) instances of Contrast.
 
 ## Header and Footer Styling
 
-Complete the following steps to use HTML to customize the header, footer or both for your account. The height of every header is set at 24 pixels for Enterprise-on-Premises (EOP) users or 75 pixels for SaaS users. The height of every footer is set at 75 pixels. 
+Complete the following steps to use HTML to customize the header, footer or both per server. The height of every header is set at 24 pixels. The height of every footer is set at 75 pixels. 
 
 <a href="assets/images/Custom-header.png" rel="lightbox" title="Add a customized header and footer with the text and color of your choice"><img class="thumbnail" src="assets/images/Custom-header.png"/></a>
 
