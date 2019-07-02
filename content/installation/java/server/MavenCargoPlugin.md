@@ -7,7 +7,7 @@ tags: "java agent installation maven codehaus"
 
 ## Instructions
 
-* Add a `<cargo.jvmargs>` property to the `<properties>` section of `<configuration>` in your ***pom.xml***:
+* Add a `<cargo.jvmargs>` property to the `<properties>` section of `<configuration>` in your *pom.xml*:
 
 ````
 <build>
