@@ -1,16 +1,17 @@
 <!--
 title: "Installing Contrast on Google App Engine"
 description: "Guidelines for configuring an agent with the Google App Engine"
-tags: "java agent installation Google"
+tags: "java agent installation Google engine"
 -->
 
 
-## Getting Started
-To install the Contrast agent in your Google App Engine environment, please follow the following instructions.
+To add the Contrast agent in your Google App Engine environment, complete the steps in the following **Configuration Instructions**. 
 
-Note that Contrast only works in your locally deployed (dev/test) instance of App Engine. The Google App Engine cloud doesn't support the Java instrumentation libraries required by Contrast, but the locally deployed instance of App Engine does.
+> **Note:** Contrast only works in your locally deployed (dev/test) instance of App Engine. The the locally deployed instance of App Engine supports the Java instrumentation libraries required by Contrast; but, Google App Engine cloud doesn't.
 
-Assuming you are using Maven to deploy your application as described [here](https://developers.google.com/appengine/docs/java/gettingstarted/creating), you need to edit your ***pom.xml*** file under ```<build>/<plugins>/<plugin>``` with a ```groupid``` of: ```<groupId>com.google.appengine</groupId>``` and ```artifactid``` of: ```<artifactId>appengine-maven-plugin</artifactId>```
+## Configuration Instructions
+
+If you're using Maven to [deploy your application](https://developers.google.com/appengine/docs/java/gettingstarted/creating), you need to edit your *pom.xml* file under `<build>/<plugins>/<plugin>` with a `groupid` of `<groupId>com.google.appengine</groupId>` and `artifactid` of `<artifactId>appengine-maven-plugin</artifactId>`.
 
 Add the following block: 
 
@@ -22,7 +23,9 @@ Add the following block:
   </jvmFlags>
 </configuration>
 ````
-to end up with something like: 
+
+The result should be similar to: 
+
 ````
 <plugin>
   <groupId>com.google.appengine</groupId>
@@ -36,11 +39,15 @@ to end up with something like:
   </configuration>
 </plugin>
 ````
-> **Note:** If you don't provide the ```-Dcontrast.rootapp jvmFlag```, Contrast will simply refer to your application by the name ```ROOT```.
+
+> **Note:** If you don't provide the `-Dcontrast.rootapp jvmFlag`, Contrast will refer to your application by the name `ROOT`.
  
 Once this is done, you can run: 
+
 ````
 mvn clean install
 mvn appengine:devserver
 ````
+
 Now your application will launch with the Contrast agent monitoring the application.
+

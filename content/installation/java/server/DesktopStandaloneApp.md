@@ -4,7 +4,7 @@ description: "Instructions for running Java agent on desktop or standalone app"
 tags: "java agent desktop installation"
 -->
 
-The process is pretty much the same, but you have to also pass a name in the ```contrast.appname``` system property under which to collect vulnerabilities.
+The process to run the Java agent on a desktop or standalone application very similar to the standard process for a web application. The significant difference is that you must also pass a name in the `contrast.appname` system property under which to collect vulnerabilities.
 
 ```
 -Dcontrast.appname=AcmeDesktopApp -javaagent:<path>/contrast.jar
