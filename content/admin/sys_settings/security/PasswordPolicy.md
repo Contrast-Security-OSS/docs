@@ -4,11 +4,11 @@ description: "Guidelines for configuring the password policy for the Contrast in
 tags: "Admin system settings security password policy administration"
 -->
 
-Regulate passwords within your organization by creating a password policy. You must be a SuperAdmin to configure the default policy in **System Settings**, or an Organization Administrator (OrgAdmin() to manage the policy in **Organization Settings**.  
+Regulate passwords within your organization by creating a password policy. You must be a SuperAdmin to configure the default policy in **System Settings**, or an organization administrator (OrgAdmin) to manage the policy in **Organization Settings**.  
 
-## Manage your Policy
+## Manage Your Policy
 
-Go to the **Security** tab in **Organization** or **System Settings**. In the **Password Policy** form, set minimum and maximum requirements for all passwords. 
+Go to the **Security** tab in **Organization Settings** or **System Settings**. In the **Password Policy** form, set minimum and maximum requirements for all passwords. 
 
 <a href="assets/images/Security-password-policy.png" rel="lightbox" title="Password Policy form"><img class="thumbnail" src="assets/images/Security-password-policy.png"/></a>
 
@@ -19,6 +19,6 @@ Go to the **Security** tab in **Organization** or **System Settings**. In the **
 * Enter the number of login attempts allowed before **Login Lockout**.
 * Choose the length of time allowed before **Inactive Account Expiration**.
 * Check the box to **Restrict Password Reuse**, and use the dropdown menu to choose the number of times each password may be reused. 
-* Check the box to **Restrict Password Reset**, and use the dropdown menu to choose the number of days during which a user can reset their password <!-- after their request is sent -->. 
-* Use the dropdown menus to select the amount of time before **Idle Timeout** and **Session Timeout**. 
+* Check the box to **Restrict Password Reset**, and use the dropdown menu to choose the number of days during which a user can reset their password after their reset request is sent. 
+* Use the dropdown menus to select the amount of time that may pass before **Idle Timeout** and **Session Timeout**. 
 * Click the button to **Save** the configuration. 
