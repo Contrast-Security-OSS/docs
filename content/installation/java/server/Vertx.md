@@ -5,13 +5,13 @@ tags: "java agent installation Vert.x"
 -->
 
 
-## Getting Started With Vert.x 
+## Get Started with Vert.x 
+
 Support of the Vert.x framework within the Java Agent is based on the Contrast Netty implementation, specifically the ability to follow key data events through Vert.x's messaging system.
 
-### Configuring Vert.x Web Applications with the Java Agent 
+### Configure Vert.x web applications with the Java agent 
 
-#### Recommendeded Approach:
-The simplest approach for configuring the Contrast Java Agent with a Vert.x Web Application is to package the web application as a standalone or *fat* jar. This can be achieved by including the following plugin in the **POM.xml** file:
+The simplest approach for configuring the Contrast Java agent with a Vert.x web application is to package the web application as a standalone or fat JAR. You can do this by including the following plugin in the *POM.xml* file:
 
 ```xml
 <plugin>
@@ -45,7 +45,7 @@ The simplest approach for configuring the Contrast Java Agent with a Vert.x Web 
 </plugin>
 ```
 
-Once the standalone jar is assembled, include ```-javaagent:/PATH/TO/YOUR/contrast.jar``` as one of the JVM arguments:
+Once the standalone jar is assembled, include `-javaagent:/PATH/TO/YOUR/contrast.jar` as one of the JVM arguments:
 
 ```bash
 java -javaagent:/PATH/TO/YOUR/contrast.jar <other_options> 
@@ -53,9 +53,9 @@ java -javaagent:/PATH/TO/YOUR/contrast.jar <other_options>
 ```
 
 #### Alternative Configuration:
-Alternatively, the Contrast Java Agent can be configured as a ```JVM_OPT``` in the "vertx" script file:
+Alternatively, the Contrast Java Agent can be configured as a `JVM_OPT` in the *vertx* script file:
 
->**Note:** the paths to the application's dependencies will need to be included in the vertx script's ```CLASSPATH``` property.
+>**Note:** The paths to the application's dependencies must be included in the *vertx* script's `CLASSPATH` property.
 
 ```bash
 JVM_OPTS="-XX:+UseBiasedLocking -XX:BiasedLockingStartupDelay=0 
@@ -67,11 +67,11 @@ Once this is configured, launch the web application via the command **vertx run*
 vertx run /PATH/TO/YOUR/src/MainVerticle.java
 ```
 
-The Vert.x application is unlikely to have a ***/WEB-INF/web.xml*** file, from which the Contrast Java Agent can identify the application name. If this is the case, please define the application name via ```-Dcontrast.appname=AppName``` property when launching the Vert.x application with Contrast enabled. For example:
+The Vert.x application is unlikely to have a */WEB-INF/web.xml* file, from which the Java agent can identify the application name. If this is the case, please define the application name via `-Dcontrast.appname=AppName` property when launching the Vert.x application with Contrast enabled. 
 
 ```bash
 java -javaagent:/PATH/TO/YOUR/contrast.jar 
--Dcontrast.appname="<Name_to_show_on_TeamServer>" <other options> 
+-Dcontrast.appname="<Name_to_show_in_Contrast>" <other options> 
 -jar /PATH/TO/YOUR/application.jar
 ```
  
