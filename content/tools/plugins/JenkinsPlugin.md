@@ -61,10 +61,18 @@ Complete the following fields for **Post-Build Actions**.
 
 ### Threshold conditions in a Pipeline step
 
-When you add a Pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements. Pipeline configuration:
+When you add a Pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements.
+
+#### Example pipeline step using queryBy start date:
 
 ```
 contrastVerification applicationId: '1e6ad9c6-89d4-4f06-bdf6-92c569ec89de', count: 1, profile: 'new-profile', queryBy: 3, rule: 'cache-controls-missing', severity: 'High'
+```
+
+#### Example pipeline step using queryBy custom appVersionTag parameter:
+
+```
+contrastVerification applicationId: '1e6ad9c6-89d4-4f06-bdf6-92c569ec89de', count: 1, profile: 'new-profile', queryBy: 4, appVersionTag: 'v1.2.3' rule: 'cache-controls-missing', severity: 'High'
 ```
 
 ## Test for Vulnerabilities
