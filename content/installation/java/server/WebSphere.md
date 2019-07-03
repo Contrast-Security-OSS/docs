@@ -5,8 +5,9 @@ tags: "java agent installation websphere IBM"
 -->
 
 
-## Getting Started
-If you launch WebSphere yourself, you'll have to add Contrast's JVM parameter to the ***server.xml*** file in your cell directory, i.e. 
+## Add Contrast with WebSphere
+
+If you launch WebSphere yourself, you must add Contrast's JVM parameter to the *server.xml* file in your cell directory: 
 
 ```
 ${WEBSPHERE_DIR}\AppServer\profiles\AppSrv01\config\cells\<CellName>\nodes\<NodeName>\servers\server1\server.xml
@@ -16,12 +17,11 @@ ${WEBSPHERE_DIR}\AppServer\profiles\AppSrv01\config\cells\<CellName>\nodes\<Node
 </jvmEntries>
 ```
 
-Of course, you'll have to substitute the path to ***contrast.jar*** and your WebSphere server for your environment.
+Of course, you'll have to substitute the path to *contrast.jar* and your WebSphere server for your environment.
 
-## Installing Contrast through the WebSphere Administration Console
-You can also install Contrast through the WebSphere administration console. These instructions are for WebSphere 8.0/8.5 - instructions for other versions are included in the link below.
+## Add Contrast with the WebSphere Administration Console
 
-The following steps are from the [Websphere support site](http://www-01.ibm.com/support/docview.wss?uid=swg21417365) (includes documentation for other versions):
+You can also add Contrast through the WebSphere administration console. The following instructions from the [Websphere support site](http://www-01.ibm.com/support/docview.wss?uid=swg21417365) are for WebSphere 8.0/8.5. These instructions are also available on the [Websphere support site](http://www-01.ibm.com/support/docview.wss?uid=swg21417365) for other versions. 
 
 ### Application Server
 
@@ -62,5 +62,7 @@ The following steps are from the [Websphere support site](http://www-01.ibm.com/
 
 <a href="assets/images/KB2-e01.png" rel="lightbox" title="Generic JVM Arguments"><img class="thumbnail" src="assets/images/KB2-e01.png"/></a>
 
-> **Note:** IBM J9 does not allow the Java Instrumentation API to alter core Java classes when using the [Shared Classes](http://www.ibm.com/developerworks/library/j-ibmjava4/index.html) feature, so this must be disabled by specifying ```-Xshareclasses:none``` in your JVM parameters, as shown above. Similarly, if -Dcom.ibm.oti.shared.enabled=true is set, you may also run into problems in older J9 JREs.
+> **Notes:** 
+ * IBM J9 doesn't allow the Java Instrumentation API to alter core Java classes when using the [Shared Classes](http://www.ibm.com/developerworks/library/j-ibmjava4/index.html) feature. You must disable this feature by specifying `-Xshareclasses:none` in your JVM parameters, as shown above. 
+ * Similarly, if `-Dcom.ibm.oti.shared.enabled=true` is set, you may also run into problems in older J9 JREs.
 
