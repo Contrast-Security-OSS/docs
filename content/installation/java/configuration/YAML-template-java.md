@@ -93,6 +93,16 @@ api:
   # Set to `true` to deinstrument classes on shutdown. If this is not enabled,
   # the agent disables sensors on shutdown, but leaves instrumentation.
   # deinstrument_on_shutdown: NEEDS_TO_BE_SET
+  
+  # ============================================================================
+  # agent.contrast_working_dir
+  # Configure the location of agent cacheing
+  # 
+  # example:
+  # agent
+  #  contrast_working_dir: /tmp/contrast
+  # 
+  # command line equivalent: -Dcontrast.dir
 
   # ============================================================================
   # agent.logger
