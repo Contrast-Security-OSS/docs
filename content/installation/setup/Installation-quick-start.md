@@ -34,13 +34,14 @@ To connect to Contrast agents, install an agent into your web application server
 
 * The [Java agent](installation-java.html#java-overview) analyzes the behavior of Java web applications running on your container of choice. 
 
-* The [.NET agent](installation-netinstall.html) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
+* The [.NET Framework agent](installation-netinstall.html) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
+
+* The [.NET Core agent](installation-netcore.html#netcore-overview) instruments and analyzers applications running in the .NET Core runtime.
 
 * The [Node agent](installation-node.html#node-overview) analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution. 
 
 * The [Ruby agent](installation-ruby.html#ruby-overview) provides runtime protection of Ruby on Rails web applications.
 
 * The [Python agent](installation-python.html#python-overview) provides runtime protection of Django, Flask and Pyramid web applications.
-
 
 
