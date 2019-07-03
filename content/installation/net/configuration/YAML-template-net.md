@@ -240,6 +240,10 @@ agent:
     # Indicate that the agent should allow the CLR to
     # inline methods that are not instrumented by Contrast.
     # enable_jit_inlining: true
+    
+    # Indicate that the agent should allow the CLR to
+    # perform transparency checks under full trust.
+    # enable_transparency_checks: false
 
     # Indicate that the agent should automatically restart IIS to
     # apply certain configuration changes (e.g., app_pool_blacklist).
