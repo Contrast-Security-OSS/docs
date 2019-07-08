@@ -8,16 +8,16 @@ Contrast requires compilation in the local environment to install *C* libraries.
 
 ## Reinstallation
 
-### Single Gem Reinstall
+### Reinstall a single gem 
 
-The least invasive option is to reinstall the Contrast gem. After installing the Contrast gem, uninstall its dependency and re-install using the `ruby` platform flag.
+The least invasive option is to reinstall a single gem. After installing the Contrast gem, uninstall its dependency and re-install using the `ruby` platform flag.
 
 ```
 gem uninstall -I google-protobuf
 gem install google-protobuf --version=3.7.1 --platform=ruby
 ```
 
-### Full Platform Reinstall
+### Reinstall full platform
 
 If the single gem installation doesn't work, you may also try to reinstall all gems under the Ruby platform.
 
