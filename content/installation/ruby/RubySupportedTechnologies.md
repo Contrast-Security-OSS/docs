@@ -4,29 +4,42 @@ description: "List of supported technologies"
 tags: "installation Ruby on Rails agent frameworks support troubleshooting gem"
 -->
 
-The Ruby agent supports Ruby language versions 2.3.x through 2.6.x. Framework support is currently for Ruby on Rails versions 3.x and above as well as Sinatra 2.x and above. The Ruby agent is a standard Rack middleware; consequently, it may work in other Rack-based web frameworks like Grape and Padrino. 
+## Ruby Version Support
 
-## Database Support
+Contrast supports Ruby Long-Term Support (LTS) versions in *normal maintenance* and *security maintenance* status. Contrast shifts its support for Ruby versions as the working group shifts its LTS windows. For the schedule, see the [Ruby Maintenance Branches schedule](https://www.ruby-lang.org/en/downloads/branches/).
 
-The Ruby agent has SQL Injection modules for MySQL (`mysql2` gem), SQLite3 and PostgreSQL (`pg` gem). The agent also has NoSQL Injection modules for MongoDB (`mongoid` gem).
+> **Note:** The Ruby agent will work to shift minor version support upon release, but may require a quarter to complete compatibility testing.
+
+## Web Framework Support
+
+* [Rails](https://rubyonrails.org/) 3.X - 5.X 
+* [Sinatra]((http://sinatrarb.com/)) 2.X and up 
+
+While the agent can still run on [Rack](http://rack.github.io/) based web frameworks that aren't officially supported, Contrast may produce less-specific findings than it would for supported frameworks. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with the Rack methods.
+
+
+## Third-Party Module Support
+
+* [MongoDB](http://alexeypetrushin.github.io/mongodb/driver.html)
+* [Mysql2](https://github.com/brianmario/mysql2)
+* [PG](https://bitbucket.org/ged/ruby-pg/wiki/Home)
+* [SQLite3](https://github.com/sparklemotion/sqlite3-ruby)
+
+Contrast doesn't guarantee support for old or deprecated versions of third-party modules.
 
 ## OS Support
 
-Agent testing is done on **64-bit OSX** and **64-bit Linux**. The agent has [glibc C](https://www.gnu.org/software/libc/) dependencies and may not work in other operating system environments, operating systems running [musl C](https://www.musl-libc.org/), or under [JRuby](https://www.jruby.org/). 
+The agent runs in the Ruby application layer with some C dependencies. Agent testing is done on **64-bit OSX** and **64-bit Linux**. As the agent has [glibc C](https://www.gnu.org/software/libc/) dependencies, it may not work in other operating system environments.
 
-For users running on operating systems running **musl C**, a potential work around is available. You may try to install the agent and manually re-install a dependency to allow for startup: 
+## Testing Environments
 
-```
-gem uninstall -I google-protobuf
-gem install google-protobuf --version=3.7.1 --platform=ruby
-```
+When changes are made, Contrast runs a battery of automated tests to ensure that it detects findings in supported technologies across all supported versions of Ruby.
 
-You may also try to reinstall all gems under the Ruby platform:
+## Additional Technology
 
-```
-BUNDLE_FORCE_RUBY_PLATFORM=1 bundle install
-```
+Contrast runs with a range of third-party technology, including options that aren't listed here. If you want to confirm that Contrast supports your preferred technology, or you'd like to make a case for Contrast to support it, [let Contrast know.](mailto:bugs@contrastsecurity.com)
 
-## Learn More
 
-You can find more details about this issue and the work around in [GitHub](https://github.com/protocolbuffers/protobuf/issues/4460#issuecomment-434631296).
+## More Information
+
+* [Working with MuslC](installation-ruby.html#muslc)
