@@ -1,9 +1,12 @@
 <!--
-title: "Installing Contrast on WebSphere"
-description: "JBoss5 and higher agent installation process using Windows or startup script"
-tags: "java agent installation websphere IBM"
+title: "Configure Contrast on WebSphere"
+description: "JBoss5 and higher agent configuration process using Windows or startup script"
+tags: "java agent configuration websphere IBM"
 -->
 
+## Before You Start 
+
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
 
 ## Add Contrast with WebSphere
 

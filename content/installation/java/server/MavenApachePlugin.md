@@ -1,14 +1,14 @@
 <!--
 title: "Running Contrast on Tomcat with Maven Apache Tomcat Plugin"
-description: "Overview of the process for installation of Contrast on an application using the Apache Maven Tomcat plugin"
-tags: "java agent installation maven plugin"
+description: "Overview of the process for configuration of Contrast on an application using the Apache Maven Tomcat plugin"
+tags: "java agent configuration maven plugin"
 -->
 
 Use the following instructions to add Contrast to an application using the Apache Maven Tomcat plugin.
 
-## Prerequisites
+## Before You Start 
 
-Download the Contrast plugin (*contrast.jar*) from the Contrast UI. 
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
 
 ## Configuration with MAVEN_OPTS
 

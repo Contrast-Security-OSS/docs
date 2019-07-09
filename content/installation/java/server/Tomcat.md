@@ -1,8 +1,12 @@
 <!--
-title: "Installing on Tomcat"
-description: "Tomcat installation process using Windows or startup script"
-tags: "java agent installation Tomcat"
+title: "Configuration on Tomcat"
+description: "Tomcat configuration process using Windows or startup script"
+tags: "java agent configuration Tomcat"
 -->
+
+## Before You Start 
+
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
 
 ## Run Contrast from "startup.bat"
 

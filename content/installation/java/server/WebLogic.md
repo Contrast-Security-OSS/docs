@@ -1,11 +1,16 @@
 <!--
-title: "Installing on WebLogic"
+title: "Configuration on WebLogic"
 description: "Guideliness for configuring agents on WebLogic"
-tags: "java agent installation BEA Oracle WebLogic"
+tags: "java agent configuration BEA Oracle WebLogic"
 -->
 
+## Before You Start 
 
-## Get Started on Unix
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
+
+## Configuration 
+
+### Unix
 
 If you launch WebLogic yourself, you must add Contrast's JVM parameter to the *startWebLogic* file in your installation's *bin* directory. For UNIX-based operating systems, the path to this file looks like:
 
@@ -19,7 +24,7 @@ In this file, before the Java execution step, add the Contrast engine as a `-jav
 export JAVA_OPTIONS="$JAVA_OPTIONS -javaagent:/path/to/contrast.jar"
 ````
 
-## Get Started on Windows
+### Windows
 
 For Windows systems, the path looks like:
 

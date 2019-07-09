@@ -1,7 +1,7 @@
 <!--
 title: "Installing on AWS"
 description: "AWS installation process"
-tags: "java agent installation AWS ebs elasticbeanstalk"
+tags: "java agent configuration AWS ebs elasticbeanstalk"
 -->
 
 Amazon Web Services (AWS) is a secure cloud services platform that provides a reliable, scalable and affordable computing platform solution. By using AWS, Contrast users can maximize the security of their applications.

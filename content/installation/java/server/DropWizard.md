@@ -1,9 +1,14 @@
 <!--
-title: "Installing Contrast on DropWizard"
-description: "DropWizard installation of the Contrast Java Agent"
+title: "Configure Contrast with DropWizard"
+description: "DropWizard configuration of the Contrast Java agent"
 tags: "java agent installation dropwizard"
 -->
 
+## Before You Start
+
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
+
+## Configuration 
 
 To run the Java agent with your standalone or fat JAR Dropwizard application, use the following example:
 

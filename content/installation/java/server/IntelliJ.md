@@ -7,11 +7,12 @@ tags: "java agent installation IntelliJ IDE"
 
 Use the following instructions to add the Contrast agent to an application using IntelliJ IDE's supported application servers.
 
-##Prerequisites
+## Before You Start
 
-Download the Contrast plugin (*contrast.jar*) from the Contrast UI.
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
 
-##Instructions
+## Configuration
+
 <ol>
 <li> Click on **Run** in the application toolbar, and then click on the **Edit Configuration** menu item from the dropdown.</li>
 <li> Select the IntelliJ Server configuration instance.</li>

@@ -1,17 +1,17 @@
 <!--
 title: "Running Contrast on a NetBeans Application"
-description: "Overview of the process for installation of Contrast on an application using the NetBeans IDE with JBoss"
-tags: "java agent installation NetBeans IDE JBose"
+description: "Overview of the process to configure Contrast on an application using the NetBeans IDE with JBoss"
+tags: "java agent configuration NetBeans IDE JBose"
 -->
 
 
 Use the following instructions to add Contrast to an application using the NetBeans IDE with JBoss.
 
-## Prerequisites
+## Before You Start 
 
-Download the Contrast plugin (*contrast.jar*) from the Contrast UI.
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
 
-## Instructions
+## Configuration
 
 <ol> 
 <li> Open the NetBeans project. </li>

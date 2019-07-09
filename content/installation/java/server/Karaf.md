@@ -1,11 +1,14 @@
 <!--
-title: "Installing On Karaf"
-description: "Agent installation using the Karaf app container"
-tags: "java agent installation Karaf apache"
+title: "Configure the agent with Karaf"
+description: "Agent configuration using the Karaf application container"
+tags: "java agent configuration Karaf apache"
 -->
 
+## Before You Start 
 
-## Install On Karaf
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
+
+## Configuration
 
 * Add a `KARAF_OPTS` environment variable containing the `-javaagent` flag before starting the container:
 

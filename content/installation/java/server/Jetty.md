@@ -1,11 +1,14 @@
 <!--
 title: "Jetty"
-description: "Agent installation and running using the Jetty container"
-tags: "java agent installation run Jetty"
+description: "Agent configuration using the Jetty container"
+tags: "java agent configuration run Jetty"
 -->
 
+## Before You Start 
 
-## Installation
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
+
+## Configuration
 
 To add the Contrast agent on Jetty, add the following lines to your *${JETTY_DIR}\start.ini* file: 
 

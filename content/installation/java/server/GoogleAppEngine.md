@@ -1,13 +1,17 @@
 <!--
-title: "Installing Contrast on Google App Engine"
+title: "Configure Contrast with Google App Engine"
 description: "Guidelines for configuring an agent with the Google App Engine"
-tags: "java agent installation Google engine"
+tags: "java agent configuration Google engine"
 -->
 
 
 To add the Contrast agent in your Google App Engine environment, complete the steps in the following **Configuration Instructions**. 
 
 > **Note:** Contrast only works in your locally deployed (dev/test) instance of App Engine. The the locally deployed instance of App Engine supports the Java instrumentation libraries required by Contrast; but, Google App Engine cloud doesn't.
+
+## Before You Start
+
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
 
 ## Configuration Instructions
 

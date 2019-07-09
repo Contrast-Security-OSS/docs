@@ -4,18 +4,21 @@ description: "Agent installation using the Play framework"
 tags: "java agent installation Play"
 -->
 
-## Run Contrast From The Command Line With Activator
+## Before You Start 
 
-Play makes adding JVM options to the application's JVM a little different than standard Java options syntax.
-For Play to pass the options properly, they must be prepended with *-J*. As a result, you must add the following line to your Play startup command. Of course, you'll have to substitute the path to *contrast.jar* and the server for your environment.
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
+
+## Run Contrast from the Command Line 
+
+Play makes the process to add JVM options to the application's JVM a little different than standard Java options syntax. For Play to pass the options properly, they must be prepended with *-J*. As a result, you must add the following line to your Play startup command. Of course, you'll have to substitute the path to *contrast.jar* and the server for your environment.
 
 ``` 
 -J-javaagent:${DOWNLOADS}/contrast.jar
 ```
 
-## Run Contrast from a Script with Activator
+## Run Contrast from a Script 
 
-If you run Play from a script calling the Play activator, simply amend the command as shown:
+If you run Play from a script calling the Play activator, amend the command as shown:
 
 ```
 activator -J-javaagent:${DOWNLOADS}/contrast.jar ${YOUR_JVM_OPTIONS} ${YOUR_PLAY_OPTIONS} run
