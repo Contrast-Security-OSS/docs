@@ -6,11 +6,8 @@ tags: "installation Ruby on Rails agent troubleshooting"
 -->
 
 The Contrast Ruby agent analyzes the behavior of Ruby web applications using established techniques, such as 
-[monkey patching](https://en.wikipedia.org/wiki/Monkey_patch), to add Contrast sensors to an application at runtime. 
-Just as tools such as NewRelic use this technique to weave performance analytics into host applications, Contrast uses 
-it to help keep your applications secure. 
+[monkey patching](https://en.wikipedia.org/wiki/Monkey_patch), to add Contrast sensors to an application at runtime.
  
-
 ## About the Agent
 
 There are two primary components of the Ruby agent: the agent itself and a service used to communicate to the Contrast
