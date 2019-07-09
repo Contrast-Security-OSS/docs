@@ -1,25 +1,27 @@
 <!--
 title: "GlassFish"
-description: "Agent installation using the GlassFish container"
-tags: "java agent installation glassfish intellij netbeans"
+description: "Agent configuration using the GlassFish container"
+tags: "java agent configuration glassfish intellij netbeans"
 -->
 
+## Before You Start 
 
-## Configuring GlassFish
-If you launch GlassFish yourself, you'll have to add Contrast's JVM parameter to the ***domain.xml*** file in your domain directory, i.e. ***${GLASSFISH_DIR}\domains\domain1***.
+[Download and install the Java agent](installation-javastandard.html) from Contrast.
+
+## Configure GlassFish
+
+If you launch GlassFish yourself, you'll have to add Contrast's JVM parameter to the *domain.xml* file in your domain directory, i.e. ***${GLASSFISH_DIR}\domains\domain1***.
 
 ``` 
 <!-- Within the your profile's "java-config" element, add the following lines: -->
 <jvm-options>-javaagent:${DOWNLOADS}\contrast.jar</jvm-options>
 ```
 
-Of course, you will need to substitute the path to ***contrast.jar*** and the GlassFish server for your environment.
+Of course, you will need to substitute the path to *contrast.jar* and the GlassFish server for your environment.
 
----
+## Run Contrast on GlassFish with IntelliJ
 
-## Running Contrast on GlassFish with IntelliJ
-This document will outline the process for installing Contrast on an application using the IntelliJ IDE, running GlassFish. As a prerequisite,
-download the Contrast plugin (***contrast.jar***) from the Contrast site.
+This document will outline the process for installing Contrast on an application using the IntelliJ IDE, running GlassFish. 
 
 ### Instructions
 
@@ -61,11 +63,8 @@ download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 </ol>
 
----
 
-## Running Contrast on GlassFish with NetBeans
-
-As a prerequisite, download the Contrast plugin (**contrast.jar**) from the Contrast site.
+## Run Contrast on GlassFish with NetBeans
 
 ### Instructions
 

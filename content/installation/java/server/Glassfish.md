@@ -67,9 +67,7 @@ download the Contrast plugin (***contrast.jar***) from the Contrast site.
 <li> Navigate to your application, and allow an extra minute for it to start up. </li>
 </ol>
 
----
-
-## Running Contrast on GlassFish with NetBeans
+## Run Contrast on GlassFish with NetBeans
 As a prerequisite, download the Contrast plugin (***contrast.jar***) from the Contrast site.
 
 ### Instructions
