@@ -1,20 +1,36 @@
+
 <!-- 
 title: "Ruby Agent Overview "
 description: "Troubleshooting the Ruby Agent"
 tags: "installation Ruby on Rails agent troubleshooting"
 -->
 
-The Contrast Ruby agent provides runtime protection of Ruby on Rails web applications. 
+The Contrast Ruby agent analyzes the behavior of Ruby web applications using established techniques, such as 
+[monkey patching](https://en.wikipedia.org/wiki/Monkey_patch), to add Contrast sensors to an application at runtime. 
+Just as tools such as NewRelic use this technique to weave performance analytics into host applications, Contrast uses 
+it to help keep your applications secure. 
+ 
 
-## About Ruby 
+## About the Agent
 
-The Ruby agent is a Rack middleware that's compatible with Ruby on Rails applications from version 3.0 and above as well as Sintra version 2.0 and above. It may also be compatible with other Rack-based web frameworks like Grape and Padrino.
-
-From its position within the Rack middleware stack, the Ruby agent inspects HTTP requests to identify potentially harmful input vectors. During the request, the agent inspects database queries, file writes and other potentially damaging actions resulting from the request. At the end of the request, the agent inspects the rendered output for successful attacks, and can block a successful attack from being forwarded to the application user. The service sends the details of the attack to the Contrast application, which then sends you an alert and displays attack details in the interface. 
+There are two primary components of the Ruby agent: the agent itself and a service used to communicate to the Contrast
+Server.
+ 
+The Ruby agent is a [Rack middleware](http://rack.github.io/) designed to integrate with Rack-based frameworks. 
+A list of these supported frameworks can be found on our [Supported Technologies](installation-ruby.html#ruby-supported)
+page. From its position within the Rack middleware stack, the Ruby agent inspects HTTP requests to identify potentially 
+harmful input vectors. During the request, the agent inspects database queries, file writes, system calls, and other 
+potentially damaging actions resulting from the request. 
+ 
+The service is a standalone executable that translates messages from the agent to a format consumable by the Contrast
+Server. The agent, on application start, will manage this service as a separate child process, isolating the service's
+impact to the application. 
 
 <a href="assets/images/Ruby-agent-arch.png" rel="lightbox" title="Ruby agent architecture"><img class="thumbnail" src="assets/images/Ruby-agent-arch.png"/></a>
 
 ## Use the Agent 
 
-To Assess or Protect your application, download the Ruby agent and create a configuration file as described in [Ruby Agent Installation](installation-ruby.html#ruby-install). The Ruby agent is installed as a standard Ruby Gem.
+To start analyzing an application, download the Ruby agent and create a configuration file. The process is outlined in
+the [Ruby Agent Installation](installation-ruby.html#ruby-install) article. The Ruby agent is installed as a standard
+Ruby Gem and then activated as a standard middleware.
 
