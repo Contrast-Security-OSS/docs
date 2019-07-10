@@ -14,6 +14,8 @@ When you start your server with Contrast, you'll see a few messages that indicat
 
 ## Performance Tuning Hints
 
+Contrast's affect on application performance varies depending on the data processing characteristics of the application. Applications whose request processing time is dominated by IO operations (e.g. database or web service calls) are less likely to perceive Contrast's effects. On the other hand, Contrast's sensors will be more active in an application that performs unusually large text processing in memory.
+
 The following considerations apply to our platform as a whole:
 
 * Run Contrast in *sampling* mode (gain 33% performance boost)
