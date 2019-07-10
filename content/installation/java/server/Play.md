@@ -1,12 +1,12 @@
 <!--
-title: "Installing on Play"
-description: "Agent installation using the Play framework"
-tags: "java agent installation Play"
+title: "Configuration on Play"
+description: "Agent configuration using the Play framework"
+tags: "java agent configuration Play"
 -->
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the following instructions.
 
 ## Run Contrast from the Command Line 
 

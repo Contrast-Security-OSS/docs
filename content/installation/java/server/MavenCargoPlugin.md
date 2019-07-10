@@ -6,7 +6,7 @@ tags: "java agent configuration maven codehaus"
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
 
 ## Configuration
 

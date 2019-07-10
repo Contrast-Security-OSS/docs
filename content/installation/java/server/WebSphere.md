@@ -6,7 +6,7 @@ tags: "java agent configuration websphere IBM"
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the following instructions.
 
 ## Add Contrast with WebSphere
 
@@ -20,7 +20,7 @@ ${WEBSPHERE_DIR}\AppServer\profiles\AppSrv01\config\cells\<CellName>\nodes\<Node
 </jvmEntries>
 ```
 
-Of course, you'll have to substitute the path to *contrast.jar* and your WebSphere server for your environment.
+Of course, you need to substitute the path to *contrast.jar* and your WebSphere server for your environment.
 
 ## Add Contrast with the WebSphere Administration Console
 
@@ -29,7 +29,7 @@ You can also add Contrast through the WebSphere administration console. The foll
 ### Application Server
 
 <ol>
-<li> In the Administration Console select **Servers** </li>
+<li> In the Administration Console, select **Servers** </li>
 <li> Expand **Server Type** and select **WebSphere application servers** </li>
 <li> Click on the name of your server </li>
 <li> Expand **Java and Process Management** and select **Process Definition**. </li>

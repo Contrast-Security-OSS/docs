@@ -203,7 +203,7 @@ Once deployed, this title creates one organization:
 
 ## Use Contrast with Java Applications on PCF 
 
-The Contrast integration with PCF allows you to easily deploy Contrast-monitored applications on the PCF platform. These instructions walk you through deploying a Java applicaton with a Contrast agent installed, and demonstrates the steps to get up and running with PCF and the Contrast Java buildpack.
+The Contrast integration with PCF allows you to easily deploy Contrast-monitored applications on the PCF platform. These instructions walk you through deploying a Java application with a Contrast agent installed, and demonstrates the steps to get up and running with PCF and the Contrast Java buildpack.
 
 ### Set up an application with the Contrast build pack
 
@@ -216,7 +216,6 @@ cd spring-music
 ./gradlew assemble
 cf push spring-music
 ```
-
 
 ## Add The Contrast Service Broker Tile
 

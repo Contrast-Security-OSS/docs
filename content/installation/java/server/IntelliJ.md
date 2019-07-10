@@ -9,30 +9,26 @@ Use the following instructions to add the Contrast agent to an application using
 
 ## Before You Start
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
 
 ## Configuration
 
-<ol>
-<li> Click on **Run** in the application toolbar, and then click on the **Edit Configuration** menu item from the dropdown.</li>
-<li> Select the IntelliJ Server configuration instance.</li>
-<li> Select the **Server** tab, and enter the Contrast launcher string in **VM Options**: `-javaagent:${DOWNLOADS}/contrast.jar -noverify`.
-</li>
+* Click on **Run** in the application toolbar, and then click on the **Edit Configuration** menu item from the dropdown.
 
-<br>
 <a href="assets/images/KB2-f04_1.png" rel="lightbox" title="Edit Configuration"><img class="thumbnail" src="assets/images/KB2-f04_1.png"/></a>
+
+* Select the IntelliJ Server configuration instance.
+* Select the **Server** tab, and enter the Contrast launcher string in **VM Options**: `-javaagent:${DOWNLOADS}/contrast.jar -noverify`.
 
 <a href="assets/images/KB2-f04_2.png" rel="lightbox" title="VM Options"><img class="thumbnail" src="assets/images/KB2-f04_2.png"/></a>
 
-<li> Click **Apply** and then **OK**.</li>
-<li> Start the **Server**. </li>
-<li> A Contrast startup message should appear in the **Server** console. (Allow one to two extra minutes for server startup.) </li>
+* Click **Apply** and then **OK**.
+* Start the **Server**. 
+* A Contrast startup message should appear in the **Server** console. (Allow one to two extra minutes for server startup.) 
 
-<br>
 <a href="assets/images/KB2-f04_3.png" rel="lightbox" title="Startup Message"><img class="thumbnail" src="assets/images/KB2-f04_3.png"/></a>
 
-<li> Navigate to your application and allow an extra minute for it to start up. </li>
-</ol>
+* Navigate to your application and allow an extra minute for it to start up. 
 
 ## More Information
 

@@ -6,11 +6,11 @@ tags: "java agent desktop configuration"
 
 ## Before You Start
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
 
 ## Configuration 
 
-The process to run the Java agent on a desktop or standalone application very similar to the standard process for a web application. The significant difference is that you must also pass a name in the `contrast.appname` system property under which to collect vulnerabilities.
+The process to run the Java agent on a desktop or standalone application very similar to the standard process for a web application. The significant difference is that you must also pass a name in the `contrast.appname` system property under which to collect vulnerabilities:
 
 ```
 -Dcontrast.appname=AcmeDesktopApp -javaagent:<path>/contrast.jar

@@ -6,7 +6,7 @@ tags: "java agent configuration glassfish intellij netbeans"
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
 
 ## Configure GlassFish
 
@@ -23,7 +23,7 @@ Of course, you need to substitute the path to *contrast.jar* and the GlassFish s
 
 The following instructions walk you through the process to add the Contrast Java agent to an application using the IntelliJ IDE running GlassFish. 
 
-### Instructions
+### Configuration
 
 * In the menu bar, click the **Start/Run** icon next to the GlassFish service.
 * Wait for the server to finish launching. 
@@ -64,9 +64,9 @@ After GlassFish has finished the startup process, IntelliJ will open a new web b
 
 The following instructions walk you through the process to add the Contrast Java agent to an application using NetBeans running GlassFish. 
 
-### Instructions
+### Configuration 
 
-#### GlassFish
+#### Step one: GlassFish
 
 * Select the **Services** tab.
 * Under **Servers**, right click on the GlassFish Server and select **Start**.
@@ -91,7 +91,7 @@ The following instructions walk you through the process to add the Contrast Java
 
 * Select **Save**.
 
-### NetBeans
+### Step two: NetBeans
 
 * In NetBeans, right click on the GlassFish Server and select **Stop**.
 

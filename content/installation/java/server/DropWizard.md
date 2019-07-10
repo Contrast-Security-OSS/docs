@@ -6,11 +6,11 @@ tags: "java agent installation dropwizard"
 
 ## Before You Start
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
 
 ## Configuration 
 
-To run the Java agent with your standalone or fat JAR Dropwizard application, use the following example:
+To run the Java agent with your standalone or fat JAR Dropwizard application, use the following code sample:
 
 ````
 java -javaagent:/path/to/contrast.jar -Dcontrast.appname="AppNameToReportUnder" -jar /path/to/your/app.jar server /path/to/your/appconfig.yml

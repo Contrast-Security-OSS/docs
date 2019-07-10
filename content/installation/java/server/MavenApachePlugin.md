@@ -8,9 +8,9 @@ Use the following instructions to add Contrast to an application using the Apach
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
 
-## Configuration with MAVEN_OPTS
+## Configuration
 
 * If you're forking your JVM, set your `MAVEN_OPTS` environment variable to contain Contrast's JVM parameters.
 

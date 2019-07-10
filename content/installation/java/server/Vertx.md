@@ -8,11 +8,13 @@ Support of the Vert.x framework within the Java agent is based on the Contrast N
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the configuration instructions.
 
 ## Configure Vert.x Applications with the Java Agent 
 
-The simplest approach for configuring the Contrast Java agent with a Vert.x web application is to package the web application as a standalone or fat JAR. You can do this by including the following plugin in the *POM.xml* file:
+The simplest approach for configuring the Contrast Java agent with a Vert.x web application is to package the web application as a standalone or fat JAR. 
+
+* Include the following plugin in the *POM.xml* file:
 
 ```xml
 <plugin>
@@ -46,7 +48,7 @@ The simplest approach for configuring the Contrast Java agent with a Vert.x web 
 </plugin>
 ```
 
-Once the standalone jar is assembled, include `-javaagent:/PATH/TO/YOUR/contrast.jar` as one of the JVM arguments:
+* Once the standalone JAR is assembled, include `-javaagent:/PATH/TO/YOUR/contrast.jar` as one of the JVM arguments:
 
 ```bash
 java -javaagent:/PATH/TO/YOUR/contrast.jar <other_options> 
@@ -55,13 +57,15 @@ java -javaagent:/PATH/TO/YOUR/contrast.jar <other_options>
 
 ## Alternative Configuration
 
-Alternatively, you can configure the Java agent as a `JVM_OPT` in the *vertx* script file. The paths to the application's dependencies must be included in the *vertx* script's `CLASSPATH` property.
+Alternatively, you can configure the Java agent as a `JVM_OPT` in the *vertx* script file. 
+
+* You must include the paths to the application's dependencies in the *vertx* script's `CLASSPATH` property:
 
 ```bash
 JVM_OPTS="-XX:+UseBiasedLocking -XX:BiasedLockingStartupDelay=0 
 -javaagent:/PATH/TO/YOUR/contrast.jar"
 ```
-Once this is configured, launch the web application via the command `vertx run` passing the path to the main Verticle as a parameter:
+* Once this is configured, launch the web application via the command `vertx run` passing the path to the main Verticle as a parameter:
 
 ```bash
 vertx run /PATH/TO/YOUR/src/MainVerticle.java

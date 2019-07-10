@@ -6,7 +6,7 @@ tags: "java agent configuration run Jetty"
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the following instructions.
 
 ## Configuration
 
@@ -16,19 +16,14 @@ To add the Contrast agent on Jetty, add the following lines to your *${JETTY_DIR
 -javaagent:${DOWNLOADS}/contrast.jar*
 ```
 
-Of course, you'll have to substitute the path to *contrast.jar* and the server for your environment.
+Of course, you need to substitute the path to *contrast.jar* and the server for your environment.
 
 ## Run on Jetty
 
-<ol>
-<li> Download the Contrast plugin (*contrast.jar*) from the Contrast UI. </li>
-
-<li> Set your `MAVEN_OPTS` environment variable to contain Contrast's JVM parameters: `-javaagent:${DOWNLOADS}/contrast.jar` </li>
-
-<li> Run your `jetty:run` or other Maven target normally. </li>
-<li> A Contrast startup message should appear in the console. (Allow one to two extra minutes for server startup). </li>
-<li> Navigate to your application, and allow an extra minute for it to start up. </li>
-</ol>
+* Set your `MAVEN_OPTS` environment variable to contain Contrast's JVM parameters: `-javaagent:${DOWNLOADS}/contrast.jar`
+* Run your `jetty:run` or other Maven target normally. 
+* A Contrast startup message should appear in the console. (Allow one to two extra minutes for server startup).
+* Navigate to your application, and allow an extra minute for it to start up. 
 
 ## More Information
 

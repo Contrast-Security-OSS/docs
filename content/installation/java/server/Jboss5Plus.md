@@ -6,21 +6,25 @@ tags: "java agent configuration JBoss RedHat"
 
 ## Before You Start 
 
-[Download and install the Java agent](installation-javastandard.html) from Contrast.
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the following instructions.
 
 ## Run JBoss from "run.bat" or "standalone.bat"
 
-If you run JBoss from *domain.bat*, *standalone.bat*, or *run.bat* with a *.conf* file, Contrast recommends modifying the configuration file. It should enable the Contrast JVM parameters and then return to the start up script. To do this, simply append the following line to the end of your *.conf* file: 
+If you run JBoss from *domain.bat*, *standalone.bat*, or *run.bat* with a *.conf* file, Contrast recommends modifying the configuration file. It should enable the Contrast JVM parameters and then return to the start up script. 
+
+To do this, append the following line to the end of your *.conf* file: 
 
 ````
 set JAVA_OPTS=-javaagent:{path-to-jboss-direcotry}\contrast.jar %JAVA_OPTS%
 ````
 
-Of course, you'll have to substitute the path to ***contrast.jar*** and your JBoss server directory for your environment. 
+Of course, you need to substitute the path to *contrast.jar* and your JBoss server directory for your environment. 
 
 ## Run JBoss in Domain Mode
 
-If you're running JBoss 6 EAP or JBoss 7.x in Domain mode using *domain.bat* or *domain.sh*, you must add the `-javaagent` switch to the JVM options in *$JBOSS_HOME/domain/configuration/domain.xml*. Here's an example file snippet:
+If you're running JBoss 6 EAP or JBoss 7.x in Domain mode using *domain.bat* or *domain.sh*, you must add the `-javaagent` switch to the JVM options in *$JBOSS_HOME/domain/configuration/domain.xml*. 
+
+An example file snippet:
 
 ````
 <server-group ...>

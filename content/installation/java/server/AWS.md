@@ -14,10 +14,12 @@ Contrast works with the following AWS systems:
 
 ## Before You Start
 
+Complete the following tasks before proceeding with the **Configuration** instructions: 
+
 * [Download and install the Java agent](installation-javastandard.html) from Contrast.
 * Create an [AWS Elastic Beanstalk account](https://aws.amazon.com/elasticbeanstalk/).
 
-## Installation
+## Configuration
 
 ### Step one
 
