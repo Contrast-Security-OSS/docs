@@ -4,25 +4,27 @@ description: "Tips to improve app performance with the Java agent"
 tags: "troubleshoot java agent performance latency startup"
 -->
 
-As you might expect, Contrast's analysis does make your app run a little slower. The good news is it's generally not enough for anyone to complain about, and the results are definitely worth it.
-
-
-## Startup Time
-
-When you start your server with Contrast, you'll see a few messages that indicate that Contrast is performing its JIT bytecode transformations to add security sensors to the JVM. This startup JIT period will take 8-12 seconds on a fast developer laptop, and maybe 30-40 seconds on outdated, resource-starved QA server hardware.
+Effects on Application Performance
 
 ## Request Processing Time
 
-It's probably more important to think about how Contrast affects the round-trip time. In typical applications, Contrast adds around 2x round-trip time to a request that contains a lot of business logic with all the bells and whistles turned on. Round trip times for static resources typically don't get measurably worse. In requests where the total round-trip time is dominated by database or Web Service calls, Contrast's effect will be less noticeable.
+It's more important to think about how Contrast affects the round-trip time. Contrast only affects the CPU processing time of your application. Round-trip times for static resources don't get measurably worse in most cases. In many applications, a significant amount of time is spent waiting on databases and accessing remote resources. In requests where the total round-trip time is dominated by database or WebService calls, Contrast's effect is less noticeable.
 
-If better performance is really important to your environment, consider the following options:
+## Performance Tuning for Assess
 
-* Run Contrast in *sampling* mode (gain 33% performance boost)
-* Turn off *response scanning* (gain 5% performance boost, and somewhat reduce memory footprint)
-* Run Contrast during nightly integration tests
-* Turn off data flow rules (add ```-Dcontrast.propagators=false```, gain 50% performance boost)
-* Run Contrast in an alternate environment (QA system or DEV environment)
-* Run Contrast on a single node in a load balanced environment
+Here are some steps you can take to tune performance for Assess:
+
+Ensure that the server meets the recommended system requirements and the server has enough free memory before the .NET agent is installed. (Ideally, applications should use less than half of the memory available when the Contrast .NET agent isn't installed.)
+Run Contrast in Sampling mode, and change sampling frequency to be less frequent.
+Change the stack trace configuration of Contrast to "Limited" or "Minimal".
+Exclude some applications from instrumentation and analysis using Application Pool Filtering.
+Run Contrast during nightly integration tests.
+Run Contrast in an alternate environment (QA system or DEV environment).
+Run Contrast on a single node in a load balanced environment.
+While the options above should provide the biggest boost to performance, you can try the following steps to tune performance further.
+
+Check that the agent's logging level is set to "Warn" or "Error".
+Disable analysis that requires capturing the HTTP response through policy.
 
 ## Memory
 
