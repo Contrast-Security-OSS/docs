@@ -80,7 +80,7 @@ cf push YOUR_APP_NAME_GOES_HERE
 
 ### Set up generic Cloud Foundry
 
-Contact Contrast's Customer Support team for access to the service broker source code.
+Contact Contrast's Customer Support team for access to the service broker source code, and then complete the following steps.
 
 * Deploy the service broker application:
 
@@ -165,7 +165,7 @@ cf create-service-broker contrast-security-service-broker USER_NAME PASSWORD
 <URL of your application> --space-scoped
 ```
 
-* All service brokers start off as private; you need to make it public.
+* All service brokers start off as private; you need to make it public:
 
 ```bash
 cf enable-service-access contrast-security-service-broker
@@ -191,24 +191,21 @@ You should see the agent start up with your application and also see it in your 
 
 * Pivotal Apps Manager and Ops Manager installation
 * Active Contrast account
-* Any application that needs to use Contrast must use the default Java buildpack, or have copied the Contrast framework support and configuration into your custom buildpack.
+* Any application that you want to use with Contrast must use the default Java buildpack; or, you must copy the Contrast framework support and configuration into your custom buildpack.
 
 ### Details
 
-A service broker allows Cloud Foundry applications to bind to services and consume the services easily from the App Manager UI or the command line. The Contrast service broker enables you to use one or more Contrast accounts, and is deployed as a Java application on Cloud Foundry. The broker exposes the Contrast service on the Cloud Foundry marketplace, which allows users to directly create a service instance and bind it to their applications either from the Pivotal Apps Manager Console or the command line.
+A service broker allows Cloud Foundry applications to bind to services and consume the services easily from the App Manager UI or the command line. The Contrast service broker enables you to use one or more Contrast accounts, and is deployed as a Java application on Cloud Foundry. The broker exposes the Contrast service on the Cloud Foundry marketplace, which allows users to directly create a service instance and bind it to their applications from the Pivotal Apps Manager Console or the command line.
 
-Once deployed, this title creates one organization:
-
-* **contrast-security-service-broker-org**: This organization is used for deploying the Contrast service broker application. Memory requirement = 512MB
+Once deployed, this title creates one organization, **contrast-security-service-broker-org**. The memory requirement is 512MB.
 
 ## Use Contrast with Java Applications on PCF 
 
-The Contrast integration with PCF allows you to easily deploy Contrast-monitored applications on the PCF platform. These instructions walk you through deploying a Java application with a Contrast agent installed, and demonstrates the steps to get up and running with PCF and the Contrast Java buildpack.
+The Contrast integration with PCF allows you to easily deploy applications with Contrast on the PCF platform. The following instructions walk you through the process to deploy a Java application that has a Contrast agent installed, and demonstrate the steps to get up and running with PCF and the Contrast Java buildpack.
 
 ### Set up an application with the Contrast build pack
 
-To push an app that is using the Contrast buildpack to PCF, use the Cloud Foundry-provided spring music app as an example.
-You can clone, build and push the sample application using the following commands:
+To push an application that uses the Contrast buildpack to PCF, use the Cloud Foundry-provided [Spring Music application](https://github.com/cloudfoundry-samples/spring-music) as an example. You can clone, build and push the sample application using the following commands:
 
 ```bash
 git clone https://github.com/cloudfoundry-samples/spring-music.git
@@ -223,38 +220,40 @@ cf push spring-music
 
 The first step of integrating Contrast with your PCF is installing the Contrast tile.
 
-Download the Contrast server broker tile for PCF from the [Pivotal Network](https://network.pivotal.io/products/contrast-security-service-broker/).
+* Download the Contrast server broker tile for PCF from the [Pivotal Network](https://network.pivotal.io/products/contrast-security-service-broker/).
 
-Once you've stored the file locally, navigate to your Pivotal Ops Manager instance. In the Ops Manager, click on the **Import a Product** button and select the *contrast-security-service-broker-#.#.#.pivotal* tile that you downloaded or created in the previous step.
+* Once you've stored the file locally, navigate to your Pivotal Ops Manager instance. 
+* In the Ops Manager, click on the **Import a Product** button and select the *contrast-security-service-broker-#.#.#.pivotal* tile that you downloaded or created in the previous step.
 
-> **Note:** If the file you downloaded is automatically given a .zip extension, rename it to `contrast-security-service-broker-#.#.#.pivotal`.
+> **Note:** If the file you downloaded is automatically given a *.zip* extension, rename it to *contrast-security-service-broker-#.#.#.pivotal*.
 
-The tile requires some configuration before we can deploy it. 
+#### Service plan
 
-The service broker does **not** offer any service plans by default and requires that at least one service plan be configured before it will allow the tile to be deployed. To add a service plan, go to the **Service Plans** tab within the Contrast tile and click the **Add** button.
+The tile requires some configuration before you can deploy it. The service broker does **not** offer any service plans by default, and requires that you configure at least one service before it will allow you to deploy the tile. 
+
+* To add a service plan, go to the **Service Plans** tab within the Contrast tile and click the **Add** button.
 
 <a href="assets/images/Pivotal_Service_Plan.png" rel="lightbox" title="Adding a service plan"><img class="thumbnail" src="assets/images/Pivotal_Service_Plan.png"/></a>
 
-You can now see ten form fields.
+* You can now see 10 form fields:
 
 | Parameter                    | Description                                             |
 |------------------------------|---------------------------------------------------------|
-| TeamServer                   | URL to your Contrast application instance                |
-| TeamServer Service Key       | Service Key found in Organization Settings             |
-| TeamServer API Key           | API Key found in Organization Settings                 |
+| TeamServer                   | URL to your Contrast application instance               |
+| TeamServer Service Key       | Service Key shown in Organization Settings             |
+| TeamServer API Key           | API Key shown in Organization Settings                 |
 | Organization UUID            | The organization to which the application will belong  |
 | Username                     | Contrast username                                      |
 | Plan Name                    | Name of the plan as it will appear in Apps Manager     |
-| Proxy Host                   | The hostname of a proxy for the service broker to communicate with Contrast     |
+| Proxy Host                   | The hostname of a proxy for the service broker to communicate with Contrast  |
 | Proxy Port                   | The proxy port                                        |
 | Proxy Username               | The proxy username if it requires authentication      |
 | Plan Password                | The proxy password                                    |
 
-<br>
 
-Once you're finished defining a plan, click the **Save** button. If you want some apps to belong to different organizations, define any other plans you may need.
+* Once you're finished defining a plan, click the **Save** button. If you want some applications to belong to different organizations, define any other plans you may need.
 
-Once you define your plans, return to the Ops Manager dashboard and select the **Apply Changes** button.
+* Once you define your plans, return to the Ops Manager dashboard and select the **Apply Changes** button.
 
 <a href="assets/images/Pivotal_Apply_Changes.png" rel="lightbox" title="Apply changes"><img class="thumbnail" src="assets/images/Pivotal_Apply_Changes.png"/></a>
 
@@ -262,34 +261,38 @@ This may take some time to deploy.
 
 ### Step 2: Apps Manager instructions
 
-Now that you've successfully deployed the service broker we can create services to bind the credentials to an application. Navigate to your Pivotal Apps Manager instance and go to the **Marketplace** tab, where a Contrast service broker option is present.
+Now that you've successfully deployed the service broker, you can create services to bind the credentials to an application. 
+
+* Navigate to your Pivotal Apps Manager instance and go to the **Marketplace** tab, where a Contrast service broker option is present.
 
 <a href="assets/images/Pivotal_Marketplace.png" rel="lightbox" title="Contrast Security service broker in the marketplace"><img class="thumbnail" src="assets/images/Pivotal_Marketplace.png"/></a>
 
-Click the **Contrast service broker** option to see the available plans. These are the same plans that you entered in the Ops Manager.
-Select the plan you want to bind to an application by clicking the **Select this Plan** button.
+* Click the **Contrast service broker** option to see the available plans. (These are the same plans that you entered in the Ops Manager.)
+
+* Click the **Select this Plan** button to choose the plan you want to bind to an application.
 
 <a href="assets/images/Pivotal_Select_Plan.png" rel="lightbox" title="Selecting a plan to bind"><img class="thumbnail" src="assets/images/Pivotal_Select_Plan.png"/></a>
 
-On the next screen, specify an instance name of the plan. (This doesn't effect the service broker, so you can name it anything you like.)
-Under the **Bind to App** dropdown, select the application to which you want to bind this service.
+* On the next screen, specify an instance name of the plan. (This doesn't effect the service broker; you can name it anything you like.)
+
+* Under the **Bind to App** dropdown, select the application to which you want to bind this service.
 
 <a href="assets/images/Pivotal_Bind_App.png" rel="lightbox" title="Binding service instance to application"><img class="thumbnail" src="assets/images/Pivotal_Bind_App.png"/></a>
 
-Now that you bound our service instance to an application, you can restage the application. The latest Java agent will be retrieved from Contrast and run on your application.
+Now that you bound your service instance to an application, you can restage the application. The latest Java agent will be retrieved from Contrast and run on your application.
 
 ### Set environment variables for Contrast
 
 If you want to override Java agent properties, such as the application name, you can use environment variables through the Pivotal UI or the Cloud Foundry command line.
 
-Command line example:
+* Command line example:
 
 ```bash
 cf set-env APP-NAME JAVA_OPTS " -Dcontrast.appname.override=PivotalSpringApp
 -Dcontrast.server=PivotalServerName "
 ```
 
-Pivotal Apps Manager example:
+* Pivotal Apps Manager example:
 
 <a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through UI"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
 
