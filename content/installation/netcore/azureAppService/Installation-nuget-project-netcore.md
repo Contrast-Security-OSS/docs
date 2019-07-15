@@ -41,8 +41,8 @@ To use the Contrast agent, you must set following environment variables on your 
 
 CORECLR_ENABLE_PROFILING: 1
 CORECLR_PROFILER: {8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
-CORECLR_PROFILER_PATH_32: <application directory>\contrast\runtimes\win-x64\native\ContrastProfiler.dll
-CORECLR_PROFILER_PATH_64: <application directory>\contrast\runtimes\win-x86\native\ContrastProfiler.dll
+CORECLR_PROFILER_PATH_32: <application directory>\contrast\runtimes\win-x86\native\ContrastProfiler.dll
+CORECLR_PROFILER_PATH_64: <application directory>\contrast\runtimes\win-x64\native\ContrastProfiler.dll
 
 The agent requires valid authentication to the Contrast web site.  To configure the agent using the yaml configuration add this
 environment variable.  More information: https://docs.contrastsecurity.com/installation-netcoreconfig.html#netcore-template
