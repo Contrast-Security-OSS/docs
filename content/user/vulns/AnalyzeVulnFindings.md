@@ -19,7 +19,7 @@ For each reported vulnerability, you can mark a status and create tags as needed
 | Remediated    | The vulnerability has been fixed by changing source code or *config* files within the application.                                      | Closed               | Reopened as **Reported** |
 | Reported      | The **default** status of a vulnerability after it's discovered by Contrast. The dataflow could be a possible exploit in the application. | Open       | No change |
 | Fixed         | The vulnerability has been fixed by changing the source code or a reason given under the **Not A Problem** status. A vulnerability set to this status will **not** revert back to **Reported** if found again. (Available to Admin only.)                                            | Closed               | Stays Closed         |
-| Auto-remediated | Contrast hasn't found the vulnerability in a set amount of time, and assumes that it's been fixed, based on your [Remediation Policy](admin-policymgmt.html#remediate) configuration. (A user can't apply or change this status.)                                          | Closed 			    | Reopened			  |
+| Auto-remediated | Contrast hasn't found the vulnerability in a set amount of time, and assumes that it's been fixed, based on your [Remediation Policy](admin-policymgmt.html#remediate) configuration. (A user can't apply or change this status.)                                          | Closed 			    | Reopened as **Reported** |
 
 
 ## Vulnerability Events
