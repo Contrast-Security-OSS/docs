@@ -79,8 +79,7 @@ Set the environment variables using either of these two methods:
 
 * The `environmentVariables` section in the application *web.config* via [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables), as shown below (recommended)
 
-> **Setting environment variables through the *web.config* :**
-```xml
+ ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <system.webServer>
@@ -96,11 +95,9 @@ Set the environment variables using either of these two methods:
     </aspNetCore>
   </system.webServer>
 </configuration>
-```
+ ```
 
 * The [application pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) setting on the server
-
-
 
 
 ### Running with a dotnet.exe launch profile
