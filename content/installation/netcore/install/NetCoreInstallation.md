@@ -36,8 +36,8 @@ When running in IIS, make sure the application pool can access the these paths. 
 
 To enable the .NET Core agent on your application, you must set the following environment variables on your application's process.
 
-* CORECLR_PROFILER_PATH_32: Use the following table to find the correct Profiler path for 32-bit applications.
 * CORECLR_PROFILER_PATH_64: Use the following table to find the correct Profiler path for 64-bit applications.
+* CORECLR_PROFILER_PATH_32: Use the following table to find the correct Profiler path for 32-bit applications.
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`
 * CONTRAST_CONFIG_PATH: Set the path to the YAML configuration file. It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*). If not set, the default is *`CONTRAST_CORECLR_DATA_DIRECTORY`\contrast_security.yaml*. This setting is **optional**.
@@ -46,8 +46,9 @@ To enable the .NET Core agent on your application, you must set the following en
 
 | Environment Variable | Platform | Profiler Path |
 |--|--|--|
-| CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
 | CORECLR_PROFILER_PATH_64 | Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
+| CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
+
 
 > **Notes:**
  * The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
@@ -110,8 +111,8 @@ Set the environment variables as part of your application startup script or as a
 ```json
     "MyAppWithContrastAgent": {
       "environmentVariables": {
-        "CORECLR_PROFILER_PATH_32": "C:\\contrast\\dotnetcore\\runtimes\\win-x86\\native\\ContrastProfiler.dll",
         "CORECLR_PROFILER_PATH_64": "C:\\contrast\\dotnetcore\\runtimes\\win-x64\\native\\ContrastProfiler.dll",
+        "CORECLR_PROFILER_PATH_32": "C:\\contrast\\dotnetcore\\runtimes\\win-x86\\native\\ContrastProfiler.dll",
         "CORECLR_ENABLE_PROFILING": "1",
         "CORECLR_PROFILER": "{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}",
         "CONTRAST_CONFIG_PATH": "c:\\contrast\\config\\MyApp\\contrast_security.yaml",
