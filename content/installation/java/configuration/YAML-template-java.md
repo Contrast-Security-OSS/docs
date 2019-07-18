@@ -493,6 +493,13 @@ api:
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
+    # ==========================================================================
+    # protect.rules.padding-oracle
+    # Use the following properties to configure
+    # how the padding-oracle rule works.
+    # ==========================================================================
+    # padding-oracle: {}
+
 # ==============================================================================
 # application
 # Use the properties in this section for
@@ -562,12 +569,6 @@ api:
 
   # Override the reported server type.
   # type: NEEDS_TO_BE_SET
-
-  # Override the reported server build.
-  # build: NEEDS_TO_BE_SET
-
-  # Override the reported server version.
-  # version: NEEDS_TO_BE_SET
 
   # Override the reported server environment.
   # environment: development

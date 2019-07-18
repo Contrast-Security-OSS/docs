@@ -402,12 +402,6 @@ agent:
   # Override the reported server type.
   # type: NEEDS_TO_BE_SET
 
-  # Override the reported server build.
-  # build: NEEDS_TO_BE_SET
-
-  # Override the reported server version.
-  # version: NEEDS_TO_BE_SET
-
   # Override the reported server environment.
   # environment: development
 
