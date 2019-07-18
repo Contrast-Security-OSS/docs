@@ -169,6 +169,8 @@ Use the properties in this section to control Protect features and rules.
 Use the properties in this section to control the application(s) hosting this agent.
 
 * application:
+  * **name**: Override the application name.
+  * **code**: Apply a code label to the application. The label is displayed next to application name in the Contrast UI.
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
   * **version**: Override the reported application version.
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
