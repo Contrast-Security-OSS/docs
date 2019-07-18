@@ -493,13 +493,6 @@ api:
       # the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
-    # ==========================================================================
-    # protect.rules.padding-oracle
-    # Use the following properties to configure
-    # how the padding-oracle rule works.
-    # ==========================================================================
-    # padding-oracle: {}
-
 # ==============================================================================
 # application
 # Use the properties in this section for
