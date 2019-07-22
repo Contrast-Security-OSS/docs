@@ -1,16 +1,16 @@
 <!--
 title: "Install the Java Agent on a Red Hat Host"
-description: "Installing the Java Agent Across All Java Processes on a Red Hat Host"
+description: "How to install the Java agent across all Java processes on a Red Hat host"
 tags: "installation Java agent linux package red hat centos rhel exec-helper yum dnf host"
 -->
 
-Red Hat Enterprise Linux (RHEL) and CentOS users may install the Contrast Java agent at the host level using the `contrast-java-agent-exec-helper`. The `contrast-java-agent-exec-helper` configures the RHEL or CentOS host to include the Contrast Java agent on all Java processes on the host.
+## About Host Installation for RHEL
 
-Instead of a typical Contrast installation that requires users to configure their Java services to include the Contrast Java agent, the `contrast-java-agent-exec-helper` package intercepts all new `java` processes, and automatically configures the process to use Contrast.
+Red Hat Enterprise Linux (RHEL) and CentOS users may install the Contrast Java agent at the host level using the `contrast-java-agent-exec-helper` package. The Exec Helper configures the RHEL or CentOS host to include the Contrast Java agent on all Java processes on the host.
 
-This option is ideal for some scenarios in which Contrast must support legacy infrastructure but your Java application server configuration isn't well understood. However, in most scenarios, administrators want more granular control over their Contrast configurations.
+Instead of a typical Contrast installation that requires users to configure their Java services to include the Contrast Java agent, the `contrast-java-agent-exec-helper` package intercepts all new `java` processes, and automatically configures the process to use Contrast. This option is ideal for some scenarios in which Contrast must support legacy infrastructure but your Java application server configuration isn't well understood. However, in most scenarios, administrators want more granular control over their Contrast configurations.
 
-### Installing the Contrast Java agent with the contrast-java-agent-exec-helper
+## Install the Agent with the Exec Helper Package
 
 * Use the following commands to configure your system to retrieve packages from the Contrast RPM repository:
 
@@ -44,7 +44,7 @@ $ bash -c "java -Dcontrast.stdout=true -version 2>1 | grep Contrast | head -n 1"
 
 > **Note:** The Exec Helper package expects to find the Contrast Java agent at */opt/contrast/contrast.jar*, where the `contrast-java-agent` packages installs it. If the Contrast *jar* file has a different path, use environment variable `CONTRAST_JAVA_AGENT_PATH` to configure the `contrast-java-agent-exec-helper`.
 
-#### Logging
+### Logging
 
 The Exec Helper logs messages to the host's Syslog service using the identifier "Contrast". The Exec Helper uses the "user.warn" and "user.debug" Syslog facility and level, respectively. Use `journalctl` to view the messages (i.e., `journalctl -t Contrast`). Traditional init.v systems, including EL6, store Syslog messages in the file */var/log/messages* by default instead of the systemd Journal.
 
