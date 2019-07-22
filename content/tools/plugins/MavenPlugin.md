@@ -41,7 +41,6 @@ The table below shows all the parameters for the plugin. These settings are for 
 | appVersion  | False    |             | The `appversion` to report to the Contrast application. See the **appVersion** section for more information.    |       |
 | apiUrl      | True     |            | API URL to your Contrast application                                              |       |
 | serverName  | True     |            | Name of the server you set with `-Dcontrast.server`                               |       |
-| serverId    | False    |            | ID of the server as seen in the Contrast UI. Either the `serverId` or `serverName` is required. If both are specified, Contrast uses the `serverId` and ignores the `serverName`. | 2.5 |
 | serverPath  | False    |            | The server context path                                                           |    2.1|
 | minSeverity | False    | Medium     | Minimum severity level to verify; options are Note, Low, Medium, High or Critical |       |
 | jarPath     | False    |            | Path to *contrast.jar*, if you already have one downloaded                        |       |
@@ -86,7 +85,6 @@ The following configuration is an example of a profile for the Contrast Maven Pl
                     <appName>MyAppName</appName>
                     <appId>bc3028e6-82ac-410f-b9c7-13573d33cb94</appId>
                     <serverName>MyServerName</serverName>
-                    <serverId>5005</serverId>
                     <minSeverity>High</minSeverity>
                 </configuration>
             </plugin>
