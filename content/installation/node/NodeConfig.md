@@ -65,13 +65,11 @@ Parameter                                      | Environment Variable           
 --protect.samples.blocked_at_perimeter <count> | PROTECT\_\_SAMPLES\_\_BLOCKED_AT_PERIMETER     | Limit the reporting of "blocked-at-perim" Protect events to this number (per report cycle). Default is **25**.
 --protect.samples.exploited <count>            | PROTECT\_\_SAMPLES\_\_EXPLOITED                | Limit the reporting of "effective" Protect events to this number (per report cycle). Default is **100**.
 --protect.samples.ineffective <count>          | PROTECT\_\_SAMPLES\_\_INEFFECTIVE              | Limit the reporting of "ineffective" Protect events to this number (per report cycle). Default is **50**.
---server.build <version>                       | SERVER\_\_BUILD                                | Set reported server build option.
 --server.environment <name>                    | SERVER\_\_ENVIRONMENT                          | Environment in which the server is running - `QA`, `PRODUCTION` or `DEVELOPMENT` (case insenstive); does not affect servers that already exist in api.
 --server.name <name>                           | SERVER\_\_NAME                                 | Override the reported server name. Default is `ip-192-168-1-50.ec2.internal`.
 --server.path <name>                           | SERVER\_\_PATH                                 | Override the reported server path. Default is */*.
 --server.tags <tags>                           | SERVER\_\_TAGS                                 | Comma-separated list of tags to apply to each server reported by the agent.
 --server.type <type>                           | SERVER\_\_TYPE                                 | Override the reported server type. Default is `node.js v8.9.4`.
---server.version <version>                     | SERVER\_\_VERSION                              | Override the reported server version, if different from 'version' field in the application's *package.json*.
 -h, --help                                     |                                                | Output usage information.
 
 ## Logging
