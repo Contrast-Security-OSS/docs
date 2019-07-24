@@ -8,11 +8,9 @@ This plugin adds functionality to Bamboo so that you can configure profiles for 
 
 ## Install the Plugin
 
-The first step is to download our Contrast Bamboo plugin from the Bamboo Marketplace which is found [here](https://marketplace.atlassian.com/apps/1219111/contrast-security-for-bamboo?hosting=server&tab=overview).
+The first step is to download the Contrast Bamboo plugin from the [Bamboo Marketplace](https://marketplace.atlassian.com/apps/1219111/contrast-security-for-bamboo?hosting=server&tab=overview). Once you've downloaded the *contrast-bamboo-plugin-#.#.#.jar*, complete the following steps to upload it to your Bamboo instance. 
 
-Once you've downloaded the *contrast-bamboo-plugin-#.#.#.jar*, complete the following steps to upload it to your Bamboo instance. 
-
-* Select the **Add-Ons** option from the top left settings menu.
+* Select the **Add-Ons** option from the top-left settings menu.
 
 <a href="assets/images/Bamboo_Add_On_Option.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_Add_On_Option.png"/></a>
 
