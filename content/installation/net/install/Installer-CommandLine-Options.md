@@ -1,3 +1,4 @@
+
 <!--
 title: "Contrast .NET Agent Installer Command Line Options"
 description: "Contrast .NET agent installer command line options"
@@ -10,13 +11,13 @@ The .NET agent installer supports additional options when invoked from the comma
 
 ### Silent Installation
 
-The .NET agent installer supports standard silent installation options. These options tell the installer to run silently and unattended, which means that the installer don't require your interaction and don't present the installer's UI.
+The .NET agent installer supports standard silent installation options. These options tell the installer to run silently and unattended, which means that the installer won't prompt for your interaction and will not present the installer UI.
 
 - Install: `ContrastSetup.exe -s -norestart`
 
 ### Uninstalling and Repairing
 
-The .NET agent installation can be uninstall or repaired using standard Windows features (e.g. the Programs and Features Control Panel, Powershell, etc.). However, it may be desirable to use the .NET agent installer to perform these actions instead.
+The .NET agent installation can be uninstall or repaired using standard Windows features (e.g. the Programs and Features Control Panel, Powershell, etc.). However, it may be desirable to use the .NET agent installer to perform these actions instead, for example, in automated scripting scenarios.
 
 **Attended:**
 - Uninstall: `ContrastSetup.exe -uninstall`
@@ -36,3 +37,9 @@ The .NET agent installer supports several additional options accessible when ins
 | `PathToYaml` | Specify a custom YAML configuration file. Defaults to a file called `contrast_security.yaml` located relative to the installer's location. | `PathToYaml=c:\contrast_security.yaml` |
 | `SERVICE_STARTUP_TYPE_MANUAL` | When set to `1`, and when installing/upgrading/repairing, set the Contrast service startup type to Manual. This _must_ be provided on installs/upgrades/repairs. Defaults `0` (Automatic Delayed Start). | `SERVICE_STARTUP_TYPE_MANUAL=1` |
 | `SUPPRESS_SERVICE_START` | When set to `1`, and when installing/upgrading/repairing, suppress automatically starting the service. This _must_ be provided on installs/upgrades/repairs. Defaults `0`. | `SUPPRESS_SERVICE_START=1` |
+
+For example, to install the .NET agent using scripts the following command is common used:
+
+`ContrastSetup.exe -s -norestart StartTray=0 PathToYaml=C:\Temp\custom.yaml`
+
+This command will install the .NET agent in silent and unattended mode, suppress the start of the Tray application, and use a custom path to the YAML configuration file.
