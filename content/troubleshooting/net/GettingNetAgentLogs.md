@@ -4,7 +4,7 @@ description: "Instructions on using .NET agent logs"
 tags: "troubleshoot configuration logging agent .Net"
 -->
 
-In rare scenarios, bad instrumentation causes a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast, please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of bugs.
+In rare scenarios, bad instrumentation causes a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast, please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of issues.
 
 ## Agent Logs Directory
 
@@ -12,14 +12,14 @@ The .NET agent logs information to the *LOGS* directory within the data director
 
 You can change which information is logged by changing the logging level in the [.NET agent configuration](installation-netconfig.html).
 
-## Types of Bugs
+## Types of Issues
 
-There are two primary types of agent bugs for which Contrast needs to gather logs and other information:
+There are two primary types of agent issues for which Contrast needs to gather logs and other information:
 
 * Process Crash
 * Unhandled Managed Exception/Page Error/500
 
-## Process Crash Bugs
+## Process Crash Issues
 
 ### Verify that the web server process crashed
 
@@ -90,7 +90,7 @@ Once you've reproduced the crash, gather the following items and include them in
 
 You can then uninstall ProcDump with `C:>procdump.exe -u`.
 
-## Unhandled Managed Exception or Page Error Bugs
+## Unhandled Managed Exception or Page Error Issues
 
 ### Verify an unhandled exception
 
@@ -179,7 +179,7 @@ As the process hasn't crashed, ProcDump won't capture process dumps. Instead, yo
 
 Follow a similar process to gather agent logs, windows events and process dumps to include with your bug report.
 
-## Other Bugs
+## Other Issues
 
-If you encountered a bug other than a process crash or unhandled exception - maybe the .NET Tray has an inaccurate state, or the agent found a false positive - please [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need process dumps, but trace-level logs and a detailed description of the problem are very helpful when it's time to fix these bugs.
+If you encountered a bug other than a process crash or unhandled exception - maybe the .NET Tray has an inaccurate state, or the agent found a false positive - please [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need process dumps, but trace-level logs and a detailed description of the problem are very helpful when it's time to fix these issues.
 
