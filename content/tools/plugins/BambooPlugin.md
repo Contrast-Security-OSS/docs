@@ -8,19 +8,9 @@ This plugin adds functionality to Bamboo so that you can configure profiles for 
 
 ## Install the Plugin
 
-The first step is to build the plugin. To begin, clone the plugin from our Github [repository](https://github.com/Contrast-Security-OSS/contrast-bamboo-plugin.git).
+The first step is to download the Contrast Bamboo plugin from the [Bamboo Marketplace](https://marketplace.atlassian.com/apps/1219111/contrast-security-for-bamboo?hosting=server&tab=overview). Once you've downloaded the *contrast-bamboo-plugin-#.#.#.jar*, complete the following steps to upload it to your Bamboo instance. 
 
-```bash
-git clone https://github.com/Contrast-Security-OSS/contrast-bamboo-plugin.git
-cd contrast-bamboo-plugin
-mvn package
-```
-
-This builds the *contrast-bamboo-plugin-#.#.#-SNAPSHOT.jar* and the *.obr* file. You can find them both within the *contrast-bamboo-plugin/target* directory of the cloned project.
-
-Once you've built the plugin, complete the following steps to upload it to your Bamboo instance. 
-
-* Select the **Add-Ons** option from the top left settings menu.
+* Select the **Add-Ons** option from the top-left settings menu.
 
 <a href="assets/images/Bamboo_Add_On_Option.png" rel="lightbox" title="Navigating to add-ons in Bamboo"><img class="thumbnail" src="assets/images/Bamboo_Add_On_Option.png"/></a>
 
@@ -28,7 +18,7 @@ Once you've built the plugin, complete the following steps to upload it to your 
 
 <a href="assets/images/Bamboo_Plugin_Uploaded.png" rel="lightbox" title="Successfully uploaded add-on"><img class="thumbnail" src="assets/images/Bamboo_Plugin_Uploaded.png"/></a>
 
-* When prompted to upload a file, select *contrast-bamboo-plugin-#.#.#-SNAPSHOT.obr*.
+* When prompted to upload a file, select *contrast-bamboo-plugin-#.#.#-SNAPSHOT.jar*.
 
 * After uploading the plugin, you should see it appear under **User-installed add-ons**.
 
