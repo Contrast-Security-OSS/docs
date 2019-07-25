@@ -6,6 +6,10 @@ tags: "3.6.6 July Release Notes"
 
 ## Fixes
 
+* Some pages in the UI flickered for users on Safari. CONTRAST-35602
+* User had issue onboarding multiple .NET applications in the same pool. SUP-156/CONTRAST-35600
+* Impersonating users as a SuperAdmin resulted in errors. CONTRAST-36473
+* 
 
 ## Improvements
 
