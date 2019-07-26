@@ -18,7 +18,7 @@ You can configure the .NET Core agent using the environment variable convention 
 
 ### web.config file
 
-You can also define any configuration setting in the web config as an environment variable.  Place your overrides, using the environment variable convention in the `<environmentVariables>` section of `<aspNetCore>` element. [See Microsoft document for details](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables)
+You can also define any configuration setting in the *web.config* file as an environment variable. Place your overrides using the environment variable convention in the `<environmentVariables>` section of `<aspNetCore>` element. See the [Microsoft documentation](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables) for more details.
 
 ### YAML file
 
