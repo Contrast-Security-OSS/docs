@@ -8,9 +8,9 @@ Go to the [YAML Properties](installation-netcoreconfig.html#netcore-yaml) articl
 
 ```yaml
 #================================================================================================================================================================================
-#  
-#  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values. 
-#  
+#
+#  Use the properties in this YAML file to configure a Contrast agent. Go to https://docs.contrastsecurity.com/ to determine the order of precedence for configuration values.
+#
 #================================================================================================================================================================================
 
 
@@ -39,7 +39,7 @@ contrast:
   # Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
   user_name: NEEDS_TO_BE_SET
 
-  # Set the version of the TLS protocol the agent uses to communicate with the Contrast UI. 
+  # Set the version of the TLS protocol the agent uses to communicate with the Contrast UI.
   #  The .NET agent default behavior is (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12).
   # tls_versions: tls1|tls2|tls3
 
@@ -70,7 +70,7 @@ contrast:
 #=======================================================================================================================================
 # agent:
 
-  
+
   #================================================================================================================================================================
   # Logger
   # Define the following properties to set logging values. If the following properties are not defined, the agent uses the logging values from the Contrast UI.
@@ -118,7 +118,7 @@ contrast:
 
       # Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
       # severity_probed: NEEDS_TO_BE_SET
-      
+
   #===============================================================================
   # polling
   # The following properties apply to .NET agent communication with Contrast UI
@@ -128,8 +128,8 @@ contrast:
     # Set the frequency with which the agent sends application activity to the Contrast UI.  This affects how quickly inventory activity (such route coverage, technologies) and protect activity (attacks, blocks) shows up in Contrast UI.
     app_activity_ms: 30_000
 
-    # Set the the frequency with which the agent sends server updates to the Contrast UI. This also affects how long it takes the agent to pick up changes made in Contrast UI.  
-    server_activity_ms: 60_000      
+    # Set the the frequency with which the agent sends server updates to the Contrast UI. This also affects how long it takes the agent to pick up changes made in Contrast UI.
+    server_activity_ms: 60_000
 
   #==========================================================================
   # Dotnet
@@ -142,7 +142,7 @@ contrast:
 
     # Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
     # enable_jit_inlining: true
-    
+
     # Indicate that the agent should not check for other profilers before starting.
     # skip_profiler_check: false
 
@@ -203,7 +203,7 @@ contrast:
   #========================================================================
   # rules:
 
-    # Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list. 
+    # Define a list of Assess rules to disable in the agent. The rules must be formatted as a comma-delimited list.
     #  Example - Set "reflected-xss,sql-injection" to disable the reflected-xss rule and the sql-injection rule.
     # disabled_rules: NEEDS_TO_BE_SET
 
@@ -240,7 +240,7 @@ contrast:
     #=====================================================================================================================================================
     # sql-injection:
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or off. 
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or off.
       #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
@@ -250,7 +250,7 @@ contrast:
     #====================================================================================
     # cmd-injection:
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`.
       #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
@@ -260,7 +260,7 @@ contrast:
     #=================================================================================
     # path-traversal:
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`.
       #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
@@ -270,7 +270,7 @@ contrast:
     #===================================================================================
     # method-tampering:
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`.
       #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
@@ -280,7 +280,7 @@ contrast:
     #=================================================================================================
     # reflected-xss:
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`.
       #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
@@ -290,7 +290,7 @@ contrast:
     #=================================================================================
     # xxe:
 
-      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. 
+      # Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`.
       #  Note - If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       # mode: monitor
 
@@ -299,6 +299,12 @@ contrast:
 # Use the properties in this section for the application(s) hosting this agent.
 #==================================================================================
 # application:
+
+  # Override the application name.
+  # name: NEEDS_TO_BE_SET
+
+  # Apply a code label to the application. The label is displayed next to application name in the Contrast UI.
+  # code: NEEDS_TO_BE_SET
 
   # Add the name of the application group with which this application should be associated in the Contrast UI.
   # group: NEEDS_TO_BE_SET
@@ -309,11 +315,11 @@ contrast:
   # Override the reported application version.
   # version: NEEDS_TO_BE_SET
 
-  # Apply labels to an application. Labels must be formatted as a comma-delimited list. 
+  # Apply labels to an application. Labels must be formatted as a comma-delimited list.
   #  Example - label1,label2,label3
   # tags: NEEDS_TO_BE_SET
 
-  # Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs. 
+  # Define a set of key=value pairs (which conforms to RFC 2253) for specifying user-defined metadata associated with the application. The set must be formatted as a comma-delimited list of `key=value` pairs.
   #  Example - "business-unit=accounting, office=Baltimore"
   # metadata: NEEDS_TO_BE_SET
 
@@ -329,8 +335,8 @@ contrast:
   # Override the reported server environment.
   # environment: development
 
-  # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. 
-  #  Example - label1,label2,label3 
+  # Apply a list of labels to the server. Labels must be formatted as a comma-delimited list.
+  #  Example - label1,label2,label3
   # tags: NEEDS_TO_BE_SET
 
 ```
