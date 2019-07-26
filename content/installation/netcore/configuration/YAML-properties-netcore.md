@@ -15,7 +15,7 @@ Configuration values use the following order of precedence:
 1. Corporate rule (e.g., expired license overrides `contrast.assess.enable`)
 2. Specific environmental variable
 3. Generic environment variable value
-4. User configuration file value
+4. User configuration file value (i.e. *contrast_security.yaml*)
 5. Contrast UI value
 6. Default value
 

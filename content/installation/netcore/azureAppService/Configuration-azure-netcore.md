@@ -6,7 +6,7 @@ tags: "configuration .net Azure AppService netcore"
 
 ## Configuration Methods
 
-Configure the .NET Core agent for Azure App Service in the Azure Portal, a *web.config* file or a YAML configuration file. 
+Configure the .NET Core agent for Azure App Service in the Azure Portal, a *web.config* file or a YAML configuration file.
 
 ### Azure Portal
 
@@ -18,7 +18,7 @@ You can configure the .NET Core agent using the environment variable convention 
 
 ### web.config file
 
-You can also specify specific `application` configuration options in an application's *web.config* file. For the agent to pick up customized application settings, you must place these settings in the application *web.config* file's root configuration `appSettings` section. See [application-specific settings](installation-netconfig.html#appname) for more details.
+You can also define any configuration setting in the web config as an environment variable.  Place your overrides, using the environment variable convention in the `<environmentVariables>` section of `<aspNetCore>` element. [See Microsoft document for details](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables)
 
 ### YAML file
 
@@ -38,6 +38,7 @@ The following tables outline some common configuration settings for Azure App Se
 | server.environment   | Set the environment value sent to Contrast when servers are created. Valid values are `DEVELOPMENT`, `QA` or `PRODUCTION` (case insensitive). The default value is `QA`. This does not affect servers that already exist in Contrast.
 | server.tags          | Controls free-form tags sent to Contrast for servers; you can use tags to search for servers in the Contrast interface. See the article on [Application-Specific Settings](installation-netconfig.html#appname) for details on tagging applications, libraries and vulnerabilities.
 | application.name    | Change the application name sent to the Contrast interface for this application. The default is your Azure App Service name as seen in the Azure Portal.
+| application.code    | Apply a code label to the application. The label is displayed next to application name in the Contrast UI.
 | application.version | Controls the application version tag sent to Contrast.  Default is none.
 | application.group   | Specifies the to which group this application will be added in the Contrast interface, if this application isn't already a member of a group.  Default is none.
 | application.tags    | Controls free-form tags sent to Contrast for the application; you can use tags to search for specific applications in the Contrast UI.  Default is none.
