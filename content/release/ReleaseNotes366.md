@@ -8,13 +8,20 @@ tags: "3.6.6 July Release Notes"
 
 * Some pages in the UI flickered for users on Safari. CONTRAST-35602
 * User had issue onboarding multiple .NET applications in the same pool. SUP-156/CONTRAST-35600
-* Impersonating users as a SuperAdmin resulted in errors. CONTRAST-36473
-* 
+* Impersonating users as a SuperAdmin resulted in errors. CONTRAST-36473, CONTRAST-35700
+* Users without applications couldn't see custom access groups in the UI. CONTRAST-36113
+* Applications tags were missing after applications were unmerged. CONTRAST-35510
+* Application queries timed out in some organizations. CONTRAST-35625
+* Daily digest emails were sent multiple times to the same recipients. CONTRAST-35499
+* Filters weren't respected when deleting vulnerabilities with "Select All" option. CONTRAST-35503
+* Jira integration didn't detect custom field to add multiple users. CONTRAST-35113
+* Merged applications ignored Assess rule disabled previously for one of the applications. SUP-26
+* Filters weren't respected when exporting vulnerabilities for merged applications. CONTRAST-35511
 
 ## Improvements
 
-Export your application’s route coverage information to use and share outside the UI. To download the spreadsheet, go to the application’s Route Coverage tab, and select the icon above the grid to “Export Routes to CSV”. You can also export the same data via the APIs.
-
+* Export your application’s route coverage information to use and share outside the UI. To download the spreadsheet, go to the application’s **Route Coverage** tab, and select the icon above the grid to **Export Routes to CSV**. You can also export the same data via the APIs.
+* The Node agent is available in the default Node Pivotal Cloud Foundry buildpack. You can also set up the Contrast tile to send any vulnerabilities up to your organization.
 
 ## Agent Updates
 
@@ -23,7 +30,6 @@ Export your application’s route coverage information to use and share outside 
 * Package managers
 * Host installation
 * IBM JDK8
-
 
 ### .NET agents 
 
@@ -44,7 +50,6 @@ You can now use the .NET Core agent on servers that have the .NET Framework agen
 
 ### Node.js summary 
 
-* The Node agent is now available in the default Node Pivotal Cloud Foundry buildpack. You can also set up the Contrast tile to send any vulnerabilities up to your organization.
 
 ### Ruby summary 
 
