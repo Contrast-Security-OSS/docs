@@ -6,17 +6,17 @@ tags: "3.6.6 July Release Notes"
 
 ## Fixes
 
-* Some pages in the UI flickered for users on Safari. CONTRAST-35602
-* User had issue onboarding multiple .NET applications in the same pool. SUP-156/CONTRAST-35600
-* Impersonating users as a SuperAdmin resulted in errors. CONTRAST-36473, CONTRAST-35700
-* Users without applications couldn't see custom access groups in the UI. CONTRAST-36113
-* Applications tags were missing after applications were unmerged. CONTRAST-35510
-* Application queries timed out in some organizations. CONTRAST-35625
-* Daily digest emails were sent multiple times to the same recipients. CONTRAST-35499
-* Filters weren't respected when deleting vulnerabilities with "Select All" option. CONTRAST-35503
-* Jira integration didn't detect custom field to add multiple users. CONTRAST-35113
-* Merged applications ignored Assess rule disabled previously for one of the applications. SUP-26
-* Filters weren't respected when exporting vulnerabilities for merged applications. CONTRAST-35511
+* Some pages in the UI flickered for users on Safari. 
+* User had issue onboarding multiple .NET applications in the same pool.
+* Impersonating users as a SuperAdmin resulted in errors.
+* Users without applications couldn't see custom access groups in the UI.
+* Applications tags were missing after applications were unmerged.
+* Application queries timed out in some organizations.
+* Daily digest emails were sent multiple times to the same recipients.
+* Filters weren't respected when deleting vulnerabilities with "Select All" option.
+* Jira integration didn't detect custom field to add multiple users.
+* Merged applications ignored Assess rule disabled previously for one of the applications.
+* Filters weren't respected when exporting vulnerabilities for merged applications.
 
 ## Improvements
 
