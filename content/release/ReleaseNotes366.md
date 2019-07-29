@@ -23,13 +23,15 @@ tags: "3.6.6 July Release Notes"
 
 * The Node agent is available in the default Node Pivotal Cloud Foundry buildpack. You can also set up the Contrast tile to send any vulnerabilities up to your organization.
 
+* The Java agent now offers full support of IBM JDK 8 for Assess and Protect. 
+
 ## Agent Updates
 
 ### Java summary
 
-* Package managers
-* Host installation
-* IBM JDK8
+The Java agent is now available through package managers from the [Contrast Debian](installation-javastandard.html#debian) and [Contrast RPM](installation-javastandard.html#rpm) repositories. If host installation is right for you, you can also install the agent with the Exec Helper package for [Ubuntu](installation-javahost.html#ubuntu) and [Red Hat](installation-javahost.html#rhel). 
+
+The Java team also made improvements to Protect rules, and turned Protect semantic analysis off by default.
 
 ### .NET agents 
 
