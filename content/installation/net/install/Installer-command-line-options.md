@@ -1,21 +1,19 @@
 
 <!--
-title: "Contrast .NET Agent Installer Command Line Options"
-description: "Contrast .NET agent installer command line options"
-tags: "installation agent .NET windows silent unattended installer setup"
+title: "Command Line Options for the .NET Agent Installer"
+description: "Use command line options for the Contrast .NET agent installer."
+tags: "installation agent .NET windows silent unattended installer"
 -->
 
-## .NET Agent Installer Command Line Options
+Use the command line to access additional options supported by the .NET agent installer. 
 
-The .NET agent installer supports additional options when invoked from the command line.
-
-### Silent Installation
+## Silent Installation
 
 The .NET agent installer supports standard silent installation options. These options tell the installer to run silently and unattended, which means that the installer won't prompt for your interaction and will not present the installer UI.
 
 - Install: `ContrastSetup.exe -s -norestart`
 
-### Uninstalling and Repairing
+## Uninstalling and Repairing
 
 The .NET agent installation can be uninstall or repaired using standard Windows features (e.g. the Programs and Features Control Panel, Powershell, etc.). However, it may be desirable to use the .NET agent installer to perform these actions instead, for example, in automated scripting scenarios.
 
@@ -27,7 +25,7 @@ The .NET agent installation can be uninstall or repaired using standard Windows 
 - Uninstall: `ContrastSetup.exe -uninstall -s -norestart`
 - Repair: `ContrastSetup.exe -repair -s -norestart`
 
-### Custom Installation
+## Custom Installation
 
 The .NET agent installer supports several additional options accessible when installing using the command line. Supported options are shown below:
 
