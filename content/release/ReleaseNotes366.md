@@ -31,7 +31,7 @@ tags: "3.6.6 July Release Notes"
 
 The Java agent is now available through package managers from the [Contrast Debian](installation-javastandard.html#debian) and [Contrast RPM](installation-javastandard.html#rpm) repositories. If host installation is right for you, you can also install the agent with the Exec Helper package for [Ubuntu](installation-javahost.html#ubuntu) and [Red Hat](installation-javahost.html#rhel). 
 
-The Java team also made improvements to Protect rules, and turned Protect semantic analysis off by default.
+The Java team also made improvements to Protect rules, and turned off semantic analysis for SQL injection by default.
 
 ### .NET agents 
 
