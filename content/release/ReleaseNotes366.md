@@ -21,6 +21,7 @@ tags: "3.6.6 July Release Notes"
 ## Improvements
 
 * Export your application’s route coverage information to use and share outside the UI. To download the spreadsheet, go to the application’s **Route Coverage** tab, and select the icon above the grid to **Export Routes to CSV**. You can also export the same data via the APIs.
+
 * The Node agent is available in the default Node Pivotal Cloud Foundry buildpack. You can also set up the Contrast tile to send any vulnerabilities up to your organization.
 
 ## Agent Updates
@@ -47,13 +48,16 @@ The .NET Framework team added a new Assess rule that detects when IIS is configu
 
 You can now use the .NET Core agent on servers that have the .NET Framework agent installed. The team also added new Assess rules that detect when cookies are missing http-only or secure flags.
 
-
 ### Node.js summary 
 
+The Node team investigated and closed an issue in which Bluebird async implementation was polluting the Node domain implementation which resulted in extraneous vulnerability reports in the Contrast UI. The team also fixed incompatibilities with the Comment Event Formatting (CEF) specification in the security log. We updated the handling of route reporting when routes are registered after server startup. Finally, the agent team implemented improvements in the handling of the CSP Header Misconfigured, SSJS and SSRF rules. 
 
 ### Ruby summary 
 
+The Ruby team delivers an expanded test suite to include [Ruby Core String specs](https://github.com/ruby/ruby/tree/master/spec/ruby/core ). Ruby also delivers support for trust-boundary-violation. The team added performance optimizations to limit the generation of reported stack traces, limit the reporting of agent classes in inventory mode, append and flush log messages, and migrated tag range handling from Ruby to *C*. 
 
 ### Python summary
+
+The Python team added additional support for handling Protect rules that need to introspect the response body for the Flask framework. We closed an issue where the HTTP Method Tampering rule was blocking requests using the WebDAV protocol and aligned the defaults for communicating with the Contrast Service. Finally, the team closed an issue related to compatibility with MySQL in Python 2.7.
 
 
