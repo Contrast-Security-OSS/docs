@@ -4,7 +4,7 @@ description: "Instructions on using .NET agent logs"
 tags: "troubleshoot configuration logging agent .Net"
 -->
 
-In rare scenarios, bad instrumentation causes a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast, please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of bugs. 
+In rare scenarios, bad instrumentation causes a web server process to crash or a specific page to error out. If you ever encounter a crash or error caused by Contrast, please report the error and [file a bug report](mailto:bugs@contrastsecurity.com). If possible, follow the steps below to gather agent logs and process dumps; this additional information is vital to reproducing and fixing these types of issues.
 
 ## Agent Logs Directory
 
@@ -12,24 +12,24 @@ The .NET agent logs information to the *LOGS* directory within the data director
 
 You can change which information is logged by changing the logging level in the [.NET agent configuration](installation-netconfig.html).
 
-## Types of Bugs
+## Types of Issues
 
-There are two primary types of agent bugs for which Contrast needs to gather logs and other information:    
+There are two primary types of agent issues for which Contrast needs to gather logs and other information:
 
 * Process Crash
 * Unhandled Managed Exception/Page Error/500
 
-## Process Crash Bugs
+## Process Crash Issues
 
-### Verify that the web server process crashed 
+### Verify that the web server process crashed
 
-Check your scenario against the following indicators to confirm that the web server process crashed. 
+Check your scenario against the following indicators to confirm that the web server process crashed.
 
 * The web application is unresponsive after installing the .NET agent.
 
-* The Windows Event Log (**Event Viewer > Windows Logs > Application**) has Error entries for the ".NET Runtime" and "Application Error". 
+* The Windows Event Log (**Event Viewer > Windows Logs > Application**) has Error entries for the ".NET Runtime" and "Application Error".
 
- * The ".NET Runtime" error has details such as: 
+ * The ".NET Runtime" error has details such as:
 
   ```
    Application: w3wp.exe
@@ -51,22 +51,22 @@ Check your scenario against the following indicators to confirm that the web ser
     Report Id: 4fc99650-a3ca-11e7-80e8-005056bd4248
    ```
 
-Once you confirm that the observed bug is a process crash, you're ready to gather information to file a bug. 
+Once you confirm that the observed bug is a process crash, you're ready to gather information to file a bug.
 
-### Gather information on the process crash 
+### Gather information on the process crash
 
-Complete the following steps to gather information to send to Contrast. 
+Complete the following steps to gather information to send to Contrast.
 
-* Set up the ProcDump utility to capture crash dump. 
+* Set up the ProcDump utility to capture crash dump.
   * Download current version of ProcDump from the [Microsoft documentation site](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) to the Windows server with the agent.
-  * From an administrator command prompt: 
+  * From an administrator command prompt:
     ```
-     md c:\dumps 
+     md c:\dumps
      procdump.exe -ma -i c:\dumps
     ```
   * Install the latest .NET agent.
   * [Stop the .NET agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
-  * Enable additional logging. 
+  * Enable additional logging.
      * ** Start > Notepad
      * ** File > Open >** *C:\ProgramData\Contrast\dotnet\contrast_security.yaml*
      * Add the following configuration to the yaml file to enable verbose logging and logging of every method JIT-compiled by the CLR:
@@ -75,8 +75,9 @@ agent:
   dotnet:
     logger:
       level: trace
-    secret:
+    debug:
       log_method_sigs: true
+      log_modified_il: true
 ```
   * Start the .NET agent service.
   * Exercise the application to reproduce the crash.
@@ -87,17 +88,17 @@ Once you've reproduced the crash, gather the following items and include them in
 * Windows Event Log: **Event Viewer > Windows Logs > Application > Save All Events As > "MyEvents.evtx"**
 * Crash Dumps: Create a zip file of each w3wp process dump file in *C:\dumps* (e.g., *w3wp.exe_171002_151601.dmp*). Dump files can be quite large.
 
-You can then uninstall ProcDump with `C:>procdump.exe -u`. 
+You can then uninstall ProcDump with `C:>procdump.exe -u`.
 
-## Unhandled Managed Exception or Page Error Bugs 
+## Unhandled Managed Exception or Page Error Issues
 
 ### Verify an unhandled exception
 
-The above process also helps the .NET engineering team resolve issues such as application errors caused by the .NET agent. Use the following indicators to determine if the .NET agent is causing an application error. 
+The above process also helps the .NET engineering team resolve issues such as application errors caused by the .NET agent. Use the following indicators to determine if the .NET agent is causing an application error.
 
-* You've observed the application working normally without the agent. 
+* You've observed the application working normally without the agent.
 
-* You've observed a page of the application "crashing" (returning a 500 error) under the agent. 
+* You've observed a page of the application "crashing" (returning a 500 error) under the agent.
 
 * There are no errors for ."NET Runtime" and "Application Error" in the Windows Event Log.
 
@@ -149,7 +150,7 @@ The above process also helps the .NET engineering team resolve issues such as ap
    User host address: 1.2.3.4
    User: msteeber
    Is authenticated: True
-   Authentication Type: 
+   Authentication Type:
    Thread account name: System
 
    Thread information:
@@ -165,10 +166,10 @@ The above process also helps the .NET engineering team resolve issues such as ap
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
    ```
 
-As the process hasn't crashed, ProcDump won't capture process dumps. Instead, you must gather the process dump manually by completing the following steps. 
+As the process hasn't crashed, ProcDump won't capture process dumps. Instead, you must gather the process dump manually by completing the following steps.
 
-* Find the Process ID of the worker process that you need. 
-  * IIS Manager > Worker Processes: Find the "Application Pool Name" you need, and take note of the value in the "Process Id". 
+* Find the Process ID of the worker process that you need.
+  * IIS Manager > Worker Processes: Find the "Application Pool Name" you need, and take note of the value in the "Process Id".
 
 * From an administrator command prompt, replace `NNNNN` with the process ID from the previous step.
 
@@ -176,9 +177,9 @@ As the process hasn't crashed, ProcDump won't capture process dumps. Instead, yo
   C:\>procdump -ma NNNNN
   ```
 
-Follow a similar process to gather agent logs, windows events and process dumps to include with your bug report. 
+Follow a similar process to gather agent logs, windows events and process dumps to include with your bug report.
 
-## Other Bugs
+## Other Issues
 
-If you encountered a bug other than a process crash or unhandled exception - maybe the .NET Tray has an inaccurate state, or the agent found a false positive - please [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need process dumps, but trace-level logs and a detailed description of the problem are very helpful when it's time to fix these bugs.  
+If you encountered a bug other than a process crash or unhandled exception - maybe the .NET Tray has an inaccurate state, or the agent found a false positive - please [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need process dumps, but trace-level logs and a detailed description of the problem are very helpful when it's time to fix these issues.
 
