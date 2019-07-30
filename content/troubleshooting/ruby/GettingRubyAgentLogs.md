@@ -57,7 +57,7 @@ agent:
 * Verify that the Contrast-Service is no longer running. If the Service is still running in your environment, terminate
   it manually.
   * In Windows, you can run `tasklist /fi "imagename eq Contrast-Service.exe"`
-  * In Linus or Mac, you can run `ps aux | grep Contrast-Service`
+  * In Linux or Mac, you can run `ps aux | grep Contrast-Service`
 * Clear your console
 * Exercise the application to reproduce the crash.
 
