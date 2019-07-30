@@ -23,7 +23,7 @@ tags: "3.6.6 July Release Notes"
 
 * The Node agent is available in the default Node Pivotal Cloud Foundry buildpack. You can also set up the Contrast tile to send any vulnerabilities up to your organization.
 
-* The Java agent now offers full support of IBM JDK 8 for Assess and Protect. 
+* The Java agent added support for IBM JDK 8. 
 
 ## Agent Updates
 
