@@ -42,7 +42,6 @@ Complete the following steps to gather information to send to Contrast.
   the agent and the Contrast Service.
 
 ```yaml
-
 agent:
   logger:
     level: DEBUG
@@ -50,7 +49,6 @@ agent:
   service:
     level: DEBUG
     path: ./contrast_service_debug.log
-
 ```
 
 * Verify that the Contrast-Service is no longer running. If the Service is still running in your environment, terminate
@@ -62,11 +60,11 @@ agent:
 
 Once you've reproduced the crash, gather the following items and include them in your bug report:
 
-* **Agent Logs:** The *contrast_agent_debug.log* and *contrast_service_debug.log* files; both files should be in the
+* **Agent logs:** The *contrast_agent_debug.log* and *contrast_service_debug.log* files; both files should be in the
   application's root directory.
-* **Application Logs:** The logs from your application run, which are most likely in the *logs* directory of the application.
-* **Console Logs:** The results of the process crash in your terminal.
-* **State Logs:** While the agent logs capture much of the operating system information, it's helpful to know what,
+* **Application logs:** The logs from your application run, which are most likely in the *logs* directory of the application.
+* **Console logs:** The results of the process crash in your terminal.
+* **State logs:** While the agent logs capture much of the operating system information, it's helpful to know what,
   if any, third-party Gems are being used. Even though it's not strictly a log, include your *Gemfile.lock* as part of the reproduction information collected.
 
 You should restore your logging levels to their original settings at the end of this process.
@@ -75,8 +73,7 @@ You should restore your logging levels to their original settings at the end of 
 
 ### Verify an unhandled exception
 
-The above process also helps the Ruby agent team resolve issues such as application errors caused by the Ruby agent.
-Use the following indicators to determine if the Ruby agent is causing an application error.
+The process described in the previous section can also help the Ruby agent team resolve issues such as application errors caused by the Ruby agent. Use the following indicators to determine if the Ruby agent is causing an application error.
 
 * You've observed the application working normally without the agent.
 * You've observed a page of the application "crashing" (returning a 500 error) under the agent.
@@ -84,14 +81,14 @@ Use the following indicators to determine if the Ruby agent is causing an applic
 
 ### Gather information on the exception
 
-Follow a similar process to gather agent logs to include with your bug report, omitting the **Console Logs** step.
+Follow the process outlined in the previous section to **Gather information on the process crash**, but omit the **Console logs** step.
 
 ## Additional Logging
 
 In rare cases, additional information may be required to properly diagnose the root cause of the undesired behavior. To
-facilitate this, the Ruby agent provides a convenience wrapper around Ruby's built in Head Dump utility. To take a
+facilitate this, the Ruby agent provides a convenience wrapper around Ruby's built in heap dump utility. To take a
 heap dump of your application with the agent enabled, add the following to your YAML configuration and restart the
-application. A background thread is then spawned and begin to automatically take Head Dumps.
+application. A background thread is then spawned and begin to automatically take heap dumps.
 
 ```yaml
 agent:
