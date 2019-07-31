@@ -101,11 +101,11 @@ agent:
 ```
 
 The results are saved to the *contrast_heap_dumps* directory in the root of your application. By default, the Ruby
-agent takes five Heap Dumps spanning 10 seconds with a 10 second pause between each. You can find additional configurations in the [Ruby agent configuration](installation-rubyconfig.html). 
+agent takes five heap dumps spanning 10 seconds with a 10 second pause between each. You can find additional configurations in the [Ruby agent configuration articles](installation-rubyconfig.html). 
 
 > **Note:** Taking these measurements will adversely impact performance; you should restore your configuration to the original settings at the end of this process.
 
 ## Other Bugs
 
-If you encountered a bug other than a process crash or unhandled exception - such as a false positive found by the agent- you should [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need console error logs, but debug-level logs and a detailed description of the problem are very helpful when it's time to fix these bugs. 
+If you encountered a bug other than a process crash or unhandled exception - such as a false positive found by the agent - you should [file a bug report](mailto:bugs@contrastsecurity.com). Contrast doesn't usually need console error logs, but debug-level logs and a detailed description of the problem are very helpful when it's time to fix these bugs. 
 
