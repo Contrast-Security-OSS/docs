@@ -1,10 +1,9 @@
 
 <!--
 title: "Troubleshooting Java Agent Installation with the Exec Helper package"
-description: "Troubleshooting with the Exec Helper package"
+description: "Troubleshooting potential issues with the Exec Helper package"
 tags: "troubleshooting installation Java agent linux exec package"
 -->
-
 
 ## Issue: The Exec Helper is installed, but Contrast isn't starting
 
