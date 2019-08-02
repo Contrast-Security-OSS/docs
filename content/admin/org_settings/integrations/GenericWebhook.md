@@ -24,7 +24,17 @@ Contrast supports generic webhook integration, which allows you to receive notif
 	'message': 'Test User commented on a Insecure JSP Placement vulnerability in WebGoat. \"Fixed in CVE-2015\"'
 }
 ```
-You can also add placeholders in the payload so that Contrast changes the text for different notifications - a new application, server, vulnerability, etc. Sample code for VictorOps integration:
+You can also add placeholders in the payload so that Contrast will fill in for different notifications - a new application, server, vulnerability, etc. 
+
+The placeholders available for use are:
+
+* Title
+* Message
+* ApplicationName
+* VulnerabilityTags
+
+
+If you were using the Generic Webhook to create a VictorOps integration, the sample payload would be as follows:
 
 ```json
 { 
@@ -34,6 +44,8 @@ You can also add placeholders in the payload so that Contrast changes the text f
 	"state_message":"$Message" 
 }
 ```
+ 
+Where Contrast data fills in the Title and Message fields, according to notifcation. 
 
 * Click **Save**.
 
