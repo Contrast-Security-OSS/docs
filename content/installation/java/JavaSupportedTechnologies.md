@@ -1,14 +1,14 @@
 <!--
-title: "Supported Technologies"
-description: "List of supported technologies"
-tags: "Java agent installation containers JDKs frameworks libraries support troubleshooting"
+title: "Supported Technologies for the Java Agent"
+description: "List of supported technologies for the Java agent"
+tags: "Java agent installation containers JDKs frameworks libraries support"
 -->
 
 Contrast is tested and proven to be compatible with the following technologies; however, Contrast is also compatible with many more that aren't listed.
 
 |Supported JDKS                             | Supported Containers                 | Supported Application Frameworks
 |:--------------                            |:--------------------                 |:--------------------------------
-|IBM 1.6, 1.7                               | GlassFish 4                          | Apache POI, fileupload, HttpComponents
+|IBM 1.6, 1.7, 1.8                          | GlassFish 4                          | Apache POI, fileupload, HttpComponents
 |JRockit 1.6 (update 95+ or R28.3.6+)       | Grizzly 2.3.20+                      | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
 |Oracle JDK 1.6, 1.7, 1.8                   | JBoss 4.2, 5, 5.1, 6.1, 7, 7.1       | Direct Web Remoting (DWR)
 |Open JDK 1.6, 1.7, 1.8                     | Jetty 7, 8, 9                        | DropWizard
