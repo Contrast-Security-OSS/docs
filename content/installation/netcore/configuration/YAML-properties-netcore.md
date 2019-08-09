@@ -31,13 +31,16 @@ You can use environment variables to specify every configuration option supporte
 
 ## Configuration Options
 
+### Enable the agent
+
+* **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
+
 ### Contrast UI properties
 
 Use the properties in this section to connect the .NET Core agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-* **contrast**:
+* **api**:
 
-  * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
   * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.**
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
