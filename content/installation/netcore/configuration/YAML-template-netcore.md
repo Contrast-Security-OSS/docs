@@ -13,15 +13,15 @@ Go to the [YAML Properties](installation-netcoreconfig.html#netcore-yaml) articl
 #
 #================================================================================================================================================================================
 
+# Only set this property if you want to turn off Contrast. Set to
+# `true` to turn the agent on; set to `false` to turn the agent off.
+# enable: true
 
 #================================================================================
 # Contrast
 # Use the properties in this section to connect the agent to the Contrast UI.
 #================================================================================
-contrast:
-
-  # Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
-  # enable: true
+api:
 
   # ********************** REQUIRED **********************
   # Set the URL for the Contrast UI.
