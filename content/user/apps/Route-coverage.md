@@ -45,5 +45,8 @@ View details on each route - including the servers on which it exists and the nu
 
 Use the dropdown menu to filter routes, or the search field to find specific routes in the grid. The date range (calendar) filter simultaneously updates your view in the grid and the chart. Users with administrator-level permissions can also click the **reset** icon to remove all routes listed in the grid. 
 
+### Export route details 
+
+To view and share route details outside of the Contrast UI, use the download icon above the grid to **Export Routes to CSV**. The spreadsheet includes a list of the application's routes, details about the server on which they were found and when the routes were last exercised as well as a list of vulnerabilities, the severity and status of each, and details about when the vulnerabilities were detected. 
 
 
