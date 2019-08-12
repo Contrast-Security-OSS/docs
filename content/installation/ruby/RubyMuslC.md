@@ -13,8 +13,10 @@ Contrast requires compilation in the local environment to install *C* libraries.
 The least invasive option is to reinstall a single gem. After installing the Contrast gem, uninstall its dependency and re-install using the `ruby` platform flag.
 
 ```
+CS__PROTOBUF="$(gem list | grep google-protobuf | grep -o '[0-9]*\.[0-9]*\.[0-9]*')"
 gem uninstall -I google-protobuf
-gem install google-protobuf --version=3.7.1 --platform=ruby
+gem install google-protobuf --version=$CS__PROTOBUF --platform=ruby
+unset CS__PROTOBUF
 ```
 
 ### Reinstall full platform
