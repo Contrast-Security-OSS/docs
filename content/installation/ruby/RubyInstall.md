@@ -118,8 +118,3 @@ You can access the service status using take tasks:
 ### Multiple Agents
 
 **Ensure that the service host and port values are consistent.** If there are multiple applications protected by the Contrast agent, the first one to start will launch the service. This is not a problem since the service is designed to handle communication with multiple agents. But, if the `agent.service.host` and `agent.service.port` configuration values don't match,  the additional agent won't be able to communicate with the previously started service.
-
-### Delay on First Request
-
-**Inventory and coverage metrics are gathered on first request.** The initial message to the Contrast UI contains information about the routes and Gems used by the application for inventory analysis. This is a relatively heavyweight process, and may add a few seconds to the response time for the initial HTTP request to the application. Under some application servers (e.g., Puma) adding the `ruby.analyze_inventory_async: true` configuration can reduce this delay.
-
