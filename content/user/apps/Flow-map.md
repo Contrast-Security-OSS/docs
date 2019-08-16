@@ -4,7 +4,7 @@ description: "Learn how to view the flow of data through your application."
 tags: "user UI applications flow map data access"
 -->
 
-Contrast's flow map provides an interactive view of where data and resources are going from your applications. 
+The application flow map provides an interactive view of where data and resources are going between your applications. 
 
 ## How It Works
 
@@ -12,21 +12,39 @@ Contrast uses data reported from your Contrast agent to the UI to build a detail
 
 <!-- I'm assuming data is refreshed each time the agent reports to the UI. How often is this? -->
 
+<a href="assets/images/Flow-map-active.png" rel="lightbox" title="Flow Map tab"><img class="thumbnail" src="assets/images/Flow-map-active.png"/></a>
+
+
+<a href="assets/images/Flow-map-empty.png" rel="lightbox" title="No data in the Flow Map tab"><img class="thumbnail" src="assets/images/Flow-map-empty.png"/></a>
+
+
 ## Architecture
 
+See the attack status, environments, vulnerability statuses, etc.
 
 ### View
 
+The View column displays the layer of technologies that determine what a browser sees and processes. 
 
 ### Presentation 
 
+The Presentation tab displays the layer of technologies that generates the application view. 
 
 ### Service
 
-
+The Service tab displays the layer comprised of the database, LDAP driver or back end code performing the application logic.
 
 
 ## Back End Systems
 
+A solid line with lock indicated that the connection is encrypted; a dashed line is unencrypted or unknown. 
 
-## Connected Applications 
+
+## Connected Applications
+
+Click the funnel icon select filters...
+
+Click the **See Flowmap** link to go to the Flow Map tab for that application. 
+
+> **Note:** If a user isn't part of the necessary [access group](admin-manageorgs.html#access) to view details for a connected application, the affected application is omitted from their view in the column. 
+
