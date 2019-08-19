@@ -8,17 +8,23 @@ The application flow map provides an interactive view of where data and resource
 
 ## How It Works
 
-Contrast uses data reported from your Contrast agent to the UI to build a detailed view of where data from your application flows within your organization and beyond it. 
+Contrast uses data reported from your Contrast agent to the UI to build a detailed view of where data from your application flows within your organization and beyond it. You can determine if users and connected applications have the appropriate access. 
+
+The agent performs matching through string credentials. 
 
 <!-- I'm assuming data is refreshed each time the agent reports to the UI. How often is this? -->
 
 <a href="assets/images/Flow-map-active.png" rel="lightbox" title="Flow Map tab"><img class="thumbnail" src="assets/images/Flow-map-active.png"/></a>
 
+If the agent hasn't detected any back end systems or connected applications...
+
+<!-- In what scenarios would the agent not report this info? Not exercised? -->
 
 <a href="assets/images/Flow-map-empty.png" rel="lightbox" title="No data in the Flow Map tab"><img class="thumbnail" src="assets/images/Flow-map-empty.png"/></a>
 
+## Application Architecture
 
-## Architecture
+The **Application Architecture** section break down the **View**, **Presentation** and **Service** layers of the application's front end. 
 
 See the attack status, environments, vulnerability statuses, etc.
 
@@ -42,7 +48,7 @@ A solid line with lock indicated that the connection is encrypted; a dashed line
 
 ## Connected Applications
 
-Click the funnel icon select filters...
+Click the funnel icon select filters...The dropdown menus shows metadata fields for the main application you're viewing (not the connected applications).
 
 Click the **See Flowmap** link to go to the Flow Map tab for that application. 
 
