@@ -13,7 +13,7 @@ To install the .NET agent, complete the following steps. The installation proces
 * Click the **Add Agent** button in the top navigation bar.
 * Select **.NET Core** in the dropdown menu, and click the **Download Agent** button for the platform on which your application is hosted. You might need to specify proxy authentication information, if required by your network, before downloading the agent.
 * Proceed to Step 2 and click on the **Download Config File** button to download the agent's configurations.
-* On the web server, extract the downloaded zip archive (e.g., *ContrastSetup_18.4.56.zip*) to a directory that your applications have sufficient permissions to access.
+* On the web server, extract the downloaded zip archive (e.g., *Contrast.NET.Core_0.20.1.zip*) to a directory that your applications have sufficient permissions to access.
 * On the web server, place the downloaded configuration file in a directory that your applications have sufficient permissions to access.
 
 ## Customize Your Installation
