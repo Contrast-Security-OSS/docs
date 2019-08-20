@@ -17,7 +17,7 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 
 * .NET Core versions >= 2.1 < 3.0 (installed system wide)
 * 2 CPUs
-* 4 GB of RAM<sup>2</sup>
+* 4 GB of RAM<sup>*</sup>
 * Windows operating system
 
 ## Recommended Requirements
@@ -25,4 +25,4 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 * 4+ CPUs
 * 8+ GB of RAM
 
-> <sup>2</sup> The .NET Core agent running in Assess mode roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the .NET agent isn't installed. 
+> <sup>*</sup> The .NET Core agent running in Assess mode roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the .NET agent isn't installed. 
