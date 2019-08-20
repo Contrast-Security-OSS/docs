@@ -20,6 +20,7 @@ The Contrast .NET agent supports analysis of web applications built on the follo
 >**Notes:**
 > * The **Mono** runtime isn't supported because Mono doesn't have a **Profiler API**. The Profiler API is an interface based on a **Component Object Model (COM)**, and isn't supported on Linux.
 > * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime.
+> * The .NET Framework agent does NOT support .NET Framework applications running within the ASP.NET Core pipeline and similarly does not support ASP.NET Core applications running under the .NET framework.
 
 ## .NET for Azure App Service
 
@@ -32,7 +33,7 @@ The .NET agent for Azure App Service supports analysis of web applications built
 | Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
 | Web Application Frameworks | See the **.NET for Windows** table. |
 
-> **Note:** Only applications using the full .NET framework agent are currently supported. Contrast plans to add support for .NET Core applications in the future.
+> **Note:** Only applications using the full .NET framework agent are supported by the [Contrast.NET.Azure.SiteExtension](https://www.nuget.org/packages/Contrast.NET.Azure.SiteExtension/) or [Contrast.NET.Azure.AppService nuget package](https://www.nuget.org/packages/Contrast.NET.Azure.AppService/). .NET Core applications must use the .NET Core-specific [nuget package](https://www.nuget.org/packages/Contrast.SensorsNetCore/) or [site extension](https://www.nuget.org/packages/Contrast.NetCore.Azure.SiteExtension/).
 
 ## .NET for Docker
 
