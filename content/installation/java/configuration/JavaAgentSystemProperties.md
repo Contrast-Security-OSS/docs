@@ -21,8 +21,6 @@ Generate a list of general properties directly from the command line using the C
 | contrast.app.features | JSON from disk to use for application <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.app.update.period | Contrast application update thread polling period in milliseconds <br> **DEFAULT VALUE:** 5000 (5 seconds, in milliseconds)</br> |
 | contrast.appupdate | Boolean to enable/disable threads that sends updates about applications to Contrast <br> **DEFAULT VALUE:** true</br> |
-| contrast.auto.license.assessment | Boolean to allow Contrast to license an application on creation <br> **DEFAULT VALUE:** false</br> |
-| contrast.auto.license.protection | Boolean to allow Contrast to license a server on creation <br> **DEFAULT VALUE:** false </br> |
 | contrast.classpath.libs | Determines if Contrast tracks usage of libraries listed in the environment's *java.class.path* property. This should only be on in J2SE/desktop situations. <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.cloneinput | Boolean to enable/disable cloning of tracked objects <br> **DEFAULT VALUE:** true </br> |
 | contrast.container | Manually override the web app container name/ID <br> **DEFAULT VALUE:** detected by the Java agent</br> |
