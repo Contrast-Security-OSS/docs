@@ -4,11 +4,11 @@ description: "Installing the Java Agent Across All Java Processes on an Ubuntu H
 tags: "installation Java agent linux package ubuntu bionic trusty xenial debian apt exec-helper host"
 -->
 
-Host Installation provides a single mechanism to apply Contrast to all Java applications used on a host. Unlike standard installation where Contrast is integrated into service scripts or environment variables, Host Installation intercepts and attaches the Contrast Agent into all new `java` processes on a host. Host Installation is ideal for some scenarios in which Contrast must support legacy infrastructure but the Java application server configuration is not well understood. However, in most scenarios, administrators want more granular control offered by the Standard Installation.
-
 ## About Host Installation for Ubuntu
 
 Ubuntu users may install the Contrast Java agent at the host level using the `contrast-java-agent-exec-helper`. The `contrast-java-agent-exec-helper` configures the Ubuntu host to attach the Contrast Java agent on all Java processes on the host.
+
+Instead of a typical Contrast installation that requires users to configure their Java service scripts to include the Contrast Java agent, the `contrast-java-agent-exec-helper` package intercepts all new `java` processes, and automatically configures those processes to use Contrast. This option is ideal for some scenarios in which Contrast must support legacy infrastructure but your Java application server configuration isn't well understood. However, in most scenarios, administrators want more granular control over their Contrast configurations.
 
 ## Install the Agent with the Exec Helper Package
 
