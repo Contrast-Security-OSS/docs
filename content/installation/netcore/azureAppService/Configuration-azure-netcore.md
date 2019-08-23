@@ -22,9 +22,9 @@ You can also define any configuration setting in the *web.config* file as an env
 
 ### YAML file
 
-Instead of setting individual options in the Azure Portal, you may use a YAML configuration file containing Contrast settings. First, upload the file to your Azure web application by including it in your application deployment or using the Kudu console. Then add an application setting, `CONTRAST_CONFIG_PATH`, that points to this file.
+Instead of setting individual options in the Azure Portal, you may use a YAML configuration file containing Contrast settings. First, upload the file to your Azure web application by including it in your application deployment or using the Kudu console. Then add an application setting, `CONTRAST_CORECLR_CONFIG_PATH`, that points to this file.
 
-> **Example:** To use the *contrast_security.yaml* file in the root of your application, add an application setting with key `CONTRAST_CONFIG_PATH` and value *D:\Home\site\wwwroot\contrast_security.yaml*. Application files in Azure App Service are deployed to *D:\home\site\wwwroot*.
+> **Example:** To use the *contrast_security.yaml* file in the root of your application, add an application setting with key `CONTRAST_CORECLR_CONFIG_PATH` and value *D:\Home\site\wwwroot\contrast_security.yaml*. Application files in Azure App Service are deployed to *D:\home\site\wwwroot*.
 
 ## Common Configuration Options
 
