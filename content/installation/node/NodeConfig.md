@@ -40,9 +40,16 @@ Parameter                                      | Environment Variable           
 --agent.node.stacktrace_logging.enabled [true] | AGENT\_\_NODE\_\_STACKTRACE_LOGGING\_\_ENABLED | Log all application errors to agent's */dumps* file for aggressive debugging. (Not recommended.)
 --agent.polling.app_activity_ms <ms>           | AGENT\_\_POLLING\_\_APP_ACTIVITY_MS            | How often (in ms), application activity messages are sent. Default is **30000**.
 --agent.polling.app_update_ms <ms>             | AGENT\_\_POLLING\_\_APP_UPDATE_MS              | How often (in ms), application update messages (libraries, technologies, etc.) are sent. Default is **60000**.
---agent.rotue_coverage.enable [true]           | AGENT\_\_ROUTE_COVERAGE\_\_ENABLE              | If `false`, do not send route-base coverage data to the Contrast UI. Default is `true`.
+--agent.route_coverage.enable [true]           | AGENT\_\_ROUTE_COVERAGE\_\_ENABLE              | If `false`, do not send route-base coverage data to the Contrast UI. Default is `true`.
 --agent.security_logger.level <level>          | AGENT\_\_SECURITY_LOGGER\_\_LEVEL              | Set the log level for security logging. Valid options are `alert`, `crit`, `err`, `warning`, `notice`, `info` and `debug`.
 --agent.security_logger.path <path>            | AGENT\_\_SECURITY_LOGGER\_\_PATH               | Set the file to which the agent logs security events.
+--agent.security_logger.syslog.enable          | AGENT\_\_SECURITY_LOGGER\_\_SYSLOG\_\_ENABLE   | If `false`, syslog is disabled
+--agent.security_logger.syslog.ip              | AGENT\_\_SECURITY_LOGGER\_\_SYSLOG\_\_IP       | Set the IP address of the Syslog server to which the agent should send messages.
+--agent.security_logger.syslog.port            | AGENT\_\_SECURITY_LOGGER\_\_SYSLOG\_\_PORT     | Set the port of the Syslog server to which the agent should send messages.
+--agent.security_logger.syslog.facility        | AGENT\_\_SECURITY_LOGGER\_\_SYSLOG\_\_FACILITY | Set the facility code of the messages the agent sends to Syslog.
+--agent.security_logger.syslog.severity_blocked | AGENT\_\_SECURITY_LOGGER\_\_SYSLOG\_\_SEVERITY_BLOCKED | Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+--agent.security_logger.syslog.severity_exploited | AGENT\_\_SECURITY_LOGGER\_\_SYSLOG\_\_SEVERITY_EXPLOITED | Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+--agent.security_logger.syslog.severity_probed | AGENT\_\_SECURITY_LOGGER\_\_SYSLOG\_\_SEVERITY_PROBED | Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
 --application.args <args>                      | APPLICATION\_\_ARGS                            | String containing `args` to pass verbatim to the application. (E.g., `--application.args "-A -S -D -F foo bar"`.)
 --application.code <code>                      | APPLICATION\_\_CODE                            | Add the application code this application should use in the Contrast UI.
 --application.group <tags>                     | APPLICATION\_\_GROUP                           | How to report the application's group for auto-grouping.
