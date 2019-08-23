@@ -54,7 +54,7 @@ Complete the following steps to install the .NET Core agent alongside the New Re
     CORECLR_PROFILER_PATH_64=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x64\native\ContrastProfiler.dll
     CORECLR_PROFILER_PATH_32=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x86\native\ContrastProfiler.dll
     CORECLR_PROFILER={8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
-    CONTRAST_CONFIG_PATH=<CONTRAST_CORE_CLR_CONFIG_PATH>\contrast_security.yaml
+    CONTRAST_CORECLR_CONFIG_PATH=<CONTRAST_CORE_CLR_CONFIG_PATH>\contrast_security.yaml
     ```
 
 ## AppDynamics
@@ -90,7 +90,7 @@ Complete the following steps to install the .NET Core agent alongside the AppDyn
     CORECLR_PROFILER_PATH_64=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x64\native\ContrastProfiler.dll
     CORECLR_PROFILER_PATH_32=<CONTRAST_CORE_CLR_HOME>\runtimes\win-x86\native\ContrastProfiler.dll
     CORECLR_PROFILER={8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
-    CONTRAST_CONFIG_PATH=<CONTRAST_CORE_CLR_CONFIG_PATH>\contrast_security.yaml
+    CONTRAST_CORECLR_CONFIG_PATH=<CONTRAST_CORE_CLR_CONFIG_PATH>\contrast_security.yaml
     ```
 
 ## Next Steps
