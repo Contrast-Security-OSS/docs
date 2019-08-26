@@ -3,9 +3,10 @@ title: "Node.js Compiler Installation"
 description: "Installing a compiler for Node.js agent < 2.6.0"
 tags: "Node.js compiler installation"
 -->
-## Compiler Installation
 
-From 2.0.0 to 2.5.1 of the Node agent, you must have installed:
+## About Compiler Installation
+
+From versions 2.0.0 to 2.5.1 of the Node agent, you must have installed:
 
 * A C++ compiler toolchain (e.g., Clang, GCC or MSVC) and a POSIX-compatible `make`
 

@@ -4,9 +4,10 @@ description: "General troubleshooting guide for the Node agent"
 tags: "node troubleshooting agent general debug"
 -->
 
-## Scenario: Unable to install Node agent.
+## Scenario: I'm unable to install the Node agent.
 
-If you see the following errors during npm install of Node agent
+If you're trying to install the Node agent and see the following errors during `npm install`, you must [set up a compiler](add-hyperlink).
+
 ```
 npm ERR! @contrast/distringuish@1.2.0 build: `node-gyp rebuild`
 npm ERR! Exit status 1
@@ -15,8 +16,6 @@ npm ERR! Failed at the @contrast/distringuish@1.2.0 build script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 npm WARN Local package.json exists, but node_modules missing, did you mean to install?
 ```
-
-You must set up a compiler: [Compiler Installation](troubleshooting-node.html#compilers)
 
 ## Scenario: I've started my application with the Node agent, but I'm not seeing any results.
 
