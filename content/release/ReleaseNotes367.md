@@ -8,7 +8,9 @@ tags: "3.6.7 August Release Notes"
 
 * User with active Assess licenses couldn't access the UI after Protect licenses expired. CONTRAST-22125
 * Servers were labeled as Unlicensed when Protect was disabled for the organization. CONTRAST-36469
-* Protect user couldn't save setting for output to Syslog when they entered a host name in the form fields. CONTRAST-37314
+* Some Protect users couldn't save syslog settings when they entered a host name. CONTRAST-37314
+* There was an error with the React component when loading a vulnerability's Overview page as well as filters in the Vulnerabilities grid. CONTRAST-37331, CONTRAST-33605
+* Application's could not be deleted from the Applications grid using the trash can icon. CONTRAST-36644
 
 ## New and Improved Features
 
@@ -18,6 +20,7 @@ Administrators can save time and effort by automatically controlling a user's or
 
 ### Java summary
 
+TBD
 
 ### .NET agent summaries
 
