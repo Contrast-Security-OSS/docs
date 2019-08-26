@@ -20,7 +20,7 @@ Administrators can save time and effort by automatically assigning a user's orga
 
 ### Java summary
 
-TBD
+For Protect, the Java team increased accuracy for the HTTP Method Tampering Rule and Expression Language Injection Rule to resolve false positives, and increased accuracy for the XSS Rule to resolve false negatives. For Assess, we completed performance optimizations for users of the Oracle JDBC driver. 
 
 ### .NET agent summaries
 
