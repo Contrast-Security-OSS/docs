@@ -6,15 +6,15 @@ tags: "3.6.7 August Release Notes"
 
 ## Bug Fixes
 
-* User with active Assess licenses couldn't access the UI after Protect licenses expired. CONTRAST-22125
-* Servers were labeled as Unlicensed when Protect was disabled for the organization. CONTRAST-36469
-* Some Protect users couldn't save syslog settings when they entered a host name. CONTRAST-37314
-* There was an error with the React component when loading a vulnerability's Overview page as well as filters in the Vulnerabilities grid. CONTRAST-37331, CONTRAST-33605
-* Application's could not be deleted from the Applications grid using the trash can icon. CONTRAST-36644
+* Some users with active Assess licenses couldn't access the Contrast UI after Protect licenses expired.
+* Servers were labeled as Unlicensed even though Protect was disabled for the organization.
+* Some Protect users couldn't save syslog settings when they entered a host name.
+* There was an error with the React component when loading a vulnerability's **Overview** page as well as the filters menu in the **Vulnerabilities** grid.
+* Applications couldn't be deleted from the **Applications** grid using the trash can icon.
 
 ## New and Improved Features
 
-Administrators can save time and effort by automatically controlling a user's organizational groups. When the option is enabled in your organization's SSO settings, Contrast uses SAML authentication to automatically provision users with an organizational group when they log in. If the user is already a member of any Contrast groups that aren't allowed by the SSO settings, Contrast can also automatically remove the user from those organizational groups. Go to the **user menu > Organization Settings > SSO tab** to see the options for yourself.
+Administrators can save time and effort by automatically assigning a user's organizational groups. When the option is enabled in your organization's SSO settings, Contrast uses SAML authentication to automatically provision users with an organizational group when they log in. If the user is already a member of any Contrast groups that aren't allowed by the SSO settings, Contrast can also automatically remove the user from those organizational groups. Go to the **user menu > Organization Settings > SSO tab** to see the options in the UI.
 
 ## Agent Updates
 
@@ -30,11 +30,11 @@ The .NET Framework team improved communication with the Contrast UI to reduce du
  
 #### .NET Core
 
-The .NET Core team removed the requirement that the .NET Framework be installed on the server. We also added new “cookie-header-missing-flags” to identify when cookies are issued without the secure flag, and fixed a in which libraries were detected but not reported by the agent.
+The .NET Core team removed the requirement that the .NET Framework be installed on the server. We also added new “cookie-header-missing-flags” to identify when cookies are issued without the secure flag, and fixed a bug in which libraries were detected but not reported by the agent.
 
 ### Node.js summary 
 
-The Node team is moving forward on support for the Kraken.js framework; this month, we implemented support for routing, form uploads and view layer code. The agent now deploys with pre-built binaries that eases deployment to applications that depend on Yarn or applications in environments where a compilation pipeline isn't available. In addition, the agent handles more detailed analysis of the URL object. The team also fixed the following issues: 
+The Node team is moving forward on support for the Kraken.js framework; this month, we implemented support for routing, form uploads and view layer code. The agent now deploys with pre-built binaries that ease deployment to applications that depend on Yarn as well as applications in environments where a compilation pipeline isn't available. In addition, the agent handles more detailed analysis of the URL object. The team also fixed the following issues: 
 
 * Syslog settings weren't matched up to the common configuration specification
 * Hapi 17 sink wasn't excluding header for XSS
@@ -47,5 +47,4 @@ For the Ruby team, much of the August release was focused on performance improve
 ### Python summary
 
 The Python team released a major update to source input analysis when operating in Protect mode. This update allows for a reduction of processing within the client application while standardizing user input scoring across agent implementations. We moved common code for the Flask middleware to the base class to be shared among all WSGI-derived middlewares. We resolved an issue in which binary uploads in HTTP requests were being reported for analysis as if they were UTF-8. The team is also moving towards the Python Assess beta release.
-
 
