@@ -1,20 +1,21 @@
 <!--
 title: "Node.js Agent Installation"
-description: "Installing the Node.js Agent"
+description: "Learn how to install, set up and run the Node.js agent."
 tags: "NodeJS agent installation"
 -->
 
 
 ## Installation
 
-After downloading from your account, install the agent from your application's root directory as follows:
+After downloading from your account, install the agent from your application's root directory:
 
 ``` sh
 npm install node-contrast-#.#.#.tgz --no-save
 ```
-This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json*.
+This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json* file.
 
-If you use yarn:
+If you use yarn, include the following command:
+
 ``` sh
 yarn add file:node-contrast-#.#.#.tgz
 ```
