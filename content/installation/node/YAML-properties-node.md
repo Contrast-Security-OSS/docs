@@ -100,6 +100,20 @@ Use the properties in this section to control security logging. These logs allow
     * **path**: Set the file to which the agent logs security events. <br> Example: */.contrast/security.log*
     * **level**: Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
 
+#### Syslog
+
+Define the following properties to set Syslog values. If the properties aren't defined, the agent uses the Syslog values from the Contrast UI. Syslog properties
+must be nested under `security_logger`.
+
+  * **syslog**:
+    *  **enable**: Set to `true` to enable Syslog logging
+    *  **ip**: Set the IP address of the Syslog server to which the agent should send messages.
+    *  **port**: Set the port of the Syslog server to which the agent should send messages.
+    *  **facility**: Set the facility code of the messages the agent sends to Syslog.
+    *  **severity_blocked**: Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+    *  **severity_exploited**: Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+    *  **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+
 #### Heap dumps
 
 The following properties are used to trigger heap dumps from within the agent to snapshot the behavior of instrumented applications.
