@@ -16,6 +16,8 @@ From versions 2.0.0 to 2.5.1 of the Node agent, you must have installed:
  * If you can build other modules with C++ bindings like [node-sass](https://www.npmjs.com/package/node-sass) and [sqlite3](https://github.com/mapbox/node-sqlite3), you probably meet all of the requirements for Contrast.
  * The official [Node Docker images](https://hub.docker.com/_/node/) come with all of the prerequisites installed.
 
+## Solutions
+
 ### Windows
 
 To install the necessary compiler toolchain on Windows, run `npm install -g --production windows-build-tools`. If you're using a Node version older than 8.0, you must use `windows-build-tools` version 3.0 (not 4.0, the newest version).

@@ -12,9 +12,9 @@ After downloading from your account, install the agent from your application's r
 ``` sh
 npm install node-contrast-#.#.#.tgz --no-save
 ```
-This will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json* file.
+This command will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json* file.
 
-If you use yarn, include the following command:
+If you use **yarn**, use an alternate command to install the agent:
 
 ``` sh
 yarn add file:node-contrast-#.#.#.tgz
