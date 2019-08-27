@@ -6,7 +6,7 @@ tags: "node troubleshooting agent general debug"
 
 ## Scenario: I'm unable to install the Node agent.
 
-If you're trying to install the Node agent and see the following errors when using `npm install`, you must [set up a compiler](add-hyperlink).
+If you're trying to install the Node agent and see the following errors when using `npm install`, you must [set up a compiler](troubleshooting-nodeinstall.html#node-ts-compilers).
 
 ```
 npm ERR! @contrast/distringuish@1.2.0 build: `node-gyp rebuild`
