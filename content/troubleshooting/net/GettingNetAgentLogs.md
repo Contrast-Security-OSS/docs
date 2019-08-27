@@ -65,7 +65,7 @@ Complete the following steps to gather information to send to Contrast.
      procdump.exe -ma -i c:\dumps
     ```
   * Install the latest .NET agent.
-  * [Stop the .NET agent service](http://127.0.0.1:9000/installation-netusage.html#usage).
+  * [Stop the .NET agent service](installation-netusage.html#usage).
   * Enable additional logging.
      * ** Start > Notepad
      * ** File > Open >** *C:\ProgramData\Contrast\dotnet\contrast_security.yaml*
@@ -75,11 +75,8 @@ agent:
   dotnet:
     logger:
       level: trace
-    debug:
-      log_method_sigs: true
-      log_modified_il: true
 ```
-  * Start the .NET agent service.
+  * [Start the .NET agent service](installation-netusage.html#usage).
   * Exercise the application to reproduce the crash.
 
 Once you've reproduced the crash, gather the following items and include them in your bug report:
