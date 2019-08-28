@@ -22,7 +22,7 @@ If the agent is currently reporting data for this application, these columns are
 
 ## Application Architecture
 
-The **Application Architecture** section break down the **View**, **Presentation** and **Service** layers of the application's front end. You can also see foundational information about the application, including the environments in which it's deployed, letter grade, vulnerability statuses and attack status. 
+The **Application Architecture** section break down the view, presentation and service layers of the application's front end. You can also see foundational information about the application, including the environments in which it's deployed, letter grade, vulnerability statuses and attack status. 
 
 ### Layers
 
@@ -36,13 +36,11 @@ If the application is being exercised while you're viewing the flow map, the **B
 
 ## Back-End Systems
 
-The **Back-End Systems** columns displays each of the system to which your application is connected. A solid line with lock indicates that the connection is encrypted; a dashed line is unencrypted or unknown. Hover on a system for more details; click on the icon to highlight its connection to other applications. 
+The **Back-End Systems** columns displays each of the system to which your application is connected. A solid line with lock indicates that the connection is encrypted; a dashed line shows that the connection is unencrypted or the state of encryption is unknown. Hover on a system for more details; click on the icon to highlight its connection to other applications. 
 
 ## Connected Applications
 
-Click the funnel icon select filters...The dropdown menus shows metadata fields for the main application you're viewing (not the connected applications).
-
-Click the **See Flowmap** link to go to the Flow Map tab for that application. 
+The **Connected Applications** column lists each of the applications that are connected to the primary application by a back-end system. To see connected applications that meet specific criteria, click the funnel icon to select filters from the dropdown menu, such as environment, application language and custom tags. The menu also shows [session metadata](user-vulnerableapps.html#session) fields for the primary application (not the connected applications), if available. Click the **See Flowmap** link to go to the Flow Map tab for that application. 
 
 > **Note:** If a user isn't part of the necessary [access group](admin-manageorgs.html#access) to view details for a connected application, the affected application is omitted from their view in the column. 
 
