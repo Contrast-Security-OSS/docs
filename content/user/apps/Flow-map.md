@@ -32,11 +32,11 @@ Hover on an item in any of the lists to see how many instances of each type of l
 
 ### Browsers
 
-If the application is being exercised while you're viewing the flow map, the **Browser** tab appears with a list of the browsers <!-- on which you can access the app or on which it's being accessed? -->.
+If the application is being accessed while you're viewing the flow map, the **Browser** tab appears with a list of the browsers on which it's being accessed. Hover over the icons to see details, such as browser type version. 
 
 ## Back-End Systems
 
-The **Back-End Systems** columns displays each of the system to which your application is connected. A solid line with lock indicates that the connection is encrypted; a dashed line shows that the connection is unencrypted or the state of encryption is unknown. Hover on a system for more details; click on the icon to highlight its connection to other applications. 
+The **Back-End Systems** columns displays each of the systems to which your application is connected. Hover on the cylinder icon for databases, the globe icon for URLs, or the plug icon for LDAP databases to see more details on each system; click on an icon to highlight its connection to other applications. A solid line with lock indicates that the connection is encrypted; a dashed line shows that the connection is unencrypted or the state of encryption is unknown.  
 
 ## Connected Applications
 
