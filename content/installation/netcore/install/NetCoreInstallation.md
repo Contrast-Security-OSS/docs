@@ -41,7 +41,7 @@ To enable the .NET Core agent on your application, you must set the following en
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`
 * CONTRAST_CONFIG_PATH: Set the path to the YAML configuration file. It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*). If not set, the default is *`CONTRAST_CORECLR_DATA_DIRECTORY`\contrast_security.yaml*. This setting is **optional**.
-* CONTRAST_CORECLR_DATA_DIRECTORY: Change the path to where agent logs are kept. The default is *C:\ProgramData\Contrast\dotnet*. This setting is **optional**.
+* CONTRAST_CORECLR_DATA_DIRECTORY: Change the path to where agent logs are kept. The default is *C:\ProgramData\Contrast\dotnet-core*. This setting is **optional**.
 
 
 | Environment Variable | Platform | Profiler Path |
@@ -65,7 +65,7 @@ $env:CORECLR_PROFILER_PATH_64 = 'C:\contrast\dotnetcore\runtimes\win-x64\native\
 $env:CORECLR_PROFILER_PATH_32 = 'C:\contrast\dotnetcore\runtimes\win-x86\native\ContrastProfiler.dll'
 $env:CORECLR_ENABLE_PROFILING = '1'
 $env:CORECLR_PROFILER = '{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}'
-$env:CONTRAST_CONFIG_PATH = 'C:\contrast\dotnet\contrast_security.yaml'
+$env:CONTRAST_CONFIG_PATH = 'C:\contrast\dotnet-core\contrast_security.yaml'
 ```
 
 You can then run the application:
@@ -90,7 +90,7 @@ Set the environment variables using either of these two methods:
         <environmentVariable name="CORECLR_PROFILER_PATH_32" value="C:\contrast\dotnetcore\runtimes\win-x86\native\ContrastProfiler.dll" />
         <environmentVariable name="CORECLR_ENABLE_PROFILING" value="1" />
         <environmentVariable name="CORECLR_PROFILER" value="{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}" />
-        <environmentVariable name="CONTRAST_CONFIG_PATH" value="C:\contrast\dotnet\contrast_security.yaml" />
+        <environmentVariable name="CONTRAST_CONFIG_PATH" value="C:\contrast\dotnet-core\contrast_security.yaml" />
       </environmentVariables>
     </aspNetCore>
   </system.webServer>
