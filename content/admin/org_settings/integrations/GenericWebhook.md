@@ -30,9 +30,6 @@ The placeholders available for use are:
 
 * Title
 * Message
-* ApplicationName
-* VulnerabilityTags
-
 
 If you were using the Generic Webhook to create a VictorOps integration, the sample payload would be as follows:
 
