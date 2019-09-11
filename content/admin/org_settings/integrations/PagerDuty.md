@@ -14,7 +14,7 @@ In the **Integrations** page, click **Connect** in the PagerDuty row. In the **P
 
 * **Name:** The name for the integration entry, which is displayed in notifications from Contrast.
 * **Message Severity:** Use the dropdown menu to choose the behavior of the alert. The default selection is "Critical". For more information about message severity, see the [PagerDuty documentation on event/severity levels](https://support.pagerduty.com/docs/dynamic-notifications).
-* **Integration Key: ** From the PagerDuty's Configuration Menu, select Services.
+* **Integration Key:** From the PagerDuty's Configuration Menu, select Services.
     * If you are creating a new service for your integration, add **+Add New Service**.
     * If you are adding your integration to an existing service, click the name of the service you want to add the integration to. Then click the Integrations tab and click the **+New Integration** button.
     * Select your app from the **Integration Type** menu and enter an **Integration Name** If you are creating a new service for your integration, in General Settings, enter a **Name** for your new service. Then, in **Incident Settings**, specify the **Escalation Policy**, **Notification Urgency**, and **Incident Behavior** for your new service.
