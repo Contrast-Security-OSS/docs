@@ -4,17 +4,17 @@ description: "Learn how to view the flow of data through your application."
 tags: "user UI applications flow map data access"
 -->
 
-The application flow map provides an interactive view of where data and resources are shared between your applications. 
+The application flow map provides an interactive view of where data and resources are shared within your organization and beyond it.
 
 ## How It Works
 
-Contrast uses data reported from your Contrast agent to the UI to build a detailed view of where data from your application flows within your organization and beyond it. You can determine if users and connected applications have the appropriate access. 
+Every time you exercise an application, the Contrast UI uses data reported from your Contrast agent to create a detailed map of how data flows from the application to other applications to which it's connected. The flow map organizes information for the application you're currently viewing into three connected sections: **Application Architecture**, **Back-End Systems** and **Connected Applications**. 
 
-The agent performs matching through string credentials, and reports to the UI every time a user exercises the application. 
+By viewing all of the connections to your application, you can see the amount of data and resources that are associated with the application at full scale. By focusing on connections between individual systems and applications, you can also determine if users and connected applications in your organization have appropriate access to the current application and sensitive data associated with it. 
 
 <a href="assets/images/Flow-map-active.png" rel="lightbox" title="Flow Map tab"><img class="thumbnail" src="assets/images/Flow-map-active.png"/></a>
 
-If the agent is currently reporting data for this application, these columns are left blank.
+The agent performs application matching through string credentials. If the agent isn't currently reporting data for the primary application, the **Back-End Systems** and **Connected Applications** sections are left blank.
 
 <!-- In what scenarios would the agent not report this info? Not exercised? -->
 
@@ -22,17 +22,17 @@ If the agent is currently reporting data for this application, these columns are
 
 ## Application Architecture
 
-The **Application Architecture** section break down the view, presentation and service layers of the application's front end. You can also see foundational information about the application, including the environments in which it's deployed, letter grade, vulnerability statuses and attack status. 
+The **Application Architecture** section breaks down the view, presentation and service layers of the application's front end. You can also see foundational information about the application, including the environments in which it's deployed, letter grade, vulnerability statuses and attack status. 
 
 ### Layers
 
 The **View** column displays the layer of technologies that determine what a browser sees and processes. The **Presentation** column displays the layer of technologies that generates the application view. The **Service** column displays the layer comprised of the database, LDAP driver or back end code performing the application logic.
 
-Hover on an item in any of the lists to see how many instances of each type of library <!-- ? --> used in the application. If the agent reports any vulnerabilities, a warning icon appears beside the library in which they were found; hover over the icon for a links to the vulnerabilities' **Overview** pages.
+Hover on an item in any of the lists to see how many instances of each type of library are used in the application, or click on the library to go to the library's page in the UI. If the agent reports any vulnerabilities, a warning icon appears beside the library in which they were found; hover over the icon for links to the vulnerabilities' **Overview** pages.
 
 ### Browsers
 
-If the application is being accessed while you're viewing the flow map, the **Browser** tab appears with a list of the browsers on which it's being accessed. Hover over the icons to see details, such as browser type version. 
+If the application is being accessed by another user while you're viewing the flow map, the **Browser** tab appears with a list of the browsers on which it's being accessed. Hover over the icons to see more details, such as the browser type and version. 
 
 ## Back-End Systems
 
