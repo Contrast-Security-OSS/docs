@@ -71,14 +71,15 @@ cf push YOUR_APP_NAME_GOES_HERE
 
 ### Set up generic Cloud Foundry
 
-Contact Contrast support for access to the service broker source code.
+* Contact Contrast support for access to the service broker source code.
 
-Deploy service broker app:
+* Deploy the service broker application:
+
 ```bash
 cf push contrast-security-service-broker 
 ```
 
-The service broker now appears in your Cloud Foundry console. The service broker doesn't offer any plans by default. Plans are configurable via the `CONTRAST_SERVICE_PLANS` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application, select **Runtime** and then **Environment Variables** to set the value. Please refer to the following example to set the value through the commandline:
+The service broker now appears in your Cloud Foundry console. The service broker doesn't offer any plans by default. Plans are configurable via the `CONTRAST_SERVICE_PLANS` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application, select **Runtime** and then **Environment Variables** to set the value. Please refer to the following example to set the value through the command line:
 
 ```
     cf set-env contrast-security-service-broker CONTRAST_SERVICE_PLANS
@@ -102,45 +103,45 @@ The service broker now appears in your Cloud Foundry console. The service broker
              } "
 ```
 
-After modifying the environment variable, restage your application.
+* After modifying the environment variable, restage your application.
 
 ```
 cf restage contrast-security-service-broker
 ```
 
-The application also requires an environment variable for a username and a password:
+* The application also requires an environment variable for a username and a password:
 
 ```bash
 cf set-env contrast-security-service-broker SECURITY_USER_NAME aSecureUsername
 cf set-env contrast-security-service-broker SECURITY_USER_PASSWORD aSecurePassword
 ```
 
-Create a service broker instance. (At least one service plan must be defined.) You must use the username and password configured above.
+* Create a service broker instance. (At least one service plan must be defined.) You must use the username and password configured above.
 
 ```bash
 cf create-service-broker contrast-security-service-broker USER_NAME PASSWORD
 <URL of your application>
 ```
 
-All service brokers start off as private; you need to make it public.
+* All service brokers start off as private; you need to make it public.
 
 ```bash
 cf enable-service-access contrast-security-service-broker
 ```
 
-Now that the service broker is working, create a service instance and bind it to the application. To create a service instance, run the following command:
+* Now that the service broker is working, create a service instance and bind it to the application. To create a service instance, run the following command:
 
 ```
 cf create-service contrast-security-service-broker ServicePlan1 <name_of_service>
 ```
 
-To bind it to your application, run the following command:
+* To bind it to your application, run the following command:
 
 ```
 cf bind-service <app_name> <name_of_service>
 ```
 
-You should see your application Contrast UI.
+You should now see your application Contrast UI.
 
 ## Contrast Service Broker Tile
 
