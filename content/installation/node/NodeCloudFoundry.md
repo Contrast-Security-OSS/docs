@@ -1,26 +1,31 @@
 <!--
-title: "Running Contrast Node Agent on Cloud Foundry"
-description: "Node agent configuration using the Contrast service broker, Contrast buildpack, and the Pivotal Tile"
+title: "Run the Contrast Node agent on Cloud Foundry"
+description: "Node agent configuration using the Contrast service broker, Contrast buildpack and the Pivotal tile"
 tags: "node agent installation pivotal cloud foundry tile buildpack"
 -->
 
-Contrast offers a Cloud Foundry integration for your applications using the default Node buildpack. You can use the buildpack on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker allows you to define multiple service plans, and allows you to generate service instances in order to bind to applications.
+Contrast offers a Cloud Foundry integration for your applications using the default Node buildpack. You can use the buildpack on its own as a low level of integration by creating a user-provided service and binding the service to your application. The service broker allows you to define multiple service plans, and allows you to generate service instances to bind to applications.
 
 For Pivotal Cloud Foundry (PCF) customers, Contrast offers a Pivotal tile. This tile automates the BOSH deployment and configuration of the Contrast service broker.
 
-The Contrast Cloud Foundry integration does not download the Node agent and modify your aplication startup. Application developers are responsible for downloading the Node agent and configuring their application to run witht he agent enabled. The Contrast Clound Foundry integration provides a central location to configure the agent (via the tile) or automatic configuration via user provided services.
+The Contrast Cloud Foundry integration doesn't download the Node agent and modify your application startup. Application developers are responsible for downloading the Node agent and configuring their application to run with the agent enabled. The Contrast Cloud Foundry integration provides a central location to configure the agent (via the tile) or automatic configuration via user provided services.
 
 ## Requirements
 
-To instrument an application in a Cloud Foundry environment, your application must use one of the following buildpacks: 
+To instrument an application in a Cloud Foundry environment, your application must use one of the following buildpacks. 
 
-* [Cloud Foundry NodeJS Buildpack](https://github.com/cloudfoundry/java-buildpack/), version 1.6.52+ for tile support. version 1.6.56+ for user provided service support.
+For tile support: 
+* [Cloud Foundry NodeJS Buildpack](https://github.com/cloudfoundry/java-buildpack/) version 1.6.52+
+
+For user-provided service support: 
+
+* [Cloud Foundry NodeJS Buildpack](https://github.com/cloudfoundry/java-buildpack/) version 1.6.56+ 
 
 If you're using a buildpack that predates (and doesn't include) Contrast Security Framework support, you can add framework support with minimal effort; however, it requires making the appropriate changes to your forked buildpack.
 
 ## Contrast Security Framework Support
 
-The Contrast Security Agent Framework takes care of automatically creating environment variables for the agnet to use during configuration.
+The Contrast Security Agent Framework takes care of automatically creating environment variables for the agent to use during configuration.
 
 <table>
   <tr>
@@ -54,10 +59,11 @@ cf restage (application-name)
 
 ## Contrast Service Broker
 
-The Contrast service broker allows Cloud Foundry users to easily bind services to their application and make use of the Contrast Java agent.
+The Contrast service broker allows Cloud Foundry users to easily bind services to their application and make use of the Contrast Node agent.
 
 ### Prerequisites
-Any applications that you want to use with the service broker should employ the default Java buildpack to download and run the agent.
+
+Any applications that you want to use with the service broker should employ the default Node buildpack to download and run the agent.
 
 ```bash
 cf push YOUR_APP_NAME_GOES_HERE
@@ -72,7 +78,7 @@ Deploy service broker app:
 cf push contrast-security-service-broker 
 ```
 
-The service broker now appears in your Cloud Foundry console. The service broker doesn't offer any plans by default. Plans are configurable via the ```CONTRAST_SERVICE_PLANS``` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application, select **Runtime** and then **Environment Variables** to set the value. Please refer to the following example to set the value through the commandline:
+The service broker now appears in your Cloud Foundry console. The service broker doesn't offer any plans by default. Plans are configurable via the `CONTRAST_SERVICE_PLANS` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application, select **Runtime** and then **Environment Variables** to set the value. Please refer to the following example to set the value through the commandline:
 
 ```
     cf set-env contrast-security-service-broker CONTRAST_SERVICE_PLANS
