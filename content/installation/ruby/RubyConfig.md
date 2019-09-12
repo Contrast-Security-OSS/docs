@@ -66,7 +66,6 @@ Define the following properties to set logging values. If these properties aren'
     * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example - */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
     * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Override the name of the process the agents uses in logs. <br> Example: Contrast Agent
-    * **metrics**: Set to `true` for the agent to tag logs with "!AM!" for the metrics tool.
 
 #### Security logger
 
