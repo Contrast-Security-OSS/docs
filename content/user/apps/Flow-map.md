@@ -8,15 +8,13 @@ The application flow map provides an interactive view of where data and resource
 
 ## How It Works
 
-Every time you exercise an application, the Contrast UI uses data reported from your Contrast agent to create a detailed map of how data flows from the application to other applications to which it's connected. The flow map organizes information for the application you're currently viewing into three connected sections: **Application Architecture**, **Back-End Systems** and **Connected Applications**. 
+Every time you exercise an application, the Contrast UI uses data reported from your Contrast agent to create a detailed diagram your application, the layers of technologies within it and the back-end systems to which it connects. As more applications are exercised within your organization and their back-end systems are identified by the agent, Contrast also identifies which applications are connected to the application you're currently viewing by back-end systems. 
 
-By viewing all of the connections to your application, you can see the amount of data and resources that are associated with the application at full scale. By focusing on connections between individual systems and applications, you can also determine if users and connected applications in your organization have appropriate access to the current application and sensitive data associated with it. 
+The diagram in each application's **Flow Map** tab organizes information into three connected sections: **Application Architecture**, **Back-End Systems** and **Connected Applications**. By viewing all of the connections to your application, you can see the systems and resources that are associated with the application at full scale. By focusing on connections between individual systems and applications, you can also determine if users and connected applications in your organization have appropriate access to the current application and sensitive data potentially associated with it. 
 
 <a href="assets/images/Flow-map-active.png" rel="lightbox" title="Flow Map tab"><img class="thumbnail" src="assets/images/Flow-map-active.png"/></a>
 
-The agent performs application matching through string credentials. If the agent isn't currently reporting data for the primary application, the **Back-End Systems** and **Connected Applications** sections are left blank.
-
-<!-- In what scenarios would the agent not report this info? Not exercised? -->
+The agent performs application matching through string credentials. Other instrumented applications that share common string credentials - e.g., REST endpoints, database connection, or other unique host and port combinations - are displayed as connected applications. If the agent isn't currently reporting data for the current application, the **Back-End Systems** and **Connected Applications** sections are left blank.
 
 <a href="assets/images/Flow-map-empty.png" rel="lightbox" title="No data in the Flow Map tab"><img class="thumbnail" src="assets/images/Flow-map-empty.png"/></a>
 
@@ -26,7 +24,7 @@ The **Application Architecture** section breaks down the view, presentation and 
 
 ### Layers
 
-The **View** column displays the layer of technologies that determine what a browser sees and processes. The **Presentation** column displays the layer of technologies that generates the application view. The **Service** column displays the layer comprised of the database, LDAP driver or back end code performing the application logic.
+The **View** column displays the layer of libraries that determine what a browser sees and processes. The **Presentation** column displays the layer of libraries that generates the application view. The **Service** column displays the layer comprised of the database, LDAP driver or back end code performing the application logic.
 
 Hover on an item in any of the lists to see how many instances of each type of library are used in the application, or click on the library to go to the library's page in the UI. If the agent reports any vulnerabilities, a warning icon appears beside the library in which they were found; hover over the icon for links to the vulnerabilities' **Overview** pages.
 
