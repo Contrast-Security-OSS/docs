@@ -1,7 +1,7 @@
 <!--
-title: "Installing with Passenger"
-description: "Recommendations for installing in applications run by Passenger"
-tags: "ruby agent installation Passenger"
+title: "Installing Contrast with Passenger"
+description: "Troubleshooting and recommendations for installing the Ruby agent on applications run by Passenger"
+tags: "ruby agent troubleshooting installation Passenger application timeout"
 -->
 
 ## Inability to Start the Application
