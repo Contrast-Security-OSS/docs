@@ -8,7 +8,7 @@ Contrast offers a Cloud Foundry integration for your applications using the defa
 
 For Pivotal Cloud Foundry (PCF) customers, Contrast offers a Pivotal tile. This tile automates the BOSH deployment and configuration of the Contrast service broker.
 
-The Contrast Cloud Foundry integration doesn't download the Node agent and modify your application startup. Application developers are responsible for downloading the Node agent and configuring their application to run with the agent enabled. The Contrast Cloud Foundry integration provides a central location to configure the agent (via the tile) or automatic configuration via user provided services.
+> **Note:** The Contrast Cloud Foundry integration doesn't download the Node agent and modify your application startup. Application developers are responsible for downloading the Node agent and configuring their application to run with the agent enabled. The Contrast Cloud Foundry integration provides a central location to configure the agent (via the tile) or automatic configuration via user provided services.
 
 ## Requirements
 
@@ -25,7 +25,7 @@ If you're using a buildpack that predates (and doesn't include) Contrast Securit
 
 ## Contrast Security Framework Support
 
-The Contrast Security Agent Framework takes care of automatically creating environment variables for the agent to use during configuration.
+The Contrast Security Framework takes care of automatically creating environment variables for the agent to use during configuration.
 
 <table>
   <tr>
@@ -38,7 +38,7 @@ Tags are printed to standard output by the buildpack detect script.
 
 ### User-Provided Service
 
-When binding Contrast Security using a user-provided service, it must have a name or tag with `contrast-security` in it. The credential payload must contain the following entries:
+When binding Contrast using a user-provided service, it must have a name or tag with `contrast-security` in it. The credential payload must contain the following entries:
 
 | Name | Description
 | ---- | -----------
@@ -47,7 +47,7 @@ When binding Contrast Security using a user-provided service, it must have a nam
 | `teamserver_url` | The base URL to which your user has access and the URL to which the agent will report (e.g., *https://app.contrastsecurity.com*)
 | `username` | The account name to use when downloading the agent
 
-## Configuration
+## Configuration Example
 
 An example of creating a user-provided service and binding it to an application:
 
@@ -59,7 +59,7 @@ cf restage (application-name)
 
 ## Contrast Service Broker
 
-The Contrast service broker allows Cloud Foundry users to easily bind services to their application and make use of the Contrast Node agent.
+The Contrast service broker allows Cloud Foundry users to easily bind services to their application and use the Contrast Node agent.
 
 ### Prerequisites
 
@@ -79,7 +79,9 @@ cf push YOUR_APP_NAME_GOES_HERE
 cf push contrast-security-service-broker 
 ```
 
-The service broker now appears in your Cloud Foundry console. The service broker doesn't offer any plans by default. Plans are configurable via the `CONTRAST_SERVICE_PLANS` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application, select **Runtime** and then **Environment Variables** to set the value. Please refer to the following example to set the value through the command line:
+The service broker now appears in your Cloud Foundry console. The service broker doesn't offer any plans by default. You can configure plans using the `CONTRAST_SERVICE_PLANS` environment variable. If using Pivotal, you can also use the Pivotal Ops Manager to set the environment variables. If using Bluemix, you can click on the application, select **Runtime** and then **Environment Variables** to set the value. 
+
+* Refer to the following example to set the value through the command line:
 
 ```
     cf set-env contrast-security-service-broker CONTRAST_SERVICE_PLANS
