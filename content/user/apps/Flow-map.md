@@ -24,7 +24,7 @@ The **Application Architecture** section breaks down the view, presentation and 
 
 ### Layers
 
-The **View** column displays the layer of technologies that determine what a browser sees and processes. The **Presentation** column displays the layer of libraries that generates the application view. The **Service** column displays the layer comprised of the database, LDAP driver or back end code performing the application logic.
+The **View** column displays the layer of technologies that determine what a browser sees and processes. The **Presentation** column displays the layer of libraries that generates the application view. The **Service** column displays the layer comprised of the database, LDAP driver or back-end code performing the application logic.
 
 Hover on an item in any of the lists to see how many instances of each type of library are used in the application, or click on the library to go to the library's page in the UI. If the agent reports any vulnerabilities, a warning icon appears beside the library in which they were found; hover over the icon for links to the vulnerabilities' **Overview** pages.
 
