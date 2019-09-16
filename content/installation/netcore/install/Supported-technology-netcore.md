@@ -3,7 +3,7 @@
 <!--
 title: "Contrast .NET Core Agent Supported Technologies"
 description: "Contrast .NET Core agent supported technologies"
-tags: "installation agent .NET Core windows azure supported technologies"
+tags: "installation agent .NET Core windows linux azure supported technologies"
 -->
 
 ## Platform Support
