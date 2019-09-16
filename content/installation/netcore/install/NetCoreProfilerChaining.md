@@ -2,7 +2,7 @@
 <!--
 title: "Contrast .NET Core Agent Profiler Chaining"
 description: "Contrast .NET Core agent instructions for profiler chaining"
-tags: "installation agent .NET Core windows profiler chaining"
+tags: "installation agent .NET Core windows linux profiler chaining"
 -->
 
 ## About Contrast Profiler Chaining
@@ -78,7 +78,7 @@ Complete the following steps to install the .NET Core agent alongside the AppDyn
      CONTRAST_CCC_CORECLR_PROFILER_PATH_64=<actual_path>\AppDynamics.Profiler_x64.dll
      ```
 
-* Follow the directions to [install the Contrast .NET Core agent](installation-netcoreinstall.html#netcore-windows).
+* Follow the directions to [install the Contrast .NET Core agent](installation-netcoreinstall.html).
 
   * The application environment with Contrast and AppDynamics should look like:
 
