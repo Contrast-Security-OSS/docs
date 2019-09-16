@@ -4,19 +4,23 @@ description: "How to edit and manage sensitive data masking"
 tags: "admin policy management sensitive data masking"
 -->
 
-Take advantage of Contrast's data masking feature to protect your organization from displaying sensitive information. 
+Take advantage of Contrast's data masking feature to protect your organization from sending and displaying sensitive information. 
 
 ## How It Works
 
-Contrast's data masking feature protects your sensitive data by preventing the Contrast agent from sending it to external systems – the Contrast UI, syslog or the security log. Data masking can also protect information in your application by preventing it from being sent as part of a Contrast vulnerability or attack report, which can limit risk to your business and help you meet compliance requirements. Sensitive data masking is part of policy management for your organization by default for organization with at least one Assess or Protect license. 
+Contrast's data masking feature protects your sensitive data by preventing the Contrast agent from sending it to external systems: the Contrast UI, syslog or the security log. Data masking can also protect information in your application by preventing the agent from sending it as part of a Contrast vulnerability or attack report, which can limit risk to your organization and help you meet compliance requirements. Sensitive data masking is part of policy management for your organization by default for organization with at least one Assess or Protect license. 
 
-Contrast agents mask sensitive data appearing in query parameters, request headers, cookies and forms. Sensitive data is identified by searching for specific keywords used in the input name. If it finds a match it will redact the value for that input, replacing it with a placeholder with the form contrast-redacted-{datatype}, where datatype is the category of sensitive data to which the keyword belongs (e.g., authentication, PII, etc.). <!-- TODO: are these actual data types? --> 
+<!-- Add info about data type/key word pairings -->
 
-Contrast agents do not mask individual fields in request bodies with a content type other than `application/x-www-form-urlencoded`; however, you can configure the agent to mask the entire request body. <!-- Common config? --> Contrast agents do not mask data that appears in the data flow portion of a vulnerability report, if using Assess, or in the vector of an attack event, if using Protect. 
+### Agent identification
 
-> **Note:** Contrast agents make a “best effort” attempt to avoid printing sensitive data in debug log statements; however, it’s possible that sensitive data could appear in the contrast log if the log level is set to DEBUG or lower. You should, whenever possible, avoid setting production systems to log at DEBUG or lower. If a system that deals with sensitive data is set to log at DEBUG or lower, you should take steps to ensure that those logs are not being sent to an external system to avoid leaking any sensitive data. 
+Contrast agents mask sensitive data in query parameters, request headers, cookies and forms. Your agent identifies sensitive data by searching for specific keywords used in the input name. If the agent finds a match, it redacts the value for that input, and replaces it with a placeholder with the format `contrast-redacted-{datatype}`, where `datatype` is the category of sensitive data to which the keyword belongs. <!-- TODO: are these actual data types? --> 
 
-### Example
+Contrast agents do **not** mask individual fields in request bodies with a content type other than `application/x-www-form-urlencoded`; however, you can configure the agent to mask the entire request body. <!-- Common config? --> Contrast agents also do not mask data that appears in the data flow portion of a vulnerability report, if using Assess, or in the vector of an attack event, if using Protect. 
+
+> **Note:** Contrast agents make a “best effort” attempt to avoid printing sensitive data in debug log statements; however, it’s possible that sensitive data could appear in the Contrast log, if the log level is set to DEBUG or lower. Whenever possible, you should avoid setting production systems to log at DEBUG or lower. If a system that deals with sensitive data is set to log at DEBUG or lower, you should take steps to ensure that those logs are not being sent to an external system to avoid leaking any sensitive data. 
+
+#### Example
 
 The following sample HTTP request sent by an agent as part of a vulnerability report shows two inputs that the agent identified as sensitive as well as the placeholders it used to mask the values of the input before sending the report to the Contrast UI, syslog server or security log. 
  
@@ -46,8 +50,11 @@ Check the box to **Mask entire body** to enable redaction of the entire HTTP req
 
 <a href="assets/images/Sensitive-data-grid.png" rel="lightbox" title="View sensitive data types and key words in the grid"><img class="thumbnail" src="assets/images/Sensitive-data-grid.png"/></a>
 
-Critical data types and key words determined by Contrast are on by default, and can't be edited or disabled. 
-
 ### Edit data types
 
-<a href="assets/images/Sensitive-data-edit.png" rel="lightbox" title="Add customized key words to a sensitive data type"><img class="thumbnail" src="assets/images/Sensitive-data-edit.png"/></a>
+Critical data types and key words determined by Contrast apply to all applications in your organization by default, and can't be edited or disabled. You may add key words to critical data types. 
+
+For data types that Contrast has not determined to be critical, you may use the toggle in the grid to enable or disable them for the organization. You may also add or remove key words, applications and other parameters in the **Edit Sensitive Data Type** form. 
+
+
+<a href="assets/images/Sensitive-data-edit.png" rel="lightbox" title="Add customized key words to a critical sensitive data type"><img class="thumbnail" src="assets/images/Sensitive-data-edit.png"/></a>
