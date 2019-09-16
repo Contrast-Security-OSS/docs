@@ -1,4 +1,5 @@
 
+
 <!--
 title: "Contrast .NET Core Agent Supported Technologies"
 description: "Contrast .NET Core agent supported technologies"
@@ -11,34 +12,48 @@ tags: "installation agent .NET Core windows azure supported technologies"
 
 The Contrast .NET Core agent supports analysis of web applications built on the following technologies when executing within a Windows environment. Refer the the following table for supported versions.
 
+| OS                         | Supported versions     | Architectures |
+| -------------------------- | ---------------------- | ------------- |
+| Windows Server (LTSC)       | 2008 R2, 2012, 2012 R2, 2016, 2019 | x86, x64 |
+| Windows Server (SAC)       | 1809, 1903              | x64     |
+| Windows Workstation        | 7, 8/8.1, 10            | x86, x64     |
+
+> The agent can be used on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications.
+
+The .NET Core agent does not currently support the following Windows distributions:
+* Windows on ARM
+
+Under Windows, the following technologies are supported:
+
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
 | Server container           | Kestrel, IISHttpServer                   |
 | Hosting container          | <li>Self-hosted</li><br /> <li>IIS</li><br /><li>IIS Express</li> |
-| Operating system           | <li>Windows 7, 8/8.1, 10</li><br/> <li>Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019</li> |
-| Processor architecture     | x86 and x64 |
-
-> The agent can be used on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications.
 
 When running on Windows, the .NET Core agent does **not** support the following technologies at this time:
 
 * Http.sys (formerly called WebListener)
-* Windows on ARM
 
 ### .NET Core for Linux
 
-| Technology                 | Supported versions                       |
-| -------------------------- | ---------------------------------------- |
-| Server container           | Kestrel                                  |
-| Hosting container          | <li>Self-hosted</li>                     |
-| Operating system           | <li>Ubuntu Bionic/Xenial</li><br/><li>Debian Stretch</li><br/><li>OpenSUSE Leap 15</li> |
-| Processor architecture     | x64                                      |
+| OS                         | Supported versions     | Architectures |
+| -------------------------- | ---------------------- | ------------- |
+| Ubuntu                     | 18.04 (Bionic), 16.04 (Xenial) | x64   |
+| Debian                     | 9 (Stretch)            | x64           |
+| openSUSE                   | 15 (Leap)            | x64           |
 
 The .NET Core agent does not currently support the following Linux distributions, support will be added in a future release.
 
 - Alpine 3.7-3.9
 - CentOS 7
 - Red Hat Enterprise Linux 6/7
+
+Under Linux, the following technologies are supported:
+
+| Technology                 | Supported versions                       |
+| -------------------------- | ---------------------------------------- |
+| Server container           | Kestrel                                  |
+| Hosting container          | <li>Self-hosted</li>                     |
 
 ### .NET Core for MacOS
 
