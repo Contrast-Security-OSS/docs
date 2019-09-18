@@ -24,7 +24,7 @@ This YAML file controls how the Proxy agent is represented to the Contrast appli
 
 You can find the information for following configuration properties in [Your Account](user-account.html#profile) in the Contrast UI.  
 
-* **contrast**:
+* **api**:
   * **user_name**: Set the user name used to communicate with the Contrast UI. It is used to calculate the Authorization header.
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. 
   * **api_key**: Set the API key needed to communicate with the Contrast UI.
