@@ -16,7 +16,7 @@ Contrast's data masking feature protects your sensitive data by preventing the C
 
 Contrast agents mask sensitive data in query parameters, request headers, cookies and forms. Your agent identifies sensitive data by searching for specific keywords used in the input name. If the agent finds a match, it redacts the value for that input, and replaces it with a placeholder with the format `contrast-redacted-{datatype}`, where `datatype` is the category of sensitive data to which the keyword belongs. <!-- TODO: are these actual data types? --> 
 
-Contrast agents do **not** mask individual fields in request bodies with a content type other than `application/x-www-form-urlencoded`; however, you can configure the agent to mask the entire request body. <!-- Common config? --> Contrast agents also do not mask data that appears in the data flow portion of a vulnerability report, if using Assess, or in the vector of an attack event, if using Protect. 
+Contrast agents do **not** mask individual fields in request bodies with a content type other than `application/x-www-form-urlencoded`; however, you can configure the agent to mask the entire request body. Contrast agents also do not mask data that appears in the data flow portion of a vulnerability report, if using Assess, or in the vector of an attack event, if using Protect. 
 
 > **Note:** Contrast agents make a “best effort” attempt to avoid printing sensitive data in debug log statements; however, it’s possible that sensitive data could appear in the Contrast log, if the log level is set to DEBUG or lower. Whenever possible, you should avoid setting production systems to log at DEBUG or lower. If a system that deals with sensitive data is set to log at DEBUG or lower, you should take steps to ensure that those logs are not being sent to an external system to avoid leaking any sensitive data. 
 
@@ -56,5 +56,6 @@ Critical data types and key words determined by Contrast apply to all applicatio
 
 For data types that Contrast has not determined to be critical, you may use the toggle in the grid to enable or disable them for the organization. You may also add or remove key words, applications and other parameters in the **Edit Sensitive Data Type** form. 
 
+<!-- No spaces, alphanumeric -->
 
 <a href="assets/images/Sensitive-data-edit.png" rel="lightbox" title="Add customized key words to a critical sensitive data type"><img class="thumbnail" src="assets/images/Sensitive-data-edit.png"/></a>
