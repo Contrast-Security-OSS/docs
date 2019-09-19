@@ -12,7 +12,7 @@ Contrast's data masking feature protects sensitive data in your applications by 
 
 Sensitive data masking is part of policy management by default for organizations with at least one active Assess or Protect license. Contrast offers several categories of sensitive data, or data types, that are comprised of specific keywords that the agent automatically identifies and redacts in reports. 
 
-### Agent identification
+### Agent identification and masking
 
 Contrast agents mask sensitive data in query parameters, request headers, cookies and forms. Your agent identifies sensitive data by searching for specific keywords used in the input name. If the agent finds a match, it redacts the value for that input, and replaces it with a placeholder with the format `contrast-redacted-{datatype}`, where `datatype` is the category of sensitive data to which the keyword belongs.
 
@@ -54,9 +54,9 @@ Critical data types and keywords determined by Contrast apply to all application
 
 ### Edit data types
 
-Click on the name of the data type in the grid to customize its search parameters. In the **Edit Sensitive Data Type** form, you may use the **Custom Keywords** field to add more keywords and specify the applications to which they apply; you may not edit any **Default Keywords**, which apply to all applications. 
+Click on the name of the data type in the grid to add custom keywords. In the **Edit Sensitive Data Type** form, use the **Custom Keywords** field to add more keywords and specify the applications to which they apply. **Default Keywords** aren't editable, and apply to all applications. 
 
-**Note:** Keywords must be alphanumeric and contain no spaces; agent identification is case insensitive. 
+> **Note:** Keywords must be alphanumeric and contain no spaces; agent identification is case insensitive. 
 
 <a href="assets/images/Sensitive-data-edit.png" rel="lightbox" title="Add customized keywords to a critical sensitive data type"><img class="thumbnail" src="assets/images/Sensitive-data-edit.png"/></a>
 
