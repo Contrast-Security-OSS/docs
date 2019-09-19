@@ -1,20 +1,20 @@
 <!--
 title: "Sensitive Data Masking"
-description: "How to edit and manage sensitive data masking"
+description: "How to manage sensitive data masking"
 tags: "admin policy management sensitive data masking"
 -->
 
-Take advantage of Contrast's data masking feature to protect your organization from sending and displaying sensitive information. 
+Take advantage of Contrast's data masking feature to limit risk to your organization and meet compliance requirements.  
 
 ## How It Works
 
-Contrast's data masking feature protects your sensitive data by preventing the Contrast agent from sending it to external systems: the Contrast UI, syslog or the security log. Data masking can also protect information in your application by preventing the agent from sending it as part of a Contrast vulnerability or attack report, which can limit risk to your organization and help you meet compliance requirements. Sensitive data masking is part of policy management for your organization by default for organization with at least one Assess or Protect license. 
+Contrast's data masking feature protects sensitive data in your applications by preventing the Contrast agent from sending it to external systems: the Contrast UI, syslog or the security log. Data masking can also protect information by preventing the agent from sending it as part of Contrast vulnerability or attack reports. 
 
-<!-- Add info about data type/key word pairings -->
+Sensitive data masking is part of policy management by default for organizations with at least one active Assess or Protect license. Contrast offers several categories of sensitive data, or data types, that are comprised of specific keywords that the agent automatically identifies and redacts in reports. 
 
 ### Agent identification
 
-Contrast agents mask sensitive data in query parameters, request headers, cookies and forms. Your agent identifies sensitive data by searching for specific keywords used in the input name. If the agent finds a match, it redacts the value for that input, and replaces it with a placeholder with the format `contrast-redacted-{datatype}`, where `datatype` is the category of sensitive data to which the keyword belongs. <!-- TODO: are these actual data types? --> 
+Contrast agents mask sensitive data in query parameters, request headers, cookies and forms. Your agent identifies sensitive data by searching for specific keywords used in the input name. If the agent finds a match, it redacts the value for that input, and replaces it with a placeholder with the format `contrast-redacted-{datatype}`, where `datatype` is the category of sensitive data to which the keyword belongs.
 
 Contrast agents do **not** mask individual fields in request bodies with a content type other than `application/x-www-form-urlencoded`; however, you can configure the agent to mask the entire request body. Contrast agents also do not mask data that appears in the data flow portion of a vulnerability report, if using Assess, or in the vector of an attack event, if using Protect. 
 
@@ -40,22 +40,24 @@ ssn=contrast-redacted-id&department=sales
 
 ``` 
 
-The header value is masked because "Authorization" matches a keyword in the Authentication data type, and the form parameter is redacted because "ssn" matches a keyword in the "ID" data type. (Keyword matches are case-insensitive.) <!-- TODO: are the above placeholder data types and keywords actual real types/keywords for this feature?  -->
+In this case, the header value is masked because "Authorization" matches a keyword in the "Authentication" data type, and the form parameter is redacted because "ssn" matches a keyword in the "ID" data type for your Contrast organization. (Keyword matches are case insensitive.) <!-- TODO: are the above placeholder data types and keywords actual real types/keywords for this feature?  -->
 
 ## Manage Sensitive Data Types
 
-Go to the **user menu > Policy Management > Sensitive Data tab** to view and edit the sensitive data types for your organization. In the **Sensitive Data** grid, data types and the associated key words for which the agent searches are listed alphabetically. To quickly find data types by name or key words, use the search field above the grid. 
+Go to the **user menu > Policy Management > Sensitive Data tab** to view and edit the sensitive data types for your organization. In the **Sensitive Data** grid, data types and associated keywords are listed alphabetically. To quickly find data types by name or keywords, use the search field above the grid. 
 
-Check the box to **Mask entire body** to enable redaction of the entire HTTP request entity. This will apply to all applications in your organization.
+To enable redaction of the entire HTTP request entity, check the box to **Mask entire body**. This will apply to all applications in your organization.
 
-<a href="assets/images/Sensitive-data-grid.png" rel="lightbox" title="View sensitive data types and key words in the grid"><img class="thumbnail" src="assets/images/Sensitive-data-grid.png"/></a>
+<a href="assets/images/Sensitive-data-grid.png" rel="lightbox" title="View sensitive data types and keywords in the grid"><img class="thumbnail" src="assets/images/Sensitive-data-grid.png"/></a>
+
+Critical data types and keywords determined by Contrast apply to all applications in your organization by default, and can't be edited or disabled. For data types that Contrast has not determined to be critical, you may use the toggle in the grid to enable or disable them for the organization.
 
 ### Edit data types
 
-Critical data types and key words determined by Contrast apply to all applications in your organization by default, and can't be edited or disabled. You may add key words to critical data types. 
+Click on the name of the data type in the grid to customize its search parameters. In the **Edit Sensitive Data Type** form, you may use the **Custom Keywords** field to add more keywords and specify the applications to which they apply; you may not edit any **Default Keywords**, which apply to all applications. 
 
-For data types that Contrast has not determined to be critical, you may use the toggle in the grid to enable or disable them for the organization. You may also add or remove key words, applications and other parameters in the **Edit Sensitive Data Type** form. 
+**Note:** Keywords must be alphanumeric and contain no spaces; agent identification is case insensitive. 
 
-<!-- No spaces, alphanumeric -->
+<a href="assets/images/Sensitive-data-edit.png" rel="lightbox" title="Add customized keywords to a critical sensitive data type"><img class="thumbnail" src="assets/images/Sensitive-data-edit.png"/></a>
 
-<a href="assets/images/Sensitive-data-edit.png" rel="lightbox" title="Add customized key words to a critical sensitive data type"><img class="thumbnail" src="assets/images/Sensitive-data-edit.png"/></a>
+
