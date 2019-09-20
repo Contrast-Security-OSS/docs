@@ -9,7 +9,7 @@ The Contrast application for Enterprise on Premises (EOP) includes a Tomcat serv
 
 * System with adequate compute and memory resources based on guidance from our [sizing recommendations](installation-setup.html#size)
 * Adherence to the system requirements specified below
-* Installation of the MySQL run-time libraries (Linux Only)
+* Installation of the MySQL run-time libraries
 
 ## System Requirements
 
