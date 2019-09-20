@@ -45,6 +45,14 @@ $ bash -c "java -Dcontrast.stdout=true -version 2>1 | grep Contrast | head -n 1"
 
 The Exec Helper logs messages to the host's Syslog service using the identifier "Contrast". The Exec Helper uses the "user.warn" and "user.debug" Syslog facility and level, respectively. Use `journalctl` to view the messages (i.e., `journalctl -t Contrast`). Traditional init.v systems, including Ubuntu 14.04, store Syslog messages in the file */var/log/messages* by default instead of the systemd Journal.
 
+## Uninstall the Agent with the Exec Helper Package
+
+uninstall the `contrast-java-agent` and `contrast-java-agent-exec-helper` packages:
+
+```
+sudo apt-get uninstall contrast-java-agent contrast-java-agent-exec-helper
+```
+
 ## Learn More
 
 If you're experiencing issues with the Exec Helper package after installation, go to the [troubleshooting article](troubleshooting-javainstall.html#java-exec) for more help with startup, logging and libraries.
