@@ -225,7 +225,7 @@ Now that you've successfully deployed the service broker, you can create service
 
 * Click the the **Select this Plan** button to select the plan you want to bind to an application.
 
-<a href="assets/images/Pivotal_Select_Plan.png" rel="lightbox" title="Selecting a plan to bind"><img class="thumbnail" src="assets/images/Pivotal_Select_Plan.png"/></a>
+<a href="assets/images/Pivotal_Select_Plan.png" rel="lightbox" title="Select a plan to bind"><img class="thumbnail" src="assets/images/Pivotal_Select_Plan.png"/></a>
 
 * On the next screen, specify an instance name of the plan. (This doesn't effect the service broker, so you can name it anything you like.)
 
@@ -248,15 +248,9 @@ cf set-env APP-NAME NODE_OPTS " -Dcontrast.appname.override=PivotalSpringApp
 
 * Pivotal Apps Manager example:
 
-<a href="assets/images/Pivotal_Environment_Variables.png" rel="lightbox" title="Environment variables through UI"><img class="thumbnail" src="assets/images/Pivotal_Environment_Variables.png"/></a>
+<a href="assets/images/Pivotal-environment-variables-node.png" rel="lightbox" title="Set environment variables in Pivotal Apps Manager"><img class="thumbnail" src="assets/images/Pivotal-environment-variables-node.png"/></a>
 
 
 [Contrast Security]: https://www.contrastsecurity.com
 [Contrast Security Service]: https://www.contrastsecurity.com
-[`config/contrast_security_agent.yml`]: https://github.com/cloudfoundry/java-buildpack/blob/master/config/contrast_security_agent.yml
-[Configuration and Extension]: https://github.com/cloudfoundry/java-buildpack/blob/master/README.md#configuration-and-extension
-[repositories]: https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-repositories.md
-[this listing]: https://artifacts.contrastsecurity.com/agents/java/index.yml
-[version syntax]: https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-repositories.md#version-syntax-and-ordering
-
 
