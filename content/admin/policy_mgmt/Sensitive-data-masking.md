@@ -33,14 +33,14 @@ Content-Type: application/x-www-form-urlencoded
 
 Content-Length: 30 
 
-Authorization: contrast-redacted-authentication 
+apikey: contrast-redacted-authentication-info 
  
 
-ssn=contrast-redacted-id&department=sales 
+ssn=contrast-redacted-government-id&department=sales 
 
 ``` 
 
-In this case, the header value is masked because "Authorization" matches a keyword in the "Authentication" data type, and the form parameter is redacted because "ssn" matches a keyword in the "ID" data type for your Contrast organization. (Keyword matches are case insensitive.) <!-- TODO: are the above placeholder data types and keywords actual real types/keywords for this feature?  -->
+In this case, the header value is masked because "apikey" matches a keyword in the "Authentication" data type, and the form parameter is redacted because "ssn" matches a keyword in the "ID" data type for your Contrast organization. (Keyword matches are case insensitive.)
 
 ## Manage Sensitive Data Types
 
@@ -55,8 +55,6 @@ Critical data types and keywords determined by Contrast apply to all application
 ### Edit data types
 
 Click on the name of the data type in the grid to add custom keywords. In the **Edit Sensitive Data Type** form, use the **Custom Keywords** field to add more keywords and specify the applications to which they apply. **Default Keywords** aren't editable, and apply to all applications. 
-
-> **Note:** Keywords must be alphanumeric and contain no spaces; agent identification is case insensitive. 
 
 <a href="assets/images/Sensitive-data-edit.png" rel="lightbox" title="Add customized keywords to a critical sensitive data type"><img class="thumbnail" src="assets/images/Sensitive-data-edit.png"/></a>
 
