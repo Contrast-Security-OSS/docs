@@ -7,7 +7,7 @@ tags: "3.6.4 May Release Notes"
 ## Fixes
 
 * Auto-remediation settings did not immediately update vulnerability statuses.
-* Attack even data was not displayed properly in Diagnostics.
+* Attack event data was not displayed properly in Diagnostics.
 * Clicking the server count in an application **Overview** page did not direct you to the correct servers. 
 * Users weren't able to set up SSO with Azure. 
 * Email notifications for compliance policy violations didn't include the correct link to the UI.
