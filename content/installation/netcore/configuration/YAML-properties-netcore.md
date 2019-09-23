@@ -22,7 +22,7 @@ Configuration values use the following order of precedence:
 The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
-* Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet-core\* (Windows) or */var/tmp/contrast/dotnet-core* (Linux). As a result, the default file path would be *%ProgramData%\Contrast\dotnet-core\contrast_security.yaml* (Windows) or */var/tmp/contrast/dotnet-core/contrast_security.yaml* (Linux).)
+* Place the *contrast_security.yaml* file at the defalt path (*%ProgramData%\Contrast\dotnet-core\contrast_security.yaml* (Windows) or */etc/contrast/dotnet-core/contrast_security.yaml* (Linux)).
 
 ## Environment Variables
 
