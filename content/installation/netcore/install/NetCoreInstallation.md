@@ -28,7 +28,7 @@ Ensure that the following paths are accessible by the runtime user of the applic
 | -- | -- | -- | -- |
 | The path to YAML configuration file, such as *contrast_security.yaml*. | Used to configure the agent. | Yes | Read |
 | \{\{ Unzipped Directory Root \}\} | The root "installation" directory, stores the agent binaries. | Yes | Read |
-| %ProgramData%\Contrast\dotnet-core (Windows) <br> /var/tmp/contrast/dotnet-core (Linux) | Data directory, if missing, the directory will be created. | Yes | Read/Write (or inherited from a parent directory) |
+| %ProgramData%\Contrast\dotnet-core\logs (Windows) <br> /var/tmp/contrast/dotnet-core/logs (Linux) | Logs directory, if missing, the directory will be created. | Yes | Read/Write (or inherited from a parent directory) |
 
 When running in IIS, make sure the application pool can access the these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
 
@@ -40,15 +40,14 @@ To enable the .NET Core agent on your application, you must set the following en
 * CORECLR_PROFILER_PATH_32: Use the following table to find the correct Profiler path for 32-bit applications (Windows Only).
 * CORECLR_ENABLE_PROFILING: `1`
 * CORECLR_PROFILER: `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`
-* CONTRAST_CONFIG_PATH: Set the path to the YAML configuration file. It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml* or */opt/contrast/contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*). If not set, the default is *`CONTRAST_CORECLR_DATA_DIRECTORY`\contrast_security.yaml* (Windows) or */etc/contrast/dotnet-core/contrast_security.yaml* (Linux). This setting is **optional**.
-* CONTRAST_CORECLR_DATA_DIRECTORY: Change the path to where agent logs are kept. The default is *C:\ProgramData\Contrast\dotnet-core* (Windows) or */var/tmp/contrast/dotnet-core* (Linux). This setting is **optional**.
+* CONTRAST_CONFIG_PATH: Set the path to the YAML configuration file. It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml* or */opt/contrast/contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*). If not set, the default is *C:\ProgramData\Contrast\dotnet-core\contrast_security.yaml* (Windows) or */etc/contrast/dotnet-core/contrast_security.yaml* (Linux). This setting is **optional**.
 
 
 | Environment Variable | Platform | Profiler Path |
 |--|--|--|
 | CORECLR_PROFILER_PATH_64 | Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
 | CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
-| CORECLR_PROFILER_PATH_32 | Linux (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\linux-x64\native\ContrastProfiler.so |
+| CORECLR_PROFILER_PATH_64 | Linux (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\linux-x64\native\ContrastProfiler.so |
 
 
 > **Notes:**
