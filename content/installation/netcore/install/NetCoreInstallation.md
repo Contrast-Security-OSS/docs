@@ -26,9 +26,9 @@ Ensure that the following paths are accessible by the runtime user of the applic
 
 | Path | Usage | Customizable | Permissions |
 | -- | -- | -- | -- |
-| The path to YAML configuration file, such as *contrast_security.yaml*. | Used to configure the agent. | Yes | Read |
-| \{\{ Unzipped Directory Root \}\} | The root "installation" directory, stores the agent binaries. | Yes | Read |
-| %ProgramData%\Contrast\dotnet-core\logs (Windows) <br> /var/tmp/contrast/dotnet-core/logs (Linux) | Logs directory, if missing, the directory will be created. | Yes | Read/Write (or inherited from a parent directory) |
+| The path to YAML configuration file, such as *contrast_security.yaml*. | Used to configure the agent. | Yes (setting the environment variable CONTRAST_CONFIG_PATH) | Read |
+| \{\{ Unzipped Directory Root \}\} | The root "installation" directory, stores the agent binaries. | No | Read |
+| %ProgramData%\Contrast\dotnet-core\logs (Windows) <br> /var/tmp/contrast/dotnet-core/logs (Linux) | Logs directory, if missing, the directory will be created. | Yes (setting the environment variable CONTRAST_CORECLR_LOGS_DIRECTORY) | Read/Write (or inherited from a parent directory) |
 
 When running in IIS, make sure the application pool can access the these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
 
