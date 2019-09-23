@@ -22,12 +22,11 @@ Configuration values use the following order of precedence:
 The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
-* Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet-core\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet-core\contrast_security.yaml*.)
+* Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet-core\* (Windows) or */var/tmp/contrast/dotnet-core* (Linux). As a result, the default file path would be *%ProgramData%\Contrast\dotnet-core\contrast_security.yaml* (Windows) or */var/tmp/contrast/dotnet-core/contrast_security.yaml* (Linux).)
 
 ## Environment Variables
 
 You can use environment variables to specify every configuration option supported by the *contrast_security.yaml* file. Environment variable names are derived from the YAML path by replacing path segment delimiters (`.`) with double underscores (`__`) and prefixing the result with `CONTRAST__`. For example, `server.name` becomes `CONTRAST__SERVER__NAME` while `api.api_key` becomes `CONTRAST__API__API_KEY`.
-
 
 ## Configuration Options
 
@@ -189,6 +188,3 @@ Use the properties in this section to set metadata for the server hosting this a
   * **name**: Override the reported server name. <br> Example: `test-server-1`
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
-
-
-

@@ -4,7 +4,7 @@ description: "Learn how to Use the Contrast .NET Core agent on Microsoft Azure."
 tags: "installation .NET core agent microsoft azure cloud usage"
 -->
 
-Use the Contrast .NET Core agent to analyze ASP.NET applications running on Azure Virtual Machines (VMs), Cloud Services, Mobile Services or Azure App Service (formerly Azure Web Sites). Follow the instructions below to set up the .NET Core agent in your environment. 
+Use the Contrast .NET Core agent to analyze ASP.NET applications running on Azure Virtual Machines (VMs), Cloud Services, Mobile Services or Azure App Service (formerly Azure Web Sites). Follow the instructions below to set up the .NET Core agent in your environment.
 
 ## Azure Virtual Machines
 
