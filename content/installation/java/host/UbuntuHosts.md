@@ -37,7 +37,9 @@ $ bash -c "java -Dcontrast.stdout=true -version 2>1 | grep Contrast | head -n 1"
 [Contrast] Wed Aug 15 17:37:23 UTC 2018 No TeamServer configuration detected. Agent will only be reporting to local listeners (e.g., Eclipse Plugin).
 ```
 
-* The Exec Helper affects all new shells, as indicated by the `bash -c` in the verification command. Consequently, it will not be present in your current shell. Reload your shell to enable the Exec Helper. Restart any `java` services to enable Contrast for those services.
+* The *contrast-agent.jar* expects a contrast_security.yaml file to be located in /etc/contrast/java/ directory. You can either [download it from the Contrast UI](installation-javastandard.html#contrast-ui) or create it and paste the required [Contrast UI properties](installation-javaconfig.html) 
+
+The Exec Helper affects all new shells, as indicated by the `bash -c` in the verification command. Consequently, it will not be present in your current shell. Reload your shell to enable the Exec Helper. Restart any `java` services to enable Contrast for those services.
 
 > **Note:** The Exec Helper package expects to find the Contrast Java agent at */opt/contrast/contrast.jar*, where the `contrast-java-agent` package installs it. If the Contrast *jar* file has a different path, use environment variable `CONTRAST_JAVA_AGENT_PATH` to configure `contrast-java-agent-exec-helper`.
 
