@@ -18,9 +18,9 @@ In Visual Studio:
 
 * Under the application project in the Solution Explorer, right click on **References** and select **Manage NuGet Packages**.
 
-* Search for **Contrast.Net.Azure.AppService** package, select it and add it to your project.
+* Search for **Contrast.SensorsNetCore** package, select it and add it to your project.
 
-* Build your application. Confirm that a *contrast* folder appears in your project. When the application is compiled, this folder appears in the build output directory.
+* Build your application. Confirm that a *contrast* folder appears in your project. When the application is published, this folder appears in the build output directory.
 
 ## Step Three: Add application authentication settings for Contrast
 
