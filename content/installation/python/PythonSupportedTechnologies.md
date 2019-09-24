@@ -9,6 +9,7 @@ The Python agent supports Python versions 2.7+ and 3.5 to 3.7. Framework support
 * Django:  1.10+ and 2.0+ <br> (Django 2 is Python 3 only)
 * Flask:   0.10 - 0.12 and 1.0+ 
 * Pyramid: 1.9 (Beta)
+* Pylons: 1.0+
 
 >**Note:** The Python agent is meant to be WSGI compatible. It may be compatible to other WSGI applications as long as the guidelines are followed.
 
