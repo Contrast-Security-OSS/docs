@@ -15,7 +15,7 @@ Complete the following steps for express installation of the .NET Core agent via
 
 ## Step Two: Add application settings for Contrast
 
-The following values are the application settings that the agent needs to connect to Contrast. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
+The following values are the application settings that the agent needs to connect to Contrast, these should be added using the **Configuration\Application Settings** blade for your application. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
 
 
 | Key                        | Value                       |
