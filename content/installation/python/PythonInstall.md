@@ -105,10 +105,10 @@ app = ContrastMiddleware(app)
 
 ``` python
 from pylons.wsgiapp import PylonsApp
-from contrast.agent.middlewares import WSGIMiddleware
+from contrast.agent.middlewares.wsgi_middleware import WSGIMiddleware as ContrastMiddleware
  
 app = PylonsApp()
-app = WSGIMiddleware(app)
+app = ContrastMiddleware(app)
 ```
 
 ## Next Steps
