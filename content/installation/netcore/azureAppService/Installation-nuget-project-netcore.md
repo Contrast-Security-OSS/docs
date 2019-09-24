@@ -74,11 +74,11 @@ More information: https://docs.contrastsecurity.com/installation-netcoreinstall.
 
 ```
 
-Go to the **Application Settings** area of your application in the Azure Portal. Set the Contrast authentication keys that the agent needs to connect to Contrast, and click **Save**. (You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.)
+Go to the ***Configuration\Application Settings** blade of your application in the Azure Portal. Set the Contrast authentication keys that the agent needs to connect to Contrast, and click **Save**. (You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.)
 
 ## Step Four: Publish the application to Azure
 
-* Using Visual Studio, publish your application to Azure App Service once more (after you've installed the Contrast NuGet package and specified the Application Settings).
+* Using Visual Studio, publish your application to Azure App Service once more (after you've installed the Contrast NuGet package and updated the **Configuration\Application Settings**).
 
 * Once the application has loaded, use the application and then go to the Contrast UI. Verify that the server and application are active, and that any expected vulnerabilities appear.
 
