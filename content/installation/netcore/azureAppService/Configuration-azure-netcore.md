@@ -22,13 +22,16 @@ You can also define any configuration setting in the *web.config* file as an env
 
 ### YAML file
 
-Instead of setting individual options in the Azure Portal, you may use a YAML configuration file containing Contrast settings. First, upload the file to your Azure web application by including it in your application deployment or using the Kudu console. Then within the **Configuration\Application Settings** blade, add a new application setting called `CONTRAST_CONFIG_PATH` with a value that points to this file.
+Instead of setting individual options in the Azure Portal, you may use a YAML configuration file containing Contrast settings. 
 
-> **Example:** To use the *contrast_security.yaml* file in the root of your application, within **Configuration\Application Settings**, add a new application setting with the key `CONTRAST_CONFIG_PATH` and value of *D:\Home\site\wwwroot\contrast_security.yaml*. Application files in Azure App Service are deployed to *D:\home\site\wwwroot*.
+To begin, upload the file to your Azure web application by including it in your application deployment or using the Kudu console.
+Then, within the **Configuration\Application Settings** blade, add a new application setting called `CONTRAST_CONFIG_PATH` with a value that points to this file.
+
+> **Example:** To use the *contrast_security.yaml* file in the root of your application, add a new application setting with the key `CONTRAST_CONFIG_PATH` and value of *D:\Home\site\wwwroot\contrast_security.yaml* within **Configuration\Application Settings**. Application files in Azure App Service are deployed to *D:\home\site\wwwroot*.
 
 ## Common Configuration Options
 
-The following tables outline some common configuration settings for Azure App Service and their default values. These settings can be included in the YAML configuration file or in **Configuration\Application Settings** blade using environment variable syntax.  This is a subset of all configurations that are available when using [YAML configuration properties](installation-netconfig.html#netcore-yaml).
+The following tables outline some common configuration settings for Azure App Service and their default values. These settings can be included in the YAML configuration file or the **Configuration\Application Settings** blade using environment variable syntax.  This is a subset of all configurations that are available when using [YAML configuration properties](installation-netconfig.html#netcore-yaml).
 
 ### Identification and tagging
 
