@@ -185,6 +185,7 @@ Use the properties in this section to control Protect features and rules.
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       * **detect_parameter_command_backdoors**: Detect when the agent sees user parameters being executed as system commands. The agent blocks if blocking is enabled.
       * **detect_chained_commands**: Detect when a system command is issued which contains chained commands. The agent blocks if blocking is enabled.
+      * **detect_dangerous_path_args**: Detect when a system command is issued with an argument matching a known dangerous file path. The agent blocks if blocking is enabled.
 
     * **path-traversal**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
