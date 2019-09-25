@@ -15,7 +15,7 @@ Complete the following steps for express installation of the .NET Core agent via
 
 ## Step Two: Add application settings for Contrast
 
-The following values are the application settings that the agent needs to connect to Contrast, these should be added using the **Configuration\Application Settings** blade for your application. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
+The following values are the application settings that the agent needs to connect to Contrast. You should add these values using the **Configuration\Application Settings** blade for your application. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
 
 
 | Key                        | Value                       |
@@ -50,3 +50,4 @@ The following values are the application settings that the agent needs to connec
 ## Update Your Installation
 
 If a new version of the agent is available, it's indicated in the Azure Portal or Kudu dashboard. You must stop the site before starting the update; otherwise, the update may fail.
+
