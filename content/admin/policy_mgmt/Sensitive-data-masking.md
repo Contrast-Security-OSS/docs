@@ -8,13 +8,13 @@ Take advantage of Contrast's data masking feature to limit risk to your organiza
 
 ## How It Works
 
-Contrast's data masking feature protects sensitive data in your applications by preventing the Contrast agent from storing it externally in the Contrast UI, syslog or the security log. Data masking also prevents the agent from transmitting it as part of Contrast vulnerability or attack reports. 
+Contrast's data masking feature protects sensitive data in your applications by redacting it in Contrast vulnerability and attack reports that are sent to the Contrast UI, syslog or security log.
 
 Sensitive data masking is part of policy management by default for organizations with at least one active Assess or Protect license. Contrast offers several categories of sensitive data, or data types, that are comprised of specific keywords that the agent automatically identifies and redacts in reports. Org Admins and Rules Admins can manage data types in the Contrast UI. 
 
 ### Agent identification and masking
 
-Contrast agents mask sensitive data in query parameters, request headers, cookies and bodies. Your agent identifies sensitive data by searching for specific keywords used in the input name. If the agent finds a match, it redacts the value for that input, and replaces it with a placeholder with the format `contrast-redacted-{datatype}`, where `datatype` is the category of sensitive data to which the keyword belongs.
+Contrast agents mask sensitive data in query parameters, request headers, cookies and body. Your agent identifies sensitive data by searching for specific keywords used in the input name. If the agent finds a match, it redacts the value for that input, and replaces it with a placeholder with the format `contrast-redacted-{datatype}`, where `datatype` is the category of sensitive data to which the keyword belongs.
 
 Contrast agents do **not** mask individual fields in request bodies with a content type other than `application/x-www-form-urlencoded`; however, you can configure the agent to mask the entire request body. Contrast agents also do not mask data that appears in the data flow portion of a vulnerability report, if using Assess, or in the vector of an attack event, if using Protect. 
 
