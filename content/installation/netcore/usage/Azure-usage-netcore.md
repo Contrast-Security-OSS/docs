@@ -8,11 +8,11 @@ Use the Contrast .NET Core agent to analyze ASP.NET applications running on Azur
 
 ## Azure Virtual Machines
 
-Installation with Azure Virtual Machines is the same as installation for self-hosted applications. See the .NET Core article on [Installation for Windows](installation-netcoreinstall.html#netcore-windows) for more information.
+Installation with Azure Virtual Machines is the same as installation for self-hosted applications. See the .NET Core article on agent [Installation](installation-netcoreinstall.html#netcore-install) for more information.
 
 ## Azure Cloud Services or Mobile Services
 
-Installation with Azure Cloud Services or Mobile Services is the same as installation for self-hosted applications. See the .NET Core article on [Installation for Windows](installation-netcoreinstall.html#netcore-windows) for more information.
+Installation with Azure Cloud Services or Mobile Services is the same as installation for self-hosted applications. See the .NET Core article on agent [Installation](installation-netcoreinstall.html#netcore-install) for more information.
 
 ## Azure App Service
 
