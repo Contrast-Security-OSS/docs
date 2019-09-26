@@ -58,7 +58,7 @@ CONTRAST__API__API_KEY: [REPLACE WITH YOUR AGENT API KEY]
 
 ---------- Stand-alone process or Docker Containers ---------
 Set the environment using your shell or Docker container.
-More information: https://docs.contrastsecurity.com/installation-netcoreinstall.html#netcore-windows
+More information: https://docs.contrastsecurity.com/installation-netcoreinstall.html#netcore-install
 
 
 ---------- Azure App Service --------------------------------
