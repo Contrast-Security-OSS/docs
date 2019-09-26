@@ -11,7 +11,7 @@ Complete the following steps for express installation of the .NET Core agent via
 * Create an [Azure account](https://portal.azure.com/), if you don't have one already.
 * Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service.
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
-* Ensure that your application is deployed using a Windows Plan (Linux Plans are not supported when using the .Net Core site extension).
+* Ensure that your application is deployed using a Windows plan. (Linux plans are not supported when using the .NET Core site extension.)
 
 ## Step Two: Add application settings for Contrast
 
