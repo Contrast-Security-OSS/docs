@@ -50,7 +50,7 @@ The Exec Helper logs messages to the host's Syslog service using the identifier 
 
 ## Uninstall the Agent with the Exec Helper Package
 
-* Use the following command to uninstall the agent from your system:
+To uninstall the agent from your system, use the following command:
 
 ```console
 sudo yum remove contrast-java-agent contrast-java-agent-exec-helper
