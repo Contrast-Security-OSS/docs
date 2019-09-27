@@ -10,7 +10,7 @@ tags: "installation agent .NET Core windows linux azure supported technologies"
 
 ### .NET Core for Windows
 
-#### Operating Systems
+#### Distributions
 
 The Contrast .NET Core agent supports analysis of web applications built on the following technologies when executing within a Windows environment. The agent can be used on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications. Refer the the following table for supported versions.
 
@@ -21,20 +21,20 @@ The Contrast .NET Core agent supports analysis of web applications built on the 
 | Windows Workstation        | 7, 8/8.1, 10            | x86, x64     |
 
 
-The .NET Core agent does **not** support the following Windows distributions at this time:
+The agent does **not** support the following Windows distributions at this time:
 
 * Windows on ARM
 
-#### Containers
+#### Technologies
 
-Under Windows, the following technologies are supported:
+Under Windows, the .NET Core agent supports the following technologies:
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
 | Server container           | Kestrel, IISHttpServer                   |
 | Hosting container          | Self-hosted, IIS, IIS Express            |
 
-When running on Windows, the .NET Core agent does **not** support the following technologies at this time:
+When running on Windows, the agent does **not** support the following technologies at this time:
 
 * Http.sys (formerly called WebListener)
 
@@ -42,21 +42,24 @@ When running on Windows, the .NET Core agent does **not** support the following 
 
 #### Distributions 
 
+The .NET Core agent supports the following Linux distributions: 
+
+
 | OS                         | Supported versions     | Architectures |
 | -------------------------- | ---------------------- | ------------- |
 | Ubuntu                     | 18.04 (Bionic), 16.04 (Xenial) | x64   |
 | Debian                     | 9 (Stretch)            | x64           |
 | openSUSE                   | 15 (Leap)            | x64           |
 
-The .NET Core agent does **not** currently support the following Linux distributions. Support will be added in a future release.
+The agent does **not** currently support the following Linux distributions. Support will be added in a future release.
 
 - Alpine 3.7-3.9
 - CentOS 7
 - Red Hat Enterprise Linux 6/7
 
-#### Containers
+#### Technologies
 
-Under Linux, the following technologies are supported:
+Under Linux, the .NET Core agent supports the following technologies:
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
@@ -69,11 +72,13 @@ The .NET Core agent does **not** support the MacOS platform at this time.
 
 ## Framework Support
 
+The .NET Core agent supports the following frameworks: 
+
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
 | Web application frameworks | ASP.NET Core (2.1.X, 2.2.X)              |
 
-The .NET Core agent does **not** support the following technologies at this time:
+The agent does **not** support the following technologies at this time:
 
 * .NET Core or ASP.NET Core versions 3.0 or above
 * .NET Core or ASP.NET Core version 2.0 or below
@@ -81,12 +86,15 @@ The .NET Core agent does **not** support the following technologies at this time
 
 ## Runtime Support
 
+The .NET Core agent supports the following technologies: 
+
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
 | .NET Core Runtime          | 2.1.X, 2.2.X                             |
 | .NET Core Target           | 2.1 (netcoreapp2.1), 2.2 (netcoreapp2.2) |
 
-The .NET Core agent does **not** support the following technologies at this time:
+The agent does **not** support the following technologies at this time:
+
 * Self-contained deployments
 * Framework-dependent executables
 
