@@ -14,7 +14,7 @@ tags: "3.6.8 September Release Notes"
 
 * Take a look at the application [flow map](user-apps.html#flowmap) to see where data from your application connects it to back-end systems and other applications in your organization. Every time you exercise your application, the Contrast agent reports information to the Contrast UI about new back-end systems and applications - no extra configuration required. To see the data map, go to your application's new **Flow Map** tab. 
 
-* Use [sensitive data masking](admin-policymgmt.html#sensitive-data)...
+* Contrast's [sensitive data masking](admin-policymgmt.html#sensitive-data) feature protects sensitive data in your applications by redacting it in Contrast vulnerability and attack reports that are sent to the Contrast UI, syslog or security log. All Contrast agents apply data masking for critical data types to all applications by default. To see each of the data types and add custom criteria for your organization, go to the **user menu > Policy Managment > Sensitive Data tab** in the UI.  
 
 * Use Contrast's new [PagerDuty integration](admin-orgintegrations.html#pagerduty) to receive attack notifications outside of the UI. Each notification automatically provides details on the attack, including the application, server and source IP involved. Go to the **user menu > Organization Settings > Integrations tab** to connect your PagerDuty account to your Contrast organization.
 
@@ -23,6 +23,7 @@ tags: "3.6.8 September Release Notes"
 
 ### Java summary
 
+The Java team improved the accuracy and performance of instrumentation for String replacement operations. We also enhanced the Protect Command Injection Rule so that it can block commands that attempt to use dangerous path arguments such as `/etc/passwd` and `/etc/shadow`. 
 
 ### .NET agent summaries
 
