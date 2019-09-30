@@ -6,13 +6,13 @@ tags: "3.6.8 September Release Notes"
 
 ## Bug Fixes
 
-* When impersonating an admin-level user in multiple organizations, the UI showed dashboard information and agent connection details for the admin's default organization. CONTRAST-37676, CONTRAST-36028
-* Filters didn't load correctly for the **Servers** grid. CONTRAST-36013
-* The form to configure output to of Protect events to syslog didn't accept some IP address formats. CONTRAST-38275
+* When impersonating an admin-level user in multiple organizations, the UI showed dashboard information and agent connection details for the admin's default organization.
+* Filters didn't load correctly for the **Servers** grid.
+* The form to configure output to of Protect events to syslog didn't accept some IP address formats.
 
 ## New and Improved Features
 
-* Use the application [flow map](user-apps.html#flowmap) to see where data from your application is shared by back-end systems and other applications in your organization. Every time you exercise your application, the Contrast agent reports information to the UI about new back-end systems and applications - no extra configuration required. To see the data, go to your application's new **Flow Map** tab. 
+* Take a look at the application [flow map](user-apps.html#flowmap) to see where data from your application connects it to back-end systems and other applications in your organization. Every time you exercise your application, the Contrast agent reports information to the Contrast UI about new back-end systems and applications - no extra configuration required. To see the data map, go to your application's new **Flow Map** tab. 
 
 * Use Contrast's new [PagerDuty integration](admin-orgintegrations.html#pagerduty) to receive attack notifications outside of the UI. Each notification automatically provides details on the attack, including the application, server and source IP involved. Go to the **user menu > Organization Settings > Integrations tab** to connect your PagerDuty account to your Contrast organization.
 
