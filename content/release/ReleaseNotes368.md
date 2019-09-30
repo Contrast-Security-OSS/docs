@@ -14,6 +14,8 @@ tags: "3.6.8 September Release Notes"
 
 * Take a look at the application [flow map](user-apps.html#flowmap) to see where data from your application connects it to back-end systems and other applications in your organization. Every time you exercise your application, the Contrast agent reports information to the Contrast UI about new back-end systems and applications - no extra configuration required. To see the data map, go to your application's new **Flow Map** tab. 
 
+* Use [sensitive data masking](admin-policymgmt.html#sensitive-data)...
+
 * Use Contrast's new [PagerDuty integration](admin-orgintegrations.html#pagerduty) to receive attack notifications outside of the UI. Each notification automatically provides details on the attack, including the application, server and source IP involved. Go to the **user menu > Organization Settings > Integrations tab** to connect your PagerDuty account to your Contrast organization.
 
 
@@ -24,11 +26,19 @@ tags: "3.6.8 September Release Notes"
 
 ### .NET agent summaries
 
+The .NET team improved accuracy of Assess SQL-Injection against EF-Core, the Protect XSS rule, and handling of odd URLs when deciding whether or not to analyze events during servicing of a request. We also fixed several bugs that could result in warnings in agent log files.
+
 #### .NET Framework 
 
+For the .NET Framework agent, the team implemented beta support for a Protect Cross-Site Request Forgery rule, and extended the Protect Unsafe File Upload rule to handle file uploads under Web API applications. We also fixed the following bugs: 
+
+* A bug where the agent could cause an application to error when the application attempted to access web.config
+* A bug where the agent could cause a process crash during process shutdown when chained with a specific APM profiler
+* A bug where the upgrade process could modify the agent configuration file, if the file had been edited before install but not modified since
  
 #### .NET Core
 
+For the .NET Core agent, the team implemented the Protect Unsafe File Upload rule.
 
 ### Node.js summary 
 
