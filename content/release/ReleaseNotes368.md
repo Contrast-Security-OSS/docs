@@ -32,7 +32,7 @@ tags: "3.6.8 September Release Notes"
 
 ### Node.js summary 
 
-The Node team released Beta support for the Kraken.js web framework. We updated our internal logging to standardize reporting at non-DEBUG levels. The team closed a defect where an application without a valid license in Protect mode would fail to start. An unlicensed application in Protect mode will now start with a log indicating that Protect mode is disabled due to a lack of licenses. The team resolved an issue where the Unsafe File Upload rule in the Hapi 17 framework wouldn't have the correct HTTP request context. Finally, we updated our internal test suite to include the Ubuntu Alpine image.
+The Node team released Beta support for the Kraken.js web framework. We updated our internal logging to standardize reporting at non-DEBUG levels. We closed a defect where an application without a valid license in Protect mode would fail to start. An unlicensed application in Protect mode will now start with a log indicating that Protect mode is disabled due to a lack of licenses. The team resolved an issue where the Unsafe File Upload rule in the Hapi 17 framework wouldn't have the correct HTTP request context. Finally, we updated our internal test suite to include the Ubuntu Alpine image.
 
 ### Ruby summary 
 
@@ -40,7 +40,5 @@ The Ruby team updated the agent to use Contrast Service for input analysis of at
 
 ### Python summary
 
-The Python team continues to work towards the Beta release of the Python Assess agent. In September, the Python team finalized support of the Pylons framework. The agent now has standard behavior of logging at non-DEBUG levels. The agent no longer reports deprecation warnings due to a escaped regular expression pattern. Finally, the python agent now supports the Contrast Service executable in read-only environments.  
-
-
+The Python team continues to work towards the Beta release of the Python Assess agent. In September, the Python team finalized support of the Pylons framework. The agent now has standard behavior of logging at non-DEBUG levels, and no longer reports deprecation warnings due to a escaped regular expression pattern. Finally, the python agent now supports the Contrast Service executable in read-only environments.  
 
