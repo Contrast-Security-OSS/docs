@@ -31,7 +31,7 @@ You can fully configure the agent using the *contrast_security.yaml* file. See t
 
 ## Silent and Custom Installations
 
-The .NET agent installer can be customized using command line options. See the [installer command line options](TODO Link) for more information.
+The .NET agent installer can be customized using command line options. See the [installer command line options](https://docs.contrastsecurity.com/installation-netinstall.html#net-command) for more information.
 
 ## Changes Made by the Agent Installer
 
