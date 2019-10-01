@@ -31,6 +31,3 @@ Before installing the .NET agent, confirm that you can meet the following requir
 > * The .NET agent roughly doubles the RAM requirements of analyzed applications. Applications should use less than half of the available memory when the .NET agent is not installed. 
 >
 > * The .NET agent uses the CLR Profiling API to perform data and code flow analysis - detect SQL-injection, XSS, weak cryptography, etc. - as well as to detect libraries and technologies used by analyzed applications. The Contrast agent can now exist alongside other .NET Profiler agents, such as performance or APM tools with the `agent.dotnet.enable_chaining` [configuration setting](installation-netconfig.html#overview) enabled.
-
-<!-- Replace `agent.dotnet.enable_chaining` property?  -->
-
