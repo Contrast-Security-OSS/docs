@@ -80,7 +80,5 @@ agent:
     app_pool_whitelist: ExampleAppPoolName
 ```
 
-For more information on the standard configuration for the agent, see the [Configuration Overview](installation-netconfig.html#overview).
-
-
+For more information on the standard configuration for the agent, see the [configuration overview](installation-netconfig.html#net-yaml).
 
