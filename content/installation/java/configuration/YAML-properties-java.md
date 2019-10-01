@@ -19,6 +19,8 @@ Configuration values use the following order of precedence:
 1. Contrast UI value
 1. Default value
 
+In other words, the lower the number the higher the priority. For example, if a value is defined as A in the contrast UI, and defined as B in the yaml file. B will be taken into account
+
 ## Load Path
 
 You can set the path to the YAML configuration file using the environment variable `CONTRAST_CONFIG_PATH` or the Java system property `contrast.config.path`. Like the rest of the configuration values, the system property takes precedence over the environment variable, if both are set.
