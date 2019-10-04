@@ -25,9 +25,9 @@ Parameter                                      | Environment Variable           
 --api.certificate.key_file <path>              | API\_\_CERTIFICATE\_\_KEY_FILE                 | Set the absolute or relative path to the Key PEM file for communication with Contrast UI.
 --api.certificate.key_password <pass>          | API\_\_CERTIFICATE\_\_KEY_PASSWORD             | If the Key file requires a password, set it here.
 --api.certificate.ignore_cert_errors [true]    | API\_\_CERTIFICATE\_\_IGNORE_CERT_ERRORS       | Allows the agent to communicate data, even if Contrast's cert can't be verified against supplied list of CAs.
---agent.auto_update.enable [false]             | AGENT\_\_AUTO_UPDATE\_\_ENABLE                 | If `false`, don't attempt to auto-update the agent. Default is `true`.
---agent.auto_update.path <path>                | AGENT\_\_AUTO_UPDATE\_\_PATH                   | Directory where the updated agent artifact should be saved before installation. Default is */var/folders/ck/4cpmx4m569j29z7n05dnfb4h0000gp/T*.
---agent.auto_update.timeout_ms <ms>            | AGENT\_\_AUTO_UPDATE\_\_TIMEOUT_MS             | Time to wait before aborting auto-update attempt. Default is **60000**.
+--agent.auto_update.enable [false]             | AGENT\_\_AUTO\_UPDATE\_\_ENABLE                 | If `false`, don't attempt to auto-update the agent. Default is `true`.
+--agent.auto_update.path <path>                | AGENT\_\_AUTO\_UPDATE\_\_PATH                   | Directory where the updated agent artifact should be saved before installation. Default is */var/folders/ck/4cpmx4m569j29z7n05dnfb4h0000gp/T*.
+--agent.auto_update.timeout_ms <ms>            | AGENT\_\_AUTO\_UPDATE\_\_TIMEOUT_MS             | Time to wait before aborting auto-update attempt. Default is **60000**.
 --agent.logger.append [false]                  | AGENT\_\_LOGGER\_\_APPEND                      | If `false`, create a new log file on startup instead of appending and rolling daily. Default is `true`.
 --agent.logger.level <level>                   | AGENT\_\_LOGGER\_\_LEVEL                       | Logging level: `fatal`, `error`, `warn`, `info`, `debug` or `trace`. Overrides `FeatureSet:logLevel`. Default is `error`.
 --agent.logger.path <path>                     | AGENT\_\_LOGGER\_\_PATH                        | Where Contrast will put its debug log. Default is *node-contrast.log*.
@@ -37,12 +37,12 @@ Parameter                                      | Environment Variable           
 --agent.node.app_root <path>                   | AGENT\_\_NODE\_\_APP_ROOT                      | Set location to look for the application's *package.json*.
 --agent.node.stack_trace_limit <limit>         | AGENT\_\_NODE\_\_STACK_TRACE_LIMIT             | Set limit for stack trace size. Default is **10**.
 --agent.node.skip_nested_taint [true]          | AGENT\_\_NODE\_\_SKIP_NESTED_TAINT             | Don't traverse nested properties to look for taint during propagation. (Not recommended.)
---agent.node.stacktrace_logging.enabled [true] | AGENT\_\_NODE\_\_STACKTRACE_LOGGING\_\_ENABLED | Log all application errors to agent's */dumps* file for aggressive debugging. (Not recommended.)
+--agent.node.stacktrace_logging.enabled [true] | AGENT\_\_NODE\_\_STACKTRACE\_LOGGING\_\_ENABLED | Log all application errors to agent's */dumps* file for aggressive debugging. (Not recommended.)
 --agent.polling.app_activity_ms <ms>           | AGENT\_\_POLLING\_\_APP_ACTIVITY_MS            | How often (in ms), application activity messages are sent. Default is **30000**.
 --agent.polling.app_update_ms <ms>             | AGENT\_\_POLLING\_\_APP_UPDATE_MS              | How often (in ms), application update messages (libraries, technologies, etc.) are sent. Default is **60000**.
---agent.route_coverage.enable [true]           | AGENT\_\_ROUTE_COVERAGE\_\_ENABLE              | If `false`, do not send route-base coverage data to the Contrast UI. Default is `true`.
---agent.security_logger.level <level>          | AGENT\_\_SECURITY_LOGGER\_\_LEVEL              | Set the log level for security logging. Valid options are `alert`, `crit`, `err`, `warning`, `notice`, `info` and `debug`.
---agent.security_logger.path <path>            | AGENT\_\_SECURITY_LOGGER\_\_PATH               | Set the file to which the agent logs security events.
+--agent.route_coverage.enable [true]           | AGENT\_\_ROUTE\_COVERAGE\_\_ENABLE              | If `false`, do not send route-base coverage data to the Contrast UI. Default is `true`.
+--agent.security_logger.level <level>          | AGENT\_\_SECURITY\_LOGGER\_\_LEVEL              | Set the log level for security logging. Valid options are `alert`, `crit`, `err`, `warning`, `notice`, `info` and `debug`.
+--agent.security_logger.path <path>            | AGENT\_\_SECURITY\_LOGGER\_\_PATH               | Set the file to which the agent logs security events.
 --application.args <args>                      | APPLICATION\_\_ARGS                            | String containing `args` to pass verbatim to the application. (E.g., `--application.args "-A -S -D -F foo bar"`.)
 --application.code <code>                      | APPLICATION\_\_CODE                            | Add the application code this application should use in the Contrast UI.
 --application.group <tags>                     | APPLICATION\_\_GROUP                           | How to report the application's group for auto-grouping.
