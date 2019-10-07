@@ -15,5 +15,5 @@ The CLR Profiling API only allows a single agent to be attached to a .NET proces
 
 ## Solution
 
-To resolve the issue, Contrast implemented profiler chaining that allows Contrast to run side-by-side with another profiling tool. To enable profiling, see the `ProfilerChainingEnabled` configuration setting](installation-netconfig.html#overview).
+To resolve the issue, Contrast implemented profiler chaining that allows Contrast to run side-by-side with another profiling tool. To enable profiling, see the [`enable_chaining` configuration setting](installation-netconfig.html).
 
