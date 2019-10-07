@@ -149,6 +149,8 @@ The following properties apply to any .NET agent-wide configurations. <!-- More 
 
     * **app_pool_blacklist**: Set a list of application pool names that the agent does not instrument or analyze. Names must be formatted as a comma-separated list.
     * **app_pool_whitelist**: Set a list of application pool names that the agent instruments or analyzes. If set, other application pools are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
+    * **application_blacklist**: Set a list of application names that the agent does not analyze. Names must be formatted as a comma-separated list.
+    * **application_whitelist**: Set a list of application names that the agent analyzes. If set, other applications are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
     * **enable_clr2_analysis**: Enable instrumentation and analysis of application pools targeting CLR2.
     * **enable_chaining**: Enable the profiler chaining feature to allow Contrast to work alongside other tools that use the CLR Profiling API.
     * **enable_dvnr**: Indicate that the agent should produce a report that summarizes application hosting on the server (e.g., CLR versions, bitness or pipeline modes).

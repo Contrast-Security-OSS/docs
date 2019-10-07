@@ -94,6 +94,8 @@ Use the properties in this section to control security logging. These logs allow
 The following properties apply to any .NET Core agent-wide configurations. <!-- More words here... -->
 
   * **dotnet**:
+    * **application_blacklist**: Set a list of application names that the agent does not analyze. Names must be formatted as a comma-separated list.
+    * **application_whitelist**: Set a list of application names that the agent analyzes. If set, other applications are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
     * **enable_instrumentation_optimizations**: Indicate that the agent should allow CLR optimizations of JIT-compiled methods.
     * **enable_jit_inlining**: Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
     * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
