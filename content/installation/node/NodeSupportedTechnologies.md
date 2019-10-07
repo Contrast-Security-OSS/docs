@@ -16,6 +16,7 @@ Contrast supports Node.js Long-Term Support (LTS) versions in *Active LTS* and *
 * [hapi](https://www.npmjs.com/package/hapi) versions 16-18
 * [Koa](https://koajs.com/) version 2.7
 * [Sails](http://sailsjs.org/) version 0.12
+* [Kraken](http://krakenjs.com/) version 2.2.0
 
 While the agent can still run on web frameworks that aren't officially supported, Contrast may produce less-specific findings than it would for supported frameworks. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with Node.js's built-in [http](https://nodejs.org/api/http.html) module.
 
@@ -38,13 +39,14 @@ The agent runs in the Node.js application layer. As a result, it works on **the 
 
 ## Testing Environments
 
-When changes are made, Contrast runs a battery of automated tests to ensure that it detects findings in supported technologies across all supported versions of Node. This includes tests that exercise the agent against the following Contrast applications: 
+When changes are made, Contrast runs a battery of automated tests to ensure that it detects findings in supported technologies across all supported versions of Node. This includes tests that exercise the agent against the following Contrast applications:
 
 * [Express Test Bench](https://github.com/Contrast-Security-OSS/NodeTestBench)
 * [Koa Test Bench](https://github.com/contrast-security-oss/KoaTestBench)
 * [hapi 16 Test Bench](https://github.com/Contrast-Security-OSS/Hapi16TestBench)
 * [hapi 17 Test Bench](https://github.com/Contrast-Security-OSS/HapiTestBench/tree/hapi17)
 * [hapi 18 Test Bench](https://github.com/Contrast-Security-OSS/HapiTestBench/tree/hapi18)
+* [Kraken Test Bench](https://github.com/contrast-security-oss/KrakenTestBench)
 
 Each of these applications is updated as Contrast adds more third-party library support to the agent. If you want to add test cases, let Contrast know by clicking on the link of your chosen application and submitting a pull request.
 
