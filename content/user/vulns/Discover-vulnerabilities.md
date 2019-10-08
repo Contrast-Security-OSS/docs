@@ -42,7 +42,7 @@ Contrast uses the following statuses for vulnerabilities to help you prioritize 
 * **Not a Problem:** Contrast requires a justification for this status. For example, the vulnerability is found to be a false positive or goes through an internal security control. 
 * **Remediated:** The vulnerability is considered closed, but could be reopened (and returned to **Reported**) if rediscovered.
 * **Fixed:** The vulnerability remains closed even if rediscovered, and will never be reported again.
-* **Auto-remediated:** Contrast automatically remediated a vulnerability based on a [Remediation Policy](admin-policymgmt.html#remediate) set up by an administrator. 
+* **Remediated - Auto-verified:** Contrast automatically remediated a vulnerability based on a [Remediation Policy](admin-policymgmt.html#remediate) set up by an administrator. 
 
 To learn more about vulnerability statuses and workflows in the Contrast UI, go to [Analyze Findings](user-vulns.html#analyze). 
 
