@@ -114,3 +114,30 @@ For more help with connectivity, go to the article on [Troubleshooting SSO](trou
 <!--
 **Logging Out**
 During IdP configuration, a logout landing page may be designated. This is simply a neutral place to direct users after logging out of their application(s). In the case that no page is specified, users will be directed to a default Contrast logout landing page.-->
+
+## Implementing Group Membership in Contrast via SSO
+
+For accounts with SSO Enabled, the Contrast System Administrator can choose to have their organizations' groups populated according to group membership configured in the IdP. To do so, enable one or both of the following properties:
+
+<a href="assets/images/Sso-org-settings-groups.png" rel="lightbox" title="SSO Group Membership"><img class="thumbnail" src="assets/images/Sso-org-settings-groups.png"/></a>
+
+* **Add users to their Contrast groups upon SSO login:** Upon login, Contrast will add users to groups as listed in the **contrast_groups** attribute in the SAML assertion. **Note:** This does not cause users to be removed from groups.
+* **Remove users from their Contrast groups upon SSO login:** Upon login, Contrast will remove users from groups that are not listed in the **contrast_groups** attribute in the SAML assertion.
+
+Contrast expects group information to be sent by the IdP as a multi-value attribute **contrast_groups**:
+```
+<saml2:AttributeStatement xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">
+    <saml2:Attribute Name="contrast_groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+        <saml2:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xsi:type="xs:string"
+                                >GROUP1</saml2:AttributeValue>
+        <saml2:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xsi:type="xs:string"
+                                >GROUP2</saml2:AttributeValue>
+        ...
+    </saml2:Attribute>
+</saml2:AttributeStatement>
+```
+> **Note:** The attribute values listed under "contrast_groups" must exactly match an existing group name. Contrast will not create new groups based on the values listed under this attribute.
