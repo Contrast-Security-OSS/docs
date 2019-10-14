@@ -10,7 +10,7 @@ Contrast supports YAML-based configuration for the .NET Core agent. This allows 
 
 ## Load Path
 
-Configuration values use the following order of precedence:
+Configuration values use the following order of precedence (where 1 is the highest):
 
 1. Corporate rule (e.g., expired license overrides `contrast.assess.enable`)
 2. Specific environmental variable

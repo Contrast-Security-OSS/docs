@@ -8,7 +8,7 @@ The Ruby agent and service use a YAML file to alter the agent behavior. Go to th
 
 ## Order of Precedence
 
-The configuration file is called *contrast_security.yaml* wherever it's located. The Ruby agent and service load the configuration YAML from the following paths in order of precedence:
+The configuration file is called *contrast_security.yaml* wherever it's located. The Ruby agent and service load the configuration YAML from the following paths in order of precedence (where 1 is the highest):
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
 2. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)

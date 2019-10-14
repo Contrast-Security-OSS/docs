@@ -10,7 +10,7 @@ Contrast supports YAML-based configuration for the Node agent. This allows you t
 
 ## Order of Precedence
 
-Configuration values use the following order of precedence:
+Configuration values use the following order of precedence (where 1 is the highest):
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 2. Command line value
