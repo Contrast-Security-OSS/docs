@@ -40,5 +40,5 @@ Click the name of an existing policy in the grid to see more details and update 
 
 If a vulnerability isn't remediated within the given number of days, Contrast adds a warning note to the Vulnerabilities thermometer in the dashboard and flags the vulnerabilities in the Vulnerabilities grid. Hover over the warning icon for each vulnerability in the grid, or go to the vulnerability details page for more information about the violation.
 
-If a vulnerability has been auto-remediated, its status is updated to "Auto-Remediated" in the Vulnerabilities grids. Hover over the status text, or go the auto-generated comment in the vulnerability's **Discussion** tab for more information about the applicable policy. 
+If a vulnerability has been auto-remediated, its status is updated to "Remediated - Auto-verified" in the Vulnerabilities grids. Hover over the status text, or go the auto-generated comment in the vulnerability's **Discussion** tab for more information about the applicable policy. 
 
