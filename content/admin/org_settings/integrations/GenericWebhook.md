@@ -41,7 +41,19 @@ If you were using the Generic Webhook to create a VictorOps integration, the sam
 	"state_message":"$Message" 
 }
 ```
- 
+
+Similarly you can set up an integration with Microsoft Teams using the following payload:
+
+```json
+{
+	"@context":"http://schema.org/extensions", 
+	"@type": "MessageCard",
+	"themeColor": "3CC3B2",
+	"title": "$Title",
+	"text": "$Message” 
+}
+```
+
 Where Contrast data fills in the Title and Message fields, according to notifcation. 
 
 * Click **Save**.
