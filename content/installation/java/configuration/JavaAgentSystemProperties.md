@@ -79,13 +79,13 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.log.daily | Change the Contrast logger from a file sized based rolling scheme to a date based rolling scheme. At midnight serve time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.<br>**DEFAULT VALUE:** true</br> |
 | contrast.log.size | Specify the file size cap, in MB, of each log file. This value has a cap of 10, meaning no more than 10MB will be logged to a single file.<br>**DEFAULT VALUE:** 10</br> |
 
-### Defend mode
+### Protect mode
 
 |Property|Description|
 |-|-|
 | contrast.security.log.backups | Specify the number of "backup" logs that will be created before Contrast will clean up the oldest file. This value has a cap of 100, meaning no more than 100 log files can be stored on the file system at one time. A value of 0 here means that no backups will be created and the log will simply be truncated when it reaches its size cap.<br>**DEFAULT VALUE:** false</br> |
 | contrast.security.log.daily | Change the Contrast security logger from a file sized based rolling scheme to a date based rolling scheme. At midnight server time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.<br>**DEFAULT VALUE:** true</br> |
-| contrast.security.log.file | The file to which logging of security events will occur. By default, this file is located at <working_directory>/security.log.<br>**DEFAULT VALUE:** ${HOME}/.contrast/logs/security-events.log</br> |
+| contrast.security.log.file | The file to which logging of security events will occur. By default, this file is located at <working_directory>/security.log.<br>**DEFAULT VALUE:** ${HOME}/.contrast/logs/security.log</br> |
 | contrast.security.log.level | Set the log level for security logging. Values include: trace, debug, info, warn, error, fatal, off. Setting this to off will disable security logging.<br>**DEFAULT VALUE:** info</br> |
 | contrast.security.log.size | Specify the file size cap, in MB, of each log file. This value has a cap of 10, meaning no more than 10MB will be logged to a single file. By default, this value is '10'.<br>**DEFAULT VALUE:** 10</br> |
 
@@ -154,7 +154,7 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.validators | boolean to enable/disable loading of validators from policy<br>**DEFAULT VALUE:** true</br> |
 | web.session.timeout | Overrides the maximum "safe" value of <session-timeout> detected in the web.xml file. The default value is 30 (minutes).<br>**DEFAULT VALUE:** 30</br> |
 
-### Defend mode configuration
+### Protect mode configuration
 
 |Property|Description|
 |-|-|
