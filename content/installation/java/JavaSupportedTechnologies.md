@@ -18,7 +18,7 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |                                           | Tomcat 5, 6, 7, 8                    | Hibernate
 |                                           | Vert.X 3.0                           | J2SE
 |                                           | WebLogic 10, 11g, 12c                | JDBC, JDBI, MongoDB
-|                                           | WebSphere 8.5<sup>*</sup>, 9.0       | JSF (MyFaces, RichFaces, Sun)
+|                                           | WebSphere<sup>*</sup> 8.5, 9.0       | JSF (MyFaces, RichFaces, Sun)
 |                                           | WildFly 10, 10.1.x                   | java.nio, java.beans
 |                                           |                                      | Java EE/J2EE, Servlet/JSP
 |                                           |                                      | Jersey
@@ -32,7 +32,7 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |                                           |                                      | Xerces, JAXB, nu.xom
 
 
-Contrast tests WebSphere on Windows and Linux, and offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
+<sup>*</sup> Contrast offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
 
 
 ### Note for Proguard Users
