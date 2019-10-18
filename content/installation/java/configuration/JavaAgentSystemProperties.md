@@ -33,7 +33,7 @@ Generate a list of general properties directly from the command line using the C
 | contrast.external.lib.dir | List of directories where external libraries are stored; used during library analysis. Takes a semicolon-delimited list on Windows and a colon-delimited list on Linux.<br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.inject.browseragent | Manually override name of browser agent. <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.j2ee.context.discovery | Boolean to enable/disable J2EE context discovery. <br> **DEFAULT VALUE:** true</br> |
-| contrast.mode | assess: Data flow analysis, defend: defend features, inventory: library catalog and analysis, all: all features; When this property is enabled, the agent ignores all customizations from the Contrast interface. <br> **DEFAULT VALUE:** not used; this property must be set to be active </br> |
+| contrast.mode | assess: Data flow analysis, protect: protect features, inventory: library catalog and analysis, all: all features; When this property is enabled, the agent ignores all customizations from the Contrast interface. <br> **DEFAULT VALUE:** not used; this property must be set to be active </br> |
 | contrast.nested.libs.depth | Maximum archive unpacking depth when analyzing libraries <br> **DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.noteamserver.enable | Boolean to enable/disable Contrast to start up without access to the Contrast interface. <br>**DEFAULT VALUE:** false</br> |
 | contrast.override.appname | Sets the application name; this name is reported to Contrast. <br> **DEFAULT VALUE:** Determined by scanning *web.xml*</br> <br> **Note:** This property will be deprecated in favor of the property `application.name`, and removed in a future release.</br>|
@@ -160,14 +160,14 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 |-|-|
 | contrast.cmdinjection.keywords | File path to overriding Command Injection keywords file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.cmdinjection.patterns | Location of Command Injection patterns file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
-| contrast.defend.api.bodyread | boolean to enable/disable whether API request bodies should be scanned for attacks if no known deserializers are in use<br>**DEFAULT VALUE:** true</br> |
-| contrast.defend.blocked.samples | Max number of detailed reports generated for blocked attacks detected during a reporting period<br>**DEFAULT VALUE:** 25</br> |
-| contrast.defend.csrf.token.name | the name of the CSRF token HTTP parameter<br>**DEFAULT VALUE:** cs_csrf_tkn</br> |
-| contrast.defend.exploited.samples | Max number of detailed reports generated for exploited attacks during a reporting period<br>**DEFAULT VALUE:** 100</br> |
-| contrast.defend.ineffective.samples | Max number of detailed reports generated for ineffective attacks detected during a<br>**DEFAULT VALUE:** 50</br> |
-| contrast.defend.paddingoracle.threshold | Minimum number of padding errors to be observed during a reporting period in order to be classfied as malicious<br>**DEFAULT VALUE:** 25</br> |
-| contrast.defend.patterns | File path to overriding RASP patterns file (used when Contrast is in DEFEND mode)<br>**DEFAULT VALUE:** uses patterns embedded in the agent</br> |
-| contrast.defend.telemetry.dir | File path to RASP telemetry directory (used when Contrast is in DEFEND mode)<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
+| contrast.protect.enable_api_request_body_reading | boolean to enable/disable whether API request bodies should be scanned for attacks if no known deserializers are in use<br>**DEFAULT VALUE:** true</br> |
+| contrast.protect.samples.blocked | Max number of detailed reports generated for blocked attacks detected during a reporting period<br>**DEFAULT VALUE:** 25</br> |
+| contrast.protect.rules.csrf.token | the name of the CSRF token HTTP parameter<br>**DEFAULT VALUE:** cs_csrf_tkn</br> |
+| contrast.protect.samples.exploited | Max number of detailed reports generated for exploited attacks during a reporting period<br>**DEFAULT VALUE:** 100</br> |
+| contrast.protect.samples.probed | Max number of detailed reports generated for ineffective attacks detected during a<br>**DEFAULT VALUE:** 50</br> |
+| contrast.protect.padding_oracle_threshold | Minimum number of padding errors to be observed during a reporting period in order to be classfied as malicious<br>**DEFAULT VALUE:** 25</br> |
+| contrast.protect.patterns_file | File path to overriding RASP patterns file (used when Contrast is in PROTECT mode)<br>**DEFAULT VALUE:** uses patterns embedded in the agent</br> |
+| contrast.protect.telemetry_directory | File path to RASP telemetry directory (used when Contrast is in PROTECT mode)<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.sqlinjection.keywords | File path to overriding SQL Injection keywords file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.sqlinjection.patterns | Location of SQL Injection patterns file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
 | contrast.xss.keywords | File path to overriding XSS keywords file<br>**DEFAULT VALUE:** not used; this property must be set in order to be active</br> |
