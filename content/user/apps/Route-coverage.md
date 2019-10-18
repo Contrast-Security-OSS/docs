@@ -6,7 +6,7 @@ tags: "user UI applications route coverage exercised vulnerabilities"
 
 ## About Route Coverage
 
-Contrast observes the flow of data through routes in each of your applications. An application “route” is a combination of three distinct data points: the URL of the route, the HTTP verb associated with the request (e.g., Get or Post), and a unique signature based on that route's controller action. With Contrast's route coverage, you can see detailed information on the components of your application - such as which routes have been exercised versus which ones have not - and make decide where to focus your testing efforts. 
+Contrast observes the flow of data through routes in each of your applications. An application “route” is a combination of three distinct data points: the URL of the route, the HTTP verb associated with the request (e.g., Get or Post), and a unique signature based on that route's controller action. With Contrast's route coverage, you can see detailed information on the components of your application - such as which routes have been exercised versus which ones have not - and decide where to focus your testing efforts. 
 
 > **Hint:** When you consistently exercise each route in your application, the Contrast agent can successfully Assess and Protect the surface layer of your application, and discover vulnerabilities. 
 
