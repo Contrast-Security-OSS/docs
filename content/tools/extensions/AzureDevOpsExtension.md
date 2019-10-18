@@ -32,7 +32,7 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 <a href="assets/images/AzureDevOps_service_connection.png" rel="lightbox" title="Service Connection fields"><img class="thumbnail" src="assets/images/AzureDevOps_service_connection.png"/></a>
 
-> **Note: ** Your **Contrast URL** should not include */Contrast* at the end; only the host is required.
+> **Note:** Your **Contrast URL** should not include */Contrast* at the end; only the host is required.
 
 ## Configuration for Release Gate
 
@@ -69,3 +69,40 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 > **Note:** Remember that your gates evaluation settings affect all the gates on the current stage for the pre- or post-deployment conditions.
 
+## Configuration for Task
+
+> **Note:** This task can be used in only an agentless job
+
+### Step one
+The task can be used in a Build or Release pipeline
+
+#### Release Pipeline
+
+* Enter **Edit** mode for the release pipeline you wish to add the task.
+* Select a stage for which you wish to add the task
+
+<a href="assets/images/task_release_choose_stage.png"></a>
+
+#### Build Pipeline
+
+* Enter **Edit** mode for the build pipeline you wish to add the task.
+
+### Step two
+
+* Now that you are in edit mode for a Release Pipeline or Build Pipeline, click on the more (**...**) menu and add an agentless job.
+
+<a href="assets/images/task_add_agentless_job.png"></a>
+
+* Click on the **+** button next to you agentless job and add the **Verify application vulnerabilities** task.
+
+<a href="assets/images/task_add_task.png"></a>
+
+### Step three
+
+* You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast. The values set in these fields will be validated against the conditions you configure in the following fields.
+
+<a href="assets/images/AzureDevOps_gate_part2.png" rel="lightbox" title="Azure DevOps Gate Part 2"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part2.png"/></a>
+
+* Proceed to your severity counters, where you must set the maximum number of vulnerabilities allowed per severity. If your selected application has more vulnerabilities than allowed for that severity level, your task will fail.
+
+<a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
