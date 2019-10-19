@@ -4,7 +4,7 @@ description: "How to get Java agent logs"
 tags: "troubleshoot java agent logs"
 -->
 
-You can ask Contrast to log verbose information by passing a custom system property, ```-Dcontrast.log=/path/to/log.txt -Dcontrast.level=DEBUG -Dcontrast.log.daily=true``` to the server process.
+You can ask Contrast to log verbose information by passing a custom system property, ```-Dcontrast.log=/path/to/log.txt -Dcontrast.level=DEBUG -Dcontrast.log.daily=true``` to the server process. They can alternativly be set in the [contrast_security.yaml file](https://docs.contrastsecurity.com/installation-javaconfig.html)
 
 These JVM options will put Contrast into debug mode and log all output to the log file specified as the system property value. It will also prevent the log from rolling over into multiple files. The log file will start with some messages that look similar to this:
 
