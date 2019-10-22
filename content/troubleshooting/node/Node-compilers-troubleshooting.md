@@ -16,6 +16,18 @@ From versions 2.0.0 to 2.5.1 of the Node agent, you must have installed:
  * If you can build other modules with C++ bindings like [node-sass](https://www.npmjs.com/package/node-sass) and [sqlite3](https://github.com/mapbox/node-sqlite3), you probably meet all of the requirements for Contrast.
  * The official [Node Docker images](https://hub.docker.com/_/node/) come with all of the prerequisites installed.
 
+## gyp ERR! build error
+
+If you're using a version of the Node agent between 2.0.0 and 2.5.1, continue to the **Solutions** section. 
+
+If you're using a Node agent version newer than 2.5.1, the error will most likely be from a module called `unix-dgram`. This module is an optional dependency of the agent and isn't essential for functionality. As of version 2.5.1, the agent no longer requires a C++ compiler toolchain, and you can safely ignore this error.
+
+If this error is still concerning to you or is causing a pipeline to fail, you can install the Node agent with the `--no-optional` npm install flag: 
+
+```
+npm install node_contrast-x.y.z.tgz --no-save --no-optional
+```
+
 ## Solutions
 
 ### Windows
