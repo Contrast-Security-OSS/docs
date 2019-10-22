@@ -101,6 +101,16 @@ app = get_wsgi_application()
 app = ContrastMiddleware(app)
 ```
 
+#### Pylons
+
+``` python
+from pylons.wsgiapp import PylonsApp
+from contrast.agent.middlewares.wsgi_middleware import WSGIMiddleware as ContrastMiddleware
+ 
+app = PylonsApp()
+app = ContrastMiddleware(app)
+```
+
 ## Next Steps
 
 Once the installation process is complete, you can update the agent's [configuration](installation-pythonconfig.html) file. 
