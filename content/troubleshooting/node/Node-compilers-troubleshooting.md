@@ -18,9 +18,15 @@ From versions 2.0.0 to 2.5.1 of the Node agent, you must have installed:
 
 ## gyp ERR! build error
 
-If you are using a version of the Node agent version between 2.0.0 and 2.5.1, please continue below to the Solutions section. If you are using a Node agent version newer than 2.5.1, then the error will most likely be from a module called `unix-dgram`. This module is an optional dependency of the Node Agent and is not essential for functionality. As of version 2.5.1 of the Node Agent, you no longer require a C++ compiler toolchain and this error can be safely ignored.
+If you're using a version of the Node agent between 2.0.0 and 2.5.1, continue to the **Solutions** section. 
 
-If this error is still concerning to you or is causing a pipeline to fail for some reason, you can install the node agent with the `--no-optional` npm install flag: `npm install node_contrast-x.y.z.tgz --no-save --no-optional`.
+If you're using a Node agent version newer than 2.5.1, the error will most likely be from a module called `unix-dgram`. This module is an optional dependency of the agent and isn't essential for functionality. As of version 2.5.1, the agent no longer requires a C++ compiler toolchain, and you can safely ignore this error.
+
+If this error is still concerning to you or is causing a pipeline to fail, you can install the Node agent with the `--no-optional` npm install flag: 
+
+```
+npm install node_contrast-x.y.z.tgz --no-save --no-optional
+```
 
 ## Solutions
 
