@@ -107,7 +107,7 @@ For EOP and SaaS accounts with SSO enabled, a system administrator can automatic
 
 #### SAML 
 
-Contrast expects group information to be sent by the IdP as a multi-value attribute `contrast_group` in your SAML configuration.
+Contrast expects group information to be sent by the IdP as a multi-value attribute `contrast_groups` in your SAML configuration.
 
 ```
 <saml2:AttributeStatement xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">
@@ -125,7 +125,7 @@ Contrast expects group information to be sent by the IdP as a multi-value attrib
 </saml2:AttributeStatement>
 ```
 
-> **Note:** The attribute values listed under `contrast_group` must exactly match an existing group name. Contrast won't create new groups based on the values listed under this attribute.
+> **Note:** The attribute values listed under `contrast_groups` must exactly match an existing group name. Contrast won't create new groups based on the values listed under this attribute.
 
 ### Contrast UI 
 
