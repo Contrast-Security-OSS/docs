@@ -24,7 +24,9 @@ Once you complete the fields, click **Test connection**. This process may take a
 
 <a href="assets/images/Jira-connection-setup.png" rel="lightbox" title="Configure a new Jira integration"><img class="thumbnail" src="assets/images/Jira-connection-setup.png"/></a>
 
-Once connected, select the **applications** that you want to be available to this integration, and customize the values for the **Project**, **Assignee** and **Default Issue Type** fields. You can also customize the **Default Priority** levels for vulnerability severity and values for **Additional JIRA** fields, such as environment or labels. 
+Once connected, select the **Applications** for which you want to create ticket. You may also create tickets for applications with specific [importance levels](user-appsmanage.html) with the **Application Importance** field.   
+
+Use the **Project**, **Assignee** and **Default Issue Type** fields to customize the Jira tickets created as well as the **Default Priority** levels of tickets based on vulnerability severity levels reported in Contrast. The **Additional JIRA** fields allow you to create custom values for your tickets fields, such as environment or labels. 
 
 > **Note:** If you change the Project or Issue type, required and additional fields are updated. However, the UI keeps the selected values that apply to the new configuration.
 
