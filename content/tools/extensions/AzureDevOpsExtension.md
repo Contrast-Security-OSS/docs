@@ -89,7 +89,7 @@ The task can be used in a Build or Release pipeline
 
 ### Step two
 
-* Now that you are in edit mode for a Release Pipeline or Build Pipeline, click on the more (**...**) menu and add an agentless job.
+* Now that you are in edit mode for a Release Pipeline or Build Pipeline, click on the ellipsis (**...**) menu and add an agentless job.
 
 <a href="assets/images/task_add_agentless_job.png"></a>
 
