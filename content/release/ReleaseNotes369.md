@@ -6,9 +6,9 @@ tags: "3.6.9 October Release Notes"
 
 ## Bug Fixes
 
-* Jira integrations weren't applying custom fields created in Contrast. CONTRAST-37942
-* Vulnerabilities couldn't be sent to integrated bugtrackers for child applications. CONTRAST-37064
-* The Overview page for attack events highlighted the wrong line of code. CONTRAST-38336
+* Jira integrations weren't applying custom fields created in Contrast.
+* Vulnerabilities couldn't be sent to integrated bugtrackers for child applications.
+* The Overview page for attack events highlighted the wrong line of code.
 
 ## New and Improved Features
 
@@ -31,23 +31,18 @@ tags: "3.6.9 October Release Notes"
 
 #### .NET Framework 
 
-Added the ability to filter which applications in IIS will be analyzed via the application_blacklist and application_whitelist configuration settings.
-Improved performance of Protect analysis under CLR2
-Improved accuracy of Assess propagation starting with the HttpRequest.Uri source
-Fixed a bug where the agent did not properly handle NGEN assemblies
-
+The team added the ability to filter which applications in IIS will be analyzed via the `application_blacklist` and `application_whitelist` configuration settings. We improved performance of Protect analysis under CLR2 as well as accuracy of Assess propagation starting with the *HttpRequest.Uri* source. We also fixed a bug where the agent didn't properly handle NGEN assemblies.
 
 #### .NET Core
 
-Fixed several bugs that could prevent certain instrumented applications from initializing or starting correctly
-
+The team fixed several bugs that could prevent certain instrumented applications from initializing or starting correctly.
 
 ### Node.js summary 
 
 
 ### Ruby summary 
 
-Much of the October release was focused on performance improvements in the agent, particularly around startup, patching, and interpolation detection. The Ruby agent now has a more lightweight impact while patching. In addition, there have been substantial changes to how we track dataflow through interpolation events, relying upon C patching and AST rewriting as opposed to code rewriting. These changes are both more performant and more stable, contributing to overall confidence in the Agent as a whole.
+For much of the October release, the Ruby team focused on performance improvements in the agent, particularly around startup, patching, and interpolation detection. The agent now has a more lightweight impact while patching. We also made substantial changes to how we track dataflow through interpolation events by relying on *C* patching and AST rewriting as opposed to code rewriting. These changes are more performant and more stable, and contribute the reliability of the agent as a whole.
 
 ### Python summary
 
