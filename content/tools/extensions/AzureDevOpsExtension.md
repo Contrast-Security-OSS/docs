@@ -38,7 +38,7 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 > **Note:** This task can be used in only an agentless job
 
-### Step one
+### Step one - Enter Edit mode
 The task can be used in a Build or Release pipeline
 
 #### Release Pipeline
@@ -46,23 +46,23 @@ The task can be used in a Build or Release pipeline
 * Enter **Edit** mode for the release pipeline you wish to add the task.
 * Select a stage for which you wish to add the task
 
-<a href="assets/images/task_release_choose_stage.png"></a>
+<a href="assets/images/AzureDevOps_release_choose_stage.png"></a>
 
 #### Build Pipeline
 
 * Enter **Edit** mode for the build pipeline you wish to add the task.
 
-### Step two
+### Step two - add the task
 
 * Now that you are in edit mode for a Release Pipeline or Build Pipeline, click on the ellipsis (**...**) menu and add an agentless job.
 
-<a href="assets/images/task_add_agentless_job.png"></a>
+<a href="assets/images/AzureDevOps_add_agentless_job.png"></a>
 
 * Click on the **+** button next to you agentless job and add the **Verify application vulnerabilities** task.
 
-<a href="assets/images/task_add_task.png"></a>
+<a href="assets/images/AzureDevOps_add_task.png"></a>
 
-### Step three
+### Step three - configure the task
 
 * You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast, leave them blank if you don't want to filter. The values set in these fields will be validated against the conditions you configure in the following fields.
 
@@ -71,3 +71,14 @@ The task can be used in a Build or Release pipeline
 * Proceed to your severity counters, where you must set the maximum number of vulnerabilities allowed per severity. If your selected application has more vulnerabilities than allowed for that severity level, your task will fail.
 
 <a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
+
+### Step four - set job dependency
+> For **Build Pipelines** - If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
+* Select the job you want to prevent from executing.
+* In the **Dependencies** section, add the agentless job.
+
+<a href="assets/images/AzureDevOps_set_dependency.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
+
+
+
+
