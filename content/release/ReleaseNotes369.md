@@ -16,8 +16,6 @@ tags: "3.6.9 October Release Notes"
 
 * Settings for time-based auto-remediation policy and administrator approval to close vulnerabilities have moved from your Organization Settings to a new Vulnerability Management page within Policy Management.
 
-* A Contrast extension of Azure Pipelines allows development teams use a task to set threshold definitions that prevent builds from succeeding if applications are determined to be too vulnerable.
-
 * A Contrast plugin for the 2019 version of the Visual Studio IDE lets you see a list of vulnerabilities and details on each one, such as remediation guidance, directly in the IDE as Contrast discovers security flaws in your applications.
 
 
