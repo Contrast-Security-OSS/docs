@@ -34,41 +34,6 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 > **Note:** Your **Contrast URL** should not include */Contrast* at the end; only the host is required.
 
-## Configuration for Release Gate
-
-### Step one
-
-* Now that you have at least one service connection, enter on **Edit** mode for the release pipeline you wish to include the gate.
-* Select a pre- or post-deployment condition.
-
-<a href="assets/images/AzureDevOps_deployment_conditions.png" rel="lightbox" title="Deployment conditions"><img class="thumbnail" src="assets/images/AzureDevOps_deployment_conditions.png"/></a>
-
-* Enable the **Gates** section if you haven't already. 
-* Click on the **+ Add** button to select the **Verify application vulnerabilities** option.
-
-<a href="assets/images/AzureDevOps_gates_section.png" rel="lightbox" title="Gates section"><img class="thumbnail" src="assets/images/AzureDevOps_gates_section.png"/></a>
-
-<a href="assets/images/AzureDevOps_select_gate.png" rel="lightbox" title="Select gate"><img class="thumbnail" src="assets/images/AzureDevOps_select_gate.png"/></a>
-
-### Step two
-
-* Select a **Service Connection** from the **Contrast Service Connection** field. You can also click on the **Manage** option to go to the **Service connections** settings in your **Project Settings**.
-* Select one of your applications from the **Application** dropdown. This enables more fields for configuring the gate.
-
-<a href="assets/images/AzureDevOps_gate_part1.png" rel="lightbox" title="Azure DevOps Gate Part 1"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part1.png"/></a>
-
-### Step three
-
-* You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast. The values set in these fields will be validated against the conditions you configure in the following fields.
-
-<a href="assets/images/AzureDevOps_gate_part2.png" rel="lightbox" title="Azure DevOps Gate Part 2"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part2.png"/></a>
-
-* Proceed to your severity counters, where you must set the maximum number of vulnerabilities allowed per severity. If your selected application has more vulnerabilities than allowed for that severity level, your gate will fail.
-
-<a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
-
-> **Note:** Remember that your gates evaluation settings affect all the gates on the current stage for the pre- or post-deployment conditions.
-
 ## Configuration for Task
 
 > **Note:** This task can be used in only an agentless job
@@ -99,7 +64,7 @@ The task can be used in a Build or Release pipeline
 
 ### Step three
 
-* You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast. The values set in these fields will be validated against the conditions you configure in the following fields.
+* You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast, leave them blank if you don't want to filter. The values set in these fields will be validated against the conditions you configure in the following fields.
 
 <a href="assets/images/AzureDevOps_gate_part2.png" rel="lightbox" title="Azure DevOps Gate Part 2"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part2.png"/></a>
 
