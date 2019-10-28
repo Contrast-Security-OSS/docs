@@ -63,8 +63,14 @@ The task can be used in a Build or Release pipeline
 
 <a href="assets/images/AzureDevOps_add_task.png" rel="lightbox" title="Azure DevOps Add Task"><img class="thumbnail" src="assets/images/AzureDevOps_add_task.png"/></a>
 
+### Step three - choose connection and application
 
-### Step three - configure the task
+* Select a **Service Connection** from the **Contrast Service Connection** field. You can also click on the **Manage** option to go to the **Service connections** settings in your **Project Settings**.
+* Select one of your applications from the **Application** dropdown. This enables more fields for configuring the task.
+
+<a href="assets/images/AzureDevOps_connection_and_app.png" rel="lightbox" title="Azure DevOps Connection And Application"><img class="thumbnail" src="assets/images/AzureDevOps_connection_and_app.png"/></a>
+
+### Step four - configure the task
 
 * You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast, leave them blank if you don't want to filter. The values set in these fields will be validated against the conditions you configure in the following fields.
 
@@ -74,7 +80,7 @@ The task can be used in a Build or Release pipeline
 
 <a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
 
-### Step four - set job dependency
+### Step five - set job dependency
 > For **Build Pipelines** - If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
 * Select the job you want to prevent from executing.
 * In the **Dependencies** section, add the agentless job.
