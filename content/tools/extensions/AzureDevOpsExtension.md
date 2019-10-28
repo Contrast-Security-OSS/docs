@@ -112,7 +112,7 @@ jobs:
 
 |Key |Description |Example Value|
 |:---|:---------:|----:|
-|ContrastService | (Required) The service connection to be used to connect to the contrast application | 'Contrast Connection' |
+|ContrastService | (Required) The service connection to be used to connect to the contrast | 'Contrast Connection' |
 |Application |(Required) The application that will be used to evaluate the vulnerabilities conditions |'a123745f-5857-45e4-a278-ddb5012e1996'|
 |StatusFilter |(Optional)(Allowed Status) The vulnerability statuses that are included in the evaluation task. Delimited by `,` |'Reported' |
 |AppVersionFilter |(Optional)(Build Number) The build number to filter the vulnerabilities results | '0.0.1' |
