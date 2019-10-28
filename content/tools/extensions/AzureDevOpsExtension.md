@@ -46,7 +46,7 @@ The task can be used in a Build or Release pipeline
 * Enter **Edit** mode for the release pipeline you wish to add the task.
 * Select a stage for which you wish to add the task
 
-<a href="assets/images/AzureDevOps_release_choose_stage.png"></a>
+<a href="assets/images/AzureDevOps_release_choose_stage.png" rel="lightbox" title="Azure DevOps Release Choose Stage"><img class="thumbnail" src="assets/images/AzureDevOps_release_choose_stage.png"/></a>
 
 #### Build Pipeline
 
@@ -56,11 +56,13 @@ The task can be used in a Build or Release pipeline
 
 * Now that you are in edit mode for a Release Pipeline or Build Pipeline, click on the ellipsis (**...**) menu and add an agentless job.
 
-<a href="assets/images/AzureDevOps_add_agentless_job.png"></a>
+<a href="assets/images/AzureDevOps_add_agentless_job.png" rel="lightbox" title="Azure DevOps Add Agentless Job"><img class="thumbnail" src="assets/images/AzureDevOps_add_agentless_job.png"/></a>
+
 
 * Click on the **+** button next to you agentless job and add the **Verify application vulnerabilities** task.
 
-<a href="assets/images/AzureDevOps_add_task.png"></a>
+<a href="assets/images/AzureDevOps_add_task.png" rel="lightbox" title="Azure DevOps Add Task"><img class="thumbnail" src="assets/images/AzureDevOps_add_task.png"/></a>
+
 
 ### Step three - configure the task
 
@@ -77,8 +79,60 @@ The task can be used in a Build or Release pipeline
 * Select the job you want to prevent from executing.
 * In the **Dependencies** section, add the agentless job.
 
-<a href="assets/images/AzureDevOps_set_dependency.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
+<a href="assets/images/AzureDevOps_set_dependency.png" rel="lightbox" title="Azure DevOps Set Dependency"><img class="thumbnail" src="assets/images/AzureDevOps_set_dependency.png"/></a>
 
+## Configuration for Task as a Yaml Build Pipeline
 
+> **Note:** This task must run in the server pool (`pool: server`)
 
+### Step one - Enter Edit mode
+* Enter **Edit** for the Yaml build pipeline you wish to add the task.
 
+### Step two - Create a server job
+* Under the jobs list, add a new job that runs on the server pool
+
+**Example:**
+```
+jobs:
+- job: verify_application
+  pool: server
+  steps:
+```
+
+### Step three - add the task
+* Click under the steps list and then click on the **Show assistant** and search for "Contrast Assess".
+* Click on the "Contrast Assess - Application Vulnerability Detection" task.
+* Follow [step three](#step-three---configure-the-task) of the [Configuration for Task](#configuration-for-task) to configure the task.
+
+**Example:**
+<a href="assets/images/AzureDevOps_yaml_add_task_example.png" rel="lightbox" title="Azure DevOps Set Dependency"><img class="thumbnail" src="assets/images/AzureDevOps_yaml_add_task_example.png"/></a>
+
+* Click **Add**, This will add the task to the steps list.
+* Inputs for this task are as follows:
+
+|Key |Description |Example Value|
+|:---|:---------:|----:|
+|ContrastService | (Required) The service connection to be used to connect to the contrast application | 'Contrast Connection' |
+|Application |(Required) The application that will be used to evaluate the vulnerabilities conditions |'a123745f-5857-45e4-a278-ddb5012e1996'|
+|StatusFilter |(Optional)(Allowed Status) The vulnerability statuses that are included in the evaluation task. Delimited by `,` |'Reported' |
+|AppVersionFilter |(Optional)(Build Number) The build number to filter the vulnerabilities results | '0.0.1' |
+|CriticalLimit |(Required) The maximum amount of vulnerabilities for the critical severity | '0' |
+|HighLimit |(Required) The maximum amount of vulnerabilities for the high severity | '0' |
+|MediumLimit |(Required) The maximum amount of vulnerabilities for the medium severity | '0' |
+|LowLimit |(Required) The maximum amount of vulnerabilities for the low severity | '0' |
+|NoteLimit |(Required) The maximum amount of vulnerabilities for the note severity | '0' |
+
+### Step four - set job dependency
+> If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
+
+* Add the `dependsOn: ` property to the job you would like to prevent from executing.
+
+**Example:** In this example, the agentless job that has the contrast task is called `verify_application`
+```
+- job: artifact
+  dependsOn: verify_application
+  pool:
+    name: Azure Pipelines
+    vmImage: 'ubuntu-latest'
+  steps:
+```
