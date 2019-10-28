@@ -42,7 +42,9 @@ The team fixed several bugs that could prevent certain instrumented applications
 
 ### Ruby summary 
 
-For much of the October release, the Ruby team focused on performance improvements in the agent, particularly around startup, patching, and interpolation detection. The agent now has a more lightweight impact while patching. We also made substantial changes to how we track dataflow through interpolation events by relying on *C* patching and AST rewriting as opposed to code rewriting. These changes are more performant and more stable, and contribute the reliability of the agent as a whole.
+For much of the October release, the Ruby team focused on performance improvements in the agent, particularly around startup, patching, and interpolation detection. The agent now has a more lightweight impact while patching. We also made substantial changes to how we track dataflow through interpolation events by relying on *C* patching and AST rewriting as opposed to code rewriting. These changes contributed to the performance and stability of the agent as a whole.
 
 ### Python summary
+
+The Python team implemented more robust handling of cases in which requests have been read by other middlewares higher in the stack, and made improvements to route coverage and agent logging. We fixed an issue related to the handling of binary data in responses from applications. We also made updates to the agent README, and did some internal code cleanup and testing. 
 
