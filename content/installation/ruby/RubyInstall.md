@@ -10,6 +10,7 @@ To install the Contrast agent into your Ruby application, you must complete the 
 
 1. Add the <i>contrast-agent-*.gem</i> to the application Gemfile. (This is outlined in the <b>Setup</b> section below.) 
 2. Add the *contrast_security.yaml* file to the application's *config* directory. (This is outlined in the **Configuration** section below.)
+3. Verify that [`autoconf`](https://www.gnu.org/software/autoconf/) is installed on the system where you will run the agent. 
 
 ## Setup
 
