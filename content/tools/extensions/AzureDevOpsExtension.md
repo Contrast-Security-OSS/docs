@@ -36,7 +36,7 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 ## Configuration for Task
 
-> **Note:** This task can be used in only an agentless job
+> **Note:** This task can be used in only an **agentless job**
 
 ### Step one - Enter Edit mode
 The task can be used in a Build or Release pipeline
@@ -92,7 +92,7 @@ The task can be used in a Build or Release pipeline
 > **Note:** This task must run in the server pool (`pool: server`)
 
 ### Step one - Enter Edit mode
-* Enter **Edit** for the Yaml build pipeline you wish to add the task.
+* Enter **Edit** mode for the Yaml build pipeline you wish to add the task.
 
 ### Step two - Create a server job
 * Under the jobs list, add a new job that runs on the server pool
@@ -113,7 +113,7 @@ jobs:
 **Example:**
 <a href="assets/images/AzureDevOps_yaml_add_task_example.png" rel="lightbox" title="Azure DevOps Set Dependency"><img class="thumbnail" src="assets/images/AzureDevOps_yaml_add_task_example.png"/></a>
 
-* Click **Add**, This will add the task to the steps list.
+* Click **Add**. This will add the task to the steps list.
 * Inputs for this task are as follows:
 
 |Key |Description |Example Value|
@@ -129,7 +129,7 @@ jobs:
 |NoteLimit |(Required) The maximum amount of vulnerabilities for the note severity | '0' |
 
 ### Step four - set job dependency
-> If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
+> **Note:** If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
 
 * Add the `dependsOn: ` property to the job you would like to prevent from executing.
 
