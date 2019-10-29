@@ -5,7 +5,7 @@
 -->
 
 ## Prepare for the Installation
-The Contrast application for Enterprise on Premises (EOP) includes a Tomcat servlet container, a MySQL database instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture. You should prepare the following prior to installing the application:
+The Contrast application for Enterprise on Premises (EOP) includes a Tomcat servlet container, a MySQL database instance and an AdoptOpenJDK Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture. You should prepare the following prior to installing the application:
 
 * System with adequate compute and memory resources based on guidance from our [sizing recommendations](installation-setup.html#size)
 * Adherence to the system requirements specified below
