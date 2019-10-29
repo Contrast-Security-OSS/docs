@@ -18,7 +18,7 @@ Using Assess, Protect or both as an EOP customer requires two installations:
 * Central instance of the Contrast application
 * Agent for each web application server
 
-The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, Cassandra NoSQL instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
+The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, and an AdoptOpenJDK Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
 
 As you prepare to [install Contrast](installation-setupinstall.html) in your own environment, verify that your configuration complies with Contrast's [system requirements](installation-setup.html#contrast-reqs) and [sizing requirements](installation-setup.html#size). You can also update Java options, and take advantage of Contrast logs and tools when you [run Contrast](installation-setup.html#run) on Windows or Linux. 
 
