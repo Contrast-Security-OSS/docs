@@ -1,7 +1,7 @@
 <!--
 title: "Contrast Integration for Azure DevOps" 
 description: "Extension to integrate Contrast in your deployment workflow"
-tags: "tools azure devops integration extension deployment"
+tags: "tools azure devops pipeline pipelines integration extension deployment utility"
 -->
 
 
