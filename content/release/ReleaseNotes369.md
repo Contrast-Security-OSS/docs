@@ -42,7 +42,14 @@ The team fixed several bugs that could prevent certain instrumented applications
 
 ### Node.js summary 
 
-TBD
+The Node team completed the following bug fixes: 
+
+* An AsyncStorage error with Hapi 16
+* An issue regarding hardcoded rules no longer reporting
+* A bad substitution error when running packaging script
+* An issue where the agent wasn’t compatible with Node.js asn1 library
+
+We also added a note in the agent's troubleshooting README for installing the agent when running on Alpine, and did some internal code cleanup and testing improvements. 
 
 ### Ruby summary 
 
