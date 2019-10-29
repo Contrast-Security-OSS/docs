@@ -16,7 +16,7 @@ To change an application name, click on the the application's name in the grid t
 
 ## Set Application Importance
 
-To set an application's importance level within your organization, go to its **Overview** page and click the **Settings** icon. In the **Application Defaults** dialog, use the **Importance** field to select a level from the dropdown menu. The value appears in the application's metadata in the UI, and may also be used in your organization's integrations settings. 
+To set an application's importance level within your organization, go to its **Overview** page and click the **Settings** icon. In the **Application Defaults** dialog, use the **Importance** field to select a level from the dropdown menu. The value appears in the application's metadata in the UI; you may also use it in your organization's integrations settings. 
 
 ## Tag Applications
 
