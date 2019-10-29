@@ -1,6 +1,6 @@
 <!--
 title: "Managing Applications"
-description: "Overview of the core operations for an application from the action bar."
+description: "Overview of the core operations for an application from the action bar"
 tags: "user ui application manage archiving restoring resetting deleting"
 -->
 
