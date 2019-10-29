@@ -14,6 +14,8 @@ Contrast provides visibility of vulnerabilities in your applications, and protec
 Visual Studio versions:
 
 * 2017 (15.0+)
+* 2019
+
 
 ## Setup and Configuration
 
