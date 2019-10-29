@@ -25,9 +25,9 @@ tags: "3.6.9 October Release Notes"
 
 For Assess, the Java team added coverage for java.util.Scanner APIs and java.net.URL#openStream. We fixed a library reporting issue in Assess that would cause previously reported libraries to disappear. The agent now recognizes the OWASP Encoder project's JSP tags as valid security controls. The agent no longer reports anti-clickjacking and anti-caching vulnerabilities for requests for font files, or XSS vulnerabilities in request for PDF files. 
 
-For Protect, the agent can better detect and block commands started from OGNL expressions. Protect rules are now able to detect attacks when the input is base64 encoded. We also improved the accuracy of the Protect EL Injection rule to not block attacks where `java.lang.Class` is used only to obtain the simple name via #getSimpleName.
+For Protect, the agent can better detect and block commands started from OGNL expressions. Protect rules can now detect attacks when the input is base64 encoded. We also improved the accuracy of the Protect EL Injection rule to not block attacks where `java.lang.Class` is used only to obtain the simple name via #getSimpleName.
  
-Last but not least, we improved error reporting in agent initialization when unable to access the temporary directory, and added the port to reporting of HTTP requests in J2EE applications. 
+Lastly, we improved error reporting in agent initialization when unable to access the temporary directory, and added the port to reporting of HTTP requests in J2EE applications. 
 
 ### .NET agent summaries
 
