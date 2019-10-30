@@ -116,6 +116,9 @@ Use the properties in this section to control security logging. These logs allow
       * **severity_exploited**: Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
       * **severity_blocked**: Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
       * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+      * **heartbeat**:
+        * **enable**: Set to `true` to enable the Syslog heartbeat. The heartbeat will issue a Syslog message after every interval passes.
+        * **interval_ms**: Set the interval of the Syslog server for which to send heartbeat messages to the Syslog server (in milliseconds). The default value is `60000`.
 
 
 ### Agent-Specific Properties
