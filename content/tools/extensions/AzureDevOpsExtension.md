@@ -1,11 +1,11 @@
 <!--
 title: "Contrast Integration for Azure DevOps" 
 description: "Extension to integrate Contrast in your deployment workflow"
-tags: "tools azure devops pipeline pipelines integration extension deployment utility"
+tags: "tools azure devops pipeline integration extension deployment utility"
 -->
 
 
-Use the the Azure DevOps extension to integrate Contrast with your deployment workflow. The following instructions guide you through the steps to set up and configure the extension for your Contrast instance. 
+Use the Azure DevOps extension to integrate Contrast with your deployment workflow. The following instructions guide you through the steps to set up and configure the extension for your Contrast instance. 
 
 ## Before You Start 
 
@@ -13,11 +13,13 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 ## Setup and Configuration
 
-### Step one
+Complete the following steps to configure the Contrast extension. 
+
+### Step one: Install the extension 
 
 * Follow [Microsoft's instructions](https://docs.microsoft.com/en-us/azure/devops/marketplace/install-extension?view=azure-devops-2019) to install the Contrast extension, **Contrast Integration**. 
 
-### Step two
+### Step two: Project settings
 
 * Go to your [Project Settings](https://docs.microsoft.com/en-us/azure/devops/project/navigation/go-to-service-page?view=azure-devops#open-project-settings) at the bottom of you side bar. You'll need to be part of the Project administration group or have enough permissions to alter the settings.
 
@@ -25,7 +27,7 @@ Before you begin to set up the extension, make sure that you have the privileges
 
  <a href="assets/images/AzureDevOps_connection_settings.png" rel="lightbox" title="Service Connection Settings"><img class="thumbnail" src="assets/images/AzureDevOps_service_connection_settings.png"/></a>
 
-### Step three
+### Step three: Configure the service connection
 
 * Click over the **+ New Service connection** button (shown in the image in the previous step), and select **Contrast Server Connection**.
 * Complete all the fields with the required data. You can find the values for all the fields in the Contrast UI by going to the [**user menu > Your Account > Profile** page](user-account.html#profile).
@@ -34,45 +36,45 @@ Before you begin to set up the extension, make sure that you have the privileges
 
 > **Note:** Your **Contrast URL** should not include */Contrast* at the end; only the host is required.
 
-## Configuration for Task
+## Setup and Configuration for a Task
 
-> **Note:** This task can be used in only an **agentless job**
+Complete the following steps to configure a task in your Azure DevOps extension. This task can be used in only an **agentless job**.
 
-### Step one - Enter Edit mode
-The task can be used in a Build or Release pipeline
+### Step one: Enter Edit mode
+
+The task can be used in a release or build pipeline. Complete the appropriate steps for the pipeline you're using. 
 
 #### Release Pipeline
 
 * Enter **Edit** mode for the release pipeline you wish to add the task.
-* Select a stage for which you wish to add the task
+* Select a stage for which you wish to add the task.
 
 <a href="assets/images/AzureDevOps_release_choose_stage.png" rel="lightbox" title="Azure DevOps Release Choose Stage"><img class="thumbnail" src="assets/images/AzureDevOps_release_choose_stage.png"/></a>
 
 #### Build Pipeline
 
-* Enter **Edit** mode for the build pipeline you wish to add the task.
+* Enter **Edit** mode for the build pipeline you want to add the task.
 
-### Step two - add the task
+### Step two: Add the task
 
-* Now that you are in edit mode for a Release Pipeline or Build Pipeline, click on the ellipsis (**...**) menu and add an agentless job.
+* Now that you are in Edit mode for a release pipeline or build pipeline, click on the ellipsis (**...**) menu and select **Add an agentless job**.
 
 <a href="assets/images/AzureDevOps_add_agentless_job.png" rel="lightbox" title="Azure DevOps Add Agentless Job"><img class="thumbnail" src="assets/images/AzureDevOps_add_agentless_job.png"/></a>
 
-
-* Click on the **+** button next to you agentless job and add the **Verify application vulnerabilities** task.
+* Click on the **+** button next to your agentless job, and add the **Verify application vulnerabilities** task.
 
 <a href="assets/images/AzureDevOps_add_task.png" rel="lightbox" title="Azure DevOps Add Task"><img class="thumbnail" src="assets/images/AzureDevOps_add_task.png"/></a>
 
-### Step three - choose connection and application
+### Step three: Choose a connection and application
 
-* Select a **Service Connection** from the **Contrast Service Connection** field. You can also click on the **Manage** option to go to the **Service connections** settings in your **Project Settings**.
-* Select one of your applications from the **Application** dropdown. This enables more fields for configuring the task.
+* Select a **Service Connection** from the **Contrast Service Connection** menu. You can also click on the **Manage** option to go to the **Service connections** settings in your **Project Settings**.
+* Select one of your applications from the **Application** menu.
 
 <a href="assets/images/AzureDevOps_connection_and_app.png" rel="lightbox" title="Azure DevOps Connection And Application"><img class="thumbnail" src="assets/images/AzureDevOps_connection_and_app.png"/></a>
 
-### Step four - configure the task
+### Step four: Configure the task
 
-* You can use the **Allowed Status** and **Build Number** fields to filter your results from Contrast, leave them blank if you don't want to filter. The values set in these fields will be validated against the conditions you configure in the following fields.
+* Use the **Allowed Status** and **Build Number** fields to filter your results from Contrast; or, leave them blank, if you don't want to filter. The values set in these fields will be validated against the conditions you configure in the following fields.
 
 <a href="assets/images/AzureDevOps_gate_part2.png" rel="lightbox" title="Azure DevOps Gate Part 2"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part2.png"/></a>
 
@@ -80,22 +82,26 @@ The task can be used in a Build or Release pipeline
 
 <a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
 
-### Step five - set job dependency
-> For **Build Pipelines** - If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
+### Step five: Set job dependency
+
+> For **Build Pipelines** - If you want to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
+
 * Select the job you want to prevent from executing.
-* In the **Dependencies** section, add the agentless job.
+* In the **Dependencies** section, add the **Agentless job**.
 
 <a href="assets/images/AzureDevOps_set_dependency.png" rel="lightbox" title="Azure DevOps Set Dependency"><img class="thumbnail" src="assets/images/AzureDevOps_set_dependency.png"/></a>
 
-## Configuration for Task as a Yaml Build Pipeline
+## Setup and Configuration for a Task as a YAML Build Pipeline
 
-> **Note:** This task must run in the server pool (`pool: server`)
+Complete the following steps to configure a task as a YAML build pipeline in your Azure DevOps extension. This task must run in the server pool (`pool: server`). 
 
-### Step one - Enter Edit mode
-* Enter **Edit** mode for the Yaml build pipeline you wish to add the task.
+### Step one: Enter Edit mode
 
-### Step two - Create a server job
-* Under the jobs list, add a new job that runs on the server pool
+* Enter **Edit** mode for the YAML build pipeline you wish to add the task.
+
+### Step two: Create a server job
+
+* Under the jobs list, add a new job that runs on the server pool.
 
 **Example:**
 ```
@@ -105,12 +111,13 @@ jobs:
   steps:
 ```
 
-### Step three - add the task
-* Click under the steps list and then click on the **Show assistant** and search for "Contrast Assess".
-* Click on the "Contrast Assess - Application Vulnerability Detection" task.
-* Follow [step three](#step-three---configure-the-task) of the [Configuration for Task](#configuration-for-task) to configure the task.
+### Step three: Add the task
 
-**Example:**
+* Click under the steps list, and then click on the **Show assistant** and search for "Contrast Assess".
+* Click on the **Contrast Assess - Application Vulnerability Detection** task.
+* Select a **Service Connection** from the **Contrast Service Connection** menu. You can also click on the **Manage** option to go to the **Service connections** settings in your **Project Settings**.
+* Select one of your applications from the **Application** menu.
+
 <a href="assets/images/AzureDevOps_yaml_add_task_example.png" rel="lightbox" title="Azure DevOps Set Dependency"><img class="thumbnail" src="assets/images/AzureDevOps_yaml_add_task_example.png"/></a>
 
 * Click **Add**. This will add the task to the steps list.
@@ -128,12 +135,13 @@ jobs:
 |LowLimit |(Required) The maximum amount of vulnerabilities for the low severity | '0' |
 |NoteLimit |(Required) The maximum amount of vulnerabilities for the note severity | '0' |
 
-### Step four - set job dependency
-> **Note:** If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
+### Step four: Set job dependency
+
+If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
 
 * Add the `dependsOn: ` property to the job you would like to prevent from executing.
 
-**Example:** In this example, the agentless job that has the contrast task is called `verify_application`
+**Example:** In this example, the agentless job that has the Contrast task is called `verify_application`.
 ```
 - job: artifact
   dependsOn: verify_application
