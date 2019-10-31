@@ -87,8 +87,7 @@ The task can be used in a release or build pipeline. Complete the appropriate st
 
 <a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
 
-
-### Step five - set job dependency (Build Pipeline only)
+### Step five - set job dependency (Build Pipelines only)
 > For **Build Pipelines** - If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
 * Select the job you want to prevent from executing.
 * In the **Dependencies** section, add the **Agentless job**.
