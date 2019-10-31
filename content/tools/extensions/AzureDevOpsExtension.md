@@ -46,14 +46,19 @@ The task can be used in a release or build pipeline. Complete the appropriate st
 
 #### Release Pipeline
 
-* Enter **Edit** mode for the release pipeline you wish to add the task.
-* Select a stage for which you wish to add the task.
+* Enter **Edit** mode for the release pipeline you want to add the task by clicking on the Edit button while the pipeline is selected.
+
+<a href="assets/images/AzureDevOps_release_edit.png" rel="lightbox" title="Azure DevOps Build Edit"><img class="thumbnail" src="assets/images/AzureDevOps_release_edit.png"/></a>
+
+* Select a stage for which you want to add the task.
 
 <a href="assets/images/AzureDevOps_release_choose_stage.png" rel="lightbox" title="Azure DevOps Release Choose Stage"><img class="thumbnail" src="assets/images/AzureDevOps_release_choose_stage.png"/></a>
 
 #### Build Pipeline
 
-* Enter **Edit** mode for the build pipeline you want to add the task.
+* Enter **Edit** mode for the build pipeline you want to add the task by clicking on the Edit button while the pipeline is selected.
+
+<a href="assets/images/AzureDevOps_build_edit.png" rel="lightbox" title="Azure DevOps Build Edit"><img class="thumbnail" src="assets/images/AzureDevOps_build_edit.png"/></a>
 
 ### Step two: Add the task
 
@@ -82,10 +87,9 @@ The task can be used in a release or build pipeline. Complete the appropriate st
 
 <a href="assets/images/AzureDevOps_gate_part3.png" rel="lightbox" title="Azure DevOps Gate Part 3"><img class="thumbnail" src="assets/images/AzureDevOps_gate_part3.png"/></a>
 
-### Step five: Set job dependency
 
-> For **Build Pipelines** - If you want to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
-
+### Step five - set job dependency (Build Pipeline only)
+> For **Build Pipelines** - If you would like to prevent the execution of a job if the task fails, you must set the job to depend on the agentless job that includes the Contrast task.
 * Select the job you want to prevent from executing.
 * In the **Dependencies** section, add the **Agentless job**.
 
