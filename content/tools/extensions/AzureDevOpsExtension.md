@@ -66,7 +66,7 @@ The task can be used in a release or build pipeline. Complete the appropriate st
 
 <a href="assets/images/AzureDevOps_add_agentless_job.png" rel="lightbox" title="Azure DevOps Add Agentless Job"><img class="thumbnail" src="assets/images/AzureDevOps_add_agentless_job.png"/></a>
 
-* Click on the **+** button next to your agentless job, and add the **Verify application vulnerabilities** task.
+* Click on the **+** button next to your agentless job, and add the **Contrast Assess - Application Vulnerability Detection** task.
 
 <a href="assets/images/AzureDevOps_add_task.png" rel="lightbox" title="Azure DevOps Add Task"><img class="thumbnail" src="assets/images/AzureDevOps_add_task.png"/></a>
 
