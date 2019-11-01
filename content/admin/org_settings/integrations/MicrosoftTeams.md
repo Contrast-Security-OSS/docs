@@ -4,23 +4,28 @@ description: "Integrating MicrosoftTeams with Contrast"
 tags: "Admin organization settings integrations microsoftTeams"
 -->
 
-Contrast supports Microsoft Teams integration! With this connection you can receive notifications from Contrast in your configured Microsoft Teams instance using a format similar to in-app notifications.
+Use Contrast's Microsoft Teams integration to receive notifications from Contrast in your configured Microsoft Teams instance.
 
 ## Setup
 
-To add, go to your team in Microsoft Teams:
+### Microsoft Teams
 
-1. Choose the appropriate channel to which to send messages, select the 3 dots to the right of the that channel name, then select **connectors**
-2. Select Configure beside **Incoming Webhook**
-3. Fill out the information, select **Create** then Copy the **Webhook URL**
+To add the Contrast integration, go to your team in your Microsoft Teams account, and complete the following steps.
 
-To connect in Contrast:
+* Choose the appropriate channel to which to send messages, select the three dots to the right of the that channel name, then select **Connectors**. 
+* Select **Configure** beside **Incoming Webhook**.
+* After completing the form, select **Create**. 
+* Copy the **Webhook URL**. (You'll use this to set up the integration in the Contrast UI.) 
 
-1. Navigate to the **Integrations** tab under **Organization Settings**
-2. Click **Connect** within the Microsoft Teams row
-3. Name the integration and paste the URL
-4. Select the application(s) for which you want to enable notifications
-5. Click **Save**
+### Contrast
+
+To connect to your Microsoft Teams instance in Contrast, complete the following steps.
+
+* Go to the **user menu > Organization Settings > Integrations tab**. 
+* In the Microsoft Teams row, click the button to **Connect**. 
+* Enter a name for the integration and paste the Webhook URL (from your Microsoft Teams account).
+* Select the application(s) for which you want to enable notifications.
+* Click **Save**.
 
 You are connected!
 
