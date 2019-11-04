@@ -1,7 +1,7 @@
 <!--
 title: "Supported Technologies"
 description: "List of supported technologies"
-tags: "installation Node agent frameworks support troubleshooting nodejs javascript modules"
+tags: "installation Node agent frameworks support nodejs javascript modules"
 -->
 
 ## Node.js Version Support

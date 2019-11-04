@@ -58,4 +58,4 @@ sudo yum remove contrast-java-agent contrast-java-agent-exec-helper
 
 ## Learn More
 
-If you're experiencing issues with the Exec Helper package after installation, go to the [troubleshooting article](troubleshooting-javainstall.html#java-exec) for more help with startup, logging and libraries.
+If you're experiencing issues with the Exec Helper package after installation, go to the [troubleshooting article](troubleshooting-javainstall.html#java-exec) <!-- replace --> for more help with startup, logging and libraries.

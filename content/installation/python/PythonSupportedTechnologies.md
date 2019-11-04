@@ -1,7 +1,7 @@
 <!-- 
 title: "Supported Technologies"
 description: "List of supported technologies"
-tags: "installation Python agent frameworks support troubleshooting package"
+tags: "installation Python agent frameworks support package"
 -->
 
 The Python agent supports Python versions 2.7+ and 3.5 to 3.7. Framework support is currently for:
