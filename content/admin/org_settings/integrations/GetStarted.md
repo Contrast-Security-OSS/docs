@@ -19,6 +19,7 @@ Notifications:
 * Slack 
 * HipChat
 * VictorOps
+* Microsoft Teams
 * Generic Webhook
 
 > **Notes:** 

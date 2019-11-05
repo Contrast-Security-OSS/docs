@@ -1,7 +1,7 @@
 <!--
 title: "Integrations"
 description: "Adding Integrations to Contrast"
-tags: "Admin settings integrations hipchat generic slack webhook teamserver bugtracker bugzilla jira serena"
+tags: "Admin settings integrations hipchat generic slack microsoftTeams webhook teamserver bugtracker bugzilla jira serena"
 -->
 
 
