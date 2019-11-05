@@ -18,6 +18,8 @@ tags: "3.6.9 October Release Notes"
 
 * A Contrast plugin for the 2019 version of the Visual Studio IDE lets you see a list of vulnerabilities and details on each one, such as remediation guidance, directly in the IDE as Contrast discovers security flaws in your applications.
 
+* Contrast will import library cache data in the background rather than block start up to import. This results in a faster startup time; however, Contrast will not display library data until the import task is done. 
+
 
 ## Agent Updates
 
