@@ -175,9 +175,9 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 
 ## More Information
 
-* [An Application Is Not Appearing In The List](troubleshooting-setup.html#missing) <!-- replace -->
+* [An Application Is Not Appearing in the List](https://support.contrastsecurity.com/hc/en-us/articles/360000464386)
 
-* [Getting Java Agent Logs](troubleshooting-java.html#java-logs) <!-- replace -->
+* [Getting Java Agent Logs](https://support.contrastsecurity.com/hc/en-us/articles/360035148152-How-to-get-logs-from-the-Java-agents)
 
 * [Java Agent Bytecode Changes](installation-javaconfig.html#bytecode)
 

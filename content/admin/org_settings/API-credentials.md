@@ -27,5 +27,3 @@ In the REST API section, view your **Organization Keys**, including your Organiz
 For more information, read [About the Contrast API](tools-about.html#api-about). 
 
 To see more examples of API requests, go to the [Contrast API documentation](https://api.contrastsecurity.com/). 
-
-For help with connection issues after rotating service keys, read to the [troubleshooting article](troubleshooting-auth.html#keys) <!-- replace -->. 
