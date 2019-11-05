@@ -1,10 +1,10 @@
 <!--
 title: "Contrast Service Overview"
-description: "Troubleshooting Contrast Service"
-tags: "installation service agent troubleshooting"
+description: "About the Contrast Service"
+tags: "installation service agent overview"
 -->
 
-The Contrast Service enables communication between the Contrast UI and one of the multi-process dynamic language agents (e.g., Ruby and Python). <!-- or the Proxy agent. -->
+The Contrast Service enables communication between the Contrast UI and one of the multi-process dynamic language agents (e.g., Ruby and Python).
 
 ## About Contrast Service
 

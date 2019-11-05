@@ -143,7 +143,7 @@ Define the following properties to set Syslog values. If the properties are not 
 
 #### Agent-specific properties
 
-The following properties apply to any .NET agent-wide configurations. <!-- More words here... -->
+The following properties apply to any .NET agent-wide configurations.
 
   * **dotnet**:
 
@@ -160,7 +160,7 @@ The following properties apply to any .NET agent-wide configurations. <!-- More 
     * **restart_iis_on_config_change**: Indicate that the agent should automatically restart IIS to apply certain configuration changes (e.g., `app_pool_blacklist`).
     * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
     * **thread_analysis**: Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
-    * **web_module_whitelist**: Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See the [troubleshooting article](troubleshooting-netissues.html#zero) for more information. <br> Example: WebResource.axd
+    * **web_module_whitelist**: Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See the [troubleshooting article](https://support.contrastsecurity.com/hc/en-us/articles/360025370311-A-Resource-Returns-0-Bytes) for more information. <br> Example: WebResource.axd
 
 ### Inventory properties
 

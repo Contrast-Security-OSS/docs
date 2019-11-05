@@ -54,5 +54,5 @@ If you want to change the way you receive verification codes, you can reconfigur
 
 ### Learn More 
 
-To learn more about Administrator settings, read the related article in [Organization Settings](admin-orgsecurity.html#security-tsvp). For some helpful tips on verification codes, go to the [Troubleshooting article](troubleshooting-auth.html#tsv-trouble).
+To learn more about Administrator settings, read the related article in [Organization Settings](admin-orgsecurity.html#security-tsvp). For some helpful tips on verification codes, go to the [troubleshooting article](https://support.contrastsecurity.com/hc/en-us/articles/360035743631-Issues-with-Two-Step-Verification).
 

@@ -1,7 +1,7 @@
 <!-- 
 title: "Python Agent Overview "
-description: "Troubleshooting the Python Agent"
-tags: "installation python agent troubleshooting"
+description: "About the Python agent"
+tags: "installation python agent overview"
 -->
 
 The Contrast Python agent provides runtime protection of Django, Flask and Pyramid web applications. 
