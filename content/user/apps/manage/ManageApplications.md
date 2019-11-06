@@ -14,6 +14,10 @@ To change an application name, click on the the application's name in the grid t
 
 > **Note:** SuperAdmins can also edit application names by clicking on the name in the grid. 
 
+## Find the Application ID
+
+To locate an application's ID, select an application from the grid. The application ID is the last URI segment in the URL of your browser. <!-- add image --> 
+
 ## Tag Applications
 
 Tag one or more applications to improve search functionality in the Contrast UI. You can also add [custom metadata fields](admin-orgsettings.html#app-defaults) during onboarding, which you can use the same way. (It's also very different from [merging applications](user-appsmanage.html#merge).)
