@@ -4,12 +4,15 @@ description: "Instructions for installing the CLI tool for library analysis"
 tags: "tools cli library install"
 -->
   
-
 Use Contrast's command line interface (CLI) tool for software composition analysis (SCA) to gather and send library dependency information for your applications to the Contrast UI. 
 
-## About 
+## How It Works
 
-The Contrast SCA CLI tool works in tandem with the Contrast UI to help you and your organization with securing your application. For the Contrast SCA CLI tool to work with our Contrast application, it must identify itself with a set of credentials, and also identify the application of which it's providing analysis.  
+The Contrast SCA CLI tool works in tandem with the Contrast UI to help you and your organization secure your application. For the Contrast SCA CLI tool to work with the UI, it must identify itself with a set of credentials, and also identify the application of which it's providing analysis.  
+
+The Contrast SCA is invoked by a command line interface. 
+
+<!-- Add more about app analysis -->
 
 ## Before You Start 
 
@@ -59,9 +62,7 @@ yarn global add @contrast/contrast-sca
 
 ## Authenticate and Analyze 
 
-The Contrast SCA is invoked by a command line interface. 
-
-Contrast recommends that this is invoked as part of a CI pipeline so that running the SCA is automated as part of your build process. 
+Once the CLI tool is installed, you can analyze applications and see the results in the Contrast UI. Contrast recommends that SCA is invoked as part of a CI pipeline so that running the SCA is automated as part of your build process. 
 
 Use the following commands (with placeholders for your credentials) to analyze an application: 
 
@@ -95,12 +96,12 @@ The tool includes command line help, including the glossary of commands shown be
 
 | Command                   | Description                                                                               |
 |---------------------------|-------------------------------------------------------------------------------------------|
-| --api-key string          | An agent API key as provided by Contrast UI (**required**)                                 |
-| --authorization string    | An agent Authorization credentials as provided by Contrast UI (**required**)                |
+| --api-key string          | An agent API key provided by Contrast UI (**required**)                                 |
+| --authorization string    | Agent Authorization credentials provided by Contrast UI (**required**)                |
 | --organization-id string  | The ID of your organization in Contrast UI (**required**)                                 |
 | --application-id string   | The ID of the application cataloged by Contrast UI (**required**)                          |
-| --host string             | Provide the name of the host and optionally the port expressed as <host>:<port> (**required**)|
+| --host string             | The name of the host and (optionally) the port expressed as <host>:<port> (**required**)|
 | --application-name string | The name of the application cataloged by Contrast UI (**optional**)                         |
-| --project-path string     | The directory root of a project/application that you would like analyzed. Defaults to the current directory. (**optional**) |
-| --help                    | Display this usage guide.                                                  	 			|
+| --project-path string     | The directory root of a project/application that you want to analyze; defaults to the current directory (**optional**) |
+| --help                    | Display this usage guide                                                   	 			|
 
