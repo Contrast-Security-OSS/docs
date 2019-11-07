@@ -12,24 +12,24 @@ The Contrast SCA CLI tool works in tandem with the Contrast UI to help you and y
 
 The Contrast SCA is invoked by a command line interface. 
 
-<!-- Add more about app analysis -->
+<!-- Add more about how the tool works and app analysis -->
 
 ## Before You Start 
 
-Before you install and use Contrast's SCA CLI tool, verify that you've completed the following prerequisites.  
+Before you install and use Contrast's SCA CLI tool, verify that you've completed the following requirements.  
 
-* All applications to be scanned with the SCA tool must have with the appropriate Contrast agent installed. For information on how to instrument your application with a Contrast agent, see the following instructions: 
+* All applications must have with the appropriate Contrast agent installed. For information on how to instrument your application with a Contrast agent, see the following instructions: 
 
  * [Java agent](installation-javastandard.html) 
  * [.NET agent](installation-netinstall.html) 
  * [.NET Core agent](installation-netcoreinstall.html) 
  * [Node agent](installation-nodeinstall.html)
  
-* Source code for Java, .NET and Node applications must be available locally to be examined by the Contrast SCA CLI tool: 
+* Source code for Java, .NET and Node applications must be available locally to be examined by the CLI tool: 
 
  * Java applications must have Maven installed with the dependencies plugin. 
  * .NET and .NET Core applications must have a *package.lock.json* file present.
- * Node applications must have a *package-lock.json* file present
+ * Node applications must have a *package-lock.json* file present.
  
 * Node.js must be installed. (The Contrast SCA CLI tool is executed as a Node.js package.) For information on how to install Node.js, please refer to their [documentation](https://nodejs.org/en/download/). 
 
@@ -54,7 +54,7 @@ Install the tool with the following command:
 npm install -g @contrast/contrast-sca 
 ```
 
-Or, you can install the tool with Yarn via the following command: 
+Or, you can install the tool with Yarn with the following command: 
 
 ```
 yarn global add @contrast/contrast-sca 
@@ -64,7 +64,7 @@ yarn global add @contrast/contrast-sca
 
 Once the CLI tool is installed, you can analyze applications and see the results in the Contrast UI. Contrast recommends that SCA is invoked as part of a CI pipeline so that running the SCA is automated as part of your build process. 
 
-Use the following commands (with placeholders for your credentials) to analyze an application: 
+Use the commands shown in the following example to analyze an application: 
 
 ```
 contrast-sca \ 
@@ -91,7 +91,7 @@ After you see a SUCCESS message you are now ready to view your dependency tree. 
 
 ### Help 
 
-The tool includes command line help, including the glossary of commands shown below, which you find display by using the `--h` option. 
+The tool includes command line help, including the glossary of commands shown below, which you display with the `--h` option. 
 
 
 | Command                   | Description                                                                               |
