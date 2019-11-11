@@ -50,7 +50,7 @@ The Exec Helper logs messages to the host's Syslog service using the identifier 
 To uninstall the `contrast-java-agent` and `contrast-java-agent-exec-helper` packages, use the following command:
 
 ```
-sudo apt-get uninstall contrast-java-agent contrast-java-agent-exec-helper
+sudo apt-get remove contrast-java-agent contrast-java-agent-exec-helper
 ```
 
 ## Learn More
