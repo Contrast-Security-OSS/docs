@@ -1,6 +1,6 @@
 <!--
 title: "Managing Applications"
-description: "Overview of the core operations for an application from the action bar."
+description: "Overview of the core operations for an application from the action bar"
 tags: "user ui application manage archiving restoring resetting deleting"
 -->
 
@@ -13,6 +13,10 @@ Contrast users can manage applications based on their [organization or applicati
 To change an application name, click on the the application's name in the grid to go to its **Overview** page. Click on the name at the top of the page to update the text, or click on the **Settings** icon and update the name in the **Application Defaults** dialog. **Each application within an organization must have an unique name.** 
 
 > **Note:** SuperAdmins can also edit application names by clicking on the name in the grid. 
+
+## Set Application Importance
+
+To set an application's importance level within your organization, go to its **Overview** page and click the **Settings** icon. In the **Application Defaults** dialog, use the **Importance** field to select a level from the dropdown menu. The value appears in the application's metadata in the UI; you may also use it in your organization's integrations settings. 
 
 ## Tag Applications
 
