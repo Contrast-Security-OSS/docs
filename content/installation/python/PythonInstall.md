@@ -192,13 +192,3 @@ app = ContrastMiddleware(app)
 ## Next Steps
 
 Once the installation process is complete, you can update the agent's [configuration](installation-pythonconfig.html) file.
-
-## Troubleshooting
-
-* For version 2.3.0 of the agent and earlier, when starting the bundled service using the `host`/`port` configuration, it is necessary for the `port` value to be given explicitly. A useful default is `30555`. An alternative us to use the `socket` configuration instead.
-
-* There may be installation issues when using older versions of `pip`. It may be useful to try to update to the latest version by running `pip install --upgrade pip`.
-
-* There may be conflicts between the versions of app dependencies and agent dependencies. In these cases, it is important to make sure that all app dependencies are installed before installing the agent.
-
-* On Linux, the dependency `psutil` requires `linux/ethtool.h` to be installed, so it may be necessary to install the `ethtool` package for your system if this fails.
