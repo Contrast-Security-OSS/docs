@@ -8,7 +8,7 @@ The Contrast Python agent provides runtime protection of Django, Flask and Pyram
 
 Version 2.3.0 of the agent introduces beta Assess functionality. This provides the ability to find vulnerabilities in applications before they can be exploited.
 
->**Note:** The beta Assess feature can only be licensed in specific instances of the Contrast UI.
+>**Note:** The beta Assess feature can be licensed in **alpha** and **eval** instances of the Contrast UI.
 
 ## About Python 
 
