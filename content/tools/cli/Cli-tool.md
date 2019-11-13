@@ -4,15 +4,14 @@ description: "Instructions for installing the CLI tool for library analysis"
 tags: "tools cli library install"
 -->
   
-Use Contrast's command line interface (CLI) tool for software composition analysis (SCA) to gather and send library dependency information for your applications to the Contrast UI. 
+Use Contrast's command line interface (CLI) tool to gather and send information for your applications to the Contrast UI. 
 
 ## How It Works
 
-The Contrast SCA CLI tool works in tandem with the Contrast UI to help you and your organization secure your application. For the Contrast SCA CLI tool to work with the UI, it must identify itself with a set of credentials, and also identify the application of which it's providing analysis.  
+The Contrast CLI tool performs software composition analysis (SCA) on your application to show you where vulnerabilities were introduced, such as code from an open-source library. The SCA CLI tool gathers data on your application during its development phase that's typically not available until your application is in the deployment phase. Using the data captured by the tool, Contrast can provide a more detailed view of your applications in the Contrast UI.
 
-The Contrast SCA is invoked by a command line interface. 
+For the CLI tool to work in tandem with the UI, it must identify itself with a set of credentials, and also identify the application of which it's providing analysis.  
 
-<!-- Add more about how the tool works and app analysis -->
 
 ## Before You Start 
 
@@ -27,7 +26,7 @@ Before you install and use Contrast's SCA CLI tool, verify that you've completed
  
 * Source code for Java, .NET and Node applications must be available locally to be examined by the CLI tool: 
 
- * Java applications must have Maven installed with the dependencies plugin. 
+ * Java applications must have *Maven* installed with the [dependency plugin](https://maven.apache.org/plugins/maven-dependency-plugin/). 
  * .NET and .NET Core applications must have a *package.lock.json* file present.
  * Node applications must have a *package-lock.json* file present.
  
@@ -77,8 +76,6 @@ contrast-sca \
 
  --organization-id someOrganizationID \ 
 
- --host ContrastUIDomain \ 
-
  --project-path applicationRootDirectory
 
 ```
@@ -100,8 +97,7 @@ The tool includes command line help, including the glossary of commands shown be
 | --authorization string    | Agent Authorization credentials provided by Contrast UI (**required**)                |
 | --organization-id string  | The ID of your organization in Contrast UI (**required**)                                 |
 | --application-id string   | The ID of the application cataloged by Contrast UI (**required**)                          |
-| --host string             | The name of the host and (optionally) the port expressed as <host>:<port> (**required**)|
-| --application-name string | The name of the application cataloged by Contrast UI (**optional**)                         |
+| --host string             | The name of the host and (optionally) the port expressed as `<host>:<port>`; defaults to *app.contrastsecurity.com* (**optional**)|
 | --project-path string     | The directory root of a project/application that you want to analyze; defaults to the current directory (**optional**) |
 | --help                    | Display this usage guide                                                   	 			|
 
