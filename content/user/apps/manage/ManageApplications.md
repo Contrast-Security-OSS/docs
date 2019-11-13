@@ -1,6 +1,6 @@
 <!--
 title: "Managing Applications"
-description: "Overview of the core operations for an application from the action bar."
+description: "Overview of the core operations for an application from the action bar"
 tags: "user ui application manage archiving restoring resetting deleting"
 -->
 
@@ -14,9 +14,14 @@ To change an application name, click on the the application's name in the grid t
 
 > **Note:** SuperAdmins can also edit application names by clicking on the name in the grid. 
 
+
 ## Find the Application ID
 
 To locate an application's ID, select an application from the grid. The application ID is the last URI segment in the URL of your browser. <!-- add image --> 
+
+## Set Application Importance
+
+To set an application's importance level within your organization, go to its **Overview** page and click the **Settings** icon. In the **Application Defaults** dialog, use the **Importance** field to select a level from the dropdown menu. The value appears in the application's metadata in the UI; you may also use it in your organization's integrations settings. 
 
 ## Tag Applications
 
