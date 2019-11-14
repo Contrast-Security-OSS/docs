@@ -4,30 +4,24 @@ description: "View library dependencies hierarchy"
 tags: "user library licenses hierarchy vulnerabilities sca"
 -->
 
-When an open source library is added to an application, all of it’s dependencies are also inherited. Some of those indirect dependencies could be introducing vulnerabilities into your applications. The Contrast SCA tool will identify all open source libraries and visualize these libraries as a hierarchical dependency tree.
+## How It Works
 
+When an open-source library is added to an application, all of the library's dependencies are also inherited. Some of these indirect dependencies may introduce vulnerable code into your applications. The [Contrast SCA tool](tools-cli.html) identifies all open-source libraries and sends the data to the Contrast UI, where you can visualize these libraries as a hierarchical dependency tree.
+
+## Before You Start
  
-In order to display library hierarchy for your application, we have to access your application code at pre-compile time, a different stage of the SDLC that our agents collect. We have provided the ‘Contrast SCA CLI Tool’ <link> specifically for this function, follow the directions there to enable the display of a dependency tree for your application. 
+To display library hierarchy for your application, Contrast must have to access your application code at pre-compile time - a different stage of the software development lifecycle (SDLC) than the Contrast agents collect. To do this, you must have installed and run the [Contrast CLI SCA tool](tools-cli.html) for your applications. 
 
+## View Dependency Trees
 
-Viewing your dependency tree. 
+To view your applications' library dependency trees, go to the **Applications** grid in the Contrast UI, and complete the following steps. 
 
+* Select the application for which you want to view the library data.
+* From the application's Overview page, navigate to the **Libraries** tab.  
+* Select the dependency tree (graduated list) icon on the far right of the header to view the analysis of your application.  
 
-Choose the application you want to view your dependency tree for from Applications in the main navigation.  
-*The application must have have the Contrast-SCA tool <link>  installed via the command line.  
+In this view, Contrast displays the dependency tree for your application's libraries based on the data collected by the SCA tool. Within the tree, use the carets to expand sections for more information. 
 
- 
-
-Select the Libraries tab on the navigation bar. 
-
-
- 
-
-Once the Libraries view of your application is presented click the Dependency Tree icon on the far right of the page to view the analysis of your application.  
-
- 
-
-After the page is loaded you will be presented a dependency tree of your application based on the data collected by the SCA CLI tool.  
- 
+<!-- What's the info displayed in the tree? Are these version numbers? Does it link to anything? --> 
 
  
