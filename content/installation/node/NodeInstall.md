@@ -27,7 +27,7 @@ When you download the Node agent, you will also be directed to download a config
 The minimum required *contrast_security.yaml* setup should look something like this:
 
 ``` yaml
-contrast:
+api:
   url: https://app.contrastsecurity.com
   user_name: contrast_user
   api_key: demo
