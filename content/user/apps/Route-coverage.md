@@ -14,7 +14,7 @@ Contrast observes the flow of data through routes in each of your applications. 
 
 Contrast supports route coverage for the following frameworks: 
 
-* **Java:** Jersey 2.x and Spring MVC 4.x 
+* **Java:** Jersey 2, Spring MVC 4, Struts 1, and Struts 2
 * **.NET:** ASP.NET MVC (versions 4 and 5), WebForms, WebAPI and WCF
 * **.NET Core:** ASP.NET Core MVC (versions 2.1 and 2.2) and ASP.NET Core Razor Pages (versions 2.1 and 2.2)
 * **Node:** Express, Hapi 17+, Koa and Kraken
@@ -26,7 +26,7 @@ For supported frameworks, route coverage consists of two parts:
 * **Discovered** routes: the full list of routes that Contrast has detected in an application 
 * **Observed** routes: the routes in which Contrast has detected traffic
 
-While coverage is enabled automatically for most Contrast agents, you must use the following property to specify the application name when deploying the **Java** agent: `-Dcontrast.agent.java.standalone_app_name=<example_name>`. If you don't include this property, the Java agent may only observe - but not discover - routes in your application. 
+While coverage is enabled automatically for most Contrast agents, you must use the following property to specify the application name when deploying the **Java** agent: `-Dcontrast.agent.java.standalone_app_name=<example_name>`. If you don't include this property, the Java agent will only observe - but not discover - routes in your application.
 
 > **Note:** The **Java** and **Node** agents only report coverage information for the specifically instrumented frameworks listed above. For **unsupported frameworks**, neither agent displays any routes.
 
