@@ -22,7 +22,7 @@ The agent and service may share a common configuration file, but only some optio
 
 ### Enable the agent 
 
-* **enable**: Set to `false` to disable the agent. Defaults to `true` if not present.
+* **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
 
 ### Contrast UI properties
 
@@ -56,7 +56,7 @@ Define the following properties to set logging values. If these properties aren'
 
 * **agent**: Options for communicating between the agent and the service
   * **logger**:
-    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. Use `STDOUT` to log to `stdout` instead. <br> Example - */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
+    * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example - */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
     * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Set the name the agent uses to identify the process within the log file <br> Example: Contrast Agent
 
@@ -90,17 +90,17 @@ Define the following properties to set Syslog values. If the properties aren't d
 The following properties are used by the Contrast Service.
 
 * **service**: 
-  * **enable**: Set to `false` to prevent the agent from automatically starting the service. This is necessary when connecting to a standalone instance of the service. Defaults to `true`.
-  * **socket**: If this property is defined, and `enable` is set to `true`, the service will be started on a Unix socket at the defined path. Not compatible with the use of `host` and/or `port`. <br> Example: /tmp/service.sock
-  * **host**: If `enable` is `true`, bind the service to this hostname. Otherwise, connect to an external service at this hostname. Defaults to `localhost`. Not compatible with `socket`. <br> Example: `localhost`
-  * **port**: If `enable` is `true`, bind the service to this port. Otherwise, connect to an external service on this port. Defaults to `30555`. Not compatible with `socket`. <br> Example: `30555`
+  * **enable**: Set to `false` to disallow the service to be started, and effectively disable the agent, if read by the service. If the agent reads this property, it disallows service auto-start.
+  * **socket**: If this property is defined, the service is listening on a Unix socket at the defined path. <br> Example: /tmp/service.sock
+  * **host**: Set the the hostname or IP address of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `localhost`
+  * **port**: Set the the port of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `30555`
     
 ##### Logger
 
 The following properties are used by the logger in the Contrast service. If the properties are not defined, the service uses the logging values from the Contrast UI.
 
   * **logger**:
-    * **path**: Set the location to which the Contrast service saves log output. If no log file exists at this location, the service creates one. If the value is `STDOUT`, log to `stdout`. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
+    * **path**: Set the location to which the Contrast service saves log output. If no log file exists at this location, the service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
     * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Set the name the agent uses to identify the process within the service log file <br> Example: Contrast Agent
 
@@ -119,7 +119,7 @@ Use the properties in this section to override the inventory features.
 Use the properties in this section to override Protect features.
 
 * **protect**:
-  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI.
+  * **enable**: Use the properties in this section to determine if the Protect feature should be enabled. If this property is not present, the decision is delegated to the Contrast UI. 
   * **rules**:
     * **disabled_rules**: Define a list of Protect rules to disable in the agent. The rules must be formatted as a comma-delimited list.
     * **bot-blocker**: 
@@ -137,7 +137,7 @@ Use the properties in this section to override Protect features.
     * **xxe**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
-### Contrast Protect properties
+### Contrast Assess properties
 
 Use the properties in this section to override Assess features (beta).
 
