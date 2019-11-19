@@ -54,8 +54,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 * If you want to automatically create new user accounts when someone make a SAML request to log in to Contrast, check the box to **Enable user provisioning**.
   * Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
   * Add the **Accepted Domains** that must be used to trigger user provisioning (e.g., contrastsecurity.com).
-* Test the configuration by clicking the **Test** button. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
-* Once the test is successful, click **Save**.
+* Save the configuration by clicking the **Save** button. If an error occurs, Contrast provides a debug log for troubleshooting.
 
 <a href="assets/images/Sso-setup-system-settings.png" rel="lightbox" title="Configure SSO in System Settings"><img class="thumbnail" src="assets/images/Sso-setup-system-settings.png"/></a>
 
