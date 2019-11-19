@@ -137,6 +137,12 @@ Use the properties in this section to override Protect features.
     * **xxe**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
+### Contrast Assess properties
+
+Use the properties in this section to override Assess features (beta).
+
+* **assess**:
+  * **enable**: Set to `true` to enable or `false` to disable. Default behavior is delegated to Contrast UI. Note that `protect` and `assess` cannot be enabled at the same time.
 
 ### Application properties
 
