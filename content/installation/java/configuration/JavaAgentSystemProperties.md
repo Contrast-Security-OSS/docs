@@ -47,7 +47,7 @@ Generate a list of general properties directly from the command line using the C
 | contrast.scanresponses | Boolean to enable/disable scanning of HTTP responses. <br>**DEFAULT VALUE:** true</br> |
 | contrast.server | Overrides name of the server displayed in the Contrast interface. Includes any valid path characters, e.g. *myserver-1/myapp* or *john_dev*. <br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.server.activity.period | Polling period for Contrast polling thread (in milliseconds). <br> **DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
-| contrast.stacks.maxdepth | Maximum stack depth to include in reported findings. <br> **DEFAULT VALUE:** 75 </br> |
+| contrast.stacks.maxdepth | Maximum stack depth to include in reported findings. Minimum of 2. <br> **DEFAULT VALUE:** 75 </br> |
 | contrast.standalone.appname | Indicates the application is a standalone application with the provided name. <br>**DEFAULT VALUE:** None; must be set</br> <br> **Note:** This property will be deprecated in favor of the property `application.name`, and removed in a future release.</br>|
 | contrast.supporter.jackson.interning | Controls whether or not string interning is disabled in Jackson. The default value is `true`.<br>**DEFAULT VALUE:** true</br> |
 | contrast.supporter.minidevjson | Boolean to enable/disable *net.minidev.json* support. <br>**DEFAULT VALUE:** true</br> |
