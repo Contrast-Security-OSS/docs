@@ -79,5 +79,3 @@ The Python team released the Python Assess beta and continues to add features an
 The team also improved the agent’s SQLAlchemy support and request body handling. The agent now logs its configuration and log file locations to stdout on initialization. The team fixed several issues surrounding its communication with the Contrast Service, enabling the agent to use the latest version of the Service (2.3.0) by default.
 
 Additional improvements include PyCassa support for SQL injection and updates to internal testing and packaging.
-
-Test 123
