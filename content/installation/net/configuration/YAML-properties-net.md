@@ -185,8 +185,8 @@ Use the properties in this section to control Assess in the .NET agent. The samp
   * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
   * **stacktraces**: Value options are `ALL`, `SOME`, or `NONE`.
 
-  * **sampling**:
-    * **enable**: Set to `false` to disable sampling.
+  * **sampling**: Include the following properties to override the sampling settings from Contrast UI.
+    * **enable**: Set to `true` to enable or `false` to disable.
     * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
     * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
