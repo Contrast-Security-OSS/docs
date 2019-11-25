@@ -35,12 +35,12 @@ api:
 ```
 
 
- Property                | Description
------------------------- | ------------
-`contrast.api_key`       | Organization's [API key](user-account.html#profile)
-`contrast.user_name`     | Contrast user account ID <br> (In most cases, this is your login ID)
-`contrast.service_key`   | Contrast user account [service key](user-account.html#profile)
-`contrast.url`           | Address of the Contrast installation you would like your agent to report to
+ Property           | Description
+------------------- | ------------
+`api.api_key`       | Organization's [API key](user-account.html#profile)
+`api.user_name`     | Contrast user account ID <br> (In most cases, this is your login ID)
+`api.service_key`   | Contrast user account [service key](user-account.html#profile)
+`api.url`           | Address of the Contrast installation you would like your agent to report to
 
 
 For a full list of configuration options that can be placed in this file, see [Node Agent Configuration](installation-nodeconfig.html).
