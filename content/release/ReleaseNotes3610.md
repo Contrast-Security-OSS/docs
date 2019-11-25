@@ -30,7 +30,7 @@ The Java team worked to **improve accuracy in Assess** for this release in these
 
 * Detecting SSRF attacks
 
-* When using Java 11.
+* When using Java 11
 
 The team also made **improvements for reporting and troubleshooting,** as well as smaller bug fixes. These include:
 
@@ -40,14 +40,21 @@ The team also made **improvements for reporting and troubleshooting,** as well a
 
 ### .NET agent summaries
 
+The team **improved sensitive data masking** for cookies and assured **higher accuracy for Path Traversal rules** in Protect. 
 
 #### .NET Framework 
 
-Explain here
+The team **improved route-based coverage** across the board to more accurately discover and observe routes for different routing configurations. They also fixed the following bugs:
+
+* Error logging bug when the agent had a problem discovering applications hosted on IIS
+
+* The agent could produce an invalid IL code for applications that were re-deployed dozens and dozens of times without a server restart.
 
 #### .NET Core
 
-Explain here
+The Contrast .NET Core agent now supports Linux (Ubuntu, Debian, openSUSE)! See https://docs.contrastsecurity.com/installation-netcoresupport.html 
+
+The team also added a feature to capture and report the HTTP POST body for vulnerabilities and attacks.
 
 ### Node.js summary 
 
@@ -67,4 +74,8 @@ The team also implemented route-based auto-verification (RBAV), slated for full 
 
 ### Python summary
 
-Explain here
+The Python team released the Python Assess beta and continues to add features and stability improvements. 
+
+The team also improved the agent’s SQLAlchemy support and request body handling. The agent now logs its configuration and log file locations to stdout on initialization. The team fixed several issues surrounding its communication with the Contrast Service, enabling the agent to use the latest version of the Service (2.3.0) by default.
+
+Additional improvements include PyCassa support for SQL injection and updates to internal testing and packaging.
