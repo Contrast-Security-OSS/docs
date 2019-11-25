@@ -58,15 +58,15 @@ The team also added a feature to capture and report the HTTP POST body for vulne
 
 ### Node.js summary 
 
-The Node team is pleased to announce full support for NodeJS version 12 LTS.
+The Node team is pleased to announce **full support for NodeJS** version 12 LTS.
 
-The team also implemented route-based auto-verification (RBAV) functionality for the agent. RBAV will be fully released and functional when our main products also complete server implementation for route-based auto-verification.
+The team also implemented **route-based auto-verification** (RBAV) functionality for the agent. RBAV will be fully released and functional when our main products also complete server implementation for route-based auto-verification.
 
 We fixed how Assess reports relevant findings from malicious cookies for the Koa framework.
 
 ### Ruby summary 
 
-The Ruby team focused on language compatibility to ensure the agent adheres to best practices and works alongside common dependencies. In particular, the team addressed an incompatibility with FactoryBot, allowing the agent to run with the gem installed. The team also fixed an incompatibility with the 2.6 base image on Heroku, so the agent can once again be installed in that environment.
+The Ruby team focused on **language compatibility** to ensure the agent adheres to best practices and works alongside common dependencies. In particular, the team addressed an incompatibility with FactoryBot, allowing the agent to run with the gem installed. The team also fixed an incompatibility with the 2.6 base image on Heroku, so the agent can once again be installed in that environment.
 
 In addition, updates to Contrast Service runner assure startup in all supported installations, as well as improved interoperability for applications running in multiple processes.
 
