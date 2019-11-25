@@ -6,8 +6,13 @@ tags: "3.6.10 November Release Notes"
 
 ## Bug Fixes
 
-* Bug fix one
-* Bug fix one
+* The Flow Map interactive application view didn’t work in older IE11 browsers and had some minor formatting issues.
+
+* Drilling down on an Assess rule to see all apps that use the rule would cut off results at the first screen.
+
+* Protect suppressed incorrect attack events after creating an exclusion. (We fixed this by adding an option to suppress events in an improved Create Exclusion workflow.) XXE attack events showed incorrect and confusing details in the attack event overview.
+
+* Libraries showed incorrect total vulnerabilities counts for CVEs. Users could not override a Library policy at the organization level.
 
 ## New and Improved Features
 
@@ -18,7 +23,6 @@ tags: "3.6.10 November Release Notes"
 * We support **.NET Core applications deployed on Linux.** We’re expanding our coverage of .NET Core applications from Windows to include Linux deployments. You can now use the same .NET Core agent and gain accurate and detailed security coverage on your application.
 
 * Integrations with **Azure Pipeline can now allow development teams to set vulnerability thresholds** that prevent builds from succeeding if applications exceed thresholds and are too vulnerable.
-
 
 ## Agent Updates
 
