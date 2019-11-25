@@ -13,7 +13,7 @@ tags: "3.6.10 November Release Notes"
 
 * Jira integrations have a new **application importance filtering option** that tells Contrast to only create tickets for vulnerabilities from applications that have a specific importance level.
 
-* A new **filter for Application Tags** now appears on the Vulnerability and
+* It’s now possible to **search for vulnerabilities by Application Tag**, both through the Contrast UI and the API. A new filter option in the Vulnerabilities view makes it easier to find vulnerabilities by topics that are relevant to your teams.
 
 * We support **.NET Core applications deployed on Linux.** We’re expanding our coverage of .NET Core applications from Windows to include Linux deployments. You can now use the same .NET Core agent and gain accurate and detailed security coverage on your application.
 
