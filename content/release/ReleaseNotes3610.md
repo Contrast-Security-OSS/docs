@@ -38,7 +38,7 @@ The Java team worked to **improve accuracy in Assess** for this release in these
 
 The team also made **improvements for reporting and troubleshooting,** as well as smaller bug fixes. These include:
 
-* The team clarified usage of the max_stack_depth property and improved reporting of the error that occurs when it is misconfigured.
+* Clarified usage of the *max_stack_depth* property and improved reporting of the error that occurs when it is misconfigured.
 
 * Added a heartbeat message to help administrators diagnose Contrast Protect syslog connectivity.
 
