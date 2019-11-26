@@ -24,7 +24,7 @@ You can use Contrast in existing Application Security and DevOps processes acros
 
 * **Build tools:** Contrast integrates with Continuous Integration (CI) tools including Jenkins, Maven, Gradle and Bamboo. When the number of vulnerabilities of a specified severity exceeds the threshold that you've chosen in the Contrast interface, Contrast can instruct the CI tool to fail the build. 
 
-* **Team communications and bug tracking tools:** Apart from email, Contrast can send notifications and alerts via popular messaging and communications channels including Hipchat and Slack. For customers in a DevOps environment, Contrast integrate with bug tracking tools such as JIRA, Serena Business Manager, and Microsoft Visual Studio Team Services/Team Foundation Services (VSTS/TFS). 
+* **Team communications and bug tracking tools:** Apart from email, Contrast can send notifications and alerts via popular messaging and communications channels including Slack. For customers in a DevOps environment, Contrast integrate with bug tracking tools such as JIRA, Serena Business Manager, and Microsoft Visual Studio Team Services/Team Foundation Services (VSTS/TFS). 
 
 ## Application Assessment
 

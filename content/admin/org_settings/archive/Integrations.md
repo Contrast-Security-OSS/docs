@@ -1,7 +1,7 @@
 <!--
 title: "Integrations"
 description: "Adding Integrations to Contrast"
-tags: "Admin settings integrations hipchat generic slack webhook teamserver bugtracker bugzilla jira serena"
+tags: "Admin settings integrations generic slack webhook teamserver bugtracker bugzilla jira serena"
 -->
 
 
@@ -24,30 +24,6 @@ To connect in Contrast:
 * Navigate to the **Integrations** tab under **Organization Settings**
 * Click **Connect** within the Slack row
 * Name the integration and paste the URL
-* Select the application(s) for which you want to enable notifications
-* Click **Save**
-
-You are connected!
-
----
-
-## HipChat Integration
-
-Contrast supports integration with HipChat as well! With this new connection you can receive notifications from Contrast in your configured HipChat channel using a format similar to in-app notifications.
-
-### Setup
-
-On the HipChat website, log in as a user with at least **Send Notification** and **View Room** scopes. Typically this is an admin user.
-
-* Edit your profile and click **API access**
-* Create a new token and add at least the **Send Notification** and **View Room** scope
-* Copy the token created
-
-To connect in Contrast:
-
-* Navigate to the **Integrations** tab under **Organization Settings**
-* Click **Connect** within the HipChat row
-* Name the integration, paste the token into the token input field, and select the appropriate room from the dropdown
 * Select the application(s) for which you want to enable notifications
 * Click **Save**
 

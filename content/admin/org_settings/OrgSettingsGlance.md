@@ -28,7 +28,7 @@ Single Sign-On (SSO) is an authentication service that allows access to multiple
 Contrast [APIs](tools-about.html#api-about) allow you to grant access to other services. You may have API keys emailed to you, and rotate keys as needed. 
 
 ## Integrations
-Contrast offers basic [integrations](admin-orgintegrations.html) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
+Contrast offers basic [integrations](admin-orgintegrations.html) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
 
 ## Servers 
 [Server Settings](admin-orgsettings.html#org-server) provide default configurations for new servers (agents) that are being brought on board. You can customize these configurations for each environment.

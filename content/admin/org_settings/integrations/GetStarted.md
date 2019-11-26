@@ -17,7 +17,6 @@ Bugtrackers:
 Notifications:
 
 * Slack 
-* HipChat
 * VictorOps
 * Generic Webhook
 

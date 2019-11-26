@@ -77,7 +77,7 @@ Contrast discovers any code flaws, which are presented with a severity level to 
  
 ## Track Findings
 
-Contrast gives you the ability to [send vulnerability data](user-vulns.html#track) to bugtracker integrations or to users via email. You can set up bugtrackers and other integrations - including Slack, HipChat or any generic WebHook integration - by going to the **user menu > Organization Settings > Integrations tab** in the sidebar. You can tell Contrast to notify you if there are any new high or critical vulnerabilities found in your application. 
+Contrast gives you the ability to [send vulnerability data](user-vulns.html#track) to bugtracker integrations or to users via email. You can set up bugtrackers and other integrations - including Slack or any generic WebHook integration - by going to the **user menu > Organization Settings > Integrations tab** in the sidebar. You can tell Contrast to notify you if there are any new high or critical vulnerabilities found in your application. 
 
 For more information, read the article on [Integrations](admin-orgintegrations.html).
  
