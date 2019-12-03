@@ -1,52 +1,57 @@
 <!--
-title: "Installing on Tomcat"
-description: "Tomcat installation process using Windows or startup script"
-tags: "java agent installation Tomcat"
+title: "Configuration on Tomcat"
+description: "Tomcat configuration process using Windows or startup script"
+tags: "java agent configuration Tomcat"
 -->
 
+## Before You Start 
 
-## Running Contrast from "startup.bat" (or ".sh")
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the following instructions.
 
-If you run Tomcat from `startup.bat`/`startup.sh`, Contrast suggests creating a new startup script, `startup-with-contrast.bat`/`startup-with-contrast.sh`. It should enable the Contrast JVM parameters and call the startup script:
+## Run Contrast from "startup.bat"
 
-For Windows `startup-with-contrast.bat`:
+If you run Tomcat from *startup.bat*, Contrast suggests creating a new startup script, `startup-with-contrast.bat`. If you run Tomcat from *startup.sh*, the new startup script is `startup-with-contrast.sh`. This should enable the Contrast JVM parameters and call the startup script. 
+
+* For Windows, use `startup-with-contrast.bat`:
+
 ``` sh
 set CATALINA_OPTS="%CATALINA_OPTS% -javaagent:${DOWNLOADS}\contrast.jar"
 call ${TOMCAT_DIR} \bin\startup.bat
 ```
 
-For Unix `startup-with-contrast.sh`:
+* For Unix, use `startup-with-contrast.sh`:
+
 ``` sh
 export CATALINA_OPTS="$CATALINA_OPTS -javaagent:${DOWNLOADS}/contrast.jar"
 ${TOMCAT_DIR}/bin/startup.sh
 ```
 
-Alternatively, if you have a `setenv.bat`/`setenv.sh` file as recommended by the Tomcat docs, add the -javaagent configuration there in `CATALINA_OPTS`.
+Of course, you need to substitute the path to *contrast.jar* and your Tomcat server for your environment. This new script will make it easy to start up your server with or without Contrast.
 
-Of course, you'll have to substitute the path to ***contrast.jar*** and your Tomcat server for your environment. This new script will make it easy to start up your server with or without Contrast.
+## Run Contrast from "setenv.bat"
 
-## Running Contrast on the Tomcat service in Windows
+Alternatively, if you have a *setenv.bat* or *setenv.sh* file as recommended by Tomcat, add the `-javaagent` configuration in that file in `CATALINA_OPTS`.
 
-If you run Tomcat from **as a service**, changing the JVM options to add the agent requires opening the Tomcat service manager. You can do this by double clicking the Tomcat icon in the System tray (or right clicking and hitting **Configure**.) If the icon is not there, you might have to start it manually by running ***tomcat7w.exe*** in the Tomcat bin directory.
+## Run Contrast on the Tomcat service in Windows
 
-<br>
+If you run Tomcat **as a service**, you must open the Tomcat service manager to change the JVM options to add the agent. 
 
-<a href="assets/images/KB2-a01_1.png" rel="lightbox" title="System Tray Icon"><img class="thumbnail" src="assets/images/KB2-a01_1.png"/></a>
+* To start, double click the Tomcat icon in the **System** tray (or right click and select **Configure**). 
 
-Switching to the Java tab will show you where you need to add the `-javaagent` flag:
+* If the icon isn't there, you might have to start it manually by running *tomcat7w.exe* in the Tomcat bin directory.
 
-<br>
+* Switch to the Java tab to see where you need to add the `-javaagent` flag.
 
 <a href="assets/images/KB2-a01_2.png" rel="lightbox" title="Tomcat Properties"><img class="thumbnail" src="assets/images/KB2-a01_2.png"/></a>
 
 ## More Information
 
-Not using startup scripts or the Windows service? Here's how to run Contrast from other Tomcat Launchers:
+Not using startup scripts or the Windows service? Here's how to run Contrast from other Tomcat launchers:
 
-- [Running Contrast on Tomcat with Maven Apache Tomcat Plugin](installation-javaserver.html#apache)
+- [Run Contrast on Tomcat with Maven Apache Tomcat Plugin](installation-javaserver.html#apache)
 
-- [Running Contrast on an Eclipse WTP Application](installation-javaserver.html#eclipse)
+- [Run Contrast on an Eclipse WTP Application](installation-javaserver.html#eclipse)
 
-- [Running Contrast on an IntelliJ Application](installation-javaserver.html#intellij)
+- [Run Contrast on an IntelliJ Application](installation-javaserver.html#intellij)
 
-- [Running Contrast on a NetBeans Application](installation-javaserver.html#netbeans)
+- [Run Contrast on a NetBeans Application](installation-javaserver.html#netbeans)

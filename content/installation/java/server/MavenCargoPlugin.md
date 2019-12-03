@@ -1,13 +1,16 @@
 <!--
 title: "Running Contrast with the Codehaus Maven Cargo Plugin"
-description: "This document will outline the process for installing Contrast on an application using the Cargo plugin by Codehaus."
-tags: "java agent installation maven codehaus"
+description: "This document outlines the process for configuring Contrast using the Cargo plugin by Codehaus."
+tags: "java agent configuration maven codehaus"
 -->
 
+## Before You Start 
 
-## Instructions
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
 
-* Add a `<cargo.jvmargs>` property to the `<properties>` section of `<configuration>` in your ***pom.xml***:
+## Configuration
+
+* Add a `<cargo.jvmargs>` property to the `<properties>` section of `<configuration>` in your *pom.xml*:
 
 ````
 <build>

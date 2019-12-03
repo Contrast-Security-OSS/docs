@@ -1,15 +1,19 @@
 <!--
-title: "Installing Contrast on DropWizard"
-description: "DropWizard installation of the Contrast Java Agent"
+title: "Configure Contrast with DropWizard"
+description: "DropWizard configuration of the Contrast Java agent"
 tags: "java agent installation dropwizard"
 -->
 
+## Before You Start
 
-## Getting Started
-Here's an example of how to run the Java Agent with your standalone/fatjar Dropwizard application:
+[Download and install the Java agent](installation-javastandard.html) from Contrast before proceeding with the **Configuration** instructions.
+
+## Configuration 
+
+To run the Java agent with your standalone or fat JAR Dropwizard application, use the following code sample:
 
 ````
 java -javaagent:/path/to/contrast.jar -Dcontrast.appname="AppNameToReportUnder" -jar /path/to/your/app.jar server /path/to/your/appconfig.yml
 ````
 
-The Java Agent will not be able to accurately count library usage if your project was configured to shade dependencies into your application's jar. Instead, the Java Agent will report a list of jars based on the information gathered from the pom.properties files provided with the included libraries.
+The Java agent can't accurately count library usage if your project was configured to shade dependencies into your application's JAR. Instead, the Java agent will report a list of JARs based on the information gathered from the *pom.properties* files provided with the included libraries.

@@ -1,7 +1,7 @@
 <!--
 title: "Installing on AWS"
 description: "AWS installation process"
-tags: "java agent installation AWS ebs elasticbeanstalk"
+tags: "java agent configuration AWS ebs elasticbeanstalk"
 -->
 
 Amazon Web Services (AWS) is a secure cloud services platform that provides a reliable, scalable and affordable computing platform solution. By using AWS, Contrast users can maximize the security of their applications.
@@ -14,10 +14,12 @@ Contrast works with the following AWS systems:
 
 ## Before You Start
 
+Complete the following tasks before proceeding with the **Configuration** instructions: 
+
 * [Download and install the Java agent](installation-javastandard.html) from Contrast.
 * Create an [AWS Elastic Beanstalk account](https://aws.amazon.com/elasticbeanstalk/).
 
-## Installation
+## Configuration
 
 ### Step one
 
