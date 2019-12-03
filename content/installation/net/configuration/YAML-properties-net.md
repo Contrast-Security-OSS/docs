@@ -10,7 +10,7 @@ Contrast supports YAML-based configuration for the .NET agent. This allows you t
 
 ## Order of Precedence
 
-Configuration values use the following order of precedence:
+Configuration values use the following order of precedence (where 1 is the highest):
 
 1. Corporate rule (e.g., expired license overrides `contrast.assess.enable`)
 2. Specific environmental variable
@@ -143,12 +143,14 @@ Define the following properties to set Syslog values. If the properties are not 
 
 #### Agent-specific properties
 
-The following properties apply to any .NET agent-wide configurations. <!-- More words here... -->
+The following properties apply to any .NET agent-wide configurations.
 
   * **dotnet**:
 
     * **app_pool_blacklist**: Set a list of application pool names that the agent does not instrument or analyze. Names must be formatted as a comma-separated list.
     * **app_pool_whitelist**: Set a list of application pool names that the agent instruments or analyzes. If set, other application pools are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
+    * **application_blacklist**: Set a list of application names that the agent does not analyze. Names must be formatted as a comma-separated list.
+    * **application_whitelist**: Set a list of application names that the agent analyzes. If set, other applications are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
     * **enable_clr2_analysis**: Enable instrumentation and analysis of application pools targeting CLR2.
     * **enable_chaining**: Enable the profiler chaining feature to allow Contrast to work alongside other tools that use the CLR Profiling API.
     * **enable_dvnr**: Indicate that the agent should produce a report that summarizes application hosting on the server (e.g., CLR versions, bitness or pipeline modes).
@@ -158,7 +160,7 @@ The following properties apply to any .NET agent-wide configurations. <!-- More 
     * **restart_iis_on_config_change**: Indicate that the agent should automatically restart IIS to apply certain configuration changes (e.g., `app_pool_blacklist`).
     * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
     * **thread_analysis**: Valid values are `full` or `web`. `Full` indicates instrumenting all threading operations to fully follow dataflow. `Web` indicates following dataflow only through built-in sync and async web operations, but not user-managed threads/tasks. Using `web` can improve agent performance.
-    * **web_module_whitelist**: Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See the [troubleshooting article](troubleshooting-netissues.html#zero) for more information. <br> Example: WebResource.axd
+    * **web_module_whitelist**: Responses for request paths (e.g., HttpRequest.Path) that match this regex are not analyzed. See the [troubleshooting article](https://support.contrastsecurity.com/hc/en-us/articles/360025370311-A-Resource-Returns-0-Bytes) for more information. <br> Example: WebResource.axd
 
 ### Inventory properties
 
@@ -183,8 +185,8 @@ Use the properties in this section to control Assess in the .NET agent. The samp
   * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
   * **stacktraces**: Value options are `ALL`, `SOME`, or `NONE`.
 
-  * **sampling**:
-    * **enable**: Set to `false` to disable sampling.
+  * **sampling**: Include the following properties to override the sampling settings from Contrast UI.
+    * **enable**: Set to `true` to enable or `false` to disable.
     * **baseline**: This property indicates the number of requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
     * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`

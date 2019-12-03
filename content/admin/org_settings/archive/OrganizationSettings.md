@@ -24,7 +24,7 @@ Organization administrators manage [password policy](admin_tsconfig.html#pw), [I
 Contrast APIs are available to organization administrators for allowing access to other services. Get API keys emailed or rotate keys as needed. Learn more about them in our [API Documentation](dev_api3.html#openapi).
 
 ## Integrations
-Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack, HipChat and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
+Contrast offers basic [integrations](user_tsguideset.html#integrate) with various tools including bugtrackers (JIRA, Bugzilla and Serena) and notification channels (Slack and generic Webhooks). Authorize and connect the tools you need to streamline workflows.
 
 ## Servers
 Server Settings provide default configurations to be applied to new servers (agents) being brought on board. You can customize these configurations specifically to each environment. 

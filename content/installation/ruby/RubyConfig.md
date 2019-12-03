@@ -8,7 +8,7 @@ The Ruby agent and service use a YAML file to alter the agent behavior. Go to th
 
 ## Order of Precedence
 
-The configuration file is called *contrast_security.yaml* wherever it's located. The Ruby agent and service load the configuration YAML from the following paths in order of precedence:
+The configuration file is called *contrast_security.yaml* wherever it's located. The Ruby agent and service load the configuration YAML from the following paths in order of precedence (where 1 is the highest):
 
 1. The current working directory (e.g., *./contrast_security.yaml*)
 2. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)
@@ -66,7 +66,6 @@ Define the following properties to set logging values. If these properties aren'
     * **path**: Enable diagnostic logging by setting a path to a log file. While diagnostic logging hurts performance, it generates useful information for debugging Contrast. The value set here is the location to which the agent saves log output. If no log file exists at this location, the agent creates a file. <br> Example - */opt/Contrast/contrast.log* creates a log in the */opt/Contrast* directory, and rotates it automatically as needed.
     * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
     * **progname**: Override the name of the process the agents uses in logs. <br> Example: Contrast Agent
-    * **metrics**: Set to `true` for the agent to tag logs with "!AM!" for the metrics tool.
 
 #### Security logger
 
@@ -209,8 +208,6 @@ For **server** tags, update the configuration of the service. If there isn’t o
   * **name**: Override the reported server name. <br> Example: `test-server-1`
   * **path:** Override the reported server path.
   * **type:** Override the reported server type.
-  * **build:** Override the reported server build.
-  * **version:** Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
    

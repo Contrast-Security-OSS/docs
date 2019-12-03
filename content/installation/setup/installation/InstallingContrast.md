@@ -8,7 +8,7 @@ tags: "setup EOP installation installer TeamServer Install4J Logging"
 
 Before installing the Contrast application, you should download and fill out the information worksheets at the bottom of this article. Preparing this information greatly reduces configuration errors.
 
-> **Note:** If installing on Linux, make sure you installed the required MySQL shared libraries. See the section on **Preparing for the Installation** in [System Requirements](installation-setup.html#contrast-reqs) for more information.
+> **Note:** Before you begin, install the required MySQL shared libraries. See the section on **Preparing for the Installation** in [System Requirements](installation-setup.html#contrast-reqs) for more information.
 
 ## Run the Installation
 

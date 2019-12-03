@@ -10,34 +10,36 @@ Contrast supports YAML-based configuration for the .NET Core agent. This allows 
 
 ## Load Path
 
-Configuration values use the following order of precedence:
+Configuration values use the following order of precedence (where 1 is the highest):
 
 1. Corporate rule (e.g., expired license overrides `contrast.assess.enable`)
 2. Specific environmental variable
 3. Generic environment variable value
-4. User configuration file value
+4. User configuration file value (i.e., *contrast_security.yaml*)
 5. Contrast UI value
 6. Default value
 
 The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
 
 * Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
-* Place the *contrast_security.yaml* file in the data directory specified during agent install. (The default location is * %ProgramData%\Contrast\dotnet\*. As a result, the default file path would be *%ProgramData%\Contrast\dotnet\contrast_security.yaml*.)
+* Place the *contrast_security.yaml* file at the default path: *%ProgramData%\Contrast\dotnet-core\contrast_security.yaml* (Windows) or */etc/contrast/dotnet-core/contrast_security.yaml* (Linux).
 
 ## Environment Variables
 
 You can use environment variables to specify every configuration option supported by the *contrast_security.yaml* file. Environment variable names are derived from the YAML path by replacing path segment delimiters (`.`) with double underscores (`__`) and prefixing the result with `CONTRAST__`. For example, `server.name` becomes `CONTRAST__SERVER__NAME` while `api.api_key` becomes `CONTRAST__API__API_KEY`.
 
-
 ## Configuration Options
+
+### Enable the agent
+
+* **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
 
 ### Contrast UI properties
 
 Use the properties in this section to connect the .NET Core agent to the Contrast UI. The proxy settings allow the agent to communicate with the Contrast UI over a proxy.
 
-* **contrast**:
+* **api**:
 
-  * **enable**: Only set this property if you want to turn off Contrast. Set to `true` to turn the agent on; set to `false` to turn the agent off.
   * **url**: Set the URL for the Contrast UI. <br> Example: https://app.contrastsecurity.com/Contrast. **Required.**
   * **api_key**: Set the API key needed to communicate with the Contrast UI. **Required.**
   * **service_key**: Set the service key needed to communicate with the Contrast UI. It is used to calculate the Authorization header. **Required.**
@@ -92,6 +94,8 @@ Use the properties in this section to control security logging. These logs allow
 The following properties apply to any .NET Core agent-wide configurations. <!-- More words here... -->
 
   * **dotnet**:
+    * **application_blacklist**: Set a list of application names that the agent does not analyze. Names must be formatted as a comma-separated list.
+    * **application_whitelist**: Set a list of application names that the agent analyzes. If set, other applications are ignored. Whitelist takes precedence over blacklist. Names must be formatted as a comma-separated list.
     * **enable_instrumentation_optimizations**: Indicate that the agent should allow CLR optimizations of JIT-compiled methods.
     * **enable_jit_inlining**: Indicate that the agent should allow the CLR to inline methods that are not instrumented by Contrast.
     * **skip_profiler_check**: Indicate that the agent should not check for other profilers before starting.
@@ -121,8 +125,8 @@ Use the properties in this section to control Assess in the .NET Core agent. The
   * **tags**: Apply a list of labels to vulnerabilities and preflight messages. Labels must be formatted as a comma-delimited list. Example: `label1, label2, label3`
   * **stacktraces**: Value options are `ALL`, `SOME`, or `NONE`.
 
-  * **samplings**:
-    * **enable**: Set to `false` to disable sampling.
+  * **sampling**: Include the following properties to override the sampling settings from Contrast UI.
+    * **enable**: Set to `true` to enable or `false` to disable.
     * **baseline**: This property indicates how many requests to analyze in each window before sampling begins. <br> Example: `5`
     * **request_frequency**: This property indicates that every *nth* request after the baseline is analyzed. <br> Example: `10`
     * **window_ms**: This property indicates the duration for which a sample set is valid. <br> Example: `180_000`
@@ -169,6 +173,8 @@ Use the properties in this section to control Protect features and rules.
 Use the properties in this section to control the application(s) hosting this agent.
 
 * application:
+  * **name**: Override the application name.
+  * **code**: Apply a code label to the application. The label is displayed next to application name in the Contrast UI.
   * **group**: Add the name of the application group with which this application should be associated in the Contrast UI.
   * **version**: Override the reported application version.
   * **tags**: Apply labels to an application. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
@@ -184,6 +190,3 @@ Use the properties in this section to set metadata for the server hosting this a
   * **name**: Override the reported server name. <br> Example: `test-server-1`
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
-
-
-

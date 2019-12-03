@@ -14,7 +14,7 @@ The Log Level field allows you to control which events are processed by server l
 For more details on log levels, go to the article on [Server Settings](user-servers.html#settings).
 
 ### Automatic server cleanup
-Automatic server cleanup enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activity received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled. This feature is available for Java and .Net servers only.
+Automatic server cleanup enables a Contrast background task to run every five minutes to check if there is an organization with cleanup policies configured. For each organization with cleanup policies, Contrast checks if there are one or more servers with no activity received within the timeframe configured in the policy. Servers with no activity are disabled automatically and are no longer visible in the Servers grid. Contrast maintains information on vulnerabilities and attacks related to these servers, even after they're disabled.
 
 ### Assess options
 Assess mode provides detailed information on vulnerabilities discovered by Contrast so that you may track, share and receive remediation guidance. Turning Assess on allows you to enable sampling and designate how stacktraces are captured. 

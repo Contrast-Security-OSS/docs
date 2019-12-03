@@ -18,7 +18,7 @@ Set up an IdP (if you don't use one already), and then provide your metadata to 
 
 ## EOP
 
-For Enterprise-on-Premises (EOP) customers, the SuperAdmin configures SSO at the System level. 
+For Enterprise-on-Premises (EOP) users, the SuperAdmin configures SSO at the System level. 
 
 > **Note:** If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated. 
 
@@ -43,7 +43,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 
 ### Configuration 
 
-* In the Contrast application, go to the **user menu > System Settings > Authentication tab**, and select the link to **Change Authentication Method**.
+* In the Contrast UI, go to the **user menu > System Settings > Authentication tab**, and select the link to **Change Authentication Method**.
 * You may receive a warning regarding the implications of changing authentication. Please read it carefully before proceeding.
 
 <a href="assets/images/SSOWarning.png" rel="lightbox" title="Warning Dialog"><img class="thumbnail" src="assets/images/SSOWarning.png"/></a>
@@ -54,8 +54,7 @@ Once you make the changes, restart Contrast so that it picks up the new keystore
 * If you want to automatically create new user accounts when someone make a SAML request to log in to Contrast, check the box to **Enable user provisioning**.
   * Use the dropdown menus to choose the **Default Organization Role** and **Default Application Access Group** for the new users. 
   * Add the **Accepted Domains** that must be used to trigger user provisioning (e.g., contrastsecurity.com).
-* Test the configuration by clicking the **Test** button. If an error occurs, Contrast provides a debug log for troubleshooting. (This test only validates the metadata and Contrast's ability to connect to the IdP.)  
-* Once the test is successful, click **Save**.
+* Save the configuration by clicking the **Save** button. If an error occurs, Contrast provides a debug log for troubleshooting.
 
 <a href="assets/images/Sso-setup-system-settings.png" rel="lightbox" title="Configure SSO in System Settings"><img class="thumbnail" src="assets/images/Sso-setup-system-settings.png"/></a>
 
@@ -75,13 +74,13 @@ If [SuperAdmin was disabled](installation-setupinstall.html#disable-sa) during i
 
 ## SaaS 
 
-For SaaS customers, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings, including SSO setup.
+For SaaS users, the Contrast System Administrator configures authentication; however, an Organization Administrator may be granted the ability to override these settings, including SSO setup.
 
 > **Note:** If users are identified with a user ID rather than an email address, those accounts don’t automatically transfer over to the SSO configuration and must be recreated.
 
 ### Configuration
 
-* In the Contrast application, go to the **user menu > Organization Settings > Single Sign-On tab**, and click the link to **Get Started**.
+* In the Contrast UI, go to the **user menu > Organization Settings > Single Sign-On tab**, and click the link to **Get Started**.
 * You may receive a warning dialog regarding the implications of changing authentication. Please read it carefully before proceeding.
 * Use the provided information to set up Contrast with your IdP.
 * Provide a name for your IdP as well as the associated metadata to connect to Contrast.
@@ -99,6 +98,43 @@ Once connected, you can return to the **SSO** tab to view and edit your settings
 
 <a href="assets/images/Sso-org-settings-connected.png" rel="lightbox" title="Edit or revert SSO settings in Organization Settings"><img class="thumbnail" src="assets/images/Sso-org-settings-connected.png"/></a>
 
+## Implement Group Membership
+
+For EOP and SaaS accounts with SSO enabled, a system administrator can automatically add users to organizational groups in Contrast according to group membership configured in the IdP. To set this up for your organization, you must update your SAML configuration in your IdP provider and your **SSO** settings in Contrast UI. 
+
+### Configuration 
+
+#### SAML 
+
+Contrast expects group information to be sent by the IdP as a multi-value attribute `contrast_groups` in your SAML configuration.
+
+```
+<saml2:AttributeStatement xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">
+    <saml2:Attribute Name="contrast_groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+        <saml2:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xsi:type="xs:string"
+                                >GROUP1</saml2:AttributeValue>
+        <saml2:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xsi:type="xs:string"
+                                >GROUP2</saml2:AttributeValue>
+        ...
+    </saml2:Attribute>
+</saml2:AttributeStatement>
+```
+
+> **Note:** The attribute values listed under `contrast_groups` must exactly match an existing group name. Contrast won't create new groups based on the values listed under this attribute.
+
+### Contrast UI 
+
+To enable group membership in the Contrast UI, go the the **SSO** tab, and use the check boxes at the bottom of the form to enable one or both of the following properties.
+
+* **Add users to their Contrast groups upon SSO login:** Upon login, Contrast adds users to groups listed in the `contrast_groups` attribute in the SAML assertion.
+* **Remove users from their Contrast groups upon SSO login:** Upon login, Contrast removes users from groups not listed in the `contrast_groups` attribute in the SAML assertion.
+
+<a href="assets/images/Sso-org-settings-groups.png" rel="lightbox" title="Set up SSO group membership"><img class="thumbnail" src="assets/images/Sso-org-settings-groups.png"/></a>
+
 ## Use SSO
 
 For a user, SSO makes only a slight change to the login process. If SSO is configured, a checkbox appears on the Contrast login page. Checking it disables the password input field; only an email address is required. 
@@ -109,8 +145,7 @@ Contrast then verifies your email with the configured IdP, and directs you to th
 
 >**Note:** If Two-Step Verification is active for a user, that login process occurs **after** successful SSO authentication. See the article on [Two-Step Verification](admin-orgsecurity.html#security-tsv) for more information. 
 
-For more help with connectivity, go to the article on [Troubleshooting SSO](troubleshooting-auth.html#troubleshoot-sso). 
-
 <!--
 **Logging Out**
 During IdP configuration, a logout landing page may be designated. This is simply a neutral place to direct users after logging out of their application(s). In the case that no page is specified, users will be directed to a default Contrast logout landing page.-->
+

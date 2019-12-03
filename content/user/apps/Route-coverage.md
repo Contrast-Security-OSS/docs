@@ -6,7 +6,7 @@ tags: "user UI applications route coverage exercised vulnerabilities"
 
 ## About Route Coverage
 
-Contrast observes the flow of data through routes in each of your applications. An application “route” is a combination of three distinct data points: the URL of the route, the HTTP verb associated with the request (e.g., Get or Post), and a unique signature based on that route's controller action. With Contrast's route coverage, you can see detailed information on the components of your application - such as which routes have been exercised versus which ones have not - and make decide where to focus your testing efforts. 
+Contrast observes the flow of data through routes in each of your applications. An application “route” is a combination of three distinct data points: the URL of the route, the HTTP verb associated with the request (e.g., Get or Post), and a unique signature based on that route's controller action. With Contrast's route coverage, you can see detailed information on the components of your application - such as which routes have been exercised versus which ones have not - and decide where to focus your testing efforts. 
 
 > **Hint:** When you consistently exercise each route in your application, the Contrast agent can successfully Assess and Protect the surface layer of your application, and discover vulnerabilities. 
 
@@ -14,10 +14,10 @@ Contrast observes the flow of data through routes in each of your applications. 
 
 Contrast supports route coverage for the following frameworks: 
 
-* **Java:** Jersey 2.x and Spring MVC 4.x 
+* **Java:** Jersey 2, Spring MVC 4, Struts 1, and Struts 2
 * **.NET:** ASP.NET MVC (versions 4 and 5), WebForms, WebAPI and WCF
 * **.NET Core:** ASP.NET Core MVC (versions 2.1 and 2.2) and ASP.NET Core Razor Pages (versions 2.1 and 2.2)
-* **Node:** Express 
+* **Node:** Express, Hapi 17+, Koa and Kraken
 * **Ruby:** Rails and Sinatra
 * **Python:** Django, Pyramid and Flask
 
@@ -26,7 +26,7 @@ For supported frameworks, route coverage consists of two parts:
 * **Discovered** routes: the full list of routes that Contrast has detected in an application 
 * **Observed** routes: the routes in which Contrast has detected traffic
 
-While coverage is enabled automatically for most Contrast agents, you must use the following property to specify the application name when deploying the **Java** agent: `-Dcontrast.agent.java.standalone_app_name=<example_name>`. If you don't include this property, the Java agent may only observe - but not discover - routes in your application. 
+While coverage is enabled automatically for most Contrast agents, you must use the following property to specify the application name when deploying the **Java** agent: `-Dcontrast.agent.java.standalone_app_name=<example_name>`. If you don't include this property, the Java agent will only observe - but not discover - routes in your application.
 
 > **Note:** The **Java** and **Node** agents only report coverage information for the specifically instrumented frameworks listed above. For **unsupported frameworks**, neither agent displays any routes.
 
@@ -45,5 +45,8 @@ View details on each route - including the servers on which it exists and the nu
 
 Use the dropdown menu to filter routes, or the search field to find specific routes in the grid. The date range (calendar) filter simultaneously updates your view in the grid and the chart. Users with administrator-level permissions can also click the **reset** icon to remove all routes listed in the grid. 
 
+### Export route details 
+
+To view and share route details outside of the Contrast UI, use the download icon above the grid to **Export Routes to CSV**. The spreadsheet includes a list of the application's routes, details about the server on which they were found and when the routes were last exercised as well as a list of vulnerabilities, the severity and status of each, and details about when the vulnerabilities were detected. 
 
 

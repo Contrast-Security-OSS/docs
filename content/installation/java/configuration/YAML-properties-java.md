@@ -10,7 +10,7 @@ Contrast supports YAML-based configuration for the Java agent. This allows you t
 
 ## Order of Precedence
 
-Configuration values use the following order of precedence: 
+Configuration values use the following order of precedence (where 1 is the highest): 
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 1. System property value
@@ -116,6 +116,9 @@ Use the properties in this section to control security logging. These logs allow
       * **severity_exploited**: Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
       * **severity_blocked**: Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
       * **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+      * **heartbeat**:
+        * **enable**: Set to `true` to enable the Syslog heartbeat. The heartbeat will issue a Syslog message at the INFO level after every interval passes.
+        * **interval_ms**: Set the interval of the Syslog server for which to send heartbeat messages to the Syslog server (in milliseconds). The default value is `60000`.
 
 
 ### Agent-Specific Properties
@@ -185,6 +188,7 @@ Use the properties in this section to control Protect features and rules.
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
       * **detect_parameter_command_backdoors**: Detect when the agent sees user parameters being executed as system commands. The agent blocks if blocking is enabled.
       * **detect_chained_commands**: Detect when a system command is issued which contains chained commands. The agent blocks if blocking is enabled.
+      * **detect_dangerous_path_args**: Detect when a system command is issued with an argument matching a known dangerous file path. The agent blocks if blocking is enabled.
 
     * **path-traversal**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
@@ -226,7 +230,5 @@ Use the properties in this section to set metadata for the server hosting this a
 * **server**:
 
   * **name**: Override the reported server name. <br> Example: `test-server-1`
-  * **build**: Override the reported server build.
-  * **version**: Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`

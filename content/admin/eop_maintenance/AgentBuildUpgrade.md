@@ -20,5 +20,3 @@ drwxr-xr-x 13 contrast-service contrast-service 4096 Apr 25 20:01 ..
 ````
 
 Agents are provided from [Contrast Hub](https://hub.contrastsecurity.com) and occasionally as a patch through [Contrast's Support portal](https://support.contrastsecurity.com). You can download the agent from one of those two locations, and copy it to the server hosting the Contrast application. Place it in the directory *$CONTRAST_HOME/data/agents/agentName*. As mentioned above, no restart is necessary.
-
-<!-- If you encounter any issues after completing the configuration, read the [troubleshooting article](troubleshooting-setup.html#upgrade).  -->

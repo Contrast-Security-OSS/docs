@@ -10,7 +10,7 @@ Contrast supports YAML-based configuration for the Node agent. This allows you t
 
 ## Order of Precedence
 
-Configuration values use the following order of precedence:
+Configuration values use the following order of precedence (where 1 is the highest):
 
 1. Corporate rule (e.g., expired license overrides `assess.enable`)
 2. Command line value
@@ -100,6 +100,20 @@ Use the properties in this section to control security logging. These logs allow
     * **path**: Set the file to which the agent logs security events. <br> Example: */.contrast/security.log*
     * **level**: Set the log level for security logging. Valid options are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
 
+#### Syslog
+
+Define the following properties to set Syslog values. If the properties aren't defined, the agent uses the Syslog values from the Contrast UI. Syslog properties
+must be nested under `security_logger`.
+
+  * **syslog**:
+    *  **enable**: Set to `true` to enable Syslog logging
+    *  **ip**: Set the IP address of the Syslog server to which the agent should send messages.
+    *  **port**: Set the port of the Syslog server to which the agent should send messages.
+    *  **facility**: Set the facility code of the messages the agent sends to Syslog.
+    *  **severity_blocked**: Set the log level of Blocked attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+    *  **severity_exploited**: Set the log level of Exploited attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+    *  **severity_probed**: Set the log level of Probed attacks. Value options are `ALERT`, `CRITICAL`, `ERROR`, `WARNING`, `NOTICE`, `INFO`, and `DEBUG`.
+
 #### Heap dumps
 
 The following properties are used to trigger heap dumps from within the agent to snapshot the behavior of instrumented applications.
@@ -185,8 +199,6 @@ Use the properties in this section to set metadata for the server hosting this a
   * **name**: Override the reported server name. <br> Example: `test-server-1`
   * **path**: Override the reported server path.
   * **type**: Override the reported server type.
-  * **build**: Override the reported server build.
-  * **version**: Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
 

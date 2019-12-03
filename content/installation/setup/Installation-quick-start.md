@@ -18,7 +18,7 @@ Using Assess, Protect or both as an EOP customer requires two installations:
 * Central instance of the Contrast application
 * Agent for each web application server
 
-The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, Cassandra NoSQL instance and an Oracle Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
+The installation contains all embedded components that make up the system configuration. These components include a Tomcat servlet container, MySQL database instance, and an AdoptOpenJDK Hotspot Java Virtual Machine. All of these components are embedded within the installation binary and deployed to a single server as part of the Contrast architecture.
 
 As you prepare to [install Contrast](installation-setupinstall.html) in your own environment, verify that your configuration complies with Contrast's [system requirements](installation-setup.html#contrast-reqs) and [sizing requirements](installation-setup.html#size). You can also update Java options, and take advantage of Contrast logs and tools when you [run Contrast](installation-setup.html#run) on Windows or Linux. 
 
@@ -34,13 +34,14 @@ To connect to Contrast agents, install an agent into your web application server
 
 * The [Java agent](installation-java.html#java-overview) analyzes the behavior of Java web applications running on your container of choice. 
 
-* The [.NET agent](installation-netinstall.html) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
+* The [.NET Framework agent](installation-netinstall.html) analyzes the behavior of .NET web applications running on IIS as users interact with these applications.
+
+* The [.NET Core agent](installation-netcore.html#netcore-overview) instruments and analyzes applications running in the .NET Core runtime.
 
 * The [Node agent](installation-node.html#node-overview) analyzes the behavior of Node.js web applications by using established techniques, such as source-to-source compilation, to intercept and add Contrast's sensors to an application prior to execution. 
 
 * The [Ruby agent](installation-ruby.html#ruby-overview) provides runtime protection of Ruby on Rails web applications.
 
 * The [Python agent](installation-python.html#python-overview) provides runtime protection of Django, Flask and Pyramid web applications.
-
 
 

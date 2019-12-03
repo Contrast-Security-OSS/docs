@@ -11,10 +11,11 @@ Complete the following steps for express installation of the .NET Core agent via
 * Create an [Azure account](https://portal.azure.com/), if you don't have one already.
 * Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service.
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
+* Ensure that your application is deployed using a Windows plan. (Linux plans are not supported when using the .NET Core site extension.)
 
 ## Step Two: Add application settings for Contrast
 
-The following values are the application settings that the agent needs to connect to Contrast. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
+The following values are the application settings that the agent needs to connect to Contrast. You should add these values using the **Configuration\Application Settings** blade for your application. You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.
 
 
 | Key                        | Value                       |
@@ -29,17 +30,17 @@ The following values are the application settings that the agent needs to connec
 * In the Azure Portal, select your hosted application.
 * Select **Extensions**.
 
-<a href="assets/images/AzureSite_SelectExtensionTab.png" rel="lightbox" title="Select the Extension tab for your hosted application"><img class="thumbnail" src="assets/images/AzureSite_SelectExtensionTab.png"/></a>
+<a href="assets/images/AzureSite_SelectExtensionTab_NetCore.png" rel="lightbox" title="Select the Extension tab for your hosted application"><img class="thumbnail" src="assets/images/AzureSite_SelectExtensionTab_NetCore.png"/></a>
 
 * Click **+ Add**.
 * Select the **Contrast .NET Core Site Extension**. This is the extension for .NET Core applications.
 
-<a href="assets/images/AzureSite_SelectContrastExtension.png" rel="lightbox" title="Choose the Contrast .NET Core Site Extension from the list"><img class="thumbnail" src="assets/images/AzureSite_SelectContrastExtension.png"/></a>
+<a href="assets/images/AzureSite_SelectContrastExtension_NetCore.png" rel="lightbox" title="Choose the Contrast .NET Core Site Extension from the list"><img class="thumbnail" src="assets/images/AzureSite_SelectContrastExtension_NetCore.png"/></a>
 
 * Click **OK**, and agree to the terms and conditions.
 * Wait a few seconds and confirm the site extension installed correctly.
 
-<a href="assets/images/AzureSite_ContrastExtensionInstalled.png" rel="lightbox" title="Confirm the installation"><img class="thumbnail" src="assets/images/AzureSite_ContrastExtensionInstalled.png"/></a>
+<a href="assets/images/AzureSite_ContrastExtensionInstalled_NetCore.png" rel="lightbox" title="Confirm the installation"><img class="thumbnail" src="assets/images/AzureSite_ContrastExtensionInstalled_NetCore.png"/></a>
 
 * Go back to the application overview and **Restart** the application.
 * Navigate to the application, and confirm the application is reporting to Contrast.
@@ -49,3 +50,4 @@ The following values are the application settings that the agent needs to connec
 ## Update Your Installation
 
 If a new version of the agent is available, it's indicated in the Azure Portal or Kudu dashboard. You must stop the site before starting the update; otherwise, the update may fail.
+

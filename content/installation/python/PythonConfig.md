@@ -8,7 +8,7 @@ The Python agent and Contrast Service use a YAML file to alter the agent behavio
 
 ## Order of Precedence
 
-The configuration file is named *contrast_security.yaml* or *contrast_security.yml* no matter where it's located. The Python agent loads the configuration YAML from the following paths in order of precedence:
+The configuration file is named *contrast_security.yaml* or *contrast_security.yml* no matter where it's located. The Python agent loads the configuration YAML from the following paths in order of precedence (where 1 is the highest):
 
 1. Any path saved in the environment variable `CONTRAST_CONFIG_PATH`
 2. The settings directory within the current directory (e.g., *./settings/contrast_security.yaml*)
@@ -137,6 +137,12 @@ Use the properties in this section to override Protect features.
     * **xxe**:
       * **mode**: Set the mode of the rule. Value options are `monitor`, `block`, `block_at_perimeter`, or `off`. <br> Note: If a setting says, "if blocking is enabled", the setting can be `block` or `block_at_perimeter`.
 
+### Contrast Assess properties
+
+Use the properties in this section to override Assess features (beta).
+
+* **assess**:
+  * **enable**: Set to `true` to enable or `false` to disable. Default behavior is delegated to Contrast UI. Note that `protect` and `assess` cannot be enabled at the same time.
 
 ### Application properties
 
@@ -161,8 +167,6 @@ Use the properties in this section to set metadata for the server hosting each a
   * **name**: Override the reported server name. <br> Example: `test-server-1`
   * **path:** Override the reported server path.
   * **type:** Override the reported server type.
-  * **build:** Override the reported server build.
-  * **version:** Override the reported server version.
   * **environment**: Override the reported server environment. <br> Example: `development`
   * **tags**: Apply a list of labels to the server. Labels must be formatted as a comma-delimited list. <br> Example: `label1,label2,label3`
    

@@ -1,24 +1,24 @@
 <!--
-title: "Supported Technologies"
-description: "List of supported technologies"
-tags: "Java agent installation containers JDKs frameworks libraries support troubleshooting"
+title: "Supported Technologies for the Java Agent"
+description: "List of supported technologies for the Java agent"
+tags: "Java agent installation containers JDKs frameworks libraries support"
 -->
 
 Contrast is tested and proven to be compatible with the following technologies; however, Contrast is also compatible with many more that aren't listed.
 
 |Supported JDKS                             | Supported Containers                 | Supported Application Frameworks
 |:--------------                            |:--------------------                 |:--------------------------------
-|IBM 1.6, 1.7                               | GlassFish 4                          | Apache POI, fileupload, HttpComponents
+|IBM 1.6, 1.7, 1.8                          | GlassFish 4                          | Apache POI, fileupload, HttpComponents
 |JRockit 1.6 (update 95+ or R28.3.6+)       | Grizzly 2.3.20+                      | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
 |Oracle JDK 1.6, 1.7, 1.8                   | JBoss 4.2, 5, 5.1, 6.1, 7, 7.1       | Direct Web Remoting (DWR)
 |Open JDK 1.6, 1.7, 1.8                     | Jetty 7, 8, 9                        | DropWizard
 |                                           | Karaf 3.0.x                          | Freemarker
 |                                           | Netty 4.x                            | GSON, Kryo, minidev, org.json
 |                                           | Play 2.4                             | Google Web Toolkit (GWT)
-|                                           | Tomcat 5, 6, 7, 8                    | Hibernate
+|                                           | Tomcat 5, 6, 7, 8, 9                 | Hibernate
 |                                           | Vert.X 3.0                           | J2SE
 |                                           | WebLogic 10, 11g, 12c                | JDBC, JDBI, MongoDB
-|                                           | WebSphere 8.5<sup>*</sup>            | JSF (MyFaces, RichFaces, Sun)
+|                                           | WebSphere<sup>*</sup> 8.5, 9.0       | JSF (MyFaces, RichFaces, Sun)
 |                                           | WildFly 10, 10.1.x                   | java.nio, java.beans
 |                                           |                                      | Java EE/J2EE, Servlet/JSP
 |                                           |                                      | Jersey
@@ -32,7 +32,7 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |                                           |                                      | Xerces, JAXB, nu.xom
 
 
-Contrast tests WebSphere on Windows and Linux, and offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
+<sup>*</sup> Contrast offers limited support for zSeries and AIX environments. Customers using WebSphere on SPARC Solaris require version 8.5.5.11.
 
 
 ### Note for Proguard Users

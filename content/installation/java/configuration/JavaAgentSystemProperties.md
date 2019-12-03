@@ -21,8 +21,6 @@ Generate a list of general properties directly from the command line using the C
 | contrast.app.features | JSON from disk to use for application <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.app.update.period | Contrast application update thread polling period in milliseconds <br> **DEFAULT VALUE:** 5000 (5 seconds, in milliseconds)</br> |
 | contrast.appupdate | Boolean to enable/disable threads that sends updates about applications to Contrast <br> **DEFAULT VALUE:** true</br> |
-| contrast.auto.license.assessment | Boolean to allow Contrast to license an application on creation <br> **DEFAULT VALUE:** false</br> |
-| contrast.auto.license.protection | Boolean to allow Contrast to license a server on creation <br> **DEFAULT VALUE:** false </br> |
 | contrast.classpath.libs | Determines if Contrast tracks usage of libraries listed in the environment's *java.class.path* property. This should only be on in J2SE/desktop situations. <br> **DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.cloneinput | Boolean to enable/disable cloning of tracked objects <br> **DEFAULT VALUE:** true </br> |
 | contrast.container | Manually override the web app container name/ID <br> **DEFAULT VALUE:** detected by the Java agent</br> |
@@ -49,7 +47,7 @@ Generate a list of general properties directly from the command line using the C
 | contrast.scanresponses | Boolean to enable/disable scanning of HTTP responses. <br>**DEFAULT VALUE:** true</br> |
 | contrast.server | Overrides name of the server displayed in the Contrast interface. Includes any valid path characters, e.g. *myserver-1/myapp* or *john_dev*. <br>**DEFAULT VALUE:** not used; this property must be set to be active</br> |
 | contrast.server.activity.period | Polling period for Contrast polling thread (in milliseconds). <br> **DEFAULT VALUE:** 30000 (30 seconds, in milliseconds)</br> |
-| contrast.stacks.maxdepth | Maximum stack depth to include in reported findings. <br> **DEFAULT VALUE:** 75 </br> |
+| contrast.stacks.maxdepth | Maximum stack depth to include in reported findings. Minimum of 2. <br> **DEFAULT VALUE:** 75 </br> |
 | contrast.standalone.appname | Indicates the application is a standalone application with the provided name. <br>**DEFAULT VALUE:** None; must be set</br> <br> **Note:** This property will be deprecated in favor of the property `application.name`, and removed in a future release.</br>|
 | contrast.supporter.jackson.interning | Controls whether or not string interning is disabled in Jackson. The default value is `true`.<br>**DEFAULT VALUE:** true</br> |
 | contrast.supporter.minidevjson | Boolean to enable/disable *net.minidev.json* support. <br>**DEFAULT VALUE:** true</br> |
@@ -81,13 +79,13 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.log.daily | Change the Contrast logger from a file sized based rolling scheme to a date based rolling scheme. At midnight serve time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.<br>**DEFAULT VALUE:** true</br> |
 | contrast.log.size | Specify the file size cap, in MB, of each log file. This value has a cap of 10, meaning no more than 10MB will be logged to a single file.<br>**DEFAULT VALUE:** 10</br> |
 
-### Defend mode
+### Protect mode
 
 |Property|Description|
 |-|-|
 | contrast.security.log.backups | Specify the number of "backup" logs that will be created before Contrast will clean up the oldest file. This value has a cap of 100, meaning no more than 100 log files can be stored on the file system at one time. A value of 0 here means that no backups will be created and the log will simply be truncated when it reaches its size cap.<br>**DEFAULT VALUE:** false</br> |
 | contrast.security.log.daily | Change the Contrast security logger from a file sized based rolling scheme to a date based rolling scheme. At midnight server time, the previous day's log will be renamed to file_name.yyyy-MM-dd. Note, this scheme does not have a size limit, so manual log pruning will be required. This flag must be set to use the backups and size flags.<br>**DEFAULT VALUE:** true</br> |
-| contrast.security.log.file | The file to which logging of security events will occur. By default, this file is located at <working_directory>/security.log.<br>**DEFAULT VALUE:** ${HOME}/.contrast/logs/security-events.log</br> |
+| contrast.security.log.file | The file to which logging of security events will occur. By default, this file is located at <working_directory>/security.log.<br>**DEFAULT VALUE:** ${HOME}/.contrast/logs/security.log</br> |
 | contrast.security.log.level | Set the log level for security logging. Values include: trace, debug, info, warn, error, fatal, off. Setting this to off will disable security logging.<br>**DEFAULT VALUE:** info</br> |
 | contrast.security.log.size | Specify the file size cap, in MB, of each log file. This value has a cap of 10, meaning no more than 10MB will be logged to a single file. By default, this value is '10'.<br>**DEFAULT VALUE:** 10</br> |
 
@@ -156,7 +154,7 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 | contrast.validators | boolean to enable/disable loading of validators from policy<br>**DEFAULT VALUE:** true</br> |
 | web.session.timeout | Overrides the maximum "safe" value of <session-timeout> detected in the web.xml file. The default value is 30 (minutes).<br>**DEFAULT VALUE:** 30</br> |
 
-### Defend mode configuration
+### Protect mode configuration
 
 |Property|Description|
 |-|-|
@@ -177,9 +175,9 @@ By default, diagnostic logging is enabled, but set to the INFO level. It uses a 
 
 ## More Information
 
-* [An Application Is Not Appearing In The List](troubleshooting-setup.html#missing)
+* [An Application Is Not Appearing in the List](https://support.contrastsecurity.com/hc/en-us/articles/360000464386)
 
-* [Getting Java Agent Logs](troubleshooting-java.html#java-logs)
+* [Getting Java Agent Logs](https://support.contrastsecurity.com/hc/en-us/articles/360035148152-How-to-get-logs-from-the-Java-agents)
 
 * [Java Agent Bytecode Changes](installation-javaconfig.html#bytecode)
 

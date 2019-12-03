@@ -18,9 +18,9 @@ In Visual Studio:
 
 * Under the application project in the Solution Explorer, right click on **References** and select **Manage NuGet Packages**.
 
-* Search for **Contrast.Net.Azure.AppService** package, select it and add it to your project.
+* Search for **Contrast.SensorsNetCore** package, select it and add it to your project.
 
-* Build your application. Confirm that a *contrast* folder appears in your project. When the application is compiled, this folder appears in the build output directory.
+* Build your application. Confirm that a *contrast* folder appears in your project. When the application is published, this folder appears in the build output directory.
 
 ## Step Three: Add application authentication settings for Contrast
 
@@ -41,8 +41,8 @@ To use the Contrast agent, you must set following environment variables on your 
 
 CORECLR_ENABLE_PROFILING: 1
 CORECLR_PROFILER: {8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
-CORECLR_PROFILER_PATH_32: <application directory>\contrast\runtimes\win-x64\native\ContrastProfiler.dll
-CORECLR_PROFILER_PATH_64: <application directory>\contrast\runtimes\win-x86\native\ContrastProfiler.dll
+CORECLR_PROFILER_PATH_32: <application directory>\contrast\runtimes\win-x86\native\ContrastProfiler.dll
+CORECLR_PROFILER_PATH_64: <application directory>\contrast\runtimes\win-x64\native\ContrastProfiler.dll
 
 The agent requires valid authentication to the Contrast web site.  To configure the agent using the yaml configuration add this
 environment variable.  More information: https://docs.contrastsecurity.com/installation-netcoreconfig.html#netcore-template
@@ -58,7 +58,7 @@ CONTRAST__API__API_KEY: [REPLACE WITH YOUR AGENT API KEY]
 
 ---------- Stand-alone process or Docker Containers ---------
 Set the environment using your shell or Docker container.
-More information: https://docs.contrastsecurity.com/installation-netcoreinstall.html#netcore-windows
+More information: https://docs.contrastsecurity.com/installation-netcoreinstall.html#netcore-install
 
 
 ---------- Azure App Service --------------------------------
@@ -74,17 +74,17 @@ More information: https://docs.contrastsecurity.com/installation-netcoreinstall.
 
 ```
 
-Go to the **Application Settings** area of your application in the Azure Portal. Set the Contrast authentication keys that the agent needs to connect to Contrast, and click **Save**. (You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.)
+* Go to the **Configuration\Application Settings** blade of your application in the Azure Portal. 
+* Set the Contrast authentication keys that the agent needs to connect to Contrast, and click **Save**. (You can get your authentication keys from your [Profile](user-account.html#profile) in the Contrast UI.)
 
 ## Step Four: Publish the application to Azure
 
-* Using Visual Studio, publish your application to Azure App Service once more (after you've installed the Contrast NuGet package and specified the Application Settings).
+* Using Visual Studio, publish your application to Azure App Service once more (after you've installed the Contrast NuGet package and updated the **Configuration\Application Settings**).
 
 * Once the application has loaded, use the application and then go to the Contrast UI. Verify that the server and application are active, and that any expected vulnerabilities appear.
 
 ## Update Your Installation
 
-When redeploying a web application that has Contrast agent running, you may run into an error that says "Files in use" on *ContrastProfiler-64.dll* or *ConrastProfiler-32.dll*. This happens because the agent DLL files are locked by .NET, and can't be overwritten while the application is still running. 
+When redeploying a web application that has Contrast agent running, you may run into an error that says "Files in use" on *ContrastProfiler-64.dll* or *ContrastProfiler-32.dll*. This happens because the agent DLL files are locked by .NET, and can't be overwritten while the application is still running.
 
 The DLL files must be unloaded before publishing. To unload them, stop the site, publish and then start the site back up. Alternately, you can change the `CORECLR_ENABLE_PROFILING` setting to `0` in the portal, publish and then change the setting back to `1`.
-
