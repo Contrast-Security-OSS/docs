@@ -5,43 +5,29 @@ description: "Contrast .NET Core agent installation instructions"
 tags: "installation agent .NET Core windows linux"
 -->
 
-## The Basics
+## Install Overview
 
-To install the .NET agent, complete the following steps. The installation process for self-hosted applications also applies to IIS Express users.
+This document details the basic install of the .NET Core agent. The installation process for self-hosted applications also applies to IIS Express users. The following installation types require additional steps:
 
+* Profiler Chaining
+* Installation for Azure App Service
+
+## Step 1 - Download Contrast Agent
+
+<details><summary><b>Download the Contrast .NET Core Agent From Contrast UI</b></summary>
+ 
 * Log in to the Contrast UI.
 * Click the **Add Agent** button in the top navigation bar.
 * Select **.NET Core** in the dropdown menu, and click the **Download Agent** button for the platform on which your application is hosted. You might need to specify proxy authentication information, if required by your network, before downloading the agent.
 * Proceed to **Step 2**, and click on the **Download Config File** button to download the agent's configurations.
-* On the web server, extract the downloaded zip archive (e.g., *Contrast.NET.Core_0.20.1.zip*) to a directory that your applications have sufficient permissions to access.
+* On the web server, extract the downloaded zip archive (e.g., *Contrast.NET.Core_1.0.1.zip*) to a directory that your applications have sufficient permissions to access.
 * On the web server, place the downloaded configuration file in a directory that your applications have sufficient permissions to access.
+</details>
 
-## Customize Your Installation
-
-The agent uses the downloaded configuration file, *contrast_security.yaml*, to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration guidelines](installation-netcoreconfig.html#netcore-yaml) for more information.
-
-### Permissions
-
-Ensure that the following paths are accessible by the runtime user of the application.
-
-| Path | Usage | Customizable | Permissions |
-| -- | -- | -- | -- |
-| The path to YAML configuration file, such as *contrast_security.yaml* | Used to configure the agent | Yes; set the environment variable `CONTRAST_CONFIG_PATH` | Read |
-| \{\{ Unzipped Directory Root \}\} | The root "installation" directory; stores the agent binaries | No | Read |
-| %ProgramData%\Contrast\dotnet-core\logs (Windows) <br><br> /var/tmp/contrast/dotnet-core/logs (Linux) | Logs the directory; if missing, the directory will be created | Yes; set the environment variable `CONTRAST_CORECLR_LOGS_DIRECTORY` | Read/Write <br> (or inherited from a parent directory) |
-
-When running in IIS, make sure the application pool can access the these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
-
-## Enable the Agent
+## Step 2 - Run the Application With Contrast
 
 To enable the .NET Core agent on your application, you must set the following environment variables on your application's process.
-
-* CORECLR_PROFILER_PATH_64: Use the following table to find the correct Profiler path for 64-bit applications.
-* CORECLR_PROFILER_PATH_32: Use the following table to find the correct Profiler path for 32-bit applications. (Windows)
-* CORECLR_ENABLE_PROFILING: `1`
-* CORECLR_PROFILER: `{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}`
-* CONTRAST_CONFIG_PATH: Set the path to the YAML configuration file. It can be an absolute path (i.e., *C:\contrast\contrast_security.yaml* or */opt/contrast/contrast_security.yaml*) or a path relative to your application process's current directory (i.e., *my_custom_config.yaml*). If not set, the default is *C:\ProgramData\Contrast\dotnet-core\contrast_security.yaml* (Windows) or */etc/contrast/dotnet-core/contrast_security.yaml* (Linux). This setting is **optional**.
-
+Use the following table to find the correct Profiler path for the given architecture:
 
 | Environment Variable | Platform | Profiler Path |
 |--|--|--|
@@ -49,10 +35,9 @@ To enable the .NET Core agent on your application, you must set the following en
 | CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
 | CORECLR_PROFILER_PATH_64 | Linux (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\linux-x64\native\ContrastProfiler.so |
 
-
 > **Note:** The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
 
-### Running from Powershell or Powershell Core (Windows)
+<details><summary><b>Running from Powershell or Powershell Core (Windows)</b></summary>
 
 Windows users running from Powershell or Powershell Core can set the environment variables.
 
@@ -71,8 +56,9 @@ You can then run the application:
 ```powershell
 dotnet .\MyAppWithContrastAgent.dll
 ```
+</details>
 
-### Running from Bash (Linux)
+<details><summary><b>Running from Bash (Linux)</b></summary>
 
 Linux users running from Bash can set the environment variables.
 
@@ -90,8 +76,9 @@ You can then run the application:
 ```bash
 dotnet ./MyAppWithContrastAgent.dll
 ```
+</details>
 
-### Running under IIS and IIS Express
+<details><summary><b>Running under IIS and IIS Express</b></summary>
 
 Users running under IIS and IIS Express can set the environment variables using either of these two methods.
 
@@ -117,8 +104,9 @@ Users running under IIS and IIS Express can set the environment variables using 
 
 * The [application pool](https://docs.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/#appcmdexe) setting on the server
 
+</details>
 
-### Running with a dotnet.exe launch profile
+<details><summary><b>Running with a dotnet.exe launch profile</b></summary>
 
 Users running with a dotnet.exe launch profile can set the environment variables as part of your application startup script or as an ASP.NET Core launch profile.
 
@@ -141,6 +129,24 @@ You can then run the application:
 ```powershell
 dotnet run --launch-profile MyAppWithContrastAgent
 ```
+
+</details>
+
+## Customize Your Installation
+
+The agent uses the downloaded configuration file, *contrast_security.yaml*, to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration guidelines](installation-netcoreconfig.html#netcore-yaml) for more information.
+
+### Permissions
+
+Ensure that the following paths are accessible by the runtime user of the application.
+
+| Path | Usage | Customizable | Permissions |
+| -- | -- | -- | -- |
+| The path to YAML configuration file, such as *contrast_security.yaml* | Used to configure the agent | Yes; set the environment variable `CONTRAST_CONFIG_PATH` | Read |
+| \{\{ Unzipped Directory Root \}\} | The root "installation" directory; stores the agent binaries | No | Read |
+| %ProgramData%\Contrast\dotnet-core\logs (Windows) <br><br> /var/tmp/contrast/dotnet-core/logs (Linux) | Logs the directory; if missing, the directory will be created | Yes; set the environment variable `CONTRAST_CORECLR_LOGS_DIRECTORY` | Read/Write <br> (or inherited from a parent directory) |
+
+When running in IIS, make sure the application pool can access the these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
 
 ## Next Steps
 
