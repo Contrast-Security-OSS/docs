@@ -129,7 +129,7 @@ dotnet run --launch-profile MyAppWithContrastAgent
 
 </details>
 
-## Customize Your Installation
+## Step 3 - Customize Your Installation
 
 The agent uses the downloaded configuration file, *contrast_security.yaml*, to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration guidelines](installation-netcoreconfig.html#netcore-yaml) for more information.
 
