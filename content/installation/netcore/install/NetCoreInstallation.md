@@ -7,10 +7,7 @@ tags: "installation agent .NET Core windows linux"
 
 ## Install Overview
 
-This document details the basic install of the .NET Core agent. The installation process for self-hosted applications also applies to IIS Express users. The following installation types require additional steps:
-
-* Profiler Chaining
-* Installation for Azure App Service
+This document details the basic install of the .NET Core agent. The installation process for self-hosted applications also applies to IIS Express users.
 
 ## Step 1 - Download Contrast Agent
 
