@@ -10,24 +10,42 @@ The Ruby agent and service use a YAML file to alter the agent behavior. Go to th
 
 The configuration file is called *contrast_security.yaml* wherever it's located. The Ruby agent and service load the configuration YAML from the following paths in order of precedence (where 1 is the highest):
 
-1. The current working directory (e.g., *./contrast_security.yaml*)
-2. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)
-3. Within the server's *etc/contrast* directory (e.g. */etc/contrast/contrast_security.yaml*)
-3. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
+Configuration values use the following order of precedence (where 1 is the highest):
+
+1. Corporate rule (e.g., expired license overrides `contrast.assess.enable`)
+2. Specific environmental variable
+3. Generic environment variable value
+4. Application-specific configuration file value (i.e. *./config/contrast_security.yaml*)
+5. User configuration file value (i.e. */etc/contrast/ruby/contrast_security.yaml*)
+6. Contrast UI value
+7. Default value
+
+## Load Path
+
+The *contrast_security.yaml* file should be placed on the file system using one of the following methods:
+
+* Specify the path to the YAML file with the environment variable `CONTRAST_CONFIG_PATH`.
+* Place the *contrast_security.yaml* file in the application's *config* directory.
+* Place the *contrast_security.yaml* file in the */etc/contrast/ruby/* directory.
+
+### Load Path Precedence
+
+1. The file specified by `CONTRAST_CONFIG_PATH`.
+2. The current working directory (e.g., *./contrast_security.yaml*)
+3. A subdirectory called *config*, which is the default for Ruby on Rails applications (e.g., *./config/contrast_security.yaml*)
+4. Within the server's *etc/contrast/ruby* directory (e.g. */etc/contrast/ruby/contrast_security.yaml*)
+4. Within the server's *etc/contrast* directory (e.g. */etc/contrast/contrast_security.yaml*)
+5. Within the server's *etc* directory (e.g., */etc/contrast_security.yaml*)
+
+## Environment Variables
+
+You can use environment variables to specify every configuration option supported by the *contrast_security.yaml* file. Environment variable names are derived from the YAML path by replacing path segment delimiters (`.`) with double underscores (`__`). For example, `contrast.server.name` becomes `CONTRAST__SERVER__NAME` while `contrast.api.api_key` becomes `CONTRAST__API__API_KEY`.
 
 ## Service Configuration
 
 The Ruby agent launches an executable on startup that also needs access to the configuration files. Since the service is generally launched by the Ruby agent process, it has access to the same configuration file as the agent. However, if the service is started independently, it will attempt to use the same load path described above for its configuration file. 
 
 In other words, the service can share the application's configuration file, if (as is usually the case) the service's working directory is also the base directory of the Rails application. Both the agent and the service use the *./config/contrast_security.yaml* path. 
-
-### Tagging
-
-The Ruby agent supports the full array of tagging messages to the Contrast server. To apply these tags, you must update your configuration files. Tags in the configuration are comma-separated alphanumeric strings. Each tag will be attached to a corresponding message from the agent or service, depending which field is set. To see the appropriate properties for **server**, **application**, and **library** tags, go the given sections below. 
-
-<!-- omit until assess is released 
-For Trace tags, update the configuration of the agent. If there isn’t one, add a top-level `assess` field to the *contrast_security.yaml* file. Under that heading, add a `tags` field, which you may set to any comma-separated alphanumeric string.  
--->
 
 ## Configuration Options
 
