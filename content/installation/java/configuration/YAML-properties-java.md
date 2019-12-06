@@ -41,9 +41,12 @@ On Unix/Linux file systems:
 
 You can also set all of the following YAML properties as system properties. Derive the system property key from the YAML by joining every node with a "." until you reach the bottom property. 
 
-> **Example:** If you want to override the `contrast` property, as given below, you can set `-Dcontrast.enable=false` as a system property.
-  * contrast: 
-    * enable: `true`
+> **Example:** If you want to override the URL for the Contrast UI to which the agent reports, as given below, you can set `-Dcontrast.api.url=https://exampele.com/Contrast` as a system property.
+
+```yaml
+api:
+  url: https://example.com/Contrast
+```
 
 
 ## Configuration Options
