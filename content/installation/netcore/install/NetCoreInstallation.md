@@ -10,7 +10,7 @@ tags: "installation agent .NET Core windows linux"
 To install the .NET agent, complete the following steps.
 > Note: The installation process for self-hosted applications also applies to IIS Express users.
 
-## Step 1 - Download Contrast Agent
+## Step One - Download the Contrast .NET Core Agent
 
 <details><summary><b>Download From Contrast UI</b></summary>
 
@@ -22,7 +22,7 @@ To install the .NET agent, complete the following steps.
 * On the web server, place the downloaded configuration file in a directory that your applications have sufficient permissions to access.
 </details>
 
-## Step 2 - Run the Application With Contrast
+## Step Two - Run the Application With Contrast .NET Core Agent
 
 To enable the .NET Core agent on your application, you must set the following environment variables on your application's process.
 Use the following table to find the correct CORECLR_PROFILER_PATH setting for the given architecture:
