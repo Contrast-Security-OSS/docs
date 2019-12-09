@@ -32,11 +32,11 @@ Use the following table to find the correct Profiler path for the given architec
 | CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
 | CORECLR_PROFILER_PATH_64 | Linux (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\linux-x64\native\ContrastProfiler.so |
 
-> **Note:** The platform's CPU architecture is based on the CoreCLR's bitness. For example, when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
+> **Note:** The platform's CPU architecture is based on the CoreCLR's bitness. For example when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
 
 <details><summary><b>Running from Powershell or Powershell Core (Windows)</b></summary>
 
-Windows users running from Powershell or Powershell Core can set the environment variables.
+Windows users running Powershell or Powershell Core can use it to set the environment variables.
 
 **Example:**
 
@@ -57,7 +57,7 @@ dotnet .\MyAppWithContrastAgent.dll
 
 <details><summary><b>Running from Bash (Linux)</b></summary>
 
-Linux users running from Bash can set the environment variables.
+Linux users running Bash can use it to set the environment variables.
 
 **Example:**
 
@@ -77,7 +77,7 @@ dotnet ./MyAppWithContrastAgent.dll
 
 <details><summary><b>Running under IIS and IIS Express</b></summary>
 
-Users running under IIS and IIS Express can set the environment variables using either of these two methods.
+Users running under IIS and IIS Express can set the environment variables using one of these two methods.
 
 * The `environmentVariables` section in the application *web.config* via [ASP.NET Module Configuration](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2#setting-environment-variables), as shown below (recommended)
 
@@ -105,7 +105,7 @@ Users running under IIS and IIS Express can set the environment variables using 
 
 <details><summary><b>Running with a dotnet.exe launch profile</b></summary>
 
-Users running with a dotnet.exe launch profile can set the environment variables as part of your application startup script or as an ASP.NET Core launch profile.
+Users running with a dotnet.exe launch profile can use it to set the Contrast environment variables.
 
 **Example:**
 
@@ -131,7 +131,7 @@ dotnet run --launch-profile MyAppWithContrastAgent
 
 ## Step 3 - Customize Your Installation
 
-The agent uses the downloaded configuration file, *contrast_security.yaml*, to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration guidelines](installation-netcoreconfig.html#netcore-yaml) for more information.
+The agent uses the downloaded configuration file (e.g. *contrast_security.yaml*) to configure authentication credentials and proxy settings to connect to Contrast. You can fully configure the agent using the YAML file. See the agent [configuration guidelines](installation-netcoreconfig.html#netcore-yaml) for more information.
 
 ### Permissions
 
@@ -143,7 +143,7 @@ Ensure that the following paths are accessible by the runtime user of the applic
 | \{\{ Unzipped Directory Root \}\} | The root "installation" directory; stores the agent binaries | No | Read |
 | %ProgramData%\Contrast\dotnet-core\logs (Windows) <br><br> /var/tmp/contrast/dotnet-core/logs (Linux) | Logs the directory; if missing, the directory will be created | Yes; set the environment variable `CONTRAST_CORECLR_LOGS_DIRECTORY` | Read/Write <br> (or inherited from a parent directory) |
 
-When running in IIS, make sure the application pool can access the these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure the user `IIS AppPool\Default Web Site` has the effective permissions to **read** the unzipped directory root.
+When running in IIS, make sure that the application pool can access these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure that the user `IIS AppPool\Default Web Site` has effective permissions to **read** the unzipped directory root.
 
 ## Next Steps
 
