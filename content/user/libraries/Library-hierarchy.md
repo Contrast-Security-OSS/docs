@@ -6,7 +6,11 @@ tags: "user library licenses hierarchy vulnerabilities sca"
 
 ## How It Works
 
+License data is available for your open source libraries in the **Libraries** grid. To view a specific library's license, hover over the library name in the grid. The license is also available in the header of the library **Details** page, which is accessed by clicking on a library's name in the grid.  Note that licenses are listed in SPDX format.
+
+<!--
 When an open-source library is added to an application, all of the library's dependencies are also inherited. Some of these indirect dependencies may introduce vulnerable code into your applications. The [Contrast SCA tool](tools-cli.html) identifies all open-source libraries and sends the data to the Contrast UI, where you can visualize these libraries as a hierarchical dependency tree.
+-->
 
 ## Before You Start
  
