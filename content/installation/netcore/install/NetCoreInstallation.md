@@ -7,12 +7,13 @@ tags: "installation agent .NET Core windows linux"
 
 ## Install Overview
 
-This document details the basic install of the .NET Core agent. The installation process for self-hosted applications also applies to IIS Express users.
+To install the .NET agent, complete the following steps.
+> Note: The installation process for self-hosted applications also applies to IIS Express users.
 
 ## Step 1 - Download Contrast Agent
 
-<details><summary><b>Download the Contrast .NET Core Agent From Contrast UI</b></summary>
- 
+<details><summary><b>Download From Contrast UI</b></summary>
+
 * Log in to the Contrast UI.
 * Click the **Add Agent** button in the top navigation bar.
 * Select **.NET Core** in the dropdown menu, and click the **Download Agent** button for the platform on which your application is hosted. You might need to specify proxy authentication information, if required by your network, before downloading the agent.
@@ -24,15 +25,18 @@ This document details the basic install of the .NET Core agent. The installation
 ## Step 2 - Run the Application With Contrast
 
 To enable the .NET Core agent on your application, you must set the following environment variables on your application's process.
-Use the following table to find the correct Profiler path for the given architecture:
+Use the following table to find the correct CORECLR_PROFILER_PATH setting for the given architecture:
 
-| Environment Variable | Platform | Profiler Path |
+| Environment Variable | Platform | Value |
 |--|--|--|
 | CORECLR_PROFILER_PATH_64 | Windows (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x64\native\ContrastProfiler.dll |
 | CORECLR_PROFILER_PATH_32 | Windows (32-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\win-x86\native\ContrastProfiler.dll |
 | CORECLR_PROFILER_PATH_64 | Linux (64-bit) | \{\{ Unzipped Directory Root \}\}\runtimes\linux-x64\native\ContrastProfiler.so |
+| CORECLR_PROFILER | All | {8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
+| CORECLR_ENABLE_PROFILING | All | 1
+| CONTRAST_CONFIG_PATH | All | \{\{ Path to yaml config \}\}
 
-> **Note:** The platform's CPU architecture is based on the CoreCLR's bitness. For example when using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
+> **Note:** The platform's CPU architecture is based on the CoreCLR's bitness. For example when your application is using a 32-bit CoreCLR, you must use the 32-bit profiler, even if the OS is 64-bit.
 
 <details><summary><b>Running from Powershell or Powershell Core (Windows)</b></summary>
 
@@ -62,10 +66,10 @@ Linux users running Bash can use it to set the environment variables.
 **Example:**
 
 ```bash
-export CORECLR_PROFILER_PATH_64=/contrast/runtimes/linux-x64/native/ContrastProfiler.so
+export CORECLR_PROFILER_PATH_64=/usr/local/contrast/runtimes/linux-x64/native/ContrastProfiler.so
 export CORECLR_ENABLE_PROFILING=1
 export CORECLR_PROFILER={8B2CE134-0948-48CA-A4B2-80DDAD9F5791}
-export CONTRAST_CONFIG_PATH=/contrast/contrast_security.yaml
+export CONTRAST_CONFIG_PATH=/etc/contrast/contrast_security.yaml
 ```
 
 You can then run the application:
@@ -141,7 +145,7 @@ Ensure that the following paths are accessible by the runtime user of the applic
 | -- | -- | -- | -- |
 | The path to YAML configuration file, such as *contrast_security.yaml* | Used to configure the agent | Yes; set the environment variable `CONTRAST_CONFIG_PATH` | Read |
 | \{\{ Unzipped Directory Root \}\} | The root "installation" directory; stores the agent binaries | No | Read |
-| %ProgramData%\Contrast\dotnet-core\logs (Windows) <br><br> /var/tmp/contrast/dotnet-core/logs (Linux) | Logs the directory; if missing, the directory will be created | Yes; set the environment variable `CONTRAST_CORECLR_LOGS_DIRECTORY` | Read/Write <br> (or inherited from a parent directory) |
+| Windows: ``%ProgramData%\Contrast\dotnet-core\logs`` <br><br> Linux: ``/var/tmp/contrast/dotnet-core/logs`` | Directory for Contrast agent logs. If missing, the directory will be created | Yes; set the environment variable `CONTRAST_CORECLR_LOGS_DIRECTORY` | Read/Write <br> (or inherited from a parent directory) |
 
 When running in IIS, make sure that the application pool can access these paths. For example, given an application pool called `Default Web Site` using the default identity `ApplicationPoolIdentity`, ensure that the user `IIS AppPool\Default Web Site` has effective permissions to **read** the unzipped directory root.
 
