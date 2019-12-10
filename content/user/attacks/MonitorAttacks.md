@@ -24,15 +24,15 @@ If an attacker is identified by a [source name](admin-ipmgmt.html#source-name), 
 
 ### Attack events
 
-The Attack Events column displays a list of the types of attacks detected along with the total number of attack events per type. The bar below each attack type shows a breakdown of the attack events that resulted in an exploited (red), blocked (green) and probed (dark gray) application. 
+The Attack Events column displays a list of the types of attacks detected, along with the total number of attack events per type. The bar below each attack type shows a breakdown of the attack events by result, such as exploited (red) or blocked (green).
 
 ### Target applications
 
-In the Target Applications column, Contrast shows each application that has been targeted by an attack. The bar below each application shows a breakdown of the attack events that resulted in an exploited (red), blocked (green) and probed (dark gray) application. Click on the total number of applications to see the data in the [Attacks](user-attacks.html#analyze-attacks) grid. Click on an application to see a filtered view in the **Attack Events** grid. 
+In the Target Applications column, Contrast shows each application that has been targeted by an attack. The bar below each application shows a breakdown of the attack events by result, such as exploited (red) or blocked (green). Click on the total number of applications to see the data in the [Attacks](user-attacks.html#analyze-attacks) grid. Click on an application to see a filtered view in the **Attack Events** grid. 
 
 ## Attack Details
 
-Click on an attacker's IP address or source name to see details about an attack. This takes you to the **Attack Details** page with a summary of information including the attack type, its duration, and affected applications and servers. Contrast shows the total number of events that make up the attack; click on one to see more details about the individual event.
+Click on an attacker's IP address or source name to see details about an attack. This takes you to the **Attack Details** page with a summary of information including the attack type, its duration, and affected applications and servers. Contrast shows the total number of events that make up the attack. Click on one to see more details about the individual event.
 
 From this page, you can add the attacker to an IP blacklist, export all the individual events that comprise the attack, or suppress an attack (and its events) altogether. You can also take actions on events as you triage, such as creating virtual patches, configuring Protect rules or adding exclusions.  
 
