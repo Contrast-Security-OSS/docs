@@ -16,6 +16,7 @@ Bugtrackers:
 
 Notifications:
 
+* Microsoft Teams
 * Slack 
 * VictorOps
 * Generic Webhook
