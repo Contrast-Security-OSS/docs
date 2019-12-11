@@ -8,7 +8,7 @@ Pinpoint the source of vulnerabilities in your application with session metadata
 
 ## Agent Configuration 
 
-To send session metadata for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. The build properties that the agent can report are **branch name**, **build number**, **commit hash**, **committer**, **Git tag**, **repository**, **test run** and **version**. You may include all or some of these properties, as desired. See the following table for the configuration key that corresponds to each property. 
+To send session metadata for your application to the Contrast UI, you must add the configuration settings to your agent configuration file. The build properties that the agent can report are **branch name**, **build number**, **commit hash**, **committer**, **Git tag**, **repository**, **test run** and **version**. You may include all or some of these properties, as desired. The value of each property, up to a maximum of 255 characters, will be stored as filterable, identifiable information associated with each vulnerability reported during the session. See the following table for the configuration key that corresponds to each property. 
 
 | UI label     | Configuration key |
 |--------------|-------------------|
