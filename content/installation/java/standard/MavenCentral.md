@@ -13,3 +13,5 @@ To learn how to download the Contrast agent from Maven Central, use the followin
 * [Add the Agent to a Maven Project](installation-javaguides.html#maven)
 * [Add the Agent to a Gradle Project with Docker](installation-javaguides.html#gradle)
 * [Schedule Automatic Updates on Linux](installation-javaguides.html#cron)
+
+Contrast artifacts deployed to Maven Central are signed with [our GPG key](assets/attachments/contrast-public-gpg.asc) hosted on pgp.key-server.io.
