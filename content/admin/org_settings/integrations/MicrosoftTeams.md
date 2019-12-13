@@ -14,7 +14,7 @@ To add the Contrast integration, go to your team in your Microsoft Teams account
 
 * Choose the appropriate channel to which to send messages, click on the three dots to the right of the channel name, and select **Connectors** from the menu. 
 * In the **Incoming Webhook** row, select **Configure**.
-* Select a name for the Incoming Webhook in the diaglog, and select **Create**. 
+* Select a name for the Incoming Webhook, and select **Create**. 
 * Copy the **Webhook URL**. (You'll use this to set up the integration in the Contrast UI.) 
 
 ### Contrast
