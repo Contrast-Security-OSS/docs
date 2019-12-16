@@ -16,7 +16,7 @@ Integrate Jira with Contrast to automatically generate tickets, synchronize comm
 
 ## Add a Configuration 
 
-In the **Integrations** page, click **Connect** in the Jira row. In the **Connect with Jira** form, add the name for the bugtracker entry, the username and the API token for the account connected to Jira in the appropriate fields. The Jira URL must be accessible from the Contrast UI instance being configured.
+In the **Integrations** page, click **Connect** in the Jira row. In the **Connect with Jira** form, add the name for the bugtracker entry, the username and the API token for the account connected to Jira in the appropriate fields. The Jira URL must be accessible from the Contrast UI instance being configured
 
 > **Note:** Contrast saves the username, API token and Jira URL entered in your configuration as a set of credentials. See the ** Credential Sets** section for more details.
 
