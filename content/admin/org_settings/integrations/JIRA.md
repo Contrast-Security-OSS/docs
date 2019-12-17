@@ -9,16 +9,16 @@ Integrate Jira with Contrast to automatically generate tickets, synchronize comm
 
 ## Prerequisites
 
-* Jira account credentials (username and password)
+* Jira account credentials (username and API token)
 * Permission to create issues in the target project
 * A running Jira instance accessible via HTTP to the Contrast UI
 * A project to associate the application instrumented by Contrast
 
 ## Add a Configuration 
 
-In the **Integrations** page, click **Connect** in the Jira row. In the **Connect with Jira** form, add the name for the bugtracker entry, the **username** and **password** for the account connected to Jira in the appropriate fields. The Jira URL must be accessible from the Contrast UI instance being configured.
+In the **Integrations** page, click **Connect** in the Jira row. In the **Connect with Jira** form, add the name for the bugtracker entry, the username and the API token for the account connected to Jira in the appropriate fields. The Jira URL must be accessible from the Contrast UI instance being configured.
 
-> **Note:** Contrast saves the username, password and Jira URL entered in your configuration as a set of credentials. See the ** Credential Sets** section for more details.
+> **Note:** Contrast saves the username, API token and Jira URL entered in your configuration as a set of credentials. See the ** Credential Sets** section for more details.
 
 Once you complete the fields, click **Test connection**. This process may take a few moments depending on the number of your Jira projects. The test verifies that Contrast can reach the Jira instance and that the specified user is able to log in.
 
@@ -69,11 +69,11 @@ Automatically create tickets in Jira for newly discovered vulnerabilities by che
 
 ## Credentials
 
-Contrast saves the latest set of credentials that you enter in your Jira configurations to help you set up new connections even faster. The username, password and Jira URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
+Contrast saves the latest set of credentials that you enter in your Jira configurations to help you set up new connections even faster. The username, API token and Jira URL values that you enter in your first configuration become the default credentials for your following configurations. In subsequent configurations, Contrast will auto-populate the fields with the default credentials, but allow you to modify the values as needed. You can also manage your saved sets of credentials to simultaneously update all of the affected configurations. 
 
 ### Manage credentials
 
-To create or edit a configuration with credentials that are different than your default set, select the **Manage credentials** link. In the **URL** field, use the dropdown menu to choose a set of saved credentials; or, manually update the values in the **URL**, **Username** and **Password** fields. Once you've updated the fields, click the button to **Test Connection**. 
+To create or edit a configuration with credentials that are different than your default set, select the **Manage credentials** link. In the **URL** field, use the dropdown menu to choose a set of saved credentials, or manually update the URL, username, and API token. Once you've updated the fields, click the button to **Test Connection**. 
 
 <a href="assets/images/Jira-connect-credentials.png" rel="lightbox" title="Set up a new JIRA configuration with saved credentials"><img class="thumbnail" src="assets/images/Jira-connect-credentials.png"/></a>
 
@@ -87,5 +87,5 @@ You can also select the **Manage Credentials** link in the Jira Integrations row
 
 >**Note:** Any updates to a set of credentials will affect all configurations using that set. 
 
-Click the button to **Test Connection**; once Contrast verifies the connection, click the button to **Save** your changes. 
+Click the button to **Test Connection**. Once Contrast verifies the connection, click the button to **Save** your changes. 
 
