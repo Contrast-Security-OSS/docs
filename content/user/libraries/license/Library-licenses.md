@@ -16,7 +16,8 @@ License data is available for your open source libraries in the **Libraries** gr
 
 To find libraries with specific licenses, use the filter for the grid. Select the **Advanced** link above the grid, and expand the **Libraries** section to see a list of all of the library licenses used in your organization. 
 
- 
+Open Source license display is available to OSS customers only. Contact your Organization Admin to enable OSS.
+
 ### Export
 
 License details for each library are also included in any CSV or XML files exported from the Contrast UI. To read how to export library data, see [Manage Libraries](user-libraries.html#manage-lib). 
