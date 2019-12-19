@@ -19,7 +19,7 @@ Go to the **Attacks** tab in the **Attacks** page to view all attacks that have 
 
 * **Status:** The current status of the attack. 
 
- An attack status is determined by the status of the attack events within the attack. The status is as "Probed" if all events have a "Probed" status, "Blocked" if all events have either a "Blocked" or "Probed" status, and "Exploited" if any event has an "Exploited" status.
+ An attack status is determined by the highest severity status of the attack events within the attack. If any event has an "Exploited" status, the attack status will be "Exploited." If there are no "Exploited" events, the status will be the next highest severity event's status. The severity order, starting with the highest, is: Exploited, Suspicious, Blocked (P), Blocked, Probed (P), Probed.
 
 * **Application:** Any applications that saw attack events from the IP address while the attack was active.
 
@@ -37,7 +37,7 @@ Go to the **Attacks** tab in the **Attacks** page to view all attacks that have 
 
 ### Attack details 
  
-Click on the Source IP to view more details on the attack. In the **Overview** tab, view each attack event in the grid; click on each row to expand your view for more details. Under **Attack Duration**, click the **See Timeline** link to view the exact time sequence of each event. Use the dropdown menus and search field to find specific events. 
+Click on the Source IP to view more details on the attack. In the **Overview** tab, view each attack event in the grid. Click on each row to expand your view for more details. Under **Attack Duration**, click the **See Timeline** link to view the exact time sequence of each event. Use the dropdown menus and search field to find specific events. 
 
 <a href="assets/images/Attack-overview.png" rel="lightbox" title="View the Attack Overview"><img class="thumbnail" src="assets/images/Attack-overview.png"/></a>
 
