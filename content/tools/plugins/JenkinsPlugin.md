@@ -22,7 +22,7 @@ Contrast API settings enable the plugin to connect to Contrast and query for res
 * Enter your [Contrast Username](user-account.html#loginpwd). Your username is usually the email address you use for your account in Contrast. 
 * Enter your [Contrast API Key](user-account.html#profile) and [Contrast Service Key](user-account.html#profile). Log in to the Contrast UI, and go to the **user menu > Your Account > Your Keys section** to find both keys.         
 * Enter the **Contrast URL** (the API URL to your Contrast instance). Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *https://contrastserver/Contrast/api*). 
-* Enter the [Organization UUID](admin-orgsettings.html#apikey). Go to the **user menu > Organization Settings > API tab** to find the Organization UUID of the configured user in the Contrast UI. (You can also copy it from the URL after logging in to the Contrast UI.) 
+* Enter the [Organization ID](admin-orgsettings.html#apikey). Go to the **user menu > Organization Settings > API tab** to find the Organization UUID of the configured user in the Contrast UI. (You can also copy it from the URL after logging in to the Contrast UI.) 
 * Choose the **Result of a vulnerable build** from the dropdown menu. 
 * Check the box to fail a build if the **application is not found** in the Contrast application. 
 * Choose to allow global threshold conditions to be overridden in post-build actions. (See the **Global threshold conditions**
@@ -37,9 +37,9 @@ When you add a Contrast profile, use the **Test Contrast Connection** button to 
 
 Once a connection is made, complete the following fields for **Contrast Vulnerability Threshold Conditions**. 
 
-* Select a **Profile** from the dropdown.
-* Add a **Count**. The count is exclusive; if you set a count for "5", it fails on six or more vulnerabilities. This field is **required**.
-* Choose a **Severity** from the options in the dropdown menu (Note, Low, Medium, High or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field. This field is recommended to reduce your results, but not required. 
+* Select a **Connection** from the dropdown.
+* Set the **Number of Allowed Vulnerabilities**. The number is exclusive; if you set a count for "5", it fails on six or more vulnerabilities. This field is **required**.
+* Choose a **Vulnerability Severity** from the options in the dropdown menu (Note, Low, Medium, High or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field. This field is recommended to reduce your results, but not required. 
 * Choose a **Vulnerability Type** (rule name) from the dropdown menu. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count. This field is recommended to reduce your results, but not required. 
 * Choose from the list of **Vulnerability Statuses**. Statuses aren't required, but can be helpful if you want to exclude vulnerabilities with certain statuses - for example, "Not a Problem" - from the results. If you don't select any statuses, the plugin won't filter vulnerabilities by statuses.
 
@@ -53,12 +53,14 @@ You can add as many rules as you like. The plugin fails on the **first** bad con
 
 Complete the following fields for **Post-Build Actions**.
 
-* Select a **Profile** from the dropdown.
+* Select a **Connection** from the dropdown.
 * Select **Query vulnerabilities by**. By default, the plugin uses the first option: "appVersionTag, format: applicationId-buildNumber". 
 * If the profile is configured to allow the global threshold conditions to be overridden, you can choose to do so.
-* Select the **Application Id** from the dropdown menu. This field is **required**.
-* If you chose to override the global threshold conditions, fill in the rest of the fields, including **Count**,
- **Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global threshold conditions described above.
+* Choose your application. This field is **required**.
+    * If your application has been instrumented, select your application from the **Choose your application** dropdown.
+    * If your application has not yet been instrumented, define your application using the **Application Name** and **Application Language** fields.
+* If you chose to override the global threshold conditions, fill in the rest of the fields, including **Number of Allowed Vulnerabilities**,
+ **Vulnerability Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global threshold conditions described above.
 
 <a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
 
@@ -76,6 +78,12 @@ contrastVerification applicationId: '1e6ad9c6-89d4-4f06-bdf6-92c569ec89de', coun
 
 ```
 contrastVerification applicationId: '1e6ad9c6-89d4-4f06-bdf6-92c569ec89de', count: 1, profile: 'new-profile', queryBy: 4, appVersionTag: 'v1.2.3' rule: 'cache-controls-missing', severity: 'High'
+```
+
+#### Example pipeline step using applicationName and AgentType to define the application:
+
+```
+contrastVerification applicationName: 'MyApp', agentType: 'Java', count: 1, profile: 'new-profile', queryBy: 3, rule: 'cache-controls-missing', severity: 'High'
 ```
 
 ## Test for Vulnerabilities
