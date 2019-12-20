@@ -11,7 +11,7 @@ tags: "tools Jenkins SDK Integration Java"
 
 ## Use the Plugin
 
-You can view the plugin code in Jenkins' [Github repository](https://github.com/jenkinsci/contrast-continuous-application-security-plugin). In the Jenkins dashboard, go to **Manage Jenkins** in the left sidebar, and select the **Configure System** page to find the "Contrast TeamServer" profiles section.
+You can view the plugin code in Jenkins' [Github repository](https://github.com/jenkinsci/contrast-continuous-application-security-plugin). In the Jenkins dashboard, go to **Manage Jenkins** in the left sidebar, and select the **Configure System** page to find the Contrast Connections section.
 
 ### Contrast API settings
 
@@ -31,7 +31,7 @@ section for more details.)
 
 #### Test the connection
 
-When you add a Contrast profile, use the **Test TeamServer Connection** button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful, or gives an error message if it fails.
+When you add a Contrast profile, use the **Test Contrast Connection** button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful, or gives an error message if it fails.
 
 ### Global threshold conditions
 
