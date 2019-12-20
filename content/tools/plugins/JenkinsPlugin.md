@@ -4,7 +4,7 @@ description: "Sample Jenkins plugin using the Contrast Java SDK"
 tags: "tools Jenkins SDK Integration Java"
 -->
 
-[Jenkins](https://jenkins.io/) is a continuous integration (CI) application that can be used to build, deploy and run applications. The Contrast Jenkins Plugin is a tool for integrating Contrast with your Jenkins CI instance. You can use it to test your connection to Contrast and verify your build with threshold conditions.
+[Jenkins](https://jenkins.io/) is a continuous integration (CI) application that can be used to build, deploy and run applications. The Contrast Jenkins Plugin is a tool for integrating Contrast with your Jenkins CI instance. You can use it to test your connection to Contrast and verify your build with threshold conditions (Contrast Vulnerability Security Controls).
 
 ## Requirements
 * Jenkins Version >= 2.60.3
@@ -25,7 +25,7 @@ Contrast API settings enable the plugin to connect to Contrast and query for res
 * Enter the [Organization ID](admin-orgsettings.html#apikey). Go to the **user menu > Organization Settings > API tab** to find the Organization UUID of the configured user in the Contrast UI. (You can also copy it from the URL after logging in to the Contrast UI.) 
 * Choose the **Result of a vulnerable build** from the dropdown menu. 
 * Check the box to fail a build if the **application is not found** in the Contrast application. 
-* Choose to allow global threshold conditions to be overridden in post-build actions. (See the **Global threshold conditions**
+* Choose to allow global Contrast Vulnerability Security Controls to be overridden in post-build actions. (See the **Contrast Vulnerability Security Controls**
 section for more details.)
 * Click the **Apply** button to save the profile settings.
 
@@ -33,9 +33,9 @@ section for more details.)
 
 When you add a Contrast profile, use the **Test Contrast Connection** button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful, or gives an error message if it fails.
 
-### Global threshold conditions
+### Global Contrast Vulnerability Security Controls (VSC)
 
-Once a connection is made, complete the following fields for **Contrast Vulnerability Threshold Conditions**. 
+Once a connection is made, complete the following fields for **Contrast Vulnerability Security Controls**. 
 
 * Select a **Connection** from the dropdown.
 * Set the **Number of Allowed Vulnerabilities**. The number is exclusive; if you set a count for "5", it fails on six or more vulnerabilities. This field is **required**.
@@ -43,28 +43,28 @@ Once a connection is made, complete the following fields for **Contrast Vulnerab
 * Choose a **Vulnerability Type** (rule name) from the dropdown menu. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count. This field is recommended to reduce your results, but not required. 
 * Choose from the list of **Vulnerability Statuses**. Statuses aren't required, but can be helpful if you want to exclude vulnerabilities with certain statuses - for example, "Not a Problem" - from the results. If you don't select any statuses, the plugin won't filter vulnerabilities by statuses.
 
-<a href="assets/images/Jenkins_global_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_global_threshold_condition.png"/></a>
+<a href="assets/images/Jenkins_global_threshold_condition.png" rel="lightbox" title="VSC configuration"><img class="thumbnail" src="assets/images/Jenkins_global_threshold_condition.png"/></a>
 
 You can add as many rules as you like. The plugin fails on the **first** bad condition and tells you on which condition it failed.
 
 >**Note**: Even if your build succeeds, the plugin fails the overall build if the test finds a bad condition.
 
-### Threshold conditions in a post-build action
+### Contrast Vulnerability Security Controls in a post-build action
 
 Complete the following fields for **Post-Build Actions**.
 
 * Select a **Connection** from the dropdown.
 * Select **Query vulnerabilities by**. By default, the plugin uses the first option: "appVersionTag, format: applicationId-buildNumber". 
-* If the profile is configured to allow the global threshold conditions to be overridden, you can choose to do so.
+* If the connection is configured to allow the global VSCs to be overridden, you can choose to do so.
 * Choose your application. This field is **required**.
     * If your application has been instrumented, select your application from the **Choose your application** dropdown.
     * If your application has not yet been instrumented, define your application using the **Application Name** and **Application Language** fields.
-* If you chose to override the global threshold conditions, fill in the rest of the fields, including **Number of Allowed Vulnerabilities**,
- **Vulnerability Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global threshold conditions described above.
+* If you chose to override the global VSCs, fill in the rest of the fields, including **Number of Allowed Vulnerabilities**,
+ **Vulnerability Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global VSCs described above.
 
-<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="VSC configuration"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
 
-### Threshold conditions in a Pipeline step
+### Contrast Vulnerability Security Controls in a Pipeline step
 
 When you add a Pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements.
 
