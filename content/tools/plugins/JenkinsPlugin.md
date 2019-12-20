@@ -62,7 +62,11 @@ Complete the following fields for **Post-Build Actions**.
 * If you chose to override the global VSCs, fill in the rest of the fields, including **Number of Allowed Vulnerabilities**,
  **Vulnerability Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global VSCs described above.
 
-<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="VSC configuration"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="VSC configuration with application"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+
+---
+
+<a href="assets/images/Jenkins_build_appName.png" rel="lightbox" title="VSC configuration with application name"><img class="thumbnail" src="assets/images/Jenkins_build_appName.png"/></a>
 
 ### Contrast Vulnerability Security Controls in a Pipeline step
 
