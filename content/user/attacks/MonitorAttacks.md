@@ -24,11 +24,11 @@ If an attacker is identified by a [source name](admin-ipmgmt.html#source-name), 
 
 ### Attack events
 
-The Attack Events column displays a list of the types of attacks detected, along with the total number of attack events per type. The bar below each attack type shows a breakdown of the attack events by result, such as exploited (red) or blocked (green).
+The Attack Events column displays a list of the types of attacks detected, along with the total number of attack events per type. The bar below each attack type shows a breakdown of the attack events by result, such as Exploited (red) or Blocked (green).
 
 ### Target applications
 
-In the Target Applications column, Contrast shows each application that has been targeted by an attack. The bar below each application shows a breakdown of the attack events by result, such as exploited (red) or blocked (green). Click on the total number of applications to see the data in the [Attacks](user-attacks.html#analyze-attacks) grid. Click on an application to see a filtered view in the **Attack Events** grid. 
+In the Target Applications column, Contrast shows each application that has been targeted by an attack. The bar below each application shows a breakdown of the attack events by result, such as Exploited (red) or Blocked (green). Click on the total number of applications to see the data in the [Attacks](user-attacks.html#analyze-attacks) grid. Click on an application to see a filtered view in the **Attack Events** grid. 
 
 ## Attack Details
 
