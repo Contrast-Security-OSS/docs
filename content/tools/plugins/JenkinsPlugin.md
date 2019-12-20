@@ -17,7 +17,7 @@ You can view the plugin code in Jenkins' [Github repository](https://github.com/
 
 Contrast API settings enable the plugin to connect to Contrast and query for results. The plugin leverages these result to authenticate to Contrast and make API calls in post-build actions. Among the following requirements, you'll need a unique profile name to identify your configuration and use it in a specific job.
 
-<a href="assets/images/Jenkins_ts_profile.png" rel="lightbox" title="Profile configuration"><img class="thumbnail" src="assets/images/Jenkins_ts_profile.png"/></a>
+<a href="assets/images/Jenkins_Contrast_Connection.png" rel="lightbox" title="Profile configuration"><img class="thumbnail" src="assets/images/Jenkins_Contrast_Connection.png"/></a>
 
 * Enter your [Contrast Username](user-account.html#loginpwd). Your username is usually the email address you use for your account in Contrast. 
 * Enter your [Contrast API Key](user-account.html#profile) and [Contrast Service Key](user-account.html#profile). Log in to the Contrast UI, and go to the **user menu > Your Account > Your Keys section** to find both keys.         
@@ -43,7 +43,7 @@ Once a connection is made, complete the following fields for **Contrast Vulnerab
 * Choose a **Vulnerability Type** (rule name) from the dropdown menu. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count. This field is recommended to reduce your results, but not required. 
 * Choose from the list of **Vulnerability Statuses**. Statuses aren't required, but can be helpful if you want to exclude vulnerabilities with certain statuses - for example, "Not a Problem" - from the results. If you don't select any statuses, the plugin won't filter vulnerabilities by statuses.
 
-<a href="assets/images/Jenkins_global_threshold_condition.png" rel="lightbox" title="VSC configuration"><img class="thumbnail" src="assets/images/Jenkins_global_threshold_condition.png"/></a>
+<a href="assets/images/Jenkins_Global_Vulnerability_Security_Control.png" rel="lightbox" title="VSC configuration"><img class="thumbnail" src="assets/images/Jenkins_Global_Vulnerability_Security_Control.png"/></a>
 
 You can add as many rules as you like. The plugin fails on the **first** bad condition and tells you on which condition it failed.
 
@@ -63,7 +63,7 @@ Complete the following fields for **Post-Build Actions**.
  **Vulnerability Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global VSCs described above.
 
 #### Instrumented
-<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="VSC configuration with application"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+<a href="assets/images/Jenkins_build_appId.png" rel="lightbox" title="VSC configuration with application"><img class="thumbnail" src="assets/images/Jenkins_build_appId.png"/></a>
 
 #### Not yet instrumented
 <a href="assets/images/Jenkins_build_appName.png" rel="lightbox" title="VSC configuration with application name"><img class="thumbnail" src="assets/images/Jenkins_build_appName.png"/></a>
