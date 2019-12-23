@@ -6,15 +6,39 @@ tags: "3.6.11 December Release Notes"
 
 ## Bug Fixes
 
-* Taaa
+* Assess and Protect were not detecting the following accurately: XML External Entities, SQL Injection, Cross-Site Scripting, Secure Cookies, and Command Injection.
 
-* bbb
+* Probe events were being reported to security/syslog logger as a result of inputs getting classified as `WORTH_WATCHING`(SUP-838)  
 
+* Unvalidated redirects were not caught through Express. (SUP-842) 
+
+* DotNet Framework was reporting false positive against New Relic agent.
+
+* Logging to stdout was required for communications with Contrast.
+
+* Dependency on concurrent-ruby conflicted with some versions of Rails.
+
+* Agent startup time made startups unreliable in Heroku and Pivotal Cloud Foundry deployment environments.
+
+* Third party gems that override core functionality of the Class, Module, and Object classes, including FactoryBot and Rollbar were blocking compatibility.
 
 ## New and Improved Features
 
-* a
-** bb
+* Now you can automatically verify when a vulnerability is remediated! Go to Organization Settings >  Vulnerability Management to enable auto-verification per application, per rule type, and by environment. See <link to RBAV docs> for more details on usage. 
+
+* There is a new report type that you can generate from an application’s details page. The “Attestation Report” is a PDF report with new formatting and includes information about the applications open and closed vulnerabilities, open source security status, and route coverage information. See <link to Attestation docs page> for more details. 
+
+* Improved logging for containerized applications
+** Accuracy increased for both Assess and Protect. 
+** Configuring an agent to log in to a console stream no longer produces an additional log file. 
+
+* Assess data flow accuracy improved for Java 11 applications. 
+
+* Route Coverage for Struts 2 applications now supported. 
+
+* The Node.js agent provides support for the Team Server route-based auto-verification feature.
+
+* Instrumented methods now allow improved dataflow detection through File and Regex creation and usage.
 
 
 
@@ -22,58 +46,15 @@ tags: "3.6.11 December Release Notes"
 
 ### Java Agent Summary
 
-The Java team worked to **improve accuracy in Assess** for this release in these areas:
-
-* Detecting XSS attacks on Java Servlet applications
-
-* Detecting SSRF attacks
-
-* When using Java 11
-
-The team also made **improvements for reporting and troubleshooting,** as well as smaller bug fixes. These include:
-
-* Clarified usage of the *max_stack_depth* property and improved reporting of the error that occurs when it is misconfigured.
-
-* Added a heartbeat message to help administrators diagnose Contrast Protect syslog connectivity.
-
-### .NET agent summaries
-
-The team **improved sensitive data masking** for cookies and assured **higher accuracy for Path Traversal rules** in Protect. 
-
-#### .NET Framework 
-
-The team **improved route-based coverage** across the board to more accurately discover and observe routes for different routing configurations. They also fixed the following bugs:
-
-* Error logging bug when the agent had a problem discovering applications hosted on IIS
-
-* The agent could produce an invalid IL code for applications that were re-deployed dozens and dozens of times without a server restart.
-
-#### .NET Core
-
-The Contrast .NET Core agent now supports Linux (Ubuntu, Debian, openSUSE)! See https://docs.contrastsecurity.com/installation-netcoresupport.html 
-
-The team also added a feature to capture and report the HTTP POST body for vulnerabilities and attacks.
+The Java team focused on accuracy fixes and improvements for both Assess and Protect.
 
 ### Node.js summary 
 
-The Node team is pleased to announce **full support for NodeJS** version 12 LTS.
-
-The team also implemented **route-based auto-verification** (RBAV) functionality for the agent. RBAV will be fully released and functional when our main products also complete server implementation for route-based auto-verification.
-
-We fixed how Assess reports relevant findings from malicious cookies for the Koa framework.
+Pending end of support for Node.js 8 As per Node.js LTS policy, support for node.js 8 will be deprecated in the January agent release.
 
 ### Ruby summary 
 
-The Ruby team focused on **language compatibility** to ensure the agent adheres to best practices and works alongside common dependencies. In particular, the team addressed an incompatibility with FactoryBot, allowing the agent to run with the gem installed. The team also fixed an incompatibility with the 2.6 base image on Heroku, so the agent can once again be installed in that environment.
+The Ruby team focused on third party compatibility this month, specifically with those gems which undefine or redefine the signature of core methods, including const_defined? and other constant accessors. 
 
-In addition, updates to Contrast Service runner assure startup in all supported installations, as well as improved interoperability for applications running in multiple processes.
+In addition, updates have been made to the Contrast Service runner, allowing for the detection and cessation of zombie processes. Also, startup time was improved to reduce the likelihood of timeouts when installed in applications running in Heroku or Pivotal Cloud Foundry pipelines.
 
-The team also implemented route-based auto-verification (RBAV), slated for full release later this year.
-
-### Python summary
-
-The Python team released the Python Assess beta and continues to add features and stability improvements. 
-
-The team also improved the agent’s SQLAlchemy support and request body handling. The agent now logs its configuration and log file locations to stdout on initialization. The team fixed several issues surrounding its communication with the Contrast Service, enabling the agent to use the latest version of the Service (2.3.0) by default.
-
-Additional improvements include PyCassa support for SQL injection and updates to internal testing and packaging.
