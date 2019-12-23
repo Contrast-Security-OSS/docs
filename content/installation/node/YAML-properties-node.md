@@ -79,6 +79,23 @@ All properties in this section must be put under the `agent` node, as shown in t
     * **path:** Set the location to which to save the agent artifact before installation. <br> Example: */tmp/contrast/*
     * **timeout_ms**: Set the length of time to wait before aborting the auto-update attempt.
 
+#### Contrast Service
+
+The following properties are used by the Contrast Service.
+
+* **service**:
+  * **enable**: Set to `false` to disallow the service to be started, and effectively disable the agent, if read by the service. If the agent reads this property, it disallows service auto-start. **Required.**
+  * **socket**: If this property is defined, the service is listening on a Unix socket at the defined path. <br> Example: /tmp/service.sock
+  * **host**: Set the the hostname or IP address of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `localhost`
+  * **port**: Set the the port of the Contrast service to which the Contrast agent should report. **Required.** <br> Example: `30555`
+
+##### Logger
+
+The following properties are used by the logger in the Contrast service. If the properties are not defined, the service uses the logging values from the Contrast UI.
+
+  * **logger**:
+    * **path**: Set the location to which the Contrast service saves log output. If no log file exists at this location, the service creates one. <br> Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
+    * **level**: Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
 
 #### Diagnostic logging
 
