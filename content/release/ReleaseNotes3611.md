@@ -28,21 +28,13 @@ tags: "3.6.11 December Release Notes"
 
 * When Protect is set to “Monitor mode” for Regex DOS, Padding Oracle and Zip File Overwrite rules, attack events will now be reported as "Suspicious" instead of "Exploited". This means there is suspicious activity but not a confirmed exploit.
 
-* Now Contrast can **[]automatically verify a remediated vulnerability]().** Go to Organization Settings > Vulnerability Management to enable auto-verification by application, rule type, and environment. 
+* Now Contrast can **[automatically verify a remediated vulnerability]().** Go to Organization Settings > Vulnerability Management to enable auto-verification by application, rule type, and environment. 
 
 * The [Attestation Report]() is now available as a PDF from an application's details page. It is formatted to include information about the application's open and closed vulnerabilities, open source security status, and route coverage information. 
 
-* Improved logging for containerized applications
-** Accuracy increased for both Assess and Protect. 
-** Configuring an agent to log in to a console stream no longer produces an additional log file. 
+* Java agent increased accuracy for both Assess and Protect and improved logging for containerized applications.  
 
-* Assess data flow accuracy improved for Java 11 applications. 
-
-* Route Coverage for Struts 2 applications now supported. 
-
-* The Node.js agent provides support for the Team Server route-based auto-verification feature.
-
-* Instrumented methods now allow improved dataflow detection through File and Regex creation and usage.
+* For Ruby agent, instrumented methods now allow improved dataflow detection through File and Regex creation and usage.
 
 
 
@@ -50,15 +42,18 @@ tags: "3.6.11 December Release Notes"
 
 ### Java Agent Summary
 
-The Java team focused on accuracy fixes and improvements for both Assess and Protect.
+Java agent improved accuracy and user experience:
+* Configured an agent to log in to a console stream no longer produces an additional log file. 
+* Assessed data flow accuracy improved for Java 11 applications.  
+* Route Coverage for Struts 2 applications is now supported. 
 
-### Node.js summary 
+### Node.js Agent Summary 
 
-Pending end of support for Node.js 8 As per Node.js LTS policy, support for node.js 8 will be deprecated in the January agent release.
+The Node.js agent now supports the new feature to auto-verify remediations. **Note:** Pending end of support for Node.js 8 As per Node.js LTS policy, support for Node.js 8 will be deprecated in the January agent release. 
 
-### Ruby summary 
+### Ruby Agent Summary 
 
-The Ruby team focused on third party compatibility this month, specifically with those gems which undefine or redefine the signature of core methods, including const_defined? and other constant accessors. 
+The Ruby agent now supports the new feature to auto-verify remediations. We also focused on third-party compatibility this month, specifically with those gems which undefine or redefine the signature of core methods, including const_defined? and other constant accessors. 
 
-In addition, updates have been made to the Contrast Service runner, allowing for the detection and cessation of zombie processes. Also, startup time was improved to reduce the likelihood of timeouts when installed in applications running in Heroku or Pivotal Cloud Foundry pipelines.
+In addition, updates have been made to the Contrast Service runner, allowing for the detection and cessation of zombie processes. 
 
