@@ -6,27 +6,31 @@ tags: "3.6.11 December Release Notes"
 
 ## Bug Fixes
 
-* Assess and Protect were not detecting the following accurately: XML External Entities, SQL Injection, Cross-Site Scripting, Secure Cookies, and Command Injection.
+* Assess and Protect did not accurately detect XML External Entities, SQL Injection, Cross-Site Scripting, Secure Cookies, and Command Injection.
 
-* Probe events were being reported to security/syslog logger as a result of inputs getting classified as `WORTH_WATCHING`(SUP-838)  
+* Node probe events reported to security/syslog logger as a result of inputs getting classified as "worth_watching."
 
-* Unvalidated redirects were not caught through Express. (SUP-842) 
+* Node agent didn't catch unvalidated redirects through the Express webserver.
 
-* DotNet Framework was reporting false positive against New Relic agent.
+* .NET Framework agent reported false positives against the New Relic agent.
 
-* Logging to stdout was required for communications with Contrast.
+* .NET Core agent logged to stdout for communications with Contrast.
 
-* Dependency on concurrent-ruby conflicted with some versions of Rails.
+* Ruby agent depended on concurrent-ruby that conflicted with some versions of Rails.
 
-* Agent startup time made startups unreliable in Heroku and Pivotal Cloud Foundry deployment environments.
+* Ruby agent startup time was not reliable in Heroku and Pivotal Cloud Foundry deployment environments.
 
-* Third party gems that override core functionality of the Class, Module, and Object classes, including FactoryBot and Rollbar were blocking compatibility.
+* Ruby agent third-party gems overrode core functionality of the Class, Module, and Object classes, including FactoryBot and Rollbar.
 
 ## New and Improved Features
 
-* Now you can automatically verify when a vulnerability is remediated! Go to Organization Settings >  Vulnerability Management to enable auto-verification per application, per rule type, and by environment. See <link to RBAV docs> for more details on usage. 
+* We released the **[Microsoft Teams Integration](admin-orgintegrations.html#microsoftteams).**
 
-* There is a new report type that you can generate from an application’s details page. The “Attestation Report” is a PDF report with new formatting and includes information about the applications open and closed vulnerabilities, open source security status, and route coverage information. See <link to Attestation docs page> for more details. 
+* When Protect is set to “Monitor mode” for Regex DOS, Padding Oracle and Zip File Overwrite rules, attack events will now be reported as "Suspicious" instead of "Exploited". This means there is suspicious activity but not a confirmed exploit.
+
+* Now Contrast can **[]automatically verify a remediated vulnerability]().** Go to Organization Settings > Vulnerability Management to enable auto-verification by application, rule type, and environment. 
+
+* The [Attestation Report]() is now available as a PDF from an application's details page. It is formatted to include information about the application's open and closed vulnerabilities, open source security status, and route coverage information. 
 
 * Improved logging for containerized applications
 ** Accuracy increased for both Assess and Protect. 
