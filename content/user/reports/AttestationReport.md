@@ -29,7 +29,7 @@ In the dialog that appears, define the **Vulnerabilities**, **Environments** and
 
 <a href="assets/images/Attestation-report-dialog.png" rel="lightbox" title="Menu of saved reports"><img class="thumbnail" src="assets/images/Attestation-report-dialog.png"/></a> 
 
-###Filter options
+### Filter options
 
 Each report defaults to all vulnerabilities and environments, but you can filter them by clicking in the fields. Choose an option from Security Standards to include an additional **Security Standards** section in the generated report. Optionally, you can choose to include detailed information about open vulnerabilities.
 
