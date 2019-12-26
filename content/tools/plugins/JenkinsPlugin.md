@@ -38,7 +38,7 @@ tags: "tools Jenkins SDK Integration Java"
 11. Click the **Test Contrast Connection** button to make sure that the plugin will be able to authenticate to Contrast and retrieve information about your applications' vulnerabilities.
 
 
-### Defining Vulnerability Security Controls (Global Scope)
+### Defining Vulnerability Security Controls (System Level)
 
 Once a connection is defined, complete the following fields in the **Contrast Vulnerability Security Controls** section.
 
@@ -59,9 +59,9 @@ You can add as many rules as you like. The plugin fails on the **first** bad con
 >**Note**: Even if your build succeeds, the plugin fails the overall build if the test finds a bad condition.
 
 
-### Defining Vulnerability Security Controls (Job Scope)
+### Defining Vulnerability Security Controls (Job Level)
 
-You have now created a connection and defined criteria for determining whether your application is too vulnerable at the Jenkins Global Level. You will now add an application security gate to your Jenkins job.
+You have now created a connection and defined criteria for determining whether your application is too vulnerable at the Jenkins System Level. You will now add an application security gate to your Jenkins job.
 
 Complete the following fields for the **Post-Build Actions** section in the definition of your job.
 
