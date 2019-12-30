@@ -10,11 +10,11 @@ Generate timestamped PDF reports of security issues that Contrast has identified
 
 To create a report, go to the Applications page and select an application. Click the **Generate Security Standards Report** icon located at the top of the application's **Overview** page.
 
-<a href="assets/images/Compliance-report-generate.png" rel="lightbox" title="Generate a compliance report from the application Overview"><img class="thumbnail" src="assets/images/Compliance-report-generate.png"/></a>
+<a href="assets/images/Security-standards-report-menu.png" rel="lightbox" title="Generate a compliance report from the application Overview"><img class="thumbnail" src="assets/images/Security-standards-report-menu.png"/></a>
 
 In the dialog that appears, choose the **Report Type**, **Vulnerability Status/Severity** and **Vulnerability Tag** that you want to include in the report, and click **Generate**. Once generated, the report will download automatically.
 
-<a href="assets/images/GenerateReport2.png" rel="lightbox" title="Generate Report Dialog"><img class="thumbnail" src="assets/images/GenerateReport2.png"/></a> 
+<a href="assets/images/Generate-security-report.png" rel="lightbox" title="Generate Report Dialog"><img class="thumbnail" src="assets/images/Generate-security-report.png"/></a> 
 
 ## Report Content
 
