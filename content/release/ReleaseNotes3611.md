@@ -28,9 +28,9 @@ tags: "3.6.11 December Release Notes"
 
 * When Protect is set to “Monitor mode” for Regex DOS, Padding Oracle and Zip File Overwrite rules, attack events will now be reported as "Suspicious" instead of "Exploited". This means there is suspicious activity but not a confirmed exploit.
 
-* Now Contrast can **[automatically verify a remediated vulnerability]().** Go to Organization Settings > Vulnerability Management to enable auto-verification by application, rule type, and environment. 
+* Now Contrast can **[automatically verify a remediated vulnerability](admin-policymgmt.html#vuln-mgmt).** Go to Organization Settings > Vulnerability Management to enable auto-verification by application, rule type, and environment. 
 
-* The [Attestation Report]() is now available as a PDF from an application's details page. It is formatted to include information about the application's open and closed vulnerabilities, open source security status, and route coverage information. 
+* The **[Attestation Report](user-reports.html#attestation)** is now available as a PDF from an application's details page. It is formatted to include information about the application's open and closed vulnerabilities, open source security status, and route coverage information. 
 
 * Java agent increased accuracy for both Assess and Protect and improved logging for containerized applications.  
 
