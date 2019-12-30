@@ -4,65 +4,90 @@ description: "Sample Jenkins plugin using the Contrast Java SDK"
 tags: "tools Jenkins SDK Integration Java"
 -->
 
-[Jenkins](https://jenkins.io/) is a continuous integration (CI) application that can be used to build, deploy and run applications. The Contrast Jenkins Plugin is a tool for integrating Contrast with your Jenkins CI instance. You can use it to test your connection to Contrast and verify your build with threshold conditions.
+[Jenkins](https://jenkins.io/) is a continuous integration (CI) tool that can be used to automate the building, testing, deploying, and running of applications. With the Contrast plugin for Jenkins, you can add application security gates to fail your Jenkins job if your application is deemed too vulnerable. The plugin allows to to define these criteria. You can view the plugin source code in the Jenkins [Github repository](https://github.com/jenkinsci/contrast-continuous-application-security-plugin). 
+
 
 ## Requirements
 * Jenkins Version >= 2.60.3
 
-## Use the Plugin
 
-You can view the plugin code in Jenkins' [Github repository](https://github.com/jenkinsci/contrast-continuous-application-security-plugin). In the Jenkins dashboard, go to **Manage Jenkins** in the left sidebar, and select the **Configure System** page to find the "Contrast TeamServer" profiles section.
+## Getting Started - Defining a Connection
 
-### Contrast API settings
+0. In your Jenkins dashboard, go to **Manage Jenkins** in the left sidebar. 
 
-Contrast API settings enable the plugin to connect to Contrast and query for results. The plugin leverages these result to authenticate to Contrast and make API calls in post-build actions. Among the following requirements, you'll need a unique profile name to identify your configuration and use it in a specific job.
+0. Select the **Configure System** page to find the _Contrast Connections_ section.
 
-<a href="assets/images/Jenkins_ts_profile.png" rel="lightbox" title="Profile configuration"><img class="thumbnail" src="assets/images/Jenkins_ts_profile.png"/></a>
+    <a href="assets/images/Jenkins_Contrast_Connection.png" rel="lightbox" title="Profile configuration"><img class="thumbnail" src="assets/images/Jenkins_Contrast_Connection.png"/></a>
 
-* Enter your [Contrast Username](user-account.html#loginpwd). Your username is usually the email address you use for your account in Contrast. 
-* Enter your [Contrast API Key](user-account.html#profile) and [Contrast Service Key](user-account.html#profile). Log in to the Contrast UI, and go to the **user menu > Your Account > Your Keys section** to find both keys.         
-* Enter the **Contrast URL** (the API URL to your Contrast instance). Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *https://contrastserver/Contrast/api*). 
-* Enter the [Organization UUID](admin-orgsettings.html#apikey). Go to the **user menu > Organization Settings > API tab** to find the Organization UUID of the configured user in the Contrast UI. (You can also copy it from the URL after logging in to the Contrast UI.) 
-* Choose the **Result of a vulnerable build** from the dropdown menu. 
-* Check the box to fail a build if the **application is not found** in the Contrast application. 
-* Choose to allow global threshold conditions to be overridden in post-build actions. (See the **Global threshold conditions**
-section for more details.)
-* Click the **Apply** button to save the profile settings.
+0.  Enter your [Contrast Username](user-account.html#loginpwd). Your username is usually the email address you use for your account in Contrast. 
 
-#### Test the connection
+0. Enter your [Contrast API Key](user-account.html#profile) and [Contrast Service Key](user-account.html#profile), obtainable from the **Your Account > Profile > Your Keys** section of your Contrast instance.        
 
-When you add a Contrast profile, use the **Test TeamServer Connection** button to test your connection and make sure that all the fields are accurate. Contrast prompts you if the test is successful, or gives an error message if it fails.
+0. Enter your **Contrast URL** (the API URL to your Contrast instance). Use *https://app.contrastsecurity.com/Contrast/api* if you're a SaaS customer; all others use the URL of your Contrast UI (e.g., *https://contrastserver/Contrast/api*).
 
-### Global threshold conditions
+0. Enter your [Organization ID](admin-orgsettings.html#apikey), also obtainable from the **Your Account > Profile > Your Keys** section of your Contrast instance.
 
-Once a connection is made, complete the following fields for **Contrast Vulnerability Threshold Conditions**. 
+0. Choose to have Contrast mark your Jenkins job when your application is deemed too vulnerable with one of the following options from the dropdown menu: **Result of a vulnerable build**
 
-* Select a **Profile** from the dropdown.
-* Add a **Count**. The count is exclusive; if you set a count for "5", it fails on six or more vulnerabilities. This field is **required**.
-* Choose a **Severity** from the options in the dropdown menu (Note, Low, Medium, High or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field. This field is recommended to reduce your results, but not required. 
-* Choose a **Vulnerability Type** (rule name) from the dropdown menu. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count. This field is recommended to reduce your results, but not required. 
-* Choose from the list of **Vulnerability Statuses**. Statuses aren't required, but can be helpful if you want to exclude vulnerabilities with certain statuses - for example, "Not a Problem" - from the results. If you don't select any statuses, the plugin won't filter vulnerabilities by statuses.
+0. If your Jenkins instance is not able to find your application, you may choose to have your Jenkins job automatically fail by checking the box: **Fail build if application is not found**
 
-<a href="assets/images/Jenkins_global_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_global_threshold_condition.png"/></a>
+0. In a moment, you will define at the Jenkins _system_ level the criteria that Contrast will use to determine whether your application is too vulnerable. You may elect to have individual jobs overriding your criteria with their own by checking the box **Allow job level application vulnerability security controls to override those controls set here at the system level**. To enforce consistency of criteria across all Jenkins job in your instance, do not check this box.
+
+0. Click the **Apply** button to save your connection information.
+
+0. Click the **Test Contrast Connection** button to make sure that the plugin will be able to authenticate to Contrast and retrieve information about your applications' vulnerabilities.
+
+
+### Defining Vulnerability Security Controls (System Level)
+
+Once a connection is defined, complete the following fields in the **Contrast Vulnerability Security Controls** section.
+
+0. Select a **Connection** you have previously created from the dropdown.
+
+0. Set the **Number of Allowed Vulnerabilities**. The number is exclusive; if you set a count for "5", it fails on six or more vulnerabilities. This field is **required**.
+
+0. Choose a **Vulnerability Severity** from the options in the dropdown menu (Note, Low, Medium, High or Critical). The plugin sets a filter in the API call for all vulnerabilities greater than or equal to this field. This field is recommended to reduce your results, but not required.
+
+0. Choose a **Vulnerability Type** (rule name) from the dropdown menu. If you specify a single rule for which to filter, the plugin checks for the number of vulnerabilities with the rule type and compares it to the count. This field is recommended to reduce your results, but not required. 
+
+0. Choose from the list of **Vulnerability Statuses**. Statuses aren't required, but can be helpful if you want to include only vulnerabilities with certain statuses - for example, "Suspicious" or "Reported" - from the results. If you don't select any statuses, the plugin won't filter vulnerabilities by statuses.
+
+<a href="assets/images/Jenkins_Global_Vulnerability_Security_Control.png" rel="lightbox" title="VSC configuration"><img class="thumbnail" src="assets/images/Jenkins_Global_Vulnerability_Security_Control.png"/></a>
 
 You can add as many rules as you like. The plugin fails on the **first** bad condition and tells you on which condition it failed.
 
 >**Note**: Even if your build succeeds, the plugin fails the overall build if the test finds a bad condition.
 
-### Threshold conditions in a post-build action
 
-Complete the following fields for **Post-Build Actions**.
+### Defining Vulnerability Security Controls (Job Level)
 
-* Select a **Profile** from the dropdown.
-* Select **Query vulnerabilities by**. By default, the plugin uses the first option: "appVersionTag, format: applicationId-buildNumber". 
-* If the profile is configured to allow the global threshold conditions to be overridden, you can choose to do so.
-* Select the **Application Id** from the dropdown menu. This field is **required**.
-* If you chose to override the global threshold conditions, fill in the rest of the fields, including **Count**,
- **Severity**, **Vulnerability Type**, and **Vulnerability Statuses** similarly to the global threshold conditions described above.
+You have now created a connection and defined criteria for determining whether your application is too vulnerable at the Jenkins System Level. You will now add an application security gate to your Jenkins job.
 
-<a href="assets/images/Jenkins_threshold_condition.png" rel="lightbox" title="Threshold condition configuration"><img class="thumbnail" src="assets/images/Jenkins_threshold_condition.png"/></a>
+Complete the following fields for the **Post-Build Actions** section in the definition of your job.
 
-### Threshold conditions in a Pipeline step
+0. Select a **Connection** you have previously created from the dropdown.
+
+0. Choose your application. This field is **required**.
+    * If your application has been instrumented, select your application from the **Choose your application** dropdown.
+    * If your application has not yet been instrumented, enter your application name using the **Application Name** and **Application Language** fields. Provide the same name of your application that you will provide to the Contrast agent when you will instrument your application for the first time in your Jenkins job. You may learn how to instrument your application [here](https://docs.contrastsecurity.com/installation-javaguides.html).
+
+
+#### Instrumented
+<a href="assets/images/Jenkins_build_appId.png" rel="lightbox" title="VSC configuration with application"><img class="thumbnail" src="assets/images/Jenkins_build_appId.png"/></a>
+
+
+#### Not yet instrumented
+<a href="assets/images/Jenkins_build_appName.png" rel="lightbox" title="VSC configuration with application name"><img class="thumbnail" src="assets/images/Jenkins_build_appName.png"/></a>
+
+0. Select **Query vulnerabilities by**. By default, the plugin uses the first option: "appVersionTag, format: applicationId-buildNumber". 
+
+0. If the connection is configured to allow the global VSCs to be overridden, you can choose to do so by checking the next checkbox: "Override Vulnerability Security Controls at the Jenkins system level"
+
+0. If you chose to override the global VSCs, fill in the rest of the fields, including **Number of Allowed Vulnerabilities**,
+ **Vulnerability Severity**, **Vulnerability Type**, and **Vulnerability Statuses**, similar to the global VSCs described above.
+
+
+### Contrast Vulnerability Security Controls in a Pipeline step
 
 When you add a Pipeline step with the name `contrastVerification`, it follows the same principles as the post-build action but in a newer format for Jenkins 2.0 improvements.
 
@@ -76,6 +101,12 @@ contrastVerification applicationId: '1e6ad9c6-89d4-4f06-bdf6-92c569ec89de', coun
 
 ```
 contrastVerification applicationId: '1e6ad9c6-89d4-4f06-bdf6-92c569ec89de', count: 1, profile: 'new-profile', queryBy: 4, appVersionTag: 'v1.2.3' rule: 'cache-controls-missing', severity: 'High'
+```
+
+#### Example pipeline step using applicationName and AgentType to define the application:
+
+```
+contrastVerification applicationName: 'MyApp', agentType: 'Java', count: 1, profile: 'new-profile', queryBy: 3, rule: 'cache-controls-missing', severity: 'High'
 ```
 
 ## Test for Vulnerabilities
