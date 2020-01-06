@@ -57,6 +57,8 @@ cf bind-service (application-name) contrast-security-service
 cf restage (application-name)
 ```
 
+`teamserver_url` should be protocol and hostname only. Please omit `/Contrast/` or `/Contrast/api`.
+
 ## Contrast Service Broker
 
 The Contrast service broker allows Cloud Foundry users to easily bind services to their application and use the Contrast Node agent.
