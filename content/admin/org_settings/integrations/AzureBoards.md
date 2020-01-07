@@ -1,7 +1,7 @@
 <!--
-title: "VSTS Integration"
-description: "Integrating VSTS and TFS with Contrast"
-tags: "Admin organization settings integrations vsts tfs"
+title: "Azure Boards Integration"
+description: "Integrating Azure Boards/VSTS and TFS with Contrast"
+tags: "Admin organization settings integrations vsts azureboards tfs"
 -->
 
 Integrating Visual Studio Team Services (VSTS) or Team Foundation Server (TFS) with Contrast allows you to automatically generate tickets, synchronize comments and push notifications for your applications.
