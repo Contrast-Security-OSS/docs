@@ -15,7 +15,7 @@ If you run Tomcat from *startup.bat*, Contrast suggests creating a new startup s
 * For Windows, use `startup-with-contrast.bat`:
 
 ``` sh
-set CATALINA_OPTS="%CATALINA_OPTS% -javaagent:${DOWNLOADS}\contrast.jar"
+set "CATALINA_OPTS=%CATALINA_OPTS% -javaagent:${DOWNLOADS}\contrast.jar"
 call ${TOMCAT_DIR} \bin\startup.bat
 ```
 
@@ -30,7 +30,7 @@ Of course, you need to substitute the path to *contrast.jar* and your Tomcat ser
 
 ## Run Contrast from "setenv.bat"
 
-Alternatively, if you have a *setenv.bat* or *setenv.sh* file as recommended by Tomcat, add the `-javaagent` configuration in that file in `CATALINA_OPTS`.
+Alternatively (recommended), if you have a *setenv.bat* or *setenv.sh* file as recommended by Tomcat, add the `-javaagent` configuration in that file in `CATALINA_OPTS`.
 
 ## Run Contrast on the Tomcat service in Windows
 
