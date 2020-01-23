@@ -24,3 +24,10 @@ To connect in Contrast:
 
 You are connected!
 
+To test the integration:
+
+1. Navigate to the **Notifications** tab under **Organization Settings**
+1. In the drop-down just under the **Integrations** column heading, select the Slack integration name that you just set up (if it isn't already)
+1. For each **Subscription** (event type) you'd like to be notified of, turn on the switch in the **Integrations** column.
+1. Cause any of those event types to occur, and be sure you get a notification in the Slack channel you specified.
+
