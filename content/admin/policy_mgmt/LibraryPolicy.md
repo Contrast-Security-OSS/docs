@@ -33,4 +33,4 @@ The license policy lists open source licenses in SPDX format, listed by short id
 
 <!-- screenshot -->
 
-License policy is only available with a Contrast OSS license. Contact support if you want access to this feature.
+License policy is available to OSS customers only. Contact your Organization Admin to enable OSS.
