@@ -1,16 +1,16 @@
 <!--
-title: "Library Licenses"
-description: "View library licenses in the UI"
-tags: "user library licenses vulnerabilities sca"
+title: "Open Source Licenses"
+description: "View open source licenses in the UI"
+tags: "user open source licenses vulnerabilities sca"
 -->
 
 
 <!-- ## License Libraries 
 How do you provision licenses if you've paid for them? Like normal licenses in Org Settings? -->
 
-## View Library Licenses
+## View Open Source Licenses
 
-License data is available for your open source libraries in the **Libraries** grid. To view an individual library's license, hover over the library name in the grid. License information is also displayed in the header of a library's **Details** page, which is accessed by clicking on the library name.  Note that licenses are listed in SPDX format.
+License data is available for your open source libraries in the **Libraries** grid. To view an individual library's license, hover over the library name in the grid. License information is also displayed in the header of a library's **Details** page, which is accessed by clicking on the library name. Note that licenses are listed in SPDX format.
 
 <a href="assets/images/Library-license-details-metatdata.png" rel="lightbox" title="View library license information in the Details page"><img class="thumbnail" src="assets/images/Library-license-details-metatdata.png"/></a>
 
