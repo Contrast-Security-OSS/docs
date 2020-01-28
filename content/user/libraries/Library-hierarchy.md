@@ -6,11 +6,11 @@ tags: "user library licenses hierarchy vulnerabilities sca"
 
 ## How It Works
 
-When an open-source library is added to an application, all of the library's dependencies are also inherited. Some of these indirect dependencies may introduce vulnerable code into your applications. The [Contrast SCA tool](tools-cli.html) identifies all open-source libraries and sends the data to the Contrast UI, where you can visualize these libraries as a hierarchical dependency tree.
+When an open source library is added to an application, all of the library's dependencies are also inherited. Some of these indirect dependencies may introduce vulnerable code into your applications. The [Contrast CLI](tools-cli.html) identifies all open source libraries and sends the data to the Contrast UI, where you can visualize these libraries as a hierarchical dependency tree.
 
 ## Before You Start
  
-To display library hierarchy for your application, Contrast must have to access your application code at pre-compile time - a different stage of the software development lifecycle (SDLC) than the Contrast agents collect. To do this, you must have installed and run the [Contrast CLI SCA tool](tools-cli.html) for your applications. 
+To display library hierarchy for your application, Contrast must have to access your application code at pre-compile time - a different stage of the software development lifecycle (SDLC) than the Contrast agents collect. To do this, you must have installed and run the [Contrast CLI](tools-cli.html) for your applications. 
 
 ## View Dependency Trees
 
