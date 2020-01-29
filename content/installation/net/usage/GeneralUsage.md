@@ -26,7 +26,7 @@ Contrast automatically restarts IIS when you install the agent as well as any ti
 
 ### Start the agent 
 
-To start the agent, and consequently enable analysis, complete either of the the following sets of instructions. 
+To start the agent, and consequently enable analysis, complete either of the following sets of instructions. 
 
 #### Option one
 
@@ -41,7 +41,7 @@ To start the agent, and consequently enable analysis, complete either of the the
 
 ### Stop the agent 
 
-To stop the agent, and consequently disable Contrast instrumentation and analysis, complete either of the the following sets of instructions. 
+To stop the agent, and consequently disable Contrast instrumentation and analysis, complete either of the following sets of instructions. 
 
 #### Option one
 
