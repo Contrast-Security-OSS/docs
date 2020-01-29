@@ -25,7 +25,7 @@ Check the **Restrict licenses** box to set a policy on open source licenses that
 
 The license policy lists open source licenses in SPDX format, listed by short identifier and followed by the full name. Any license type that you want to restrict must be selected. Contrast includes any ‘or later’ licenses it identifies in your portfolio. For example, if you restrict by **GPL-3.0-only**, any licenses that are **GPL-3.0-or-later** will be included in that restriction.
 
-<a href="assets/images/Library-restriction.png" rel="lightbox" title="Restrict licenses policy"><img class="thumbnail" src="assets/images/Library-restriction.png"/></a>
+<a href="assets/images/License-restriction.png" rel="lightbox" title="Restrict licenses policy"><img class="thumbnail" src="assets/images/License-restriction.png"/></a>
 
 License policy is available to OSS customers only. Contact your Organization Admin to enable OSS.
 
