@@ -43,8 +43,8 @@ tags: "3.6.11 December Release Notes"
 ### Java Agent Summary
 
 Java agent improved accuracy and user experience:
-* Configured an agent to log in to a console stream no longer produces an additional log file. 
-* Assessed data flow accuracy improved for Java 11 applications.  
+* Configuring an agent to log to a console stream no longer produces an additional log file.
+* Assess data flow accuracy improved for Java 11 applications.  
 * Route Coverage for Struts 2 applications is now supported. 
 
 ### Node.js Agent Summary 
