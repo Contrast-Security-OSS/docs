@@ -1,59 +1,37 @@
 <!--
-title: "Contrast 3.6.11 - December 2019"
-description: "Contrast 3.6.11 December 2019"
-tags: "3.6.11 December Release Notes"
+title: "Contrast 3.7.0 - January 2020"
+description: "Contrast 3.7.0 January 2020"
+tags: "3.7.0 January Release Notes"
 -->
 
 ## Bug Fixes
 
-* Assess and Protect did not accurately detect XML External Entities, SQL Injection, Cross-Site Scripting, Secure Cookies, and Command Injection.
+* Ruby token authentication timed out when running Contrast with Passenger 6.0.
 
-* Node probe events reported to security/syslog logger as a result of inputs getting classified as "worth_watching."
+* Some customers were not able to use RBAV with Python
 
-* Node agent didn't catch unvalidated redirects through the Express webserver.
+* For the Python agent, handle_exception was not raising the original exception. Now it does with the entire stack trace.
 
-* .NET Framework agent reported false positives against the New Relic agent.
-
-* .NET Core agent logged to stdout for communications with Contrast.
-
-* Ruby agent depended on concurrent-ruby that conflicted with some versions of Rails.
-
-* Ruby agent startup time was not reliable in Heroku and Pivotal Cloud Foundry deployment environments.
-
-* Ruby agent third-party gems overrode core functionality of the Class, Module, and Object classes, including FactoryBot and Rollbar.
-
-## New and Improved Features
-
-* We released the **[Microsoft Teams Integration](admin-orgintegrations.html#microsoftteams).**
-
-* When Protect is set to “Monitor mode” for Regex DOS, Padding Oracle and Zip File Overwrite rules, attack events will now be reported as "Suspicious" instead of "Exploited". This means there is suspicious activity but not a confirmed exploit.
-
-* Now Contrast can **[automatically verify a remediated vulnerability](admin-policymgmt.html#vuln-mgmt).** Go to Organization Settings > Vulnerability Management to enable auto-verification by application, rule type, and environment. 
-
-* The **[Attestation Report](user-reports.html#attestation)** is now available as a PDF from an application's details page. It is formatted to include information about the application's open and closed vulnerabilities, open source security status, and route coverage information. 
-
-* Java agent increased accuracy for both Assess and Protect and improved logging for containerized applications.  
-
-* For Ruby agent, instrumented methods now allow improved dataflow detection through File and Regex creation and usage.
-
-
+* Node Agent 2.10.1 was crashing with Express based applications.
 
 ## Agent Updates
 
+## New and Improved Features
+
+PDF Compliance Reports now include the latest Payment Card Industry (PCI) Security Standard version: PCI 3.2.1
+
 ### Java Agent Summary
 
-Java agent improved accuracy and user experience:
-* Configuring an agent to log to a console stream no longer produces an additional log file.
-* Assess data flow accuracy improved for Java 11 applications.  
-* Route Coverage for Struts 2 applications is now supported. 
+Accuracy improved for Assess and Protect, in particular, data flow accuracy for Java 11 applications. Fixed Assess vulnerability reporting for Mulesoft based applications. Added Route Based Auto Verification (RBAV) support and improved configuration error reporting.
 
 ### Node.js Agent Summary 
 
-The Node.js agent now supports the new feature to auto-verify remediations. **Note:** Pending end of support for Node.js 8 As per Node.js LTS policy, support for Node.js 8 will be deprecated in the January agent release. 
+This release includes several performance improvements and fixes. All customers should upgrade to this version.  
+
+### Python Agent Summary 
+
+Improvements are mostly related to Assess. This includes fixes to sqlite3 patching, support for the Assess SSRF rule, RBAV, reporting, and communication with Contrast Service. The agent no longer sends an XSS vulnerability if the response content type is whitelisted. It can also create an XSS vulnerability outside of rendering a template for django, flask, or werkzeug-compliant frameworks.
 
 ### Ruby Agent Summary 
 
-The Ruby agent now supports the new feature to auto-verify remediations. We also focused on third-party compatibility this month, specifically with those gems which undefine or redefine the signature of core methods, including const_defined? and other constant accessors. 
-
-In addition, updates have been made to the Contrast Service runner, allowing for the detection and cessation of zombie processes. 
-
+The Ruby team has focused on internal improvements for this release. We have increased support for our reporting technologies that appear on the Contrast UI when running with Sinatra applications. We now comply with SSRF+CSRF specifications. We reduced namespace pollution for applications no longer running Contrast.
