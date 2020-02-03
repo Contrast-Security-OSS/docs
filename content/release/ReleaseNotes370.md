@@ -6,9 +6,11 @@ tags: "3.7.0 January Release Notes"
 
 ## Bug Fixes
 
+* Fixed Assess vulnerability reporting for Mulesoft based applications. 
+
 * Ruby token authentication timed out when running Contrast with Passenger 6.0.
 
-* Some customers were not able to use RBAV with Python
+* Some customers were not able to use route-based auto-verification with Python
 
 * For the Python agent, handle_exception was not raising the original exception. Now it does with the entire stack trace.
 
@@ -20,9 +22,11 @@ tags: "3.7.0 January Release Notes"
 
 PDF Compliance Reports now include the latest Payment Card Industry (PCI) Security Standard version: PCI 3.2.1
 
+Sensitive data masking is now available for all language agents.
+
 ### Java Agent Summary
 
-Accuracy improved for Assess and Protect, in particular, data flow accuracy for Java 11 applications. Fixed Assess vulnerability reporting for Mulesoft based applications. Added Route Based Auto Verification (RBAV) support and improved configuration error reporting.
+Accuracy improved for Assess and Protect, in particular, data flow accuracy for Java 11 applications. Added route-based auto-verification support and improved configuration error reporting.
 
 ### Node.js Agent Summary 
 
@@ -34,4 +38,4 @@ Improvements are mostly related to Assess. This includes fixes to sqlite3 patchi
 
 ### Ruby Agent Summary 
 
-The Ruby team has focused on internal improvements for this release. We have increased support for our reporting technologies that appear on the Contrast UI when running with Sinatra applications. We now comply with SSRF+CSRF specifications. We reduced namespace pollution for applications no longer running Contrast.
+The Ruby team has focused on internal improvements for this release. We have increased support for our reporting of technologies that appear on the Contrast UI when running with Sinatra applications. We now comply with SSRF+CSRF specifications. We reduced namespace pollution for applications no longer running Contrast.
