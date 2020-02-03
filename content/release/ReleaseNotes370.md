@@ -34,7 +34,7 @@ This release includes several performance improvements and fixes. All customers 
 
 ### Python Agent Summary 
 
-Improvements are mostly related to Assess. This includes fixes to sqlite3 patching, support for the Assess SSRF rule, RBAV, reporting, and communication with Contrast Service. The agent no longer sends an XSS vulnerability if the response content type is whitelisted. It can also create an XSS vulnerability outside of rendering a template for django, flask, or werkzeug-compliant frameworks.
+Improvements are mostly related to Assess. This includes fixes to sqlite3 patching, support for the Assess SSRF rule, auto-verification, reporting, and communication with Contrast Service. The agent no longer sends an XSS vulnerability if the response content type is whitelisted. It can also create an XSS vulnerability outside of rendering a template for django, flask, or werkzeug-compliant frameworks.
 
 ### Ruby Agent Summary 
 
