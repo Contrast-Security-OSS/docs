@@ -10,7 +10,7 @@ tags: "3.7.0 January Release Notes"
 
 * Ruby token authentication timed out when running Contrast with Passenger 6.0.
 
-* Some customers were not able to use route-based auto-verification with Python
+* Some customers were not able to use route-based auto-verification with Python.
 
 * For the Python agent, handle_exception was not raising the original exception. Now it does with the entire stack trace.
 
