@@ -16,13 +16,13 @@ tags: "3.7.0 January Release Notes"
 
 * Node Agent 2.10.1 was crashing with Express based applications.
 
-## Agent Updates
-
 ## New and Improved Features
 
 PDF Compliance Reports now include the latest Payment Card Industry (PCI) Security Standard version: PCI 3.2.1
 
 Sensitive data masking is now available for all language agents.
+
+## Agent Updates
 
 ### Java Agent Summary
 
