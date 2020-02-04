@@ -22,9 +22,11 @@ Contrast supports Ruby Long-Term Support (LTS) versions in **normal maintenance*
 
 ## Web Framework Support
 
-* [Rails](https://rubyonrails.org/) 3.X - 5.X
+* [Rails](https://rubyonrails.org/) 3.X - 6.X
 * [Sinatra](http://sinatrarb.com/) 2.X and up
 
+> **Note:** The agent itself supports Rails through version 6; however, a bug introduced in Rails 6, [issue 37308](https://github.com/rails/rails/issues/37308), may prevent it from properly monkey patching in cases where `eager_load` is enabled. As such, it is recommended for Rails 6 that this configuration be disabled. 
+ 
 While the agent can still run on [Rack](http://rack.github.io/)-based web frameworks that aren't officially supported, Contrast may produce less-specific findings than it does for supported frameworks. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with the Rack methods.
 
 ## Third-Party Module Support
