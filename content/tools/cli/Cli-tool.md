@@ -1,6 +1,6 @@
 <!--
-title: "CLI Tool"
-description: "Instructions for installing the CLI tool for library analysis"
+title: "Contrast CLI"
+description: "Instructions for installing the Contrast CLI for library analysis"
 tags: "tools cli library install"
 -->
   
@@ -8,9 +8,9 @@ Use Contrast's command line interface (CLI) to gather and send information for y
 
 ## How It Works
 
-The Contrast CLI performs software composition analysis (SCA) on your application to show you the dependencies between open source libraries, including where vulnerabilities were introduced. By supplementing existing run time instrumentation from Contrast Agents, with data from pre-compile analysis (not typically available at run time), Contrast can provide a more detailed and comprehensive view of your applications in the Contrast UI.
+The Contrast CLI performs software composition analysis (SCA) on your application to show you the dependencies between open source libraries, including where vulnerabilities were introduced. By supplementing existing run time instrumentation from Contrast agents, with data from pre-compile analysis (not typically available at run time), Contrast can provide a more detailed and comprehensive view of your applications in the Contrast UI.
 
-The steps to successfully and continuously analyse your application are as follows:
+The steps to successfully and continuously analyze your application are as follows:
 
   1. Install the Contrast CLI
   2. Collect credentials which allow the CLI to communicate with the Contrast server
@@ -70,7 +70,7 @@ To identify your credentials, see [Profile Settings](user-account.html#profile).
 
 If your application has already been instrumented by a Contrast agent (recommended), find the [application ID](user-appsmanage.html) within the Contrast UI.
 
-To create a new application within the Contrast UI using the Contrast CLI, use the catalogue-application and application-name options. The output of a successful catalogue operation is an Application ID displayed in the console.                             
+To create a new application within the Contrast UI using the Contrast CLI, use the catalogue-application and application-name options. The output of a successful catalogue operation is an application ID displayed in the console.                             
   Catalogue Command: contrast-cli --catalogue-application --api-key yourApiKey  
   --authorization yourKey --organization yourOrganizationID --host yourHost     
   --application-name yourApplicationName --language app_language
@@ -79,7 +79,7 @@ Note: Allowable language values are JAVA, DOTNET, NODE, PYTHON and RUBY.
 
 ## Authenticate and Analyze 
 
-Once the CLI is installed with a valid set of credentials and a correct Application ID, you can analyze applications and see the results in the Contrast UI. Contrast recommends that SCA is invoked as part of a CI pipeline so that running the SCA is automated as part of your build process. 
+Once the CLI is installed with a valid set of credentials and a correct application ID, you can analyze applications and see the results in the Contrast UI. Contrast recommends that SCA is invoked as part of a CI pipeline so that running the SCA is automated as part of your build process. 
 
 Use the commands shown in the following example to analyze an application: 
 
