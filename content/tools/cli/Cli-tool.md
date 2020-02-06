@@ -8,7 +8,7 @@ Use Contrast's command line interface (CLI) to gather and send information for y
 
 ## How It Works
 
-The Contrast CLI performs software composition analysis (SCA) on your application to show you the dependencies between open source libraries, including where vulnerabilities were introduced. By supplementing existing run time instrumentation from Contrast agents, with data from pre-compile analysis (not typically available at run time), Contrast can provide a more detailed and comprehensive view of your applications in the Contrast UI.
+The Contrast CLI performs software composition analysis (SCA) on your application to show you the dependencies between open source libraries, including where vulnerabilities were introduced. By supplementing existing runtime instrumentation from Contrast agents, with data from pre-compile analysis (not typically available at runtime), Contrast can provide a more detailed and comprehensive view of your applications in the Contrast UI.
 
 The steps to successfully and continuously analyze your application are as follows:
 
@@ -23,7 +23,7 @@ The steps to successfully and continuously analyze your application are as follo
 
 The Contrast CLI may be used to create new application instances within the Contrast server. However, the CLI is typically used to supplement pre-existing applications - those which have been created and instrumented by the appropriate Contrast agent.
 
-Pre-existing applications that have been fully instrumented at run time by a Contrast agent include a rich set of vulnerability and library data within the Contrast UI. For information on how to instrument your application with a Contrast agent, see the following instructions: 
+Pre-existing applications that have been fully instrumented at runtime by a Contrast agent include a rich set of vulnerability and library data within the Contrast UI. For information on how to instrument your application with a Contrast agent, see the following instructions: 
 
  * [Java agent](installation-javastandard.html)
  * [.NET agent](installation-netinstall.html)
