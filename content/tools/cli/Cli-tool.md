@@ -70,7 +70,8 @@ To identify your credentials, see [Profile Settings](user-account.html#profile).
 
 If your application has already been instrumented by a Contrast agent (recommended), find the [application ID](user-appsmanage.html) within the Contrast UI.
 
-To create a new application within the Contrast UI using the Contrast CLI, use the catalogue-application and application-name options. The output of a successful catalogue operation is an application ID displayed in the console.                             
+To create a new application within the Contrast UI using the Contrast CLI, use the catalogue-application and application-name options. The output of a successful catalogue operation is an application ID displayed in the console.
+
   Catalogue Command: contrast-cli --catalogue-application --api-key yourApiKey  
   --authorization yourKey --organization yourOrganizationID --host yourHost     
   --application-name yourApplicationName --language app_language
