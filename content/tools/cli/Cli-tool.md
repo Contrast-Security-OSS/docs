@@ -29,8 +29,8 @@ Pre-existing applications that have been fully instrumented at runtime by a Cont
  * [.NET agent](installation-netinstall.html)
  * [.NET Core agent](installation-netcoreinstall.html)
  * [Node agent](installation-nodeinstall.html)
- * [Python agent](installation-pythoninstall.html)
- * [Ruby agent](installation-rubyinstall.html)
+ * [Python agent](installation-python.html#python-install)
+ * [Ruby agent](installation-ruby.html#ruby-install)
  
 Source code for target applications must be available locally to be examined by the CLI:
 
@@ -109,11 +109,10 @@ cli:
      application_id: app_id
 ```
 
-<!-- 
-### Review 
+## Review 
 
-After you see a SUCCESS message you are now ready to view your dependency tree. (link to library hierarchy) 
--->
+After you see a SUCCESS message, you are ready to [view your dependency tree](user-libraries.html#hierarchy).
+
 
 ## Help 
 
