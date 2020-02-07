@@ -41,6 +41,7 @@ The placeholders available for use are:
 * Environment
 * Vulnerability Rule
 * Vulnerability ID
+* Event Type
 
 If you were using the Generic Webhook to create an integration, the sample payload could be as follows:
 
@@ -58,7 +59,8 @@ If you were using the Generic Webhook to create an integration, the sample paylo
     "Status": "$Status",
     "Vulnerability ID": "$TraceId",
     "Vulnerability Rule": "$VulnerabilityRule",
-    "Environment": "$Environment"
+    "Environment": "$Environment",
+    "Event Type": "EventType"
 }
 ```
  
