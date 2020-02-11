@@ -16,7 +16,7 @@ Contrast supports route coverage for the following frameworks:
 
 * **Java:** Jersey 2, Spring MVC 4, Struts 1, and Struts 2
 * **.NET:** ASP.NET MVC (versions 4 and 5), WebForms, WebAPI and WCF
-* **.NET Core:** ASP.NET Core MVC (versions 2.1 and 2.2) and ASP.NET Core Razor Pages (versions 2.1 and 2.2)
+* **.NET Core:** ASP.NET Core MVC (versions 2.1, 2.2, 3.0 and 3.1) and ASP.NET Core Razor Pages (versions 2.1, 2.2, 3.0 and 3.1)
 * **Node:** Express, Hapi 17+, Koa and Kraken
 * **Ruby:** Rails and Sinatra
 * **Python:** Django, Pyramid and Flask
