@@ -23,7 +23,7 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |                                           |                                      | Java EE/J2EE, Servlet/JSP
 |                                           |                                      | Jersey
 |                                           |                                      | OWASP ESAPI, AntiSamy, Coverity
-|                                           |                                      | Oracle, SQL Server, PostgreSQL, DB2, MySQL JDBC drivers
+|                                           |                                      | Oracle, SQL Server, PostgreSQL, DB2, MySQL, SQLite JDBC drivers
 |                                           |                                      | Seam
 |                                           |                                      | Spring, Spring Boot, Spring AOP
 |                                           |                                      | Struts, Struts 2
