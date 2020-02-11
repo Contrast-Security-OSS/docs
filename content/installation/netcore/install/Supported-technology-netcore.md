@@ -90,8 +90,8 @@ The .NET Core agent supports the following technologies:
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
-| .NET Core Runtime          | 2.1.X, 2.2.X                             |
-| .NET Core Target           | 2.1 (netcoreapp2.1), 2.2 (netcoreapp2.2) |
+| .NET Core Runtime          | 2.1.X, 2.2.X, 3.0.X, 3.1.X                              |
+| .NET Core Target           | 2.1 (netcoreapp2.1), 2.2 (netcoreapp2.2), 3.0 (netcoreapp3.0), 3.1 (netcoreapp3.1) |
 
 > **Note:** .NET Core 2.1.X support requires .NET Core Runtime 2.1.3 or higher due to [a bug in the .NET Core profiling API](https://github.com/dotnet/coreclr/issues/18448).
 
