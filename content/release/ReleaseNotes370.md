@@ -22,6 +22,8 @@ PDF Compliance Reports now include the latest Payment Card Industry (PCI) Securi
 
 Sensitive data masking is now available for all language agents.
 
+Library policy features have been extended to support open source licensing policy. Library dependency tree powered by a new command line interface has been introduced.
+
 ## Agent Updates
 
 ### Java Agent Summary
@@ -30,7 +32,7 @@ Accuracy improved for Assess and Protect, in particular, data flow accuracy for 
 
 ### Node.js Agent Summary 
 
-This release includes several performance improvements and fixes. All customers should upgrade to this version.  
+This release includes several performance improvements and fixes. All customers should upgrade to this version. Node.js version 8 is no longer supported.
 
 ### Python Agent Summary 
 
