@@ -70,29 +70,28 @@ To identify your credentials, see [Profile Settings](user-account.html#profile).
 
 If your application has already been instrumented by a Contrast agent (recommended), find the [application ID](user-appsmanage.html) within the Contrast UI.
 
-To create a new application within the Contrast UI using the Contrast CLI, use the catalogue-application and application-name options. The output of a successful catalogue operation is an application ID displayed in the console.
-
-  Catalogue Command: contrast-cli --catalogue-application --api-key yourApiKey  
-  --authorization yourKey --organization yourOrganizationID --host yourHost     
-  --application-name yourApplicationName --language app_language
+To create a new application within the Contrast UI using the Contrast CLI, use the catalogue-application and --cli_application_name options. The output of a successful catalogue operation is an application ID displayed in the console.
+  
+Catalogue Command: contrast-cli --catalogue-application --cli_api_key yourApiKey 
+--cli_authorization yourKey --cli_organization_id yourOrganizationID --cli_host yourHost 
+--cli_application_name yourApplicationName --cli_language app_language
 
 Note: Allowable language values are JAVA, DOTNET, NODE, PYTHON and RUBY.
 
 ## Authenticate and Analyze 
 
-Once the CLI is installed with a valid set of credentials and a correct application ID, you can analyze applications and see the results in the Contrast UI. Contrast recommends that SCA is invoked as part of a CI pipeline so that running the SCA is automated as part of your build process. 
+Once the CLI is installed with a valid set of credentials and a correct application ID, you can analyze applications and see the results in the Contrast UI. Contrast recommends that the CLI is invoked as part of a CI pipeline so that running it is automated as part of your build process. 
 
 Use the commands shown in the following example to analyze an application: 
 
 ```
 contrast-cli \ 
-
- --api-key someAPIKey \ 
- --authorization someAuthorizationCredentials \ 
- --application-id someApplicationID \ 
- --organization-id someOrganizationID \ 
+ 
+ --cli_api_key someAPIKey \ 
+ --cli_authorization someAuthorizationCredentials \ 
+ --cli_application_id someApplicationID \ 
+ --cli_organization_id someOrganizationID \ 
  --project-path applicationRootDirectory
-
 ```
 Credentials may be placed within a YAML file with the following format:
 
@@ -100,13 +99,13 @@ Credentials may be placed within a YAML file with the following format:
 contrast-cli --yamlPath path/to/yaml
 
 cli:
-     api_key: demo_key
-     application_name: appName
-     authorization: auth_key
-     organization_id: org_id
-     host: host_address
-     language: app_language
-     application_id: app_id
+     cli_api_key: demo_key
+     cli_application_name: appName
+     cli_authorization: auth_key
+     cli_organization_id: org_id
+     cli_host: host_address
+     cli_language: app_language
+     cli_application_id: app_id
 ```
 
 ## Review 
@@ -121,11 +120,11 @@ The CLI includes command line help, including the glossary of commands shown bel
 
 | Command                   | Description                                                                               |
 |---------------------------|-------------------------------------------------------------------------------------------|
-| --api-key string          | An agent API key provided by Contrast UI (**required**)                                 |
-| --authorization string    | Agent Authorization credentials provided by Contrast UI (**required**)                |
-| --organization-id string  | The ID of your organization in Contrast UI (**required**)                                 |
-| --application-id string   | The ID of the application cataloged by Contrast UI (**required**)                          |
-| --host string             | The name of the host and (optionally) the port expressed as `<host>:<port>`; defaults to *app.contrastsecurity.com* (**optional**)|
+| --cli_api_key             | An agent API key provided by Contrast UI (**required**)                                 |
+| --cli_authorization       | Agent Authorization credentials provided by Contrast UI (**required**)                |
+| --cli_organization_id     | The ID of your organization in Contrast UI (**required**)                                 |
+| --cli_application_id      | The ID of the application cataloged by Contrast UI (**required**)                          |
+| --cli_host                | The name of the host and (optionally) the port expressed as `<host>:<port>`; defaults to *app.contrastsecurity.com* (**optional**)|
 | --project-path string     | The directory root of a project/application that you want to analyze; defaults to the current directory (**optional**) |
 | --help                    | Display this usage guide                                                   	 			|
 
