@@ -30,15 +30,37 @@ The placeholders available for use are:
 
 * Title
 * Message
+* Application Name
+* Vulnerability Tags
+* Application ID
+* Server Name
+* Server ID
+* Organization ID
+* Severity
+* Status
+* Environment
+* Vulnerability Rule
+* Vulnerability ID
+* Event Type
 
-If you were using the Generic Webhook to create a VictorOps integration, the sample payload would be as follows:
+If you were using the Generic Webhook to create an integration, the sample payload could be as follows:
 
 ```json
 { 
-	"message_type":"INFO", 
-	"entity_id":"$Title", 
-	"entity_display_name":"$Title", 
-	"state_message":"$Message" 
+    "Title ": "$Title",
+    "Text": "$Message",
+    "Application Name": "$ApplicationName",
+    "Vulnerability Tags": "$VulnerabilityTags",
+    "Application ID": "$ApplicationId",
+    "Server Name": "$ServerName",
+    "Server ID": "$ServerId",
+    "Organization ID": "$OrganizationId",
+    "Severity": "$Severity",
+    "Status": "$Status",
+    "Vulnerability ID": "$TraceId",
+    "Vulnerability Rule": "$VulnerabilityRule",
+    "Environment": "$Environment",
+    "Event Type": "EventType"
 }
 ```
  
