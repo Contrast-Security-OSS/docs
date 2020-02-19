@@ -9,7 +9,7 @@ Set up an integration to automatically send issues to GitHub when Contrast finds
 
 ## Prerequisites
 
-* GitHub account credentials (username and password)
+* GitHub account credentials (username and personal access token). Generating your personal access token information can be found [here](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token). "Repo" scope must be checked. 
 * Access to a GitHub organization and repository for the application
 * Write permission ([push access](https://help.github.com/articles/repository-permission-levels-for-an-organization/)) to the repository <br> (This is required to set labels, milestones and assignees in the configuration form. See the **Setup** section for more information.)
 * A running GitHub instance accessible via HTTP to the Contrast UI
