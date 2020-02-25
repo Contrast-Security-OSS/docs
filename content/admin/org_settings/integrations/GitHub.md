@@ -18,13 +18,13 @@ Set up an integration to automatically send issues to GitHub when Contrast finds
 
 In the **Integrations** page, click **Connect** in the row for GitHub. 
 
-<a href="assets/images/GitHub-test.png" rel="lightbox" title="Test your GitHub integration"><img class="thumbnail" src="assets/images/GitHub-test.png"/></a>
+<a href="assets/images/Github-test.png" rel="lightbox" title="Test your GitHub integration"><img class="thumbnail" src="assets/images/Github-test.png"/></a>
 
 In the **Connect with GitHub** form, add the **name** for the bugtracker entry, the **username** for the account connected to GitHub and the **password** for the specified username in the appropriate fields. The GitHub **URL** must be accessible from the Contrast UI instance being configured. 
 
 Once you complete the fields, click **Test connection**. This process may take a few moments depending on the number of your GitHub organizations and repositories. The test verifies that the GitHub instance can be reached by Contrast and that the specified user is able to log in.
 
-<a href="assets/images/GitHub-integration-set-up.png" rel="lightbox" title="Customize your Github integration"><img class="thumbnail" src="assets/images/GitHub-integration-set-up.png"/></a>
+<a href="assets/images/Github-integration-set-up.png" rel="lightbox" title="Customize your Github integration"><img class="thumbnail" src="assets/images/Github-integration-set-up.png"/></a>
 
 Once a connection is made, select the **Applications** that you want to be available to this bugtracker, and select the values for the **GitHub Organization** and **Repository** fields using the dropdown menus. You also have the option to add **Labels**, **Assignees** and a **Milestone** for GitHub issues using the given fields.
 
