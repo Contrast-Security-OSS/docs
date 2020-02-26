@@ -34,7 +34,7 @@ Pre-existing applications that have been fully instrumented at runtime by a Cont
  
 Source code for target applications must be available locally to be examined by the CLI:
 
-* Java applications must have *Maven* installed with the [dependency plugin](https://maven.apache.org/plugins/maven-dependency-plugin/).
+* Java applications must have *Maven* installed.
 * .NET and .NET Core applications must have a *package.lock.json* file present.
 * Node applications must have a *package-lock.json* file present.
 * Python applications must have the *pipfile* and *pipfile.lock* files present.
@@ -91,7 +91,7 @@ contrast-cli \
  --cli_authorization someAuthorizationCredentials \ 
  --cli_application_id someApplicationID \ 
  --cli_organization_id someOrganizationID \ 
- --project-path applicationRootDirectory
+ --cli_project_path applicationRootDirectory
 ```
 Credentials may be placed within a YAML file with the following format:
 
@@ -125,6 +125,6 @@ The CLI includes command line help, including the glossary of commands shown bel
 | --cli_organization_id     | The ID of your organization in Contrast UI (**required**)                                 |
 | --cli_application_id      | The ID of the application cataloged by Contrast UI (**required**)                          |
 | --cli_host                | The name of the host and (optionally) the port expressed as `<host>:<port>`; defaults to *app.contrastsecurity.com* (**optional**)|
-| --project-path string     | The directory root of a project/application that you want to analyze; defaults to the current directory (**optional**) |
+| --cli_project_path string     | The directory root of a project/application that you want to analyze; defaults to the current directory (**optional**) |
 | --help                    | Display this usage guide                                                   	 			|
 
