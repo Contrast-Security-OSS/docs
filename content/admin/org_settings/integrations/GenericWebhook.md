@@ -64,7 +64,7 @@ If you were using the Generic Webhook to create an integration, the sample paylo
 }
 ```
  
-Where Contrast data fills in the Title and Message fields for example, according to notifcation. Please note that the information that will return is based upon the information that can be attained, therefore, every alert will not return every piece of information even if listed in the payload. 
+Contrast data fills in the Title and Message fields, for example, according to notification. Note that the information returned is based on the information that can be attained. Because of this, every alert will not return every piece of information, even if listed in the payload. 
 
 * Click **Save**.
 
