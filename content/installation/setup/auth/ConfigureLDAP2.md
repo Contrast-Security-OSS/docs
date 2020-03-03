@@ -96,12 +96,14 @@ Use the **Query for Groups** button to enable a live search of existing groups a
 ## Configure Users
 To fully integrate with a LDAP directory, Contrast needs information on how to connect to the LDAP server as well as how to find users and groups within the directory.
 
+<a href="assets/images/LDAP-configure-users.png" rel="lightbox" title="Configuring Users"><img class="thumbnail" src="assets/images/LDAP-configure-users.png"/></a> 
+
+<!--
+No longer relevant, but keeping for now for historical purposes.
 ### User management 
 
 User Management is LDAP Managed (standard) or Contrast Managed. If you select Contrast Managed, Contrast uses the LDAP server as a credential store and manages the users within the directory. If you choose to dedicate a LDAP server to Contrast for authentication, Contrast manages the users in the directory by setting the User Management selection to **Contrast Manages LDAP**. In this mode, users are added to the LDAP directory when they're added to the application. Most users leave this set to **LDAP Manages Contrast**, which means that Contrast only reads from LDAP, and users must be added to the correct group in the directory before they can be added to the application.
-
-<a href="assets/images/KB4-c10_3.png" rel="lightbox" title="Configuring Users"><img class="thumbnail" src="assets/images/KB4-c10_3.png"/></a>
-
+-->
 
 ### Finding users
 
@@ -130,7 +132,15 @@ You must have the following information to instruct Contrast on how to search fo
 | Authentication Strategy | How Contrast attempts to authenticate users when they provide their credentials. BIND means the application sends the user's credentials to the server for authentication; Compare means the server hashes the user's credentials and compares them to the value of the Password attribute. | BIND |
 | Password Attribute | The LDAP field that contains a user's password. This is only used for Compare authentication strategy. The default should be correct for most LDAP deployments. | userPassword |
 
----
+### Automatic Provisioning
+
+You can set up Contrast to manage the provisioning of user accounts and group access. When you enable user provisioning, Contrast automatically creates a new user account when someone makes an LDAP request to log in.
+
+To automatically create new user accounts, check the box to **Enable user provisioning**. Use the dropdown menus to choose the **Default Organization**, **Default Organization Role** and **Default Application Access Group** for the new users.
+
+Contrast can automatically provision or deprovision users at login time based upon the user’s LDAP groups. When this feature is enabled for LDAP-based authentication, users are added to a Contrast group for a corresponding LDAP group and removed from Contrast groups that aren't allowed per the group mapping configuration. Users can be added to multiple groups, as well as added to groups that give them access to multiple organizations. Note that for this to work, the Contrast groups must already exist, and the groups from LDAP (for provisioning purposes) must have the same name as the Contrast groups.
+
+To add users to their groups when they log in to Contrast, check the box to **Add users to their Contrast groups upon login**. To remove users from their groups when they log in to Contrast, check the box to **Remove users from their Contrast groups upon login**.
 
 ## Test the LDAP configuration
 
