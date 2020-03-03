@@ -124,7 +124,7 @@ The CLI includes command line help, including the glossary of commands shown bel
 | --cli_authorization       | Agent Authorization credentials provided by Contrast UI (**required**)                |
 | --cli_organization_id     | The ID of your organization in Contrast UI (**required**)                                 |
 | --cli_application_id      | The ID of the application cataloged by Contrast UI (**required**)                          |
-| --cli_host                | The name of the host and (optionally) the port expressed as `<host>:<port>`; defaults to *app.contrastsecurity.com* (**optional**)|
+| --cli_host                | The name of the host and (optionally) the port expressed as `<host>:<port>`; Does not include the protocol section of the URL (https://); Defaults to *app.contrastsecurity.com* (**optional**)|
 | --cli_project_path string     | The directory root of a project/application that you want to analyze; defaults to the current directory (**optional**) |
 | --help                    | Display this usage guide                                                   	 			|
 
