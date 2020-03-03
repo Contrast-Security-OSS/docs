@@ -138,13 +138,9 @@ You can set up Contrast to manage the provisioning of user accounts and group ac
 
 To automatically create new user accounts, check the box to **Enable user provisioning**. Use the dropdown menus to choose the **Default Organization**, **Default Organization Role** and **Default Application Access Group** for the new users.
 
-With group provisioning, Contrast adds users to groups when they log in. Users can be added to multiple groups, as well as added to groups that give them access to multiple organizations. Note that for this to work, the Contrast groups must already exist, and the groups from LDAP (for provisioning purposes) must have the same name as the Contrast groups.
+Contrast can automatically provision or deprovision users at login time based upon the user’s LDAP groups. When this feature is enabled for LDAP-based authentication, users are added to a Contrast group for a corresponding LDAP group and removed from Contrast groups that aren't allowed per the group mapping configuration. Users can be added to multiple groups, as well as added to groups that give them access to multiple organizations. Note that for this to work, the Contrast groups must already exist, and the groups from LDAP (for provisioning purposes) must have the same name as the Contrast groups.
 
-To automatically add users to their groups when they log in to Contrast, check the box to **Add users to their Contrast groups upon login**.
-
-You can also remove users from Contrast groups when they log in. For example, a user account could be removed if the LDAP group changes and the user gets moved from that group to another that does not exist within Contrast.
-
-To automatically remove users from their groups when they log in to Contrast, check the box to **Remove users from their Contrast groups upon login**.
+To add users to their groups when they log in to Contrast, check the box to **Add users to their Contrast groups upon login**. To remove users from their groups when they log in to Contrast, check the box to **Remove users from their Contrast groups upon login**.
 
 ## Test the LDAP configuration
 
