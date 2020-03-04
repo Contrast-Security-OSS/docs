@@ -6,8 +6,6 @@ tags: "3.6.11 December Release Notes"
 
 ## Bug Fixes
 
-* Assess and Protect did not accurately detect XML External Entities, SQL Injection, Cross-Site Scripting, Secure Cookies, and Command Injection.
-
 * Node probe events reported to security/syslog logger as a result of inputs getting classified as "worth_watching."
 
 * Node agent didn't catch unvalidated redirects through the Express webserver.

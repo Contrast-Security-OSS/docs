@@ -9,11 +9,14 @@ March 3, 2020
 
 ### New features and improvements
 
-**LDAP-based Auto Group Provisioning**
-Customers can now leverage their internal groups to provision or deprovision users within Contrast groups.  When users authenticate to Contrast using LDAP, the user is automatically mapped to Contrast groups that share the same name as LDAP groups. Users that belong to a Contrast group, that are not in the LDAP group are dropped from the Contrast group. You can now use auto group mapping based on either LDAP or SAML (the SAML-based feature was released in 3.6.7).
+**LDAP-based automated group provisioning**
+Administrators can leverage LDAP groups to automatically provision or deprovision users within Contrast groups at login time. When this feature is enabled for LDAP-based authentication, users are added to a Contrast group for a corresponding LDAP group and removed from Contrast groups that aren't allowed per the group mapping configuration. Go to the **User menu > System Settings > Authentication** to see the options in the UI.
 
 **Ghostcat CVE-2020-1938**
-A vulnerability was recently discovered in the Apache JServ Protocol (AJP) that affects Apache versions 9.0.0.M1 to 9.0.0.30, 8.5.0 to 8.5.50 and 7.0.0 to 7.0.99. This release of Contrast contains version 9.0.31 of Tomcat which is not susceptible to these vulnerabilities. Customers who are using AJP and Contrast on-premise version 3.7.0.709 or lesser should upgrade
+A vulnerability was recently discovered in the Apache JServ Protocol (AJP) that affects Apache versions 9.0.0.M1 to 9.0.0.30, 8.5.0 to 8.5.50 and 7.0.0 to 7.0.99. For this release, Tomcat was upgraded from version 7.0.92 to version 9.0.31, which is not susceptible to these vulnerabilities. Customers who are using AJP and Contrast on-premise version 3.7.0.709 or lesser should upgrade
+
+**Generic webhook upgrades**
+The payload of the generic webhooks has been expanded to include more fields and return more information depending on the attack, vulnerability, or other notification. Users can now get information on Application ID, Trace ID, Vulnerability Rule, Environment, Severity, Status, Organization ID, Server ID, and Server Name if the information is available and can be formatted with the webhook configured.
 
 
 ## Agent Updates
@@ -23,9 +26,9 @@ A vulnerability was recently discovered in the Apache JServ Protocol (AJP) that 
 **Agent versions released this month:** 3.7.1.13527, 3.7.1.13581
 
 #### Bug Fixes:
-* Assess lacking support for HTTP/2 connections on Jetty
-* Accuracy problems with the AWS Java SDK
-* Assess rule configuration precedence where configurations on TeamServer are not being honored as expected.
+* Assess lacks support for HTTP/2 connections on Jetty.
+* Accuracy problems occur with the AWS Java SDK.
+* Configurations on TeamServer are not being honored as expected due to Assess rule configuration precedence.
 
 #### New features and improvements:
 Contrast's work to support Java 11 applications culminates in our 3.7.1 release with full support for Java 11 systems. Additionally, we have fixed a handful of accuracy problems, added Assess support for SQLite, and tuned our JDBC inspection to reduce overhead on our users' database connections. Starting with our 3.7.1.13581 release, the contrast-java-agent RPM packages on pkg.contrastsecurity.com are now GPG signed.
@@ -76,7 +79,7 @@ NET Framework: 20.2.1, 20.2.2, 20.2.3
 
 **Language versions supported:**
 .NET Framework: 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8
-.NET Core: 2.1, 2.2, 3.0, 3.1
+.NET Core: 2.1, 2.2, **3.0, 3.1**
 
 #### Bug fixes:
 * Observed routes were not reported if the .NET agent was configured to use a proxy for communication with Contrast.
@@ -85,4 +88,4 @@ NET Framework: 20.2.1, 20.2.2, 20.2.3
 * .NET Core agent would not change Protect rule modes after initialization.
 
 #### New features and improvements:
-Added new gadgets for Protect Untrusted Deserialization and a session timeout rule for .NET Core. Most significantly, this release adds support for .NET Core 3.0 and 3.1.
+Most significantly, this release adds support for .NET Core 3.0 and 3.1. Added new gadgets for Protect Untrusted Deserialization and a session timeout rule for .NET Core. 
