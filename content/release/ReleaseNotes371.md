@@ -5,7 +5,7 @@ tags: "3.7.1 February Release Notes"
 -->
 
 ## Release date:
-March 3, 2020
+March 4, 2020
 
 ### New features and improvements
 
@@ -36,6 +36,7 @@ Contrast's work to support Java 11 applications culminates in our 3.7.1 release 
 ### Node.js Agent Summary 
 
 **Agent versions released this month:** 2.12.0
+
 **Language versions supported:** 10, 12
 
 #### Bug fixes:
@@ -49,6 +50,7 @@ This month's work contains internal architecture improvements, improved testing 
 ### Python Agent Summary 
 
 **Agent versions released this month:** 2.6.1, 2.7.0
+
 **Language versions supported:** 2.7, 3.5-3.7
 
 #### Bug fixes:
@@ -63,6 +65,7 @@ This month's work continued hardening Python Assess and included updates to vuln
 ### Ruby Agent Summary 
 
 **Agent versions released this month:** 3.5.1, 3.5.2, 3.5.3, 3.5.4, 3.6.0 (minor)
+
 **Language versions supported:** 2.4-2.6
 
 #### Bug fixes:
