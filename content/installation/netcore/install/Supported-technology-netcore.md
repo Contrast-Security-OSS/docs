@@ -80,7 +80,6 @@ The .NET Core agent supports the following frameworks:
 
 The agent does **not** support the following technologies at this time:
 
-* .NET Core or ASP.NET Core versions 3.0 or above
 * .NET Core or ASP.NET Core version 2.0 or below
 * ASP.NET Core applications running under the .NET framework (Windows) or Mono (Linux/Windows)
 
