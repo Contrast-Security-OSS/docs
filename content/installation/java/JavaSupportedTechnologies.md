@@ -11,8 +11,8 @@ Contrast is tested and proven to be compatible with the following technologies; 
 |AWS Corretto 1.8                           | GlassFish 4                          | Apache POI, fileupload, HttpComponents
 |IBM 1.6, 1.7, 1.8                          | Grizzly 2.3.20+                      | Axis (RPC), XMLRPC, RMI, Apache CXF, JMS (javax.jms)
 |JRockit 1.6 (update 95+ or R28.3.6+)       | JBoss 4.2, 5, 5.1, 6.1, 7, 7.1       | Direct Web Remoting (DWR)
-|Oracle JDK 1.6, 1.7, 1.8                   | Jetty 7, 8, 9                        | DropWizard
-|Open JDK 1.6, 1.7, 1.8                     | Karaf 3.0.x                          | Freemarker
+|Oracle JDK 1.6, 1.7, 1.8, 11               | Jetty 7, 8, 9                        | DropWizard
+|Open JDK 1.6, 1.7, 1.8, 11                 | Karaf 3.0.x                          | Freemarker
 |                                           | Netty 4.x                            | GSON, Kryo, minidev, org.json
 |                                           | Play 2.4                             | Google Web Toolkit (GWT)
 |                                           | Tomcat 5, 6, 7, 8, 9                 | Hibernate
