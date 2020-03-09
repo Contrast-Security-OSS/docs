@@ -53,7 +53,7 @@ cf bind-service spring-music contrast-security-service
 cf restage spring-music
 ```
 
-`teamserver_url` should be protocol and hostname only. Please omit `/Contrast/` or `/Contrast/api`.
+Note that `teamserver_url` should be protocol and hostname only. Omit `/Contrast/` or `/Contrast/api`.
 
 You can configure the framework by modifying the [*config/contrast_security_agent.yml*][] file in the buildpack fork. The framework uses the [`Repository` utility support][repositories] and supports the [version syntax][] defined there.
 
