@@ -32,6 +32,7 @@ The placeholders available for use are:
 * `$Message` - A human-readable summary of the event.
 * `$ApplicationName` - The application involved in the event.
 * `$ApplicationId` - The id of the application involved in the event.
+* `$ApplicationCode` - The application code of the application involved in the event.
 * `$ServerName` - The name of the server involved in the event. If more than one server was involved, this will be a comma-delimited list of server names.
 * `$ServerId` - The id of the server involved in the event. If more than one server was involved, this will be a comma-delimited list of server ids.
 * `$OrganizationId` - The id of your organization.
@@ -50,6 +51,7 @@ An example featuring all available fields:
     "Title ": "$Title",
     "Text": "$Message",
     "Application Name": "$ApplicationName",
+    "Application Code": "$ApplicationCode",
     "Vulnerability Tags": "$VulnerabilityTags",
     "Application ID": "$ApplicationId",
     "Server Name": "$ServerName",
