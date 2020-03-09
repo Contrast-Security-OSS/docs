@@ -41,7 +41,7 @@ sudo apt-get update && sudo apt-get install contrast-service
 
 #### Install the Contrast Service
 
-Complete the following steps to install the Contrast Service for Red Hat Enterprise Linux (RHEL) and CentOS versions 5, 6 and 7.
+Complete the following steps to install the Contrast Service for Red Hat Enterprise Linux (RHEL) and CentOS version 7.
 
 * To install Contrast Service from Contrast's Yum repository, configure your system to use the repository.
 
