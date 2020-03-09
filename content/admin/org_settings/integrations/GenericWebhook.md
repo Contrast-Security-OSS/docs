@@ -89,5 +89,4 @@ And an example form encoded payload
 ```
 title=$Title&id=$TraceId&tags=$VulnerabilityTags
 ```
-```
 
