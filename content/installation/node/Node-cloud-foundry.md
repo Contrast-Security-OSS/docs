@@ -57,7 +57,7 @@ cf bind-service (application-name) contrast-security-service
 cf restage (application-name)
 ```
 
-`teamserver_url` should be protocol and hostname only. Please omit `/Contrast/` or `/Contrast/api`.
+Note that `teamserver_url` should be protocol and hostname only. Omit `/Contrast/` or `/Contrast/api`.
 
 ## Contrast Service Broker
 
