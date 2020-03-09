@@ -15,7 +15,7 @@ Before installing the .NET Core agent, confirm that you can meet the following r
 
 ## Minimum Requirements
 
-* .NET Core versions >= 2.1 < 3.0
+* .NET Core versions 2.1, 2.2, 3.0, 3.1
 * 2 CPUs
 * 4 GB of RAM<sup>*</sup>
 * A supported operating system <br> (See [Supported Technologies](installation-netcoresupport.html) for a complete list.)
