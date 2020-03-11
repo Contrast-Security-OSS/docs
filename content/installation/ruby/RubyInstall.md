@@ -19,7 +19,7 @@ The <i>contrast-agent-*.gem</i> is a standard Ruby library that you can add to t
 For manual installation, use the `gem` command:
 
 ``` ruby
-gem install path/to/contrast-agent-2.x.x.gem
+gem install path/to/contrast-agent-*.gem
 ```
 
 ### Contrast as a Gem Source
