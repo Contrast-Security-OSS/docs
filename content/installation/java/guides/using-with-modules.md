@@ -15,7 +15,7 @@ module mymodule {
 }
 ```
 
-or supplied via the `--add-modules` command-line argument at runtime:
+or supplied by the `--add-modules` command-line argument at runtime:
 
 ```bash
 java --add-modules java.sql --module-path libs --module mymodule/mycompany.App
