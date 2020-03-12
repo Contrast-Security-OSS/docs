@@ -16,7 +16,7 @@ Contrast supports generic webhook integration, which allows you to receive notif
 * In the row for Generic Webhook, click the button to **Connect**.
 * Name the webhook, and paste the URL in the designated field.
 * Select the application(s) that you want to filter.
-* Enter a payload such as:
+* Enter a payload, such as:
 
 ```javascript
 {
@@ -24,29 +24,28 @@ Contrast supports generic webhook integration, which allows you to receive notif
 	'message': $Message
 }
 ```
-You can also add placeholders in the payload so that Contrast will fill in for different notifications - a new application, server, vulnerability, etc. 
+You can also add placeholders in the payload so that Contrast will fill in for different notifications, such as a new application, server, or vulnerability.
 
 The placeholders available for use that will always return a value:
 
-* `$Title` - The title of the vulnerability
+* `$Title` - The title of the vulnerability.
 * `$Message` - A human-readable summary of the event.
-* `$EventType` - The type of event which will be one of NEW_VULNERABILITY, NEW_ATTACK, ATTACK_UPDATE, NEW_ATTACK_APPLICATION, ATTACK_END, VULNERABILITY_CHANGESTATUS_OPEN, VULNERABILITY_CHANGESTATUS_CLOSED:, SERVER_OFFLINE, NEW_ASSET, EXPIRING_LICENSES, NEW_VULNERABILITY_COMMENT, ATTACK_EVENT_COMMENT.
-
+* `$EventType` - One of the following types of events: NEW_VULNERABILITY, NEW_ATTACK, ATTACK_UPDATE, NEW_ATTACK_APPLICATION, ATTACK_END, VULNERABILITY_CHANGESTATUS_OPEN, VULNERABILITY_CHANGESTATUS_CLOSED, SERVER_OFFLINE, NEW_ASSET, EXPIRING_LICENSES, NEW_VULNERABILITY_COMMENT, ATTACK_EVENT_COMMENT.
 
 The placeholders available for use that may not always return a value:
 
 * `$ApplicationName` - The application involved in the event.
-* `$ApplicationId` - The id of the application involved in the event.
+* `$ApplicationId` - The ID of the application involved in the event.
 * `$ApplicationCode` - The application code of the application involved in the event.
-* `$ServerName` - The name of the server involved in the event. If more than one server was involved, this will be a comma-delimited list of server names.
-* `$ServerId` - The id of the server involved in the event. If more than one server was involved, this will be a comma-delimited list of server ids.
-* `$OrganizationId` - The id of your organization.
-* `$Severity` - If this event was triggered by a vulnerability, this will be the severity of the vulnerability.
-* `$Status` - If this event was triggered by a vulnerability, this will be the status of the vulnerability.
+* `$ServerName` - The name of the server involved in the event. If more than one server is involved, this is a comma-delimited list of server names.
+* `$ServerId` - The ID of the server involved in the event. If more than one server is involved, this is a comma-delimited list of server IDs.
+* `$OrganizationId` - The ID of your organization.
+* `$Severity` - If this event is triggered by a vulnerability, this is the severity of the vulnerability.
+* `$Status` - If this event is triggered by a vulnerability, this is the status of the vulnerability.
 * `$Environment` - The environment of the event (Development, QA, Production).
-* `$VulnerabilityRule`- If this event was triggered by a vulnerability, this will be the rule that the vulnerability violated.
-* `$VulnerabilityTags` - If this event was triggered by a vulnerability, a comma-delimited list of tags associated with that vulnerability.
-* `$TraceId`- If this event was triggered by a vulnerability, this will be the vulnerability id
+* `$VulnerabilityRule`- If this event is triggered by a vulnerability, this is the rule that the vulnerability violated.
+* `$VulnerabilityTags` - If this event is triggered by a vulnerability, this is a comma-delimited list of tags associated with the vulnerability.
+* `$TraceId`- If this event is triggered by a vulnerability, this is the vulnerability ID.
 
 An example featuring all available fields:
 
@@ -76,11 +75,11 @@ You are connected!
 
 ## Content Types
 
-Contrast will send your payload with one of two Content-Type headers:
-* `application/json` if you payload looks like Json
-* `application/x-www-form-urlencoded` if your payload does not look like Json
+Contrast sends the payload with one of two Content-Type headers:
+* `application/json` if the payload looks like JSON
+* `application/x-www-form-urlencoded` if the payload does not look like JSON
 
-An example Json payload:
+An example JSON payload:
 
 ```json
 { 
@@ -88,7 +87,7 @@ An example Json payload:
 }
 ```
 
-And an example form encoded payload
+An example form-encoded payload:
 
 ```
 title=$Title&id=$TraceId&tags=$VulnerabilityTags
