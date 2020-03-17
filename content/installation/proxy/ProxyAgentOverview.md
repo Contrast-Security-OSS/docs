@@ -4,7 +4,7 @@ description: "Overview of the Contrast Proxy agent"
 tags: "installation agent webserver proxy nginx overview"
 -->
 
-The Contrast Proxy agent is application language and framework agnostic, similar to a WAF or Next Generation WAF. It provides runtime protection by analyzing HTTP request and response data at the web server level rather than the application level. The agent supports Contrast Protect only.
+The Contrast Security Proxy agent is application language and framework agnostic, similar to a WAF or Next Generation WAF. It provides runtime protection by analyzing HTTP request and response data at the web server level rather than the application level. The agent supports Contrast Protect only.
 
 ## About the Proxy Agent
 
