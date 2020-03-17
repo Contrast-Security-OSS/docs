@@ -21,7 +21,6 @@ The Python agent supports Python versions 2.7 and 3.5 to 3.7. Framework support 
 The Python agent has database support for:
 
 * MySQL (`PyMySQL and mysql-connector`)
-* Oracle (`cx_Oracle`)
 * SQLite3 (`sqlite3` and `pysqlite2`)
 * PostgreSQL (`psycopg2`)
 
