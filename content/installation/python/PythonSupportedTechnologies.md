@@ -4,7 +4,7 @@ description: "List of supported technologies"
 tags: "installation Python agent frameworks support package"
 -->
 
-The Python agent supports Python versions 2.7 and 3.5 to 3.7. Framework support is currently for:
+The Python agent supports Python versions 2.7 and 3.5 to 3.8. Framework support is currently for:
 
 * Django: 1.10+ and 2.0+ <br> (Django 2 is available for Python 3 only.)
 * Flask: 0.10 - 0.12 and 1.0+
