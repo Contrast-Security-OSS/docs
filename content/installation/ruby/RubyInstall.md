@@ -73,7 +73,7 @@ gem 'contrast-agent'
 Use the `gem` command:
 
 ``` ruby
-gem install path/to/contrast-agent-*.gem
+gem install path/to/contrast-agent-*.gem --platform ruby
 ```
 
 And install the gem in the gemset for the current application:
