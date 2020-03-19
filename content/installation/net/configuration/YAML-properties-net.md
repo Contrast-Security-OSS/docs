@@ -37,14 +37,16 @@ You can also specify the `application` configuration options in an application's
 
 You can specify the following application-specific configuration options in each application's `web.config` file:
 
-* `contrast.application.name`
 * `contrast.application.code`
-* `contrast.application.version`
 * `contrast.application.group`
 * `contrast.application.metadata`
+* `contrast.application.name`
+* `contrast.application.session_id`
+* `contrast.application.session_metadata`
 * `contrast.application.tags`
-* `contrast.inventory.tags`
+* `contrast.application.version`
 * `contrast.assess.tags`
+* `contrast.inventory.tags`
 
 If `contrast.application.name` is not specified, the .NET agent will use the application's virtual path as an application name. If the application is hosted in the root of a site (i.e., the virtual path is ***/***), the .NET agent will use the site's name as the application name.
 
