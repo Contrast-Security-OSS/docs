@@ -43,7 +43,7 @@ The agent runs in the Node.js application layer. As a result, it works on **the 
 When changes are made, Contrast runs a battery of automated tests to ensure that it detects findings in supported technologies across all supported versions of Node. This includes tests that exercise the agent with all of our supported frameworks:
 * [Node Test Benches](https://github.com/Contrast-Security-oss/nodetestbenches)
 
-Each framework within the monorepo is updated as Contrast adds more third-party library support to the agent.  If you want to add test cases, this [README](https://github.com/Contrast-Security-OSS/NodeTestBenches/tree/master/test-bench-utils/README.md) explains how to contribute.
+Each framework within the monorepo is updated as Contrast adds more third-party library support to the agent.
 
 ## Additional Technology
 
