@@ -26,7 +26,21 @@ To enable Syslog on an individual server, hover over the grid row, and select th
 
 <a href="assets/images/Server-settings-grid.png" rel="lightbox" title="Enable Syslog for a server in Server Settings"><img class="thumbnail" src="assets/images/Server-settings-grid.png"/></a>
 
-In the **Server Settings** dialog, check the box to **Enable output of Protect events to Syslog**. If Syslog defaults have been set for the server environment in **Organization Settings**, the values are prepopulated in the fields that appear. Once you save the settings, Syslog is enabled on the server.
+In the **Server Settings** dialog, check the box to **Enable output of Protect events to Syslog**. Complete the following steps to configure output. 
+
+1. Enter the **Syslog Server Host**.
+2. Use the dropdown menu to choose the **Protocol**. Options include **UDP**, **TCP**, and **TCP + TLS**.
+3. Enter the **Port**. 
+4. Use the dropdown menu to chose the **Facility**. 
+5. Use the dropdown menus to choose the **Syslog Message Severity** level for each attack event result. The defaults are:
+   * **1 - Alert** for Exploited
+   * **2 - Warning** for Suspicious
+   * **4 - Warning** for Probed
+   * **4 - Warning** for Probed (P)
+   * **5 - Notice** for Blocked
+   * **5 - Notice** for Blocked (P)
+
+If Syslog defaults have been set for the server environment in **Organization Settings** at the time of server creation, then the values are prepopulated in the fields that appear. Once you save the settings, Syslog is enabled on the server.
 
 ### Multiple servers
 
