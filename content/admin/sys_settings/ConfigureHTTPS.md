@@ -21,10 +21,14 @@ To use AJP with a reverse proxy, you must ensure that the Contrast server is con
 ````
 ajp.enabled=true
 ajp.port=8009
+ajp.secretRequired=true|false
+ajp.secret=somesecret
 ````
 You can configure the `ajp.port` setting to reflect the port on which you'd like the server to listen for incoming connections. In some cases, you might want to also disable the `http.enabled` and `https.enabled` options.
 
-After updating the *server.properties* file, restart the Contrast server service so that the changes to take effect. 
+The `ajp.secret` setting can be configured with a non-null, non-zero length value. This is not required if `secretRequired` is configured to `false`. Request workers are required to have the secret keyword; otherwise, the requests are rejected. The workers must provide a matching value, or the request will be rejected irrespective of the setting of `secretRequired`.
+
+After updating the *server.properties* file, restart the Contrast server service for the changes to take effect. 
 
 ### Configure the front-end server
 
