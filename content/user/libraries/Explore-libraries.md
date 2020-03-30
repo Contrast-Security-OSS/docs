@@ -16,7 +16,7 @@ The libraries grid provides basic information about each library, such as:
 * Current and latest versions 
 * [Used classes](user-libraries.html#analysis) (Java and .NET only)
 
-<a href="assets/images/Libraries-grid.png" rel="lightbox" title="View libraries in your organization"><img class="thumbnail" src="assets/images/Libraries-grid.png"/></a>
+<a href="assets/images/Libraries-grid-new.png" rel="lightbox" title="View libraries in your organization"><img class="thumbnail" src="assets/images/Libraries-grid-new.png"/></a>
 
 Click on a library in the grid to go to its details page, which provides lists of the applications and servers in which the library appears as well as any vulnerabilities that Contrast has found within the library. 
 
