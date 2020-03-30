@@ -72,11 +72,11 @@ Go to the **User menu > Organization Settings > Servers tab** to start setting u
 	* Use the dropdown menu to chose the **Facility**. 
 	* Use the dropdown menus to choose the **Syslog Message Severity** level for each attack event result. The defaults are:
 		* **1 - Alert** for Exploited
-		* **2 - Critical** for Suspicious
-		* **3 - Warning** for Blocked
-		* **4 - Warning** for Blocked (P) 
-
-<a href="assets/images/Server-default-syslog.png" rel="lightbox" title="Configure output to Syslog"><img class="thumbnail" src="assets/images/Server-default-syslog.png"/></a>
+		* **2 - Warning** for Suspicious
+		* **4 - Warning** for Probed
+		* **4 - Warning** for Probed (P)
+		* **5 - Notice** for Blocked
+		* **5 - Notice** for Blocked (P)
 
 * Check the box to **Automatically apply Protect licenses to new servers**.
 
