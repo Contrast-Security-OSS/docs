@@ -31,7 +31,7 @@ In the **Server Settings** dialog, check the box to **Enable output of Protect e
 1. Enter the **Syslog Server Host**.
 2. Use the dropdown menu to choose the **Protocol**. Options include **UDP**, **TCP**, and **TCP + TLS**.
 3. Enter the **Port**. 
-4. Use the dropdown menu to chose the **Facility**. 
+4. Use the dropdown menu to choose the **Facility**. 
 5. Use the dropdown menus to choose the **Syslog Message Severity** level for each attack event result. The defaults are:
    * **1 - Alert** for Exploited
    * **2 - Warning** for Suspicious
