@@ -69,7 +69,7 @@ Go to the **User menu > Organization Settings > Servers tab** to start setting u
 	* Enter the **Syslog Server Host**.
 	* Use the dropdown menu to choose the **Protocol**. Options include **UDP**, **TCP**, and **TCP + TLS**.
 	* Enter the **Port**. 
-	* Use the dropdown menu to chose the **Facility**. 
+	* Use the dropdown menu to choose the **Facility**. 
 	* Use the dropdown menus to choose the **Syslog Message Severity** level for each attack event result. The defaults are:
 		* **1 - Alert** for Exploited
 		* **2 - Warning** for Suspicious
