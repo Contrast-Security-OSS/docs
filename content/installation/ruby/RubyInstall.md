@@ -16,11 +16,6 @@ To install the Contrast agent into your Ruby application, you must complete the 
 
 The <i>contrast-agent-*.gem</i> is a standard Ruby library that you can add to the application Gemfile. You can complete setup using Contrast UI as a Gem Source or by installing the gem manually. (Note: You may want to take precautions so this doesn't [cause issues in a CI environment](https://support.contrastsecurity.com/hc/en-us/articles/360038055432).)
 
-For manual installation, use the `gem` command:
-
-``` ruby
-gem install path/to/contrast-agent-2.x.x.gem
-```
 
 ### Contrast as a Gem Source
 
@@ -75,7 +70,13 @@ To install the Contrast agent manually, download the <i>contrast-agent-*.gem</i>
 gem 'contrast-agent'
 ```
 
-Install the gem in the gemset for the current application:
+Use the `gem` command:
+
+``` ruby
+gem install path/to/contrast-agent-*.gem --platform ruby
+```
+
+And install the gem in the gemset for the current application:
 
 ``` bash
 bundle install ./path/to/contrast-agent-*.gem
