@@ -5,13 +5,13 @@ tags: "Contrast terms glossary"
 -->
 
 
-## Agent 
+## Agent
 
 A Contrast agent is code installed in a web **application** that may run in **Protect** or **Assess** mode.
 
 ---
 
-## Account Takeover 
+## Account Takeover
 
 Account takeover (ATO) is an umbrella term for attacks intended to steal login credentials or otherwise break authentication in web **applications**.
 
@@ -19,7 +19,7 @@ Account takeover (ATO) is an umbrella term for attacks intended to steal login c
 
 ## Application
 
-An application is a logical grouping of customer code analyzed by a Contrast **agent**. This grouping is idiomatic to the agent's language and platform; dynamic languages consider the entire process a single application, while the .NET agent follows the same rules as IIS for identifying multiple applications in the same process. 
+An application is a logical grouping of customer code analyzed by a Contrast **agent**. This grouping is idiomatic to the agent's language and platform; dynamic languages consider the entire process a single application, while the .NET agent follows the same rules as IIS for identifying multiple applications in the same process.
 
 ---
 
@@ -65,7 +65,7 @@ The Contrast Service is an executable written in Go that handles communication w
 
 ---
 
-## Contrast UI 
+## Contrast UI
 
 The **Contrast UI** is the web interface from which users download agents and view information on their **applications** and reported **vulnerabilities**. This also includes the REST API to which the **agents** report data.
 
@@ -127,7 +127,7 @@ Hub is a web application that **Enterprise-on-Premises** customers can use to do
 
 ## IP Blacklist
 
-An IP blacklist is a **rule** configured in the Contrast UI that immediately blocks any HTTP request from the listed IP address. 
+An IP blacklist is a **rule** configured in the Contrast UI that immediately blocks any HTTP request from the listed IP address.
 
 ---
 
@@ -139,13 +139,13 @@ An IP whitelist is a **rule** configured in Contrast UI that allows any HTTP req
 
 ## Java Agent
 
-The Java agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for applications written in Java. 
+The Java agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for applications written in Java.
 
 ---
 
 ## Library
 
-A library is any packaged, third-party code included in the **application**. Languages may use specific terms - e.g., gems for Ruby, packages for Node, JARs for Java - but they are all represented as "libraries" in the Contrast UI. 
+A library is any packaged, third-party code included in the **application**. Languages may use specific terms - e.g., gems for Ruby, packages for Node, JARs for Java - but they are all represented as "libraries" in the Contrast UI.
 
 ---
 
@@ -164,6 +164,12 @@ The .NET agent is a Contrast **agent** that runs in **Assess** or **Protect** mo
 ## .NET Core Agent
 
 The .NET Core agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for .NET Core web applications.
+
+---
+
+## Node.js Agent
+
+The Node.js agent is a Contrast **agent** that runs in **Assess** or **Protect** mode for Node.js web applications.
 
 ---
 
@@ -191,7 +197,7 @@ Preflight is a message sent to the Contrast UI by agents in **Assess** mode. The
 
 ---
 
-## Probe 
+## Probe
 
 An **attack event** that looks like an attack, but didn't touch any vulnerable code in the protected application, is displayed in the **Contrast UI** as a Probed event.
 
@@ -211,7 +217,7 @@ A propagation event is generated when a **propagation** condition is met in a ru
 
 ## Propagation Rule
 
-To model how **propagation** actually works in a running application, Contrast uses propagation rules. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an object; the parameters to a method; and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source. 
+To model how **propagation** actually works in a running application, Contrast uses propagation rules. The rules identify the methods that cause propagation and how the propagation passes from one object to another. When Contrast models how a method might cause propagation, Contrast considers the **source** and the destination. These may be any combination of an object; the parameters to a method; and the result of the method as well as untrusted data propagating from one source to many destinations, or many destinations to a single source.
 
 ---
 
@@ -283,7 +289,7 @@ A sensor is the instrumentation that Contrast adds to the running application. T
 
 ---
 
-## Sink 
+## Sink
 
 Sink is the method, object or other code in which unsanitized and/or unvalidated user input from an **untrusted data source** could cause damage to an **application**.
 
@@ -297,13 +303,13 @@ The abbreviated name for an **untrusted data source**.
 
 ## SQL Injection
 
-SQL Injection (SQLi) is a class of **vulnerabilities** in which the attacker can change the meaning of a database query. See [Little Bobby Tables](https://xkcd.com/327/) for examples. 
+SQL Injection (SQLi) is a class of **vulnerabilities** in which the attacker can change the meaning of a database query. See [Little Bobby Tables](https://xkcd.com/327/) for examples.
 
 ---
 
 ## Trace
 
-A trace is a series of events that represent a **vulnerability**. Traces are generated by the **agent** any time that a series of events matches a runtime **rule**. 
+A trace is a series of events that represent a **vulnerability**. Traces are generated by the **agent** any time that a series of events matches a runtime **rule**.
 
 ---
 
