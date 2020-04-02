@@ -13,7 +13,7 @@ March 31, 2020
 This feature is now generally available for all Assess users to instrument web applications written in Python to find custom code vulnerabilities. Assess capabilities include support for Django, Flask, and Pyramid along with route coverage and route-based auto-verification for each framework.
 
 ### Important note
-With the 3.7.1 release, which upgraded Tomcat to version 9, users were experiencing a broken AJP (Apache JServ Protocol) connection. This required an AJP secret, or that the secret be disabled. This is configurable through server.properties.
+With the 3.7.1 release, which upgraded Tomcat to version 9, users were experiencing a broken AJP (Apache JServ Protocol) connection. This required an AJP secret, or that the secret be disabled. [Configuration options](admin-systemsettings.html#https) have been added and are configurable through the *server.properties* file.
 
 
 ## Agent Updates
