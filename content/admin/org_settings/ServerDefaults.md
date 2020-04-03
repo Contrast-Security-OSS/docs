@@ -74,7 +74,6 @@ Go to the **User menu > Organization Settings > Servers tab** to start setting u
 		* **1 - Alert** for Exploited
 		* **2 - Warning** for Suspicious
 		* **4 - Warning** for Probed
-		* **4 - Warning** for Probed (P)
 		* **5 - Notice** for Blocked
 		* **5 - Notice** for Blocked (P)
 
