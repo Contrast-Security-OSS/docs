@@ -36,7 +36,6 @@ In the **Server Settings** dialog, check the box to **Enable output of Protect e
    * **1 - Alert** for Exploited
    * **2 - Warning** for Suspicious
    * **4 - Warning** for Probed
-   * **4 - Warning** for Probed (P)
    * **5 - Notice** for Blocked
    * **5 - Notice** for Blocked (P)
 
