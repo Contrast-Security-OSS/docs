@@ -6,9 +6,8 @@ tags: "installation python agent overview"
 
 The Contrast Python agent provides runtime protection of Django, Flask and Pyramid web applications.
 
-Version 2.3.0 of the agent introduces beta Assess functionality. This provides the ability to find vulnerabilities in applications before they can be exploited.
-
->**Note:** The beta Assess feature can be licensed in **alpha** and **eval** instances of the Contrast UI.
+Starting with Python agent version 2.8.0, you can find application vulnerabilities with
+Assess before they can be exploited.
 
 ## About Python 
 
