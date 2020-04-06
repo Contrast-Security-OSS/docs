@@ -20,19 +20,21 @@ The Contrast application for Enterprise on Premises (EOP) includes a Tomcat serv
 | **Java** | 1.8 | 1.8 | |
 | **MySQL** | 5.7 | 5.7.23 | Contrast currently runs 5.7.23 in AWS. Contrast doesn't anticipate any issues if you run a different build of MySQL 5.7; if you do experience an issue, please open a Support ticket.  MySQL versions 8 and higher are currently **not** supported |
 
-## MySQL Shared Libraries
-To run Contrast, you must preconfigure your base operating system with a shared library for running MySQL. Depending on which operating system you deployed with Contrast, follow the installation options below:
+## Required Shared Libraries
+To run Contrast, you must preconfigure your base operating system with a shared library for running MySQL. Additionally, the system package `fontconfig` is required on Linux to install fonts.
+
+Depending on which operating system you deployed with Contrast, follow the installation options below:
 
 Customers running **Centos** or **RHL**:
 
 ````
-[contrast@myserver ~]# yum install libaio
+[contrast@myserver ~]# yum install -y libaio fontconfig
 ````
 
 Customers running **Ubuntu** or **Debian**:
 
 ````
-[contrast@myserver ~]# apt-get install libaio1 libaio-dev
+[contrast@myserver ~]# apt-get install -y libaio1 libaio-dev fontconfig
 ````
 
 Customers running **Windows** will need [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784). MySQL added this as a requirement as part of the [MySQL 5.7.18 release](https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-18.html#mysqld-5-7-18-packaging).
