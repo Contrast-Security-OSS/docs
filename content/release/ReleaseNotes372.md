@@ -5,7 +5,7 @@ tags: "3.7.2 March Monthly Release News"
 -->
 
 ## On-premises release date:
-March 31, 2020
+April 6, 2020
 
 ### New features and improvements
 
@@ -25,7 +25,7 @@ With the 3.7.1 release, which upgraded Tomcat to version 9, users were experienc
 **Language versions supported:** Java 1.6 - 1.8 and 11
 
 #### Bug Fixes:
-* In some cases, when users sanitized attacker-controlled data encoders, Contrast Assess considered the encoder input to also be safe in other contexts. This could have led to false negatives in our data flow analysis. We fixed this so that only the data returned by an encoder (and never the input) would be considered safe in a data flow analysis.
+* In some cases, Contrast Assess considered the input to sanitizers to also be safe in other contexts. This could have led to false negatives in our data flow analysis. We fixed this so that only the data returned by an encoder (and never the input) would be considered safe in a data flow analysis.
 
 * In some cases, when users configured a route-based auto-verification policy, Contrast Assess would unexpectedly change a vulnerability status to Auto-Verified. This release remedies these problems for users who configure their Contrast Java agent with the agent.java.standalone_app_name configuration. 
 
