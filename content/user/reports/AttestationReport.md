@@ -60,7 +60,7 @@ The recommended setting for `reporting.storage.mode` is `FILE_SYS`. When `DB` is
 
 With the `FILE_SYS` option, you must set up a file-sharing service where all Contrast nodes are able to access the file path. Provide this path as the value for `reporting.storage.path`. 
 
-> **Note:** The path should be an absolute path, not a relative path. For example, */Users/user1/reporting* would work, and *~/user1/reporting* would not work.
+> **Note:** The path should be an absolute path, such as */Users/user1/reporting*.
 
 With the default configuration, 1250 vulnerabilities can be exported from an attestation report. In some cases, a user may want to generate a larger report containing more than 1250 vulnerabilities, or depending on the size of the instance, Contrast may run into heap space issues. 
 
