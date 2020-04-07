@@ -27,7 +27,7 @@ Contrast supports Ruby Long-Term Support (LTS) versions in **normal maintenance*
 
 ## Web servers
 
-* [Passenger](https://www.phusionpassenger.com/) 5.X
+* [Passenger](https://www.phusionpassenger.com/) 5.X-6.X
 * [Puma](https://puma.io/) 2.X
 * [Thin](https://rubygems.org/gems/thin) 1.X
 
