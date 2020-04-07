@@ -8,17 +8,17 @@ Manage libraries in the **Libraries** page, a **library's details** page, or the
 
 ## Tag Libraries 
 
-Add tags to libraries from the Libraries page, a library's overview page, or the application or server's Libraries tabs. Use the row action menu in any libraries grid to tag an individual library; or, use the checkboxes to select multiple libraries, and click the **Tag Libraries** icon in the batch action menu above the grid. In the dialog that appears, enter a new tag name or choose from the existing tags that are listed. You may add one or more tags to any library. 
+Add tags to libraries from the Libraries page, a library's overview page, or the application or server's Libraries tabs. Use the row action menu in any libraries grid to tag an individual library. Use the checkmarks to select multiple libraries, and click the **Tag Libraries** icon in the batch action menu that appears. In the dialog, enter a new tag name or choose from the existing tags that are listed. You may add one or more tags to any library. 
 
 <a href="assets/images/Tag-libraries-dialog.png" rel="lightbox" title="Choose library tags"><img class="thumbnail" src="assets/images/Tag-libraries-dialog.png"/></a>
 
 You can find tagged libraries by clicking the **Advanced** above any libraries grid, and use the given dropdown menu to select labels. All tags are also displayed beside the library name in the library's details page. 
 
-To remove tags, follow the steps to add tags in any libraries grid or batch action menu; in the dialog that appears, click the "x" on the existing labels that you want to remove. You can also remove tags in a library's details page. 
+To remove tags, follow the steps to add tags in any libraries grid or batch action menu. In the dialog, click the "x" on the existing labels that you want to remove. You can also remove tags in a library's details page. 
 
 ## Delete Libraries 
 
-To delete one or more libraries, select the checkboxes for the appropriate libraries, and click the trashcan icon in the action bar above the grid. You can also delete an individual library by selecting the trashcan icon in the row dropdown menu or in the library's details page.
+To delete multiple libraries, select the checkmarks for the appropriate libraries, and click the trashcan icon in the batch action menu that appears. You can also delete an individual library by selecting the trashcan icon in the row action menu or in the library's details page.
 
 ## Track Libraries
 
@@ -40,13 +40,13 @@ Track vulnerable libraries by sending library details to your email address or a
 
 To create a bugtracker ticket with the details of an individual library, go to the row action menu in the Libraries grid, and select the option to **Send to Bugtracker**. You can also go to a library's overview page or an application's Libraries tab, click the the **Send Libraries** icon, and select **Send to Bugtracker**. 
 
-To create a bugtracker ticket with the details of multiple libraries, use the checkboxes to select libraries in the grid, and click the **Send Libraries** icon in the batch action menu. All libraries selected must have at least one application in common. 
+To create a bugtracker ticket with the details of multiple libraries, use the checkmarks to select libraries in the grid, and click the **Send Libraries** icon in the batch action menu that appears. All libraries selected must have at least one application in common. 
 
 <a href="assets/images/Library-to-bugtracker.png" rel="lightbox" title="Send library details to a bugtracker"><img class="thumbnail" src="assets/images/Library-to-bugtracker.png"/></a>
 
-In the dialog that appears, use the dropdown menus to choose which **Bugtracker** you want to use, the **Issue Type** of the ticket and the ticket **Assignee**. (You can choose any bugtracker integration that's setup in your organization.) Click in the **Due Date** field to select a day on the calendar. Click the **Send** button to create the ticket. 
+In the dialog, use the dropdown menu to choose which **Bugtracker** you want to use. You can choose any bugtracker integration that is set up in your organization. Select the **Issue Type** of the ticket and the **Assignee**, **Reporter**, and **Priority**. Click the **Send** button to create the ticket. 
 
-<a href="assets/images/Library-bugtracker-dialog.png" rel="lightbox" title="Create a bugtracker ticket from libary details"><img class="thumbnail" src="assets/images/Library-bugtracker-dialog.png"/></a>
+<a href="assets/images/Libraries_bugtracker_ticket.png" rel="lightbox" title="Create a bugtracker ticket from library details"><img class="thumbnail" src="assets/images/Libraries_bugtracker_ticket.png"/></a>
 
 To learn more about using bugtrackers with Contrast, read the [Introduction to Bugtrackers](admin-orgintegrations.html#bugtracker). 
 
@@ -54,9 +54,9 @@ To learn more about using bugtrackers with Contrast, read the [Introduction to B
 
 To send library details directly from Contrast to your email address, go to the row action menu in the Libraries grid, and select **Send to Email**. You can also go to a library's overview page or an application's Libraries tab, click the the **Send Libraries** icon, and select **Send to Email**. 
 
-To create a bugtracker ticket with the details of multiple libraries, use the checkboxes to select libraries in the grid, click the **Send Libraries** icon in the batch action menu, and select **Send to Email**. 
+To create a bugtracker ticket with the details of multiple libraries, use the checkmarks to select libraries in the grid, click the **Send Libraries** icon in the batch action menu that appears, and select **Send to Email**. 
 
-In the dialog that appears, enter the email address to which Contrast should send the library details, and click the button to **Send**.
+In the dialog, enter the email address to which Contrast should send the library details, and click the button to **Send**.
 
 ## Export Findings
 
