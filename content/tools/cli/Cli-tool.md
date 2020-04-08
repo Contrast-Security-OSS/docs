@@ -4,7 +4,7 @@ description: "Instructions for installing the Contrast CLI for library analysis"
 tags: "tools cli library install"
 -->
   
-Use Contrast's command line interface (CLI) to gather and send information for your applications to the Contrast UI. 
+Use Contrast's command line interface (CLI) to gather and send information for your applications to the Contrast UI. The CLI was introduced in the Contrast 3.7.0 release.
 
 ## How It Works
 
@@ -12,12 +12,12 @@ The Contrast CLI performs software composition analysis (SCA) on your applicatio
 
 The steps to successfully and continuously analyze your application are as follows:
 
-  1. Install the Contrast CLI
-  2. Collect credentials which allow the CLI to communicate with the Contrast server
-  3. Identify the application ID for the application on which you will perform analysis
+  1. **Install** the Contrast CLI
+  2. **Gather credentials** which allow the CLI to communicate with the Contrast server
+  3. **Identify the application ID** for the application on which you will perform analysis
      - Identify an existing instrumented application within the Contrast UI, or
-     - Create a new application ID using the Contrast CLI and the catalogue-application option
-  4. Create and check the full command, then embed it in your build pipeline
+     - Create a new application ID using the Contrast CLI and the catalogue-application option. This allows you to perform analysis on any application not already instrumented by Contrast.
+  4. **Authenticate and analyze** - create and check the full command, and then embed it in your build pipeline
 
 ## Before You Start 
 
@@ -42,7 +42,7 @@ Source code for target applications must be available locally to be examined by 
  
 Node.js must be installed. (The Contrast CLI is executed as a Node.js package.) For information on how to install Node.js, please refer to their [documentation](https://nodejs.org/en/download/). 
 
-## Install 
+## Install the CLI
 
 Install the CLI with the following command: 
 
@@ -72,11 +72,22 @@ If your application has already been instrumented by a Contrast agent (recommend
 
 To create a new application within the Contrast UI using the Contrast CLI, use the catalogue-application and --cli_application_name options. The output of a successful catalogue operation is an application ID displayed in the console.
   
-Catalogue Command: contrast-cli --catalogue-application --cli_api_key yourApiKey 
---cli_authorization yourKey --cli_organization_id yourOrganizationID --cli_host yourHost 
---cli_application_name yourApplicationName --cli_language app_language
+**Catalogue command**
+
+```
+contrast-cli \
+--catalogue-application 
+--cli_api_key yourApiKey 
+--cli_authorization yourKey 
+--cli_organization_id yourOrganizationID 
+--cli_host yourHost 
+--cli_application_name yourApplicationName 
+--cli_language app_language
+```
 
 Note: Allowable language values are JAVA, DOTNET, NODE, PYTHON and RUBY.
+
+After you run this command, you are provided a new application ID in the console. Use this ID to proceed to authentication and analysis.
 
 ## Authenticate and Analyze 
 
