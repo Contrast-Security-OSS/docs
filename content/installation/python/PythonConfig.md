@@ -5,6 +5,7 @@ tags: "installation python django flask pyramid agent service configuration"
 -->
 
 The Python agent and Contrast Service use a YAML file to alter the agent behavior. Go to the Python [YAML Template](installation-pythonconfig.html#python-template) for fully formatted properties that you can copy and use in your own configuration files.
+You can also use environment variables to override any configuration in the YAML file.
 
 ## Order of Precedence
 
@@ -17,6 +18,15 @@ The configuration file is named *contrast_security.yaml* or *contrast_security.y
 5. Within the server's *etc/contrast* directory (e.g., */etc/contrast/contrast_security.yaml*)
 
 The agent and service may share a common configuration file, but only some options and sections are applicable to each process.
+
+
+## Environment Variables
+
+In addition to using the YAML file, you can use environment variables to specify every configuration option supported by the 
+YAML file. Environment variable names are derived from the YAML path by
+replacing path segment delimiters (`.`) with double underscores (`__`). For example, `agent.logger.level` would be defined as
+`CONTRAST__AGENT__LOGGER__LEVEL` while `agent.service.logger.path` would be `CONTRAST__AGENT__SERVICE__LOGGER__PATH`. 
+The Python agent will give precedence to any environment variable over its corresponding value defined in the YAML file.
 
 ## Configuration Options
 
