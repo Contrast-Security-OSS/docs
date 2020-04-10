@@ -6,12 +6,14 @@ tags: "installation configuration .Net Azure AppService site extension netcore"
 
 Complete the following steps for express installation of the .NET Core agent via Azure Portal Extensions.
 
+> **Note:** Azure Site Extensions are not supported under Linux plans. Please follow the [Manual Installation for Azure App Service](installation-netcoreinstall.html#netcore-azure-manual) instructions.
+
 ## Step One: Create an application hosted on Azure App Service
 
 * Create an [Azure account](https://portal.azure.com/), if you don't have one already.
-* Follow the instructions to [create an ASP.NET web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet-framework), and deploy it to Azure App Service.
+* Follow the instructions to [create an .NET Core web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet), and deploy it to Azure App Service.
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
-* Ensure that your application is deployed using a Windows plan. (Linux plans are not supported when using the .NET Core site extension.)
+* Ensure that your application is deployed using a Windows plan. (Linux plans do not support Site Extensions)
 
 ## Step Two: Add application settings for Contrast
 
