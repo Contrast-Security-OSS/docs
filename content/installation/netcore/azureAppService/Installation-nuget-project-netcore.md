@@ -9,7 +9,7 @@ Complete the following steps to manually install the .NET Core agent via Nuget.
 ## Step One: Create an application hosted on Azure App Service
 
 * [Create an Azure account](https://portal.azure.com/), if you don't have one already.
-* Follow the instructions to [create an .NET Core web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet), and deploy it to Azure App Service.
+* Follow the instructions to [create a .NET Core web application](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet), and deploy it to Azure App Service.
 * Publish your application to Azure, and confirm that it works as expected without Contrast.
 
 ## Step Two: Add the Contrast NuGet Package to your application
@@ -33,7 +33,7 @@ There are two primary ways to add the settings that Contrast needs:
 * The Azure App Service Portal (Preferred)
 * The **App Service Settings** dialog in Visual Studio's Publish to Azure App Service
 
-### Configuring settings for Contrast in Azure App Service Portal
+### Configure settings for Contrast in Azure App Service Portal
 
 * Go to the **Configuration\Application Settings** blade of your web application in the Azure Portal.
 
