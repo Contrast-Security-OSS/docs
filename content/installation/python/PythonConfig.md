@@ -149,7 +149,7 @@ Use the properties in this section to override Protect features.
 
 ### Contrast Assess properties
 
-Use the properties in this section to override Assess features (beta).
+Use the properties in this section to override Assess features.
 
 * **assess**:
   * **enable**: Set to `true` to enable or `false` to disable. Default behavior is delegated to Contrast UI. Note that `protect` and `assess` cannot be enabled at the same time.
