@@ -75,5 +75,3 @@ The TeamServer license and subsequent application licensing is managed from this
 SuperAdmins have the ability to send a system message to all users upon immediate login. A simple message and expiration date are required inputs for the message. All users will receive this message every time they login to TeamServer until the message expires or is deleted.
 
 <a href="assets/images/System_Message.png" rel="lightbox" title="System Messages "><img class="thumbnail" src="assets/images/System_Message.png"/></a>
-
-For more on configuring system messages, see [The Administrator's Dashboard](admin-systemsettings.html#stats)
