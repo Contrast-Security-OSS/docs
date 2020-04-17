@@ -49,7 +49,7 @@ gem 'contrast-agent'
 and install the gem in the gemset for the current application:
 
 ``` bash
-gem install ./path/to/contrast-agent-*.gem
+gem install ./path/to/contrast-agent-*.gem --platform ruby
 ```
 
 and run an install:
