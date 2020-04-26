@@ -51,7 +51,7 @@ The .NET Core agent supports the following Linux distributions:
 | Debian                     | 9 (Stretch)            | x64           |
 | openSUSE                   | 15 (Leap)              | x64           |
 | Alpine                     | >= 3.7                 | x64           |
-| CentOS                     | 7                      | x64           |
+| CentOS                     | 7, 8                   | x64           |
 
 The agent does **not** currently support the following Linux distributions. Support will be added in a future release.
 
