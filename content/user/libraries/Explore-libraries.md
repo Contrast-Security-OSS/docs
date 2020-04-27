@@ -17,13 +17,13 @@ The libraries grid provides information about each library, such as:
 * License information
 * [Used classes](user-libraries.html#analysis) (Java and .NET only)
 
-CVE details and usage information help prioritize which libraries to remediate, and show where you are most at risk. [License information](user-librarylicense.html) provides visibility into potential operational risk from licenses in use. 
+<a href="assets/images/Libraries-grid-new-hidden.png" rel="lightbox" title="View libraries in your organization"><img class="thumbnail" src="assets/images/Libraries-grid-new-hidden.png"/></a>
 
-<a href="assets/images/Libraries-grid-new.png" rel="lightbox" title="View libraries in your organization"><img class="thumbnail" src="assets/images/Libraries-grid-new.png"/></a>
+CVE details and usage information help prioritize which libraries to remediate, and show where you are most at risk. [License information](user-librarylicense.html) provides visibility into potential operational risk from licenses in use. 
 
 To view a list of CVEs directly in the grid, hover over the thermometer in the Vulnerabilities column. If vulnerabilities exist, they display in a list and color-coded by severity.
 
-<a href="assets/images/Libraries-CVE-hover.png" rel="lightbox" title="View vulnerabilities from Libraries grid"><img class="thumbnail" src="assets/images/Libraries-CVE-hover.png"/></a>
+<a href="assets/images/Libraries-CVE-hover-small.png" rel="lightbox" title="View vulnerabilities from Libraries grid"><img class="thumbnail" src="assets/images/Libraries-CVE-hover-small.png"/></a>
 
 Click on a library in the grid to go to its details page, which provides lists of the applications and servers in which the library appears as well as any vulnerabilities that Contrast has found within the library. 
 
