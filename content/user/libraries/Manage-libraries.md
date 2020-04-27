@@ -12,7 +12,7 @@ Add tags to libraries from the Libraries page, a library's overview page, or the
 
 <a href="assets/images/Tag-libraries-dialog.png" rel="lightbox" title="Choose library tags"><img class="thumbnail" src="assets/images/Tag-libraries-dialog.png"/></a>
 
-You can find tagged libraries by clicking the **Advanced** above any libraries grid, and use the given dropdown menu to select labels. All tags are also displayed beside the library name in the library's details page. 
+You can find tagged libraries by clicking the filter for the Library column. The **Tags** section displays a list of all of the tags. All tags are also displayed beside the library name in the library's details page. 
 
 To remove tags, follow the steps to add tags in any libraries grid or batch action menu. In the dialog, click the "x" on the existing labels that you want to remove. You can also remove tags in a library's details page. 
 
