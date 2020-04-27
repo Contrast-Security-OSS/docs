@@ -16,7 +16,7 @@ License information is also displayed in the header of a library's **Details** p
 
 <a href="assets/images/License-library-detail.png" rel="lightbox" title="View library license information in the Details page"><img class="thumbnail" src="assets/images/License-library-detail.png"/></a>
 
-To find libraries with specific licenses, use the filter for the grid. Select the **Advanced** link above the grid, and expand the **Libraries** section to see a list of all of the library licenses used in your organization. 
+To find libraries with specific licenses, use the filter for the Library column. The **Licenses** section displays a list of all of the library licenses used in your organization. 
 
 Open Source license display is available to OSS customers only. Contact your Organization Admin to enable OSS.
 
