@@ -10,9 +10,7 @@ How do you provision licenses if you've paid for them? Like normal licenses in O
 
 ## View Open Source Licenses
 
-License data is available for your open source libraries in the **Libraries** grid. View an individual library's license in the Licenses column.
-
-<a href="assets/images/Libraries-grid-new.png" rel="lightbox" title="View library license information in the Libraries grid"><img class="thumbnail" src="assets/images/Libraries-grid-new.png"/></a>
+License data is available for your open source libraries in the **Libraries** grid. To view an individual library's license, hover over the library name in the grid. 
 
 License information is also displayed in the header of a library's **Details** page, which is accessed by clicking on the library name. Note that licenses are listed in SPDX format.
 
