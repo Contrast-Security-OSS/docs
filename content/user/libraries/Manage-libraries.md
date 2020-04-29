@@ -46,8 +46,6 @@ To create a bugtracker ticket with the details of multiple libraries, use the ch
 
 In the dialog, use the dropdown menu to choose which **Bugtracker** you want to use. You can choose any bugtracker integration that is set up in your organization. Select the **Issue Type** of the ticket and the **Assignee**, **Reporter**, and **Priority**. Click the **Send** button to create the ticket. 
 
-<a href="assets/images/Libraries_bugtracker_ticket.png" rel="lightbox" title="Create a bugtracker ticket from library details"><img class="thumbnail" src="assets/images/Libraries_bugtracker_ticket.png"/></a>
-
 To learn more about using bugtrackers with Contrast, read the [Introduction to Bugtrackers](admin-orgintegrations.html#bugtracker). 
 
 ### Email 
