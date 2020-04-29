@@ -20,7 +20,7 @@ To view your applications' library dependency trees, go to the **Applications** 
 * From the application's Overview page, navigate to the **Libraries** tab.  
 * Select the dependency tree (graduated list) icon on the far right of the header to view the analysis of your application.  
 
-In this view, Contrast displays the dependency tree for your application's libraries based on the data collected by the SCA tool. Within the tree, use the carets to expand sections for more information. 
+In this view, Contrast displays the dependency tree for your application's libraries based on the data collected by the CLI. Within the tree, use the carets to expand sections for more information. 
 
 <a href="assets/images/Library-hierarchy.png" rel="lightbox" title="View dependency trees"><img class="thumbnail" src="assets/images/Library-hierarchy.png"/></a>
 
