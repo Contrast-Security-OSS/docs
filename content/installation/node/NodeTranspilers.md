@@ -19,7 +19,7 @@ Please refer to the following example script setup for running Contrast with a C
 scripts: {
     "test": "...",
     "start": "...",
-    "contrast": "node-contrast /path/to/coffee/transpiler --application.args '/path/to/app/entrypoint.cofee'"
+    "contrast": "node -r @contrast/agent /path/to/coffee/transpiler -- '/path/to/app/entrypoint.cofee'"
 }
 ```
 
@@ -30,7 +30,7 @@ Some languages, like [TypeScript](http://www.typescriptlang.org/), require you t
 scripts: {
     "test": "...",
     "start": "...",
-    "contrast": "node-contrast /path/to/compiled/entrypoint.js"
+    "contrast": "node -r @contrast/agent /path/to/compiled/entrypoint.js"
 }
 ```
 
