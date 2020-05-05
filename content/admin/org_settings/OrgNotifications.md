@@ -68,10 +68,18 @@ Administrators automatically receive the following notifications for high-level 
 * **Application Licensed:** A new application was licensed in Contrast.
 * **Application License Expiring:** The license for an active application is expiring. (Contrast sends this notification two months, one month and one week prior to the expiration date).
 * **Licenses Expiring:** Existing license(s) with no associated applications is expiring. (Contrast sends this notification two months, one month and one week prior to the expiration date).
-* **Remediation Policy Violation:** A vulnerability is in violation of an existing [remediation policy](admin-policymgmt.html#remediate).
-* **Library Policy Violation:** A library is in violation of an existing [library policy](admin-policymgmt.html#library).
 
 <a href="assets/images/AdminNotificationEmail.png" rel="lightbox" title="Email notification for administrators"><img class="thumbnail" src="assets/images/AdminNotificationEmail.png"/></a>
+
+* **Remediation Policy Violation:** A vulnerability is in violation of an existing [remediation policy](admin-policymgmt.html#remediate).
+* **Library Policy Violation:** A library is in violation of an existing [library policy](admin-policymgmt.html#library).
+* **Compliance Policy Notification:** An application is in violation of an existing [compliance policy](admin-policymgmt.html#compliance-policy).
+
+Admin and Rules Admin users at the application and the organization level must receive policy violation notifications. You can receive individual policy violation emails, or to minimize the number of notifications, you can choose to consolidate them into a single email. 
+
+To minimize the number of notifications and aggregate by type of policy, select **Aggregate policy violation emails into separate daily email digests**. Choose the policy types you want to aggregate.
+
+<a href="assets/images/AdminNotification_violation.png" rel="lightbox" title="Notifications for policy violations"><img class="thumbnail" src="assets/images/AdminNotification_violation.png"/></a>
 
 ## Feature Notifications 
 
