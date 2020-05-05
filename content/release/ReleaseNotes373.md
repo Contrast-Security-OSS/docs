@@ -23,8 +23,8 @@ This page shows highlights from our all Contrast hosted, on-premises and agent r
 **Bug fixes:**
 
 These significant bugs have been fixed in the past month:
-- SUP-1244 (TS-2697,TS-1494) 3.7.2 upgrade caused Contrast server and mysqld to run as the wrong user.
-- SUP-1153 (JAVA-1051) RBAV was incorrectly auto-remediating vulnerabilities.
+- SUP-1244 (TS-2697,TS-1494) 3.7.2 on-premises upgrade caused Contrast server and mysqld to attempt to run as the wrong user.
+- SUP-1153 (JAVA-1051) RBAV was incorrectly auto-verifying vulnerabilities.
 - SUP-1172 (JAVA-1060, JAVA-1061, JAVA-1062) Protect input after a rule change caused false positives.
 - SUP-1231 (DOTNET-1458) .NET agent failed to initialize after upgrade.
 - SUP-1156 (TS-2526) Inconsistent authorization redirected user to login and then an unauthorized page.
