@@ -123,5 +123,5 @@ The agent doesn't pass any flags to the underlying Node.js executable, or provid
 > To run the application with the same Node.js flags and the Contrast agent, you could use either of the following commands:
 >
 > ```shell
-> node -r @contrast/agent ./index.js --title=MyWebsite --stack-trace-limit=25 -- --env development
+> node --title=MyWebsite --stack-trace-limit=25 -r @contrast/agent ./index.js -- --env development
 > ```
