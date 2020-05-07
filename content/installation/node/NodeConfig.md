@@ -49,7 +49,6 @@ Parameter                                      | Environment Variable           
 --agent.service.port                           | AGENT\_\_SERVICE\_PORT                          | Set the the port of the Contrast service to which the Contrast agent should report. Example: `30555`
 --agent.service.logger.path                    | AGENT\_\_SERVICE\_\_LOGGER\_PATH                | Set the location to which the Contrast service saves log output. If no log file exists at this location, the service creates one. Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
 --agent.service.logger.level                   | AGENT\_\_SERVICE\_\_LOGGER\_LEVEL               | Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
---application.args <args>                      | APPLICATION\_\_ARGS                             | String containing `args` to pass verbatim to the application. (E.g., `--application.args "-A -S -D -F foo bar"`.)
 --application.code <code>                      | APPLICATION\_\_CODE                             | Add the application code this application should use in the Contrast UI.
 --application.group <tags>                     | APPLICATION\_\_GROUP                            | How to report the application's group for auto-grouping.
 --application.name <name>                      | APPLICATION\_\_NAME                             | Override the reported application name. Default is `package.json:name`.
@@ -99,7 +98,7 @@ By default, the agent logs to *<app_root>/node-contrast.log*. For performance re
 
 ## Application Arguments
 
-To pass configuration options to the application being run with Contrast, use the `--application.args` flag, or append `--` to the run command, followed by the arguments for the application.
+To pass configuration options to the application being run with Contrast, append `--` to the run command, followed by the arguments for the application.
 
 > **Example:** `npm run contrast -- --agent.logger.level debug -- --appArg0 foo --appArg1 bar` will pass `appArg0 foo` and `appArg1 bar` directly to the application.
 
