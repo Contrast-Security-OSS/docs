@@ -5,7 +5,7 @@ description: "View Audit Log in Security page"
 tags: "organization settings security audit log"
 -->
 
-Contrast captures activity about all user sessions, including changes to settings or licenses and actions on vulnerablities. To see the log of the activity in your organization, go to the **User Menu > Organization Settings > Security tab**, and click the link at the top of the page to **View Audit Log**. 
+Contrast captures activity about all user sessions, including changes to settings or licenses and actions on vulnerabilities. To see the log of the activity in your organization, go to the **User Menu > Organization Settings > Security tab**, and click the link at the top of the page to **View Audit Log**. 
 
 <a href="assets/images/Security-audit-log.png" rel="lightbox" title="Audit Log grid"><img class="thumbnail" src="assets/images/Security-audit-log.png"/></a>
 
