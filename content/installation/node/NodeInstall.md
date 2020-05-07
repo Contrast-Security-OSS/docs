@@ -6,23 +6,19 @@ tags: "NodeJS agent installation"
 
 
 ## Installation
-
-After downloading from your account, install the agent from your application's root directory:
-
 ``` sh
-npm install node-contrast-#.#.#.tgz --no-save
+npm install @contrast/agent
 ```
-This command will add the agent to your *node_modules* folder without creating an entry in the dependencies list of your *package.json* file.
 
 If you use **yarn**, use an alternate command to install the agent:
 
 ``` sh
-yarn add file:node-contrast-#.#.#.tgz
+yarn add @contrast/agent
 ```
 
 ## Setup
 
-When you download the Node agent, you will also be directed to download a configuration file. By default, the agent looks for this configuration file in your application's root directory and expects the file to be called *contrast_security.yaml*.
+You can download a configuration file from your account. By default, the agent looks for this configuration file in your application's root directory and expects the file to be called *contrast_security.yaml*.
 
 The minimum required *contrast_security.yaml* setup should look something like this:
 
@@ -51,7 +47,7 @@ First, add the following script to your application's *package.json*:
 
 ``` javascript
 "scripts": {
-	"contrast": "node-contrast <app-main>.js",
+	"contrast": "node -r @contrast/agent <app-main>.js",
 	"start": ...,
 	"test": ...
 }

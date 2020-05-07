@@ -13,11 +13,11 @@ Contrast supports Node.js Long-Term Support (LTS) versions in *Active LTS* and *
 ## Web Framework Support
 
 * [Express](http://expressjs.com) version 4
-* [hapi](https://www.npmjs.com/package/hapi) versions 16-18
+* [hapi](https://www.npmjs.com/package/hapi) versions 16-19
 * [Koa](https://koajs.com/) version 2.7
-* [Sails](http://sailsjs.org/) version 0.12
 * [Kraken](http://krakenjs.com/) version 2.2.0
 * [Loopback](https://loopback.io/) version 3.x
+* [Fastify](https://www.fastify.io/) version 2.x
 
 While the agent can still run on web frameworks that aren't officially supported, Contrast may produce less-specific findings than it would for supported frameworks. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with Node.js's built-in [http](https://nodejs.org/api/http.html) module.
 
