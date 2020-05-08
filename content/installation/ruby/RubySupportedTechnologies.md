@@ -20,6 +20,16 @@ As the agent has *C* dependencies, it may need to be installed with the `--platf
 
 Contrast supports Ruby Long-Term Support (LTS) versions in **normal maintenance** and **security maintenance** status. Contrast shifts its support for Ruby versions as the working group shifts its LTS windows. See the [Ruby Maintenance Branches schedule](https://www.ruby-lang.org/en/downloads/branches/) for specific release dates.
 
+### Supported
+
+* 2.7.X: First supported agent was 3.8.0
+* 2.6.X: First supported agent was 2.3.0
+* 2.5.X: First supported agent was 2.0.0
+
+### Deprecated
+
+* 2.4.X: Last supported agent was 3.9.1
+
 ## Web servers
 
 * [Passenger](https://www.phusionpassenger.com/) 5.X-6.X

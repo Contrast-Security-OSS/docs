@@ -4,7 +4,7 @@ description: "Configuring the Node.js Agent"
 tags: "installation NodeJS agent configuration"
 -->
 
-You may use configuration options to alter Contrast's behavior. They can all be appended to your startup command (e.g., `npm run contrast -- --agent.logger.stdout false` or `node-contrast server.js --agent.logger.stdout false`). They can also be set via environment variables of the form `SETTING__NAME` (e.g., `--agent.logger.stdout false` becomes `AGENT__LOGGER__STDOUT=false`). With the exception of `--configFile`, they can all be added to your *contrast_security.yaml* file as well.
+You may use configuration options to alter Contrast's behavior. They can all be appended to your startup command (e.g., `npm run contrast -- --agent.logger.stdout false` or `node -r @contrast/agent server.js --agent.logger.stdout false`). They can also be set via environment variables of the form `SETTING__NAME` (e.g., `--agent.logger.stdout false` becomes `AGENT__LOGGER__STDOUT=false`). With the exception of `--configFile`, they can all be added to your *contrast_security.yaml* file as well.
 
 ## General Configuration Options
 
@@ -49,7 +49,6 @@ Parameter                                      | Environment Variable           
 --agent.service.port                           | AGENT\_\_SERVICE\_PORT                          | Set the the port of the Contrast service to which the Contrast agent should report. Example: `30555`
 --agent.service.logger.path                    | AGENT\_\_SERVICE\_\_LOGGER\_PATH                | Set the location to which the Contrast service saves log output. If no log file exists at this location, the service creates one. Example: */opt/Contrast/contrast_service.log* will create a log in the */opt/Contrast* directory.
 --agent.service.logger.level                   | AGENT\_\_SERVICE\_\_LOGGER\_LEVEL               | Set the the log output level. Value options are `ERROR`, `WARN`, `INFO`, and `DEBUG`.
---application.args <args>                      | APPLICATION\_\_ARGS                             | String containing `args` to pass verbatim to the application. (E.g., `--application.args "-A -S -D -F foo bar"`.)
 --application.code <code>                      | APPLICATION\_\_CODE                             | Add the application code this application should use in the Contrast UI.
 --application.group <tags>                     | APPLICATION\_\_GROUP                            | How to report the application's group for auto-grouping.
 --application.name <name>                      | APPLICATION\_\_NAME                             | Override the reported application name. Default is `package.json:name`.
@@ -99,7 +98,7 @@ By default, the agent logs to *<app_root>/node-contrast.log*. For performance re
 
 ## Application Arguments
 
-To pass configuration options to the application being run with Contrast, use the `--application.args` flag, or append `--` to the run command, followed by the arguments for the application.
+To pass configuration options to the application being run with Contrast, append `--` to the run command, followed by the arguments for the application.
 
 > **Example:** `npm run contrast -- --agent.logger.level debug -- --appArg0 foo --appArg1 bar` will pass `appArg0 foo` and `appArg1 bar` directly to the application.
 
@@ -112,9 +111,7 @@ From the Node.js documentation, you can see scripts are executed in the followin
 node [options] [V8 options] [script.js] [--] [arguments];
 ```
 
-The Contrast agent is a Node.js wrapper (runner) that invokes `node` to start the application. The agent doesn't pass any flags to the underlying Node.js executable, or provide the ability to do so with agent configuration options. To pass CLI flags to Node.js, you must invoke `node` explicitly with the agent as the `script` argument, followed by the name of the application's entry point file and any configuration flags, as outlined above.
-
-When the agent is installed, a symlink is created, `<app-dir>/node_modules/.bin/node-contrast`, which points to the file `<app-dir>/node_modules/node_contrast/cli.js`. You can use either of these as the `script` argument when starting the application this way.
+The agent doesn't pass any flags to the underlying Node.js executable, or provide the ability to do so with agent configuration options. To pass CLI flags to Node.js, you must invoke `node` explicitly with the agent as the `script` argument, followed by the name of the application's entry point file and any configuration flags, as outlined above.
 
 > **Example:** <br> Without the Contrast agent, you start your application using the following command:
 >
@@ -125,9 +122,5 @@ When the agent is installed, a symlink is created, `<app-dir>/node_modules/.bin/
 > To run the application with the same Node.js flags and the Contrast agent, you could use either of the following commands:
 >
 > ```shell
-> node --title=MyWebsite --stack-trace-limit=25 ./node_modules/.bin/node-contrast ./index.js -- --env development
-> ```
->
-> ```shell
-> node --title=MyWebsite --stack-trace-limit=25 ./node_modules/node_contrast/cli.js ./index.js -- --env development
+> node --title=MyWebsite --stack-trace-limit=25 -r @contrast/agent ./index.js -- --env development
 > ```
