@@ -6,7 +6,14 @@ tags: "tools ide plugins visual studio code download install"
 
 ## About the Visual Studio Code Plugin
 
-Contrast provides visibility of vulnerabilities in your applications, and protects your applications against attacks. For applications deployed with the Contrast agent, you can access vulnerability information directly within your Visual Studio Code IDE. You're directed to the line of code inside Visual Studio Code, and can view more details in the Contrast application, which allows you to provide application security feedback to developers right at the time of development for faster remediation.
+Contrast provides visibility of vulnerabilities found in applications and protects applications against attacks. For applications deployed with any Contrast language agent, developers can access vulnerability information directly within their Visual Studio Code environments immediately after Contrast accurately discovers security problems during functional tests. 
+
+Not only does the plugin empower development teams to own security because they must no longer rely on security teams to relay over vulnerability context, but also it allows development teams to resolve critical issues faster and thus ship features faster without application security teams blocking releases.
+
+To start, the plugin offers to developers an overview of every vulnerability found in the application. For each, they can learn about the type of issue found and the security risk introduced. Developers can also view the HTTP request that exposed the vulnerability to Contrast. They may obtain a deeper understanding by exploring the details of data flow operations triggered by the request. Most importantly, developers will receive clear and actionable guidance to remediate the vulnerability.
+
+The plugin also offers private views so that developers can focus only on those vulnerabilities that matter to them by filtering on vulnerability metadata and session metadata values.
+
 
 ### Supported systems 
 
@@ -16,38 +23,60 @@ Visual Studio Code versions:
 
 ## Setup and Configuration
 
-In Visual Studio Code, navigate to the **Extensions** tab and click **Install**. Allow the plugin to install, and restart the IDE. After restarting, click the **Contrast Security** tab to open the Contrast view. To enter your credentials, click the **Settings** gear icon.
+1. In Visual Studio Code, navigate to the **Extensions** view, search “Contrast Security”, and then click **Install** on the appropriate result. Upon successful install, restart the code editor.
+
+2. To authenticate to your Contrast account, first click the **Settings** gear icon in the **Contrast Security** view.
 
 <a href="assets/images/VSCode_toolbar.png" rel="lightbox" title="Contrast for Visual Studio Code toolbar"><img class="thumbnail" src="assets/images/VSCode_toolbar.png"/></a>
 
-In **Settings**, select the **Workspace** tab and enter your **API Key**, **Organization ID**, **Contrast URL**, **Authorization Header**, and **Application ID** in the given fields.
+Select the Workspace tab and enter your **API Key**, **Organization ID**, **Contrast URL**, and **Authorization Header**. You may obtain these values from the **Your Account** section of your Contrast portal and will be saved per VS Code workspace.
 
-> **Note:** An application must be onboarded in Contrast prior to using this plugin. The Application ID can be found in the URL of the application: */Contrast/static/ng/index.html#/organization-id/applications/**applicationID***.
+Enter the **Application ID** of the application for which you want to view vulnerability information.
+
+**Note:** An application must be onboarded to Contrast prior to using this plugin. The Application ID can be found in the URL of the application: */Contrast/static/ng/index.html#/organization-id/applications/**applicationID***.
 
 <a href="assets/images/VSCode_settings.png" rel="lightbox" title="Configure Contrast for Visual Studio Code settings"><img class="thumbnail" src="assets/images/VSCode_settings.png"/></a>
 
-Click the **Test Contrast Connection** icon to test your connection with Contrast. If the connection is successful, a response displays “Connected Successfully to Contrast Security.” If the connection is unsuccessful, the message displays “Cannot connect to Contrast Security” and guides you to fix the credentials causing the bad connection. 
+3. Click the **Test Contrast Connection** icon to validate your credentials. A notification will inform you of a successful connection or invalid credentials. Upon successful connection, click the **Refresh** icon to obtain vulnerability information.
 
-## Find Vulnerabilities
+## Learn About Vulnerabilities
 
-Under the Contrast Security view, choose the **Filter Vulnerabilities** tab. Click **Enter** and all vulnerabilities will appear under **Contrast Security**.
+Under the Contrast Security view, vulnerabilities are grouped by Severity and ordered by Status. Uncollapse a vulnerability in any group to display the different ways you can learn about the vulnerability. 
 
-Under each section, vulnerabilities are ordered by severity and then by status. Click on a vulnerability to see more information about it. 
+<a href="assets/images/VSCode_Contrastview.png" rel="lightbox" title="Contrast view in Visual Studio Code"><img class="thumbnail" src="assets/images/VSCode_Contrastview.png"/></a>
 
-The **Last Detected** timestamp and **Status** display automatically. To see detailed information, select **Overview**, **Details**, **HTTP Information**, and **How to Fix**. Once selected, the information appears in the bottom right **Output** tab. 
+Though the **Last Detected** timestamp and **Status** display automatically, click on the icon next to **Overview**, **Details**, **HTTP Information**, and **How to Fix** to display more information. The information will be printed to the code editor in the **Output** tab.
 
-<a href="assets/images/VSCode_interface.png" rel="lightbox" title="Find Vulnerabilities in Contrast for Visual Studio Code"><img class="thumbnail" src="assets/images/VSCode_interface.png"/></a>
+<a href="assets/images/VSCode_output.png" rel="lightbox" title="Visual Studio Code output tab"><img class="thumbnail" src="assets/images/VSCode_output.png"/></a>
 
-Select **Find this Vulnerability** to go to the line of the code where a vulnerability is found. If the vulnerability cannot be directly located, the **Output** tab indicates it cannot be found.
+## Filter Vulnerabilities
 
-To see if there are new vulnerabilities, click the **Refresh** icon. **Refresh Problems** reloads the vulnerabilities already present.
+ The plugin offers the capability to filter vulnerabilities on multiple parameters of vulnerability and session metadata simultaneously, allowing developers to focus only on those security issues that are relevant to them.
 
-To filter the vulnerabilities, navigate to the **Filter Vulnerabilities** tab and select a filter. For example, select the **Detection Date** filter. 
+Vulnerability Metadata:
+* Status (e.g. Reported, Not a Problem, Remediated, etc.)
+* Environment (e.g. Development, QA, and Production)
+* Tags (i.e. custom labels applied to vulnerabilities)
+* Detection Date (specifically, First and Last detected)
 
-<a href="assets/images/VSCode_detectionfilter.png" rel="lightbox" title="Filter by detection date in Contrast for Visual Studio Code"><img class="thumbnail" src="assets/images/VSCode_detectionfilter.png"/></a>
+Session Metadata:
+* Committer
+* Commit Hash
+* Branch Name
+* Git Tag
+* Repository
+* Test Run
+* Version
+* Build Number
 
-In the page that follows, choose **Last Detected** or **First Detected**, and then choose **Last Day**, **Last 7 days**, **Last 30 days**, or **Last 12 Months**. 
+For example, a developer can choose to have only those vulnerabilities displayed that were found on their specific feature branch (**Branch Name**) and committed directly by them (**Committer**), effectively filtering out the noise of those vulnerabilities introduced by a different developer on a separate feature branch. 
 
-<a href="assets/images/VSCode_lastdetected.png" rel="lightbox" title="Choose a detection date timeframe in Contrast for Visual Studio Code"><img class="thumbnail" src="assets/images/VSCode_lastdetected.png"/></a>
+Another developer can choose to filter vulnerabilities so that they only see results from a specific build (**Build Number**) that was blocked by their security team so that they can immediately pinpoint the subset of vulnerabilities that need to be resolved before deploying the merged feature branch.
 
-Use the arrow to go back to the first page. Select additional filtering options or click **Enter** to submit the filtering. To clear the selected filters, choose **Clear Filters** and click **Enter**.
+To filter vulnerabilities, click on the **Filter** icon located to the right of the **Test Connection** and **Refresh** icon. Choose any field on which you want to filter. 
+
+For Vulnerability Metadata, you will find predefined values from which you are able to choose. Here, you can filter vulnerabilities so that results only show those found in the Development environment.
+
+To save and apply your filters, click the back arrow button located just above the select-all checkbox, and then hit Enter. The plugin will reload the Contrast view to display only vulnerabilities that match your filtering criteria.
+
+To clear the selected filters, choose **Clear Filters** and  hit Enter.
