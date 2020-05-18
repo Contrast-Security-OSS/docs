@@ -20,23 +20,21 @@ Visual Studio Code versions:
 
 ## Setup and Configuration
 
-1. In Visual Studio Code, navigate to the **Extensions** view, search “Contrast Security”, and then click **Install** on the appropriate result. Upon successful install, restart the code editor.
+In Visual Studio Code, navigate to the **Extensions** view, search “Contrast Security”, and then click **Install** on the appropriate result. Upon successful install, restart the code editor.
 
-2. To authenticate to your Contrast account, click the **Settings** gear icon in the **Contrast Security** view.
+To authenticate to your Contrast account, click the **Settings** gear icon in the **Contrast Security** view.
 
 <a href="assets/images/VSCode_toolbar.png" rel="lightbox" title="Contrast for Visual Studio Code toolbar"><img class="thumbnail" src="assets/images/VSCode_toolbar.png"/></a>
 
-3. Select the **Workspace** tab and enter your **API Key**, **Organization ID**, **Contrast URL**, and **Authorization Header**. You can get these values from **Your Account** in Contrast, and they will be saved per VS Code workspace.
+Select the **Workspace** tab and enter your **API Key**, **Organization ID**, **Contrast URL**, and **Authorization Header**. You can get these values from **Your Account** in Contrast, and they will be saved per VS Code workspace.
 
-4. Enter the **Application ID** of the application for which you want to view vulnerability information.
+Enter the **Application ID** of the application for which you want to view vulnerability information.
 
 **Note:** An application must be onboarded to Contrast prior to using this plugin. The Application ID can be found in the URL of the application: */Contrast/static/ng/index.html#/organization-id/applications/**applicationID***.
 
 <a href="assets/images/VSCode_settings.png" rel="lightbox" title="Configure Contrast for Visual Studio Code settings"><img class="thumbnail" src="assets/images/VSCode_settings.png"/></a>
 
-5. Click the **Test Contrast Connection** icon to validate your credentials. A notification will inform you of a successful connection or invalid credentials. 
-
-6. Upon successful connection, click the **Refresh** icon to get vulnerability information.
+Click the **Test Contrast Connection** icon to validate your credentials. A notification will inform you of a successful connection or invalid credentials. Upon successful connection, click the **Refresh** icon to get vulnerability information.
 
 ## Learn About Vulnerabilities
 
