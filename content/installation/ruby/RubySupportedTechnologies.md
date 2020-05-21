@@ -12,9 +12,12 @@ Contrast applies bug fixes and develops new features on the latest version of th
 
 ## Operating systems
 
-The agent runs in the Ruby application layer with some *C* dependencies. Agent testing is done on **64-bit OSX**, **64-bit Linux**, and **64-bit Alpine** installations.
+Agent testing is done on **64-bit OSX** and **64-bit Linux**.
 
-As the agent has *C* dependencies, it may need to be installed with the `--platform ruby` flag to allow for compilation in either *g libc* or *musl libc* based systems.
+Starting with version 3.0.0 of the agent, the gem installation step requires the compilation of C extensions. This process is automatic, but it requires that certain software is installed in the target environment:
+
+* At a minimum, `gcc`, `make`, `automake` and `autoconf` are required. The package names may be different on different platforms. It may be useful to install your platform's version of `build-essential`.
+* On some platforms, it may be necessary to install system headers.
 
 ## Ruby versions
 
@@ -32,18 +35,18 @@ Contrast supports Ruby Long-Term Support (LTS) versions in **normal maintenance*
 
 ## Web servers
 
-* [Passenger](https://www.phusionpassenger.com/) 5.X-6.X
+* [Passenger](https://www.phusionpassenger.com/) 5.X & 6.X
 * [Puma](https://puma.io/) 2.X
 * [Thin](https://rubygems.org/gems/thin) 1.X
 
 ## Web frameworks
 
 * [Rails](https://rubyonrails.org/) 3.X - 6.X
-* [Sinatra](http://sinatrarb.com/) 2.X and up
+* [Sinatra](http://sinatrarb.com/) 2.X
 
-While the agent can still run on [Rack](http://rack.github.io/)-based web frameworks that aren't officially supported, Contrast may produce less-specific findings than it does for supported frameworks. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with the Rack methods.
+While the agent can still run on [Rack-based](http://rack.github.io/) web frameworks that aren't officially supported, Contrast may produce less-specific findings than it does for supported frameworks. Instead of reporting that a vulnerability occurs in your application code, Contrast may need to report it within the framework code where it interfaces directly with the Rack methods.
 
-## Third-Party modules
+## Databases
 
 * [MongoDB](http://alexeypetrushin.github.io/mongodb/driver.html)
 * [Mysql2](https://github.com/brianmario/mysql2)
