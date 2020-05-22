@@ -5,7 +5,7 @@ Install the service that contains the WebAPI application. Note the name of the s
 Set the required environment variables. Environment variables that are unique for each service can be set under that service's registry key. The service's registry key can be found at:  
 HKLM\SYSTEM\CurrentControlSet\Services\YourServiceName
 
-Under the service's registry key, create a REG_MULTI_SZ value called `Environment`. Then add the environment variables and values below. Note that each environment variable key/value pair must be separated by a new line. If there is already an `Environment` value, add the new values below the existing values.
+Under the service's registry key, create a REG_MULTI_SZ value called `Environment`. Then add the environment variables and values below. Note that each environment variable key/value pair must be separated by a new line. If there is already an `Environment` value, add the new values below the existing values. Make sure the COR_PROFILER_PATH_64 and COR_PROFILER_PATH_32 environment variables match the installation directory chosen for the .NET Framework agent.
 
 COR_ENABLE_PROFILING=1  
 COR_PROFILER={EFEB8EE0-6D39-4347-A5FE-4D0C88BC5BC1}  
