@@ -23,4 +23,6 @@ Once the Agent is installed, you need to set the following environment variables
 | COR_PROFILER_PATH_64       | C:\Program Files\Contrast\dotnet\ContrastProfiler-64.dll   |
 | CONTRAST\_\_AGENT\_\_DOTNET\_\_CONTAINER   | true                        |
 
+Note that 'COR_PROFILER_PATH_32/COR_PROFILER_PATH_64' must match the installation directory chosen during the install of the .NET Framework Agent.
+
 ## WebAPI hosted by OWIN deployed as a Windows service
