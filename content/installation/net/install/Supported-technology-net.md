@@ -10,10 +10,10 @@ The Contrast .NET agent supports analysis of web applications built on the follo
 
 | Technology                 | Supported versions                       |
 | -------------------------- | ---------------------------------------- |
-| .NET Framework             | 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8 |
-| CLR                        | <li>CLR2</li> <br/> <li>CLR4</li>                       |
+| .NET Framework             | 4.7.1, 4.7.2, 4.8 |
+| CLR                        | CLR4 |
 | Web Servers                | <li>IIS</li> <br/> <li>IIS Express</li>                 |
-| Operating System           | <li>Windows 7, 8, 10</li><br/> <li>Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019</li><br/><li>Azure Virtual Machines, Cloud Services, Mobile Services</li><br/><li> Azure App Service </li> |
+| Operating System           | <li>Windows 10</li><br/> <li>Windows Server 2012, 2012 R2, 2016, 2019</li><br/><li>Azure Virtual Machines, Cloud Services, Mobile Services</li><br/><li> Azure App Service </li> |
 | Processor Architecture     | The agent can be installed on both 32-bit and 64-bit systems. On 64-bit systems, you can use the agent to analyze both 32-bit and 64-bit web applications. |
 | Web Application Frameworks | While Contrast has built explicit tests against only the frameworks listed below, Contrast may still be able to analyze your application, if its framework simply wraps the typical ASP.NET classes (e.g., `System.Web.HttpRequest`). <br> <li>ASP.NET MVC 3-5</li>  <br/> <li>ASP.NET Web Forms</li><br /> <li>ASP.NET Web Pages</li><br /> <li>IIS-Hosted ASMX-based Web Services</li><br /><li>IIS-Hosted Web API</li><br /><li>IIS-Hosted WCF Services</li> <br /><li>OWIN Hosted Web API (via a Windows service or a command line application)</li> |
 
@@ -22,29 +22,6 @@ The Contrast .NET agent supports analysis of web applications built on the follo
 > * The **Classic ASP** language isn't supported because Classic ASP applications don't run on the .NET runtime.
 > * The .NET Framework agent does NOT support analysis of .NET Framework ASP.NET Core applications.
 > * The .NET Framework agent does NOT support applications running under a trust levels lower than **Full**. 
+> * For Azure App Service, .NET Framework applications must use the .NET Framework [Site Extension](https://www.nuget.org/packages/Contrast.NET.Azure.SiteExtension/) or [Nuget package](https://www.nuget.org/packages/Contrast.NET.Azure.AppService/). .NET Core applications must use the .NET Core-specific [Nuget package](https://www.nuget.org/packages/Contrast.SensorsNetCore/) or [Site Extension](https://www.nuget.org/packages/Contrast.NetCore.Azure.SiteExtension/).
 
-## .NET for Azure App Service
-
-The .NET agent for Azure App Service supports analysis of web applications built on the following technologies.
-
-| Technology                 | Supported versions                       |
-| -------------------------- | ---------------------------------------- |
-| .NET Framework             | Your application must be set to use CLR4. Any application that can run on this version is supported. (.NET 4.7.2 is deployed currently on Azure. Version 3.5 is not supported.)  |
-| CLR                        | CLR4                       |
-| Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
-| Web Application Frameworks | See the **.NET for Windows** table. |
-
-> **Note:** Only applications using the full .NET framework agent are supported by the [Contrast.NET.Azure.SiteExtension](https://www.nuget.org/packages/Contrast.NET.Azure.SiteExtension/) or [Contrast.NET.Azure.AppService nuget package](https://www.nuget.org/packages/Contrast.NET.Azure.AppService/). .NET Core applications must use the .NET Core-specific [nuget package](https://www.nuget.org/packages/Contrast.SensorsNetCore/) or [site extension](https://www.nuget.org/packages/Contrast.NetCore.Azure.SiteExtension/).
-
-## .NET for Docker
-
-The .NET agent can run in Docker on a Windows-based image that includes IIS and .NET Framework 4.6.2 or higher. Contrast recommends that you base your image on [Microsoft ASP.NET](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet). See the [.NET Docker documentation](installation-netinstall.html#net-docker) for detailed installation instructions.
-
-| Technology                 | Supported versions                       |
-| -------------------------- | ---------------------------------------- |
-| .NET Framework             | Your application must be set to use CLR4. Any application that can run on .NET 4.6.2 or above is supported.   |
-| CLR                        | CLR4                       |
-| Processor Architecture     | Both 32-bit and 64-bit applications are supported. |
-| Web Application Frameworks | See the **.NET for Windows** table. |
-
-
+The .NET agent can also run in Docker on a Windows-based image that includes IIS and .NET Framework 4.7.1 or higher. Contrast recommends that you base your image on [Microsoft ASP.NET](https://hub.docker.com/_/microsoft-dotnet-framework-aspnet). See the [.NET Docker documentation](installation-netinstall.html#net-docker) for detailed installation instructions.
