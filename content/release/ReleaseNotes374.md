@@ -6,19 +6,19 @@ tags: "3.7.4 May Monthly Release News"
 
 # Monthly Release News - May 2020
 
-This page shows highlights from our all Contrast hosted, on-premises and agent releases over the past month.
+This page highlights all Contrast hosted, on-premises and agent releases over the past month.
 
 **3.7.4 on-premises release date:** June 2, 2020
 
 **New and improved:**
 
-- For on-premises customers, daily exports of our library data are now available for downloaded. Airgapped teams can now update data without updating Contrast.
-- A new integration plugin displays vulnerability information directly in Visual Studio Code so teams can quickly identify security issues found during functional testing.
+- For on-premises customers, daily exports of our library data are now available for download. Airgap environments can now update versions without updating the Contrast environment.
+- A new integration plugin beta displays vulnerability information directly in Visual Studio Code so developers can quickly and easily learn about security issues found in their application during functional testing, shifting security left.
 
 **Important notes:**
 
 - With this release the .NET Framework agent has forked into two agents. The modern agent will continue to be developed to support recent versions of the .NET Framework, CLR and Windows OS versions. The legacy agent has all of the current features of the .NET Framework agent and will receive critical bug fixes but otherwise will not be further developed.
-- Previously, organizations with very large numbers of Jira users could time out when attempting to connect to Jira through Contrast. We have scaled our Jira integration so that this is no longer an issue.
+- Previously, organizations with very large numbers of Jira users could time out when attempting to set up a Jira integration in Contrast. We have scaled our Jira integration so that this is no longer an issue.
 
 **Bug fixes:**
 
@@ -125,7 +125,7 @@ These bugs have been fixed in the past month:
 
 ## Ruby agent - May 2020
 
-**Language versions currently supported:** 2.4-2.7
+**Language versions currently supported:** 2.5-2.7
 
 **Agent versions released during the past month:** 3.10.1, 3.10.2, 3.11.0
 
