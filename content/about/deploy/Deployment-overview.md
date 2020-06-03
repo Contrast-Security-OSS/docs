@@ -29,6 +29,7 @@ The following roles may be held by one or more people, and one person may also p
 * **Project Manager:** Works with Contrast on deployment schedule, tracks internal milestones and task completion, and is responsible for internal communications.
 * **Contrast UI Administrator:** Prepares technical environment; manages users, access controls, reports, upgrades and communications; works directly with Customer Success.
 * **Application Security Lead:** Creates and governs policy, security controls and the vulnerability management process.
+* **DevOps/Automation Lead:** Works with Contrast on automating agent deployments/upgrades and/or integrating with existing DevOps processes and tools (DevSecOps).
 * **Development Leads:** Manages vulnerability remediation and build integration. (**Assess**)
 * **QA Leads:**	Oversees performance and QA testing of Protect-enabled servers as well as installation of agent(s) in QA environments. (**Protect**)
 * **Operations:** Pushes Protect-enabled servers into Production. (**Protect**)
