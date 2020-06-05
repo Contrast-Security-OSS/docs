@@ -36,7 +36,7 @@ You might notice that the following text appears when you installed the Contrast
 ---- Contrast .NET Framework Agent for Azure App Service ---
 ------------------------------------------------------------
 
-This package includes files required to run the Contrast .NET Core agent.  These files have been installed in your "<application directory>/contrastsecurity" folder
+This package includes files required to run the Contrast .NET agent.  These files have been installed in your "<application directory>/contrastsecurity" folder
 To use the Contrast agent, you must set following settings on your Azure App Service Web App.
 
 1. Publish your app to Azure App Service.
